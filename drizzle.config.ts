@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ["nil-clone_*"],
+  tablesFilter: ["CI-clone_*"],
 } satisfies Config;
