@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const logoUrl = "";
+const logoUrl = "#";
 
 const navItems = [
   {
