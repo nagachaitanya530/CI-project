@@ -12,7 +12,7 @@ const App = () => {
                 <div className="min-h-screen bg-white text-black">
                     <BrowserRouter>
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Home />} />
 
                         </Routes>
                     </BrowserRouter>
@@ -21,3 +21,5 @@ const App = () => {
         </QueryClientProvider>
     )
 }
+
+export default App
