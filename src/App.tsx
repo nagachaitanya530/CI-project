@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Link from "next/link";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster as SonnerToaster } from "sonner";
-import Home from "./app/page";
+import LanguageLandingPage from "~/app/_components/Hero";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 const queryClient = new QueryClient();
 
@@ -12,7 +13,7 @@ const App = () => {
                 <div className="min-h-screen bg-white text-black">
                     <BrowserRouter>
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Link href="/home" children={<LanguageLandingPage />} />
 
                         </Routes>
                     </BrowserRouter>
@@ -21,3 +22,5 @@ const App = () => {
         </QueryClientProvider>
     )
 }
+
+export default App
