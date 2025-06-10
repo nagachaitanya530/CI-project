@@ -3,6 +3,7 @@ import Link from "next/link";
 const logoUrl = "#";
 
 const navItems = [
+  { label: "Home", href: '/home' },
   {
     label: "Courses",
     dropdown: [
@@ -26,7 +27,7 @@ const navItems = [
   },
   {
     label: "Book Demo",
-    href: "/",
+    href:"/book-demo",
     isButton: true
   },
   { label: "Fees", href: "/" },
@@ -49,6 +50,7 @@ const navItems = [
       { label: "Contact us", href: "/" },
       { label: "Terms of Service", href: "/" },
       { label: "Privacy Policy", href: "/" },
+
     ],
   },
 ];
@@ -78,7 +80,7 @@ export default function Navigation() {
                         <li key={subIdx} className="relative group/dropdown">
                           <span className="flex items-center justify-between py-2 px-6 cursor-pointer rounded-lg font-medium hover:bg-blue-50 group-hover/dropdown:bg-blue-50 text-[#284c87]">
                             {sub.label}
-                            <svg width="12" height="12" className="ml-2" fill="none" stroke="#284c87" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                            <svg width="12" height="12" className="ml-2" fill="none" stroke="#284c87" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                           </span>
                           <ul className="absolute left-full top-0 ml-2 mt-0 min-w-[250px] bg-white border border-zinc-200 rounded-lg shadow-lg opacity-0 group-hover/dropdown:opacity-100 pointer-events-none group-hover/dropdown:pointer-events-auto transition-all flex flex-col z-50">
                             {sub.dropdown.map((deep, deepIdx) => (
