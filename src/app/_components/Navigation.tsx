@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 const logoUrl = "#";
 
 const navItems = [
@@ -28,7 +27,7 @@ const navItems = [
   },
   {
     label: "Book Demo",
-    href: "/",
+    href:"/book-demo",
     isButton: true
   },
   { label: "Fees", href: "/" },
