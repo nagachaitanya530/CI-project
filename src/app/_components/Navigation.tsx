@@ -12,7 +12,7 @@ const navItems = [
       {
         label: "English Courses",
         dropdown: [
-          { label: "English Foundation Personal", href: "/" },
+          { label: "English Foundation Personalsss", href: "/" },
           { label: "English Business Personal", href: "/" },
           { label: "English Advanced Personal", href: "/" },
           { label: "Soft Skills Personal Training", href: "/" },
