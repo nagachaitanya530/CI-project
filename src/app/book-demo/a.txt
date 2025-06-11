@@ -1,0 +1,90 @@
+
+
+
+
+
+
+const courses: Course[] = [
+  {
+    id: "french",
+    name: "French Classes",
+    description:
+      "French is an official language in 29 countries across multiple continents. French is also one of six official languages used in the United Nations.",
+    price: 0,
+    category: "Foreign Language",
+  },
+  {
+    id: "german",
+    name: "German Classes",
+    description:
+      "German is one of the major languages of the world. It is the most spoken native language within the European Union.",
+    price: 0,
+    category: "Foreign Language",
+  },
+  {
+    id: "spanish",
+    name: "Spanish Classes",
+    description:
+      "As a Romance language, Spanish is a descendant of Latin and has one of the smaller degrees of difference from it",
+    price: 0,
+    category: "Foreign Language",
+  },
+  {
+    id: "spoken-english-group",
+    name: "Spoken English Group Classes",
+    description:
+      "Learn spoken English in group classes with expert trainers certified by British Council and Cambridge. Join the course to remove your hesitation of public speaking",
+    price: 0,
+    category: "Spoken English",
+  },
+  {
+    id: "spoken-english-personal",
+    name: "Spoken English Personal Training",
+    description:
+      "If you want more personalised classes to improve your communication skills in English you can join National Institute of Language's spoken English personal training sessions.",
+    price: 0,
+    category: "Spoken English",
+  },
+  {
+    id: "business-english",
+    name: "Business English-Advanced",
+    description:
+      "If you are looking to improve your communication skills for Business Communication this is the best course for you.",
+    price: 0,
+    category: "Spoken English",
+  },
+  {
+    id: "ielts-academic",
+    name: "IELTS Academic",
+    description:
+      "Study at a university or college at undergraduate or postgraduate level. IELTS Academic is for people planning to study in higher education. Or, for example, if you seek professional registration. This test assesses if you're ready to begin studying or training where English is the language used.",
+    price: 0,
+    category: "IELTS Preparation",
+  },
+  {
+    id: "ielts-general",
+    name: "IELTS General",
+    description:
+      "IELTS General Training measures English language proficiency in a practical, everyday context. The tasks and tests reflect both workplace and social situations.",
+    price: 0,
+    category: "IELTS Preparation",
+  },
+  {
+    id:"kids-service",
+    name:"Spoken English Classes",
+    description:"If you want to give your child experience of communicating with a group of people while participating in learning activities, this is the best platform to do that.",
+    price: 0,
+    category: "Kids Classes",
+  }
+]
+
+
+
+
+
+
+
+
+
+
+  

@@ -67,105 +67,110 @@ const LanguageLandingPage: React.FC = () => {
 
                         {/* Bottom Section */}
                         <div className="lg:col-span-2 order-3 grid lg:grid-cols-2 items-center justify-items-center mt-8 lg:-mt-12 gap-8 lg:gap-12 w-full">
-                            {/* Left - Second Woman Image - Wider container */}
-                            <div className="bg-teal-600 rounded-2xl px-4 sm:px-8 lg:px-12 py-8 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-16 w-[1100px] md:w-[1300px]   mx-auto -ml-44">
-                                <img
-                                    src="../../home/professional-women-3.png"
-                                    alt="Professional woman in white shirt"
-                                    className="w-[200px] h-[320px] md:w-[280px] md:h-[450px] object-cover -mt-16 lg:-mt-0 lg:-ml-12"
-                                />
-                                <div className="text-white w-full lg:w-[calc(100%-320px)]">
-                                    {/* Wider heading container with adjusted spacing */}
-                                    <div className="max-w-3xl lg:max-w-none">
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold py-2 lg:py-4 leading-tight">
-                                            Communication, Language, and Study<br className="hidden lg:block" />
-                                            Abroad Programmes.
-                                        </h2>
-                                    </div>
+  {/* Left - Second Woman Image - Responsive container */}
+  <div className="bg-teal-600 rounded-2xl px-4 sm:px-6 md:px-8 lg:px-12 py-6 md:py-8 flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-16 w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-[85vw] lg:max-w-[1100px] xl:max-w-[1300px] mx-auto lg:-ml-44">
+    <img
+      src="../../home/professional-women-3.png"
+      alt="Professional woman in white shirt"
+      className="w-[150px] h-[240px] sm:w-[180px] sm:h-[290px] md:w-[220px] md:h-[350px] lg:w-[280px] lg:h-[450px] object-cover -mt-8 sm:-mt-12 lg:-mt-0 lg:-ml-12 flex-shrink-0"
+    />
+    <div className="text-white w-full lg:w-[calc(100%-320px)] min-w-0">
+      {/* Responsive heading container */}
+      <div className="max-w-full">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold py-2 lg:py-4 leading-tight">
+          Communication, Language, and Study
+          <br className="hidden sm:block" />
+          Abroad Programmes.
+        </h2>
+      </div>
 
-                                    {/* Course items container - now wider */}
-                                    <div className="mt-6 lg:mt-10 w-full max-w-4xl">
-                                        {/* IELTS TestPrep */}
-                                        <div className="p-3 sm:p-4 border rounded-t-xl border-white border-opacity-10">
-                                            <div className="flex items-center gap-3 mb-1 sm:mb-2">
-                                                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-current rounded-full flex items-center justify-center">
-                                                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
-                                                </div>
-                                                <h3 className="font-semibold text-base sm:text-lg hover:text-teal-950">IELTS TestPrep™</h3>
-                                            </div>
-                                            <div className="flex items-center justify-between ml-8 sm:ml-9">
-                                                <p className="text-xs sm:text-sm opacity-90">
-                                                    Live Sessions, AI Powered Mock Tests
-                                                </p>
-                                                <Link href="">
-                                                    <img
-                                                        src="../../home/right-arrow.png"
-                                                        alt="Right Arrow"
-                                                        className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-4 -mt-5 sm:-mt-6
-                  filter brightness-0 invert-[90%] 
-                  transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                  hover:translate-x-1.5
-                  hover:brightness-100 hover:invert-[80%]"
-                                                    />
-                                                </Link>
-                                            </div>
-                                        </div>
+      {/* Course items container - fully responsive */}
+      <div className="mt-4 sm:mt-6 lg:mt-10 w-full">
+        {/* IELTS TestPrep */}
+        <div className="p-3 sm:p-4 border rounded-t-xl border-white border-opacity-10">
+          <div className="flex items-start sm:items-center gap-3 mb-1 sm:mb-2">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-current rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+              <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
+            </div>
+            <h3 className="font-semibold text-sm sm:text-base lg:text-lg hover:text-teal-950 leading-tight">
+              IELTS TestPrep™
+            </h3>
+          </div>
+          <div className="flex items-start sm:items-center justify-between ml-8 sm:ml-9 gap-2">
+            <p className="text-xs sm:text-sm opacity-90 leading-tight flex-1">Live Sessions, AI Powered Mock Tests</p>
+            <Link href="" className="flex-shrink-0">
+              <img
+                src="../../home/right-arrow.png"
+                alt="Right Arrow"
+                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1 sm:ml-2 lg:ml-4 -mt-3 sm:-mt-4 lg:-mt-6
+                                filter brightness-0 invert-[90%] 
+                                transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
+                                hover:translate-x-1.5
+                                hover:brightness-100 hover:invert-[80%]"
+              />
+            </Link>
+          </div>
+        </div>
 
-                                        {/* AdvantEdge English Course */}
-                                        <div className="p-3 sm:p-4 border border-white border-opacity-0">
-                                            <div className="flex items-center gap-3 mb-1 sm:mb-2">
-                                                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-current rounded-full flex items-center justify-center">
-                                                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
-                                                </div>
-                                                <h3 className="font-semibold text-base sm:text-lg hover:text-teal-950">AdvantEdge™ English Course</h3>
-                                            </div>
-                                            <div className="flex items-center justify-between ml-8 sm:ml-9">
-                                                <p className="text-xs sm:text-sm opacity-90">
-                                                    Comprehensive Personal Training and Group
-                                                </p>
-                                                <Link href="">
-                                                    <img
-                                                        src="../../home/right-arrow.png"
-                                                        alt="Right Arrow"
-                                                        className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-4 -mt-5 sm:-mt-6
-                  filter brightness-0 invert-[90%] 
-                  transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                  hover:translate-x-1.5
-                  hover:brightness-100 hover:invert-[80%]"
-                                                    />
-                                                </Link>
-                                            </div>
-                                        </div>
+        {/* AdvantEdge English Course */}
+        <div className="p-3 sm:p-4 border border-white border-opacity-0">
+          <div className="flex items-start sm:items-center gap-3 mb-1 sm:mb-2">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-current rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+              <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
+            </div>
+            <h3 className="font-semibold text-sm sm:text-base lg:text-lg hover:text-teal-950 leading-tight">
+              AdvantEdge™ English Course
+            </h3>
+          </div>
+          <div className="flex items-start sm:items-center justify-between ml-8 sm:ml-9 gap-2">
+            <p className="text-xs sm:text-sm opacity-90 leading-tight flex-1">
+              Comprehensive Personal Training and Group
+            </p>
+            <Link href="" className="flex-shrink-0">
+              <img
+                src="../../home/right-arrow.png"
+                alt="Right Arrow"
+                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1 sm:ml-2 lg:ml-4 -mt-3 sm:-mt-4 lg:-mt-6
+                                filter brightness-0 invert-[90%] 
+                                transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
+                                hover:translate-x-1.5
+                                hover:brightness-100 hover:invert-[80%]"
+              />
+            </Link>
+          </div>
+        </div>
 
-                                        {/* PolyGlot Foreign Languages */}
-                                        <div className="bg-opacity-10 rounded-b-xl p-3 sm:p-4 border border-white border-opacity-10">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center">
-                                                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
-                                                </div>
-                                                <h3 className="font-semibold text-base sm:text-lg hover:text-teal-950">PolyGlot™ Foreign Languages</h3>
-                                            </div>
-                                            <div className="flex items-center justify-between ml-8 sm:ml-9">
-                                                <p className="text-xs sm:text-sm opacity-90">
-                                                    French, Spanish, German CEFR Standard Courses
-                                                </p>
-                                                <Link href="">
-                                                    <img
-                                                        src="../../home/right-arrow.png"
-                                                        alt="Right Arrow"
-                                                        className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-4 -mt-5 sm:-mt-6
-                  filter brightness-0 invert-[90%] 
-                  transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                  hover:translate-x-1.5
-                  hover:brightness-100 hover:invert-[80%]"
-                                                    />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        {/* PolyGlot Foreign Languages */}
+        <div className="bg-opacity-10 rounded-b-xl p-3 sm:p-4 border border-white border-opacity-10">
+          <div className="flex items-start sm:items-center gap-3 mb-1 sm:mb-2">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+              <Check className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
+            </div>
+            <h3 className="font-semibold text-sm sm:text-base lg:text-lg hover:text-teal-950 leading-tight">
+              PolyGlot™ Foreign Languages
+            </h3>
+          </div>
+          <div className="flex items-start sm:items-center justify-between ml-8 sm:ml-9 gap-2">
+            <p className="text-xs sm:text-sm opacity-90 leading-tight flex-1">
+              French, Spanish, German CEFR Standard Courses
+            </p>
+            <Link href="" className="flex-shrink-0">
+              <img
+                src="../../home/right-arrow.png"
+                alt="Right Arrow"
+                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1 sm:ml-2 lg:ml-4 -mt-3 sm:-mt-4 lg:-mt-6
+                                filter brightness-0 invert-[90%] 
+                                transition-all duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)]
+                                hover:translate-x-1.5
+                                hover:brightness-100 hover:invert-[80%]"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                 </div>
             </div>
