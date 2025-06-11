@@ -330,8 +330,8 @@ export default function Navigation() {
     return (
       <ul
         className={`absolute ${positionClass} min-w-[250px] bg-white border border-zinc-200 rounded-lg shadow-lg transition-all duration-300 z-${parentLevel === "main" ? "40" : "50"} ${isVisible
-            ? `opacity-100 visible ${transformClass}`
-            : `opacity-0 invisible ${hiddenTransformClass} pointer-events-none`
+          ? `opacity-100 visible ${transformClass}`
+          : `opacity-0 invisible ${hiddenTransformClass} pointer-events-none`
           }`}
         onMouseEnter={clearHoverTimeout}
         onMouseLeave={createLeaveHandler(parentLevel)}
@@ -493,8 +493,8 @@ export default function Navigation() {
         {/* Mobile Menu */}
         <div
           className={`md:hidden absolute top-20 left-0 right-0 bg-white shadow-lg border-t border-zinc-200 z-40 transition-all duration-300 ease-in-out ${state.mobileMenuOpen
-              ? "opacity-100 visible max-h-[80vh] overflow-y-auto"
-              : "opacity-0 invisible max-h-0 overflow-hidden"
+            ? "opacity-100 visible max-h-[80vh] overflow-y-auto"
+            : "opacity-0 invisible max-h-0 overflow-hidden"
             }`}
         >
           <div className="px-4 py-3 border-b border-gray-200">
