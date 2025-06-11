@@ -1,10 +1,11 @@
+
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col md:flex-row items-center bg-gradient-to-br from-[#284c87] to-[#4cc4dd] px-6 pt-10 pb-6 min-h-[460px]">
       {/* Left text */}
-      <div className="flex-1 text-white max-w-xl">
+      <div className="flex-1 ml-20 text-white max-w-xl">
         <h1 className="text-3xl sm:text-5xl font-bold mb-4 drop-shadow-sm leading-tight">
           Turning Your Dreams Into Reality
         </h1>
@@ -16,10 +17,19 @@ export default function Hero() {
         </a>
       </div>
       {/* Right illustration */}
-      <div className="flex-1 mt-8 md:mt-0 flex items-center justify-center">
-        <img src="https://ext.same-assets.com/2494541280/649069322.webp" alt="Student Hero" className="rounded-xl shadow-lg w-[290px] md:w-[330px] lg:w-[400px]" />
+      <div className="flex justify-center lg:justify-end relative order-1 lg:order-2">
+        <div className="rounded-lg w-full max-w-[500px] lg:max-w-[900px] h-[350px] md:h-[450px] lg:h-[600px] md:-ml-12">
+          <div className="relative rounded-lg w-full h-full">
+            <img
+              src="../../home/professional-women.png"
+              alt="Professional woman in business attire"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
       {/* Optionally add decorative background SVGs here if required */}
     </section>
   );
 }
+
