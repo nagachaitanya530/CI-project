@@ -3,7 +3,7 @@ import Link from "next/link";
 const logoUrl = "#";
 
 const navItems = [
-  { label: "Home", href: '/home' },
+  { label: "Home", href: '/' },
   {
     label: "Courses",
     dropdown: [
