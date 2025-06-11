@@ -87,7 +87,7 @@ const BusinessForm = () => {
     return (
         <section className="relative">
 
-            <div className="grid grid-cols-2 bg-blue-500 rounded-l-full py-2 px-96 md:px-8 max-w-7xl ml-60">
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-blue-500 sm:rounded-l-full md:rounded-l-full  md:-mr-0 py-8 px-6 sm:px-10 md:px-16 max-w-7xl mx-auto gap-6">
                 <div className=" absoulute  top-11/12 mt-28 text-center left-1/2 transform text-white">
                     <h1 className="text-4xl font-bold  mb-4">For Businesses and Corporations
                     </h1><br />
