@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function Hero() {
@@ -31,3 +32,4 @@ export default function Hero() {
     </section>
   );
 }
+

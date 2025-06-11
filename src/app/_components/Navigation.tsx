@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect, useRef, useCallback } from "react"
 
+
 const logoUrl = "#"
 
 interface NavItem {
@@ -13,8 +14,11 @@ interface NavItem {
   dropdown?: NavItem[]
 }
 
-const navItems: NavItem[] = [
-  { label: "Home", href: "/home" },
+
+
+const navItems = [
+  { label: "Home", href: '/' },
+
   {
     label: "Courses",
     dropdown: [
