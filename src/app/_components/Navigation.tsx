@@ -1,9 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import {
+  Search,
+  Home,
+  BookOpen,
+  Globe,
+  Info,
+  CalendarCheck,
+  FileText,
+  GraduationCap,
+  UserCircle,
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
 const logoUrl = "#";
 
 const navItems = [
-  { label: "Home", href: '/' },
+  { label: "Home", href: "/", icon: Home },
   {
     label: "Courses",
     icon: BookOpen,
@@ -12,25 +30,32 @@ const navItems = [
       {
         label: "Spoken English",
         dropdown: [
-          { label: "English Foundation Personalsss", href: "/" },
-          { label: "English Business Personal", href: "/" },
-          { label: "English Advanced Personal", href: "/" },
-          { label: "Soft Skills Personal Training", href: "/" },
-          { label: "Corporate Training English", href: "/" },
+          {
+            label: "English Courses",
+            dropdown: [
+              { label: "English Foundation Personal", href: "/" },
+              { label: "English Business Personal", href: "/" },
+              { label: "English Advanced Personal", href: "/" },
+              { label: "Soft Skills Personal Training", href: "/" },
+              { label: "Corporate Training English", href: "/" },
+            ],
+          },
         ],
       },
       { label: "OET Classes", href: "/" },
-      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Foreign Languages", href: "/" },
       { label: "Kids Courses (Languages)", href: "/" },
       { label: "Online Mock Tests", href: "/" },
     ],
   },
   {
     label: "Book Demo",
-    href:"/book-demo",
-    isButton: true
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
   },
-  { label: "Fees", href: "/" },
+  { label: "Fees", href: "/", icon: FileText },
+  { label: "JOC", href: "/", icon: GraduationCap },
   {
     label: "Study Abroad",
     icon: Globe,
@@ -54,437 +79,229 @@ const navItems = [
       { label: "Privacy Policy", href: "/" },
     ],
   },
-]
+];
 
-// Reusable components
-const ChevronIcon = ({ isOpen, className = "" }: { isOpen: boolean; className?: string }) => (
-  <svg
-    width="14"
-    height="14"
-    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""} ${className}`}
-    viewBox="0 0 20 20"
-  >
-    <path
-      fill="#284c87"
-      d="M5.23 7.21L10 12.07l4.77-4.86A1 1 0 1 1 16.2 8.63l-5.14 5.23a1.11 1.11 0 0 1-1.57 0L3.8 8.63a1 1 0 1 1 1.43-1.42z"
-    />
-  </svg>
-)
-
-const ArrowIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <svg
-    width="12"
-    height="12"
-    className={`ml-2 transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
-    fill="none"
-    stroke="#284c87"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <path d="M9 5l7 7-7 7" />
-  </svg>
-)
-
-const SearchIcon = () => (
-  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-    />
-  </svg>
-)
+const DropdownMenu = ({ items, isMobile, closeMenu, level = 0 }: { items: any[], isMobile?: boolean, closeMenu?: () => void, level?: number }) => {
+  return (
+    <ul className={`
+      ${isMobile ? 'ml-4' : `
+        absolute ${level === 0 ? 'left-0 mt-1' : 'left-full top-0 ml-1'}
+        min-w-[250px] bg-white border border-gray-200 rounded-md shadow-lg z-50
+        invisible group-hover:visible opacity-0 group-hover:opacity-100
+        transition-opacity duration-200
+      `}
+    `}>
+      {items.map((item, idx) => {
+        const hasDropdown = Array.isArray(item.dropdown);
+        
+        return (
+          <li key={idx} className="relative group">
+            {hasDropdown ? (
+              <details className="group">
+                <summary className={`
+                  flex justify-between items-center 
+                  ${isMobile ? 'px-4 py-2 hover:bg-blue-50 cursor-pointer' : 'px-4 py-2 hover:bg-blue-50 cursor-pointer'}
+                `}>
+                  <span className="text-gray-700 hover:text-blue-600">{item.label}</span>
+                  {isMobile ? (
+                    <ChevronDown className="text-gray-500 transform group-open:rotate-180 transition-transform" size={16} />
+                  ) : (
+                    <ChevronRight className="text-gray-500" size={16} />
+                  )}
+                </summary>
+                <DropdownMenu items={item.dropdown} isMobile={isMobile} closeMenu={closeMenu} level={level + 1} />
+              </details>
+            ) : (
+              <Link
+                href={item.href || "#"}
+                onClick={closeMenu}
+                className={`
+                  block 
+                  ${isMobile ? 'px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50' : 'px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50'}
+                `}
+              >
+                {item.label}
+              </Link>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 export default function Navigation() {
-  const [state, setState] = useState({
-    mobileMenuOpen: false,
-    activeDropdown: null as number | null,
-    activeSubDropdown: null as number | null,
-    activeDeepDropdown: null as number | null,
-    searchOpen: false,
-    searchQuery: "",
-    isDesktop: true,
-    clickedDropdown: { main: false, sub: false, deep: false },
-  })
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const navRef = useRef<HTMLDivElement>(null)
-
-  const updateState = useCallback((updates: Partial<typeof state>) => {
-    setState((prev) => ({ ...prev, ...updates }))
-  }, [])
-
-  const clearHoverTimeout = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-      timeoutRef.current = null
-    }
-  }, [])
-
-  const resetDropdowns = useCallback(() => {
-    updateState({
-      activeDropdown: null,
-      activeSubDropdown: null,
-      activeDeepDropdown: null,
-      clickedDropdown: { main: false, sub: false, deep: false },
-    })
-  }, [updateState])
-
-  // Event handlers
-  const handleResize = useCallback(() => {
-    updateState({ isDesktop: window.innerWidth >= 768 })
-  }, [updateState])
-
-  const handleClickOutside = useCallback(
-    (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        resetDropdowns()
-      }
-    },
-    [resetDropdowns],
-  )
-
-  const createHoverHandler = useCallback(
-    (level: "main" | "sub" | "deep", index?: number) => {
-      return () => {
-        if (!state.isDesktop) return
-
-        const clickedKey = level === "main" ? "main" : level === "sub" ? "sub" : "deep"
-        if (state.clickedDropdown[clickedKey]) return
-
-        clearHoverTimeout()
-
-        if (level === "main" && index !== undefined) {
-          updateState({ activeDropdown: index, activeSubDropdown: null, activeDeepDropdown: null })
-        } else if (level === "sub" && index !== undefined) {
-          updateState({ activeSubDropdown: index, activeDeepDropdown: null })
-        } else if (level === "deep" && index !== undefined) {
-          updateState({ activeDeepDropdown: index })
-        }
-      }
-    },
-    [state.isDesktop, state.clickedDropdown, clearHoverTimeout, updateState],
-  )
-
-  const createLeaveHandler = useCallback(
-    (level: "main" | "sub" | "deep") => {
-      return () => {
-        if (!state.isDesktop) return
-
-        const clickedKey = level === "main" ? "main" : level === "sub" ? "sub" : "deep"
-        if (state.clickedDropdown[clickedKey]) return
-
-        clearHoverTimeout()
-        timeoutRef.current = setTimeout(() => {
-          if (level === "main") {
-            updateState({ activeDropdown: null, activeSubDropdown: null, activeDeepDropdown: null })
-          } else if (level === "sub") {
-            updateState({ activeSubDropdown: null, activeDeepDropdown: null })
-          } else {
-            updateState({ activeDeepDropdown: null })
-          }
-        }, 300)
-      }
-    },
-    [state.isDesktop, state.clickedDropdown, clearHoverTimeout, updateState],
-  )
-
-  const createToggleHandler = useCallback(
-    (level: "main" | "sub" | "deep", index: number) => {
-      return (e: React.MouseEvent) => {
-        e.preventDefault()
-        e.stopPropagation()
-
-        const currentActive =
-          level === "main" ? state.activeDropdown : level === "sub" ? state.activeSubDropdown : state.activeDeepDropdown
-
-        if (!state.isDesktop) {
-          // Mobile behavior
-          const updates: Partial<typeof state> = {}
-          if (level === "main") {
-            updates.activeDropdown = currentActive === index ? null : index
-            updates.activeSubDropdown = null
-            updates.activeDeepDropdown = null
-          } else if (level === "sub") {
-            updates.activeSubDropdown = currentActive === index ? null : index
-            updates.activeDeepDropdown = null
-          } else {
-            updates.activeDeepDropdown = currentActive === index ? null : index
-          }
-          updateState(updates)
-        } else {
-          // Desktop behavior
-          const clickedKey = level === "main" ? "main" : level === "sub" ? "sub" : "deep"
-          const newClickedState = { ...state.clickedDropdown }
-
-          if (currentActive === index) {
-            newClickedState[clickedKey] = false
-            const updates: Partial<typeof state> = { clickedDropdown: newClickedState }
-            if (level === "main") updates.activeDropdown = null
-            else if (level === "sub") updates.activeSubDropdown = null
-            else updates.activeDeepDropdown = null
-            updateState(updates)
-          } else {
-            if (level === "main") {
-              newClickedState.main = true
-              newClickedState.sub = false
-              newClickedState.deep = false
-              updateState({
-                activeDropdown: index,
-                activeSubDropdown: null,
-                activeDeepDropdown: null,
-                clickedDropdown: newClickedState,
-              })
-            } else if (level === "sub") {
-              newClickedState.sub = true
-              updateState({
-                activeSubDropdown: index,
-                activeDeepDropdown: null,
-                clickedDropdown: newClickedState,
-              })
-            } else {
-              newClickedState.deep = true
-              updateState({ activeDeepDropdown: index, clickedDropdown: newClickedState })
-            }
-          }
-        }
-      }
-    },
-    [state, updateState],
-  )
-
-  // Effects
   useEffect(() => {
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    document.addEventListener("mousedown", handleClickOutside)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      window.removeEventListener("resize", handleResize)
-      document.removeEventListener("mousedown", handleClickOutside)
-      if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    }
-  }, [handleResize, handleClickOutside])
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
-  // Render helpers
-  const renderDropdownItem = (item: NavItem, index: number, level: "main" | "sub" | "deep") => {
-    const isActive =
-      level === "main"
-        ? state.activeDropdown === index
-        : level === "sub"
-          ? state.activeSubDropdown === index
-          : state.activeDeepDropdown === index
-
-    if (item.dropdown) {
-      return (
-        <li
-          key={index}
-          className="relative"
-          onMouseEnter={createHoverHandler(level, index)}
-          onMouseLeave={createLeaveHandler(level)}
-        >
-          <button
-            onClick={createToggleHandler(level, index)}
-            className="flex w-full items-center justify-between py-3 px-4 cursor-pointer font-medium hover:bg-blue-50 text-[#284c87] transition-colors"
-            aria-expanded={isActive}
-            aria-haspopup="true"
-          >
-            {item.label}
-            <ArrowIcon isOpen={isActive} />
-          </button>
-          {renderSubDropdown(item.dropdown, level, isActive)}
-        </li>
-      )
-    }
-
-    return (
-      <li key={index}>
-        <Link
-          href={item.href || "#"}
-          className="block py-3 px-4 hover:bg-blue-50 text-[#284c87] font-medium transition-colors first:rounded-t-lg last:rounded-b-lg"
-        >
-          {item.label}
-        </Link>
-      </li>
-    )
-  }
-
-  const renderSubDropdown = (items: NavItem[], parentLevel: "main" | "sub" | "deep", isVisible: boolean) => {
-    const nextLevel = parentLevel === "main" ? "sub" : "deep"
-    const positionClass = parentLevel === "main" ? "left-0 top-full pt-1" : "left-full top-0 ml-1"
-    const transformClass =
-      parentLevel === "main" ? "transform translate-y-0 scale-100" : "transform translate-x-0 scale-100"
-    const hiddenTransformClass =
-      parentLevel === "main" ? "transform -translate-y-2 scale-95" : "transform -translate-x-2 scale-95"
-
-    return (
-      <ul
-        className={`absolute ${positionClass} min-w-[250px] bg-white border border-zinc-200 rounded-lg shadow-lg transition-all duration-300 z-${parentLevel === "main" ? "40" : "50"} ${isVisible
-          ? `opacity-100 visible ${transformClass}`
-          : `opacity-0 invisible ${hiddenTransformClass} pointer-events-none`
-          }`}
-        onMouseEnter={clearHoverTimeout}
-        onMouseLeave={createLeaveHandler(parentLevel)}
-      >
-        {items.map((item, index) => renderDropdownItem(item, index, nextLevel))}
-      </ul>
-    )
-  }
-
-  const renderMobileDropdown = (items: NavItem[], level = 0) => {
-    const activeState =
-      level === 0 ? state.activeDropdown : level === 1 ? state.activeSubDropdown : state.activeDeepDropdown
-    const bgClass = level === 0 ? "bg-blue-50" : level === 1 ? "bg-white" : "bg-gray-50"
-
-    return items.map((item, index) => (
-      <li key={index} className={level === 0 ? "border-b border-zinc-100 last:border-b-0" : "mb-2 last:mb-0"}>
-        {item.dropdown ? (
-          <>
-            <button
-              onClick={createToggleHandler(level === 0 ? "main" : level === 1 ? "sub" : "deep", index)}
-              className="w-full flex justify-between items-center py-3 px-2 text-[#284c87] font-semibold"
-            >
-              {item.label}
-              <ChevronIcon isOpen={activeState === index} />
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${activeState === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-            >
-              <ul className={`pl-4 py-2 ${bgClass} rounded-lg my-2`}>
-                {renderMobileDropdown(item.dropdown, level + 1)}
-              </ul>
-            </div>
-          </>
-        ) : item.isButton ? (
-          <Link
-            href={item.href || "#"}
-            className="block w-full text-center my-2 px-5 py-2 rounded-md bg-[#284c87] hover:bg-[#18345b] text-white font-bold shadow-sm transition"
-          >
-            {item.label}
-          </Link>
-        ) : (
-          <Link
-            href={item.href || "#"}
-            className={`block py-${level === 0 ? "3" : "1"} px-2 text-[#284c87] font-${level === 0 ? "semibold" : "medium"} hover:bg-blue-50 rounded transition-colors`}
-          >
-            {item.label}
-          </Link>
-        )}
-      </li>
-    ))
-  }
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow-[0_2px_8px_0_rgba(40,76,135,0.07)] border-b border-zinc-200 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center h-20 justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 min-w-[130px]">
-          <img src={logoUrl} alt="CI Logo" className="h-11 w-auto" />
-        </Link>
-        {/* Main nav list */}
-        <ul className="hidden md:flex gap-2 items-center flex-1 justify-center text-base font-semibold text-[#284c87]">
-          {navItems.map((item, idx) => (
-            <li key={idx} className="relative group">
-              {item.dropdown ? (
-                <>
-                  <span className="cursor-pointer px-4 py-2 rounded hover:bg-blue-50 hover:text-[#284c87] transition select-none leading-6 flex items-center gap-1 font-semibold">
-                    {item.label}
-                    <svg width="14" height="14" className="ml-1" viewBox="0 0 20 20"><path fill="#284c87" d="M5.23 7.21L10 12.07l4.77-4.86A1 1 0 1 1 16.2 8.63l-5.14 5.23a1.11 1.11 0 0 1-1.57 0L3.8 8.63a1 1 0 1 1 1.43-1.42z"></path></svg>
-                  </span>
-                  {/* Dropdown */}
-                  <ul className="absolute left-0 mt-3 min-w-[250px] bg-white border border-zinc-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all flex flex-col z-40">
-                    {item.dropdown.map((sub, subIdx) =>
-                      sub.dropdown ? (
-                        <li key={subIdx} className="relative group/dropdown">
-                          <span className="flex items-center justify-between py-2 px-6 cursor-pointer rounded-lg font-medium hover:bg-blue-50 group-hover/dropdown:bg-blue-50 text-[#284c87]">
-                            {sub.label}
-                            <svg width="12" height="12" className="ml-2" fill="none" stroke="#284c87" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
-                          </span>
-                          <ul className="absolute left-full top-0 ml-2 mt-0 min-w-[250px] bg-white border border-zinc-200 rounded-lg shadow-lg opacity-0 group-hover/dropdown:opacity-100 pointer-events-none group-hover/dropdown:pointer-events-auto transition-all flex flex-col z-50">
-                            {sub.dropdown.map((deep, deepIdx) => (
-                              <li key={deepIdx}>
-                                <Link href={deep.href} className="block py-2 px-6 hover:bg-blue-50 text-[#284c87] rounded-lg font-medium">
-                                  {deep.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </li>
-                      ) : (
-                        <li key={subIdx}>
-                          <Link href={sub.href} className="block py-2 px-6 hover:bg-blue-50 text-[#284c87] rounded-lg font-medium">
-                            {sub.label}
-                          </Link>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </>
-              ) : item.isButton ? (
-                <Link href={item.href} className="ml-2 px-5 py-2 rounded-md bg-[#284c87] hover:bg-[#18345b] text-white font-bold shadow-sm transition">
-                  {item.label}
-                </Link>
-              ) : (
-                <Link href={item.href} className="px-4 py-2 hover:bg-blue-50 rounded-md hover:text-[#284c87] transition font-semibold">
-                  {item.label}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-        {/* Sign In button */}
-        <div className="flex gap-2 items-center">
-          <Link
-            href="/login"
-            className="flex items-center gap-1 px-3 py-2 border border-[#284c87] text-[#284c87] rounded-md hover:bg-[#284c87] hover:text-white text-sm font-semibold whitespace-nowrap"
-          >
-            <UserCircle size={16} className="shrink-0" />
-            <span className="hidden sm:inline">Sign in</span>
-          </Link>
-        </div>
+   <nav className={`sticky top-0 z-50 w-full bg-transparent backdrop-blur-lg transition-all duration-300 ${isScrolled ? 'shadow-md border-b border-gray-200 bg-white/80' : 'bg-transparent border-b border-transparent'}`}>
 
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden absolute top-20 left-0 right-0 bg-white shadow-lg border-t border-zinc-200 z-40 transition-all duration-300 ease-in-out ${state.mobileMenuOpen
-            ? "opacity-100 visible max-h-[80vh] overflow-y-auto"
-            : "opacity-0 invisible max-h-0 overflow-hidden"
-            }`}
-        >
-          <div className="px-4 py-3 border-b border-gray-200">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                console.log("Searching for:", state.searchQuery)
-              }}
-              className="flex"
-            >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex-shrink-0 hover:opacity-90 transition-opacity">
+              <img src={logoUrl} alt="Logo" className="h-8 w-auto" />
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <ul className="flex space-x-1">
+              {navItems.map((item, idx) => (
+                <li key={idx} className="relative group">
+                  {item.dropdown ? (
+                    <div className="relative">
+                      <button className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                        {item.icon && <item.icon className="mr-2" size={16} />}
+                        {item.label}
+                        <ChevronDown className="ml-1 transition-transform duration-200 group-hover:rotate-180" size={14} />
+                      </button>
+                      <DropdownMenu items={item.dropdown} />
+                    </div>
+                  ) : item.isButton ? (
+                    <Link
+                      href={item.href || "#"}
+                      className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200"
+                    >
+                      {item.icon && <item.icon className="mr-2" size={16} />}
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={item.href || "#"}
+                      className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
+                    >
+                      {item.icon && <item.icon className="mr-2" size={16} />}
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right side items (search and login) */}
+          <div className="hidden lg:flex items-center space-x-4 ml-4">
+            <div className="relative group">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-500 transition-colors duration-200" size={16} />
               <input
                 type="text"
-                value={state.searchQuery}
-                onChange={(e) => updateState({ searchQuery: e.target.value })}
                 placeholder="Search..."
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-[#284c87]"
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-64 hover:border-blue-400 transition-colors duration-200"
               />
-              <button type="submit" className="px-3 py-2 bg-[#284c87] text-white rounded-r-md">
-                <SearchIcon />
-              </button>
-            </form>
+            </div>
+            <Link
+              href="/login"
+              className="flex items-center px-3 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600 hover:border-blue-700 rounded-md transition-colors duration-200 hover:bg-blue-50"
+            >
+              <UserCircle className="mr-2" size={16} />
+              Sign in
+            </Link>
           </div>
-          <ul className="px-4 py-2">
-            {renderMobileDropdown(navItems)}
-            <li className="mt-4 mb-2">
-              <Link
-                href="/login"
-                className="block text-center rounded-lg px-5 py-2 bg-white border border-[#284c87] text-[#284c87] hover:bg-[#284c87] hover:text-white font-bold transition"
-              >
-                Sign in
-              </Link>
-            </li>
-          </ul>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:outline-none transition-colors duration-200"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div ref={mobileMenuRef} className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+          <div className="px-4 pt-2 pb-4 space-y-2">
+            <div className="relative mb-4 group">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-500 transition-colors duration-200" size={16} />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 transition-colors duration-200"
+              />
+            </div>
+            
+            <ul className="space-y-1">
+              {navItems.map((item, idx) => (
+                <li key={idx} className="border-b border-gray-100 last:border-0">
+                  {item.dropdown ? (
+                    <details className="group">
+                      <summary className="flex justify-between items-center px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md cursor-pointer transition-colors duration-200">
+                        <div className="flex items-center">
+                          {item.icon && <item.icon className="mr-3" size={16} />}
+                          <span className="font-medium">{item.label}</span>
+                        </div>
+                        <ChevronDown className="text-gray-500 transform transition-transform duration-200 group-open:rotate-180" size={16} />
+                      </summary>
+                      <DropdownMenu items={item.dropdown} isMobile closeMenu={closeMobileMenu} />
+                    </details>
+                  ) : item.isButton ? (
+                    <Link
+                      href={item.href || "#"}
+                      onClick={closeMobileMenu}
+                      className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      {item.icon && <item.icon className="mr-3" size={16} />}
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={item.href || "#"}
+                      onClick={closeMobileMenu}
+                      className="flex items-center px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
+                    >
+                      {item.icon && <item.icon className="mr-3" size={16} />}
+                      <span className="font-medium">{item.label}</span>
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+            
+            <div className="pt-2">
+              <Link
+                href="/login"
+                onClick={closeMobileMenu}
+                className="flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition-colors duration-200"
+              >
+                <UserCircle className="mr-3" size={16} />
+                Sign in
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
-  )
+  );
 }
