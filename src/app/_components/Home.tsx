@@ -5,8 +5,8 @@ import '~/styles/globals.css';
 import CounterSection from '~/components/ui/countersection';
 import BusinessForm from '~/app/_components/ContactforBussiness'
 
-import Classes from './classes';
-import Cards from '~/app/_components/cards'
+import Classes from './home/classes';
+import Cards from '~/app/_components/home/cards'
 const LanguageLandingPage: React.FC = () => {
     return (
         <>
