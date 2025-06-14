@@ -74,7 +74,7 @@ const navItems = [
       { label: "About us", href: "/" },
       { label: "Careers", href: "/" },
       { label: "Community", href: "/" },
-      { label: "Contact us", href: "/" },
+      { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/" },
       { label: "Privacy Policy", href: "/" },
     ],
