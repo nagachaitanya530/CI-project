@@ -61,8 +61,7 @@ const navItems = [
     icon: Globe,
     dropdown: [
       { label: "Free Consultation", href: "/" },
-      { label: "Why Study Abroad", href: "/" },
-      { label: "Study in UK", href: "/" },
+      { label: "Study in UK", href: "/study-abroad-uk" },
       { label: "Study in Canada", href: "/" },
       { label: "Study in Australia", href: "/" },
     ],
