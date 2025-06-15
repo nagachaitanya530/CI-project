@@ -26,7 +26,7 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
-      { label: "IELTS Classes", href: "/" },
+      { label: "IELTS Classes", href: "/IELTS-Classes" },
       {
         label: "Spoken English",
         dropdown: [
