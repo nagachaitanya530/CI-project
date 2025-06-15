@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
+
+
 const logoUrl = "#";
 
 const navItems = [
@@ -25,7 +27,8 @@ const navItems = [
   {
     label: "Courses",
     icon: BookOpen,
-    dropdown: [
+    dropdown: [ 
+       { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/" },
       {
         label: "Spoken English",
@@ -55,7 +58,7 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/", icon: FileText },
-  { label: "JOC", href: "/", icon: GraduationCap },
+  { label: "JOC", href: "/Joc", icon: GraduationCap },
   {
     label: "Study Abroad",
     icon: Globe,
