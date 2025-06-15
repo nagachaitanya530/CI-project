@@ -157,7 +157,7 @@ const LanguageLandingPage: React.FC = () => {
                         </div>
 
                         <p className="text-gray-600 leading-relaxed">
-                            National Institute of Language (NIL) has been training students for international English Exams like
+                          Aalions Institute of Language (CI) has been training students for international English Exams like
                             <Link href="/dummy" className="text-blue-600 hover:underline"> IELTS</Link>, TOEFL and PTE, while delivering exceptional results across the board since the beginning. If you are planning to appear in any such exam, NIL is the best institute for study abroad exams. Online IELTS Class with expert trainers and continuous assessment through regular mock tests. Our target is 8+ Bands for every student that we teach. Join NIL's Online IELTS Course today.
                         </p>
                         <Link
