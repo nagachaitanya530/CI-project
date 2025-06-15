@@ -1,11 +1,8 @@
 import Navigation from "./_components/Navigation";
 import Footer from "./_components/Footer";
-
-
 import Hero from "./_components/Hero";
-
 import LanguageLandingPage from "./_components/Home";
-
+import { Layout } from "lucide-react";
 
 export default function Home() {
   return (
@@ -13,7 +10,12 @@ export default function Home() {
       <Navigation />
 
       <Hero />
+
       {/* <LanguageLandingPage /> */}
+
+
+      
+
 
       <LanguageLandingPage />
       
