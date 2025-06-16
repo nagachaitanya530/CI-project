@@ -11,7 +11,7 @@ import CourseCards from '~/components/ui/progressbar';
 import AITestingPortalComplete from './ai-testing-portal';
 import TrustedCompanies from './trusted-companies';
 import OnlineCourses from './online-courses';
-
+import BlogPage from './blog';
 function BottomSection() {
     const courses = [
         {
@@ -429,6 +429,8 @@ const LanguageLandingPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <BlogPage/>
+            
         </>
     );
 };
