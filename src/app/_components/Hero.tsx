@@ -10,7 +10,7 @@ export default function Hero() {
           Turning Your Dreams Into Reality
         </h1>
         <p className="mb-8 text-lg font-medium drop-shadow-sm">
-          National Institute of Language is the top online education platform to learn English, French, Spanish and German along with IELTS preparation.
+          CI is the top online education platform to learn English, French, Spanish and German along with IELTS preparation.
         </p>
         <a href="#book-demo" className="inline-block bg-[#b8925b] hover:bg-[#965a6d] transition px-7 py-3 text-lg font-bold rounded shadow-md text-white">
           Book a demo
