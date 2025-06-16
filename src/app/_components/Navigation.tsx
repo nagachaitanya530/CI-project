@@ -66,6 +66,7 @@ const navItems = [
       { label: "Free Consultation", href: "/" },
       { label: "Study in UK", href: "/study-abroad-uk" },
       { label: "Study in Canada", href: "/" },
+       { label: "Why Study Abrod", href: "/" },
       { label: "Study in Australia", href: "/" },
     ],
   },
