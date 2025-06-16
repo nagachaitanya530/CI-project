@@ -48,19 +48,19 @@ const Classes = () => {
                         className={`relative rounded-xl overflow-hidden shadow-lg bg-gray-50 text-white h-[600px] cursor-pointer group`}
                     >
                         {/* Image positioned at top */}
-                        <div className="h-1/2 w-full object-cover -mt-4 flex items-center justify-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                        <div className="relative h-1/2 w-full cursor-pointer transition-transform hover:scale-105">
 
                             <img
                                 src={work.image}
                                 alt={work.title}
                                 loading="lazy"
-                                className="max-w-full max-h-full object-contain"
+                                className="h-full w-full object-cover"
                             />
-                        </div>
-                        <div className="justify-items-end mr-4">
-                            <p className="bg-blue-500 flex place-items-center-safe text-center justify-center rounded-3xl h-[55px] w-[70px] ">
-                                {work.price}
-                            </p>
+                            <div className="absolute top-2 right-2">
+                                <span className="bg-blue-600 text-white text-xs px-3 py-2 rounded-full">
+                                    {work.price}
+                                </span>
+                            </div>
                         </div>
                         {/* Content positioned below image */}
                         <div className="p-8 flex flex-col h-1/2 relative z-10 ">
