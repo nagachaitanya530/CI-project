@@ -34,7 +34,7 @@ const navItems = [
           {
             label: "English Courses",
             dropdown: [
-              { label: "English Foundation Personal", href: "/english-foundation-course" },
+              { label: "English Foundation Personal", href: "/" },
               { label: "English Business Personal", href: "/" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
@@ -73,7 +73,7 @@ const navItems = [
     icon: Info,
     dropdown: [
       { label: "About us", href: "/" },
-      { label: "Careers", href: "/" },
+      { label: "Careers", href: "/career" },
       { label: "Community", href: "/" },
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/" },
