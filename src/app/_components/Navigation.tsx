@@ -29,18 +29,13 @@ const navItems = [
       { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/" },
       {
-        label: "Spoken English",
+        label: "English Courses",
         dropdown: [
-          {
-            label: "English Courses",
-            dropdown: [
-              { label: "English Foundation Personal", href: "/" },
-              { label: "English Business Personal", href: "/" },
-              { label: "English Advanced Personal", href: "/" },
-              { label: "Soft Skills Personal Training", href: "/" },
-              { label: "Corporate Training English", href: "/" },
-            ],
-          },
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/english-business-course" },
+          { label: "English Advanced Personal", href: "/" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
         ],
       },
       { label: "OET Classes", href: "/" },
