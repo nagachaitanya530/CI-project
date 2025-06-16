@@ -72,7 +72,7 @@ const navItems = [
     icon: Info,
     dropdown: [
       { label: "About us", href: "/" },
-      { label: "Careers", href: "/" },
+      { label: "Careers", href: "/career" },
       { label: "Community", href: "/" },
       { label: "Contact us", href: "/" },
       { label: "Terms of Service", href: "/" },

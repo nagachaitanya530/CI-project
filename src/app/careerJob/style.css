@@ -1,0 +1,11 @@
+/* style.css or globals.css */
+.bbp-forum-title {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;    /* font-medium */
+    transition: color 0.2s;
+    margin-bottom: 5px;
+  }
+  
+  .bbp-forum-title:hover {
+    color: #3b82f6; /* blue-500 */
+}
