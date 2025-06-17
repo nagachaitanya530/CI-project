@@ -63,24 +63,24 @@ const TrackPackage = () => {
         {packages.map((pkg, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            className="bg-white border border-gray-200 p-6 rounded-2xl shadow-lg transition-all transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-cyan-600 hover:text-white"
           >
-            <h3 className="text-xl font-semibold text-center text-gray-800 mb-3">
+            <h3 className="text-xl font-semibold text-center text-gray-800 mb-3 transition-all hover:text-white">
               {pkg.title}
             </h3>
             <p
-              className="text-sm text-gray-600"
+              className="text-sm text-gray-600 hover:text-white transition-all"
               style={expanded[index] ? undefined : paragraphStyle}
               ref={(el) => {
-                (refs.current[index] = el)
-            }}
+                refs.current[index] = el;
+              }}
             >
               {pkg.description}
             </p>
             {showButtons[index] && (
               <button
                 onClick={() => toggleExpand(index)}
-                className="mt-3 text-cyan-600 hover:underline text-sm"
+                className="mt-3 text-cyan-600 hover:underline text-sm transition-all"
               >
                 {expanded[index] ? 'Read Less...' : 'Read More...'}
               </button>
