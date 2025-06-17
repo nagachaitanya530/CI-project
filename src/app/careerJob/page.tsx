@@ -186,7 +186,7 @@ const page = () => {
               </a>
             </div>
             <div className="widget-content bb-online-status-who-is-online-members-tab" id="boss_whos_online_widget_heartbeat" data-max="15">			<div className="widget-error widget-error-users">
-              There are no users currently online			</div>
+              There are no users currently online	.		</div>
             </div>
 
 
