@@ -34,8 +34,8 @@ const navItems = [
           {
             label: "English Courses",
             dropdown: [
-              { label: "English Foundation Personal", href: "/" },
-              { label: "English Business Personal", href: "/" },
+              { label: "English Foundation Personal", href: "/english-foundation-course" },
+              { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
               { label: "Corporate Training English", href: "/" },
@@ -58,15 +58,15 @@ const navItems = [
   { label: "Fees", href: "/", icon: FileText },
   { label: "JOC", href: "/Joc", icon: GraduationCap },
   {
-    label: "Study Abroad",
+    label: "Study Abroad",href:"/", isButton: true,
     icon: Globe,
-    dropdown: [
-      { label: "Free Consultation", href: "/" },
-      { label: "Study in UK", href: "/study-abroad-uk" },
-      { label: "Study in Canada", href: "/" },
-      { label: "Why Study Abrod", href: "/" },
-      { label: "Study in Australia", href: "/" },
-    ],
+    // dropdown: [
+    //   { label: "Free Consultation", href: "/" },
+    //   { label: "Study in UK", href: "/study-abroad-uk" },
+    //   { label: "Study in Canada", href: "/" },
+    //   { label: "Why Study Abrod", href: "/" },
+    //   { label: "Study in Australia", href: "/" },
+    // ],
   },
   {
     label: "About CI",
