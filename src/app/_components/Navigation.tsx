@@ -22,7 +22,7 @@ const navItems = [
   {
     label: "Courses",
     dropdown: [
-      { label: "IELTS Classes", href: "/" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
       { label: "Spoken English", href: "/" },
       {
         label: "Spoken English",
