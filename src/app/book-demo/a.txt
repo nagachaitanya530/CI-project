@@ -1,10 +1,4 @@
-
-
-
-
-
-
-const courses: Course[] = [
+puconst courses: Course[] = [
   {
     id: "french",
     name: "French Classes",

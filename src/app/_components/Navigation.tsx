@@ -71,12 +71,12 @@ const navItems = [
     label: "About CI",
     icon: Info,
     dropdown: [
-      { label: "About us", href: "/" },
-      { label: "Careers", href: "/" },
-      { label: "Community", href: "/" },
-      { label: "Contact us", href: "/" },
-      { label: "Terms of Service", href: "/" },
-      { label: "Privacy Policy", href: "/" },
+      { label: "About us", href: "/about_us" },
+      { label: "Careers", href: "/careers" },
+      { label: "Community", href: "/community" },
+      { label: "Contact us", href: "/contact_us" },
+      { label: "Terms of Service", href: "/term_of_service" },
+      { label: "Privacy Policy", href: "/privecy_policy" },
     ],
   },
 ];
@@ -304,4 +304,4 @@ export default function Navigation() {
       )}
     </nav>
   );
-}
+};
