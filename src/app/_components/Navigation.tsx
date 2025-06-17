@@ -26,8 +26,13 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
+
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+      { label: "Spoken English", href: "/" },
+
       { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/" },
+
       {
         label: "Spoken English",
         dropdown: [
@@ -46,7 +51,7 @@ const navItems = [
       { label: "OET Classes", href: "/" },
       { label: "Foreign Languages", href: "/" },
       { label: "Kids Courses (Languages)", href: "/" },
-      { label: "Online Mock Tests", href: "/" },
+      { label: "Online Mock Tests", href: "/OnlineMockTest" },
     ],
   },
   {
@@ -60,6 +65,7 @@ const navItems = [
   {
     label: "Study Abroad",href:"/", isButton: true,
     icon: Globe,
+
     // dropdown: [
     //   { label: "Free Consultation", href: "/" },
     //   { label: "Study in UK", href: "/study-abroad-uk" },
@@ -67,6 +73,14 @@ const navItems = [
     //   { label: "Why Study Abrod", href: "/" },
     //   { label: "Study in Australia", href: "/" },
     // ],
+
+    dropdown: [
+      { label: "Free Consultation", href: "/free-consultancy" },
+      { label: "Study in UK", href: "/study-abroad-uk" },
+      { label: "Study in Canada", href: "/" },
+      { label: "Study in Australia", href: "/" },
+    ],
+
   },
   {
     label: "About CI",
