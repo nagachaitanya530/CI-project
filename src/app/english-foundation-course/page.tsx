@@ -16,6 +16,9 @@ import CurriculumSection from "../_components/english-foundation-course/Curricul
 import ScrollSpySidebar from "../_components/english-foundation-course/ScrollSpySidebar";
 import Outcome from "../_components/english-foundation-course/Outcome";
 import FoundationPlans from "../_components/english-foundation-course/FoundationPlans";
+import CourseHighlight from "../_components/english-foundation-course/CourseHighlight";
+import CareerSupport from "../_components/english-foundation-course/CareerSupport";
+import AdditionalFacilities from "../_components/english-foundation-course/AdditionalFacilities";
 
 export default function EnglishFoundationCourse() {
   return (
@@ -43,10 +46,12 @@ export default function EnglishFoundationCourse() {
 
           <section id="curriculum" className="scroll-mt-36">
             <CurriculumSection />
+            <CourseHighlight />
           </section>
 
           <section id="outcome" className="scroll-mt-36">
             <Outcome />
+            <CareerSupport />
           </section>
 
           <section id="skills" className="scroll-mt-36">
@@ -54,6 +59,7 @@ export default function EnglishFoundationCourse() {
           </section>
 
           <section id="benefits" className="scroll-mt-36">
+            <AdditionalFacilities />
             <Benefits />
           </section>
 
