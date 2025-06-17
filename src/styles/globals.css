@@ -10,6 +10,9 @@
 html {
   scroll-behavior: smooth;
 }
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
