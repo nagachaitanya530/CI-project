@@ -1,13 +1,15 @@
-import Navigation from "../_components/Navigation"
+"use client";
+import React from "react";
+import Navigation from "../_components/Navigation";
 
 const MainSection = () => {
   return (
-    <div className=" bg-slate-900">
+    <div className="bg-slate-900">
       {/* Header */}
-
       <Navigation />
+
       {/* Hero Section */}
-      <main className="relative bg-slate-900 py-8 md:py-16">
+      <main className="relative bg-gradient-to-br from-blue-900 via-black to-blue-900 py-8 md:py-16">
         {/* Background geometric shape */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:block">
           <div className="w-48 md:w-96 h-48 md:h-96 bg-gradient-to-br from-orange-400 to-red-500 rounded-r-full opacity-90"></div>
@@ -30,7 +32,6 @@ const MainSection = () => {
               <div className="relative">
                 {/* Student photos grid */}
                 <div className="grid grid-cols-8 md:grid-cols-12 gap-1 md:gap-1 max-w-xs sm:max-w-sm md:max-w-2xl">
-                  {/* Generate student photo placeholders */}
                   {Array.from({ length: 144 }, (_, i) => (
                     <div
                       key={i}
@@ -48,8 +49,7 @@ const MainSection = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="bg-black bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
                     <p className="text-white text-sm md:text-lg font-medium leading-relaxed">
-                      At CI we are proud to be serving a huge community of students by helping them achieve their goals
-                      in life.
+                      At CI we are proud to be serving a huge community of students by helping them achieve their goals in life.
                     </p>
                   </div>
                 </div>
@@ -58,13 +58,13 @@ const MainSection = () => {
           </div>
         </div>
 
-        {/* Additional decorative elements - hide on mobile */}
+        {/* Additional decorative elements */}
         <div className="absolute top-20 right-20 w-20 h-20 bg-blue-500 rounded-full opacity-20 hidden md:block"></div>
         <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-green-400 rounded-full opacity-30 hidden md:block"></div>
         <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-yellow-400 rounded-full opacity-25 hidden md:block"></div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default MainSection
+export default MainSection;
