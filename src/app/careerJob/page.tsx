@@ -137,7 +137,7 @@ const page = () => {
               <li>
 
                 <div className="bbp-topic-info">
-                  <a className="bbp-forum-title hover:text-blue-500 text-sm font-medium" href="https://nationalinstituteoflanguage.in/forums/discussion/essay-negative-impacts-of-social-media/">Essay -Negative impacts of Social Media</a>
+                  <a className="bbp-forum-title hover:text-blue-500 text-sm font-medium" href="">Essay -Negative impacts of Social Media</a>
 
 
                 </div>
@@ -146,14 +146,14 @@ const page = () => {
               <li>
 
                 <div className="bbp-topic-info">
-                  <a className="bbp-forum-title" href="https://nationalinstituteoflanguage.in/forums/discussion/essay-on-neighbors/">Essay on neighbors</a>
+                  <a className="bbp-forum-title" href="">Essay on neighbors</a>
 
 
                 </div>
 
               </li>
               <li><div className="bbp-topic-info">
-                <a className="bbp-forum-title" href="https://nationalinstituteoflanguage.in/forums/discussion/double-question-essay/">Double Question Essay</a>
+                <a className="bbp-forum-title" href="">Double Question Essay</a>
 
 
               </div></li>
@@ -161,7 +161,7 @@ const page = () => {
 
 
                 <div className="bbp-topic-info">
-                  <a className="bbp-forum-title" href="https://nationalinstituteoflanguage.in/forums/discussion/ielts-essay-on-learning-a-language/">IELTS ESSAY on learning a language</a>
+                  <a className="bbp-forum-title" href="">IELTS ESSAY on learning a language</a>
 
 
                 </div>
@@ -170,7 +170,7 @@ const page = () => {
 
 
                 <div className="bbp-topic-info">
-                  <a className="bbp-forum-title" href="https://nationalinstituteoflanguage.in/forums/discussion/health-problems/">Health Problems</a>
+                  <a className="bbp-forum-title" href="">Health Problems</a>
 
 
                 </div>
@@ -186,7 +186,7 @@ const page = () => {
               </a>
             </div>
             <div className="widget-content bb-online-status-who-is-online-members-tab" id="boss_whos_online_widget_heartbeat" data-max="15">			<div className="widget-error widget-error-users">
-              There are no users currently online			</div>
+              There are no users currently online.		</div>
             </div>
 
 
