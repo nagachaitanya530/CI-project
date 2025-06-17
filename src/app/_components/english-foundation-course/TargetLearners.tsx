@@ -23,10 +23,11 @@ export default function TargetLearners() {
   return (
     <section className="bg-[#eaf1fb] py-16 px-4 sm:px-8 md:px-16">
       <div className="max-w-6xl mx-auto text-center">
-       <h2 className="relative inline-block text-3xl md:text-4xl font-bold text-[#284c87] mb-10 group">
+       <h2 className="relative text-center text-3xl md:text-4xl font-bold text-[#284c87] mb-12 group">
   Who is this course for?
-  <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-1 w-0 bg-zinc-700 group-hover:w-full transition-all duration-500 rounded"></span>
+  <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-0 bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded"></span>
 </h2>
+
 
         <div className="grid gap-8 md:grid-cols-3">
           {learners.map((item, idx) => (
