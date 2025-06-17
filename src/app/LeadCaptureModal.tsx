@@ -30,7 +30,7 @@ export default function LeadCaptureModal() {
   if (!show) return null;
 
   return (
-  <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+  <div className="fixed inset-0 bg-black/0 backdrop-blur-sm flex items-center justify-center z-50">
 
       <div className="bg-white rounded-lg w-full max-w-3xl shadow-xl p-6 relative flex flex-col md:flex-row gap-6">
         {/* Left Side - Image */}
