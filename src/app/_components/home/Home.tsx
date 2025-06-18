@@ -11,9 +11,13 @@ import CourseCards from '~/components/ui/progressbar';
 import AITestingPortalComplete from './ai-testing-portal';
 import TrustedCompanies from './trusted-companies';
 import OnlineCourses from './online-courses';
+
+import BlogPage from './blog';
+
 import TestimonialsSection from './reviewsection';
 import BookingSystem from '../book-demo';
 import StudentReviewCarousel from '../english-foundation-course/StudentReviewCarousel';
+
 
 function BottomSection() {
     const courses = [
@@ -532,6 +536,10 @@ const LanguageLandingPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <BlogPage/>
+            
+
             <TestimonialsSection />
             <div className="bg-gray-50 py-0 px-4">
                 <div className="max-w-7xl mx-auto">
@@ -585,6 +593,7 @@ const LanguageLandingPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
         </>
     );
 };
