@@ -65,8 +65,13 @@ const navItems = [
       },
       { label: "OET Classes", href: "/" },
       { label: "Foreign Languages", href: "/foreign-languages" },
+
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/" },
+
       { label: "Kids Courses (Languages)", href: "/" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
+
     ],
   },
   {
