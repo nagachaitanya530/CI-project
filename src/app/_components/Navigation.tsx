@@ -32,28 +32,15 @@ const navItems = [
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
 
-      { label: "Special Classes", href: "/" },
-      { label: "IELTS Classes", href: "/" },
-
-
       {
         label: "English Courses",
         dropdown: [
-
-          { label: "English Foundation Personal", href: "/" },
-          { label: "English Business Personal", href: "/" },
-          { label: "English Advanced Personal", href: "/" },
-          { label: "Soft Skills Personal Training", href: "/" },
-          { label: "Corporate Training English", href: "/" },
 
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
-
-              { label: "English Foundation Personal", href: "/" },
-
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
@@ -69,8 +56,6 @@ const navItems = [
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/" },
 
-      { label: "Kids Courses (Languages)", href: "/" },
-      { label: "Online Mock Tests", href: "/OnlineMockTest" },
 
     ],
   },
