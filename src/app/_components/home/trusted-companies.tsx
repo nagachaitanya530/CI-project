@@ -7,7 +7,6 @@ const techCompanies = [
     { name: "Amazon", logo: "/home/amazon.png" },
     { name: "IBM", logo: "/home/IBM.png" },
     { name: "Cisco", logo: "/home/Cisco.png" },
-    { name: "Apple", logo: "/home/apple.png" },
     { name: "Facebook", logo: "/home/facebook.png" },
     { name: "Intel", logo: "/home/intel.png" },
 ]
@@ -16,7 +15,7 @@ const financeCompanies = [
     { name: "KPMG", logo: "/home/kpmg.png" },
     { name: "Deloitte", logo: "/home/deloitte.svg.png" },
     { name: "HSBC", logo: "/home/hsbc.png" },
-    { name: "Goldman Sachs", logo: "/home/goldman.png" },
+    { name: "Goldman Sachs", logo: "/home/goldmansachs.png" },
     { name: "JPMorgan", logo: "/home/jpmorgan.png" },
     { name: "Morgan Stanley", logo: "/home/morganstanley.png" },
     { name: "PwC", logo: "/home/pwc.png" },
