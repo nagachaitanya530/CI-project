@@ -1,52 +1,6 @@
-import Image from 'next/image'
+import React from 'react'
 import Link from 'next/link'
-
-export default function BlogPage() {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Overcoming fear of public speaking in English",
-      date: "April 6, 2024",
-      image: "/blog-images/image.webp",
-      category: "Speaking Skills",
-      path:"public-speaking"
-    },
-    {
-      id: 2,
-      title: "Developing Spoken Proficiency: When to Focus on Fluency vs Accuracy",
-      date: "February 2, 2024",
-      image: "/blog-images/istockphoto-1307457391-612x612.jpg",
-      category: "Language Learning",
-      path:"language-learning"
-
-    },
-    {
-      id: 3,
-      title: " The Right Online English-Speaking Course",
-      date: "February 2, 2024",
-      image: "/blog-images/happy-teacher-during-class-elementary-260nw-2183353397.webp",
-      category: "Course Selection",
-       path:"course-selection"
-    },
-    {
-      id: 4,
-      title: "How Consistent English Language Learning Can Boost Your Fluency",
-      date: "January 3, 2024",
-      image: "/blog-images/images (1).jpeg",
-      category: "Study Methods",
-      path:"study-methods"
-    },
-    {
-      id: 5,
-      title: "Essential English Collocations for Effective Communication",
-      date: "January 3, 2024",
-      image: "/blog-images/language-skills-reading-listening-speaking-writing-simple-colored-graphic-icons-courses-web-store-language-skills-210916060.webp",
-      category: "Vocabulary",
-      path:"essential-english"
-    }
-   
-  ]
-
+const page = () => {
   const newsArticles = [
     {
       id: 1,
@@ -126,107 +80,28 @@ export default function BlogPage() {
         textOverlay: "",
         textColor: "text-gray-800",
         path:"news6"
-      }
+      },
+      {
+        id: 7,
+        title: "Article 370: The End of Kashmir’s Special Status",
+        excerpt: "The abrogation of Article 370 in August 2019 marked a seismic shift in India’s relationship with Jammu and Kashmir. To understand the full impact of this decision, we must look back to the tumultuous period of India’s partition and the unique circumstances that led to Kashmir’s accession to India....",
+        image: "/blog-images/370-scaled-1.webp",
+        author: "Abhinav",
+        date: "July 9, 2024",
+        category: "news",
+        bgGradient: "from-yellow-400 via-yellow-300 to-yellow-200",
+        textOverlay: "",
+        textColor: "text-gray-800",
+        path:"news7"
+      },
   ]
-
   return (
-    <div className="min-h-screen bg-gray-50 mb-16 mt-8">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Read Latest Blogs From CI
-          </h1>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Featured Article */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="relative h-80">
-                <Image
-                  src="/blog-images/EngagingVocabularyActivitiesBLOG.webp"
-                  alt="Engaging vocabulary activities"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="text-white text-6xl font-serif italic mb-4">
-                    engaging
-                  </div>
-                  <div className="text-white text-4xl font-bold uppercase tracking-wide mb-2">
-                    VOCABULARY
-                  </div>
-                  <div className="text-white text-2xl font-serif italic">
-                    activities
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  Mastering Vocabulary at Home: A Guide to Fluency with Help from the National Institute of Language
-                </h2>
-                
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-gray-500 text-sm">June 27, 2024</span>
-                  <span className="text-red-500 font-semibold text-sm">English Communication</span>
-                </div>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Learning a new language can be a rewarding yet challenging experience. One of the most crucial aspects of language acquisition is building a strong vocabulary foundation that enables effective communication and comprehension.
-                </p>
-                
-                <Link 
-                  href="/blogs-pages/vocabulary"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                >
-                  Read More
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-              
-            </div>
-          </div>
-          
-          
-
-          {/* Blog Posts List */}
-          <div className="lg:col-span-1">
-            <div className="space-y-6">
-              {blogPosts.map((post) => (
-                <div key={post.id} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <Link href={`/blogs-pages/${post.path}`} className="flex items-start p-6 gap-4">
-                    <div className="flex-shrink-0">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={80}
-                        height={80}
-                        className="rounded-lg object-cover"
-                      />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-gray-500 text-sm mb-2">{post.date}</p>
-                     
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 mt-8">
-        {/* News Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div>
+      <div className='m-12'>
+  <h1 className='font-bold text-6xl ml-40 '>Author: Abhinav</h1>
+  <p className='mt-12 ml-40'>An educator with over 13 years of experience in language and communication training. Worked with multi national companies like HCL, Barclay's, American Express and many more. Certified from British Council. 
+  </p></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ml-50 mr-50">
           {newsArticles.map((article) => (
             <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
               {/* Image Section with Overlay */}
@@ -253,9 +128,6 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Background Pattern for Samsung AI */}
-                
               </div>
 
               {/* Content Section */}
@@ -300,8 +172,9 @@ export default function BlogPage() {
             </div>
           ))}
         </div>
-       
-      </div>
+      
     </div>
   )
 }
+
+export default page
