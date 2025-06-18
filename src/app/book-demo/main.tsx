@@ -47,15 +47,41 @@ const MainSection = () => {
 
                 {/* Overlay text */}
                 <div className="absolute inset-0 flex items-center justify-center">
+
+                  <div className="bg-gradient-to-br    to-blue-100 bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
+
+                    <p className="text-red text-sm md:text-lg font-medium leading-relaxed">
+                      At NIL we are proud to be serving a huge community of students by helping them achieve their goals</p>
+
+                    
+
+
                   <div className="bg-black bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
                     <p className="text-white text-sm md:text-lg font-medium leading-relaxed">
                       At CI we are proud to be serving a huge community of students by helping them achieve their goals in life.
                     </p>
+
+
+                    <div className="bg-gradient-to-br    to-blue-100 bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
+                      <p className="text-red text-sm md:text-lg font-medium leading-relaxed">
+                        At NIL we are proud to be serving a huge community of students by helping them achieve their goals
+
+                      </p>
+
+                      <div className="bg-black bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
+                        <p className="text-white text-sm md:text-lg font-medium leading-relaxed">
+                          At CI we are proud to be serving a huge community of students by helping them achieve their goals
+
+                          in life.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         {/* Additional decorative elements */}
@@ -64,7 +90,13 @@ const MainSection = () => {
         <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-yellow-400 rounded-full opacity-25 hidden md:block"></div>
       </main>
     </div>
+
+  
+  )
+}
+
   );
 };
+
 
 export default MainSection;

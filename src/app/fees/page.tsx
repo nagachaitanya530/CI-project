@@ -19,7 +19,7 @@ const ROUTES = {
   IELTS_ACADEMIC: 'ieltsacademicpackage',
   SPOKEN_ENGLISH: 'spokenenglishpackage',
   FOREIGN_LANGUAGE: 'foreignlanguagepackage',
-  KIDS_LANGUAGE: 'kidslanguagepackage',
+  KIDS_LANGUAGE: '../Kids_Courses',
   TEST_SERIES: 'testseriespackage',
 };
   return (

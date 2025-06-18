@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center bg-gradient-to-br from-[#284c87] to-[#4cc4dd] px-6 pt-10 pb-6 min-h-[460px]">
+    <><section className="relative flex flex-col md:flex-row items-center bg-gradient-to-br from-[#284c87] to-[#4cc4dd] px-6 pt-10 pb-6 min-h-[460px]">
       {/* Left text */}
       <div className="flex-1 ml-20 text-white max-w-xl">
         <h1 className="text-3xl sm:text-5xl font-bold mb-4 drop-shadow-sm leading-tight">
@@ -23,13 +23,15 @@ export default function Hero() {
             <img
               src="../../home/professional-women.png"
               alt="Professional woman in business attire"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
           </div>
         </div>
+
       </div>
-      {/* Optionally add decorative background SVGs here if required */}
+
     </section>
+    </>
+
   );
 }
 

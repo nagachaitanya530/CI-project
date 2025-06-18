@@ -27,53 +27,69 @@ const navItems = [
     icon: BookOpen,
     dropdown: [
 
-      { label: "IELTS Classes", href: "/what-is-ielts" },
-      { label: "Spoken English", href: "/" },
 
-      { label: "Special Classes", href: "/" },
-     
+      { label: "Special Classes", href: "/special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
 
       {
-        label: "Spoken English",
+        label: "English Courses",
         dropdown: [
+
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
           {
             label: "English Courses",
             dropdown: [
+
               { label: "English Foundation Personal", href: "/english-foundation-course" },
+
+              { label: "English Foundation Personal", href: "/" },
+
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
               { label: "Corporate Training English", href: "/" },
             ],
           },
+
         ],
       },
       { label: "OET Classes", href: "/" },
-      { label: "Foreign Languages", href: "/" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/" },
+
       { label: "Kids Courses (Languages)", href: "/" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
+
     ],
   },
-  { label: "Book a Demo", href: "/book-demo", isButton: true },
-  { label: "Fees", href: "/fees" },
   {
-    label: "Study Abroad",href:"/", isButton: true,
+    label: "Book Demo",
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
+  },
+  { label: "Fees", href: "/fees", icon: FileText },
+  { label: "JOC", href: "/Joc", icon: GraduationCap },
+  {
+    label: "Study Abroad", href: "/", isButton: true,
     icon: Globe,
 
-    // dropdown: [
-    //   { label: "Free Consultation", href: "/" },
-    //   { label: "Study in UK", href: "/study-abroad-uk" },
-    //   { label: "Study in Canada", href: "/" },
-    //   { label: "Why Study Abrod", href: "/" },
-    //   { label: "Study in Australia", href: "/" },
-    // ],
-
     dropdown: [
-      { label: "Free Consultation", href: "/free-consultancy" },
+      { label: "Free Consultation", href: "/" },
       { label: "Study in UK", href: "/study-abroad-uk" },
       { label: "Study in Canada", href: "/" },
+      { label: "Why Study Abrod", href: "/" },
       { label: "Study in Australia", href: "/" },
     ],
+
+
 
   },
   {
@@ -82,13 +98,13 @@ const navItems = [
     dropdown: [
 
       { label: "About us", href: "/about_us" },
-      { label: "Careers", href: "/careers" },
+      { label: "Careers", href: "/career" },
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/contact_us" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
 
-     
+
     ],
   },
 ];
@@ -336,10 +352,9 @@ export default function Navigation() {
     <nav
       className={`
         sticky top-0 z-50 w-full transition-all duration-300
-        ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
-            : "bg-white/80 backdrop-blur-sm border-b border-transparent"
+        ${isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
+          : "bg-white/80 backdrop-blur-sm border-b border-transparent"
         }
       `}
     >
