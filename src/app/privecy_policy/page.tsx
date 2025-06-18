@@ -6,21 +6,21 @@ export default function PrivecyPolicyPage() {
       <Navigation />
       <main className="max-w-5xl mx-auto px-6 py-12 text-gray-800">
         <h1 className="text-4xl font-bold text-blue-700 mb-6">
-          Privacy Policy for NIL Edutech (P) Limited
+          Privacy Policy for CI Edutech (P) Limited
         </h1>
 
         <p className="mb-4">
-          At National Institute of Language, accessible from{" "}
+          At  CI Institute of Language, accessible from{" "}
           <a
-            href="https://nationalinstituteoflanguage.in/"
+            href="https://aalionsinfotech.com/"
             className="text-blue-600 underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://nationalinstituteoflanguage.in/
+            https://aalionsinfotech.com/
           </a>
           , one of our main priorities is the privacy of our visitors. This Privacy Policy document
-          contains types of information that is collected and recorded by National Institute of
+          contains types of information that is collected and recorded by CI Institute of
           Language and how we use it.
         </p>
 
@@ -31,7 +31,7 @@ export default function PrivecyPolicyPage() {
 
         <p className="mb-4">
           This Privacy Policy applies only to our online activities and is valid for visitors to our
-          website with regards to the information that they shared and/or collect in National
+          website with regards to the information that they shared and/or collect in CI
           Institute of Language. This policy is not applicable to any information collected offline
           or via channels other than this website.
         </p>
