@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import {
   Search,
   Home,
@@ -15,10 +15,10 @@ import {
   X,
   ChevronDown,
   ChevronRight,
-} from "lucide-react"
-import { useState, useRef, useEffect } from "react"
+} from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
-const logoUrl = "/placeholder.svg?height=32&width=120"
+const logoUrl = "/placeholder.svg?height=32&width=120";
 
 const navItems = [
   { label: "Home", href: "/", icon: Home },
@@ -26,16 +26,28 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
+
+
+      { label: "Special Classes", href: "/" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+
+
       { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/" },
+
+
       {
         label: "Spoken English",
         dropdown: [
           {
             label: "English Courses",
             dropdown: [
+
+              { label: "English Foundation Personal", href: "/english-foundation-course" },
+
               { label: "English Foundation Personal", href: "/" },
-              { label: "English Business Personal", href: "/" },
+
+              { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
               { label: "Corporate Training English", href: "/" },
@@ -44,9 +56,9 @@ const navItems = [
         ],
       },
       { label: "OET Classes", href: "/" },
-      { label: "Foreign Languages", href: "/" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/" },
-      { label: "Online Mock Tests", href: "/" },
+      { label: "Online Mock Tests", href: "/OnlineMockTest" },
     ],
   },
   {
@@ -56,84 +68,94 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/", icon: FileText },
-  { label: "JOC", href: "/joc", icon: GraduationCap },
+
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
   {
-    label: "Study Abroad",
+    label: "Study Abroad", href: "/", isButton: true,
     icon: Globe,
+
     dropdown: [
       { label: "Free Consultation", href: "/" },
       { label: "Study in UK", href: "/study-abroad-uk" },
       { label: "Study in Canada", href: "/" },
+      { label: "Why Study Abrod", href: "/" },
       { label: "Study in Australia", href: "/" },
     ],
+
+
+
   },
   {
     label: "About CI",
     icon: Info,
     dropdown: [
-      { label: "About us", href: "/" },
-      { label: "Careers", href: "/" },
-      { label: "Community", href: "/" },
-      { label: "Contact us", href: "/ContactUs" },
-      { label: "Terms of Service", href: "/" },
-      { label: "Privacy Policy", href: "/" },
+
+      { label: "About us", href: "/about_us" },
+      { label: "Careers", href: "/career" },
+      { label: "Community", href: "/community" },
+      { label: "Contact us", href: "/contact_us" },
+      { label: "Terms of Service", href: "/term_of_service" },
+      { label: "Privacy Policy", href: "/privecy_policy" },
+
+
     ],
   },
-]
+];
 
 interface DropdownMenuProps {
-  items: any[]
-  isMobile?: boolean
-  closeMenu?: () => void
-  level?: number
-  isVisible?: boolean
+  items: any[];
+  isMobile?: boolean;
+  closeMenu?: () => void;
+  level?: number;
+  isVisible?: boolean;
 }
 
 const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true }: DropdownMenuProps) => {
-  const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({})
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null)
-  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({});
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (index: number) => {
     if (!isMobile) {
       if (hoverTimeoutRef.current) {
-        clearTimeout(hoverTimeoutRef.current)
+        clearTimeout(hoverTimeoutRef.current);
       }
-      setHoveredItem(index)
+      setHoveredItem(index);
     }
-  }
+  };
 
   const handleMouseLeave = () => {
     if (!isMobile) {
       hoverTimeoutRef.current = setTimeout(() => {
-        setHoveredItem(null)
-      }, 100)
+        setHoveredItem(null);
+      }, 100);
     }
-  }
+  };
 
   const toggleItem = (index: number) => {
     if (isMobile) {
       setOpenItems((prev) => ({
         ...prev,
         [index]: !prev[index],
-      }))
+      }));
     }
-  }
+  };
 
   useEffect(() => {
     return () => {
       if (hoverTimeoutRef.current) {
-        clearTimeout(hoverTimeoutRef.current)
+        clearTimeout(hoverTimeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   if (isMobile) {
     return (
-      <div className="ml-4 mt-2 space-y-1">
+      <div className="ml-4 mt-1 space-y-1">
         {items.map((item, idx) => {
-          const hasDropdown = Array.isArray(item.dropdown)
-          const isOpen = openItems[idx]
+          const hasDropdown = Array.isArray(item.dropdown);
+          const isOpen = openItems[idx];
 
           return (
             <div key={idx}>
@@ -163,40 +185,40 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                 </Link>
               )}
             </div>
-          )
+          );
         })}
       </div>
-    )
+    );
   }
 
   // Desktop dropdown
-  if (!isVisible) return null
+  if (!isVisible) return null;
 
   return (
     <div
       className={`
         absolute ${level === 0 ? "left-0 top-full mt-1" : "left-full top-0 ml-1"}
-        min-w-[250px] bg-white border border-gray-200 rounded-lg shadow-xl
+        min-w-[220px] bg-white border border-gray-200 rounded-lg shadow-xl
         opacity-100 visible transition-all duration-200 ease-in-out
       `}
       style={{ zIndex: 1000 + level * 10 }}
       onMouseEnter={() => {
         if (hoverTimeoutRef.current) {
-          clearTimeout(hoverTimeoutRef.current)
+          clearTimeout(hoverTimeoutRef.current);
         }
       }}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="py-2">
+      <div className="py-1">
         {items.map((item, idx) => {
-          const hasDropdown = Array.isArray(item.dropdown)
-          const isHovered = hoveredItem === idx
+          const hasDropdown = Array.isArray(item.dropdown);
+          const isHovered = hoveredItem === idx;
 
           return (
             <div key={idx} className="relative" onMouseEnter={() => handleMouseEnter(idx)}>
               {hasDropdown ? (
                 <>
-                  <div className="flex justify-between items-center px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 cursor-pointer transition-colors duration-200">
+                  <div className="flex justify-between items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 cursor-pointer transition-colors duration-200">
                     <span className="text-sm font-medium">{item.label}</span>
                     <ChevronRight className="text-gray-400" size={14} />
                   </div>
@@ -214,111 +236,111 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                 <Link
                   href={item.href || "#"}
                   onClick={closeMenu}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
               )}
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void }) => {
-  const [isHovered, setIsHovered] = useState(false)
-  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
     if (hoverTimeoutRef.current) {
-      clearTimeout(hoverTimeoutRef.current)
+      clearTimeout(hoverTimeoutRef.current);
     }
-    setIsHovered(true)
-  }
+    setIsHovered(true);
+  };
 
   const handleMouseLeave = () => {
     hoverTimeoutRef.current = setTimeout(() => {
-      setIsHovered(false)
-    }, 100)
-  }
+      setIsHovered(false);
+    }, 100);
+  };
 
   useEffect(() => {
     return () => {
       if (hoverTimeoutRef.current) {
-        clearTimeout(hoverTimeoutRef.current)
+        clearTimeout(hoverTimeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   if (item.dropdown) {
     return (
-      <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <button className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+      <div className="relative h-full flex items-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <button className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
           {item.icon && <item.icon className="mr-2" size={16} />}
           {item.label}
           <ChevronDown
-            className={`ml-2 transition-transform duration-200 ${isHovered ? "rotate-180" : ""}`}
+            className={`ml-1 transition-transform duration-200 ${isHovered ? "rotate-180" : ""}`}
             size={14}
           />
         </button>
         {isHovered && <DropdownMenu items={item.dropdown} closeMenu={closeMenu} isVisible={true} />}
       </div>
-    )
+    );
   }
 
   if (item.isButton) {
     return (
       <Link
         href={item.href || "#"}
-        className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md"
+        className="flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
       >
         {item.icon && <item.icon className="mr-2" size={16} />}
         {item.label}
       </Link>
-    )
+    );
   }
 
   return (
     <Link
       href={item.href || "#"}
-      className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+      className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
     >
       {item.icon && <item.icon className="mr-2" size={16} />}
       {item.label}
     </Link>
-  )
-}
+  );
+};
 
 export default function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false)
+        setIsMobileMenuOpen(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    document.addEventListener("mousedown", handleClickOutside)
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav
@@ -330,7 +352,7 @@ export default function Navigation() {
         }
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
@@ -340,10 +362,10 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center flex-1 px-8">
+          <div className="hidden lg:flex items-center justify-center flex-1 px-4">
             <ul className="flex items-center space-x-1">
               {navItems.map((item, idx) => (
-                <li key={idx}>
+                <li key={idx} className="h-full flex items-center">
                   <NavigationItem item={item} closeMenu={closeMobileMenu} />
                 </li>
               ))}
@@ -351,18 +373,18 @@ export default function Navigation() {
           </div>
 
           {/* Right side items (search and login) */}
-          <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
               <input
                 type="text"
                 placeholder="Search..."
-                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 transition-colors duration-200"
+                className="pl-10 pr-3 py-2 w-48 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 transition-colors duration-200 text-sm"
               />
             </div>
             <Link
               href="/login"
-              className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600 hover:border-blue-700 rounded-lg transition-colors duration-200 hover:bg-blue-50"
+              className="flex items-center px-3 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600 hover:border-blue-700 rounded-lg transition-colors duration-200 hover:bg-blue-50 whitespace-nowrap"
             >
               <UserCircle className="mr-2" size={16} />
               Sign in
@@ -384,27 +406,30 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div ref={mobileMenuRef} className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="px-4 py-4 space-y-3">
+        <div
+          ref={mobileMenuRef}
+          className="lg:hidden bg-white border-t border-gray-200 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto"
+        >
+          <div className="px-4 py-3 space-y-2">
             {/* Mobile Search */}
-            <div className="relative">
+            <div className="relative mb-2">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
               />
             </div>
 
             {/* Mobile Navigation Items */}
-            <div className="space-y-2">
+            <div className="space-y-1">
               {navItems.map((item, idx) => (
-                <div key={idx} className="border-b border-gray-100 last:border-0 pb-2 last:pb-0">
+                <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>
-                      <div className="flex items-center px-3 py-3 text-gray-700 font-medium">
-                        {item.icon && <item.icon className="mr-3" size={18} />}
-                        <span>{item.label}</span>
+                      <div className="flex items-center px-3 py-2 text-gray-700 font-medium">
+                        {item.icon && <item.icon className="mr-3" size={16} />}
+                        <span className="text-sm">{item.label}</span>
                       </div>
                       <DropdownMenu items={item.dropdown} isMobile closeMenu={closeMobileMenu} />
                     </div>
@@ -412,18 +437,18 @@ export default function Navigation() {
                     <Link
                       href={item.href || "#"}
                       onClick={closeMobileMenu}
-                      className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                      className="flex items-center justify-center px-3 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm"
                     >
-                      {item.icon && <item.icon className="mr-3" size={18} />}
+                      {item.icon && <item.icon className="mr-3" size={16} />}
                       {item.label}
                     </Link>
                   ) : (
                     <Link
                       href={item.href || "#"}
                       onClick={closeMobileMenu}
-                      className="flex items-center px-3 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                      className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 text-sm"
                     >
-                      {item.icon && <item.icon className="mr-3" size={18} />}
+                      {item.icon && <item.icon className="mr-3" size={16} />}
                       <span className="font-medium">{item.label}</span>
                     </Link>
                   )}
@@ -432,13 +457,13 @@ export default function Navigation() {
             </div>
 
             {/* Mobile Sign In */}
-            <div className="pt-3 border-t border-gray-200">
+            <div className="pt-2 border-t border-gray-200">
               <Link
                 href="/login"
                 onClick={closeMobileMenu}
-                className="flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-200"
+                className="flex items-center justify-center px-3 py-2 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-200 text-sm"
               >
-                <UserCircle className="mr-3" size={18} />
+                <UserCircle className="mr-3" size={16} />
                 Sign in
               </Link>
             </div>
@@ -446,5 +471,5 @@ export default function Navigation() {
         </div>
       )}
     </nav>
-  )
-}
+  );
+};

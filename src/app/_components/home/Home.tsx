@@ -11,7 +11,14 @@ import CourseCards from '~/components/ui/progressbar';
 import AITestingPortalComplete from './ai-testing-portal';
 import TrustedCompanies from './trusted-companies';
 import OnlineCourses from './online-courses';
+
 import BlogPage from './blog';
+
+import TestimonialsSection from './reviewsection';
+import BookingSystem from '../book-demo';
+import StudentReviewCarousel from '../english-foundation-course/StudentReviewCarousel';
+
+
 function BottomSection() {
     const courses = [
         {
@@ -83,7 +90,6 @@ function BottomSection() {
                                     Abroad Programmes.
                                 </h2>
                             </div>
-
                             {/* Courses List */}
                             <div className="bg-white/10 rounded-2xl overflow-hidden shadow-md backdrop-blur-md">
                                 {courses.map((course, i) => (
@@ -120,11 +126,13 @@ function BottomSection() {
                                         </div>
                                     </div>
                                 ))}
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
@@ -176,13 +184,12 @@ const OnlineIeltsClasses = () => {
         "Stay in touch with your trainers through mobile apps on iOS and Android"
 
     ];
-
     return (
-        <div className="max-w-6xl mx-auto px-4 mt-12 mb-12 py-10 bg-gradient-to-r from-violet-500 via-blue-500 to-blue-700 rounded-lg">
+        <div className="max-w-6xl mx-auto px-4 mt-12 mb-12 py-10  rounded-lg">
             <div className="flex flex-col md:flex-row gap-12 items-center">
                 {/* Left side - Values list */}
                 <div className="md:w-1/2">
-                    <h2 className="text-2xl font-sans  text-gray-50  mb-8">How do Online IELTS Classes work?</h2>
+                    <h2 className="text-2xl font-sans  text-gray-950  mb-8">How do Online IELTS Classes work?</h2>
 
                     <ul className="space-y-6">
                         {Ieltsclasses.map((value, index) => (
@@ -190,19 +197,15 @@ const OnlineIeltsClasses = () => {
                                 <div className="flex-shrink-0 mt-1 mr-4 text-green-600">
                                     <Check className="h-8 w-8" />
                                 </div>
-                                <p className=" font-extralight text-gray-50 text-2xl">{value}</p>
+                                <p className=" font-extralight text-gray-950 text-2xl">{value}</p>
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 {/* Right side - Image */}
-                <div className="md:w-1/2">
-                    <img
-                        src='../ourvalues.jpg'
-                        alt="Our Values Illustration"
-                        className="rounded-lg shadow-lg w-full h-max object-cover justify-items-end"
-                    />
+                <div className="md:w-1/2 w-full h-full  rounded-lg  p-4">
+                    <StudentReviewCarousel />
                 </div>
             </div>
         </div>
@@ -216,8 +219,86 @@ const LanguageLandingPage: React.FC = () => {
             <TrustedCompanies />
             <CounterSection />
             <OnlineCourses />
+            <div className=" flex flex-col justify-center items-center bg-gradient-to-b from-blue-500 via-blue-900 to-gray-950 mb-6 ">
+                <h1 className=' text-4xl pt-6 font-semibold text-white '>
+                    Experience the State of the Art Education Portal
+                </h1>
+                <p className=' text-xl pt-2 text-white font-semibold'>Feels like a physical Classroom</p>
+
+                <img
+                    src="/home/Physical-portal.png"
+                    alt="Personal Mentor"
+                    className=" w-[45%] h-[20%] p-8 "
+                />
+            </div>
             <BusinessForm />
-            <section className="bg-[#1a1b4b] py-16 px-4 sm:py-20 lg:py-24 mt-10">
+
+            <BookingSystem />
+
+            <div className="flex flex-col md:flex-row justify-center items-center max-w-6xl -mt-24 mx-auto px-6">
+                {/* Left Box */}
+                <div className="bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 opacity-90 rounded-xl shadow-lg p-6 h-screen mx-auto ">
+
+                    <img
+                        src="/home/world-map.png"
+                        className='w-full h-[50%]' />
+                    <h2 className="text-2xl font-semibold text-white ml-10 mb-4">Join a Global Public Speaking Club</h2>
+                    <ul className="list-disc list-inside  text-white space-y-2 ml-10 mb-4">
+                        <li>Nationwide Public Speaking Platform</li>
+                        <li>Interact with Top Speakers</li>
+                        <li>Participate in Debates, Table Talks, Free Speeches & more</li>
+                    </ul>
+                    <div className="text-xs text-white mb-4 ml-10 mt-24">
+                        Public platform for public speaking and leadership skills. Based on International Toastmasters guidelines and supervised by British Council & Cambridge Certified Trainers.
+                    </div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 ml-10 px-4 rounded">
+                        Know More and Join
+                    </button>
+                </div>
+
+                {/* Right Box */}
+                <div className="bg-white p-6 max-w-md w-full -mt-20">
+                    <div className="flex justify-center lg:justify-end">
+                        <div className="relative">
+                            {/* Purple circular background */}
+                            <div className="w-80 h-80 lg:w-40 lg:h-40 rounded-full bg-cyan-600 flex items-center justify-center overflow-hidden">
+                                {/* Student image */}
+                                <div className="w-20 h-20 lg:w-40 lg:h-40 rounded-full overflow-hidden">
+                                    <img
+                                        src="/home/free-consultancy.png?height=400&width=400"
+                                        alt="Student studying with coffee and book"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 className="flex text-3xl font-semibold text-gray-800 justify-center text-center py-4">Get Free Study Abroad Consultation</h2>
+                    <div className="border-t border-b py-2 text-center text-sm text-gray-600 mb-4">
+                        <span className="font-semibold ">Track Record</span> <br />
+                        <span className='text-gray-950'>99% of our students get an admit in less than 6 weeks.</span>
+
+                    </div>
+                    <div className="flex justify-center items-center mb-4">
+                        <img src="/home/Google.png" alt="Google" className="h-20" />
+                        <img src="/home/microsoft.png" alt="Microsoft" className="h-20" />
+                        <img src="/home/ey.png" alt="EY" className="h-20" />
+                        <img src="/home/amazon.png" alt="Amazon" className="h-20" />
+                        <img src="/home/accenture.png" alt="Accenture" className="h-20" />
+                    </div>
+                    <p className="text-xs text-center text-gray-600 mb-4">
+                        Students placed in top international organizations after completing studies abroad.
+                    </p>
+                    <div className="flex justify-center">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Talk to our consultants
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <section className="bg-blue-950 py-16 px-4 sm:py-20 lg:py-24 mt-10">
                 <div className="max-w-6xl mx-auto text-center">
                     <div className="mb-6">
                         <h3 className="text-white text-sm sm:text-base font-medium tracking-[0.2em] uppercase">
@@ -253,6 +334,33 @@ const LanguageLandingPage: React.FC = () => {
             <Cards />
             <Classes />
             <Testseries />
+            <div className="relative justify-center items-center mb-6 mt-6">
+                <img
+                    src="/home/study_at_abroad.jpg"
+                    alt="Personal Mentor"
+                    className=" w-[100%] max-h-[4/12] object-fill "
+                />
+                <div className="absolute inset-0 flex-col items-start px-24 py-24 justify-center md:px-32 md:py-24 text-white bg-black/30 space-y-4">
+                    <div className='flex flex-wrap text-5xl font-bold leading-snug'>
+                        STUDY ABROAD <br /> PROGRAM
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-medium">
+                        Over 4000 International Universities Tie Ups
+                    </div>
+                    <div className="text-sm sm:text-base max-w-lg">
+                        End to end support for Academic IELTS students to get their desired band scores through our online IELTS classes as well as admission process after cracking the test.
+                    </div>
+                    <div>
+                        <a
+                            className="text-sm sm:text-base font-semibold mt-10 text-white hover:text-gray-300 cursor-pointer hover:underline"
+                            href='#'>Learn More...</a>
+                    </div>
+                    <img
+                        src="/home/colleges.png"
+                        className='position-absolute w-[40%] h-50 mt-16 md:w-[40%] md:h-50' />
+
+                </div>
+            </div>
             <section className='bg-white py-16 px-4 md:px-8 max-w-7xl mx-auto'>
                 <div className='flex flex-col md:flex-row gap-12'>
                     <div className='w-full md:w-1/2 space-y-6'>
@@ -370,7 +478,6 @@ const LanguageLandingPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-
             <div className="w-full">
                 {/* Main Banner Section */}
                 <div className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-500 overflow-hidden h-96 -mt-8">
@@ -393,11 +500,11 @@ const LanguageLandingPage: React.FC = () => {
                             <div className="flex justify-center lg:justify-end">
                                 <div className="relative">
                                     {/* Purple circular background */}
-                                    <div className="w-80 h-80 lg:w-88 lg:h-66 rounded-full bg-blue-300 flex items-center justify-center overflow-hidden">
+                                    <div className="w-80 h-80 lg:w-80 lg:h-66 rounded-full bg-blue-300 flex items-center justify-center overflow-hidden">
                                         {/* Student image */}
-                                        <div className="w-72 h-52 lg:w-88 lg:h-88 rounded-full overflow-hidden">
+                                        <div className="w-50 h-52 lg:w-88 lg:h-88 rounded-full overflow-hidden">
                                             <img
-                                                src="/placeholder.svg?height=400&width=400"
+                                                src="/home/man-writing-notes.png?height=400&width=400"
                                                 alt="Student studying with coffee and book"
                                                 className="w-full h-full object-cover"
                                             />
@@ -429,8 +536,64 @@ const LanguageLandingPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
             <BlogPage/>
             
+
+            <TestimonialsSection />
+            <div className="bg-gray-50 py-0 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Phone Image */}
+                        <div className="relative flex justify-center items-center">
+                            <img
+                                src="/home/mobile.png?height=400&width=600"
+                                alt="Mobile app screenshots showing notifications and news feed"
+                                width={600}
+                                height={400}
+                                className="w-full h-auto max-w-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+
+                            />
+                        </div>
+
+                        {/* Content */}
+                        <div className="space-y-4">
+                            <div>
+                                <h1 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+                                    Download android and iOS application to stay connected with the community.
+                                </h1>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Participate in forum activities and talk to expert trainers. Practice writing skills and get
+                                    evaluations. Make connections that will come handy in future. Join Online IELTS Classes with Our Application
+                                </p>
+                            </div>
+
+                            {/* Download Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a href="#" className="inline-block">
+                                    <div className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors">
+                                        <div className="text-2xl">🍎</div>
+                                        <div>
+                                            <div className="text-xs">Download on the</div>
+                                            <div className="text-lg font-semibold">App Store</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" className="inline-block">
+                                    <div className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors">
+                                        <div className="text-2xl">▶️</div>
+                                        <div>
+                                            <div className="text-xs">Get it on</div>
+                                            <div className="text-lg font-semibold">Google Play</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </>
     );
 };
