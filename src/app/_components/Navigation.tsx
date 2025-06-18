@@ -27,16 +27,26 @@ const navItems = [
     icon: BookOpen,
     dropdown: [
 
-      { label: "Special Classes", href: "/" }, 
+
+      { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-   
+
+
+      { label: "Special Classes", href: "/" },
+      { label: "IELTS Classes", href: "/" },
+
+
       {
         label: "Spoken English",
         dropdown: [
           {
             label: "English Courses",
             dropdown: [
+
               { label: "English Foundation Personal", href: "/english-foundation-course" },
+
+              { label: "English Foundation Personal", href: "/" },
+
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/" },
               { label: "Soft Skills Personal Training", href: "/" },
@@ -46,7 +56,7 @@ const navItems = [
         ],
       },
       { label: "OET Classes", href: "/" },
-      { label: "Foreign Languages", href: "/" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
     ],
@@ -58,20 +68,22 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/", icon: FileText },
-  { label: "JOC", href: "/Joc", icon: GraduationCap },
+
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
   {
-    label: "Study Abroad",href:"/", isButton: true,
+    label: "Study Abroad", href: "/", isButton: true,
     icon: Globe,
 
-    // dropdown: [
-    //   { label: "Free Consultation", href: "/" },
-    //   { label: "Study in UK", href: "/study-abroad-uk" },
-    //   { label: "Study in Canada", href: "/" },
-    //   { label: "Why Study Abrod", href: "/" },
-    //   { label: "Study in Australia", href: "/" },
-    // ],
+    dropdown: [
+      { label: "Free Consultation", href: "/" },
+      { label: "Study in UK", href: "/study-abroad-uk" },
+      { label: "Study in Canada", href: "/" },
+      { label: "Why Study Abrod", href: "/" },
+      { label: "Study in Australia", href: "/" },
+    ],
 
-    
+
 
   },
   {
@@ -86,7 +98,7 @@ const navItems = [
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
 
-     
+
     ],
   },
 ];
@@ -334,10 +346,9 @@ export default function Navigation() {
     <nav
       className={`
         sticky top-0 z-50 w-full transition-all duration-300
-        ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
-            : "bg-white/80 backdrop-blur-sm border-b border-transparent"
+        ${isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
+          : "bg-white/80 backdrop-blur-sm border-b border-transparent"
         }
       `}
     >
