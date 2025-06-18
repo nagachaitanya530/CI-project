@@ -107,8 +107,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-4 h-4" />,
       title: "Email Us",
-      content: "support@foxsolution.com",
-      action: "mailto:support@foxsolution.com",
+      content: "support@aalionsinfotech.com",
+      action: "mailto:support@aalionsinfotech.com",
       actionText: "Send email",
     },
     {
@@ -220,7 +220,7 @@ const Contact = () => {
         <RevealOnScroll delay={200} className="lg:col-span-7">
           <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-blue-200/30 relative z-10">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Start Your Project</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Start Your learning</h3>
 
               {formStatus.isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">

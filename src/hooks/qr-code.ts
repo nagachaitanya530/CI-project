@@ -19,7 +19,7 @@ export function useQRCode(text: string) {
       try {
         setLoading(true)
         // Dynamic import of qrcode
-        const QRCode = (await import("qrcode")).default
+        const QRCode = (await import('qrcode')).default
         const url = await QRCode.toDataURL(text, {
           width: 200,
           margin: 2,
