@@ -28,14 +28,26 @@ const navItems = [
     dropdown: [
 
 
-      { label: "Special Classes", href: "/" },
+      { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin
       {
         label: "English Courses",
         dropdown: [
 
+<<<<<<< HEAD
+=======
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
+>>>>>>> origin
           {
             label: "English Courses",
             dropdown: [
@@ -50,10 +62,16 @@ const navItems = [
 
         ],
       },
+
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/" },
+      { label: "Kids Courses (Languages)", href: "/" },
+
       { label: "OET Classes", href: "/" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
       { label: "Online Mock Tests", href: "/" },
 
 
@@ -65,10 +83,8 @@ const navItems = [
     isButton: true,
     icon: CalendarCheck,
   },
-  { label: "Fees", href: "/", icon: FileText },
-
-  { label: "JOC", href: "/joc-page", icon: GraduationCap },
-
+  { label: "Fees", href: "/fees", icon: FileText },
+  { label: "JOC", href: "/Joc", icon: GraduationCap },
   {
     label: "Study Abroad", href: "/", isButton: true,
     icon: Globe,
@@ -421,7 +437,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation Items */}
             <div className="space-y-1">
-              {navItems.map((item, idx) => (
+              {navItems.map((item: any, idx: number) => (
                 <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>
