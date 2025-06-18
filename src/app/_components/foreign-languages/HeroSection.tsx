@@ -1,7 +1,6 @@
-
-
 const HeroSection = () => {
   return (
+
     <section
       className="relative h-[85vh] flex items-center justify-center px-6 md:px-20 overflow-hidden bg-sky-300"
       style={{
@@ -40,6 +39,22 @@ const HeroSection = () => {
             className="max-w-lg w-full h-auto object-contain z-10"
           />
         </div>
+
+    <section className="bg-blue-300 px-6 py-16 flex">
+      {/* First part of Page */}
+      <div className="text-white max-w-xl">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Learn Foreign <br />
+          Languages with <br />
+          <span className="font-extrabold">National Institute of Language</span>
+        </h1>
+        <button className="bg-green-500 hover:bg-zinc-800 transition duration-300 ease-in-out transform hover:-translate-y-2 text-white font-semibold px-6 py-3 rounded-md">BOOK FREE DEMO</button>
+      </div>
+      {/* Image part */}
+      <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
+        Image Placeholder
+      </div>
+
 
         {/* Right Enroll Card */}
         <div className="bg-gray-800 text-white p-8 w-80 rounded-2xl shadow-2xl z-20">
