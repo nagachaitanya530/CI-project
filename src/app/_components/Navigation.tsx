@@ -37,8 +37,15 @@ const navItems = [
 
 
       {
-        label: "Spoken English",
+        label: "English Courses",
         dropdown: [
+
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
           {
             label: "English Courses",
             dropdown: [
@@ -53,6 +60,7 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+
         ],
       },
       { label: "OET Classes", href: "/" },
