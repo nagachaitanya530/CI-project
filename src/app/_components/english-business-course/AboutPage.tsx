@@ -6,10 +6,17 @@ function AboutPage() {
     return (
         <>
             <section id="about" className=" border-gray-300 rounded-xl shadow-lg ">
-                <div className="flex flex-col md:flex-row">
-                    <div className="left p-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div>
 
-                        <div className="flex items-center p-10 ">
+                
+                <h1 className="text-3xl font-semibold py-5 w-1/2">
+                    What you''ll learn   
+                    </h1>
+                <div className="flex flex-col md:flex-row">
+                    <div className="left md:w-3/4 p-2 grid grid-cols-1 sm:grid-cols-2">
+
+                        <div className="flex items-center px-10 ">
                                 <CheckCircle className="w-40 h-40"/>
                             <div className="pl-5">
                                 <h3 className="font-semibold">Intermediate Grammar</h3>
@@ -19,44 +26,48 @@ function AboutPage() {
                             </div>
 
                         </div>
-                        <div className="flex items-center p-10 ">
-                           <CheckCircle className="w-40 h-40"/>
-                            <div className="pl-5">
-                                <h3 className="font-semibold">Intermediate Grammar</h3>
-                                <p className="text-gray-500 text-sm " >You will learn Intermediate
-                                    level concepts of English grammar
-                                    and how to use them in writing and speaking.</p>
-                            </div>
-
-                        </div>
-                        <div className="flex items-center p-10 ">
+                         <div className="flex items-center px-10 ">
                             <CheckCircle className="w-40 h-40"/>
                             <div className="pl-5">
-                                <h3 className="font-semibold">Intermediate Grammar</h3>
-                                <p className="text-gray-500 text-sm " >You will learn Intermediate
-                                    level concepts of English grammar
-                                    and how to use them in writing and speaking.</p>
+                                <h3 className="font-semibold">Interpersonal Skills</h3>
+                                <p className="text-gray-500 text-sm " >You will learn how to 
+                                    communicate in different 
+                                    circumstances with different 
+                                    people in various settings.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-center px-10 ">
+                           <CheckCircle className="w-60 h-60"/>
+                            <div className="pl-5">
+                                <h3 className="font-semibold">Advanced Grammar</h3>
+                                <p className="text-gray-500 text-sm " >You will also learn advanced 
+                                    level concepts like conditional sentences,
+                                     passive sentences etc and their utilisation
+                                      for a specific purposes of of 
+                                      more advanced communication
+                                </p>
                             </div>
 
-
                         </div>
-                        <div className="flex items-center p-10 ">
-                             <CheckCircle className="w-40 h-40"/>
+                       
+                        <div className="flex items-center px-10 ">
+                             <CheckCircle className="w-35 h-35"/>
                             <div className="pl-5">
-                                <h3 className="font-semibold">Intermediate Grammar</h3>
-                                <p className="text-gray-500 text-sm " >You will learn Intermediate
-                                    level concepts of English grammar
-                                    and how to use them in writing and speaking.</p>
+                                <h3 className="font-semibold">Vocabulry</h3>
+                                <p className="text-gray-500 text-sm " >Possessing extensive and 
+                                    impressive vocabulary is 
+                                    essential for advanced communication.</p>
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="right  w-[85%] border-md shadow-2xl mb-2 mt-5 ">
+                    <div className="right h-[100%] border-md shadow-2xl mb-2 mt-5 rounded-2xl ">
                         <div>
                             <img decoding="async"
                                 src="../../home/learning-Girl.jpg"
-                                className="h-60 w-full rounded-md "
+                                className="h-70 w-full rounded-t-md "
                                 alt="Online French Language classNamees Best French classNamees online french tutor"
                             ></img>
                         </div>
@@ -73,11 +84,9 @@ function AboutPage() {
                         </div>
                     </div>
                 </div>
+            </div>
             </section>
         </>
     );
 }
 export default AboutPage;
-
-
-// animaion present motion 

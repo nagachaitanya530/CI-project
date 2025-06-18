@@ -1,13 +1,13 @@
 import "~/styles/globals.css";
-
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
-
 import { TRPCReactProvider } from "~/trpc/react";
+
+import ProgressBar from "./_components/ProgressBar";
+
 
 export const metadata: Metadata = {
   title: "Aalions CI Project",
- 
 };
 
 const geist = Geist({
@@ -19,9 +19,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html>
-      <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+    <html lang="en" className={geist.variable}>
+      <body className="font-sans">
+        <TRPCReactProvider>
+          <ProgressBar />
+          
+
+       
+          {children}
+        </TRPCReactProvider>
       </body>
     </html>
   );

@@ -80,16 +80,16 @@ export default function OnlineCourses() {
                     {/* Right Side - Profile Images */}
                     <div className="space-y-8 -ml-96 ">
                         {/* IELTS Profile */}
-                        <div className="flex items-center justify-center -mt-18">
+                        <div className="flex items-center justify-center -mt-18  transition-opacity duration-300">
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">
                                     <img
-                                        src="/placeholder.svg?height=128&width=128"
+                                        src="/home/ielts-class.png?height=128&width=128"
                                         alt="IELTS Instructor"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="absolute -top-2 -right-2 bg-white rounded-lg px-3 py-1 shadow-md">
+                                <div className="absolute top-4 -right-full bg-white rounded-lg px-8 py-5 shadow-md">
                                     <span className="text-red-500 font-bold text-lg">IELTS</span>
                                 </div>
                                 <div className="absolute -bottom-2 -left-2 bg-white rounded-full p-2 shadow-md">
@@ -105,12 +105,12 @@ export default function OnlineCourses() {
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">
                                     <img
-                                        src="/placeholder.svg?height=128&width=128"
+                                        src="/home/spoken-english.png?height=128&width=128"
                                         alt="Spoken English Instructor"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="absolute -top-2 -right-2 bg-white rounded-lg px-3 py-1 shadow-md">
+                                <div className="absolute top-4 -right-full bg-white rounded-lg px-3 py-1 shadow-md">
                                     <span className="text-red-500 font-bold text-lg">SPOKEN</span>
                                     <div className="text-gray-900 font-bold">ENGLISH</div>
                                 </div>
@@ -127,12 +127,12 @@ export default function OnlineCourses() {
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">
                                     <img
-                                        src="/placeholder.svg?height=128&width=128"
+                                        src="/home/foreign-languages.jpg?height=128&width=128"
                                         alt="Foreign Languages Instructor"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="absolute -top-2 -right-2 bg-white rounded-lg px-3 py-1 shadow-md">
+                                <div className="absolute top-4 -right-full bg-white rounded-lg px-3 py-1 shadow-md">
                                     <span className="text-red-500 font-bold text-lg">Foreign</span>
                                     <div className="text-gray-900 font-bold">Languages</div>
                                     <div className="flex space-x-1 mt-1">
