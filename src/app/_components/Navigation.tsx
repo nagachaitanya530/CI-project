@@ -28,12 +28,8 @@ const navItems = [
     dropdown: [
 
 
-      { label: "Special Classes", href: "/special-classes" },
+      { label: "Special Classes", href: "/" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-
-
-
-
       {
        label: "Spoken English",
         dropdown: [
@@ -56,7 +52,7 @@ const navItems = [
 
         ],
       },
-      { label: "OET Classes", href: "/" },
+      { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
@@ -73,8 +69,10 @@ const navItems = [
     isButton: true,
     icon: CalendarCheck,
   },
-  { label: "Fees", href: "/fees", icon: FileText },
-  { label: "JOC", href: "/Joc", icon: GraduationCap },
+  { label: "Fees", href: "/", icon: FileText },
+
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
   {
     label: "Study Abroad", href: "/", isButton: true,
     icon: Globe,
@@ -421,7 +419,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation Items */}
             <div className="space-y-1">
-              {navItems.map((item: any, idx: number) => (
+              {navItems.map((item, idx) => (
                 <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>
