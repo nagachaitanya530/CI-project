@@ -54,14 +54,8 @@ const navItems = [
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
     ],
   },
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
-  { label: "Fees", href: "/", icon: FileText },
-  { label: "JOC", href: "/Joc", icon: GraduationCap },
+  { label: "Book a Demo", href: "/book-demo", isButton: true },
+  { label: "Fees", href: "/fees" },
   {
     label: "Study Abroad",href:"/", isButton: true,
     icon: Globe,
@@ -420,7 +414,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation Items */}
             <div className="space-y-1">
-              {navItems.map((item, idx) => (
+              {navItems.map((item: any, idx: number) => (
                 <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>
