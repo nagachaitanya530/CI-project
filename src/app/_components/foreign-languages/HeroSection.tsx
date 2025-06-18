@@ -1,5 +1,3 @@
-
-
 const HeroSection = () => {
   return (
     <section className="bg-blue-300 px-6 py-16 flex">
@@ -13,9 +11,9 @@ const HeroSection = () => {
         <button className="bg-green-500 hover:bg-zinc-800 transition duration-300 ease-in-out transform hover:-translate-y-2 text-white font-semibold px-6 py-3 rounded-md">BOOK FREE DEMO</button>
       </div>
       {/* Image part */}
-       <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
-  Image Placeholder
-</div>
+      <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
+        Image Placeholder
+      </div>
 
       {/* Second part of page */}
       <div className="text-white absolute bottom-[3rem] right-[1.5rem] w-[250px] p-5 z-20 rounded-xl shadow-xl ring ring-white bg-zinc-800">
