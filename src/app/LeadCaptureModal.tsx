@@ -53,10 +53,13 @@ export default function LeadCaptureModal() {
               <label className="block text-sm font-medium mb-1">What course are you looking for? *</label>
               <select {...register("course", { required: true })} className="w-full border rounded px-3 py-2">
                 <option value="">- Select -</option>
+                <option value="Job Oriented Course">Job Oriented Course</option>
                 <option value="Spoken English">Spoken English</option>
+                 <option value="Special Spoken English">Special Spoken English</option>
                 <option value="IELTS">IELTS</option>
                 <option value="TOEFL">TOEFL</option>
                 <option value="Study Abroad Counseling">Study Abroad Counseling</option>
+                
               </select>
               {errors.course && <p className="text-red-500 text-xs">This field is required</p>}
             </div>

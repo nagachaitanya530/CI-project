@@ -27,12 +27,9 @@ const navItems = [
     icon: BookOpen,
     dropdown: [
 
+      { label: "Special Classes", href: "/" }, 
       { label: "IELTS Classes", href: "/what-is-ielts" },
-      { label: "Spoken English", href: "/" },
-
-      { label: "Special Classes", href: "/" },
-     
-
+   
       {
         label: "Spoken English",
         dropdown: [
@@ -74,12 +71,7 @@ const navItems = [
     //   { label: "Study in Australia", href: "/" },
     // ],
 
-    dropdown: [
-      { label: "Free Consultation", href: "/free-consultancy" },
-      { label: "Study in UK", href: "/study-abroad-uk" },
-      { label: "Study in Canada", href: "/" },
-      { label: "Study in Australia", href: "/" },
-    ],
+    
 
   },
   {
@@ -88,7 +80,7 @@ const navItems = [
     dropdown: [
 
       { label: "About us", href: "/about_us" },
-      { label: "Careers", href: "/careers" },
+      { label: "Careers", href: "/career" },
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/contact_us" },
       { label: "Terms of Service", href: "/term_of_service" },
