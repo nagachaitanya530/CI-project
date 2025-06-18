@@ -31,12 +31,12 @@ export default function StickyEnrollBar() {
             <span className="font-semibold text-[#284c87] text-lg sm:text-xl">
               English Foundation Course
             </span>
-            <Link
-              href="/book-demo"
+            <a
+              href="#enrollment"
               className="bg-[#284c87] text-white font-bold px-5 py-2 rounded-md hover:bg-[#1f3b6d] transition"
             >
               Enroll Now
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}

@@ -7,7 +7,7 @@ const MainSection = () => {
 
       <Navigation />
       {/* Hero Section */}
-      <main className="relative bg-slate-900 py-8 md:py-16">
+      <main className="relativebg-gradient-to-br from-blue-900 via-black to-blue-900 py-8 md:py-16">
         {/* Background geometric shape */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:block">
           <div className="w-48 md:w-96 h-48 md:h-96 bg-gradient-to-br from-orange-400 to-red-500 rounded-r-full opacity-90"></div>
@@ -46,9 +46,15 @@ const MainSection = () => {
 
                 {/* Overlay text */}
                 <div className="absolute inset-0 flex items-center justify-center">
+
+                  <div className="bg-gradient-to-br    to-blue-100 bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
+                    <p className="text-red text-sm md:text-lg font-medium leading-relaxed">
+                      At NIL we are proud to be serving a huge community of students by helping them achieve their goals</p>
+
                   <div className="bg-black bg-opacity-60 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl max-w-xs md:max-w-md text-center">
                     <p className="text-white text-sm md:text-lg font-medium leading-relaxed">
-                      At NIL we are proud to be serving a huge community of students by helping them achieve their goals
+                      At CI we are proud to be serving a huge community of students by helping them achieve their goals
+
                       in life.
                     </p>
                   </div>
@@ -56,6 +62,7 @@ const MainSection = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         {/* Additional decorative elements - hide on mobile */}

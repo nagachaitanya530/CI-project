@@ -25,9 +25,9 @@ const HeroSection = () => {
         </div>
 
         <div className="flex items-center gap-4 mb-4">
-          <button className="bg-blue-600 text-white px-6 py-3 font-bold rounded hover:bg-zinc-700 transition">
+          <a href="#enrollment" className="bg-blue-600 text-white px-6 py-3 font-bold rounded hover:bg-zinc-700 transition">
             ENROLL NOW
-          </button>
+          </a>
           <span className="text-gray-500">(Credit/Debit EMI Available)</span>
         </div>
 

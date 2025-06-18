@@ -40,10 +40,10 @@ export default function SkillsCovered() {
   return (
     <section className="bg-white py-16 px-4 sm:px-8 md:px-16 text-white">
       <div className="max-w-6xl mx-auto text-center">
-       <h2 className="relative inline-block text-[#284c87] text-3xl md:text-4xl font-bold mb-10 group">
-  Skills Covered in This Course
-  <span className="absolute left-0 bottom-0 w-0 h-1 bg-zinc-700 transition-all duration-500 group-hover:w-full"></span>
-</h2>
+        <h2 className="relative text-center text-[#284c87] text-3xl md:text-4xl font-bold mb-12 group">
+          Skills Covered in This Course
+          <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-[2px] bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded"></span>
+        </h2>
 
         {/* First 3 cards */}
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-6">

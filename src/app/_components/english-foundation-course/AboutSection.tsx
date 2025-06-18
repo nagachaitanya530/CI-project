@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useRouter } from 'next/navigation';
 const AboutSection = () => {
+  const router = useRouter();
   return (
     <section className="bg-white py-10 px-6">
 
@@ -55,7 +56,10 @@ const AboutSection = () => {
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-2">Want something more advanced?</h3>
             <p className="text-gray-700 mb-4">Check our Business English Course.</p>
-            <button className="bg-[#284c87] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={() => router.push('/business-english')}
+              className="bg-[#284c87] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >
               Business English
             </button>
           </div>
