@@ -37,7 +37,7 @@ const navItems = [
 
           { label: "English Foundation Personal", href: "/" },
           { label: "English Business Personal", href: "/" },
-          { label: "English Advanced Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
           { label: "Soft Skills Personal Training", href: "/" },
           { label: "Corporate Training English", href: "/" },
 
