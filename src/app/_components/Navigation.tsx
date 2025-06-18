@@ -28,13 +28,8 @@ const navItems = [
     dropdown: [
 
 
-      { label: "Special Classes", href: "/" },
+      { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-
-
-      { label: "Special Classes", href: "/" },
-      { label: "IELTS Classes", href: "/" },
-
 
       {
         label: "English Courses",
