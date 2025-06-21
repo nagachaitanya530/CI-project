@@ -30,48 +30,25 @@ const navItems = [
 
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-
-      { label: "IELTS Classes", href: "/IELTS-Classes" },
-      {
-        label: "English Courses",
-        dropdown: [
-
-          { label: "English Foundation Personal", href: "/" },
-          { label: "English Business Personal", href: "/" },
-          { label: "English Advanced Personal", href: "/english-advanced-course" },
-          { label: "Soft Skills Personal Training", href: "/" },
-          { label: "Corporate Training English", href: "/" },
+        
 
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
-
-              { label: "English Foundation Personal", href: "/" },
-
               { label: "English Business Personal", href: "/english-business-course" },
-              { label: "English Advanced Personal", href: "/" },
+               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/" },
               { label: "Corporate Training English", href: "/" },
             ],
           },
 
-        ],
-      },
+    
 
       { label: "OET Classes", href: "/oet-classes" },
-      { label: "Foreign Languages", href: "/" },
-      { label: "Kids Courses (Languages)", href: "/" },
-
-      { label: "OET Classes", href: "/" },
       { label: "Foreign Languages", href: "/foreign-languages" },
-
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
-
-      { label: "Online Mock Tests", href: "/" },
-
-      { label: "Kids Courses (Languages)", href: "/" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
 
     ],
@@ -83,7 +60,7 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/fees", icon: FileText },
-  { label: "JOC", href: "/Joc", icon: GraduationCap },
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
