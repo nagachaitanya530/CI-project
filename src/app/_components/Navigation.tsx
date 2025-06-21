@@ -84,16 +84,16 @@ const navItems = [
   { label: "Fees", href: "/fees", icon: FileText },
   { label: "JOC", href: "/Joc", icon: GraduationCap },
   {
-    label: "Study Abroad", href: "/", isButton: true,
+    label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
 
-    dropdown: [
-      { label: "Free Consultation", href: "/" },
-      { label: "Study in UK", href: "/study-abroad-uk" },
-      { label: "Study in Canada", href: "/" },
-      { label: "Why Study Abrod", href: "/" },
-      { label: "Study in Australia", href: "/" },
-    ],
+    // dropdown: [
+    //   { label: "Free Consultation", href: "/" },
+    //   { label: "Study in UK", href: "/study-abroad-uk" },
+    //   { label: "Study in Canada", href: "/" },
+    //   { label: "Why Study Abrod", href: "/" },
+    //   { label: "Study in Australia", href: "/" },
+    // ],
 
 
 
