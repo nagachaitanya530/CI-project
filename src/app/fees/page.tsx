@@ -5,8 +5,9 @@ import Navigation from "../_components/Navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
 import { useRouter } from 'next/navigation'; 
-import { Phone,MessageCircle } from 'lucide-react';
+import { Phone,MessageCircle, Book } from 'lucide-react';
 import Footer from '../_components/Footer'
+
 
 const FeesPage = () => {
   const router = useRouter();
@@ -224,7 +225,8 @@ const ROUTES = {
         </div>
        
       </section>
-        
+      
+      
       <Footer />
     </>
     
