@@ -82,7 +82,7 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/fees", icon: FileText },
-  { label: "JOC", href: "/Joc", icon: GraduationCap },
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
