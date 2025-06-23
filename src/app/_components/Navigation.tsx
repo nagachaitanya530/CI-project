@@ -40,9 +40,6 @@ const navItems = [
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
-
-              
-
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
@@ -54,11 +51,7 @@ const navItems = [
       },
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
-
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-    
-
-    
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
 
     ],
@@ -74,10 +67,8 @@ const navItems = [
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
   {
-    label: "Study Abroad", href: "/", isButton: true,
+    label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
-
-  
 
 
 
