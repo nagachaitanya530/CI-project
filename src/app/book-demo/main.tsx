@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Navigation from "../_components/Navigation";
+import Navigation from "../_components/navigation1";
 
 const MainSection = () => {
   return (
@@ -91,11 +91,13 @@ const MainSection = () => {
       </main>
     </div>
 
-  
-  )
-}
 
+<<<<<<< HEAD
 );
+=======
+  )
+
+>>>>>>> main
 };
 
 

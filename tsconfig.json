@@ -46,7 +46,7 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
+, "src/app/study-abroad/netherlands"  ],
   "exclude": [
     "node_modules"
   ]

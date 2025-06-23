@@ -28,24 +28,42 @@ const navItems = [
     dropdown: [
 
 
-      { label: "Special Classes", href: "/special-classes" },
+      { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
+<<<<<<< HEAD
         
 
+=======
+      {
+       label: "Spoken English",
+        dropdown: [
+
+         
+>>>>>>> main
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
               { label: "English Business Personal", href: "/english-business-course" },
+<<<<<<< HEAD
                { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/" },
+=======
+              { label: "English Advanced Personal", href: "/english-advanced-course" },
+              { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
+>>>>>>> main
               { label: "Corporate Training English", href: "/" },
             ],
           },
 
+<<<<<<< HEAD
     
 
+=======
+        ],
+      },
+>>>>>>> main
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
@@ -60,18 +78,20 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/fees", icon: FileText },
+<<<<<<< HEAD
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
+=======
+
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
+
+ 
+
+
+>>>>>>> main
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
-
-    // dropdown: [
-    //   { label: "Free Consultation", href: "/" },
-    //   { label: "Study in UK", href: "/study-abroad-uk" },
-    //   { label: "Study in Canada", href: "/" },
-    //   { label: "Why Study Abrod", href: "/" },
-    //   { label: "Study in Australia", href: "/" },
-    // ],
 
 
 
@@ -413,7 +433,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation Items */}
             <div className="space-y-1">
-              {navItems.map((item: any, idx: number) => (
+              {navItems.map((item, idx) => (
                 <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>

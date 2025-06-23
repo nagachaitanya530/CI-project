@@ -1,6 +1,6 @@
 
-import Footer from "../_components/Footer";
-import Navigation from "../_components/Navigation";
+import Footer from "../_components/footer1";
+import Navigation from "../_components/navigation1";
 import Kids_courses from "../_components/kids_courses/kids_courses";
 
 import React from 'react'
@@ -8,9 +8,9 @@ import React from 'react'
 const kidspage = () => {
   return (
     <div>
-        <Navigation/>
-        <Kids_courses/>
-        <Footer/>
+      <Navigation />
+      <Kids_courses />
+      <Footer />
 
     </div>
   )
@@ -19,5 +19,5 @@ const kidspage = () => {
 export default kidspage;
 
 
- 
+
 
