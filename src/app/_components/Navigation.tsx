@@ -66,6 +66,10 @@ const navItems = [
 
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
+
+ 
+
+
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
