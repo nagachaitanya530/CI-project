@@ -1,12 +1,21 @@
-import Navigation from "~/app/_components/study-abroad/navigation";
-import OnlineMockTest from "../_components/online-mock-test/OnlineMockTest";
-import TrendingInsightsPage from "../_components/study-abroad/blogs";
-import TrendingCoursesPage from "../_components/study-abroad/top-courses-globe";
+
+
+
+
+
+import FooterSection from "../_components/footer1";
+import NavigationSection from "../_components/navigation1";
+import Homepage from "../_components/study-abroad/home/home";
+
 export default function studyabroad() {
     return (
-        <><Navigation />
-        <TrendingCoursesPage/>
-        <TrendingInsightsPage/>
+        <>
+            <NavigationSection />
+            <Homepage />
+            <FooterSection />
+
+
+
         </>
     )
 

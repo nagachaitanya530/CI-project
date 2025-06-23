@@ -28,49 +28,30 @@ const navItems = [
     dropdown: [
 
 
-      { label: "Special Classes", href: "/special-classes" },
+      { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-
       {
-        label: "English Courses",
+       label: "Spoken English",
         dropdown: [
 
-          { label: "English Foundation Personal", href: "/" },
-          { label: "English Business Personal", href: "/" },
-          { label: "English Advanced Personal", href: "/english-advanced-course" },
-          { label: "Soft Skills Personal Training", href: "/" },
-          { label: "Corporate Training English", href: "/" },
-
+         
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
-
-              { label: "English Foundation Personal", href: "/" },
-
               { label: "English Business Personal", href: "/english-business-course" },
-              { label: "English Advanced Personal", href: "/" },
-              { label: "Soft Skills Personal Training", href: "/" },
+              { label: "English Advanced Personal", href: "/english-advanced-course" },
+              { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
               { label: "Corporate Training English", href: "/" },
             ],
           },
 
         ],
       },
-
       { label: "OET Classes", href: "/oet-classes" },
-      { label: "Foreign Languages", href: "/" },
-      { label: "Kids Courses (Languages)", href: "/" },
-
-      { label: "OET Classes", href: "/" },
       { label: "Foreign Languages", href: "/foreign-languages" },
-
-      { label: "Kids Courses (Languages)", href: "/kids_courses" },
-
-      { label: "Online Mock Tests", href: "/" },
-
-      { label: "Kids Courses (Languages)", href: "/" },
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
 
     ],
@@ -82,18 +63,16 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/fees", icon: FileText },
+
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
+
+ 
+
+
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
-
-    // dropdown: [
-    //   { label: "Free Consultation", href: "/" },
-    //   { label: "Study in UK", href: "/study-abroad-uk" },
-    //   { label: "Study in Canada", href: "/" },
-    //   { label: "Why Study Abrod", href: "/" },
-    //   { label: "Study in Australia", href: "/" },
-    // ],
 
 
 
@@ -435,7 +414,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation Items */}
             <div className="space-y-1">
-              {navItems.map((item: any, idx: number) => (
+              {navItems.map((item, idx) => (
                 <div key={idx} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0">
                   {item.dropdown ? (
                     <div>

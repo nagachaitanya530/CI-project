@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Navigation from "../../_components/Navigation";
-import Footer from '../../_components/Footer'
+import Navigation from "../../_components/navigation1";
+import Footer from '../../_components/footer1'
 import { Button } from "~/components/ui/button";
 import { Card, CardHeader, CardContent } from "~/components/ui/card";
 
@@ -21,8 +21,8 @@ const ForeignPackages = () => {
                     Start with your foreign language training today
                   </h1>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Master French, German, and Spanish with our comprehensive language courses. 
-                    From beginner to advanced levels, we provide structured learning paths 
+                    Master French, German, and Spanish with our comprehensive language courses.
+                    From beginner to advanced levels, we provide structured learning paths
                     designed to help you achieve fluency and confidence in your chosen language.
                   </p>
                 </div>
@@ -55,9 +55,9 @@ const ForeignPackages = () => {
                     <div className="text-center mb-6">
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹6,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">Lev. A1/A2</div>
-                   
+
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,16 +78,16 @@ const ForeignPackages = () => {
                         Complete A1 or A2
                       </li>
                       <li className="flex items-center text-gray-700">
-                        
+
                       </li>
                       <li className="flex items-center text-gray-700">
-                        
+
                       </li>
                       <li className="flex items-center text-gray-700">
-                        
+
                       </li>
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
@@ -103,7 +103,7 @@ const ForeignPackages = () => {
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹12,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">/A1+A2</div>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,16 +122,16 @@ const ForeignPackages = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         A1+A2 Level
-                        </li>
-                        <li className="flex items-center text-gray-700">
+                      </li>
+                      <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         Full Assessment
                       </li>
-                    
+
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
@@ -144,7 +144,7 @@ const ForeignPackages = () => {
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹10,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">/B1/B2</div>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,14 +164,14 @@ const ForeignPackages = () => {
                         </svg>
                         B1 (Intermediate)
                       </li>
-                       <li className="flex items-center text-gray-700">
+                      <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         Full Assessment
                       </li>
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
@@ -202,7 +202,7 @@ const ForeignPackages = () => {
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹11,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">Lev. A1/A2</div>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -220,19 +220,19 @@ const ForeignPackages = () => {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                       Complete A1 or A2
+                        Complete A1 or A2
                       </li>
                       <li className="flex items-center text-gray-700">
-                        
+
                       </li>
-                       <li className="flex items-center text-gray-700">
-                        
+                      <li className="flex items-center text-gray-700">
+
                       </li>
-                       <li className="flex items-center text-gray-700">
-                        
+                      <li className="flex items-center text-gray-700">
+
                       </li>
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
@@ -248,7 +248,7 @@ const ForeignPackages = () => {
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹19,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">/A1+A2</div>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -275,7 +275,7 @@ const ForeignPackages = () => {
                         Full Assessment
                       </li>
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
@@ -288,7 +288,7 @@ const ForeignPackages = () => {
                       <div className="text-3xl font-bold text-gray-800 mb-2">₹14,990</div>
                       <div className="text-lg font-semibold text-blue-600 mb-1">/B1/B2</div>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-gray-700">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -313,11 +313,11 @@ const ForeignPackages = () => {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                       Full Assessment
-                        
+                        Full Assessment
+
                       </li>
                     </ul>
-                    
+
                     <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                       Pay Now - Secured by Razorpay
                     </button>
