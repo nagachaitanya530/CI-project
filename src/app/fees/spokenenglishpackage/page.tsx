@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import Navigation from "../../_components/Navigation";
+import Navigation from "../../_components/navigation1";
 import { Button } from "~/components/ui/button";
 import { Card, CardHeader, CardContent } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Shield } from "lucide-react";
-import Footer from '../../_components/Footer'
+import Footer from '../../_components/footer1'
 
 const IeltsGeneral = () => {
   const whitePackages = [
@@ -180,7 +180,7 @@ const IeltsGeneral = () => {
         "Improvement Strategies",
         "4 Personality Development Modules"
       ],
-      image:  "/fees/spokenenglishpackage/bept1.webp"
+      image: "/fees/spokenenglishpackage/bept1.webp"
     },
     {
       title: "Express Preparation - 1 Week",
@@ -193,7 +193,7 @@ const IeltsGeneral = () => {
         "Exam Day Tips",
         "4 Personality Development Modules"
       ],
-      image:  "/fees/spokenenglishpackage/pt3.webp"
+      image: "/fees/spokenenglishpackage/pt3.webp"
     },
     {
       title: "Band 7+ Guarantee - 4 Months",
@@ -306,7 +306,7 @@ const IeltsGeneral = () => {
             const textColor = isBlackCard ? "text-white" : "text-gray-900";
             const secondaryTextColor = isBlackCard ? "text-gray-300" : "text-gray-700";
             const tertiaryTextColor = isBlackCard ? "text-gray-400" : "text-gray-600";
-            
+
             return (
               <Card key={index} className={`shadow-md hover:shadow-lg transition-shadow duration-300 ${cardBgColor}`}>
                 <CardContent className="p-0">
@@ -316,7 +316,7 @@ const IeltsGeneral = () => {
                       <h3 className={`text-2xl font-bold ${textColor} mb-4`}>
                         {pkg.title}
                       </h3>
-                      
+
                       <ul className="space-y-2 mb-6">
                         {pkg.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className={`${secondaryTextColor} text-base`}>
@@ -324,12 +324,12 @@ const IeltsGeneral = () => {
                           </li>
                         ))}
                       </ul>
-                      
+
                       <div className={`text-3xl font-bold ${textColor} mb-6`}>
                         {pkg.price}
                         <span className={`text-lg font-normal ${tertiaryTextColor}`}>/ {pkg.duration}</span>
                       </div>
-                      
+
                       <div className="space-y-3">
                         <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-base font-medium">
                           Make Payment
@@ -340,11 +340,11 @@ const IeltsGeneral = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Right Image */}
                     <div className="lg:p-8 p-4">
                       <div className="bg-gray-100 rounded-2xl overflow-hidden h-64 lg:h-80">
-                        <img 
+                        <img
                           src={pkg.image}
                           alt="IELTS student studying"
                           className="w-full h-full object-cover"
@@ -358,34 +358,34 @@ const IeltsGeneral = () => {
           })}
         </div>
       </div>
-    <section className="bg-black text-white py-10 px-6 md:px-16 rounded-1xl mt-10 mb-0.5">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-    {/* Left Text */}
-    <div className="md:w-2/3">
-      <h2 className="text-2xl md:text-3xl font-bold mb-2">
-        Need help? <span className="text-white">Talk to us now.</span>
-      </h2>
-      <p className="text-gray-300 text-sm md:text-base">
-        We are always ready to help you out with your queries. We want to make sure that student satisfaction is
-        hundred percent all the time, every time.
-      </p>
+      <section className="bg-black text-white py-10 px-6 md:px-16 rounded-1xl mt-10 mb-0.5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+          {/* Left Text */}
+          <div className="md:w-2/3">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              Need help? <span className="text-white">Talk to us now.</span>
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base">
+              We are always ready to help you out with your queries. We want to make sure that student satisfaction is
+              hundred percent all the time, every time.
+            </p>
+          </div>
+
+          {/* Button */}
+          <div>
+            <button className="bg-white text-black px-6 py-3 rounded shadow-lg hover:shadow-xl transition duration-300">
+              CALL US NOW
+            </button>
+          </div>
+        </div>
+      </section>
+
+      < Footer />
     </div>
 
-    {/* Button */}
-    <div>
-      <button className="bg-white text-black px-6 py-3 rounded shadow-lg hover:shadow-xl transition duration-300">
-        CALL US NOW
-      </button>
-    </div>
-  </div>
-</section>
 
-     < Footer />
-    </div>
-    
-     
   );
- 
+
 };
 
 export default IeltsGeneral;

@@ -1,12 +1,12 @@
-import Footer from "../_components/Footer";
-import Navigation from "../_components/Navigation";
+import Footer from "../_components/footer1";
+import Navigation from "../_components/navigation1";
 
 export default function Study_in_uk() {
     return (
         <>
             <Navigation />
             <div>
-               
+
                 <div className="relative w-full h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
                     <video
                         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -26,7 +26,7 @@ export default function Study_in_uk() {
                     </div>
                 </div>
 
-               
+
                 <div className="px-4 sm:px-6 md:px-10 lg:px-32 py-10 space-y-6">
                     <h1 className="text-2xl md:text-3xl lg:text-[35px] font-bold text-center text-black drop-shadow-md tracking-wider">
                         Here’s an extensive guide for all Indian students who want<br /> to study in the UK.
