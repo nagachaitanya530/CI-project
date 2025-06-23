@@ -64,17 +64,6 @@ const navItems = [
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
-
-    // dropdown: [
-    //   { label: "Free Consultation", href: "/" },
-    //   { label: "Study in UK", href: "/study-abroad-uk" },
-    //   { label: "Study in Canada", href: "/" },
-    //   { label: "Why Study Abrod", href: "/" },
-    //   { label: "Study in Australia", href: "/" },
-    // ],
-
-
-
   },
   {
     label: "About CI",

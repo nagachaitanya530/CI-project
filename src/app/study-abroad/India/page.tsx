@@ -1,6 +1,52 @@
+import React from 'react';
 import Navigation from "~/app/_components/study-abroad/navigation";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
+
+interface StatItem {
+  number: string;
+  label: string;
+}
+
+const StatsComponent: React.FC = () => {
+  const stats: StatItem[] = [
+    {
+      number: "900+",
+      label: "Universities"
+    },
+    {
+      number: "₹80k-₹400k",
+      label: "Annual tuition fees"
+    },
+    {
+      number: "700K+",
+      label: "International Students"
+    },
+    {
+      number: "1 Year",
+      label: "Post-Study Work Visa"
+    }
+  ];
+
+  return (
+    <div className="max-w-5xl mx-auto p-6">
+      <div className="bg-slate-100 rounded-2xl p-8 shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-300">
+          {stats.map((stat: StatItem, index: number) => (
+            <div key={index} className="text-center pt-6 md:pt-0 first:pt-0 md:px-4 first:md:pl-0 last:md:pr-0">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-3 tracking-tight">
+                {stat.number}
+              </div>
+              <div className="text-sm md:text-base text-slate-700 font-medium leading-tight">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const IndiaFAQs = [
   {
@@ -30,6 +76,7 @@ export default function India() {
     return (
         <>
         <Navigation />
+        <StatsComponent />
         <FAQ faqs={IndiaFAQs} title="FAQs" />
         <YourJourney />
 
