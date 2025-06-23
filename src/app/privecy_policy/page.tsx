@@ -1,5 +1,5 @@
-import Navigation from "../_components/Navigation";
-import Footer from "../_components/Footer";
+import Navigation from "../_components/navigation1";
+import Footer from "../_components/footer1";
 export default function PrivecyPolicyPage() {
   return (
     <>
@@ -119,8 +119,8 @@ export default function PrivecyPolicyPage() {
         <p className="text-sm text-gray-600 mt-8">Last updated: June 2025</p>
       </main>
       <Footer />
-        
+
     </>
-    
+
   );
 }

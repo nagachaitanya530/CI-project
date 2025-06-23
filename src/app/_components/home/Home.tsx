@@ -19,7 +19,7 @@ import BookingSystem from '../book-demo';
 import StudentReviewCarousel from '../english-foundation-course/StudentReviewCarousel';
 
 
-function BottomSection() {
+function BottomSection() {``
     const courses = [
         {
             title: "IELTS TestPrep™",
@@ -537,8 +537,8 @@ const LanguageLandingPage: React.FC = () => {
                 </div>
             </div>
 
-            <BlogPage/>
-            
+            <BlogPage />
+
 
             <TestimonialsSection />
             <div className="bg-gray-50 py-0 px-4">
