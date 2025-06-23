@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from "~/app/_components/study-abroad/navigation";
+import Navigation from "~/app/_components/navigation1";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 
