@@ -4,9 +4,14 @@ import React from 'react';
 import Navigation from "../_components/navigation1";
 import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
-import { useRouter } from 'next/navigation';
-import { Phone, MessageCircle } from 'lucide-react';
-import Footer from '../_components/footer1'
+
+import { useRouter } from 'next/navigation'; 
+import { Phone,MessageCircle, Book } from 'lucide-react';
+import Footer from '../_components/Footer'
+
+
+
+
 
 const FeesPage = () => {
   const router = useRouter();
@@ -224,6 +229,11 @@ const FeesPage = () => {
         </div>
 
       </section>
+
+      
+      
+
+
 
       <Footer />
     </>

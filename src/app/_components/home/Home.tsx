@@ -380,7 +380,7 @@ const LanguageLandingPage: React.FC = () => {
 
                         <p className="text-gray-600 leading-relaxed">
                             Aalions Institute of Language (CI) has been training students for international English Exams like
-                            <Link href="/dummy" className="text-blue-600 hover:underline"> IELTS</Link>, TOEFL and PTE, while delivering exceptional results across the board since the beginning. If you are planning to appear in any such exam, NIL is the best institute for study abroad exams. Online IELTS Class with expert trainers and continuous assessment through regular mock tests. Our target is 8+ Bands for every student that we teach. Join NIL's Online IELTS Course today.
+                            <Link href="/dummy" className="text-blue-600 hover:underline"> IELTS</Link>, TOEFL and PTE, while delivering exceptional results across the board since the beginning. If you are planning to appear in any such exam, CI is the best institute for study abroad exams. Online IELTS Class with expert trainers and continuous assessment through regular mock tests. Our target is 8+ Bands for every student that we teach. Join NIL's Online IELTS Course today.
                         </p>
                         <Link
                             href="/dummy"
@@ -392,7 +392,7 @@ const LanguageLandingPage: React.FC = () => {
                     <div className="w-full md:w-1/2">
                         <img
                             src="../../home/british-guy.png"
-                            alt="Online IELTS Course Online IELTS Preparation British Council Online IELTS Course National Institute of Language NIL Academy"
+                            alt="Online IELTS Course Online IELTS Preparation British Council Online IELTS Course National Institute of Language CI Academy"
                             className="w-full h-auto rounded-xl shadow-xl object-cover"
                             loading="lazy"
                         />
@@ -470,7 +470,7 @@ const LanguageLandingPage: React.FC = () => {
                             <div className="p-6">
                                 <h2 className="text-small font-semibold text-gray-900 mb-4">Personality Development</h2>
                                 <p className="text-gray-600 opacity-75 text-sm font-normal leading-relaxed">
-                                    NIL integrates personality development modules in its English communication course which is focused on
+                                    CI integrates personality development modules in its English communication course which is focused on
                                     practical social skills for better interaction.
                                 </p>
                             </div>
@@ -526,7 +526,7 @@ const LanguageLandingPage: React.FC = () => {
                             </div>
                             <div className="flex-1 text-center md:text-left md:ml-8">
                                 <a href="#" className="text-white hover:text-blue-200 underline transition-colors duration-200">
-                                    See what's hot in NIL Community
+                                    See what's hot in CI Community
                                 </a>
                             </div>
                             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-6 py-2 rounded-md transition-all duration-200">
