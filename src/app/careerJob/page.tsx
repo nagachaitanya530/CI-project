@@ -3,12 +3,12 @@
 import React, { useMemo } from 'react'
 
 import { useSearchParams } from 'next/navigation';
-import Navigation from '../_components/Navigation'
-import Footer from '../_components/Footer'
+import Navigation from '../_components/navigation1'
+import Footer from '../_components/footer1'
 
 import JobApplicationForm from './JobApplicationForm';
 import "./style.css";
-import {JobDescription} from './JobDescription';
+import { JobDescription } from './JobDescription';
 const page = () => {
   const searchParams = useSearchParams();
   const ref = searchParams.get("ref");
@@ -25,7 +25,7 @@ const page = () => {
       <Navigation />
 
       <div className="main  flex flex-col gap-5 sm:flex-row p-6 max-w-7xl mx-auto">
- 
+
         <div className="hero   sm:w-4/5">
 
           <div className="bg-cover bg-center bg-no-repeat  w-full rounded-lg "
@@ -34,76 +34,76 @@ const page = () => {
                 "url('https://nationalinstituteoflanguage.in/wp-content/uploads/2023/08/Rect-Light-4.svg')",
             }}
           >
-    <div className=" flex flex-col md:flex-row items-center justify-center px-6 py-12 md:px-20 md:py-20 gap-10">
-      
-      {/* <!-- Left Text --> */}
-      <div className="md:w-2/3 text-center md:text-left">
-        <p className="text-orange-500 font-semibold text-sm mb-4">Careers at CI</p>
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-          We are pleased<br />
-          to know that<br />
-          you are here
-        </h1>
-      </div>
+            <div className=" flex flex-col md:flex-row items-center justify-center px-6 py-12 md:px-20 md:py-20 gap-10">
 
-      {/* <!-- Image in Center --> */}
-      <div className=" md:w-20 md:h-20 flex-shrink-0">
-        <img src="\home\writing-girl.jpg" alt="Team" className="rounded-md w-full h-full object-cover" />
-      </div>
+              {/* <!-- Left Text --> */}
+              <div className="md:w-2/3 text-center md:text-left">
+                <p className="text-orange-500 font-semibold text-sm mb-4">Careers at CI</p>
+                <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                  We are pleased<br />
+                  to know that<br />
+                  you are here
+                </h1>
+              </div>
 
-      {/* <!-- Right Text --> */}
-      <div className="md:w-1/3 text-sm md:text-base text-gray-300 max-w-md text-center md:text-left">
-        <p>
-          At CI we work like a <span className="font-semibold text-white">Family</span> and we have a
-          culture which supports your personal and professional growth.
-          Let’s connect to discover what are opportunities are waiting for you.
-        </p>
-      </div>
-    </div>
+              {/* <!-- Image in Center --> */}
+              <div className=" md:w-20 md:h-20 flex-shrink-0">
+                <img src="\home\writing-girl.jpg" alt="Team" className="rounded-md w-full h-full object-cover" />
+              </div>
+
+              {/* <!-- Right Text --> */}
+              <div className="md:w-1/3 text-sm md:text-base text-gray-300 max-w-md text-center md:text-left">
+                <p>
+                  At CI we work like a <span className="font-semibold text-white">Family</span> and we have a
+                  culture which supports your personal and professional growth.
+                  Let’s connect to discover what are opportunities are waiting for you.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="jobdes flex flex-col gap-5 sm:flex-row p-6 max-w-7xl mx-auto">
 
- <div className="max-w-4xl mx-auto bg-white rounded-xl p-6 space-y-4 text-gray-800 sm:w-4/5">
-      <h1 className="text-2xl font-bold text-blue-700">{job.title}</h1>
-      <p className="italic text-sm text-gray-600">{job.company}</p>
-      <p className="text-xs text-gray-500">{job.posted}</p>
+            <div className="max-w-4xl mx-auto bg-white rounded-xl p-6 space-y-4 text-gray-800 sm:w-4/5">
+              <h1 className="text-2xl font-bold text-blue-700">{job.title}</h1>
+              <p className="italic text-sm text-gray-600">{job.company}</p>
+              <p className="text-xs text-gray-500">{job.posted}</p>
 
-      <p className="text-base">{job.fullDetails}</p>
+              <p className="text-base">{job.fullDetails}</p>
 
-      <div>
-        <h2 className="text-lg font-semibold text-gray-700">Responsibilities:</h2>
-        <ul className="list-disc list-inside space-y-1">
-          {job.responsibilities.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-      </div>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-700">Responsibilities:</h2>
+                <ul className="list-disc list-inside space-y-1">
+                  {job.responsibilities.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
 
-      <div>
-        <h2 className="text-lg font-semibold text-gray-700">Requirements:</h2>
-        <ul className="list-disc list-inside space-y-1">
-          {job.requirements.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-      </div>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-700">Requirements:</h2>
+                <ul className="list-disc list-inside space-y-1">
+                  {job.requirements.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
 
-      <div>
-        <h2 className="text-lg font-semibold text-gray-700">Timing & Compensation:</h2>
-        <ul className="list-disc list-inside space-y-1">
-          {job.timingAndCompensation.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-      </div>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-700">Timing & Compensation:</h2>
+                <ul className="list-disc list-inside space-y-1">
+                  {job.timingAndCompensation.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
 
-      <div className="text-sm">
-        <p><span className="font-semibold">Location:</span> {job.location}</p>
-        <p><span className="font-semibold">Type:</span> {job.type}</p>
-        <p><span className="font-semibold">Experience:</span> {job.experience}</p>
-        <p><span className="font-semibold">Department:</span> {job.department}</p>
-      </div>
-    </div>
+              <div className="text-sm">
+                <p><span className="font-semibold">Location:</span> {job.location}</p>
+                <p><span className="font-semibold">Type:</span> {job.type}</p>
+                <p><span className="font-semibold">Experience:</span> {job.experience}</p>
+                <p><span className="font-semibold">Department:</span> {job.department}</p>
+              </div>
+            </div>
 
             <div className="newopenings h-auto self-start  shadow-lg rounded-lg sm:w-2/5 ">
               <div className="figure">
@@ -123,11 +123,11 @@ const page = () => {
                 <div className='my-5'><a href="/career" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors ">New Openings</a></div>
               </div>
             </div>
-          
-          
+
+
           </div>
 
-      
+
         </div>
         <div className="asideright  sm:w-1/5">
           <div className="recentdis border-2 border-gray-300 p-4 rounded-lg">
@@ -193,11 +193,11 @@ const page = () => {
           </div>
         </div>
 
-        
+
       </div>
-    <div className="applicationform w-full max-w-5xl mx-auto px-4 py-8">
-        <JobApplicationForm/>
-    </div>
+      <div className="applicationform w-full max-w-5xl mx-auto px-4 py-8">
+        <JobApplicationForm />
+      </div>
       <Footer />
 
     </>

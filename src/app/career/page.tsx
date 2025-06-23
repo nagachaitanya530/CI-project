@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Navigation from '../_components/Navigation'
-import Footer from '../_components/Footer'
+import Navigation from '../_components/navigation1'
+import Footer from '../_components/footer1'
 
 import JobCard from './JobCard'
 
@@ -147,22 +147,22 @@ const page = () => {
   };
 
   return (
-<>
-<Navigation/>
-    <div className="p-6 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6">Careers</h2>
-      <FilterPage
-        filters={filters}
-        onChange={handleChange}
-        onSearch={handleSearch}
-        onClear={handleClear}
-      />
-      <div className="mt-6 space-y-4">
-        {results.map(job => <JobCard key={job.id} job={job} />)}
+    <>
+      <Navigation />
+      <div className="p-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">Careers</h2>
+        <FilterPage
+          filters={filters}
+          onChange={handleChange}
+          onSearch={handleSearch}
+          onClear={handleClear}
+        />
+        <div className="mt-6 space-y-4">
+          {results.map(job => <JobCard key={job.id} job={job} />)}
+        </div>
       </div>
-    </div>
-    <Footer/>
-</>
+      <Footer />
+    </>
   );
 }
 

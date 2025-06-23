@@ -340,7 +340,7 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
     );
 };
 
-export default function Navigation() {
+export default function NavigationSection() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
