@@ -7,6 +7,8 @@ import React from 'react'
 
 import Image from "next/image";
 import { FileText, FileSearch } from "lucide-react";
+import BookConsultationForm from '../BookConsultationForm';
+import Topcourse from '../home/successstories'
 
 
 const Herosection =()=>{
@@ -137,37 +139,44 @@ const Secondsection =()=>{
   ]
   return(
     <section>
-    <div className="py-12 px-6 md:px-20 bg-white">
-      <div className="grid md:grid-cols-3 gap-10">
-       
-        <div className="md:col-span-2">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-12">
-            Why{" "}
-            <span className="font-bold ">Study In Italy?</span>
-          </h2>
+  <div className="py-12 px-6 md:px-20 bg-white">
+    {/* Grid with 2 columns: left content + right form */}
+    <div className="grid md:grid-cols-3 gap-10">
+      
+      {/* Left Column: Content */}
+      <div className="md:col-span-2">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-12">
+          Why <span className="font-bold">Study In Italy?</span>
+        </h2>
 
-          <div className="space-y-12">
-            {whyitaly.map((item, idx) => (
-              <div key={idx} className='justify-items-start'>
-                <div className="flex gap-5 items-start">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <BookOpen className="text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800">{item.title}</h3>
-                    <p className="text-gray-600 mt-2">{item.description}</p>
-                  </div>
+        <div className="space-y-12">
+          {whyitaly.map((item, idx) => (
+            <div key={idx} className="justify-items-start">
+              <div className="flex gap-5 items-start">
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <BookOpen className="text-blue-600" />
                 </div>
-                {idx !== whyitaly.length - 1 && (
-                  <hr className="border-t border-gray-200 mt-6" />
-                )}
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800">{item.title}</h3>
+                  <p className="text-gray-600 mt-2">{item.description}</p>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>       
+              {idx !== whyitaly.length - 1 && (
+                <hr className="border-t border-gray-200 mt-6" />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+     
+      <div>
+        <BookConsultationForm />
       </div>
     </div>
-    </section>
+  </div>
+</section>
+
 
     
   )
@@ -871,6 +880,8 @@ const Italy = () => {
 
       <SuccesStories/>
       {/* <TestimonialCarousel/> */}
+      {/* <Topcourse/> */}
+     
      
     </div>
   )
