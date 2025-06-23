@@ -1,8 +1,17 @@
-import Navigation1 from "~/app/_components/navigation1";
+
+
+
+import FooterSection from "../_components/footer1";
+import NavigationSection from "../_components/navigation1";
+import Homepage from "../_components/study-abroad/home/home";
 
 export default function studyabroad() {
     return (
-        <><Navigation1 />
+        <>
+            <NavigationSection />
+            <Homepage />
+            <FooterSection />
+
 
         </>
     )
