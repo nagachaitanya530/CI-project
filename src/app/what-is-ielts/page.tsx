@@ -1153,40 +1153,40 @@ function IeltsPage() {
             </h2>
           </div>
 
-          {/* Right Column - Info Text */}
-          <div className="w-full md:w-1/2 text-gray-700  text-base space-y-4 leading-relaxed">
-            <p className="font-bold text-2xl">
-              A certified IELTS examiner evaluates your performance throughout the
-              Speaking and Listening test based on:
-              <br />1. Obtaining information
-              <br />2. Conveying information
-              <br />3. Speaking to communicate
-              <br />4. Engaging in discussion
-            </p>
-            <p className="font-semibold">
-              Don’t forget to give your best as the performance of the other test
-              taker paired with you in the IELTS Life Skills test does not affect
-              the assessment of your own performance.
-            </p>
-          </div>
+        {/* Right Column - Info Text */}
+        <div className="w-full md:w-1/2 text-gray-700  text-base space-y-4 leading-relaxed">
+          <p className="font-bold text-2xl">
+            A certified IELTS examiner evaluates your performance throughout the
+            Speaking and Listening test based on:
+            <br />1. Obtaining information
+            <br />2. Conveying information
+            <br />3. Speaking to communicate
+            <br />4. Engaging in discussion
+          </p>
+          <p className="font-semibold">
+            Don’t forget to give your best as the performance of the other test
+            taker paired with you in the IELTS Life Skills test does not affect
+            the assessment of your own performance.
+          </p>
         </div>
-      </section>
-
-      <section
-        className="min-h-screen flex items-center justify-center px-4 py-10 bg-no-repeat bg-contain bg-center"
-        style={{
-          backgroundImage:
-            "url('https://d2o42wz6gj7hm6.cloudfront.net/wp-content/uploads/2021/07/01130041/040030021-contact-us-banner.jpg')",
-        }}
-      >
-        <div className="bg-white/90 rounded-xl p-6 w-[600px] flex flex-col md:flex-row gap-8 items-start">
-          {/* Left Column */}
-          <div className="w-full md:w-1/2 space-y-6">
-            <img
-              src=""
-              alt="National Institute of Language"
-              className="w-full h-auto object-contain"
-            />
+      </div>
+    </section>
+    
+    <section
+      className="min-h-screen flex items-center justify-center px-4 py-10 bg-no-repeat bg-contain bg-center"
+      style={{
+        backgroundImage:
+          "url('https://d2o42wz6gj7hm6.cloudfront.net/wp-content/uploads/2021/07/01130041/040030021-contact-us-banner.jpg')",
+      }}
+    >
+      <div className="bg-white/90 rounded-xl p-6 w-[600px] flex flex-col md:flex-row gap-8 items-start">
+        {/* Left Column */}
+        <div className="w-full md:w-1/2 space-y-6">
+          <img
+            src=""
+            alt="National Institute of Language"
+            className="w-full h-auto object-contain"
+          />
 
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-gray-800">We are here to help</h2>
