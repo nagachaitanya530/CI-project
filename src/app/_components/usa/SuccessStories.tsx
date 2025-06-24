@@ -112,7 +112,6 @@ const SuccessStories = () => {
           ))}
         </Swiper>
 
-        {/* Dots Below Cards */}
         <div className="swiper-pagination-custom mt-8 flex justify-center gap-2"></div>
       </div>
     </section>

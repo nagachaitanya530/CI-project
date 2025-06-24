@@ -59,7 +59,7 @@ const FAQs = () => {
             {openIndex === idx && (
               <div className="px-5 pb-4 text-sm text-gray-600">
                 <p>
-                  {/* Placeholder answer — replace this with real content as needed */}
+
                   This will depend on your profile and the university's criteria. Contact our
                   counselors for personalized guidance.
                 </p>
