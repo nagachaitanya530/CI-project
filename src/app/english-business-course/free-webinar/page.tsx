@@ -1,6 +1,6 @@
 import EnrollForm from "~/app/_components/english-business-course/EnrollForm";
-import Footer from "~/app/_components/footer1";
-import Navigation from "~/app/_components/navigation1";
+import Footer from "~/app/_components/Footer";
+import Navigation from "~/app/_components/Navigation";
 
 function FreeWebinar() {
     return (
