@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import Navigation from "../_components/Navigation"
+import Navigation from "../_components/navigation1"
 
 import { useState, useEffect } from "react"
 import { ArrowRight, Play, Star, Users, Award, Zap, ChevronDown } from "lucide-react"
@@ -79,8 +79,8 @@ const ParticleBackground = () => {
 }
 
 const HeroSection = () => {
-  
-  
+
+
 
   const features = [
     { icon: <Zap className="w-5 h-5" />, text: "Fast Response" },
@@ -88,7 +88,7 @@ const HeroSection = () => {
     { icon: <Users className="w-5 h-5" />, text: "24/7 Expert Support" },
   ]
 
-  
+
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
@@ -104,14 +104,14 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <FloatingElement delay={0} className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl" children={undefined} />
         <FloatingElement
-                  delay={1}
-                  className="absolute top-40 right-20 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl" children={undefined}        />
+          delay={1}
+          className="absolute top-40 right-20 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl" children={undefined} />
         <FloatingElement
-                  delay={2}
-                  className="absolute bottom-40 left-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-xl" children={undefined}        />
+          delay={2}
+          className="absolute bottom-40 left-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-xl" children={undefined} />
         <FloatingElement
-                  delay={1.5}
-                  className="absolute bottom-20 right-1/3 w-28 h-28 bg-cyan-500/10 rounded-full blur-xl" children={undefined}        />
+          delay={1.5}
+          className="absolute bottom-20 right-1/3 w-28 h-28 bg-cyan-500/10 rounded-full blur-xl" children={undefined} />
       </div>
 
       {/* Main Content */}
@@ -124,14 +124,14 @@ const HeroSection = () => {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Contact Us For 
+                Contact Us For
                 <br />
                 Any Queries
                 <br />
-               
+
               </h1>
 
-              
+
             </div>
 
             {/* Features */}
@@ -153,15 +153,15 @@ const HeroSection = () => {
                 onClick={scrollToContact}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
-              Lets Discuss Together
+                Lets Discuss Together
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
 
-             
+
             </div>
 
             {/* Stats */}
-           
+
           </div>
 
           {/* Right Column - Visual */}
@@ -171,29 +171,29 @@ const HeroSection = () => {
               {/* Glassmorphism Card */}
               <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 {/* Mock Dashboard/Interface */}
-                
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <img src="./home/63bbf22710f7d2fedab33ea2_contact us.svg"
-                     alt="Logo" 
-                     className="rounded-xl w-full object-cover"/>
-                  
-                  </div>
 
-                  {/* Chart Area */}
-                 
+                {/* Header */}
+                <div className="flex items-center justify-between">
+                  <img src="./home/63bbf22710f7d2fedab33ea2_contact us.svg"
+                    alt="Logo"
+                    className="rounded-xl w-full object-cover" />
 
-                  {/* Status Cards */}
-                 
-               
+                </div>
+
+                {/* Chart Area */}
+
+
+                {/* Status Cards */}
+
+
 
                 {/* Floating Elements */}
                 <FloatingElement
-                                  delay={0}
-                                  className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-lg shadow-lg" children={undefined}                />
+                  delay={0}
+                  className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-lg shadow-lg" children={undefined} />
                 <FloatingElement
-                                  delay={1}
-                                  className="absolute -bottom-2 -left-2 w-6 h-6 bg-cyan-500 rounded-full shadow-lg" children={undefined}                />
+                  delay={1}
+                  className="absolute -bottom-2 -left-2 w-6 h-6 bg-cyan-500 rounded-full shadow-lg" children={undefined} />
               </div>
 
               {/* Background Glow */}
@@ -203,14 +203,14 @@ const HeroSection = () => {
         </div>
 
         {/* Client Logos */}
-       
+
 
         {/* Scroll Indicator */}
-       
+
       </div>
 
       {/* Video Modal */}
-     
+
 
       <style jsx>{`
         @keyframes float {

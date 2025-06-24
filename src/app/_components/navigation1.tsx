@@ -26,7 +26,7 @@ const navItems = [
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: '/usa' },
             { label: 'Canada', href: '/canada' },
-            { label: 'India', href: '/india' },
+            { label: 'India', href: '/study-abroad/India' },
             { label: 'Spain', href: '/spain' },
             { label: 'Malaysia', href: '/malaysia' },
             { label: 'Australia', href: '/australia' },
@@ -36,10 +36,10 @@ const navItems = [
             { label: 'Germany', href: '/germany' },
             { label: 'Dubai', href: '/dubai' },
             { label: 'Ireland', href: '/ireland' },
-            { label: 'Netherlands', href: '/netherlands' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
             { label: 'Italy', href: '/italy' },
             { label: 'Mauritius', href: '/mauritius' },
-            { label: 'International', href: '/international' },
+            { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad' },
         ]
     },
@@ -340,7 +340,7 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
     );
 };
 
-export default function Navigation() {
+export default function NavigationSection() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
