@@ -38,8 +38,13 @@ const navItems = [
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
 
             { label: 'France', href: '/france' },
+
+            { label: 'Germany', href: '/study-abroad/Germany' },
+            { label: 'Dubai', href: '/dubai' },
+
             { label: 'Germany', href: '/germany' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
+
             { label: 'Ireland', href: '/ireland' },
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
             { label: 'Italy', href: '/italy' },
