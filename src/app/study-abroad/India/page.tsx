@@ -1,11 +1,15 @@
+"use client";
+
 import React from 'react';
-
-
-
-
-import Navigation from '../../_components/navigation1';
-import Footer from '../../_components/footer1';
-
+import Navigation from "~/app/_components/navigation1";
+import HeroSection from '~/app/_components/study-abroad/study-abroad-india/hero';
+import BookConsultationForm from '~/app/_components/study-abroad/BookConsultationForm';
+import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
+import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
+import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/proceadure';
+import FAQ from "~/app/_components/study-abroad/faq";
+import YourJourney from "~/app/_components/study-abroad/your-journey";
+import FooterSection from '~/app/_components/footer1';
 
 interface StatItem {
   number: string;
@@ -80,10 +84,15 @@ export default function India() {
     return (
         <>
         <Navigation />
+        <HeroSection />
         <StatsComponent />
-        
-        <Footer/>
-
+        <BookConsultationForm />
+        <StudyInIndiaPage />
+        <CostOfStudying />
+        <MauritiusCard title="Study in India: Application Procedure" image="/images/india-procedure.jpg" />
+        <FAQ faqs={IndiaFAQs} title="FAQs" />
+        <YourJourney />
+        <FooterSection />
         </>
     )
 
