@@ -234,3 +234,26 @@ html {
 
 
 
+.scrollbar-hide-mauritius {
+  -ms-overflow-style: none;
+  scrollbar-width: none;     
+}
+.scrollbar-hide-mauritius::-webkit-scrollbar {
+  display: none;            
+}
+
+/* Custom scrollbar for contact us section  added by ayush for contact us*/
+.contactusscrool::-webkit-scrollbar {
+  width: 6px;
+}
+.contactusscrool::-webkit-scrollbar-track {
+  background: transparent;
+}
+.contactusscrool::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+.contactusscrool {
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}

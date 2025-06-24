@@ -36,7 +36,7 @@ const navItems = [
             { label: 'Germany', href: '/germany' },
             { label: 'Dubai', href: '/dubai' },
             { label: 'Ireland', href: '/ireland' },
-            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Netherlands', href: '/netherlands' },
             { label: 'Italy', href: '/italy' },
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/international' },
@@ -340,7 +340,7 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
     );
 };
 
-export default function NavigationSection() {
+export default function Navigation() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
