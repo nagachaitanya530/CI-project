@@ -31,7 +31,7 @@ const navItems = [
             { label: 'Malaysia', href: '/malaysia' },
             { label: 'Australia', href: '/australia' },
             { label: 'New Zealand', href: '/newzealand' },
-            { label: 'Singapore', href: '/singapore' },
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
             { label: 'France', href: '/france' },
             { label: 'Germany', href: '/germany' },
             { label: 'Dubai', href: '/dubai' },
