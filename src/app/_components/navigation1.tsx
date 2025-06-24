@@ -23,8 +23,13 @@ const navItems = [
     {
         label: "Study Abroad",
         dropdown: [
+
+            { label: 'UK', href: "/uk" },
+            { label: 'USA', href: 'study-abroad/usa' },
+
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: '/usa' },
+
             { label: 'Canada', href: '/canada' },
 
             { label: 'India', href: '/india' },
