@@ -79,6 +79,7 @@
     "superjson": "^2.2.1",
     "swiper": "^11.2.8",
     "tailwind-merge": "^3.3.0",
+    "tailwind-scrollbar-hide": "^4.0.0",
     "tw-animate-css": "^1.3.4",
     "vaul": "^1.1.2",
     "zod": "^3.25.50"

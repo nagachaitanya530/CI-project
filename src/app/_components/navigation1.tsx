@@ -24,7 +24,7 @@ const navItems = [
         label: "Study Abroad",
         dropdown: [
             { label: 'UK', href: "/uk" },
-            { label: 'USA', href: '/usa' },
+            { label: 'USA', href: 'study-abroad/usa' },
             { label: 'Canada', href: '/canada' },
             { label: 'India', href: '/india' },
             { label: 'Spain', href: '/spain' },
