@@ -147,7 +147,7 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
           </div>
         </div>
 
-        {/* Girl Image - Lowered and Enlarged */}
+        {/* Girl Image */}
 <div className="absolute top-0 z-20 hidden lg:block" 
      style={{ 
        left: '70%', 
