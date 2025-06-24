@@ -1,26 +1,26 @@
 "use client"
 import { useState } from 'react';
 
-const TrendingCoursesPage = () => {
+const CarrerPage = () => {
   const courses = [
     {
       id: 1,
-      title: 'Business Management',
-      image: '/study-abroad-courses/mba-img.webp',
+      title: 'Investment Banking',
+      image: '/study-abroad-courses/Finance-img.webp',
       gradient: 'from-blue-50 to-blue-100',
       category: 'business'
     },
     {
       id: 2,
-      title: 'Engineering',
-      image: '/study-abroad-courses/engrng-img.webp',
+      title: 'Healthcare',
+      image: '/popular-courses/healthcare-img.webp',
       gradient: 'from-blue-50 to-blue-100',
       category: 'engineering'
     },
     {
       id: 3,
-      title: 'Computer Science',
-      image: '/study-abroad-courses/it-img.webp',
+      title: 'Education',
+      image: '/study-abroad-courses/educ-img.webp',
       gradient: 'from-blue-50 to-blue-100',
       category: 'technology'
     },
@@ -40,23 +40,23 @@ const TrendingCoursesPage = () => {
     },
     {
       id: 6,
-      title: 'Environmental Science',
-      image: '/study-abroad-courses/envr-scie-img.webp',
+      title: 'Engineering',
+      image: '/study-abroad-courses/engrng-img.webp',
       gradient: 'from-blue-50 to-blue-100',
       category: 'medicine'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-12 px-4 mt-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            Discover <span className="text-blue-600">Popular Courses </span> across the Globe
+            Discover <span className="text-blue-600">Career </span> Prospect Globally 
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-orange-400 to-red-400 mx-auto rounded-full"></div>
-          <p className='mt-4'>Global universities gives students access to the most distinctive and valuable courses in the world. Here are some of the top courses that are preferred by international students:</p>
+          <p className='mt-4'>The job market around the world is diverse, offering opportunities across various sectors. Here are some key sectors and industries that presently offer employment opportunities:</p>
          
         </div>
 
@@ -85,7 +85,6 @@ const TrendingCoursesPage = () => {
                 <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                   {course.title}
                 </h3>
-             
               </div>
 
               {/* Floating Badge */}
@@ -111,4 +110,4 @@ const TrendingCoursesPage = () => {
   );
 };
 
-export default TrendingCoursesPage;
+export default CarrerPage;
