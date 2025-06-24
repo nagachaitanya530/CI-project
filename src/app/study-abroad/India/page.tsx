@@ -7,7 +7,7 @@ import BookConsultationForm from '~/app/_components/study-abroad/BookConsultatio
 import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
 import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
 import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/proceadure';
-import FAQ from "~/app/_components/study-abroad/faq";
+import FAQ from "~/app/_components/study-abroad/ask";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from '~/app/_components/footer1';
 
