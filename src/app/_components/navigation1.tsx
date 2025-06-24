@@ -52,7 +52,12 @@ const navItems = [
 
             { label: 'France', href: '/france' },
 
+            { label: 'Germany', href: '/germany' },
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+
+
             { label: 'Germany', href: '/study-abroad/Germany' },
+
             { label: 'Dubai', href: '/dubai' },
 
             { label: 'Germany', href: '/germany' },

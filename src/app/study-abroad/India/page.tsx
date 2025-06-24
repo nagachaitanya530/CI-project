@@ -5,12 +5,17 @@ import Navigation from "~/app/_components/navigation1";
 import HeroSection from '~/app/_components/study-abroad/study-abroad-india/hero';
 import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
 import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
-import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
+
+import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
+//import FAQ from "~/app/_components/study-abroad/ask";
+
+//import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
 import Scholarships from '~/app/_components/study-abroad/study-abroad-india/scholarship';
 import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/career-prospect';
 import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
 import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
 import FAQ from "~/app/_components/study-abroad/faq";
+
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from '~/app/_components/footer1';
 
