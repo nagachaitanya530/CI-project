@@ -24,48 +24,42 @@ const navItems = [
         label: "Study Abroad",
         dropdown: [
 
-            { label: 'UK', href: "/uk" },
+           { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: 'study-abroad/usa' },
-
-            { label: 'UK', href: "/study-abroad/study-abroad-uk" },
-            { label: 'USA', href: '/usa' },
-
-            { label: 'Canada', href: '/canada' },
-
-            { label: 'India', href: '/india' },
+              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+                { label: 'Australia', href: "/study-abroad/australia" },
+           
             { label: 'Spain', href: '/study-abroad/spain' },
-            { label: 'Malaysia', href: '/malaysia' },
-
+          
             { label: 'India', href: '/study-abroad/India' },
-            { label: 'Canada', href: '/study-abroad/study-abroad-canada' },
-            { label: 'India', href: '/india' },
-            { label: 'Spain', href: '/spain' },
+           
+            
+          
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
 
-            { label: 'Australia', href: '/australia' },
+            
 
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
-            { label: 'Singapore', href: '/singapore' },
+           
 
             { label: 'France', href: '/study-abroad/study-in-france' },
-            { label: 'Germany', href: '/germany' },
+            
 
 
-            { label: 'New Zealand', href: '/newzealand' },
+          
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
 
-            { label: 'France', href: '/france' },
+            { label: 'Ireland', href: '/study-abroad/ireland' },
 
             { label: 'Germany', href: '/study-abroad/Germany' },
+             { label: 'Switzerland', href: '/study-abroad/Switzerland' },
+            
 
-            { label: 'Dubai', href: '/dubai' },
-
-            { label: 'Germany', href: '/germany' },
+         
             { label: 'Dubai', href: '/study-abroad/dubai' },
 
-            { label: 'Ireland', href: '/ireland' },
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
-            { label: 'Italy', href: '/italy' },
+            { label: 'Itely', href: '/study-abroad/itely' },
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/international' },
             { label: 'Study Abroad', href: '/study-abroad' },

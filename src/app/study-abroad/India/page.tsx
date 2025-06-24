@@ -11,6 +11,7 @@ import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/ca
 import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
 import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
 import FAQ from "~/app/_components/study-abroad/faq";
+
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from '~/app/_components/footer1';
 
