@@ -49,7 +49,7 @@ export default function FooterSection() {
                         <h4 className="text-blue-800 mb-3 font-medium text-lg">Study Destination</h4>
                         <ul className="space-y-2">
                             <li className="text-sm text-gray-700 hover:text-white"><a href="#">Study in UK</a></li>
-                            <li className="text-sm text-gray-700 hover:text-white"><a href="#">Study in USA</a></li>
+                            <li className="text-sm text-gray-700 hover:text-white"><a href="/study-abroad/usa">Study in USA</a></li>
                             <li className="text-sm text-gray-700 hover:text-white"><a href="#">Study in Canada</a></li>
                             <li className="text-sm text-gray-700 hover:text-white"><a href="#">Study in Australia</a></li>
                             <li className="text-sm text-gray-700 hover:text-white"><a href="#">Study in New-Zealand</a></li>
