@@ -234,6 +234,7 @@ html {
 
 
 
+
 .scrollbar-hide-mauritius {
   -ms-overflow-style: none;
   scrollbar-width: none;     
@@ -257,3 +258,5 @@ html {
   scrollbar-width: thin; 
   scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
+
+

@@ -1,11 +1,18 @@
+"use client";
+
 import React from 'react';
-
-
-
-
-import Navigation from '../../_components/navigation1';
-import Footer from '../../_components/footer1';
-
+import Navigation from "~/app/_components/navigation1";
+import HeroSection from '~/app/_components/study-abroad/study-abroad-india/hero';
+import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
+import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
+import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
+import Scholarships from '~/app/_components/study-abroad/study-abroad-india/scholarship';
+import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/career-prospect';
+import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
+import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
+import FAQ from "~/app/_components/study-abroad/faq";
+import YourJourney from "~/app/_components/study-abroad/your-journey";
+import FooterSection from '~/app/_components/footer1';
 
 interface StatItem {
   number: string;
@@ -52,6 +59,57 @@ const StatsComponent: React.FC = () => {
   );
 };
 
+
+const courses = [
+  {
+    title: "Tourism Administration",
+ image: "/hospitality-img.webp",
+
+  },
+  {
+    title: "Psychology",
+    image: "/images/psychology.jpg",
+  },
+  {
+    title: "Information Technology",
+    image: "/images/it.jpg",
+  },
+    {
+    title: "Information Technology",
+    image: "/images/it.jpg",
+  },
+    {
+    title: "Information Technology",
+    image: "/images/it.jpg",
+  },
+    {
+    title: "Information Technology",
+    image: "/images/it.jpg",
+  },
+];
+
+function PopularCourses() {
+  return (
+    <section className="px-4 md:px-20 py-12 bg-white">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-2">
+          <span className="font-bold underline decoration-red-500">Popular Courses</span> In India
+        </h2>
+        <p className="text-gray-600 mb-10">
+          India is emerging as a popular study abroad destination. <br />
+          Here are some of the most popular programs in India:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {courses.map((course, index) => (
+            <MauritiusCard key={index} title={course.title} image={course.image} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const IndiaFAQs = [
   {
     question: "Is it expensive to study in India?",
@@ -80,11 +138,19 @@ export default function India() {
     return (
         <>
         <Navigation />
+        <HeroSection />
         <StatsComponent />
-        
-        <Footer/>
-
+        <StudyInIndiaPage />
+        <PopularCourses />
+        <CostOfStudying />
+        <Scholarships />
+        <CareerProspect />
+        <ProcedureAboutIndia />
+        <SuccessStories />
+        <FAQ faqs={IndiaFAQs} title="FAQs" />
+        <YourJourney />
+        <FooterSection />
         </>
-    )
+    );
 
-}
+};
