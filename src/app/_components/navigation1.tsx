@@ -26,9 +26,15 @@ const navItems = [
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: '/usa' },
             { label: 'Canada', href: '/canada' },
+
+            { label: 'India', href: '/india' },
+            { label: 'Spain', href: '/study-abroad/spain' },
+            { label: 'Malaysia', href: '/malaysia' },
+
             { label: 'India', href: '/study-abroad/India' },
             { label: 'Spain', href: '/spain' },
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+
             { label: 'Australia', href: '/australia' },
 
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
