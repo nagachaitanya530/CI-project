@@ -1185,7 +1185,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, value, text }) =>  (
         {/* Left Column */}
         <div className="w-full md:w-1/2 space-y-6">
           <img
-            src=""
+            src=" "
             alt="National Institute of Language"
             className="w-full h-auto object-contain"
           />
