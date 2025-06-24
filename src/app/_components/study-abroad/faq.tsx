@@ -20,23 +20,28 @@ function FAQ({ faqs, title = "FAQs" }: FAQProps) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto p-6">
       <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
         {title}
       </h1>
 
+      
+      <div className="space-y-4 hover:cursor-pointer">
+
+
       <div className="space-y-4">
+
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md"
+            className="border p-3  focus:outline-none  border-gray-200 hover:border-blue-900 rounded-lg bg-white shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+              className="w-full hover:cursor-pointer  px-6 py-5 text-left flex justify-between items-center "
               aria-expanded={openIndex === index}
             >
-              <span className="text-lg font-medium text-gray-900 pr-4">
+              <span className="text-2xl font-medium hover:text-blue-900 text-gray-900 pr-4">
                 {faq.question}
               </span>
               <div className="flex-shrink-0">
@@ -69,6 +74,7 @@ function FAQ({ faqs, title = "FAQs" }: FAQProps) {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
