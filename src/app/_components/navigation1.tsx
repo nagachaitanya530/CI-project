@@ -38,7 +38,7 @@ const navItems = [
             { label: 'Ireland', href: '/ireland' },
 
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
-            { label: 'Italy', href: '/italy' },
+            { label: 'Italy', href: '/study-abroad/italy' },
 
             { label: 'Mauritius', href: '/mauritius' },
             { label: 'International', href: '/study-abroad/study-international' },

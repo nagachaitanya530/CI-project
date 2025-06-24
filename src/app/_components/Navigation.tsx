@@ -30,40 +30,25 @@ const navItems = [
 
       { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-<<<<<<< HEAD
-        
-
-=======
       {
        label: "Spoken English",
         dropdown: [
 
          
->>>>>>> main
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
               { label: "English Business Personal", href: "/english-business-course" },
-<<<<<<< HEAD
-               { label: "English Advanced Personal", href: "/english-advanced-course" },
-              { label: "Soft Skills Personal Training", href: "/" },
-=======
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
->>>>>>> main
               { label: "Corporate Training English", href: "/" },
             ],
           },
 
-<<<<<<< HEAD
-    
-
-=======
         ],
       },
->>>>>>> main
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
@@ -78,9 +63,6 @@ const navItems = [
     icon: CalendarCheck,
   },
   { label: "Fees", href: "/fees", icon: FileText },
-<<<<<<< HEAD
-  { label: "JOC", href: "/joc-page", icon: GraduationCap },
-=======
 
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
@@ -88,7 +70,6 @@ const navItems = [
  
 
 
->>>>>>> main
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,

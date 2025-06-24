@@ -9,6 +9,7 @@ import Image from "next/image";
 import { FileText, FileSearch } from "lucide-react";
 import BookConsultationForm from '../BookConsultationForm';
 import Topcourse from '../home/successstories'
+import Link from 'next/link';
 
 
 const Herosection =()=>{
@@ -119,7 +120,7 @@ const Secondsection =()=>{
       {
      
       title:'Better career opportunities',
-      description:'nternships and job placements are available to all students across various sectors like fashion, design, travel, and many others. With many foreign businesses based in Italy, the exposure gained is highly valuable.',
+      description:'Internships and job placements are available to all students across various sectors like fashion, design, travel, and many others. With many foreign businesses based in Italy, the exposure gained is highly valuable.',
     },
       {
      
@@ -322,6 +323,14 @@ const UniversityList=()=> {
           </div>
         )}
       </div>
+
+   <div className="flex justify-center items-center p-8">
+  <Link href="/partnered-universities">
+    <button className="bg-white hover:bg-blue-800 text-blue-800 hover:text-white font-semibold py-3 px-8 rounded-lg border-2 border-blue-600 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300">
+      View our Partnered Universities
+    </button>
+  </Link>
+</div>
     </div>
   );
 }
@@ -391,7 +400,10 @@ const Costofstudying=()=>{
 
 
 
-const courses = [
+
+
+const PopularCoursesSection = () => {
+  const courses = [
   {
     name: "Business Management",
     image: "/bm.jpg" , 
@@ -417,8 +429,6 @@ const courses = [
     image: "/cullinary.jpg",
   },
 ];
-
-const PopularCoursesSection = () => {
   return (
     <div className="py-12 px-4 text-center">
       {/* Title */}
@@ -453,29 +463,10 @@ const PopularCoursesSection = () => {
 
 
 
-// const Scholarships_Italy=()=>{
-//   return(
-//     <div className='flex flex-col  md:flex-row items-start gap-9 p-6 max-w-4xl mx-auto'>
-//       <div className='flex-1 space-y-4'>
-//         <h1 className='text-4xl font-bold underline underline-red-500'>Scholarships in Italy</h1>
-//         <p>
-//           The country offers numerous scholarships for Indian students. Italy is an attractive destination for students seeking financial assistance for their higher education. These Italian scholarships for Indian students are provided by both Italian universities and external organizations. Scholarships are often limited and are awarded based on merit, after assessment of their grades from their previous studies. Colleges offering programs in the field of Art and Design, have individual scholarships that they provide the students with, based on their portfolio and profile.
-//         </p>
-//       </div>
-//       <div className='flex-1'>
-//         <img 
-//         src='/scinitaly.jpg'
-//         alt='scholarship in italy'
-//         className='rounded-lg'
-//         ></img>
-//       </div>
-//     </div>
-//   )
-// }
 
 
 const Moredetailsection=()=>{
-
+ const [activeTab, setActiveTab] = useState('documents');
   return(
     <section>
     <div className='bg-white py-12 px-6'>
@@ -486,19 +477,34 @@ const Moredetailsection=()=>{
         <div className="flex flex-col md:flex-row gap-10 relative">
           <div className="md:w-1/4">
           <div className="sticky top-20 space-y-4">
-             <button className="flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium bg-blue-600 text-white">
-                <FileText size={16} />
-                Documents
-              </button>
-              <button className="flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium bg-blue-600 text-white">
-                <FileSearch size={16} />
-                Visa
-              </button>
-            </div>
+                <button 
+                  onClick={() => setActiveTab('documents')}
+                  className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    activeTab === 'documents' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  <FileText size={16} />
+                  Documents
+                </button>
+                <button 
+                  onClick={() => setActiveTab('visa')}
+                  className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    activeTab === 'visa' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  <FileSearch size={16} />
+                  Visa
+                </button>
+              </div>
             </div>
 
 
             <div className="md:w-3/4 space-y-10">
+             {activeTab === 'documents' && (
             <div className="bg-gray-50 p-6 rounded-4xl shadow-lg">
               <h3 className="text-xl font-bold mb-2">
                 Documents required to study in Italy
@@ -517,6 +523,8 @@ const Moredetailsection=()=>{
                 <li>Recommendation Letters (LORs)</li>
               </ul>
             </div>
+             )}
+              {activeTab === 'visa' && (
             <div className="bg-gray-50 p-6 rounded-4xl shadow-lg">
               <h3 className="text-xl font-bold mb-2">
                 Italy study visa process
@@ -541,6 +549,7 @@ const Moredetailsection=()=>{
                 <li>Proof of Accommodation</li>
               </ul>
             </div>
+              )}
             </div>
 
         </div>
@@ -637,6 +646,69 @@ function Scholarships() {
  </>
     );
 }
+
+
+
+
+const CareerProspects = () => {
+
+  const Career  = [
+  {
+    name: "Creative Industries",
+    image: "/bm.jpg" , 
+  },
+  {
+    name: "Fashion & Design",
+    image: "/tourisam.jpg",
+  },
+  {
+    name: "Food & Wine",
+    image: "",
+  },
+   {
+    name: "Marketing & Sales...",
+    image: "/fashion.jpg",
+  },
+   {
+    name: "IT professionals",
+    image: "/eng.jpg",
+  },
+   {
+    name: "Engineering &...",
+    image: "/cullinary.jpg",
+  },
+];
+
+  return (
+    <div className="py-12 px-4 text-center">
+      {/* Title */}
+      <h2 className="text-4xl font-semibold text-gray-900">
+        <span className="relative inline-block">
+          <span className="relative z-10 text-black">Career Prospects In Italy</span>
+         </span>
+      </h2>
+
+      {/* Subtext */}
+      <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
+The employment landscape in Italy is diverse, offering opportunities across various sectors.
+Here are some key sectors and industries that presently offer employment opportunities:      </p>
+
+      {/* Cards */}
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {Career.map((career, index) => (
+          <div
+            key={index}
+            className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white"
+          >
+            <img src={career.image} alt={career.name} className="w-full h-48 object-cover" />
+            <div className="py-4 text-lg font-semibold text-gray-900">{career.name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 const SuccesStories =()=>{
   const stories = [
@@ -772,99 +844,7 @@ const SuccesStories =()=>{
   )}
 
 
-// const TestimonialCarousel = () => {
 
-
-// //   const testimonials = [
-// //   {
-// //     name: "Miral Shah",
-// //     university: "Bournemouth University, UK",
-// //     message:
-// //       "Edwise does not stop at admissions. Their ongoing support post-study helped me transition smoothly into my career. The best decision for my academic journey!",
-// //     image: "/path-to-image.jpg",
-// //   },
-// //   {
-// //     name: "Aarav Mehta",
-// //     university: "University of Leeds, UK",
-// //     message:
-// //       "Thanks to Edwise, I found the perfect program for me. Their support was incredible!",
-// //     image: "/path-to-image.jpg",
-// //   },
-// //   {
-// //     name: "Neha Kapoor",
-// //     university: "University of Glasgow, UK",
-// //     message:
-// //       "Seamless process from counseling to enrollment. Highly recommended!",
-// //     image: "/path-to-image.jpg",
-// //   },
-// //   {
-// //     name: "Rahul Verma",
-// //     university: "King's College London, UK",
-// //     message:
-// //       "They guided me like a mentor. I'm now living my dream in the UK.",
-// //     image: "/path-to-image.jpg",
-// //   },
-// // ];
-
-// //   const [currentIndex, setCurrentIndex] = useState(0);
-
-// //   const handlePrev = () => {
-// //     setCurrentIndex((prev) =>
-// //       prev === 0 ? testimonials.length - 1 : prev - 1
-// //     );
-// //   };
-
-// //   const handleNext = () => {
-// //     setCurrentIndex((prev) =>
-// //       prev === testimonials.length - 1 ? 0 : prev + 1
-// //     );
-// //   };
-
-// //   const testimonial = testimonials[currentIndex];
-
-// //   return (
-// //     <div className="relative bg-[#e9eff9] p-6 rounded-xl">
-// //       {/* Navigation Buttons */}
-// //       <div className="absolute top-4 right-4 flex gap-2">
-// //         <button
-// //           onClick={handlePrev}
-// //           className="bg-white shadow p-2 rounded-full"
-// //         >
-// //           ←
-// //         </button>
-// //         <button
-// //           onClick={handleNext}
-// //           className="bg-white shadow p-2 rounded-full"
-// //         >
-// //           →
-// //         </button>
-// //       </div>
-
-// //       {/* Testimonial Display */}
-// //       <div className="flex flex-col md:flex-row gap-8 items-center">
-// //         <img
-// //           src={testimonial.image}
-// //           alt={testimonial.name}
-// //           className="w-64 rounded-lg"
-// //         />
-// //         <div className="space-y-3">
-// //           <p className="text-gray-800 text-lg">{testimonial.message}</p>
-// //           <div className="flex items-center gap-3">
-// //             <img
-// //               src={testimonial.image}
-// //               alt={testimonial.name}
-// //               className="w-10 h-10 rounded-full object-cover"
-// //             />
-// //             <div>
-// //               <p className="font-semibold">{testimonial.name}</p>
-// //               <p className="text-sm text-gray-600">{testimonial.university}</p>
-// //             </div>
-// //           </div>
-// //         </div>
-// //       </div>
-// //     </div>
-// //   );
-// // };
 
 const Italy = () => {
   return (
@@ -875,12 +855,14 @@ const Italy = () => {
       <PopularCoursesSection/>
       <Costofstudying/>
       <Scholarships/>
+      <CareerProspects/>
       {/* <Scholarships_Italy/> */}
-      {/* <Moredetailsection/> */}
+      <Moredetailsection/>
 
       <SuccesStories/>
       {/* <TestimonialCarousel/> */}
       {/* <Topcourse/> */}
+      
      
      
     </div>
