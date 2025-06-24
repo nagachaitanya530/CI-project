@@ -87,6 +87,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.15",
+    "@types/jquery": "^3.5.32",
     "@types/node": "^20.14.10",
     "@types/nprogress": "^0.2.3",
     "@types/qrcode": "^1.5.5",
