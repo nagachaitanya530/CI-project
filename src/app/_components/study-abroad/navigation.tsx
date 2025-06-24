@@ -26,17 +26,17 @@ const navItems = [
             { label: 'UK', href: "/uk" },
             { label: 'USA', href: '/usa' },
             { label: 'Canada', href: '/canada' },
-            { label: 'India', href: '/study-abroad/India' },
+            { label: 'India', href: '/india' },
             { label: 'Spain', href: '/spain' },
-            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'Malaysia', href: '/malaysia' },
             { label: 'Australia', href: '/australia' },
             { label: 'New Zealand', href: '/newzealand' },
-            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+            { label: 'Singapore', href: '/singapore' },
             { label: 'France', href: '/france' },
             { label: 'Germany', href: '/germany' },
-            { label: 'Dubai', href: '/study-abroad/dubai' },
+            { label: 'Dubai', href: '/dubai' },
             { label: 'Ireland', href: '/ireland' },
-            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Netherlands', href: '/netherlands' },
             { label: 'Italy', href: '/italy' },
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/international' },
@@ -340,7 +340,7 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
     );
 };
 
-export default function NavigationSection() {
+export default function Navigation() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
