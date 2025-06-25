@@ -5,17 +5,12 @@ import Navigation from "~/app/_components/navigation1";
 import HeroSection from '~/app/_components/study-abroad/study-abroad-india/hero';
 import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
 import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
-
-import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
-//import FAQ from "~/app/_components/study-abroad/ask";
-
-//import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
+import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
 import Scholarships from '~/app/_components/study-abroad/study-abroad-india/scholarship';
 import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/career-prospect';
 import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
 import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
 import FAQ from "~/app/_components/study-abroad/faq";
-
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from '~/app/_components/footer1';
 
@@ -67,29 +62,29 @@ const StatsComponent: React.FC = () => {
 
 const courses = [
   {
-    title: "Tourism Administration",
- image: "/hospitality-img.webp",
+    title: "Hotel Management",
+ image: "/study-abroad/hotel-img.webp",
 
   },
   {
-    title: "Psychology",
-    image: "/images/psychology.jpg",
+    title: "Engineering",
+    image: "/study-abroad/engrng-img.webp",
   },
   {
-    title: "Information Technology",
-    image: "/images/it.jpg",
+    title: "Journalism",
+    image: "/study-abroad/journalism-img.webp",
   },
     {
-    title: "Information Technology",
-    image: "/images/it.jpg",
+    title: "Fashion Design",
+    image: "/study-abroad/art-img.webp",
   },
     {
-    title: "Information Technology",
-    image: "/images/it.jpg",
+    title: "Law",
+    image: "/study-abroad/law-img.webp",
   },
     {
-    title: "Information Technology",
-    image: "/images/it.jpg",
+    title: "Biotechnology",
+    image: "/study-abroad/envr-scie-1-img.webp",
   },
 ];
 

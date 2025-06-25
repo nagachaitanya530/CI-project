@@ -2,28 +2,28 @@ import React from "react";
 
 const courses = [
   {
-    name: "Education",
-    image: "/courses/mba.jpg" , 
+    name: "Engineering",
+    image: "/study-abroad/engrng-img.webp" , 
   },
   {
-    name: "Engineering",
-    image: "/courses/engrng.jpg",
+    name: "Education",
+    image: "/study-abroad/educ-img.webp",
   },
   {
     name: "Technology and IT",
-    image: "/courses/acc.financ.jpg",
+    image: "/study-abroad/it-img.webp",
   },
    {
     name: "Medicine",
-    image: "/courses/acc.financ.jpg",
+    image: "/study-abroad/medi-hlth-img.webp",
   },
    {
     name: "Nursing",
-    image: "/courses/acc.financ.jpg",
+    image: "/study-abroad/nurse-img.webp",
   },
    {
     name: "Real Estate",
-    image: "/courses/acc.financ.jpg",
+    image: "/study-abroad/architecture-img.webp",
   },
 ];
 

@@ -123,7 +123,7 @@ export default function WhyStudyInMalaysia() {
               className="border border-gray-300 p-3 rounded-md text-sm"
             />
             <select className="border border-gray-300 p-3 rounded-md text-sm">
-              <option value="" disabled selected>
+              <option value="" disabled >
                 Select Month
               </option>
               {[
@@ -146,7 +146,7 @@ export default function WhyStudyInMalaysia() {
               ))}
             </select>
             <select className="border border-gray-300 p-3 rounded-md text-sm">
-              <option value="" disabled selected>
+              <option value="" disabled >
                 Select Year
               </option>
               {[2025, 2026, 2027].map((year) => (
