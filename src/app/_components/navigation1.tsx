@@ -26,7 +26,7 @@ const navItems = [
             { label: 'UK', href: "/uk" },
             { label: 'USA', href: '/usa' },
             { label: 'Canada', href: '/canada' },
-            { label: 'India', href: '/india' },
+            { label: 'India', href: '/study-abroad/India' },
             { label: 'Spain', href: '/spain' },
             { label: 'Malaysia', href: '/malaysia' },
             { label: 'Australia', href: '/australia' },
@@ -40,7 +40,7 @@ const navItems = [
             { label: 'Italy', href: '/italy' },
             { label: 'Mauritius', href: '/mauritius' },
             { label: 'International', href: '/study-abroad/study-international' },
-            { label: 'Study Abroad', href: '/study-abroad/abroad' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
         ]
     },
     {

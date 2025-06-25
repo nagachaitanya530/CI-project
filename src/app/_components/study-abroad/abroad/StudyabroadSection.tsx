@@ -31,16 +31,19 @@ const media = [
     type: "video",
     src: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Woman_Smiling_Outdoor.jpg",
     alt: "Female graduate outdoor",
+     video: 'https://www.youtube.com/embed/dummy2',
   },
   {
     type: "video",
     src: "https://upload.wikimedia.org/wikipedia/commons/5/58/Graduate_gown_and_hat.jpg",
     alt: "Graduate with certificate",
+    video: 'https://www.youtube.com/embed/dummy1',
   },
   {
     type: "image",
     src: "/Abroad_graduation2.jpg",
     alt: "Graduation crowd",
+    
   },
 ];
 
@@ -74,19 +77,20 @@ export default function StudyabroadSection() {
 <section className="-mt-20">
   <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen flex items-center py-12">
     <div className="container mx-auto px-6 lg:px-12">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
-        <div className="space-y-8">
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
-            Study <span className="text-blue-600 relative inline-block">
+        <div className="space-y-8 text-center lg:text-left ml-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
+            Study{" "}
+            <span className="text-blue-600 relative inline-block">
               Abroad
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></span>
             </span>
           </h1>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-xl">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0 ">
             Studying abroad leads to personal growth, global awareness, and unique career opportunities. Gain cross-cultural skills, expand your network, and broaden your horizons.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className="bg-blue-700 hover:bg-blue-800 hover:scale-105 transform transition text-white px-8 py-4 rounded-lg font-semibold shadow-lg duration-300">
               Free Expert Consultation
             </button>
@@ -97,11 +101,11 @@ export default function StudyabroadSection() {
         </div>
 
         {/* Right Image */}
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end">
           <img
             src="https://www.edwiseinternational.com/img/study-abroad-bnr-img.png"
             alt="Study Abroad Student"
-            className="w-[500px] h-auto object-contain rounded-lg"
+            className="w-full max-w-[500px] h-auto object-contain rounded-lg"
           />
         </div>
       </div>
@@ -111,54 +115,70 @@ export default function StudyabroadSection() {
 
 
       {/* WINNING STREAK SECTION */}
-     <section className="bg-white py-16 px-6 md:px-20">
-  <div className="grid md:grid-cols-2 gap-12 items-center">
-    {/* Left Content */}
-    <div>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Our <span className="text-red-600 relative inline-block">Winning Streak
-          <span className="absolute -bottom-1 left-0 w-full h-1 bg-red-400 rounded-full"></span>
-        </span>
-      </h2>
-      <ul className="space-y-3 text-gray-700 text-[16px] leading-relaxed list-disc pl-5">
-        <li>900+ top international university partnerships across 20+ countries</li>
-        <li>India’s Leading Overseas Education Consultancy since 1991</li>
-        <li>24 branches across India with more to come</li>
-        <li>350+ experienced and trained counselors</li>
-        <li>Over 33 years experience of turning students’ dreams into reality</li>
-        <li>200,000+ student lives transformed</li>
-        <li>99% visa success rate – highest in the industry</li>
-        <li>Awarded ‘Agency of the Year’ in 2020 by AIRC</li>
-      </ul>
-      <button className="mt-8 px-6 py-3 border border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-900 hover:text-white transition">
-        Book a Free Consultation
-      </button>
-    </div>
-
-    {/* Right Media Grid */}
-    <div className="grid grid-cols-2 gap-4">
-      {media.map((item, idx) => (
-        <div key={idx} className="relative rounded-xl overflow-hidden shadow-md group h-[220px]">
-          {item.type === "image" ? (
-            <img
-              src={item.src}
-              alt={item.alt}
-              className="w-full h-full object-cover rounded-xl"
-            />
-          ) : (
-            <iframe
-              src={item.src}
-              title={item.alt}
-              className="w-full h-full rounded-xl"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          )}
+  <section className="bg-white py-16 px-6 md:px-20">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Our <span className="text-red-600 relative inline-block">Winning Streak
+              <span className="absolute -bottom-1 left-0 w-full h-1 bg-red-400 rounded-full"></span>
+            </span>
+          </h2>
+          <ul className="space-y-3 text-gray-700 text-[16px] leading-relaxed list-disc pl-5">
+            <li>900+ top international university partnerships across 20+ countries</li>
+            <li>India’s Leading Overseas Education Consultancy since 1991</li>
+            <li>24 branches across India with more to come</li>
+            <li>350+ experienced and trained counselors</li>
+            <li>Over 33 years experience of turning students’ dreams into reality</li>
+            <li>200,000+ student lives transformed</li>
+            <li>99% visa success rate – highest in the industry</li>
+            <li>Awarded ‘Agency of the Year’ in 2020 by AIRC</li>
+          </ul>
+          <button className="mt-8 px-6 py-3 border border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-900 hover:text-white transition">
+            Book a Free Consultation
+          </button>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+
+        {/* Right Media Grid */}
+        <div className="grid grid-cols-2 gap-4">
+          {media.map((item, idx) => (
+            <div
+              key={idx}
+              className="relative rounded-xl overflow-hidden shadow-md group h-[220px]"
+            >
+              {item.type === "image" ? (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              ) : (
+                <div className="relative w-full h-full">
+                  <iframe
+                    src={item.src}
+                    title={item.alt}
+                    className="w-full h-full rounded-xl"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+
+                  {/* Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 hover:bg-opacity-30 transition-all duration-300">
+                    <svg
+                      className="w-12 h-12 text-white opacity-80"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       <section className="bg-[#e6ecf5] py-12 px-4 md:px-16 text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-2">
