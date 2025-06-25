@@ -95,6 +95,8 @@ const HeroSection = () => {
           </a>
         </div>
 
+
+
         {/* Center Image Section */}
         <div className="flex-1 flex justify-center items-center relative">
           <img
@@ -118,6 +120,7 @@ const HeroSection = () => {
       <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
         Image Placeholder
       </div>
+
 
 
         {/* Right Enroll Card */}

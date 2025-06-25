@@ -1,3 +1,4 @@
+import { link } from 'fs';
 import { title } from 'process'
 import React from 'react'
 
@@ -6,46 +7,55 @@ function Card() {
     {
       title: 'Advanced 1 Month',
       description: 'This plan includes 1 month of advanced training.',
-      image:"../../Untitled-design.webp"
+      image:"../../Untitled-design.webp",
+      button:"Enroll Now ",
+      link:""
     },
     {
       title: 'Advanced 3 Month',
       description: 'This plan includes 3 months of advanced training.',
-      image:"../../Untitled-design.webp"
+      image:"../../Untitled-design.webp",
+      button:"Enroll Now ",
+      link:""
   
     },
     {
       title: 'Advanced 6 Month',
       description: 'This plan includes 6 months of advanced training.',
-      image:"../../Untitled-design.webp"
+      image:"../../Untitled-design.webp",
+      button:"Enroll Now ",
+      link:""
   
     }
   ];
 
   return (
     <>
-      <div className="flex gap-6 justify-center flex-wrap px-2 sm:px-4 md:px-8 lg:gap-9 mb-10">
+      <div className="flex gap-6 justify-center flex-wrap px-2 sm:px-4 md:px-8 lg:gap-9 mb-10 ">
         {cards.map((item, index) => (
           <div
             key={index}
-            className="w-full sm:w-[18rem] md:w-[20rem] h-60 border-2 rounded overflow-hidden flex items-center justify-center hover:shadow-xl shadow-gray-400 hover:border-blue-300 transition-all"
+            className=" sm:w-[18rem] w-[18rem] h-60 border-2 rounded overflow-hidden flex  flex-col hover:shadow-xl shadow-gray-400 hover:border-blue-300 transition-transform duration-300 hover:scale-90"
           >
             {/* Image as background */}
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover opacity-60 transition-transform duration-300 hover:scale-90"
+              className="w-full h-full object-cover opacity-60 "
             />
 
             {/* Text in front */}
-            <div className="text-black -ml-60">
-              <h2 className="text-xl font-bold mb-1">{item.title}</h2>
+            <div className="text-black text-center z-10 -mt-5 ">
+              <h2 className="text-xl font-bold ">{item.title}</h2>
               <p className="text-sm">{item.description}</p>
+       
             </div>
+                <a href={item.link} className='border-2 w-30 text-center ml-21 mb-6 bg-blue-400  text-white transition-transform duration-300 hover:scale-120  hover:bg-black'>{item.button}</a>
           </div>
+          
         ))}
       </div>
-    </>
+    </> 
   );
 }
 

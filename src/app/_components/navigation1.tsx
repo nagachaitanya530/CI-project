@@ -32,6 +32,14 @@ const navItems = [
             { label: 'Spain', href: '/study-abroad/spain' },
           
             { label: 'India', href: '/study-abroad/India' },
+
+            { label: 'Spain', href: '/spain' },
+            { label: 'Malaysia', href: '/malaysia' },
+            { label: 'Australia', href: '/study-abroad/Study-Australia' },
+            { label: 'New Zealand', href: '/newzealand' },
+            { label: 'Singapore', href: '/singapore' },
+            { label: 'France', href: '/france' },
+
            
             
           
@@ -50,6 +58,7 @@ const navItems = [
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
 
             { label: 'Ireland', href: '/study-abroad/ireland' },
+
 
             { label: 'Germany', href: '/germany' },
 
@@ -234,7 +243,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
             }}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="relative py-1">
+            <div className="relative ">
                 {items.map((item, idx) => {
                     const hasDropdown = Array.isArray(item.dropdown);
                     const isHovered = hoveredItem === idx;
@@ -261,7 +270,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                 <Link
                                     href={item.href || "#"}
                                     onClick={closeMenu}
-                                    className="block px-4 py-1.5 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
+                                    className="block px-4 py-1 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
                                 >
                                     {item.label}
                                 </Link>

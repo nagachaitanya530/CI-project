@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight, House } from 'lucide-react';
 import React from 'react'
 
 function Herosection() {
@@ -14,14 +15,26 @@ function Herosection() {
           },  
           ]
   return (
+    <>
+<div className="flex flex-wrap items-center gap-2 text-sm  px-4 py-2 xl:ml-50">
+  <House className="w-5 h-5 text-gray-700" />
+  <ChevronRight className="w-4 h-4 text-gray-700" />
+  <span className="text-gray-700">Courses</span>
+  <ChevronRight className="w-4 h-4 text-gray-700" />
+  <span className="text-gray-700">IELTS Courses</span>
+  <ChevronRight className="w-4 h-4 text-gray-700" />
+  <span className="text-gray-700 font-medium">IELTS Foundation</span>
+</div>
+
     <div className="w-full px-4 py-8 bg-blue-100">
+      
   <div className="bg-blue-100 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-2">
 
     {/* Left Section */}
     <div className="w-full md:w-1/2">
       <div className="pb-4 flex justify-center md:justify-start">
         <img
-          src="../../Foundation-1.jpg"
+          src="../../bg.j"
           alt="Description of image"
           className=" max-w-xs md:max-w-none"
         />
@@ -29,7 +42,7 @@ function Herosection() {
 
       <div className="text-center md:text-left">
         <span className="text-2xl sm:text-3xl md:text-3xl font-semibold block">
-          ENGLISH FOUNDATION COURSE:
+          ENGLISH ADVANCED COURSE: 
         </span>
         <span className="text-2xl sm:text-3xl md:text-4xl font-semibold block">
           Personal Training.
@@ -104,7 +117,7 @@ function Herosection() {
 
   </div>
 </div>
-
+</>
   )
 }
 
