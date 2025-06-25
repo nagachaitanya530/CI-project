@@ -32,6 +32,14 @@ const navItems = [
             { label: 'Spain', href: '/study-abroad/spain' },
           
             { label: 'India', href: '/study-abroad/India' },
+
+            { label: 'Spain', href: '/spain' },
+            { label: 'Malaysia', href: '/malaysia' },
+            { label: 'Australia', href: '/study-abroad/Study-Australia' },
+            { label: 'New Zealand', href: '/newzealand' },
+            { label: 'Singapore', href: '/singapore' },
+            { label: 'France', href: '/france' },
+
            
             
           
@@ -51,7 +59,16 @@ const navItems = [
 
             { label: 'Ireland', href: '/study-abroad/ireland' },
 
+
             { label: 'Germany', href: '/germany' },
+
+            { label: 'Dubai', href: '/dubai' },
+            { label: 'Ireland', href: '/ireland' },
+
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Italy', href: '/study-abroad/italy' },
+
+
             { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
 
 
@@ -63,10 +80,18 @@ const navItems = [
             { label: 'Dubai', href: '/study-abroad/dubai' },
 
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
+
+            { label: 'Italy', href: '/italy' },
+
+            { label: 'Mauritius', href: '/mauritius' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+
             { label: 'Itely', href: '/study-abroad/itely' },
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/international' },
             { label: 'Study Abroad', href: '/study-abroad' },
+
         ]
     },
     {
@@ -218,7 +243,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
             }}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="relative py-1">
+            <div className="relative ">
                 {items.map((item, idx) => {
                     const hasDropdown = Array.isArray(item.dropdown);
                     const isHovered = hoveredItem === idx;
@@ -245,7 +270,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                 <Link
                                     href={item.href || "#"}
                                     onClick={closeMenu}
-                                    className="block px-4 py-1.5 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
+                                    className="block px-4 py-1 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
                                 >
                                     {item.label}
                                 </Link>
