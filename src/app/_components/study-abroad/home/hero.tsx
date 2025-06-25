@@ -43,6 +43,9 @@ const HeroCarousel = () => {
             setCurrentSlide(prev => (prev + 1) % slides.length);
         }, 10000);
     };
+    const handleWhatsApp = () => {
+    window.open('https://wa.me/919000000000?text=I%20want%20to%20enquire%20about%20PDCC%20Spoken%20English%20course', '_blank');
+  };
 
     const stopAutoRotate = () => {
         if (autoRotateRef.current) {
@@ -212,10 +215,9 @@ const HeroCarousel = () => {
                             <button className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
                                 Book Free Consultation
                             </button>
-                            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center gap-2">
-                                <MessageCircle size={20} />
-                                WhatsApp
-                            </button>
+                     <button className="bg-green-500 hover:bg-green-600 text-white text-lg px-6 py-3" onClick={handleWhatsApp}>
+                        WhatsApp Us
+                    </button>
                         </div>
                     </div>
 

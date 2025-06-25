@@ -3,11 +3,6 @@ import HeroSection from "../_components/foreign-languages/HeroSection";
 import Navigation from "../_components/Navigation";
 import Footer from "../_components/Footer";
 
-
-
-
-
-
 import LanguageCourses from "../_components/foreign-languages/LanguageCourses";
 import WhyChooseUs from "../_components/foreign-languages/Whyschoose";
 import LearnWithConfidence from "../_components/foreign-languages/LearnConfidence";
