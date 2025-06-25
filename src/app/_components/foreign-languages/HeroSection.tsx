@@ -15,10 +15,13 @@ const HeroSection = () => {
           {/* Left Text */}
           <div className="text-white max-w-2xl z-10">
             <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6 tracking-tight font-sans">
-              Learn Foreign <br />
-              Languages with <br />
+              Learn Foreign
+              <br />
+              Languages with
+              <br />
               <span className="font-black text-white">
-                National Institute of <br />
+                National Institute of
+                <br />
                 Language
               </span>
             </h1>
@@ -54,12 +57,7 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* Placeholder Image Box */}
-        <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black text-xl font-medium">
-          Image Placeholder
-        </div>
-
-        {/* Enroll Card */}
+        {/* Right Enroll Card */}
         <div className="bg-gray-800 text-white p-8 w-80 rounded-2xl shadow-2xl z-20">
           <h3 className="text-3xl font-black mb-6 leading-tight tracking-tight font-sans">
             French <br />
