@@ -92,14 +92,19 @@ const MainSection = () => {
     </div>
 
 
-<<<<<<< HEAD
+
 );
-=======
+
   )
 
->>>>>>> main
+
 };
 
 
 
 export default MainSection;
+
+ 
+
+
+
