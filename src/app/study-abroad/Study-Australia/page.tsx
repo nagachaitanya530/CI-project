@@ -7,9 +7,9 @@ import CostStudying from '../../_components/study-abroad/Study-Australia/Cost-Of
 import WhyStudy from '../../_components/study-abroad/Study-Australia/why'
 import UniversityList from '../../_components/study-abroad/Study-Australia/university'
 import Scholarships from '../../_components/study-abroad/Study-Australia/scholar'
-import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form'
 import Herosection from '~/app/_components/study-abroad/Study-Australia/Herosection'
-import Navigation from '~/app/_components/Navigation'
+import Navigation from '~/app/_components/navigation1'
 import FooterSection from '~/app/_components/footer1'
 import Faq from '~/app/_components/study-abroad/Study-Australia/Faq'
 import YourJourney from '~/app/_components/study-abroad/your-journey'
