@@ -144,6 +144,7 @@ const navItems = [
     {
         label: 'Student Services',
         dropdown: [
+            { label: 'Student Services', href: '/student-services' },
             {
                 label: 'Test Preparations',
                 dropdown: [
