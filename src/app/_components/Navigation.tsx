@@ -34,14 +34,47 @@ const navItems = [
           { label: "English Foundation Personal", href: "/english-foundation-course" },
           { label: "English Business Personal", href: "/english-business-course" },
           { label: "English Advanced Personal", href: "/english-advanced-course" },
+
           { label: "Soft Skills Personal Training", href: "/soft-skills-training" },
           { label: "Corporate Training English", href: "/corporate-training" },
         ],
       },
+
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
+
+
+          {
+            label: "English Courses",
+            dropdown: [
+
+              { label: "English Foundation Personal", href: "/english-foundation-course" },
+              { label: "English Business Personal", href: "/english-business-course" },
+               { label: "English Advanced Personal", href: "/english-advanced-course" },
+              { label: "Soft Skills Personal Training", href: "/" },
+              { label: "Corporate Training English", href: "/" },
+            ],
+          },
+        ],
+      },
+
+
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
       { label: "Online Mock Tests", href: "/online-mock-tests" },
+
+
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+
+      { label: "Online Mock Tests", href: "/OnlineMockTest" },
+
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
+      { label: "Online Mock Tests", href: "/" },
+
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
