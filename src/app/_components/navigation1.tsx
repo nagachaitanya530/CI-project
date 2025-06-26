@@ -23,24 +23,104 @@ const navItems = [
     {
         label: "Study Abroad",
         dropdown: [
-            { label: 'UK', href: "/uk" },
-            { label: 'USA', href: '/usa' },
-            { label: 'Canada', href: '/canada' },
+
+
+            { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+            { label: 'USA', href: 'study-abroad/usa' },
+            { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+            { label: 'Australia', href: "/study-abroad/australia" },
+            { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
-            { label: 'Spain', href: '/spain' },
-            { label: 'Malaysia', href: '/malaysia' },
-            { label: 'Australia', href: '/australia' },
-            { label: 'New Zealand', href: '/newzealand' },
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+            { label: 'France', href: '/study-abroad/study-in-france' },
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
-            { label: 'France', href: '/france' },
-            { label: 'Germany', href: '/germany' },
-            { label: 'Dubai', href: '/dubai' },
-            { label: 'Ireland', href: '/ireland' },
+            { label: 'Ireland', href: '/study-abroad/ireland' },
+
+               { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+                { label: 'USA', href: 'study-abroad/usa' },
+              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+                { label: 'Australia', href: "/study-abroad/australia" },
+           
+            { label: 'Spain', href: '/study-abroad/spain' },
+            
+
+            { label: 'India', href: '/study-abroad/India' },
+
+            
+           
+            
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+
+
+           
+          
+          
+            
+            
+           
+
+           
+            
+          
+
+         
+
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+          
+
+            
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+
+
+
+           
+
+
+            
+
+            
+
+
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
-            { label: 'Italy', href: '/italy' },
-            { label: 'Mauritius', href: '/mauritius' },
+            { label: 'Italy', href: '/study-abroad/italy' },
+            { label: 'Germany', href: '/study-abroad/Germany' },
+
+            { label: 'Switzerland', href: '/study-abroad/Switzerland' },
+            { label: 'Dubai', href: '/study-abroad/dubai' },
             { label: 'International', href: '/study-abroad/study-international' },
-            { label: 'Study Abroad', href: '/study-abroad' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+
+             
+
+            
+
+            
+            
+            
+         
+            { label: 'Dubai', href: '/study-abroad/dubai' },
+
+            { label: 'Ireland', href: '/study-abroad/ireland' },
+             { label: 'France', href: '/study-abroad/france' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+
+            
+
+
+      
+
+             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+
+            
+
+           
+          
+
+
         ]
     },
     {
@@ -49,20 +129,30 @@ const navItems = [
             {
                 label: 'Test Preparations',
                 dropdown: [
-                    { label: 'All Tests', href: '/tests' },
+                    { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
-                    { label: 'IELTS', href: '/ielts' },
+                    { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
+
                     { label: 'SAT', href: '/sat' },
                     { label: 'CAEL', href: '/test-preparation-cael' },
+
+                    { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
+                    { label: 'CAEL', href: '/cael' },
+
+
                     { label: 'ACT', href: '/act' },
+                    { label: 'PTE', href: '/PTE' },
+
+                    { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'PTE', href: '/pte' },
+
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
             { label: 'Career Counseling', href: '/career-counseling' },
-            { label: 'Admission Guidance', href: '/admission-guidance' },
+            { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/scholarships' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
@@ -192,7 +282,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
             }}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="relative py-1">
+            <div className="relative ">
                 {items.map((item, idx) => {
                     const hasDropdown = Array.isArray(item.dropdown);
                     const isHovered = hoveredItem === idx;
@@ -219,7 +309,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                 <Link
                                     href={item.href || "#"}
                                     onClick={closeMenu}
-                                    className="block px-4 py-1.5 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
+                                    className="block px-4 py-1 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
                                 >
                                     {item.label}
                                 </Link>

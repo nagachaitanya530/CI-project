@@ -283,236 +283,238 @@ const week7 = [
     day: "Day 34",
     topic: "Contrasting Ideas (though, although……)",
     activities: [
-      "To Be Forms",
-      "Gerund Forms",
-      "Past Participle"
+      
     ]
   },
   {
     day: "Day 35",
-    topic: "Brain Storming Activity",
-    activities: []
+    topic: " Dialogue Delivery:",
+    activities: ['Method of Delivery','Practices']
   }
 ];
 const week8 = [
   {
     day: "Day 36",
-    topic: "Interaction & Overview of Business English",
+    topic: "Explanation of Causative verb -I:",
     activities: [
-      "Introduction Overview",
-      "Language Evaluation",
-      "Overview of Course"
+      "When to use",
+      "Rules to use Get & Have",
+      "Practice through Examples","Worksheet"
     ]
   },
   {
     day: "Day 37",
-    topic: "Understanding of Sentence Construction & Formation",
-    activities: []
+    topic: "Explanation of Causative verb -II:",
+    activities: ["When to use",
+      "Rules to use Get & Have",
+      "Practice through Examples","Worksheet"]
   },
   {
     day: "Day 38",
-    topic: "Rectification of Grammar",
+    topic: "Discussion on Wh- Family:",
     activities: [
-      "Overview of Subject verb agreement",
-      "Overview of variety of sentences",
-      "Overview of imperative sentences"
+      "Question words",
+      "Question tags",
+      "Worksheet Practice"
     ]
   },
   {
     day: "Day 39",
-    topic: "Discussion on verb forms",
+    topic: "Role Plays:",
     activities: [
-      "To Be Forms",
-      "Gerund Forms",
-      "Past Participle"
+      "Scenario based practice"
     ]
   },
   {
     day: "Day 40",
-    topic: "Brain Storming Activity",
-    activities: []
+    topic: "Business Writing Skills",
+    activities: ["Essentials of effective Communication",
+      "Email Drafting",
+      "Different email formats to analyze"
+      ,"Structure to Form Business Reports",
+      "Proofread"]
   }
 ];
 const week9 = [
   {
     day: "Day 41",
-    topic: "Interaction & Overview of Business English",
+    topic: "Briefing Business Memo & Business Letters:",
     activities: [
-      "Introduction Overview",
-      "Language Evaluation",
-      "Overview of Course"
+      "How to write an effective business memo",
+      "Tips for Writing an Effective Business Memo",
+      "Types of Business letters"
+      ,"Parts of a Business Letter",
+      "Proofread"
     ]
   },
   {
     day: "Day 42",
-    topic: "Understanding of Sentence Construction & Formation",
-    activities: []
+    topic: "Written Assessment Based on:",
+    activities: ["Email Drafting",
+"Business Reports",
+"Business Memo",
+"Business Letter"]
   },
   {
     day: "Day 43",
-    topic: "Rectification of Grammar",
+    topic: "Debates Practices:",
     activities: [
-      "Overview of Subject verb agreement",
-      "Overview of variety of sentences",
-      "Overview of imperative sentences"
+      "Tips for Debates",
+"Debates in 2 candidates",
+"Debates in Teams (Groups)"
     ]
   },
   {
     day: "Day 44",
-    topic: "Discussion on verb forms",
+    topic: "Ellipsis (Exceptional Sentences)",
     activities: [
-      "To Be Forms",
-      "Gerund Forms",
-      "Past Participle"
+      "Overview",
+"Types of Ellipsis",
+"Ellipsis in sentences",
     ]
   },
   {
     day: "Day 45",
-    topic: "Brain Storming Activity",
-    activities: []
+    topic: "Assessment through Practice",
+    activities: ["Verbal practice",
+"Written practice"]
   }
 ];
 const week10 = [
   {
     day: "Day 46",
-    topic: "Interaction & Overview of Business English",
+    topic: " Picture Narration:",
     activities: [
-      "Introduction Overview",
-      "Language Evaluation",
-      "Overview of Course"
+      "Picture to story",
+"Practice"
     ]
   },
   {
     day: "Day 47",
-    topic: "Understanding of Sentence Construction & Formation",
-    activities: []
+    topic: " Telephonic Etiquette Module:",
+    activities: ["Manners of using telephone communications",
+"Enhance Listening skills",
+"Importance"]
   },
   {
     day: "Day 48",
-    topic: "Rectification of Grammar",
+    topic: "Assessment & Evaluation:",
     activities: [
-      "Overview of Subject verb agreement",
-      "Overview of variety of sentences",
-      "Overview of imperative sentences"
+      "Scenarios to attend call",
+"Mock calls",
+"Feedback"
     ]
   },
   {
     day: "Day 49",
-    topic: "Discussion on verb forms",
+    topic: "Complex and Compound sentences:",
     activities: [
-      "To Be Forms",
-      "Gerund Forms",
-      "Past Participle"
+      "Formation of sentences",
+"Practice with scenarios"
     ]
   },
   {
     day: "Day 50",
-    topic: "Brain Storming Activity",
-    activities: []
+    topic: "Assessment Evaluation:",
+    activities: ["Verbal Practice",
+"Written Practice"]
   }
 ];
 const week11= [
   {
     day: "Day 51",
-    topic: "Language Specification Session",
+    topic: "Professional introduction:",
     activities: [
-      "Set Clear Objectives (specific skill)",
-      "Pre-Watching Preparation",
-      "Active Watching"
-      ,"Post Watching",
-      "Feedback"
+      "Tips for Introduction","Scenario practices"
+
     ]
   },
   {
     day: "Day 52",
-    topic: "Self- Assessment through practice",
-    activities: ["Reflect and Apply"]
+    topic: "Interview Preparation:",
+    activities: ["Types of Interviews",
+"Tips to Prepare",
+"Professional Interview Etiquettes",
+"Resume Preparation",
+"Commonly Asked Interview Questions"]
   },
   {
     day: "Day 53",
-    topic: "Analytical Skills",
+    topic: "Assessment through Practices:",
     activities: [
-      "What Are Analytical Skills?",
-      "How to Develop Your Analytical Skills",
+      "Mock Interviews",
      
     ]
   },
   {
     day: "Day 54",
-    topic: "Highlighting your Analytical Skills",
+    topic: "Hosting/Anchoring:",
     activities: [
-      "Key Analytical skills (Critical Thinking, Analysis of information)",
-      "Tips to assess analytical skills in interviews",
+      "Tips to Anchoring & Hosting",
+"Scenario based Practices ",
     
     ]
   },
   {
     day: "Day 55",
-    topic: "Evaluation of Analytical Skills",
+    topic: "Minute to Speak",
     activities: []
   }
 ];
 const week12= [
   {
     day: "Day 56",
-    topic: "Confidence Boosting Sessions",
+    topic: "Presentation Skills",
     activities: [
-
+"What is Presentation Skill?",
+"Essentials of Presentation skills",
+"Effective presentation skills"
     ]
   },
   {
     day: "Day 57",
-    topic: " Professional Communication Skills",
-    activities: ["Outcome of Professional Communication Skills",
-      "How to work on professional language"]
+    topic: " Delivering Presentation before client",
+    activities: ["Work on self-confidence.",
+"Develop strategies for overcoming fear.",
+"Tips to help you ace your presentation"]
   },
   {
     day: "Day 58",
-    topic: "Key components of professional communication skills:",
+    topic: "Presentation Skill Evaluation",
     activities: [
-      "Listening Skills",
-      "Verbal Communication",
-      "Nonverbal Communication",
-      "Cultural Awareness"
+      "Scenario based practice",
+"Feedback"
     ]
   },
   {
     day: "Day 59",
-    topic: "Language Assessment",
+    topic: "Evaluation on Grammatical Errors Correction -I",
     activities: []
   },
   {
     day: "Day 60",
-    topic: "Extra Session",
+    topic: "Evaluation on Grammatical Errors Correction -II",
     activities: []
   }
 ];
 const week13 = [
   {
     day: "Day 61",
-    topic: "Telephonic Etiquette Module:",
+    topic: " Extra Session",
     activities: [
-      "Manners of using telephone communications",
-      "Enhance Listening skills",
-      "Mock calls",
-      "Assessment & Evaluation",
-      "Scenarios to attend call"
+      
     ]
   },
   {
     day: "Day 62",
-    topic: "Interview Preparation:",
-    activities: ["Types of Interviews",
-      "Tips to Prepare",
-      "Professional Interview Etiquettes",
-      "Resume Preparation",
-      "Commonly Asked Interview Questions"
+    topic: "Extra Session",
+    activities: [
 
       ]
   },
   {
     day: "Day 63",
-    topic: " Assessment through Practices:",
+    topic: " Assessment- 1",
     activities: [
       "Mock Interviews",
       
@@ -520,20 +522,15 @@ const week13 = [
   },
   {
     day: "Day 64",
-    topic: " Presentation Skills",
+    topic: " Assessment- 2",
     activities: [
-      "What is Presentation Skill?",
-      "Essentials of Presentation skills",
-      "Effective presentation skills",
-      "Delivering Presentation before client",
-      "Develop strategies for overcoming fear.",
-      "Tips to help you ace your presentation"
+      
     ]
   },
   {
     day: "Day 65",
-    topic: " Presentation Skill Evaluation",
-    activities: ["Scenario based practice","Feedback"]
+    topic: " Assessment- 3",
+    activities: []
   }
 ];
 const week14 = [
@@ -546,7 +543,7 @@ const week14 = [
   },
   {
     day: "Day 62",
-    topic: "Extra Session-1",
+    topic: "Extra Session",
     activities: []
   },
   {
@@ -611,9 +608,9 @@ const weeks={
     <section id="curriculum" className="w-full px-2 sm:px-6 md:py-8 mb-4 lg:py-15 flex flex-col justify-center">
   <h1 className="ml-4 sm:ml-20 md:ml-48 m-2 sm:m-5 lg:text-4xl  lg:ml-32 sm:text-xl">Curriculum to be covered</h1>
 
-  <div className="flex flex-col lg:flex-row gap-4 justify-center">
+  <div className="flex flex-col lg:flex-row gap-4 justify-center ">
     {/* Left Section */}
-    <div className="flex flex-col gap-1.5 w-full lg:w-[50rem]">
+    <div className="flex flex-col gap-1.5 w-full lg:w-[50rem] ">
       <div>
         <div className="w-full px-2 sm:px-4">
           {
@@ -622,7 +619,7 @@ const weeks={
                 {/* Week Header */}
                 <div
                   onClick={() => toggleWeek(weekName)}
-                  className="cursor-pointer flex items-center justify-between px-4 py-2 rounded text-sm font-semibold"
+                  className="cursor-pointer flex items-center justify-between px-4 py-2 rounded text-sm font-semibold "
                 >
                   {weekName}
                   <ChevronDown
@@ -632,7 +629,7 @@ const weeks={
 
                 {/* Week Content */}
                 {activeWeek === weekName && (
-                  <div className="mt-2 pl-4 border-black border-2 rounded-md p-3">
+                  <div className="mt-2 pl-4 border-blue-300 border-5  p-3">
                     {
                       weekData.map((item, i) => (
                         <div key={i} className="mb-3">
@@ -656,7 +653,7 @@ const weeks={
 
     {/* Right Section (Card) */}
     <div className="flex justify-center px-2">
-      <div className="bg-white shadow-xl w-full sm:w-[25rem] h-auto sm:h-[40rem] -mt-18">
+      <div className="bg-white shadow-xl w-full sm:w-[25rem] h-auto sm:h-[40rem] lg:-mt-30">
         {
           right.map((items, index) => (
             <div key={index}>

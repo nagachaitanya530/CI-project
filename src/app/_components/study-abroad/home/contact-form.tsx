@@ -67,7 +67,7 @@ export default function ContactFormSection() {
     }
 
     return (
-        <div className="w-full bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 rounded-3xl overflow-hidden relative mb-6">
+        <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-3xl overflow-hidden relative mb-6">
             <div className="flex items-center min-h-[600px]">
                 {/* Left Image Section */}
                 <div className="flex-1 p-12">

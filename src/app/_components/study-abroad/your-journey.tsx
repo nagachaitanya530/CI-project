@@ -31,7 +31,7 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center min-h-[70vh] py-10 px-4">
-      <div className="relative w-full max-w-6xl">
+      <div className="relative w-full max-w-7xl">
         {/* Blue Container */}
         <div className="relative bg-gradient-to-r from-blue-700 to-blue-800 rounded-3xl p-6 md:p-8 min-h-[280px] border-4 border-white w-full max-w-[90vw] z-10">
           <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between h-full">
