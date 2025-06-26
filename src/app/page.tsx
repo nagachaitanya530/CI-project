@@ -3,7 +3,7 @@ import LanguageLandingPage from "./_components/home/Home";
 import Hero from "./_components/Hero";
 import LeadCaptureModal from "./LeadCaptureModal";
 import Footer from "./_components/Footer";
-import Navigation from "./_components/Navigation";
+import Navigation from "./_components/navigation1";
 
 
 
