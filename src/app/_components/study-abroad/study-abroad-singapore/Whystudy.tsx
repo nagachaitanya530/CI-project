@@ -66,43 +66,10 @@ function Whystudy() {
             ))}
           </ul>
         </div>
-
-        {/* Right - Form */}
-        <div className="border border-blue-200 rounded-3xl p-6 shadow-sm md:col-span-1">
-          <h3 className="text-lg font-semibold text-[#143B85] mb-4">
-            Book your Free Consultation <br /> with Trustworthy Counsellors
-          </h3>
-          <form className="space-y-4">
-            <input type="text" placeholder="Name" className="w-full px-4 py-2 border rounded-md focus:outline-none" />
-            <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded-md" />
-            <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-2 border rounded-md" />
-            <input type="text" placeholder="Preferred Course" className="w-full px-4 py-2 border rounded-md" />
-            <select className="w-full px-4 py-2 border rounded-md">
-              <option>Select Month</option>
-              <option>January</option>
-              <option>May</option>
-              <option>September</option>
-            </select>
-            <select className="w-full px-4 py-2 border rounded-md">
-              <option>Select Year</option>
-              <option>2025</option>
-              <option>2026</option>
-              <option>2027</option>
-            </select>
-            <label className="flex items-start gap-2 text-sm text-gray-600">
-              <input type="checkbox" className="mt-1" />
-              I consent to receiving Calls, WhatsApp, Email and Google RCS from Edwise to assist with this enquiry.
-            </label>
-            <button type="submit" className="bg-[#143B85] text-white w-full py-2 rounded-md font-semibold">
-              Submit
-            </button>
-          </form>
         </div>
-      </div>
-    </section>
-
+       </section>
     </>
-
+    
   );
 }
 export default Whystudy;

@@ -1,6 +1,7 @@
 import { FileBadge2, ShieldCheck } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";
 
+
 interface WhyStudy{
    
     heading:string
@@ -64,7 +65,7 @@ function WhyStudy(){
                       
 
             <div className="h-full">
-<BookConsultationForm/>
+{/* <BookConsultationForm/> */}
             </div>
 
         </div>
