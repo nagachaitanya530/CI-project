@@ -28,6 +28,12 @@ const navItems = [
     dropdown: [
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
+<<<<<<< Gmat
+      {
+        label: "Spoken English",
+        dropdown: [
+         
+=======
 
       {
         label: "Spoken English",
@@ -65,6 +71,7 @@ const navItems = [
 
 
 
+>>>>>>> main
           {
             label: "English Courses",
             dropdown: [
@@ -75,6 +82,14 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+<<<<<<< Gmat
+        ],
+      },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+=======
 <<<<<<< feature/celpip
         ],
       },
@@ -120,15 +135,13 @@ const navItems = [
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
 
       { label: "Online Mock Tests", href: "/" },
+>>>>>>> main
     ],
   },
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
+  { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
+<<<<<<< Gmat
+=======
 =======
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
@@ -170,6 +183,7 @@ const navItems = [
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
+>>>>>>> main
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
   { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
   {
@@ -183,11 +197,14 @@ const navItems = [
       { label: "Terms of Service", href: "/term_of_service" },
 
       { label: "Privacy Policy", href: "/privecy_policy" },
+<<<<<<< Gmat
+=======
 
 
       { label: "Privacy Policy", href: "/privacy_policy" },
 
 
+>>>>>>> main
     ],
   },
 ];
