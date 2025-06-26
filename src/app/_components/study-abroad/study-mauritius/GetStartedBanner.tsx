@@ -15,7 +15,7 @@ const GetStartedBanner = () => {
   const router = useRouter();
 
   return (
-    <section className="max-w-5xl bg-[#173F96] text-white rounded-[40px] my-10 px-4 md:px-10 mx-auto overflow-hidden">
+    <section className="max-w-7xl bg-[#173F96] text-white rounded-[40px] my-10 px-4 md:px-10 mx-auto overflow-hidden">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-6 md:px-14 py-3 md:py-5">
         {/* LEFT TEXT */}
         <div className="md:w-1/2 space-y-5">

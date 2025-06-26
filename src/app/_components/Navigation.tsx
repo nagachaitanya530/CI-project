@@ -28,10 +28,50 @@ const navItems = [
     dropdown: [
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
+<<<<<<< Gmat
       {
         label: "Spoken English",
         dropdown: [
          
+=======
+
+      {
+        label: "Spoken English",
+        dropdown: [
+
+
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
+
+
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/english-foundation-course" },
+          { label: "English Business Personal", href: "/english-business-course" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+
+          { label: "Soft Skills Personal Training", href: "/soft-skills-training" },
+          { label: "Corporate Training English", href: "/corporate-training" },
+        ],
+      },
+
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
+
+
+
+
+
+>>>>>>> main
           {
             label: "English Courses",
             dropdown: [
@@ -42,16 +82,108 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+<<<<<<< Gmat
         ],
       },
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/online-mock-test" },
+=======
+<<<<<<< feature/celpip
+        ],
+      },
+
+=======
+
+        ],
+      },
+>>>>>>> main
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
+
+        ],
+      },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
+
+        ],
+      },
+
+
+        ],
+      },
+
+
+        ],
+      },
+
+<<<<<<< feature/celpip
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+=======
+
+>>>>>>> main
+
+
+<<<<<<< feature/celpip
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
+      { label: "Online Mock Tests", href: "/" },
+>>>>>>> main
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
+<<<<<<< Gmat
+=======
+=======
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+
+        ],
+      },
+
+
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
+
+
+
+>>>>>>> main
+
+      { label: "Online Mock Tests", href: "/online-mock-tests" },
+
+
+
+
+
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+      { label: "Online Mock Tests", href: "/OnlineMockTest" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/" },
+
+
+
+
+
+
+
+
+
+
+    ],
+  },
+  { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
+  { label: "Fees", href: "/fees", icon: FileText },
+>>>>>>> main
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
   { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
   {
@@ -63,11 +195,21 @@ const navItems = [
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/contact_us" },
       { label: "Terms of Service", href: "/term_of_service" },
+
       { label: "Privacy Policy", href: "/privecy_policy" },
+<<<<<<< Gmat
+=======
+
+
+      { label: "Privacy Policy", href: "/privacy_policy" },
+
+
+>>>>>>> main
     ],
   },
 ];
 
+  
 interface DropdownMenuProps {
   items: any[];
   isMobile?: boolean;
