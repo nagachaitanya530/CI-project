@@ -100,7 +100,7 @@ const navItems = [
             {
                 label: 'Test Preparations',
                 dropdown: [
-                    { label: 'All Tests', href: '/tests' },
+                    { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
                     { label: 'IELTS', href: '/ielts' },
                     { label: 'GMAT', href: '/gmat' },
