@@ -32,6 +32,11 @@ const navItems = [
       {
         label: "Spoken English",
         dropdown: [
+
+
+      {
+        label: "Spoken English",
+        dropdown: [
           { label: "English Foundation Personal", href: "/" },
           { label: "English Business Personal", href: "/" },
           { label: "English Advanced Personal", href: "/english-advanced-course" },
@@ -59,6 +64,7 @@ const navItems = [
 
 
 
+
           {
             label: "English Courses",
             dropdown: [
@@ -69,6 +75,14 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+
+        ],
+      },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
 
         ],
       },
@@ -126,6 +140,7 @@ const navItems = [
 
 
 
+
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
@@ -144,7 +159,9 @@ const navItems = [
 
       { label: "Privacy Policy", href: "/privecy_policy" },
 
+
       { label: "Privacy Policy", href: "/privacy_policy" },
+
 
     ],
   },

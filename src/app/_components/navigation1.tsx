@@ -131,7 +131,7 @@ const navItems = [
                 dropdown: [
                     { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
-                    { label: 'IELTS', href: '/ielts' },
+                    { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
                     { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
