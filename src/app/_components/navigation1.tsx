@@ -141,6 +141,10 @@ const navItems = [
                     { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CAEL', href: '/cael' },
 
+                    { label: 'CELPIP', href: '/Celpip' },
+
+
+
 
                     { label: 'ACT', href: '/act' },
                     { label: 'PTE', href: '/PTE' },

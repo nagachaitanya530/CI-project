@@ -75,9 +75,15 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+<<<<<<< feature/celpip
+        ],
+      },
+
+=======
 
         ],
       },
+>>>>>>> main
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
@@ -103,9 +109,27 @@ const navItems = [
         ],
       },
 
+<<<<<<< feature/celpip
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+=======
+
+>>>>>>> main
 
 
+<<<<<<< feature/celpip
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
 
+      { label: "Online Mock Tests", href: "/" },
+    ],
+  },
+  {
+    label: "Book Demo",
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
+  },
+  { label: "Fees", href: "/fees", icon: FileText },
+=======
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
@@ -120,6 +144,7 @@ const navItems = [
 
 
 
+>>>>>>> main
 
       { label: "Online Mock Tests", href: "/online-mock-tests" },
 
