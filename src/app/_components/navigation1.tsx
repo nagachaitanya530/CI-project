@@ -108,7 +108,7 @@ const navItems = [
                     { label: 'SAT', href: '/sat' },
                     { label: 'CAEL', href: '/cael' },
                     { label: 'ACT', href: '/act' },
-                    { label: 'PTE', href: '/pte' },
+                    { label: 'PTE', href: '/PTE' },
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
