@@ -107,7 +107,7 @@ const navItems = [
                     { label: 'GRE', href: '/gre' },
                     { label: 'SAT', href: '/sat' },
                     { label: 'CAEL', href: '/cael' },
-                    { label: 'ACT', href: '/act' },
+                    { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'PTE', href: '/pte' },
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
