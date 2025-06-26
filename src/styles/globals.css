@@ -243,7 +243,7 @@ html {
   display: none;            
 }
 
-/* Custom scrollbar for contact us section  added by ayush for contact us*/
+/* Custom scrollbar for contact us section  added by ayushpoddar for contact us*/
 .contactusscrool::-webkit-scrollbar {
   width: 6px;
 }
@@ -259,4 +259,11 @@ html {
   scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
-
+/* global horizontal scroll hide by ayushpoddar */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
