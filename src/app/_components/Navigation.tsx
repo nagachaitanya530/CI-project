@@ -28,12 +28,22 @@ const navItems = [
     dropdown: [
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
-<<<<<<< Gmat
+  
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+  
+
       {
         label: "Spoken English",
         dropdown: [
          
-=======
+
 
       {
         label: "Spoken English",
@@ -71,7 +81,8 @@ const navItems = [
 
 
 
->>>>>>> main
+
+
           {
             label: "English Courses",
             dropdown: [
@@ -82,23 +93,9 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
-<<<<<<< Gmat
-        ],
-      },
-      { label: "OET Classes", href: "/oet-classes" },
-      { label: "Foreign Languages", href: "/foreign-languages" },
-      { label: "Kids Courses (Languages)", href: "/kids_courses" },
-      { label: "Online Mock Tests", href: "/online-mock-test" },
-=======
-<<<<<<< feature/celpip
-        ],
-      },
-
-=======
 
         ],
       },
->>>>>>> main
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
@@ -117,6 +114,24 @@ const navItems = [
       },
 
 
+
+        ],
+      },
+
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
+
+        ],
+      },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
+
         ],
       },
 
@@ -124,25 +139,32 @@ const navItems = [
         ],
       },
 
-<<<<<<< feature/celpip
+
+        ],
+      },
+
+
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-=======
-
->>>>>>> main
 
 
-<<<<<<< feature/celpip
+
+
+
+
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
 
       { label: "Online Mock Tests", href: "/" },
->>>>>>> main
+
+
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
-<<<<<<< Gmat
-=======
-=======
+
+
+
+
+
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
@@ -157,7 +179,7 @@ const navItems = [
 
 
 
->>>>>>> main
+
 
       { label: "Online Mock Tests", href: "/online-mock-tests" },
 
@@ -183,7 +205,8 @@ const navItems = [
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
->>>>>>> main
+
+
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
   { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
   {
@@ -197,14 +220,17 @@ const navItems = [
       { label: "Terms of Service", href: "/term_of_service" },
 
       { label: "Privacy Policy", href: "/privecy_policy" },
-<<<<<<< Gmat
-=======
+
+
+
+
 
 
       { label: "Privacy Policy", href: "/privacy_policy" },
 
 
->>>>>>> main
+
+
     ],
   },
 ];

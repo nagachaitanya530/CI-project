@@ -180,7 +180,7 @@ const navItems = [
             { label: 'Scholarships', href: '/scholarships' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
-        ]
+        ],
     },
     {
         label: 'What We Do',
