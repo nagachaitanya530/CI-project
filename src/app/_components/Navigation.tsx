@@ -58,10 +58,15 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+<<<<<<< PTE
+        ],
+      },
+=======
 
         ],
       },
 
+>>>>>>> main
 
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
@@ -73,6 +78,8 @@ const navItems = [
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+<<<<<<< PTE
+=======
 
 
 
@@ -80,14 +87,18 @@ const navItems = [
 
 
 
+>>>>>>> main
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/" },
+<<<<<<< PTE
+=======
 
 
 
 
+>>>>>>> main
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },

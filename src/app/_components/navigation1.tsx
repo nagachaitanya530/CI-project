@@ -136,8 +136,13 @@ const navItems = [
                     { label: 'GRE', href: '/gre' },
                     { label: 'SAT', href: '/sat' },
                     { label: 'CAEL', href: '/cael' },
+<<<<<<< PTE
+                    { label: 'ACT', href: '/act' },
+                    { label: 'PTE', href: '/PTE' },
+=======
                     { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'PTE', href: '/pte' },
+>>>>>>> main
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
