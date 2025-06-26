@@ -55,7 +55,7 @@ const navItems = [
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
                     { label: 'SAT', href: '/sat' },
-                    { label: 'CAEL', href: '/cael' },
+                    { label: 'CAEL', href: '/test-preparation-cael' },
                     { label: 'ACT', href: '/act' },
                     { label: 'PTE', href: '/pte' },
                     { label: 'DUOLINGO', href: '/duolingo' },
