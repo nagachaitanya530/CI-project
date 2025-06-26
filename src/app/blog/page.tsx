@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Navigation from '../_components/Navigation'
+import Image from 'next/image';
+import Link from 'next/link';
+import Navigation from '../_components/Navigation1';
 
 export default function BlogPage() {
   const blogPosts = [
