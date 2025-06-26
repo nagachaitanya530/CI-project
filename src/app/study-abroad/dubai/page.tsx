@@ -1,20 +1,19 @@
+'use client';
+
 import HeroSectiondubaipage from "~/app/_components/dubai/Hero";
 import StatsCard from "~/app/_components/dubai/next";
-import  WhyStudyInDubai from "~/app/_components/dubai/left";
-import Navigation from "~/app/_components/Navigation";
-
+import WhyStudyInDubai from "~/app/_components/dubai/left";
+import Navigation from "~/app/_components/navigation1";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import UniversitiesListSection from"~/app/_components/dubai/cadrs";
 import PopularCoursesSection from "~/app/_components/dubai/cardsdubai";
 import CostOfStudying from "~/app/_components/dubai/costofstudying";
 import ScholarshipsSection from "~/app/_components/dubai/ScholarshipsSection";
 import CareerProspectsSection from "~/app/_components/dubai/CareerProspectsSection";
- import MoreAboutDubai from "~/app/_components/dubai/Document";
- import SuccessStories from "~/app/_components/dubai/SuccessStories";
-
- import FAQ from "~/app/_components/study-abroad/faq";
- 
- import YourJourney from "~/app/_components/study-abroad/your-journey";
-
+import MoreAboutDubai from "~/app/_components/dubai/Document";
+import SuccessStories from "~/app/_components/dubai/SuccessStories";
+import FAQ from "~/app/_components/study-abroad/faq";
+import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
 
 
@@ -46,29 +45,23 @@ const IndiaFAQs = [
 export default function studyabroad() {
     return (
         <>
-        <Navigation/>
-       < HeroSectiondubaipage/>
-       <StatsCard/>
-       <WhyStudyInDubai/>
-       
-      < UniversitiesListSection/>
+      <Navigation/>
+      <HeroSectiondubaipage/>
+      <StatsCard/>
+      <WhyStudyInDubai/>
+      <ContactFormSection />
+      <UniversitiesListSection/>
       <PopularCoursesSection/>
       <CostOfStudying/>
       <ScholarshipsSection/>
       <CareerProspectsSection/>
       <MoreAboutDubai/>
       <SuccessStories/>
-       <FAQ faqs={IndiaFAQs} title="FAQs" />
-       
-       <YourJourney />
-       <FooterSection/>
-      
-      
-
-<FooterSection/>
-
-
-        </>
+      <FAQ faqs={IndiaFAQs} title="FAQs" />
+      <YourJourney />
+      <FooterSection/>
+      <FooterSection/>
+      </>
 
     )
 

@@ -6,6 +6,7 @@ import HeroSection from '~/app/_components/study-abroad/study-abroad-india/hero'
 import StudyInIndiaPage from '~/app/_components/study-abroad/study-abroad-india/why-study';
 import CostOfStudying from '~/app/_components/study-abroad/study-abroad-india/cost-of-studying';
 import MauritiusCard from '~/app/_components/study-abroad/study-abroad-india/popular-courses';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Scholarships from '~/app/_components/study-abroad/study-abroad-india/scholarship';
 import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/career-prospect';
 import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
@@ -141,6 +142,7 @@ export default function India() {
         <HeroSection />
         <StatsComponent />
         <StudyInIndiaPage />
+        <ContactFormSection />
         <PopularCourses />
         <CostOfStudying />
         <Scholarships />

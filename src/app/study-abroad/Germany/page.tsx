@@ -1,17 +1,15 @@
 "use client";
 
 import { useState } from "react";
-
 import Navigation from "~/app/_components/navigation1";
 import CTA_Section from "~/app/_components/study-abroad/Germany/CTA_Section";
 import UniversityList from "~/app/_components/study-abroad/Germany/listofuniversities";
 import PopularCoursesSection from "~/app/_components/study-abroad/Germany/popularcourses";
-import { Plus, Minus } from "lucide-react";
 import WhyStudy from "~/app/_components/study-abroad/Germany/whystudy";
 import CostOfStudying from "~/app/_components/study-abroad/Germany/costofstudying";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Scholarships from "~/app/_components/study-abroad/Germany/scholarship";
 import MoreAbout from "~/app/_components/study-abroad/Germany/moreabout";
-import TOC from "~/app/_components/study-abroad/Germany/TOC";
 import Hero from "~/app/_components/study-abroad/Germany/hero";
 import InfoStats from "~/app/_components/study-abroad/Germany/infostats";
 import CareerProspectsSection from "~/app/_components/study-abroad/Germany/CareerProspects";
@@ -20,16 +18,9 @@ import SuccessStories from "~/app/_components/study-abroad/Germany/SuccessStorie
 import RelatedArticles from "~/app/_components/study-abroad/Germany/RelatedArticles";
 import ConsultationForm from "~/app/_components/study-abroad/Germany/ConsultationForm"
 import FooterSection from "~/app/_components/footer1";
-import {
-  FaInstagram,
-  FaYoutube,
-  FaLinkedin,
-  FaFacebook,
-  FaXTwitter,
-  FaBlogger,
-} from "react-icons/fa6";
 
-// ✅ This is the missing function declaration
+
+
 export default function GermanyPage() {
   const [showModal, setShowModal] = useState(false)
   return (
@@ -55,6 +46,8 @@ export default function GermanyPage() {
       {/* Why Study in Germany */}
       <WhyStudy />
 
+      <ContactFormSection />
+
       {/* University List Section */}
       <UniversityList />
 
@@ -73,8 +66,6 @@ export default function GermanyPage() {
       {/* More About Germany */}
       <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
 
-      {/* Table of Contents */}
-      {/* <TOC /> */}
 
       <RelatedArticles />
 

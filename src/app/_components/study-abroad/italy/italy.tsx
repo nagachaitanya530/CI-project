@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 import { BookOpen, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import React from "react";
-
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Image from "next/image";
 import { FileText, FileSearch } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";
@@ -944,14 +944,12 @@ const Italy = () => {
             <Herosection />
             <Secondsection />
             <UniversityList />
+            <ContactFormSection />
             <PopularCoursesSection />
             <Costofstudying />
-
             <Scholarships />
             <CareerProspects />
-
             <Moredetailsection />
-            
             <SucscessStories />
             <FAQ faqs={FaqItaly} title="FAQs" />
             <YourJourney />

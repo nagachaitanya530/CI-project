@@ -5,6 +5,7 @@ import Navigation from '../../_components/navigation1';
 import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
 import MauritiusBanner from '~/app/_components/study-abroad/study-mauritius/MauritiusBanner';
 import WhyStudySection from '~/app/_components/study-abroad/study-mauritius/WhyStudySection';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import UniversityList from '~/app/_components/study-abroad/study-mauritius/UniversityList';
 import PopularCourses from '~/app/_components/study-abroad/study-mauritius/PopularCourses';
 import StudyTabs from '~/app/_components/study-abroad/study-mauritius/StudyTabs';   
@@ -19,12 +20,11 @@ return (
     <>
       <Navigation />
       <MauritiusBanner />
-
       <FadeInOnScroll><WhyStudySection /></FadeInOnScroll>
+      <ContactFormSection />
       <FadeInOnScroll><UniversityList /></FadeInOnScroll>
       <FadeInOnScroll><PopularCourses /></FadeInOnScroll>
       <FadeInOnScroll><CostOfStudying /></FadeInOnScroll>
-
       <FadeInOnScroll>
         <ScholarshipSection
           countryName="Mauritius"
@@ -38,7 +38,6 @@ return (
           ]}
         />
       </FadeInOnScroll>
-
       <FadeInOnScroll><CareerProspects /></FadeInOnScroll>
       <FadeInOnScroll><StudyTabs /></FadeInOnScroll>
       <FadeInOnScroll><SuccessStories /></FadeInOnScroll>
