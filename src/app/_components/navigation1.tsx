@@ -134,15 +134,20 @@ const navItems = [
                     { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
+
+                    { label: 'SAT', href: '/sat' },
+                    { label: 'CAEL', href: '/test-preparation-cael' },
+
                     { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CAEL', href: '/cael' },
-<<<<<<< PTE
+
+
                     { label: 'ACT', href: '/act' },
                     { label: 'PTE', href: '/PTE' },
-=======
+
                     { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'PTE', href: '/pte' },
->>>>>>> main
+
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
