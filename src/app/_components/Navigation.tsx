@@ -29,6 +29,16 @@ const navItems = [
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/" },
+          { label: "English Business Personal", href: "/" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/" },
+          { label: "Corporate Training English", href: "/" },
+
+
 
       {
         label: "Spoken English",
@@ -48,6 +58,7 @@ const navItems = [
 
 
 
+
           {
             label: "English Courses",
             dropdown: [
@@ -58,6 +69,14 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+
+        ],
+      },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
 
         ],
       },
@@ -106,6 +125,7 @@ const navItems = [
 
 
 
+
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
@@ -121,7 +141,11 @@ const navItems = [
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/contact_us" },
       { label: "Terms of Service", href: "/term_of_service" },
+
+      { label: "Privacy Policy", href: "/privecy_policy" },
+
       { label: "Privacy Policy", href: "/privacy_policy" },
+
     ],
   },
 ];
@@ -202,7 +226,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
               ) : (
                 <Link
                   href={item.href || "#"}
-                  onClick={closeMenu}
+                  onClick={() => closeMenu?.()}
                   className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
                 >
                   {item.label}
@@ -259,7 +283,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
               ) : (
                 <Link
                   href={item.href || "#"}
-                  onClick={closeMenu}
+                  onClick={() => closeMenu?.()}
                   className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
                 >
                   {item.label}

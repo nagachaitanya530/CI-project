@@ -134,7 +134,7 @@ const navItems = [
                     { label: 'IELTS', href: '/ielts' },
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
-                    { label: 'SAT', href: '/sat' },
+                    { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CAEL', href: '/cael' },
 <<<<<<< PTE
                     { label: 'ACT', href: '/act' },
