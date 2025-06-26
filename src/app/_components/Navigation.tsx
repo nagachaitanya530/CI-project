@@ -59,6 +59,10 @@ const navItems = [
             ],
           },
 
+        ],
+      },
+
+
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
@@ -70,16 +74,19 @@ const navItems = [
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
 
+
+
       { label: "Online Mock Tests", href: "/online-mock-tests" },
 
 
+
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
-
-
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/" },
+
+
+
 
     ],
   },
