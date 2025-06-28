@@ -71,7 +71,7 @@ const WhyStudyUsa = () => {
 
                 {/* Right: Your Finalized Form */}
                 <div className="w-full">
-                    <StudyAbroadForm />
+                    {/* <StudyAbroadForm /> */}
                 </div>
             </div>
         </section>
