@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import HeroCarousel from "./hero";
 import Image from "next/image";
 import { Button } from "~/components/ui/button"
-import { MessageCircle } from "lucide-react"
 import SuccessStories from "./successstories";
 import ContactFormSection from "./contact-form";
 import UniversityPartners from "./Universities";

@@ -6,10 +6,10 @@ export default function admission_guidence() {
   return (
     <> 
    
-       < HeroSection />
-       < Second />
+      <HeroSection />
+      <Second />
       <YourJourney />
-    <FooterSection />
+      <FooterSection />
     </>
   );
 }

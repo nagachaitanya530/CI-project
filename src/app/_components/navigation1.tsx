@@ -2,13 +2,6 @@
 
 import Link from "next/link";
 import {
-  Home,
-  BookOpen,
-  Globe,
-  Info,
-  CalendarCheck,
-  FileText,
-  GraduationCap,
   UserCircle,
   Menu,
   X,
@@ -92,6 +85,7 @@ interface DropdownMenuProps {
   closeMenu?: () => void;
   level?: number;
   isVisible?: boolean;
+  isStudyAbroad?: boolean;
 }
 
 const DropdownMenu = ({
@@ -100,6 +94,7 @@ const DropdownMenu = ({
   closeMenu,
   level = 0,
   isVisible = true,
+  isStudyAbroad = false,
 }: DropdownMenuProps) => {
   const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({});
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -164,7 +159,7 @@ const DropdownMenu = ({
                   </button>
                   <div
                     className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      isOpen ? (isStudyAbroad ? "max-h-[50vh] opacity-100 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-100" : "max-h-[80vh] opacity-100") : "max-h-0 opacity-0"
                     }`}
                   >
                     <DropdownMenu
@@ -172,6 +167,7 @@ const DropdownMenu = ({
                       isMobile={isMobile}
                       closeMenu={closeMenu}
                       level={level + 1}
+                      isStudyAbroad={item.label === "Study Abroad"}
                     />
                   </div>
                 </>
@@ -197,8 +193,10 @@ const DropdownMenu = ({
     <div
       className={`
         absolute ${level === 0 ? "left-0 top-full mt-2" : "left-full top-0 ml-2"}
-        min-w-[240px] bg-white/95 border border-white/20 rounded-xl shadow-2xl
+        ${isStudyAbroad ? "w-[280px] h-[550px] overflow-y-auto" : "min-w-[240px]"}
+        bg-white/95 border border-white/20 rounded-xl shadow-2xl
         opacity-100 visible transition-all duration-300 ease-out
+        ${isStudyAbroad ? "scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-100" : ""}
       `}
       style={{ zIndex: 1000 + level * 10 }}
       onMouseEnter={() => {
@@ -208,7 +206,7 @@ const DropdownMenu = ({
       }}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative">
+      <div className={isStudyAbroad ? "flex flex-col space-y-1 p-2" : "relative p-1"}>
         {items.map((item, idx) => {
           const hasDropdown = Array.isArray(item.dropdown);
           const isHovered = hoveredItem === idx;
@@ -221,9 +219,9 @@ const DropdownMenu = ({
             >
               {hasDropdown ? (
                 <>
-                  <div className="flex justify-between items-center px-4 py-1.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 cursor-pointer transition-all duration-300 rounded-lg mx-1">
-                    <span className="text-base font-medium">{item.label}</span>
-                    <ChevronRight className="text-gray-400" size={14} />
+                  <div className="flex justify-between items-center px-3 py-1.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 cursor-pointer transition-all duration-300 rounded-lg mx-1 whitespace-nowrap">
+                    <span className="text-sm font-medium">{item.label}</span>
+                    <ChevronRight className="text-gray-400 ml-2 flex-shrink-0" size={14} />
                   </div>
                   {isHovered && (
                     <DropdownMenu
@@ -232,6 +230,7 @@ const DropdownMenu = ({
                       closeMenu={closeMenu}
                       level={level + 1}
                       isVisible={true}
+                      isStudyAbroad={item.label === "Study Abroad"}
                     />
                   )}
                 </>
@@ -239,7 +238,7 @@ const DropdownMenu = ({
                 <Link
                   href={item.href || "#"}
                   onClick={closeMenu}
-                  className="block px-4 py-1 text-base text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg mx-1"
+                  className="block px-3 py-1.5 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg mx-1 whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
@@ -290,7 +289,7 @@ const NavigationItem = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <button className="flex items-center px-6 py-2 text-base font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300">
+        <button className="flex items-center px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 transform hover:scale-105">
           {item.icon && <item.icon className="mr-2" size={16} />}
           {item.label}
           <ChevronDown
@@ -305,6 +304,7 @@ const NavigationItem = ({
             items={item.dropdown}
             closeMenu={closeMenu}
             isVisible={true}
+            isStudyAbroad={item.label === "Study Abroad"}
           />
         )}
       </div>
@@ -315,7 +315,7 @@ const NavigationItem = ({
     return (
       <Link
         href={item.href || "#"}
-        className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+        className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
       >
         {item.icon && <item.icon className="mr-2" size={16} />}
         {item.label}
@@ -326,7 +326,7 @@ const NavigationItem = ({
   return (
     <Link
       href={item.href || "#"}
-      className="flex items-center px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300"
+      className="flex items-center px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 transform hover:scale-105"
     >
       {item.icon && <item.icon className="mr-2" size={16} />}
       {item.label}
@@ -364,10 +364,15 @@ const MobileNavigationItem = ({
         </button>
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <DropdownMenu items={item.dropdown} isMobile closeMenu={closeMenu} />
+          <DropdownMenu
+            items={item.dropdown}
+            isMobile
+            closeMenu={closeMenu}
+            isStudyAbroad={item.label === "Study Abroad"}
+          />
         </div>
       </div>
     );
@@ -418,19 +423,23 @@ export default function NavigationSection() {
     setIsMobileMenuOpen(false);
   };
 
+  function closeMenu(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void {
+    setIsMobileMenuOpen(false);
+  }
+
   return (
     <nav
       className={`
         sticky top-0 z-50 w-full transition-all duration-500
         ${
           isScrolled
-            ? "bg-white/90 shadow-2xl border-b border-white/20"
+            ? "bg-white/90 shadow-xl border-b border-white/20"
             : "bg-white/80 border-b border-white/10"
         }
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:pointer-events-none
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center flex-shrink-0">
             <Link
@@ -458,7 +467,7 @@ export default function NavigationSection() {
           <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             <Link
               href="/contact"
-              className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-blue-50 shadow-lg hover:shadow-xl"
+              className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <UserCircle className="mr-2" size={16} />
               Contact Us
@@ -496,7 +505,7 @@ export default function NavigationSection() {
             <div className="pt-2 border-t border-gray-200/50">
               <Link
                 href="/contact"
-                onClick={closeMobileMenu}
+                onClick={closeMenu}
                 className="flex items-center justify-center px-3 py-2 border border-blue-600/50 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 text-sm shadow-lg"
               >
                 <UserCircle className="mr-3" size={16} />

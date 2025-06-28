@@ -27,9 +27,7 @@ export default function Hero() {
               className="w-full h-full object-cover" />
           </div>
         </div>
-
       </div>
-
     </section>
     </>
 

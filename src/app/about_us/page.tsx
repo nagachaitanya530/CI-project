@@ -7,9 +7,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Navigation />
-
       <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
-
         {/* Section 1: Our Skills */}
         <section className="mb-20 flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/2">
