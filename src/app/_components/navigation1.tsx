@@ -186,7 +186,7 @@ const navItems = [
         label: 'What We Do',
         dropdown: [
             { label: 'About Us', href: '/about' },
-            { label: 'University Visits', href: '/university-visits' },
+            { label: 'University Visits', href: '/what-we-do/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
             { label: 'Partnered Universities', href: '/partnered-universities' },
         ]
