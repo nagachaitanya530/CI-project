@@ -177,7 +177,7 @@ const navItems = [
             { label: 'Career Counseling', href: '/career-counseling' },
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
-            { label: 'Scholarships', href: '/scholarships' },
+            { label: 'Scholarships', href: '/study-abroad/scholarship' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
         ],
