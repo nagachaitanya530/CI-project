@@ -25,13 +25,31 @@ const navItems = [
         dropdown: [
 
 
+
+
+
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: 'study-abroad/usa' },
             { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
             { label: 'Australia', href: "/study-abroad/australia" },
             { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
+
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+            { label: 'France', href: '/study-abroad/study-in-france' },
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+            { label: 'Ireland', href: '/study-abroad/ireland' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Italy', href: '/study-abroad/italy' },
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+            { label: 'Germany', href: '/study-abroad/Germany' },
+            { label: 'Dubai', href: '/study-abroad/dubai' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad' },
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+
+           
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
             { label: 'France', href: '/study-abroad/study-in-france' },
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
@@ -124,6 +142,7 @@ const navItems = [
 
 
 
+
         ]
     },
     {
@@ -162,7 +181,7 @@ const navItems = [
             { label: 'Career Counseling', href: '/career-counseling' },
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
-            { label: 'Scholarships', href: '/scholarships' },
+            { label: 'Scholarships', href: '/study-abroad/scholarship' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
         ],
@@ -171,13 +190,13 @@ const navItems = [
         label: 'What We Do',
         dropdown: [
             { label: 'About Us', href: '/about' },
-            { label: 'University Visits', href: '/university-visits' },
+            { label: 'University Visits', href: '/what-we-do/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
-            { label: 'Partnered Universities', href: '/partnered-universities' },
+            { label: 'Partnered Universities', href: '/study-abroad/partnered-universities' },
         ]
     },
     { label: 'Events', href: '/events' },
-    { label: 'Resources', href: '/resources' }
+    { label: 'Resources', href: '/resource' }
 ];
 
 interface DropdownMenuProps {

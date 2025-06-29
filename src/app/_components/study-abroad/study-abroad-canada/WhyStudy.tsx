@@ -1,6 +1,8 @@
+
 import { ShieldCheck } from "lucide-react";
 import React from "react";
 import BookConsultationForm from "~/app/_components/study-abroad/BookConsultationForm"; 
+
 
 interface WhyStudy {
     image: string
