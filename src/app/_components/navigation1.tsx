@@ -68,22 +68,7 @@ const navItems = [
            
             
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
-
-
-           
-          
-          
-            
-            
-           
-
-           
-            
-          
-
-         
-
-            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+          { label: 'New Zealand', href: '/study-abroad/NewZealand' },
           
 
             

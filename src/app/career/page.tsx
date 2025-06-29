@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Navigation from '../_components/navigation1'
+import Navigation from "../_components/Navigation";
 import Footer from '../_components/footer1'
 
 import JobCard from './JobCard'

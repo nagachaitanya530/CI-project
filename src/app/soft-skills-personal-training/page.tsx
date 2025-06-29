@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import { title } from "process";
 import About from "../soft-skills-personal-training/About"
 import Curriculum from "./Curriculam";

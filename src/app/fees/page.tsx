@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
 

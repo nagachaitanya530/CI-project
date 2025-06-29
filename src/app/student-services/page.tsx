@@ -1,9 +1,7 @@
 'use client';
-
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import NavigationSection from '../_components/navigation1';
 import FooterSection from '../_components/footer1';
 import SpainHero from '../_components/study-abroad/study-in-spain/SpainHero';
@@ -93,7 +91,6 @@ export default function StudentServicesPage() {
         </div>
       </section>
 
-      {/* Additional Section */}
       <SpainHero />
 
       <FooterSection />

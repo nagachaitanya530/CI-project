@@ -1,6 +1,6 @@
 
 import Footer from "../_components/footer1";
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import Kids_courses from "../_components/kids_courses/kids_courses";
 
 import React from 'react'

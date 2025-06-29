@@ -1,5 +1,6 @@
 import { ShieldCheck } from "lucide-react";
-import BookConsultationForm from "../BookConsultationForm";
+import React from "react";
+import BookConsultationForm from "~/app/_components/study-abroad/BookConsultationForm"; 
 
 interface WhyStudy {
     image: string
@@ -66,7 +67,7 @@ function WhyStudy() {
 
                     {/* Right Form  */}
                     <div className="lg:w-2/6 lg:mt-10 p-3 lg:p-10">
-                            <BookConsultationForm/>
+                            <BookConsultationForm />
                     </div>
 
                 </div>

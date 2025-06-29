@@ -6,7 +6,7 @@ import ProcessOfTesting from "../_components/career-counseling/ProcessOfTesting"
 import TypesOfAptitude  from  "../_components/career-counseling/TypesOfAptitude";
 import HeroSection from "../_components/career-counseling/Hero";
 import ImportanceSection from "../_components/career-counseling/ImportanceOfAptitude";
-
+import Navigation from "../_components/navigation1";
 
 const  CareerCounselingFAQs = [
   {
@@ -49,7 +49,7 @@ const  CareerCounselingFAQs = [
 export default function career_counseling() {
   return (
     <> 
-   
+      <Navigation />
         <HeroSection />
          <ImportanceSection />
         <TypesOfAptitude />

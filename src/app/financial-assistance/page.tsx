@@ -38,16 +38,17 @@ export default function FinancialAssistancePage() {
             </div>
             <div className="relative w-full h-80 md:h-[400px]">
               <Image
-                src="/images/lady.png"
-                alt="Consultant"
-                fill
-                className="object-contain"
-              />
+              src="/financial-asst-bnr-img.png"
+              alt="Consultant"
+              fill
+              className="object-contain"
+            />
+
             </div>
           </div>
         </section>
 
-        {/* MAIN CONTENT SECTION */}
+        {/* MAIN CONTENT SECTION finan-asst-bnr-img.png*/}
         <section className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-3xl">
             <span className="underline font-bold decoration-red-500 underline-offset-[6px]">
