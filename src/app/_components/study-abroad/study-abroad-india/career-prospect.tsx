@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const courses = [
   {
@@ -52,7 +53,15 @@ const CareerProspect = () => {
             key={index}
             className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white"
           >
-            <img src={course.image} alt={course.name} className="w-full h-48 object-cover" />
+            <div className="relative w-full h-48">
+              <Image
+                src={course.image}
+                alt={course.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              />
+            </div>
             <div className="py-4 text-lg font-semibold text-gray-900">{course.name}</div>
           </div>
         ))}

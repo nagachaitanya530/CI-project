@@ -280,7 +280,6 @@ export default function AboutUsPage() {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

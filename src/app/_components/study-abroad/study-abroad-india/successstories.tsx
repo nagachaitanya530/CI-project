@@ -1,7 +1,8 @@
 "use client"
 
-import { useRef, useState } from "react"
-import { ChevronLeft, ChevronRight, Play } from "lucide-react"
+import { useRef, useState, useEffect, useCallback } from "react"
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
+import Image from "next/image"
 
 interface Review {
     id: number
@@ -26,7 +27,7 @@ const reviews: Review[] = [
         author: {
             name: "Vaibhavee Modi",
             institution: "Confederation College, Canada",
-            avatar: "/api/placeholder/60/60",
+            avatar: "/testimonials/vaibhavee-modi.jpg",
         },
         media: {
             type: "video",
@@ -41,7 +42,7 @@ const reviews: Review[] = [
         author: {
             name: "Rahul Sharma",
             institution: "University of Manchester, UK",
-            avatar: "/api/placeholder/60/60",
+            avatar: "/testimonials/rahul-sharma.jpg",
         },
         media: {
             type: "video",
@@ -56,11 +57,11 @@ const reviews: Review[] = [
         author: {
             name: "Priya Patel",
             institution: "Stanford University, USA",
-            avatar: "/api/placeholder/60/60",
+            avatar: "/testimonials/priya-patel.jpg",
         },
         media: {
-            type: "video",
-            src: "/dummy-video.mp4",
+            type: "image",
+            src: "/testimonials/priya-laboratory.jpg",
             alt: "Student in laboratory",
         },
     },
@@ -68,75 +69,148 @@ const reviews: Review[] = [
 
 export default function SuccessStories() {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+    const autoPlayRef = useRef<NodeJS.Timeout | null>(null)
 
-    const goToPrevious = () => {
+    // Auto-play functionality
+    useEffect(() => {
+        if (isAutoPlaying) {
+            autoPlayRef.current = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1))
+            }, 5000) // Change slide every 5 seconds
+        }
+
+        return () => {
+            if (autoPlayRef.current) {
+                clearInterval(autoPlayRef.current)
+            }
+        }
+    }, [isAutoPlaying])
+
+    const goToPrevious = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1))
-    }
+        setIsAutoPlaying(false) // Stop auto-play when user interacts
+    }, [])
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1))
-    }
+        setIsAutoPlaying(false) // Stop auto-play when user interacts
+    }, [])
+
+    const goToSlide = useCallback((index: number) => {
+        setCurrentIndex(index)
+        setIsAutoPlaying(false) // Stop auto-play when user interacts
+    }, [])
+
+    // Keyboard navigation
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'ArrowLeft') {
+                goToPrevious()
+            } else if (event.key === 'ArrowRight') {
+                goToNext()
+            }
+        }
+
+        window.addEventListener('keydown', handleKeyDown)
+        return () => window.removeEventListener('keydown', handleKeyDown)
+    }, [goToPrevious, goToNext])
+
     const MediaComponent = ({
         media,
         className,
     }: {
-        media: { type: "image" | "video"; src: string; alt: string };
-        className?: string;
+        media: { type: "image" | "video"; src: string; alt: string }
+        className?: string
     }) => {
-        const videoRef = useRef<HTMLVideoElement>(null); // ⬅️ Add video reference
-        const [isPlaying, setIsPlaying] = useState(false); // ⬅️ Track play state
+        const videoRef = useRef<HTMLVideoElement>(null)
+        const [isPlaying, setIsPlaying] = useState(false)
+        const [isLoading, setIsLoading] = useState(true)
 
-        // ⬇️ Play handler when Play icon is clicked
-        const handlePlay = () => {
+        const handlePlayPause = () => {
             if (videoRef.current) {
-                videoRef.current.play();
-                setIsPlaying(true);
+                if (isPlaying) {
+                    videoRef.current.pause()
+                    setIsPlaying(false)
+                } else {
+                    videoRef.current.play()
+                    setIsPlaying(true)
+                }
             }
-        };
+        }
+
+        const handleVideoLoad = () => {
+            setIsLoading(false)
+        }
+
+        const handleVideoEnd = () => {
+            setIsPlaying(false)
+        }
 
         return (
             <div className={`relative ${className}`}>
                 {media.type === "video" ? (
-                    <div className="relative left-40 rounded-2xl">
-                        {/* ⬇️ Video element with ref, loop, muted, playsInline */}
+                    <div className="relative left-40 rounded-2xl overflow-hidden shadow-lg">
                         <video
                             ref={videoRef}
                             src={media.src}
                             playsInline
                             muted
+                            preload="metadata"
+                            onLoadedData={handleVideoLoad}
+                            onEnded={handleVideoEnd}
                             className="w-full h-full object-cover rounded-2xl"
+                            aria-label={media.alt}
                         />
 
-                        {/* ⬇️ Play button overlay (only shown if not playing) */}
-                        {!isPlaying && (
+                        {/* Loading state */}
+                        {isLoading && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-2xl">
+                                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            </div>
+                        )}
+
+                        {/* Play/Pause button overlay */}
+                        {!isLoading && (
                             <div
-                                className="absolute inset-0 flex items-center justify-center  cursor-pointer"
-                                onClick={handlePlay}
+                                className="absolute inset-0 flex items-center justify-center cursor-pointer group"
+                                onClick={handlePlayPause}
                             >
-                                <div className="bg-white/90 rounded-full p-4 shadow-lg">
-                                    <Play className="w-8 h-8 text-gray-700" fill="currentColor" />
+                                <div className="bg-white/90 group-hover:bg-white rounded-full p-4 shadow-lg transition-all duration-200 group-hover:scale-110">
+                                    {isPlaying ? (
+                                        <Pause className="w-8 h-8 text-gray-700" fill="currentColor" />
+                                    ) : (
+                                        <Play className="w-8 h-8 text-gray-700" fill="currentColor" />
+                                    )}
                                 </div>
                             </div>
                         )}
                     </div>
                 ) : (
-                    // ⬇️ Image rendering for type: image
-                    <img
-                        src={media.src || "/api/placeholder/400/250"}
-                        alt={media.alt}
-                        className="w-full h-full object-cover"
-                    />
+                    <div className="relative left-40 rounded-2xl overflow-hidden shadow-lg">
+                        <Image
+                            src={media.src}
+                            alt={media.alt}
+                            fill
+                            className="object-cover rounded-2xl"
+                            sizes="(max-width: 768px) 100vw, 40vw"
+                            priority={currentIndex === 0} // Only prioritize first image
+                        />
+                    </div>
                 )}
             </div>
-        );
-    };
+        )
+    }
+
     return (
-        <div className="min-h- bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 py-8 px-4 mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 py-8 px-4 mb-6">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="flex justify-between items-start mb-16">
                     <div>
-                        <h1 className="text-5xl font-bold text-gray-900 mb-4">Success Stories</h1>
+                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                            Success Stories
+                        </h1>
                         <div className="w-32 h-1 bg-orange-400 rounded-full"></div>
                     </div>
 
@@ -144,17 +218,17 @@ export default function SuccessStories() {
                     <div className="flex gap-4">
                         <button
                             onClick={goToPrevious}
-                            className="rounded-full w-14 h-14 bg-white hover:bg-gray-50 shadow-xl border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-105"
+                            className="rounded-full w-12 h-12 md:w-14 md:h-14 bg-white hover:bg-gray-50 shadow-xl border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             aria-label="Previous story"
                         >
-                            <ChevronLeft className="w-7 h-7 text-gray-700" />
+                            <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 text-gray-700" />
                         </button>
                         <button
                             onClick={goToNext}
-                            className="rounded-full w-14 h-14 bg-blue-600 hover:bg-blue-700 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105"
+                            className="rounded-full w-12 h-12 md:w-14 md:h-14 bg-blue-600 hover:bg-blue-700 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             aria-label="Next story"
                         >
-                            <ChevronRight className="w-7 h-7 text-white" />
+                            <ChevronRight className="w-6 h-6 md:w-7 md:h-7 text-white" />
                         </button>
                     </div>
                 </div>
@@ -169,27 +243,30 @@ export default function SuccessStories() {
                     >
                         {reviews.map((review, index) => (
                             <div key={review.id} className="flex-shrink-0 w-full flex justify-center">
-                                <div className=" rounded-3xl shadow- overflow-visible w-[1100px] mx-4">
-                                    <div className="flex justify-end">
+                                <div className="rounded-3xl overflow-visible w-full max-w-[1100px] mx-4">
+                                    <div className="flex flex-col lg:flex-row justify-end">
                                         {/* Left Media Section */}
-                                        <div className="w-2/5 p-6 mt-6">
+                                        <div className="w-full lg:w-2/5 p-6 mt-6 order-2 lg:order-1">
                                             <MediaComponent media={review.media} className="w-full h-64" />
                                         </div>
 
                                         {/* Right Content Section */}
-                                        <div className="w-3/5 h-80 p-8 bg-white rounded-2xl flex justify-end">
-                                            <div className=" flex flex-col items-end w-3/4 justify-between">
-                                                <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-normal">
+                                        <div className="w-full lg:w-3/5 h-auto lg:h-80 p-8 bg-white rounded-2xl flex justify-center lg:justify-end order-1 lg:order-2">
+                                            <div className="flex flex-col items-center lg:items-end w-full lg:w-3/4 justify-between">
+                                                <blockquote className="text-gray-800 text-base md:text-lg leading-relaxed mb-8 font-normal text-center lg:text-right">
                                                     "{review.quote}"
                                                 </blockquote>
 
-
                                                 <div className="flex items-center gap-4">
-                                                    <img
-                                                        src={review.author.avatar}
-                                                        alt={review.author.name}
-                                                        className="w-16 h-16 rounded-full object-cover"
-                                                    />
+                                                    <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                                                        <Image
+                                                            src={review.author.avatar}
+                                                            alt={`${review.author.name} profile picture`}
+                                                            fill
+                                                            className="object-cover"
+                                                            sizes="64px"
+                                                        />
+                                                    </div>
                                                     <div>
                                                         <h3 className="font-bold text-gray-900 text-lg mb-1">
                                                             {review.author.name}
@@ -213,13 +290,25 @@ export default function SuccessStories() {
                     {reviews.map((_, index) => (
                         <button
                             key={index}
-                            onClick={() => setCurrentIndex(index)}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                                ? "bg-blue-600 scale-125"
-                                : "bg-gray-300 hover:bg-gray-400"
-                                }`}
+                            onClick={() => goToSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                                index === currentIndex
+                                    ? "bg-blue-600 scale-125"
+                                    : "bg-gray-300 hover:bg-gray-400"
+                            }`}
+                            aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}
+                </div>
+
+                {/* Auto-play indicator */}
+                <div className="flex justify-center mt-4">
+                    <button
+                        onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                        className="text-sm text-gray-600 hover:text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
+                    >
+                        {isAutoPlaying ? "Pause Auto-play" : "Resume Auto-play"}
+                    </button>
                 </div>
             </div>
         </div>

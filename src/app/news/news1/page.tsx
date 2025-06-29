@@ -1,21 +1,11 @@
 "use client"
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import Navigation from '~/app/_components/navigation1';
 import Leftgrid from '~/app/_components/blogs-components/left-grid';
 import PersonalBox from '~/app/_components/blogs-components/personal-box';
 import BottomArticles from '~/app/_components/blogs-components/bottom-articles';
 import AuthorInfo from '~/app/_components/blogs-components/author-info';
 import { useState } from 'react';
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  MessageCircle,
-  Share2,
-  Send
-} from 'lucide-react';
 import Footer from '~/app/_components/footer1';
 export default function VocabularyPage() {
   const [email, setEmail] = useState('');
@@ -136,7 +126,6 @@ export default function VocabularyPage() {
 
                   {/* Decorative elements */}
 
-
                 </div>
 
                 <div className='font-semibold mb-12 mt-12'>
@@ -167,14 +156,8 @@ export default function VocabularyPage() {
                     </div>
                   ))}
                 </div>
-
-
-
               </div>
-
             </div>
-
-
             {/* Sidebar */}
             <Leftgrid />
           </div>
@@ -194,7 +177,7 @@ export default function VocabularyPage() {
           font-weight: 600;
         }
       `}</style>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
