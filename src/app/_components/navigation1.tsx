@@ -211,7 +211,7 @@ const navItems = [
         ]
     },
     { label: 'Events', href: '/events' },
-    { label: 'Resources', href: '/resources' }
+    { label: 'Resources', href: '/resource' }
 ];
 
 interface DropdownMenuProps {
