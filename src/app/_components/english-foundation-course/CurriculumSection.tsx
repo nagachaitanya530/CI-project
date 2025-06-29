@@ -341,7 +341,6 @@ const CurriculumSection = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Sidebar */}
         <div className="col-span-1 hidden md:flex flex-col items-start border-r pr-4 border-gray-300">
           <div className="bg-[#284c87] text-white rounded-xl p-6 w-full shadow-md transition-all duration-300">
             {activeWeek !== null && curriculum[activeWeek] ? (
@@ -362,8 +361,6 @@ const CurriculumSection = () => {
             )}
           </div>
         </div>
-
-        {/* Main Section */}
         <div className="col-span-3 space-y-4">
           {curriculum.map((weekData, index) => (
             <div

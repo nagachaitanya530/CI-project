@@ -1,7 +1,6 @@
 function ScheduleAndPricing(){
     return(
         <>
-{/* chooosing the learning track */}
                 <section id="schedule" className="my-10">
                     <h1 className="text-4xl font-semibold pb-10">
                         Choose Your Learning Track

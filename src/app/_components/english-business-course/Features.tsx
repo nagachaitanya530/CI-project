@@ -1,7 +1,6 @@
 function Features(){
     return(
         <>
-           {/* Features  */}
                 <section id="feature" className="">
                     <h1 className="text-4xl font-semibold py-5">Features</h1>
                     <div className="container flex  flex-col md:flex-row gap-5 p-5">

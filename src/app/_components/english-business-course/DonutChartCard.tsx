@@ -19,8 +19,6 @@ export default function CEFRProgress() {
   return (
     <section className="min-h-screen bg-white px-4 py-12 flex items-center justify-center">
       <div className="bg-white shadow-xl rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
-        
-        {/* Left Column */}
         <div className="flex-1">
           <h2 className="text-xl font-bold mb-1">*Expected outcome by the end of the course.</h2>
           <p className="text-sm text-gray-500 mb-6">
@@ -48,8 +46,6 @@ export default function CEFRProgress() {
             ))}
           </div>
         </div>
-
-        {/* Right Column - Circle */}
         <div className="flex justify-center items-center w-full lg:w-64 h-64 relative mx-auto">
           <svg className="w-full h-full" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" stroke="#e5e7eb" strokeWidth="10" fill="none" />

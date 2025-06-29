@@ -22,9 +22,6 @@ function AboutEnglish() {
       buttonText: 'English Foundation'
     }
   ]
-
-
-  // left side
   const data = [
     {
       image: '../../../home/learning-Girl.jpg',
@@ -45,7 +42,6 @@ function AboutEnglish() {
 
   return (
     <>
-      {/* After the sticky bar, we can add the content for the course details. */}
       <h2 id='about' className='mx-3 md:mx-7 lg:mx-30 mt-20 mb-1 text-2xl sm:text-3xl scroll-mt-35'>
         What you'll learn
       </h2>

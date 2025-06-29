@@ -47,7 +47,7 @@ const navItems = [
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-      { label: "Online Mock Tests", href: "/online-mock-test" },
+      { label: "Online Mock Tests", href: "/OnlineMockTest" },
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },

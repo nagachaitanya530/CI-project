@@ -1,13 +1,12 @@
 const HeroSection = () => {
   return (
     <section className="bg-[#eaf1fb] py-10 px-6 md:px-20 flex flex-col md:flex-row md:items-center justify-between gap-8">
-      {/* Left Side */}
       <div className="flex-1">
         <div className="bg-blue-700 text-white font-semibold text-sm px-3 py-1 w-fit rounded mb-4">
           FOUNDATION
         </div>
 
-        {/* Headings */}
+      
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
           ENGLISH FOUNDATION COURSE:
         </h1>
@@ -36,8 +35,6 @@ const HeroSection = () => {
           <p className="text-gray-700 font-semibold text-lg">35,567 already enrolled</p>
         </div>
       </div>
-
-      {/* Right Side */}
       <div className="flex-1 bg-white shadow-lg p-8 rounded-lg w-full max-w-md">
         <p className="text-blue-600 font-medium text-lg mb-2">4.7 ★ (28,497 Ratings)</p>
         <div className="mb-4">

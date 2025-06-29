@@ -523,9 +523,6 @@ export default function Curriculum() {
                 </div>
 
               </div>
-
-            
-        {/* Right Side: Static Info Card */}
         <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
           <div className="relative w-full h-85">
             <Image

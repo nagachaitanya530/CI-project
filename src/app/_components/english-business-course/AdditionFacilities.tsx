@@ -1,8 +1,6 @@
 function AdditionFacilities(){
     return(
     <>
-    
-      {/* Addition Facilities  */}
           <section id="addition">
             <h1 className="text-center text-4xl font-semibold text-blue-950 m-15">
               Additional Facilities
@@ -62,7 +60,6 @@ function AdditionFacilities(){
                   />
                 </div>
               </div>
-              {/* </div> */}
             </div>
           </section>
     </>

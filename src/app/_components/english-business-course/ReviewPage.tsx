@@ -1,7 +1,6 @@
 'use client'
 
 export default function ReviewPage() {
-  // Sample review data
   const reviews = [
     {
       name: 'Akil Ghani',
@@ -27,15 +26,12 @@ export default function ReviewPage() {
 
   return (
     <section className="py-12 bg-gray-100">
-      {/* Header Section */}
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h1 className="text-4xl font-bold text-blue-900 mb-4">What Our Learners Say</h1>
         <p className="text-lg text-gray-600">
           Read reviews from our learners who’ve improved their English communication skills through our courses.
         </p>
       </div>
-
-      {/* Review Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:p-5">
         {reviews.map((review, idx) => (
           <div key={idx} className="bg-white p-6 rounded-lg shadow-md"> 

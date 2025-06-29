@@ -4,10 +4,7 @@ function HeroSection(){
     return (
         <>
            <section className="bg-cyan-100 shadow-2xl flex flex-col md:flex-row px-4 md:px-10 lg:px-50 py-10">
-
-
                 <div className="left mb-10 w-full lg:w-1/2">
-
                     <img className="h-8 ml-0 m-5" src="" alt="Website-Logo" />
                     <h2 className="text-4xl font-bold mb-6">
                         ENGLISH BUSINESS COURSE: Personal Training.</h2>
@@ -29,8 +26,6 @@ function HeroSection(){
 
                     </div>
                 </div>
-
-                {/* Right SIde Card  */}
                 <div className="right  bg-white border-gray-300 rounded-xl shadow-lg max-w-md mx-auto hover:bg-gray-100  ">
                     <iframe
                         className="w-full h-64 animate-pulse"
@@ -58,8 +53,6 @@ function HeroSection(){
                         <h2 className="text-lg font-medium text-gray-800">Upto 3 months / 66 hours</h2>
                     </div>
                 </div>
-                {/* </div> */}
-
             </section></>
     );
 }

@@ -2,8 +2,6 @@
 
 export default function LearnerPersonas() {
   return (
-    
-//  ideal learnner personas
                 <section className=" ">
                     <h2 className="font-semibold text-4xl my-10">Ideal Learner Personas</h2>
 

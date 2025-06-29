@@ -25,8 +25,6 @@ function EnglishAdvance() {
   return (
     <div>
       <Navigation />
-
-      {/* Nav Bar After Hero Section */}
       <Herosection />
 
       <div className="hidden sm:sticky sm:top-16 sm:bg-white sm:shadow-[-4px_5px_15px_rgba(0,0,0,0.5)] sm:z-10 sm:block ">

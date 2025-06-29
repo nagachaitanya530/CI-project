@@ -11,10 +11,7 @@ const CareerSupport = () => {
           Get exclusive access to <br /> career resources
         </h2>
       </div>
-
-      {/* Services Row */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-10 text-center md:text-left mb-12">
-        {/* Resume Review */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <FileText className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Resume Review</p>
@@ -22,8 +19,6 @@ const CareerSupport = () => {
             Get your resume reviewed for job applications.
           </p>
         </div>
-
-        {/* Application Support */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <BookOpen className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Application Support</p>
@@ -31,8 +26,6 @@ const CareerSupport = () => {
             Get support for choosing and applying for different colleges and universities.
           </p>
         </div>
-
-        {/* Visa Support */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <PlaneTakeoff className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Visa Support</p>
@@ -41,8 +34,6 @@ const CareerSupport = () => {
           </p>
         </div>
       </div>
-
-      {/* University Access Row */}
       <div className="border-t pt-8 text-center">
         <p className="font-semibold text-lg text-gray-800 mb-6">
           Get access to more than 4000 International universities and colleges

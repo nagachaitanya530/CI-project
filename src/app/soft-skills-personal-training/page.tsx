@@ -1,18 +1,11 @@
 'use client'
 import { useState } from "react";
 import Navigation from "../_components/Navigation";
-import { title } from "process";
 import About from "../soft-skills-personal-training/About"
 import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
-
-
-
-
-
-
 
 function SoftskillPesronTraining() {
 
@@ -26,12 +19,9 @@ function SoftskillPesronTraining() {
   return (
 
     <div>
-      <Navigation></Navigation>
-
-      {/* Hero Section */}
+      <Navigation/>
 
       <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
-        {/* Text Side */}
         <div className="flex justify-center">
           <div className="text- mt-5 ml-30">
             <div className=" flex justify-start h-10">
@@ -49,7 +39,7 @@ function SoftskillPesronTraining() {
           </div>
 
         </div>
-        {/* Video Side */}
+       
         <div className="lg:w-1/2 relative">
           <div className="aspect-video w-full max-w-xl mx-auto">
             <iframe
@@ -63,8 +53,7 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-      {/* Features Section */}
-      {/* <section className="flex justify-around items-center p-6 bg-gray-100 text-center"> */}
+     
       <section className="bg-gray-100 py-6 px-4 flex flex-col md:flex-row justify-around text-center gap-4">
         <div>
           <div className="text-xl font-bold">12 Week </div>
@@ -79,17 +68,9 @@ function SoftskillPesronTraining() {
           <p className="text-sm">After Course</p>
         </div>
       </section>
-
-
-      {/* tab secton */}
-
-
       <div className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        {/* Left Content */}
         <div className="md:col-span-2 bg-white rounded-xl  p-4 shadow-xl/50">
           <div className="flex-wrap space-x-10 border-b border-gray-300 pb-2 gap-4">
-            {/* Tabs */}
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -114,8 +95,6 @@ function SoftskillPesronTraining() {
 
           </div>
         </div>
-
-        {/* Right Card */}
         <div>
           <div className="bg-[#7B61FF] w-80 h-120 text-white shadow-lg flex flex-col items-center text-center">
             <img
@@ -141,10 +120,6 @@ function SoftskillPesronTraining() {
               <button className="bg-white hover:bg-white text-black text-lg px-6 py-3" onClick={handleWhatsApp}>
                 Call Now
               </button>
-
-
-
-
             </div>
           </div>
         </div>
@@ -170,8 +145,6 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-
-      {/* Booking Options */}
       <section className="bg-blue-800 text-white py-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
@@ -186,9 +159,7 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-
       <Footer />
-
     </div>
   );
 }

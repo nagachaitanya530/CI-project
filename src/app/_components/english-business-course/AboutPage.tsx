@@ -1,4 +1,4 @@
-import { Check, CheckCircle } from "lucide-react";
+import {  CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 
@@ -8,8 +8,6 @@ function AboutPage() {
             <section id="about" className=" border-gray-300 rounded-xl shadow-lg ">
                 
                 <div>
-
-                
                 <h1 className="text-3xl font-semibold py-5 w-1/2">
                     What you''ll learn   
                     </h1>

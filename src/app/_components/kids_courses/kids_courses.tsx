@@ -7,6 +7,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaArrowRight, FaBook, FaBookmark, FaMicrophone,  FaUnderline,  } from "react-icons/fa";
 import { TiMessages } from "react-icons/ti";
 import CountUp from "react-countup";
+import { useIsMobile } from "~/hooks/use-mobile";
+
 
 const Mainsection = () => {
     return (
@@ -689,9 +691,13 @@ const NewsSection = () => {
 };
 
 const Kids_courses = () => {
+    const isMobile = useIsMobile();
     return (
         <div className="font-sans">
+           
+          
             <Mainsection />
+            
             <SecondSection />
             <LeadershipFlow />
 
@@ -705,6 +711,9 @@ const Kids_courses = () => {
 
             <Subscribersection />
             <NewsSection />
+          
+           
+            
         </div>
     );
 };

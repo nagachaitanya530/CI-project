@@ -7,32 +7,30 @@ const skills = [
     title: "Writing Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 85,
-    color: "#f97316", // orange-500
+    color: "#f97316", 
   },
   {
     title: "Grammar Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 90,
-    color: "#0ea5e9", // sky-500
+    color: "#0ea5e9",
   },
   {
     title: "Speaking Skills",
     level: "CEFR B2 Level Proficiency",
     percent: 82,
-    color: "#e11d48", // rose-600
+    color: "#e11d48", 
   },
   {
     title: "Listening Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 87,
-    color: "#a21caf", // purple-700
+    color: "#a21caf", 
   },
 ];
 
 export default function Outcome() {
   const [progress, setProgress] = useState(0);
-
-  // Animate circular progress on mount
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
@@ -50,7 +48,6 @@ export default function Outcome() {
   return (
     <section className="py-16 px-6 md:px-12 bg-gradient-to-br from-white to-blue-50" id="outcome">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left - Progress Bars */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">
             Expected outcome by the end of the course.
@@ -80,8 +77,6 @@ export default function Outcome() {
             ))}
           </div>
         </div>
-
-        {/* Right - Circular Indicator */}
         <div className="w-52 md:w-72 mx-auto">
           <CircularProgressbar
             value={progress}
