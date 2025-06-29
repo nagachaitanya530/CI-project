@@ -34,7 +34,7 @@ const NAV_ITEMS = [
       { label: "Germany", href: "/study-abroad/Germany" },
       { label: "Dubai", href: "/study-abroad/dubai" },
       { label: "Ireland", href: "/study-abroad/ireland" },
-      { label: "France", href: "/study-abroad/france" },
+      { label: "France", href: "/study-abroad/study-in-france" },
       { label: "Mauritius", href: "/study-abroad/study-mauritius" },
       { label: "International", href: "/study-abroad/study-international" },
       { label: "Study Abroad", href: "/study-abroad/abroad" },
