@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import NavigationSection from '../_components/navigation1';
 import FooterSection from '../_components/footer1';
-import SpainHero from '../_components/study-abroad/study-in-spain/SpainHero';
+import YourJourney from '../_components/study-abroad/your-journey';
 import ConsultationFormModal from '~/app/_components/study-abroad/study-in-spain/ConsultationForm';
 
 export default function StudentServicesPage() {
@@ -94,7 +94,7 @@ export default function StudentServicesPage() {
       </section>
 
       {/* Additional Section */}
-      <SpainHero />
+      <YourJourney />
 
       <FooterSection />
     </main>
