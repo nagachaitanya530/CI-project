@@ -1,4 +1,4 @@
-function HeroSection({ onFreeConsultClick }: { onFreeConsultClick: () => void }){
+function HeroSection(){
     return(
         <>
            <div className="flex flex-col-2 items-center px-20 bg-linear-to-r from-white-500 via-pink-100 to-green-100 justify-center space-x-35 font-[poppins,sans-serif]">
@@ -7,12 +7,9 @@ function HeroSection({ onFreeConsultClick }: { onFreeConsultClick: () => void })
                         <span className="font-bold"> Switzerland:</span>The land of precision and perfection
                     </h1>
                     <div className="flex flex-row gap-8 shadow-[10px_10px_10px_-14px_rgba(0,_0,_0,_0.3)] p-5">
-                       <button
-            onClick={onFreeConsultClick}
-            className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all"
-          >
-            Free Expert Consultation
-          </button>
+                        <button className="bg-blue-900 text-blue-600 rounded-2xl border-2 hover:bg-white hover:text-blue-800 hover:cursor-pointer mt-4 hover:bg-red-500 text-white py-2 text-md font-semibold px-6">
+                            Free Expert Consultation
+                        </button>
                        
                     </div>
                 </div>

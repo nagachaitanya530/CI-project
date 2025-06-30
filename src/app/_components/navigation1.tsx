@@ -32,7 +32,7 @@ const navItems = [
             { label: 'Spain', href: '/study-abroad/spain' },
           
             { label: 'India', href: '/study-abroad/India' },
-
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
             { label: 'Spain', href: '/spain' },
             { label: 'Malaysia', href: '/malaysia' },
             { label: 'Australia', href: '/study-abroad/Study-Australia' },
@@ -123,6 +123,7 @@ const navItems = [
     {
         label: 'What We Do',
         dropdown: [
+             { label: 'What We Do', href: '/What-we-do' },
             { label: 'About Us', href: '/about' },
             { label: 'University Visits', href: '/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
