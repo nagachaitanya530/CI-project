@@ -11,7 +11,7 @@ function HeroSection()
     ];
     return(
         <>
-    <div className="bg-gradient-to-r from-white via-red-50 to-green-100  px-6 py-12 md:flex md:items-center md:justify-between ">
+    <div className="bg-gradient-to-r from-white via-red-50 to-green-100  px-6 py-12 md:flex md:items-center md:justify-between">
             {/* {text section} */}
         <div className="md:w-1/2 mt-15">
 
@@ -32,13 +32,19 @@ function HeroSection()
         </div>
 
         {/* Image Section */}
-         <div className="md:mt-0 md:w-1/2 flex justify-center items-center">
-                <img  className="h-120 object-contain z-5 absolute top-20 right-50 " 
+         <div className="md:mt-0 md:w-1/2 flex justify-center items-center md">
                 
-                src="../../study-abrd-nz.webp"
-                alt="student"
+                <img
+            src="../../study-abrd-nz.webp"
+            alt="Student with New Zealand flag"
+            className="w-full max-w-sm md:max-w-md h-auto object-contain"
+          />
             
-                />
+           
+        
+
+                
+                
     
         </div>
 
@@ -60,6 +66,8 @@ function HeroSection()
         </div>
       ))}
 </div>
+
+
 
 
 </>

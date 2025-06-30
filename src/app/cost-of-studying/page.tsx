@@ -19,7 +19,7 @@ function page() {
     <>
 
             <NavigationSection />   
-            {/* <Hsection/> */}
+            <Hsection/>
      
 
 
