@@ -1,29 +1,44 @@
 import React, { useEffect, useState } from "react";
 interface BlogItem{
+    id: number;
     image:string;
     title:string;
+    country?:string;
+    category?:string[];
 }
 
 function BlogCard({ blogData }: { blogData: BlogItem[] }) {
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [vissiblePages, setVissiblePages] = useState<number[]>([]);
+    const [visiblePages, setVisiblePages] = useState<number[]>([]);
 
-    const blogPerPage = 3;
+    const blogPerPage = 12;
     const indexOfLastPage= currentPage * blogPerPage;
     const indexOfFirstPage = indexOfLastPage - blogPerPage;
     const currentBlogPage = blogData.slice(indexOfFirstPage,indexOfLastPage);
     const lastBlogPage = Math.ceil(blogData.length/blogPerPage);
 
-    const handlevisblePages=()=>{
+    const handlevisiblePages=()=>{
         if(lastBlogPage<5){
             let pages = [];
             for(let i=1; i<=lastBlogPage; i++){
                 pages.push(i);
             }
-            setVissiblePages(pages);
-        }else{
-
+            setVisiblePages(pages);
+        }
+        else{
+            let pages = [];
+            if(currentPage > 4){
+                for(let i=currentPage-3; i<=currentPage; i++){
+                    pages.push(i);
+                }
+            }
+            else{
+                for(let i=1; i<=4; i++){
+                    pages.push(i);
+                }
+            }
+            setVisiblePages(pages);
         }
     }
     const handelNext=()=>{
@@ -39,12 +54,13 @@ function BlogCard({ blogData }: { blogData: BlogItem[] }) {
     }
 
     useEffect(() => {
-        handlevisblePages();
-    }, [currentPage, vissiblePages])
+        handlevisiblePages();
+    }, [currentPage, visiblePages])
 
 
     return(
         <>
+        {lastBlogPage == 0 && <div className="text-3xl font-semibold my-30 text-center text-gray-600">No Blogs Found</div>}
         <div className="grid grid-cols-3 gap-8 mx-26 mt-10">
         {
             currentBlogPage.map((blog: BlogItem, index) => (
@@ -63,27 +79,19 @@ function BlogCard({ blogData }: { blogData: BlogItem[] }) {
 
          <ul className="flex justify-center gap-8 mt-8 mb-8">
                 <li>
-                    <a onClick={handelPrev} className="bg-white border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15">{'<-'}</a>
+                    <a onClick={handelPrev} className={`${currentPage === 1 ? 'bg-gray-300 text-black hover:cursor-not-allowed' : 'bg-white hover:bg-blue-900 text-blue-900 hover:text-white border-blue-900 hover:cursor-pointer'} border-1 text-xl flex justify-center items-center rounded-full shadow-md h-15 w-15`}>{'<-'}</a>
                 </li>
                 {
-                vissiblePages.map((page, index) => (
-                    <li className="" onClick={() =>  setCurrentPage(page)}>
+                visiblePages.map((page, index) => (
+                    <li key={index} className="" onClick={() =>  setCurrentPage(page)}>
                         <a className={`${currentPage === page ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'} border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15`}>{page}</a>
                     </li>
                         
                 ))
                 }
-                {/* <li>
-                    <a href="#" className="bg-white border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15">2</a>
-                </li>
                 <li>
-                    <a href="#" className="bg-white border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15">3</a>
-                </li>
-                <li>
-                    <a  href="#" className="bg-white border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15">4</a>
-                </li> */}
-                <li>
-                    <a onClick={handelNext} href="#" className="bg-white border-1 border-blue-900 text-xl flex justify-center items-center rounded-full shadow-md hover:bg-blue-900 hover:text-white hover:cursor-pointer h-15 w-15">{'->'}</a>
+                    <a onClick={handelNext} href="#" className={`${currentPage === lastBlogPage || lastBlogPage === 0? 'bg-gray-300 text-black hover:cursor-not-allowed' : 'bg-white hover:bg-blue-900 text-blue-900 hover:text-white border-blue-900 hover:cursor-pointer'} border-1 text-xl flex justify-center items-center rounded-full shadow-md h-15 w-15`}
+                    >{'->'}</a>
                 </li>
                
             </ul>
