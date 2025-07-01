@@ -123,7 +123,7 @@ const navItems = [
     {
         label: 'What We Do',
         dropdown: [
-            { label: 'About Us', href: '/about' },
+            { label: 'About Us', href: '/AboutUs' },
             { label: 'University Visits', href: '/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
             { label: 'Partnered Universities', href: '/partnered-universities' },
