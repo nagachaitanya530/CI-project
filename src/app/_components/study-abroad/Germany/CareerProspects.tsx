@@ -4,27 +4,27 @@ import React from "react";
 const sectors = [
   {
     title: "Engineering",
-    image: "/engrng-img.webp",
+    image: "/engineering-images.jpg",
   },
   {
     title: "Mechanical Engineering",
-    image: "/mech-eng-img.webp",
+    image: "/Mechanical_Engineers.jpg",
   },
   {
     title: "Computer Science",
-    image: "/comp-scie-img.webp",
+    image: "/1428492.webp",
   },
   {
     title: "Business &..",
-    image: "/mba-img.webp",
+    image: "/wp2019326.webp",
   },
   {
     title: "Data Science",
-    image: "/data-scie-img.webp",
+    image: "/DataScience (2).jpg",
   },
   {
     title: "Automotive Engineering",
-    image: "/automotive-img.webp",
+    image: "/automotive-engineering.jpg",
   },
 ];
 

@@ -79,7 +79,7 @@ function Scholarships() {
           className={`transition-all duration-1000 ease-out ${imageAnimation} w-full lg:w-2/5`}
         >
           <img
-            src="/scholar-img.webp"
+            src="/Scholarships-In-Germany.jpg"
             alt="Scholarships"
             className="h-100 w-full object-cover rounded-lg shadow-lg"
           />

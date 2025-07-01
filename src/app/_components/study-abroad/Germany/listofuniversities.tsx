@@ -7,25 +7,25 @@ import Image from "next/image";
 const universities = [
   {
     name: "Mediadesign Hochschule",
-    image: "/Mediadesign-Hochschule.webp",
+    image: "/logo1.png",
     popularFor: "Art & Design",
     ranking: "3",
   },
   {
     name: "EU Business School",
-    image: "/EU-Business-School-logo.webp",
+    image: "/logo2.png",
     popularFor: "MBA",
     ranking: "151",
   },
   {
     name: "mdh University Applied Sciences",
-    image: "/mdh-University-of-Applied-Sciences.webp",
+    image: "/logo3.png",
     popularFor: "Media, Design , and Management",
     ranking: "164",
   },
   {
     name: "Munich Business School",
-    image: "/Munich-Business-School-logo.webp",
+    image: "/logo4.png",
     popularFor: "Innovation and Entrepreneurship",
     ranking: "91",
   },

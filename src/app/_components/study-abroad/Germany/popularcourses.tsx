@@ -3,12 +3,12 @@
 import React from "react";
 
 const courses = [
-    { name: "Engineering", image: "/engrng-img.webp" },
-    { name: "Business Administation", image: "/mba-img.webp" },
-    { name: "Renewable Energy", image: "/envr-scie-img.webp" },
-    { name: "Automative Engineering", image: "/aviation-img.webp" },
-    { name: "Data Science", image: "/data-scie-img.webp" },
-    { name: "Computer Science", image: "/comp-scie-img.webp" },
+    { name: "Engineering", image: "/engineering.jpg" },
+    { name: "Business Administation", image: "/BusinessAni.png" },
+    { name: "Renewable Energy", image: "/RenewableEnergy.jpg" },
+    { name: "Automative Engineering", image: "/AutomativeEngineering.webp" },
+    { name: "Data Science", image: "/DataScience.jpg" },
+    { name: "Computer Science", image: "/ComputerScience.jpg" },
     // Add more courses as needed
 ];
 

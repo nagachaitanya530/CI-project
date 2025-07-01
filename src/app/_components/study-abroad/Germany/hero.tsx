@@ -18,7 +18,7 @@ export default function Hero({ onFreeConsultClick }: { onFreeConsultClick: () =>
                     <button className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all">View & Download Brochure</button>
                 </div>
             </div>
-            <img src="/study-abrd-germany.webp" alt="France Education" className="w-120 h-115 mt-17 z-0 relative" />
+            <img src="/Study-in-Germany-Onlinemacha.jpg" alt="France Education" className="w-120 h-80 mt-5 z-0 relative rounded-lg" />
 
         </div>
     )
