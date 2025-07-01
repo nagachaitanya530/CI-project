@@ -35,10 +35,10 @@ export default function VisaAssistanceBanner({ onFreeConsultClick }: { onFreeCon
       {/* Right Image */}
       <div className="mt-8 md:mt-0 relative">
         <Image
-          src="/visa-asst-bnr-img.png" // Place your image in public folder as visa-expert.png
+          src="/visa-assistance-image.jpg" // Place your image in public folder as visa-expert.png
           alt="Visa Expert"
-          width={400}
-          height={400}
+          width={500}
+          height={500}
           className="rounded-xl"
         />
 

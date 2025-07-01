@@ -56,7 +56,7 @@ export default function ACTPage({ onFreeConsultClick }: { onFreeConsultClick: ()
           <div className="flex justify-center md:justify-end">
             <div className="rounded-3xl overflow-hidden shadow-md">
               <Image
-                src="/test-bnr-cont-img.webp"
+                src="/studyimg.jpg"
                 alt="ACT Preparation"
                 width={400}
                 height={300}

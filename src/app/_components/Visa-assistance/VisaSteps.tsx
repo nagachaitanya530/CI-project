@@ -8,25 +8,25 @@ const steps = [
     title: "Personalized Guidance",
     description:
       "Our experienced team of study visa consultants will work closely with you to understand your unique circumstances and how it aligns with the specific student visa requirement. From preparing your application to organizing your documents, Edwise will provide personalized guidance at every step.",
-    image: "/adm-proc-img-1.jpg",
+    image: "/segment3.png",
   },
   {
     title: "Visa Application Support",
     description:
       "We’ll help complete your visa application accurately and efficiently, ensuring timely submission of all documents required for student visa in compliance with visa requirements. Our aim is to streamline the process of getting a student visa for Indian students and reduce the risk of delays or rejections.",
-    image: "/visa-asst-img-2.jpg",
+    image: "/Digital-Visa-Application-Form.jpg",
   },
   {
     title: "Mock Interviews",
     description:
       "Our team of abroad visa consultants will conduct mock interviews to help you feel confident and prepared. We’ll simulate real-life interview scenarios and provide feedback and tips to help you ace your visa interview with ease.",
-    image: "/visa-asst-img-3.jpg",
+    image: "/nterview-questions.jpg",
   },
   {
     title: "Ongoing Support",
     description:
       "Our support doesn't end once you have paid the student visa fee and submitted the student visa application. We'll address any questions or concerns you may have throughout the processing period, providing you with peace of mind and reassurance during this critical stage of your journey.",
-    image: "/visa-asst-img-4.jpg",
+    image: "/874_plate.jpg",
   },
 ];
 
