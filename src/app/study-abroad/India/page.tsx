@@ -10,7 +10,8 @@ import ContactFormSection from '~/app/_components/study-abroad/home/contact-form
 import Scholarships from '~/app/_components/study-abroad/study-abroad-india/scholarship';
 import CareerProspect from '~/app/_components/study-abroad/study-abroad-india/career-prospect';
 import ProcedureAboutIndia from '~/app/_components/study-abroad/study-abroad-india/proceadure-about';
-import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
+// import SuccessStories from '~/app/_components/study-abroad/study-abroad-india/successstories';
+import SuccessStories from '~/app/_components/Test-Preparations/All-Tests/SuccessStories';
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from '~/app/_components/footer1';

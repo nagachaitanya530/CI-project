@@ -179,7 +179,7 @@ const stories: Testimonial[] = [
       courses={testCourses}
     /></FadeInOnScroll>
     <FadeInOnScroll><Faq title="Frequently Asked Questions" faqs={faqs} /></FadeInOnScroll>
-     <FadeInOnScroll> <SuccessStories testimonials={stories} /></FadeInOnScroll>
+     <FadeInOnScroll> <SuccessStories /></FadeInOnScroll>
     <GetStartedBanner/>
         <Footer />
     </>
