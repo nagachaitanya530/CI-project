@@ -18,24 +18,24 @@ const timelineData = [
   {
     year: "1997",
     title: "Global Tie-Ups : UK, USA, Canada, New Zealand...",
-    image: "/timeline/2.jpg",
+    image: "/timeline/2.webp",
   },
   {
     year: "2002",
     title: "Launched Test Preparation Division",
-    image: "/timeline/3.jpg",
+    image: "/timeline/3.webp",
   },
   {
     year: "2008",
     title: "Pioneered the World Education Fair in India",
-    image: "/timeline/4-0.jpg",
+    image: "/timeline/4.jpg",
   },
   {
     year: "2016",
     title:" Celebrated our 25th Anniversary",
 
 
-    image: "/timeline/5.jpg",
+    image: "/timeline/5.png",
   },
   {
     year: "2019",
@@ -43,33 +43,28 @@ const timelineData = [
 
 
 
-    image: "/timeline/24.jpg",
+    image: "/timeline/6.webp",
   },
   {
     year: "2020",
     title: "Won  Agency of the Year Award  from AIRC",
 
-    image: "/timeline/7.jpg",
+    image: "/timeline/8.webp",
   },
   {
     year: "2021",
     title: "Partnered with 900+ institutions worldwide",
 
-    image: "/timeline/8.jpg",
+    image: "/timeline/9.png",
   },
   {
     year: "2024",
     title:" Successfully completed 33 years of Excellence",
 
 
-    image: "/timeline/9.jpg",
+    image: "/timeline/10.webp",
   },
-  {
-    year: "2024",
-    title: "ICEF Accredited Trusted Agency",
-
-    image: "/timeline/ICEF.jpg",
-  },
+  
 ];
 
 export default function TimelineCarousel() {

@@ -16,7 +16,7 @@ const EdwiseTeamSection = () => {
       <div className="flex justify-center">
         <div className="rounded-[40px] overflow-hidden shadow-lg max-w-6xl w-full">
           <Image
-            src="/112.jpg" 
+            src="/tss.webp" 
             alt="Edwise Team"
             width={1200}
             height={800}

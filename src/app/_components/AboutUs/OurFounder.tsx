@@ -17,7 +17,7 @@ export default function FounderSection() {
         {/* Image + name/linkedin */}
         <div className="lg:w-1/2">
           <Image
-            src="/founder-img.jpg"
+            src="/rrr.jpeg"
             alt="Founder Image"
             width={500}
             height={600}

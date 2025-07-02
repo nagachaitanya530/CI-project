@@ -8,17 +8,22 @@ const cards = [
   {
     slug: "airc",
     title: "AIRC (American International Recruitment Council)",
-    logo: "/airc-logo.jpg",
+    logo: "/air.png",
   },
   {
     slug: "aaeri",
     title: "AAERI - Education in Australia",
-    logo: "/aaeri-logo.jpg",
+    logo: "/aaa.jpeg",
   },
   {
     slug: "usa",
     title: "USA - A Study Destination",
-    logo: "/usa-logo.jpg",
+    logo: "/usa.jpeg",
+  },
+  {
+    slug: "usa",
+    title: "USA - A Study Destination",
+    logo: "/rra.webp",
   },
 ];
 

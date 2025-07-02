@@ -18,7 +18,7 @@ const HeroSection = () => {
 
          <div className="mt-10 md:mt-0">
         <Image
-          src="/about-bnr-img.png" 
+          src="/R.webp" 
           alt="Woman"
           width={400}
           height={400}

@@ -9,19 +9,24 @@ import "swiper/css/navigation";
 // Make sure these images are inside /public/images/team/
 const teamImages = [
   "/Teams/1.jpg",
-   "/Teams/2.jpg",
-   "/Teams/3.jpg",
-   "/Teams/4.jpg",
-   "/Teams/5.jpg",
-   "/Teams/6.jpg",
-   "/Teams/7.jpg",
-   "/Teams/8.jpg",
-   "/Teams/9.jpg",
-   "/Teams/10.jpg",
+  "/Teams/2.jpg",
+  "/Teams/3.jpg",
+  "/Teams/4.jpg",
+  "/Teams/5.webp",
+  "/Teams/6.webp",
+  "/Teams/7.webp",
+  "/Teams/8.webp",
+  "/Teams/9.webp",
+  "/Teams/10.avif",
+  "/Teams/11.webp",
+  "/Teams/12.webp",
+  
+
+   
   
    
      
-   "/Teams/12.jpg",
+   
    
   
 ];

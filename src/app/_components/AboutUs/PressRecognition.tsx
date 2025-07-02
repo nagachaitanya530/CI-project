@@ -5,37 +5,37 @@ import Link from "next/link";
 const logos = [
   {
     name: "TOI",
-    image: "/media/toi.png",
+    image: "/media/T.jpeg",
     link: "https://timesofindia.indiatimes.com",
   },
   {
     name: "Education Times",
-    image: "/media/educationtimes.png",
+    image: "/media/TI.jpeg",
     link: "https://educationtimes.com",
   },
   {
     name: "Deccan Herald",
-    image: "/media/dh.png",
+    image: "/media/DE.jpeg",
     link: "https://deccanherald.com",
   },
   {
     name: "The PIE",
-    image: "/media/thepie.png",
+    image: "/media/MY.jpeg",
     link: "https://thepienews.com",
   },
   {
     name: "Rediff",
-    image: "/media/rediff.png",
+    image: "/media/RE.jpeg",
     link: "https://rediff.com",
   },
   {
     name: "BBC News",
-    image: "/media/bbc.png",
+    image: "/media/BB.jpeg",
     link: "https://bbc.com/news",
   },
   {
     name: "Insight Success",
-    image: "/media/insightsuccess.png",
+    image: "/media/IN.jpeg",
     link: "https://insightssuccess.com",
   },
 ];
