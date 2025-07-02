@@ -60,7 +60,7 @@ const navItems = [
             { label: 'Ireland', href: '/study-abroad/ireland' },
 
 
-            { label: 'Germany', href: '/germany' },
+            { label: 'Germany', href: '/Germany' },
 
             { label: 'Dubai', href: '/dubai' },
             { label: 'Ireland', href: '/ireland' },
@@ -117,7 +117,7 @@ const navItems = [
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/scholarships' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
-            { label: 'Visa Assistance', href: '/visa-assistance' }
+            { label: 'Visa Assistance', href: '/Visa-assistance' }
         ]
     },
     {
