@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import BookConsultationForm from "~/app/_components/study-abroad/BookConsultationForm";
+
 import {
   DollarSign,
   ShieldCheck,
@@ -52,46 +54,51 @@ const reasons = [
 
 export default function WhyStudyInMalaysia() {
   return (
-    <section className="py-16 px-6 lg:px-24 bg-white mt-20">
-      <div className="flex flex-col lg:flex-row gap-12">
-        {/* Left: Content */}
-        <div className="flex-1">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-10">
-            Why{" "}
-            <span className="relative">
-              Study In Malaysia?
-              <span className="absolute left-0 bottom-0 w-full h-1 bg-red-500 rounded-md" />
-            </span>
-          </h2>
+<section className="py-16 px-6 lg:px-8 bg-white mt-20">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-start">
+    
+    {/* Left Content */}
+    <div className="w-full lg:w-7/12">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-10">
+        Why{" "}
+        <span className="relative inline-block">
+          Study In Malaysia?
+          <span className="absolute left-0 bottom-0 w-full h-1 bg-red-500 rounded-md" />
+        </span>
+      </h2>
 
-          <div className="space-y-8">
-            {reasons.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="border-b border-gray-200 pb-6 flex items-start gap-4"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
-                  {item.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-black text-base">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        
+      <div className="space-y-8">
+        {reasons.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+            className="border-b border-gray-200 pb-6 flex items-start gap-4"
+          >
+            <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
+              {item.icon}
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-black">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-black text-base">
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
+
+    {/* Right Form: Shifted Left */}
+    <div className="w-full lg:w-5/12 lg:-ml-32 lg:mt-[55px]">
+      <BookConsultationForm />
+    </div>
+  </div>
+</section>
+
   );
 }

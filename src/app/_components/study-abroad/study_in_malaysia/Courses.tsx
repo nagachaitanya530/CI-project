@@ -7,27 +7,27 @@ import { motion } from "framer-motion";
 const courses = [
   {
     title: "Business Management",
-    image: "/business management.webp",
+    image: "/images/Business.jpg",
   },
   {
     title: "Engineering",
-    image: "/engineering.webp",
+    image: "/images/Architecture.jpg",
   },
   {
     title: "IT & Computer Science",
-    image: "/it and cs.webp",
+    image: "/images/Information.jpg",
   },
   {
     title: "Hospitality & Tourism",
-    image: "/hospitality and tourism.webp",
+    image: "/images/Hospitality.jpg",
   },
   {
     title: "Medicine",
-    image: "/medicine.webp",
+    image: "/images/Healthcare.jpg",
   },
   {
     title: "Accounting",
-    image: "/accounting.webp",
+    image: "/images/MBA.jpg",
   },
 ];
 

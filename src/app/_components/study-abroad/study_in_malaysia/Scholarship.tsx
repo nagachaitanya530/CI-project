@@ -57,7 +57,7 @@ export default function ScholarshipsMalaysia() {
           className="flex justify-center"
         >
           <Image
-            src="/scholarship.webp"
+            src="/stit.jpg"
             alt="Graduation Illustration"
             width={500}
             height={500}
