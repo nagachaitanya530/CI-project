@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const articles = [
@@ -33,6 +34,12 @@ const articles = [
   "Universities in USA for MBA",
 ];
 
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^\w\s]/gi, "")
+    .replace(/\s+/g, "-");
+
 const RelatedArticlesUSA = () => {
   return (
     <section className="bg-[#f8fafc] py-16 px-4 lg:px-24">
@@ -45,15 +52,21 @@ const RelatedArticlesUSA = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {articles.map((title, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-4 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-between"
-            >
-              <p className="text-sm text-gray-800">{title}</p>
-              <ArrowRight className="w-4 h-4 text-blue-700" />
-            </div>
-          ))}
+          {articles.map((title, idx) => {
+            const slug = `/blog/${slugify(title)}`;
+            return (
+              <Link
+                href={slug}
+                key={idx}
+                className="group bg-white p-4 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-between"
+              >
+                <span className="text-sm text-gray-800 group-hover:text-blue-700">
+                  {title}
+                </span>
+                <ArrowRight className="w-4 h-4 text-blue-700 shrink-0" />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

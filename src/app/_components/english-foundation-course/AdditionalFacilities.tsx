@@ -37,7 +37,6 @@ const AdditionalFacilities = () => {
                 </h2>
 
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
                 {facilities.map((item, index) => (
                     <div

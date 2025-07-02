@@ -9,7 +9,10 @@ const tuition = [
 ];
 
 const living = [
-  { label: "Living Expenses (Average per annum)", value: "Approx. USD 16,000" },
+  {
+    label: "Living Expenses (Average per annum)",
+    value: "Approx. USD 16,000",
+  },
 ];
 
 const accommodation = [
@@ -18,24 +21,23 @@ const accommodation = [
   { label: "Homestay", value: "USD 1,000 – 1,200" },
 ];
 
-const SectionBox = ({
-  title,
-  data,
-}: {
+interface SectionBoxProps {
   title: string;
   data: { label: string; value: string }[];
-}) => (
+}
+
+const SectionBox = ({ title, data }: SectionBoxProps) => (
   <div className="mb-8">
-    <h3 className="bg-[#e4ebf5] inline-block px-6 py-2 rounded-xl text-lg font-semibold text-gray-700 mb-4 border border-[#c7d4e2]">
+    <h3 className="bg-[#e4ebf5] inline-block px-5 py-2 rounded-xl text-base md:text-lg font-semibold text-gray-700 mb-4 border border-[#c7d4e2]">
       {title}
     </h3>
     <div className="space-y-4">
       {data.map((item, idx) => (
         <div
           key={idx}
-          className="flex justify-between items-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200"
+          className="flex justify-between items-center bg-white px-5 py-4 rounded-2xl shadow-sm border border-gray-200"
         >
-          <span className="font-semibold text-gray-800">{item.label}</span>
+          <span className="font-medium text-gray-800">{item.label}</span>
           <span className="text-gray-700">{item.value}</span>
         </div>
       ))}
@@ -43,28 +45,27 @@ const SectionBox = ({
   </div>
 );
 
-const CostOfStudyingUSA = () => {
+export default function CostOfStudyingUSA() {
   return (
-    <section className="bg-[#eaf0f9] py-16 px-4 lg:px-24 rounded-t-[3rem]">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-        {/* Left Text Content */}
+    <section className="bg-[#eaf0f9] py-16 px-4 md:px-8 lg:px-24 rounded-t-[3rem]">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-snug">
-            <span className="underline decoration-red-500 decoration-2 underline-offset-5">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
+            <span className="underline decoration-red-500 decoration-2 underline-offset-4">
               Cost Of Studying
             </span>{" "}
             In The USA
           </h2>
-          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-            The cost of studying in USA for international students depends on
-            several factors, including the institution, program of study,
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base max-w-prose">
+            The cost of studying in the USA for international students depends
+            on several factors, including the institution, program of study,
             location, and available funding opportunities. Additionally, living
             expenses such as rent, utilities, and recreational activities play a
             significant role in the overall cost.
           </p>
         </div>
 
-        {/* Right Cost Boxes */}
         <div>
           <SectionBox title="Tuition Fees (Average per annum)" data={tuition} />
           <SectionBox title="Living Expenses (Average per annum)" data={living} />
@@ -73,6 +74,4 @@ const CostOfStudyingUSA = () => {
       </div>
     </section>
   );
-};
-
-export default CostOfStudyingUSA;
+}
