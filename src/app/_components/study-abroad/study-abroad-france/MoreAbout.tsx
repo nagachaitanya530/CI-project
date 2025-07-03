@@ -44,17 +44,14 @@ function MoreAbout() {
     <>
       {isopen && <ConsultationForm show={isopen} onClose={() => setIsOpen(false)} />}
       <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
-        {/* Heading */}
+
         <h2 className=" md:text-4xl font-semibold mb-10 text-center">
           <span className="font-bold text-5xl text-orange-600 ">More about </span>
           <span className="font-bold text-5xl  ">
             France
           </span>
         </h2>
-
-
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Left Sidebar */}
         <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
           <div className="flex md:flex-col gap-4">
             <button
@@ -79,8 +76,6 @@ function MoreAbout() {
             </button>
           </div>
         </div>
-
-        {/* Right Side Content */}
         <div className="flex-1 space-y-12 pr-2">
           <div
             id="documents"
@@ -111,7 +106,6 @@ function MoreAbout() {
                 </button>
               </div>
           </div>
-
           <div
             id="visa"
             ref={visaRef}

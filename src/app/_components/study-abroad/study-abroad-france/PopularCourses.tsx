@@ -28,20 +28,17 @@ const courses = [
 function PopularCourses() {
     return (
         <div className="py-12 px-4 text-center">
-            {/* Title */}
             <h2 className="text-4xl font-bold text-gray-900">
                 <span className="inline-block">
                     <span className="text-orange-600">Popular Courses</span>
                 </span>{" "}
                 In France
             </h2>
-            {/* Subtext */}
             <p className="text-center text-2xl mt-2">
                 France offers a wide range of programs across various fields of study.
                 <br />
                 Here are the top courses in France that are preferred by international students:
             </p>
-            {/* Cards */}
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-x-6 gap-y-8 max-w-7xl mx-auto">
                 {courses.map((course, index) => (
                     <div

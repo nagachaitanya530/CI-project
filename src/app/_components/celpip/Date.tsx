@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+
 function Date() {
     return (
         <div
@@ -16,7 +18,7 @@ function Date() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    https://www.celpip.ca/take-celpip/find-a-test-date/
+                    "Link for CELPIP Test Dates"
                 </a>
             </p>
         </div>

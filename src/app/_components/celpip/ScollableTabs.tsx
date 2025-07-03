@@ -1,49 +1,6 @@
 import { useEffect, useState } from 'react';
 
-
 function ScrollableTabs() {
-
-    // const sections = [
-    //     { label: 'Overview', id: 'overview' },
-    //     { label: 'Pattern', id: 'pattern' },
-    //     { label: 'Syllabus', id: 'syllabus' },
-    //     { label: 'Scores', id: 'scores' },
-    //     { label: 'Dates', id: 'dates' },
-    //     { label: 'Training', id: 'training' },
-    //     { label: 'Miscellaneous', id: 'fee' },
-    //     { label: 'FAQ', id: 'faqs' },
-        
-       
-    // ];const [activeSection, setActiveSection] = useState<string | null>(null);
-
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             const visible = entries.find(entry => entry.isIntersecting);
-    //             if (visible) {
-    //                 setActiveSection(visible.target.id);
-    //             }
-    //         },
-    //         {
-    //             root: null,
-    //             rootMargin: '0px',
-    //             threshold: 0.5,
-    //         }
-    //     );
-
-    //     sections.forEach(({ id }) => {
-    //         const element = document.getElementById(id);
-    //         if (element) observer.observe(element);
-    //     });
-
-    //     return () => {
-    //         sections.forEach(({ id }) => {
-    //             const element = document.getElementById(id);
-    //             if (element) observer.unobserve(element);
-    //         });
-    //     };
-    // }, []);
-
      const sections = [
             { label: 'Overview', id: 'overview' },
             { label: 'Pattern', id: 'pattern' },
@@ -83,12 +40,8 @@ function ScrollableTabs() {
                 });
             };
         }, []);
-    
-
 return(
     <>
- {/* NavBar  */}
-
             <section className="sticky top-16  z-50 bg-blue-200 border border-blue-200 rounded-3xl mx-4 my-6 md:mx-9 lg:mx-40 px-2 py-3 shadow-md overflow-hidden">
                 <div className="flex justify-center overflow-x-auto whitespace-nowrap gap-2 sm:gap-3 px-2 scroll-smooth scrollbar-hide">
                     {sections.map(({ label, id }, idx) => (

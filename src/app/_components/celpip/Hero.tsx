@@ -40,8 +40,6 @@ function Hero() {
                         Free Expert Consultation
                     </button>
                 </div>
-
-                {/* Right Side Image */}
                 <div className="mt-10 lg:mt-0 lg:ml-12 text-right">
                     <div className="rounded-2xl overflow-hidden shadow-lg max-w-md">
                         <img

@@ -19,7 +19,6 @@ function CostOfStudy() {
                             </p>
                         </div>
                     </div>
-                    {/* Right Side */}
                     <div className="w-full md:w-3/5 mx-0 md:mx-0">
                         <div>
                             <div className="border font-semibold w-full sm:w-2/3 md:w-1/2 rounded-xl px-3 sm:px-5 py-3 sm:py-4 text-lg sm:text-xl text-gray-500 my-4 sm:my-6">
