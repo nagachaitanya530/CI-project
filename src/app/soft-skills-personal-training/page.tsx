@@ -6,21 +6,17 @@ import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
+import Link from "next/link";
 
 function SoftskillPesronTraining() {
-
   const [activeTab, setActiveTab] = useState('About');
-
   const tabs = ["About", "Curriculum", "Instructors", "Enrolment Options"];
   const handleWhatsApp = () => {
     window.open('https://wa.me/917607676998?text=I%20want%20to%20enquire%20about%20PDCC%20Spoken%20English%20course', '_blank');
   };
-
   return (
-
-    <div>
+  <div>
       <Navigation/>
-
       <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
         <div className="flex justify-center">
           <div className="text- mt-5 ml-30">
@@ -37,9 +33,7 @@ function SoftskillPesronTraining() {
               (For CEFR Level B1 and above)
             </p>
           </div>
-
-        </div>
-       
+        </div>       
         <div className="lg:w-1/2 relative">
           <div className="aspect-video w-full max-w-xl mx-auto">
             <iframe
@@ -52,8 +46,7 @@ function SoftskillPesronTraining() {
             ></iframe>
           </div>
         </div>
-      </section>
-     
+      </section>    
       <section className="bg-gray-100 py-6 px-4 flex flex-col md:flex-row justify-around text-center gap-4">
         <div>
           <div className="text-xl font-bold">12 Week </div>
@@ -83,10 +76,7 @@ function SoftskillPesronTraining() {
                 {tab}
               </button>
             ))}
-
           </div>
-
-
           <div className="mt-5">
             {activeTab === "About" && <About />}
             {activeTab === "Curriculum" && <Curriculum />}
@@ -123,9 +113,7 @@ function SoftskillPesronTraining() {
             </div>
           </div>
         </div>
-
       </div>
-
       <section className="py-10 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-6">What Our Learners Say</h2>
@@ -150,12 +138,16 @@ function SoftskillPesronTraining() {
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="mb-6 text-lg">Book a free demo session or contact us to know more.</p>
           <div className="flex justify-center gap-4">
+            <Link href="/book-demo">
             <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
               Book Demo
             </button>
+            </Link>
+            <Link href="/ContactUs">
             <button className="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
               Contact Us
             </button>
+            </Link>       
           </div>
         </div>
       </section>
@@ -163,5 +155,6 @@ function SoftskillPesronTraining() {
     </div>
   );
 }
+     
 
 export default SoftskillPesronTraining;

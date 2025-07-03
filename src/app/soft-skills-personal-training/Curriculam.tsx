@@ -54,7 +54,6 @@ const Curriculum = () => {
                         <li>Content drafting along with sequencing</li>
                         <li>Art of representing one’s qualifications and most relevant work history</li>
                         </ul>
-
                         <h4 className="font-bold mt-5">Mock Interview Sessions:</h4>
                         <p className="mt-5">Mock Interviews help candidates formulate smart answers and identify strengths and weaknesses, thereby preparing them for the “real thing”. The mock sessions are a mirror of an actual job interview. It enables students with an opportunity to practice what to say and do during an interview. Whether its face-to-face, online, or through a webcam, a mock interview is useful in reviewing answers to common interview questions and assessing other factors such as confidence and body language.</p>
                         <h4 className="font-bold mt-5">Enable a Confident, Proactive and Dynamic Workforce by training them on:</h4>
@@ -78,11 +77,8 @@ const Curriculum = () => {
                         <p className="mt-5">Ability to adapt to changes, pick up on new technologies and adjust to changing business surroundings</p>
                         <h3 className="font-semibold mt-5">Process of Soft Skills Training</h3>
                         <p className="mt-5"><strong>ANALYZE:</strong> We identify your Training objectives and needs. A study on your current business and participants profile, experience and academics are done.<br/><br/>
-
                         <strong>ASSESS & DELIVER: </strong>We work on required content, customize and develop as per your needs. Pre-training assessment is done to assess the existing knowledge and skill level of your team before embarking on a training program. Training is delivered.<br/><br/>
-
-                        <strong>REVIEW & EVALUATE:</strong>We take continuous feedback for smooth flow of the training. Post-training assessment tests and doubt clearing sessions are done. Performance-based certification is rolled out.<br/><br/></p>
-  
+                        <strong>REVIEW & EVALUATE:</strong>We take continuous feedback for smooth flow of the training. Post-training assessment tests and doubt clearing sessions are done. Performance-based certification is rolled out.<br/><br/></p>  
                         <h3 className="font-semibold mt-5">Soft Skills Training Courses</h3>
                         <h1 className="font-semibold mt-5 text-3xl">Soft Skills Training for Corporate</h1>
                         <ul className="list-disc ml=-5 mt-5">
@@ -95,7 +91,6 @@ const Curriculum = () => {
                         <li>Leadership Management</li>
                         <li>Art of Effective Pitching</li>
                         </ul>
-
                         <h1 className="font-semibold mt-5 text-3xl">Soft Skills Training for College Students</h1>
                         <ul className="list-disc ml=-5 mt-5">
                         <li>Interpersonal Communication</li>
@@ -108,13 +103,7 @@ const Curriculum = () => {
                         <li>Art of Effective Pitching</li>
                         </ul>
                         </div>
-</div>
-    
-
-
-
-
-
+</div>    
   )
 
   }

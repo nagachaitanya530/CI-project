@@ -91,7 +91,7 @@ function AboutEnglish() {
                 {items.buttonText && (
                   <a
                     className='inline-block mt-4 bg-blue-500 text-white px-4 py-2 text-lg rounded-md'
-                    href=""
+                    href="/english-foundation-course"
                   >
                     {items.buttonText}
                   </a>

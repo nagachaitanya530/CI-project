@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 
 export default function LearnerPersonas() {
   return (
@@ -7,7 +8,14 @@ export default function LearnerPersonas() {
 
                     <div className="container flex flex-col md:flex-row gap-5">
                         <div className="left size-fit rounded-xl shadow-xl hover:shadow-2xl">
-                            <img src="../../home/british-guy.png" className="h-62 w-full rounded-t-xl shadow-xl" alt="working Professional Image" />
+                            <div className="relative w-full h-[248px]"> 
+                                <Image
+                                src="/home/british-guy.png" 
+                                alt="working Professional Image"
+                                fill
+                                className="object-cover rounded-t-xl shadow-xl"
+                                />
+                            </div>  
                             <h2 className="text-3xl text-center font-semibold font-sans p-4">Professionals</h2>
                             <hr className="text-gray-300 px-2" />
                             <p className="text-sm text-center text-gray-500 p-5">

@@ -15,20 +15,13 @@ const About = () => {
                           Soft Skills are personal attributes, personality traits, inherent social cues, and communication abilities needed for success on the job. Soft skills characterise how a person interacts in his or her relationships with others.
                         <br/><br/>
                         <strong>Why Soft Skills Matter?</strong><br/><br/>
-
                         Skills such as listening, collaborating with others, presenting ideas and communicating with team members are all highly valued in the modern workplace.
                         <br/>
                         Strong soft skills ensure a productive, collaborative and healthy work environment, all vital attributes for organisations in an increasingly competitive world
                         <br/>
                         The modern market offers consumers an unlimited number of choices through technologies such as the internet and smartphones. For these consumers, convenience and low prices are easy to come by, so customer service is often what influences the choice to use a particular business. The ability to communicate efficiently and effectively with customers is therefore a vital factor in an organisation’s success.
-
                         </p>
                   </div>
-
-
-
-
-
   )
 
   }

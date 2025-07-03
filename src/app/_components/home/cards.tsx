@@ -1,3 +1,4 @@
+
 'use client'
 import React from "react";
 
@@ -30,11 +31,9 @@ const Cards = () => {
     ];
 
     const handleLinkClick = (url: string) => {
-        // Ensure URL has proper protocol
         const finalUrl = url.startsWith('http') ? url : `https://${url}`;
         window.open(finalUrl, '_blank', 'noopener,noreferrer');
     };
-
     return (
         <section className=" py-10 px-4 sm:px-6 lg:px-8 ">
             <div className="bg-gray-200 grid md:grid-cols-3 gap-10 max-w-7xl mx-auto ">
@@ -43,13 +42,11 @@ const Cards = () => {
                         key={index}
                         className={`relative rounded-xl overflow-hidden shadow-lg ${work.bgColor} text-white h-[600px] shadow-md hover:shadow-xl transition-all duration-300`}
                     >
-                        <div className="p-8 flex flex-col h-full relative z-10">
-                            {/* Content */}
+                        <div className="p-8 flex flex-col h-full relative z-10">                          
                             <div className="mb-4">
                                 <h3 className="text-xl font-bold mb-3">{work.title}</h3>
                                 <p className="mb-6">{work.description}</p>
                             </div>
-
                             <div >
                                 <button
                                     onClick={() => handleLinkClick(work.url)}
@@ -58,9 +55,7 @@ const Cards = () => {
                                     Learn More... →
                                 </button>
                             </div>
-                        </div>
-
-                        {/* Image positioned absolutely behind content */}
+                        </div>                      
                         <div className="absolute bottom-0 right-0 left-0 top-0 flex items-end justify-center p-4">
                             <img
                                 src={work.image}
@@ -75,5 +70,4 @@ const Cards = () => {
         </section>
     );
 };
-
 export default Cards;

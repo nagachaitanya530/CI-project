@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 
 interface ProgressBarProps {
@@ -23,19 +24,15 @@ const ProgressBar = ({ percentage, label, animated = true }: ProgressBarProps) =
     return (
         <div className="w-full mb-6">
             <div className="relative w-full bg-gray-200 rounded-full h-8 overflow-hidden">
-                {/* Progress bar fill */}
                 <div
                     className="h-full bg-gradient-to-r from-red-400 to-red-500 rounded-full transition-all duration-1000 ease-out relative"
                     style={{ width: `${currentPercentage}%` }}
                 >
-                    {/* Label inside the bar */}
                     <div className="absolute inset-0 flex items-center justify-between px-4">
                         <span className="text-white font-semibold text-sm">{label}</span>
                         <span className="text-white font-bold text-sm">{percentage}%</span>
                     </div>
                 </div>
-
-                {/* Fallback text when progress is very low */}
                 {currentPercentage < 30 && (
                     <div className="absolute inset-0 flex items-center justify-between px-4">
                         <span className="text-gray-600 font-semibold text-sm">{label}</span>
@@ -68,10 +65,11 @@ export default function CourseCards() {
                             7.5 in just 30 days. By the end of 60 days (IELTS Diamond Course) 94% students are able to achieve a score
                             of 8.5 with less than 8.0 in any section.
                         </p>
-
+                        <Link href="/book-demo">
                         <button className="bg-blue-500 hover:bg-blue-600 text-white hover:shadow-lg  font-semibold px-6 py-3 rounded-md transition-colors duration-200">
                             Book IELTS Demo
                         </button>
+                        </Link>
                     </div>
 
 
@@ -90,10 +88,11 @@ export default function CourseCards() {
                             Statistically during 1st month we see 54% improvement from the baseline and by the end of 3 months we
                             observe a massive 96% improvement through our online English Course.
                         </p>
-
+                            <Link href="/book-demo">
                         <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200">
                             Book EnglishDemo
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>

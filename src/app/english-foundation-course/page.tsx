@@ -2,7 +2,6 @@
 
 import Footer from "~/app/_components/Footer";
 import Navigation from "~/app/_components/Navigation";
-
 import HeroSection from "../_components/english-foundation-course/HeroSection";
 import AboutSection from "../_components/english-foundation-course/AboutSection";
 import TargetLearners from "../_components/english-foundation-course/TargetLearners";
@@ -28,13 +27,11 @@ export default function EnglishFoundationCourse() {
         <HeroSection />
       </section>
 
-      <div className="flex relative">
-        {/* Sidebar */}
+      <div className="flex relative ">
+        
         <div className="hidden lg:block w-48 sticky top-20 h-screen">
           <ScrollSpySidebar />
         </div>
-
-        {/* Main content */}
         <main className="flex-1 px-4 md:px-8 lg:pl-10 space-y-24 scroll-smooth">
           <section id="about" className="scroll-mt-36">
             <AboutSection />

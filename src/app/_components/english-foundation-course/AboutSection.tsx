@@ -40,13 +40,13 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="flex-1 bg-white shadow-xl rounded-xl overflow-hidden">
-          <div className="relative w-full h-64">
+          <div className="relative w-full h-64 sm:h-72 md:h-80">
             <Image
               src="/english-course/first.webp"
               alt="Course"
               fill
               className=" object-cover rounded"
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute top-4 left-4 bg-white px-4 py-1 rounded-full shadow text-gray-800 font-semibold">
               Group Courses
@@ -55,7 +55,7 @@ const AboutSection = () => {
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-2">Want something more advanced?</h3>
             <p className="text-gray-700 mb-4">Check our Business English Course.</p>
-            <Link href="/business-english">
+            <Link href="/fees/ieltsturbo">
             <button
               className="bg-[#284c87] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
             >
