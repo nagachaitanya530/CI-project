@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { File, BookOpenText } from "lucide-react";
 
 export default function StudyTabs() {
   const [activeTab, setActiveTab] = useState("documents");
-
   const documentsRef = useRef<HTMLDivElement | null>(null);
   const visaRef = useRef<HTMLDivElement | null>(null);
 
@@ -13,12 +13,9 @@ export default function StudyTabs() {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-
         if (visibleSections.length > 0) {
           const topMost = visibleSections[0]?.target?.id;
-          if (topMost) {
-            setActiveTab(topMost);
-          }
+          if (topMost) setActiveTab(topMost);
         }
       },
       {
@@ -27,10 +24,8 @@ export default function StudyTabs() {
         rootMargin: "0px 0px -40% 0px",
       }
     );
-
     if (documentsRef.current) observer.observe(documentsRef.current);
     if (visaRef.current) observer.observe(visaRef.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -40,43 +35,37 @@ export default function StudyTabs() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
-      {/* Heading */}
-<h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
-  <span>More about </span>
-  <span className="font-bold underline decoration-red-500">
-     Mauritius
-  </span>
-</h2>
-
-
+      <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+        <span>More about </span>
+        <span className="font-bold underline decoration-red-500">Mauritius</span>
+      </h2>
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Left Sidebar */}
         <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
           <div className="flex md:flex-col gap-4">
             <button
               onClick={() => scrollToSection(documentsRef)}
-              className={`py-2 px-4 rounded-full text-left border ${
+              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${
                 activeTab === "documents"
                   ? "bg-blue-700 text-white"
                   : "bg-white text-gray-700"
               }`}
             >
-              📄 Documents
+              <File className="w-4 h-4" />
+              <span>Documents</span>
             </button>
             <button
               onClick={() => scrollToSection(visaRef)}
-              className={`py-2 px-4 rounded-full text-left border ${
+              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${
                 activeTab === "visa"
                   ? "bg-blue-700 text-white"
                   : "bg-white text-gray-700"
               }`}
             >
-              🛂 Visa
+              <BookOpenText className="w-4 h-4" />
+              <span>Visa</span>
             </button>
           </div>
         </div>
-
-        {/* Right Side Content */}
         <div className="flex-1 space-y-12 pr-2">
           <div
             id="documents"
@@ -101,7 +90,6 @@ export default function StudyTabs() {
               Free Expert Consultation
             </button>
           </div>
-
           <div
             id="visa"
             ref={visaRef}
@@ -117,9 +105,7 @@ export default function StudyTabs() {
               <li>4 passport-sized photos</li>
               <li>Passport biodata photocopy</li>
               <li>Offer letter with course details</li>
-              <li>
-                <strong>Processing time:</strong> ~4 weeks
-              </li>
+              <li><strong>Processing time:</strong> ~4 weeks</li>
             </ul>
             <button className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50">
               Free Expert Consultation

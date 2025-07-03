@@ -1,4 +1,4 @@
-import { ScrollContainer } from "react-indiana-drag-scroll";
+import ScrollContainer from 'react-indiana-drag-scroll';
 function ListOfUniversity()
 {
     const universities = [

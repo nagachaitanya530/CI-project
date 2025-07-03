@@ -30,7 +30,6 @@ export default function SuccessStories({
 
   return (
     <section className="bg-[#d5deeb] py-12 px-4 md:px-20 rounded-[40px]">
-      {/* Heading */}
       <div className="mb-4">
         <h2 className="text-3xl font-extrabold text-black relative text-center md:text-left">
           <span className="inline-block relative z-10">
@@ -39,8 +38,6 @@ export default function SuccessStories({
           </span>
         </h2>
       </div>
-
-      {/* Scroll Buttons */}
       <div className="flex justify-center py-3 md:justify-end gap-3 mb-8 ">
         <button
           onClick={() => scroll(-400)}
@@ -55,8 +52,6 @@ export default function SuccessStories({
           <ChevronRight />
         </button>
       </div>
-
-      {/* Testimonials Scroll Area */}
       <div
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide"

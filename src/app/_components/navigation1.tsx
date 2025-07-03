@@ -83,7 +83,7 @@ const navItems = [
 
             { label: 'Italy', href: '/italy' },
 
-            { label: 'Mauritius', href: '/mauritius' },
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad/abroad'},
 

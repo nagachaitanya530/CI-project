@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import CostOfStudying from '../../_components/study-abroad/study-mauritius/CostOfStudying';
 import Navigation from '../../_components/navigation1';
 import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
@@ -15,7 +14,7 @@ import FaqAccordion from '~/app/_components/study-abroad/study-mauritius/FaqAcco
 import CareerProspects from '~/app/_components/study-abroad/study-mauritius/CareerProspects';
 import FadeInOnScroll from './FadeInOnScroll';
 import FAQ  from '~/app/_components/study-abroad/faq';
-
+import YourJourney from "~/app/_components/study-abroad/your-journey";
 const faqs = [
   {
     question: "What are the documents required to study in Mauritius?",
@@ -51,17 +50,15 @@ return (
     <>
       <Navigation />
       <MauritiusBanner />
-
       <FadeInOnScroll><WhyStudySection /></FadeInOnScroll>
       <FadeInOnScroll><UniversityList /></FadeInOnScroll>
       <FadeInOnScroll><PopularCourses /></FadeInOnScroll>
       <FadeInOnScroll><CostOfStudying /></FadeInOnScroll>
-
       <FadeInOnScroll>
         <ScholarshipSection
           countryName="Mauritius"
           description="Mauritius offers a wide range of scholarships for international students. These programs aim to promote global education and cultural exchange."
-          image="/scholar-img.webp" 
+          image="/scholar1.avif" 
           scholarshipTypes={[
             "Government of Mauritius Scholarship",
             "Merit-Based Scholarships",
@@ -70,13 +67,11 @@ return (
           ]}
         />
       </FadeInOnScroll>
-
       <FadeInOnScroll><CareerProspects /></FadeInOnScroll>
       <FadeInOnScroll><StudyTabs /></FadeInOnScroll>
       <FadeInOnScroll><SuccessStories /></FadeInOnScroll>
       <FadeInOnScroll><FAQ  faqs={faqs}/></FadeInOnScroll>
-
-      <GetStartedBanner />
+      <YourJourney />
       <Footer />
     </>
   );

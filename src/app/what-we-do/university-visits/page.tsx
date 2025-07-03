@@ -25,11 +25,11 @@ const compareDates = (d1: string, d2: string): number => {
       (val) => val === undefined || isNaN(Number(val))
     )
   ) {
-    // If any value is invalid, treat as equal
+   
     return 0;
   }
 
-  // All values are numbers, so we can safely use them
+ 
   return new Date(
     year1 as number,
     (month1 as number) - 1,
@@ -44,48 +44,48 @@ const compareDates = (d1: string, d2: string): number => {
 const universityData = [
   {
     id: 1,
-    name: "University Of Sheffield",
+    name: "University Of Bristol",
     location: "Kolkata",
     date: "30/06/2025",
     time: "2:00pm–TBC",
     country: "United Kingdom",
-    logo: "/universitycard1.jpg",
+    logo: "/unniversityvisitcar1.jpeg",
   },
   {
     id: 2,
-    name: "University Of Sussex",
+    name: "University Of Edinburgh",
     location: "Kolkata",
     date: "30/06/2025",
     time: "4:00pm–TBC",
     country: "United Kingdom",
-    logo: "/universityvisitcard2.jpg",
+    logo: "/unniversityvisitcar2.jpeg",
   },
   {
     id: 3,
-    name: "Coventry University",
+    name: "Johns Hopkins University",
     location: "Chandigarh",
     date: "03/07/2025",
     time: "2:00pm–4:00pm",
     country: "United Kingdom",
-    logo: "/universityvisitcard3.jpg",
+    logo: "/unniversityvisitcar3.jpeg",
   },
   {
     id: 4,
-    name: "University Of Dundee",
+    name: "University Of Melbourne",
     location: "Cochin",
     date: "30/06/2025",
     time: "11:00am–TBC",
     country: "United Kingdom",
-    logo: "/universityvisitcard4.jpg",
+    logo: "/unniversityvisitcar4.jpeg",
   },
   {
     id: 5,
-    name: "INTO University Partnerships",
+    name: "University of Aekland",
     location: "Surat",
     date: "01/07/2025",
     time: "12:30pm–2:00pm",
     country: "United States Of America",
-    logo: "/universityvisitcard5.jpg",
+    logo: "/unniversityvisitcard6.jpeg",
   },
 ];
 
@@ -124,8 +124,7 @@ export default function Page() {
     <>
       <Navigation />
       <UniversityBanner />
-      <FadeInOnScroll>
-      
+      <FadeInOnScroll>      
       <UniversityFilter
         filters={filters}
         onChange={handleChange}
@@ -137,7 +136,6 @@ export default function Page() {
       <UniversityCard data={results} />
       </FadeInOnScroll>
       <FadeInOnScroll>
-       
       <YourJourney />
       </FadeInOnScroll>
       <Footer />

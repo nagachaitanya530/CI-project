@@ -5,7 +5,6 @@ import StudyAbroadModal from "./StudyAbroadModal";
 
 export default function MauritiusBanner() {
   const [showModal, setShowModal] = useState(false);
-
   return (
     <section className=" bg-gradient-to-r from-white to-[#fef5f5] px-4 md:px-20 py-10">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
@@ -20,10 +19,9 @@ export default function MauritiusBanner() {
             Free Expert Consultation
           </button>
         </div>
-
         <div className="flex-1 relative w-full max-w-sm mx-auto">
           <Image
-            src="/heroimg1.webp"
+            src="/study-mauritius1.png"
             alt="Student"
             width={400}
             height={400}
@@ -31,7 +29,6 @@ export default function MauritiusBanner() {
           />
         </div>
       </div>
-
       <div className="bg-[#EDF2FA] mt-10 rounded-3xl p-6 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
           <p className="text-2xl md:text-3xl font-bold text-[#143B85]">9+</p>
@@ -50,8 +47,6 @@ export default function MauritiusBanner() {
           <p className="text-gray-700 mt-2 font-medium">Post-Study Work Visa</p>
         </div>
       </div>
-
-      {/* Modal component */}
       {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </section>
   );
