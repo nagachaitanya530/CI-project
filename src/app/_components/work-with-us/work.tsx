@@ -68,12 +68,10 @@ export default function WorkWithUs() {
   
   return (
     <div className="min-h-screen bg-white text-gray-1000 px-8 sm:px-16 py-10 mt-10">
-      {/* 💡 HEADER ROW */}
       <div className="flex flex-wrap justify-between items-center mb-12">
         <h1 className="text-5xl font-bold mb-4 sm:mb-0">Work With Us</h1>
 
         <div className="flex flex-wrap gap-4 justify-end">
-          {/* Location Dropdown */}
           <div className="relative w-[280px]">
             <select
               value={location}
@@ -88,7 +86,6 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
-          {/* Position Dropdown */}
           <div className="relative w-[280px]">
             <select
               value={position}
@@ -103,7 +100,6 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
-          {/* Clear Button */}
           <button
             onClick={() => {
               setLocation("");
@@ -116,7 +112,6 @@ export default function WorkWithUs() {
         </div>
       </div>
 
-      {/* JOB CARDS GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job, idx) => (

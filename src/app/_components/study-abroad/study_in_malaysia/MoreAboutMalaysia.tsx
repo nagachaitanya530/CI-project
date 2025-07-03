@@ -14,7 +14,6 @@ export default function MoreAboutMalaysia({ onConsultClick }: Props) {
   const documentRef = useRef<HTMLDivElement>(null);
   const visaRef = useRef<HTMLDivElement>(null);
 
-  // Observe which section is currently in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -56,7 +55,6 @@ export default function MoreAboutMalaysia({ onConsultClick }: Props) {
       </h2>
 
       <div className="grid lg:grid-cols-4 gap-10">
-        {/* Sticky Left Tabs */}
         <div className="flex lg:flex-col gap-4 lg:col-span-1 justify-start sticky top-32 h-fit">
           {tabs.map((t) => (
             <div
@@ -72,9 +70,7 @@ export default function MoreAboutMalaysia({ onConsultClick }: Props) {
           ))}
         </div>
 
-        {/* Right Content */}
         <div className="lg:col-span-3 space-y-16">
-          {/* Documents Section */}
           <motion.div
             id="documents"
             ref={documentRef}
@@ -110,7 +106,6 @@ export default function MoreAboutMalaysia({ onConsultClick }: Props) {
             </div>
           </motion.div>
 
-          {/* Visa Section */}
           <motion.div
             id="visa"
             ref={visaRef}

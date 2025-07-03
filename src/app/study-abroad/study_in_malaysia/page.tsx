@@ -76,7 +76,7 @@ export default function StudyInMalaysiaPage() {
     <>
       <NavigationSection />
 
-      {/* ✅ Pass down modal trigger to HeroSection and MoreAboutMalaysia */}
+      
       <HeroSection onConsultClick={() => setShowForm(true)} />
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 

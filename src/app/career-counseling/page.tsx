@@ -53,10 +53,8 @@ export default function CareerCounselingPage() {
 
   return (
     <>
-      {/* ✅ HeroSection opens the form on button click */}
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
-      {/* ✅ Modal Form Component */}
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 
       <ImportanceSection />

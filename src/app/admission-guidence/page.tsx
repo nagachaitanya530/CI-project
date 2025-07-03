@@ -12,10 +12,8 @@ export default function AdmissionGuidencePage() {
 
   return (
     <>
-      {/* Hero section with form trigger */}
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
-      {/* Modal form */}
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 
       <Second />

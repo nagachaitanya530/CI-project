@@ -18,12 +18,10 @@ const stats: HeroStats = {
   workVisaYears: "0.5–5 years",
 };
 
-// ✅ Add this interface to accept props
 type HeroSectionProps = {
   onConsultClick: () => void;
 };
 
-// ✅ Use the prop in your component
 export default function HeroSection({ onConsultClick }: HeroSectionProps) {
   return (
     <section className="relative w-full bg-gradient-to-br from-[#e6f0ff] to-[#ffffff]">
@@ -41,7 +39,6 @@ export default function HeroSection({ onConsultClick }: HeroSectionProps) {
             Your gateway to a brighter future
           </h1>
 
-          {/* ✅ Call the prop here */}
           <motion.button
             onClick={onConsultClick}
             whileHover={{ scale: 1.05 }}
