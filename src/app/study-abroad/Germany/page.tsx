@@ -83,10 +83,9 @@ export default function GermanyPage() {
       <SuccessStories />
 
       {/* FAQ Section */}
-      <FAQ />
+      <FAQ faqs={[]} />
 
-      {/* Call to Action */}
-      <CTA_Section />
+    
 
       {/* this is the footer */}
       <FooterSection />
