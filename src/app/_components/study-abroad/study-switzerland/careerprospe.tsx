@@ -4,27 +4,27 @@ import React from "react";
 const sectors = [
   {
     title: "Engineering",
-    image: "/engrng-img.webp",
+    image: "/Engineering.jpg",
   },
   {
     title: "Pharmaceuticals",
-    image: "/pharma-img.webp",
+    image: "/Pharmaceuticals.jpg",
   },
   {
     title: "Computer Science & IT",
-    image: "/it-img.webp",
+    image: "/Artificial Intelligence AI.jpg",
   },
   {
     title: "Banking & Insurance",
-    image: "/acc-financ-img.webp",
+    image: "/Banking & Finance.jpg",
   },
   {
     title: "Hospitality",
-    image: "/hospitality-img.webp",
+    image: "/Hospitality Management.jpg",
   },
   {
     title: "Construction",
-    image: "/architecture-img.webp",
+    image: "/Construction.jpg",
   },
 ];
 
