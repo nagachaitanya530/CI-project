@@ -52,7 +52,7 @@ function CarrerProspect() {
                         <img
                             src={carrer.image}
                             alt={carrer.name}
-                            className="w-full h-48 object-cover hover:cursor-pointer"
+                            className="w-full h-60 object-cover hover:cursor-pointer"
                         />
                         <div className="py-4 text-lg font-semibold text-gray-900">
                             {carrer.name}

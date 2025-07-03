@@ -39,7 +39,7 @@ export default function StudyTabs() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
+    <div className="max-w-7xl  mx-auto px-4 md:px-20 py-10">
       {/* Heading */}
 <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
   <span>More about </span>

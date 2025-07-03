@@ -49,11 +49,11 @@ export default function ConsultationForm({ show, onClose }: Props) {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0  flex items-center justify-center z-50">
-      <div className="bg-white  p-10 rounded-3xl shadow-lg w-[125%] max-w-2xl  relative text-center">
+    <div className="fixed inset-0 flex items-center justify-center z-50  bg-opacity-300">
+      <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg w-full max-w-[95vw] sm:max-w-lg md:max-w-2xl relative text-center mx-2">
         <button
           onClick={onClose}
-          className="absolute top-3  right-4 text-xl text-gray-500 hover:text-gray-800"
+          className="absolute top-3 right-4 text-xl text-gray-500 hover:text-gray-800"
         >
           &times;
         </button>
@@ -62,7 +62,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
           <>
             <h2 className="text-2xl font-bold mb-2">Welcome To The Journey Of Studying Abroad!</h2>
             <p className="text-blue-800 text-xl font-medium mb-4">Choose Your Desired Country</p>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {countries.map((country) => (
                 <button
                   key={country}
@@ -70,7 +70,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
                     setSelectedCountry(country);
                     setStep(2);
                   }}
-                  className="bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full"
+                  className="bg-gray-200 hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full"
                 >
                   {country}
                 </button>
@@ -83,7 +83,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
           <>
             <h2 className="text-2xl font-semibold mt-4 mb-2">Select your desired commencement date.</h2>
             <p className="text-blue-800 text-lg mb-5 font-medium">Choose Your Intake</p>
-            <div className="flex justify-center gap-3 mb-6 flex-wrap">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               {intakes.map((intake) => (
                 <button
                   key={intake}
@@ -91,7 +91,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
                     setSelectedIntake(intake);
                     setStep(3);
                   }}
-                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full px-5 py-2 rounded-full font-medium ${
+                  className={`bg-gray-200 hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full ${
                     selectedIntake === intake
                       ? 'bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-blue-100'
@@ -103,7 +103,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
             </div>
             <button
               onClick={() => setStep(1)}
-              className="mt-2  text-white px-6 py-2 bg-blue-900 hover:cursor-pointer text-white rounded-full"
+              className="mt-2 text-white px-6 py-2 bg-blue-900 hover:cursor-pointer rounded-full"
             >
               Back
             </button>
@@ -122,7 +122,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
                     setSelectedStudyLevel(level);
                     setStep(4);
                   }}
-                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full px-5 py-2 rounded-full font-medium ${
+                  className={`bg-gray-200 hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full ${
                     selectedStudyLevel === level
                       ? 'bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-blue-100'
@@ -138,7 +138,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
 
         {step === 4 && (
           <>
-            <h2 className="text-2xl p-2  mb-4">Enter your area of academic specialisation</h2>
+            <h2 className="text-2xl p-2 mb-4">Enter your area of academic specialisation</h2>
             <input
               type="text"
               required
@@ -147,7 +147,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
               placeholder="e.g. Computer Science"
               className="w-full border p-2 rounded-lg mb-4"
             />
-            <div className="flex justify-between">
+            <div className="flex flex-col sm:flex-row justify-between gap-2">
               <button onClick={() => setStep(3)} className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:cursor-pointer">Back</button>
               <button onClick={() => setStep(5)} className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:cursor-pointer">Continue</button>
             </div>
@@ -157,7 +157,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
         {step === 5 && (
           <>
             <h2 className="text-2xl p-2 mb-2">All grand adventures begin with your name.</h2>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
                 type="text"
                 required
@@ -175,9 +175,9 @@ export default function ConsultationForm({ show, onClose }: Props) {
                 className="border p-2 rounded-lg"
               />
             </div>
-            <div className="flex justify-between mt-4">
-              <button onClick={() => setStep(4)} className="bg-blue-900 px-6 py-2 rounded-lg  text-white hover:cursor-pointer">Back</button>
-              <button onClick={() => setStep(6)} className="bg-blue-900 text-white px-6 py-2  rounded-lg hover:cursor-pointer">Continue</button>
+            <div className="flex flex-col sm:flex-row justify-between gap-2 mt-4">
+              <button onClick={() => setStep(4)} className="bg-blue-900 px-6 py-2 rounded-lg text-white hover:cursor-pointer">Back</button>
+              <button onClick={() => setStep(6)} className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:cursor-pointer">Continue</button>
             </div>
           </>
         )}
@@ -191,7 +191,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
               placeholder="Email ID"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full  border p-2 rounded-lg mb-3"
+              className="w-full border p-2 rounded-lg mb-3"
             />
             <input
               type="tel"
@@ -220,11 +220,12 @@ export default function ConsultationForm({ show, onClose }: Props) {
                 onChange={() => setConsent(!consent)}
               />
               <span className="whitespace-nowrap text-md p-2">
-              I consent to be contacted via Calls, WhatsApp, Email.</span>
+                I consent to be contacted via Calls, WhatsApp, Email.
+              </span>
             </label>
-            <div className="flex justify-between">
-              <button onClick={() => setStep(5)} className="bg-blue-900 px-6 py-2 hover:cursor-pointer  text-white rounded-lg">Back</button>
-              <button onClick={() => setStep(7)} className="bg-blue-900 text-white hover:cursor-pointer  px-6 py-2 rounded-lg">Continue</button>
+            <div className="flex flex-col sm:flex-row justify-between gap-2">
+              <button onClick={() => setStep(5)} className="bg-blue-900 px-6 py-2 hover:cursor-pointer text-white rounded-lg">Back</button>
+              <button onClick={() => setStep(7)} className="bg-blue-900 text-white hover:cursor-pointer px-6 py-2 rounded-lg">Continue</button>
             </div>
           </>
         )}
@@ -251,8 +252,8 @@ export default function ConsultationForm({ show, onClose }: Props) {
               </div>
             </div>
 
-            <div className="flex justify-between mt-6">
-              <button onClick={() => setStep(6)} className="px-6 py-2 bg-blue-900 hover:cursor-pointer  text-white rounded-lg">Edit Details</button>
+            <div className="flex flex-col sm:flex-row justify-between gap-2 mt-6">
+              <button onClick={() => setStep(6)} className="px-6 py-2 bg-blue-900 hover:cursor-pointer text-white rounded-lg">Edit Details</button>
               <button onClick={handleSubmit} className="px-6 py-2 bg-blue-900 hover:cursor-pointer text-white rounded-lg">Submit</button>
             </div>
           </>

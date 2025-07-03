@@ -42,7 +42,7 @@ function PopularCourses() {
                 Here are the top courses in France that are preferred by international students:
             </p>
             {/* Cards */}
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 max-w-7xl mx-auto">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-x-6 gap-y-8 max-w-7xl mx-auto">
                 {courses.map((course, index) => (
                     <div
                         key={index}
@@ -51,7 +51,7 @@ function PopularCourses() {
                         <img
                             src={course.image}
                             alt={course.name}
-                            className="w-full h-48 object-cover hover:cursor-pointer"
+                            className="w-full h-60 object-cover hover:cursor-pointer"
                         />
                         <div className="py-4 text-lg font-semibold text-gray-900">{course.name}</div>
                     </div>

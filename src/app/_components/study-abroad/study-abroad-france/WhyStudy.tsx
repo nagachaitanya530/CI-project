@@ -1,6 +1,6 @@
 function WhyStudy() {
     return (
-        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
                 <span className="text-orange-600 font-bold">Why we study</span> in France?
             </h1>
