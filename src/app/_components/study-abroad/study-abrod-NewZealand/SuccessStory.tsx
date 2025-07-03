@@ -1,8 +1,6 @@
 "use client"
-
 import { useRef, useState } from "react"
 import { ChevronLeft, ChevronRight, Play } from "lucide-react"
-
 interface Review {
     id: number
     quote: string
@@ -17,7 +15,6 @@ interface Review {
         alt: string
     }
 }
-
 const reviews: Review[] = [
     {
         id: 1,
@@ -133,14 +130,11 @@ export default function SuccessStories() {
     return (
         <div className="min-h- bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 py-8 px-4 mb-6">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
                 <div className="flex justify-between items-start mb-16">
                     <div>
                         <h1 className="text-5xl font-bold text-gray-900 mb-4">Success Stories</h1>
                         <div className="w-32 h-1 bg-orange-400 rounded-full"></div>
                     </div>
-
-                    {/* Navigation Arrows */}
                     <div className="flex gap-4">
                         <button
                             onClick={goToPrevious}
@@ -158,8 +152,6 @@ export default function SuccessStories() {
                         </button>
                     </div>
                 </div>
-
-                {/* Cards Container - Horizontal Scroll */}
                 <div className="relative overflow-hidden">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"
@@ -171,19 +163,14 @@ export default function SuccessStories() {
                             <div key={review.id} className="flex-shrink-0 w-full flex justify-center">
                                 <div className=" rounded-3xl shadow- overflow-visible w-[1100px] mx-4">
                                     <div className="flex justify-end">
-                                        {/* Left Media Section */}
                                         <div className="w-2/5 p-6 mt-6">
                                             <MediaComponent media={review.media} className="w-full h-64" />
                                         </div>
-
-                                        {/* Right Content Section */}
                                         <div className="w-3/5 h-80 p-8 bg-white rounded-2xl flex justify-end">
                                             <div className=" flex flex-col items-end w-3/4 justify-between">
                                                 <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-normal">
                                                     "{review.quote}"
                                                 </blockquote>
-
-
                                                 <div className="flex items-center gap-4">
                                                     <img
                                                         src={review.author.avatar}
@@ -207,8 +194,6 @@ export default function SuccessStories() {
                         ))}
                     </div>
                 </div>
-
-                {/* Pagination Dots */}
                 <div className="flex justify-center gap-3 mt-16">
                     {reviews.map((_, index) => (
                         <button

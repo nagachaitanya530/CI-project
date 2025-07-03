@@ -1,7 +1,33 @@
+"use client";
+import FAQ from "~/app/_components/study-abroad/faq";
+const IndiaFAQs = [
+  {
+    question: "What is the Australia tuition fees for international students?",
+    answer: "Tuition fees for international students typically range from AUD 20,000 to AUD 50,000 per year, depending on the program and university. Additionally, living expenses can range from AUD 20,000 to AUD 27,000 per year.",
+
+  },
+  {
+    question: "What is the cost of to study a Master’s degree in the Australia?",
+    answer: "Yes, there are various scholarships available, including government-funded programs like the Australia Awards and Endeavour Postgraduate Scholarships, as well as university-specific scholarships and research-based funding options.",
+
+  },
+  {
+    question: "How much money do I need to live in Australia as an international student?",
+    answer: "On average, international students spend between AUD 20,000 and AUD 27,000 per year on living expenses. This includes the cost of accommodation, food, transport, and personal costs.",
+  },
+  {
+    question:"Can I work while studying in Australia?",
+    answer:"Yes, international students in Australia can work up to 40 hours per fortnight during the semester and full-time during semester breaks.",
+  },
+  {
+    question:"What is the cheapest university in Australia?",
+    answer:"There are some options if the student wants to study at a low cost university in Australia, especially in regional areas. Some of the most affordable universities in Australia include the Charles Darwin University and the University of Southern Queensland which offer affordable tuition rates compared to some of the larger institutions.",
+  },
+ 
+];
 function CostOFStudyContent() {
     return (
-
-        <div className="px-10 md:px-70 py-10 text-gray-700 text-justify space-y-10 bg-white text-lg">
+    <div className="px-10 md:px-70 py-10 text-gray-700 text-justify space-y-10 bg-white text-lg">
             <p>Australia is one of the most popular destinations for international students, offering a high standard of education, a diverse cultural experience, beautiful natural environment and a diverse wildlife which includes the iconic kangaroo 🦘. Before making the leap to entering the student life in the country, it's important to understand the cost of studying in Australia for international students. In this blog post, we’ll cover everything from university fees to living expenses and available scholarships to help you plan your study abroad journey.
             </p>
             <h2 className="text-2xl font-normal text-blue-900">Top Universities in Australia</h2>
@@ -25,7 +51,6 @@ function CostOFStudyContent() {
                     AUD 22,000 to AUD 50,000.
                 </li>
             </ul>
-
             <div>
                 <h2 className="text-lg font-semibold mb-2">Program-Specific Fees</h2>
                 <ul className="list-disc pl-6 space-y-2">
@@ -47,11 +72,9 @@ function CostOFStudyContent() {
                     </li>
                 </ul>
             </div>
-
             <p className="text-gray-600 mt-6">
                 In addition to tuition fees, students may also have to pay additional costs such as:
             </p>
-
             <ul className="list-disc pl-6 space-y-2">
                 <li>Student services and amenities fees</li>
                 <li>Health insurance fees (Overseas Student Health Cover – OSHC)</li>
@@ -60,13 +83,11 @@ function CostOFStudyContent() {
             <h2 className="text-2xl md:text-3xl font-normal text-blue-900 mb-6">
                 Scholarships in Australia for International Students
             </h2>
-
             <p className="mb-6">
                 The cost of studying in Australia can be significantly offset with a numerous
                 scholarship available for international students to help ease the financial burden.
                 Some of the prominent scholarships include:
             </p>
-
             <ol className="list-decimal pl-6 space-y-4">
                 <li>
                     <span className="font-medium">Australia Awards Scholarships</span> – Fully funded
@@ -92,7 +113,6 @@ function CostOFStudyContent() {
                     universities.
                 </li>
             </ol>
-
             <p className="mt-6 text-gray-700">
                 In addition to this, private organizations and governments may offer scholarships to
                 students pursuing particular fields of study or demonstrating excellence in academics.
@@ -134,48 +154,16 @@ function CostOFStudyContent() {
             </p>
             <h3 className="text-xl font-semibold mt-6 mb-2">Conclusion</h3>
             <p>
-                <span className="font-semibold text-blue-900">Studying in Australia</span>is an exciting and rewarding experience, but it comes with significant costs. By planning ahead, researching scholarship opportunities, and managing living expenses, international students can make their study dreams a reality in the Land Down Under. Just remember to consider both tuition fees and living costs as part of your overall budget when applying. With the right strategies in place, students will be able to thrive both academically and financially in Australia!
+                <span className="font-semibold text-blue-900">Studying in Australia</span> is an exciting and rewarding experience, but it comes with significant costs. By planning ahead, researching scholarship opportunities, and managing living expenses, international students can make their study dreams a reality in the Land Down Under. Just remember to consider both tuition fees and living costs as part of your overall budget when applying. With the right strategies in place, students will be able to thrive both academically and financially in Australia!
             </p>
             <div >
                 <img
-                    src="../swtizerlandstudyvisa/Cost-of-Studying-in-Australia-for-Indian-Students.webp"
+                    src="/swtizerlandstudyvisa/Cost-of-Study.jpg"
                     alt="Visa approval"
                     className="rounded-2xl w-full max-w-md object-cover"
                 />
             </div>
-
-            <h2 className="text-2xl font-normal text-blue-900">FAQs</h2>
-            <h3 className="text-xl font-normal text-black">What is the Australia tuition fees for international students?</h3>
-            <p>
-                Tuition fees for international students typically range from AUD 20,000 to AUD 50,000 per year, depending on the program and university. Additionally, living expenses can range from AUD 20,000 to AUD 27,000 per year.
-            </p>
-            <h3 className="text-xl font-normal text-black">What is the cost of to study a Master’s degree in the Australia?</h3>
-            <p>
-                The Australia master degree fees typically ranges from AUD 25,000 - 55,000 per year for international students, depending on the program and university.
-            </p>
-            <h3 className="text-xl font-normal text-black">Are there scholarships available for international students in Australia?</h3>
-            <p>
-                Yes, there are various scholarships available, including government-funded programs like the Australia Awards and Endeavour Postgraduate Scholarships, as well as university-specific scholarships and research-based funding options.
-            </p>
-            <h3 className="text-xl font-normal text-black">How much money do I need to live in Australia as an international student?</h3>
-            <p>
-                On average, international students spend between AUD 20,000 and AUD 27,000 per year on living expenses. This includes the cost of accommodation, food, transport, and personal costs.
-            </p>
-            <h3 className="text-xl font-normal text-black">Can I work while studying in Australia?</h3>
-            <p>
-                Yes, international students in Australia can work up to 40 hours per fortnight during the semester and full-time during semester breaks.
-            </p>
-            <h3 className="text-xl font-normal text-black">What is the cheapest university in Australia?</h3>
-            <p>
-
-                There are some options if the student wants to study at a low cost university in Australia, especially in regional areas. Some of the most affordable universities in Australia include the Charles Darwin University and the University of Southern Queensland which offer affordable tuition rates compared to some of the larger institutions.
-            </p>
-
-            <p>For further assistance or queries students can contact us, Edwise International and avail our wide range of services for students on destinations like
-                <span className="font-semibold text-blue-900">study in UK, study in USA, study in Canada, study in Australia, study in New-Zealand, study in Singapore, study in Ireland, study in France, study in Germany  </span>
-                and many other countries.
-            </p>
-
+            <FAQ faqs={IndiaFAQs} title="FAQs" />
             <div className="flex space-x-6 mt-4">
                 <p className="text-lg font-bold">
                     Share Blog via :
@@ -208,13 +196,7 @@ function CostOFStudyContent() {
                     </svg>
                 </a>
             </div>
-
-
-
-
-        </div>
-
-    )
-
+            </div>
+        )
 }
 export default CostOFStudyContent
