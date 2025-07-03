@@ -14,11 +14,11 @@ const sectors = [
   },
   {
     title: "Computer Science",
-    image: "/1428492.webp",
+    image: "/computer-science.png",
   },
   {
     title: "Business & Management",
-    image: "/wp2019326.webp",
+    image: "/biz-admin-blog-2.png",
   },
   {
     title: "Data Science",

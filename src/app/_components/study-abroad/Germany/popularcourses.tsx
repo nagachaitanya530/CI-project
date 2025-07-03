@@ -6,7 +6,7 @@ const courses = [
   { name: "Engineering", image: "/engineering.jpg" },
   { name: "Business Administration", image: "/BusinessAni.png" },
   { name: "Renewable Energy", image: "/RenewableEnergy.jpg" },
-  { name: "Automotive Engineering", image: "/AutomativeEngineering.webp" },
+  { name: "Automotive Engineering", image: "/Auto-heading.jpg" },
   { name: "Data Science", image: "/DataScience.jpg" },
   { name: "Computer Science", image: "/ComputerScience.jpg" },
   
