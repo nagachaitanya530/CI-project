@@ -4,7 +4,6 @@ const HeroSection = () => {
   return (
     <section className="w-full bg-gradient-to-r from-white via-pink-50 to-white py-10 px-4 sm:px-6 md:px-10 lg:px-20 overflow-x-hidden">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-7xl mx-auto">
-        {/* Left Text */}
         <div className="flex-1 text-center md:text-left space-y-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#231F20] leading-snug">
             Explore Edwise: <br />
@@ -19,11 +18,9 @@ const HeroSection = () => {
             Free Expert Consultation
           </button>
         </div>
-
-        {/* Right Image */}
         <div className="flex-1 flex justify-center">
           <Image
-            src="/R.webp"
+            src="/ppp.jpg"
             alt="Woman"
             width={400}
             height={400}

@@ -11,14 +11,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const timelineData = [
   { year: "1991", title: "Edwise International is Founded", image: "/timeline/1.jpg" },
-  { year: "1997", title: "Global Tie-Ups : UK, USA, Canada, New Zealand...", image: "/timeline/2.webp" },
-  { year: "2002", title: "Launched Test Preparation Division", image: "/timeline/3.webp" },
+  { year: "1997", title: "Global Tie-Ups : UK, USA, Canada, New Zealand...", image: "/timeline/2.jpg" },
+  { year: "2002", title: "Launched Test Preparation Division", image: "/timeline/3.jpg" },
   { year: "2008", title: "Pioneered the World Education Fair in India", image: "/timeline/4.jpg" },
   { year: "2016", title: "Celebrated our 25th Anniversary", image: "/timeline/5.png" },
-  { year: "2019", title: "Local Presence : 24 Branches across India", image: "/timeline/6.webp" },
-  { year: "2020", title: "Won Agency of the Year Award from AIRC", image: "/timeline/8.webp" },
+  { year: "2019", title: "Local Presence : 24 Branches across India", image: "/timeline/6.jpg" },
+  { year: "2020", title: "Won Agency of the Year Award from AIRC", image: "/timeline/8.jpg" },
   { year: "2021", title: "Partnered with 900+ institutions worldwide", image: "/timeline/9.png" },
-  { year: "2024", title: "Successfully completed 33 years of Excellence", image: "/timeline/10.webp" },
+  { year: "2024", title: "Successfully completed 33 years of Excellence", image: "/timeline/10.jpg" },
 ];
 
 export default function TimelineCarousel() {
@@ -32,7 +32,6 @@ export default function TimelineCarousel() {
 
   return (
     <section className="bg-[#1D438D] py-10 sm:py-14 rounded-3xl overflow-hidden w-full">
-      {/* Heading */}
       <div className="text-center mb-8 px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white relative">
           Our{" "}
@@ -53,8 +52,6 @@ export default function TimelineCarousel() {
           </span>
         </h2>
       </div>
-
-      {/* Carousel */}
       <div className="relative overflow-x-hidden w-full max-w-screen-xl mx-auto px-4 sm:px-6">
         {navReady && (
           <Swiper

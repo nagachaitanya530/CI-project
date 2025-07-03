@@ -94,8 +94,6 @@ const ServicesSection = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Bottom Navigation Arrows */}
       <div className="flex justify-center gap-4 mt-4">
         <button className="swiper-prev bg-white border border-blue-700 text-blue-700 p-3 rounded-lg hover:bg-blue-700 hover:text-white transition">
           <ArrowLeft />

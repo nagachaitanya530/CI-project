@@ -14,37 +14,35 @@ export default function FounderSection() {
       </h2>
 
       <div className="flex flex-col lg:flex-row items-start gap-8 max-w-6xl mx-auto">
-        {/* Image + name/linkedin */}
-        <div className="lg:w-1/2">
-          <Image
-            src="/rrr.jpeg"
-            alt="Founder Image"
-            width={500}
-            height={600}
-            className="rounded-lg object-cover w-full"
-          />
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full max-w-[350px]">
+            <Image
+              src="/founder-img.jpg"
+              alt="Founder Image"
+              width={500}
+              height={600}
+              className="rounded-lg object-cover w-full"
+            />
 
-          <div className="mt-4 flex items-center justify-between">
-            <div>
-              <h3 className="text-2xl font-bold text-black flex items-center gap-2">
-                Sushil Sukhwani
-                <a
-                  href="https://www.linkedin.com/in/sushil-sukhwani-518073b"
-
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 border border-gray-400 rounded-md hover:bg-blue-100"
-                >
-                  <FaLinkedinIn className="text-gray-500 text-xl" />
-                </a>
-              </h3>
-              <p className="text-gray-600 text-base">(Founder and CEO)</p>
+            <div className="mt-4 flex items-center justify-center lg:justify-start gap-3">
+              <div>
+                <h3 className="text-2xl font-bold text-black flex items-center gap-2">
+                  Sushil Sukhwani
+                  <a
+                    href="https://www.linkedin.com/in/sushil-sukhwani-518073b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 border border-gray-400 rounded-md hover:bg-blue-100"
+                  >
+                    <FaLinkedinIn className="text-gray-500 text-xl" />
+                  </a>
+                </h3>
+                <p className="text-gray-600 text-base">(Founder and CEO)</p>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Paragraph */}
-        <div className="lg:w-1/2 text-gray-800 text-[15px] leading-relaxed">
+        <div className="lg:w-1/2 text-gray-800 text-[15px] leading-relaxed mt-10 lg:mt-0">
           <p>
             <strong>Sushil Sukhwani</strong>, Owner and Founding Director of Edwise
             International, has been at the helm of the international education industry
