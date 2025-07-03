@@ -1,4 +1,3 @@
-// components/SpainHero.tsx
 "use client";
 
 import React from "react";
@@ -24,7 +23,8 @@ const SpainHero = () => {
             </span>
           </h1>
           <p className="text-gray-200 mt-4">
-            Explore more, stay informed, and start your journey to academic excellence.
+            Explore more, stay informed, and start your journey to academic
+            excellence.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <button className="bg-white text-[#0d47a1] font-semibold px-5 py-2 rounded-full shadow">

@@ -1,33 +1,37 @@
-'use client';
+"use client";
 
 export default function WhyStudyInSpain() {
   return (
-    <section className="bg-white py-16">
-      <div className="flex flex-col lg:flex-row gap-14 px-6 lg:px-20">
-        {/* Left Content */}
-        <div className="lg:w-2/3">
-          <h2 className="text-4xl text-black font-light">
-              Why{" "}
-             <span className="font-extrabold underline decoration-red-500 underline-offset-[6px]">
-               Study In Spain
-             </span>
-            </h2>
-
-
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl text-black font-light mb-10">
+          Why{" "}
+          <span className="font-extrabold underline decoration-red-500 underline-offset-[6px]">
+            Study In Spain
+          </span>
+        </h2>
+        <div className="space-y-10">
           {features.map((feature, index) => (
-            <div key={index} className="pt-10 pb-6">
-              <div className="flex items-start gap-6">
-                <div className="flex items-center justify-center w-14 h-14 shadow-xl rounded-full">
+            <div key={index} className="pb-4">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shadow-xl rounded-full bg-white">
                   <img
                     src="/images/certificate.png"
                     alt={feature.title}
-                    className="w-8 h-8"
+                    className="w-6 h-6 sm:w-8 sm:h-8"
+                    loading="lazy"
                   />
                 </div>
-                <h2 className="text-2xl font-bold">{feature.title}</h2>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-black">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-2 text-gray-700 text-base sm:text-lg leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <p className="text-lg mt-2 text-gray-700">{feature.description}</p>
-              <hr className="w-[90%] border-gray-300 mt-5" />
+              <hr className="mt-6 border-gray-300" />
             </div>
           ))}
         </div>
@@ -35,10 +39,6 @@ export default function WhyStudyInSpain() {
     </section>
   );
 }
-
-const inputClass =
-  "border border-gray-300 p-3 rounded-2xl text-blue-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300";
-
 const features = [
   {
     title: "Highly Ranked Institutions",

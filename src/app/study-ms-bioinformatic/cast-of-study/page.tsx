@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavigationSection from "~/app/_components/navigation1";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
+import FAQ from "~/app/_components/study-abroad/faq";
 
 export default function Page() {
   return (
@@ -216,97 +217,46 @@ export default function Page() {
           />
         </section>
 
+        <FAQ
+          faqs={[
+            {
+              question: "What is the Australia tuition fees for international students?",
+              answer:
+                "Tuition fees for international students typically range from AUD 20,000 to AUD 50,000 per year, depending on the program and university. Additionally, living expenses can range from AUD 20,000 to AUD 27,000 per year.",
+            },
+            {
+              question: "What is the cost to study a Master’s degree in Australia?",
+              answer:
+                "The Australia master's degree fees typically range from AUD 25,000–55,000 per year for international students, depending on the program and university.",
+            },
+            {
+              question: "Are there scholarships available for international students in Australia?",
+              answer:
+                "Yes, there are various scholarships available, including government-funded programs like the Australia Awards and Endeavour Postgraduate Scholarships, as well as university-specific scholarships and research-based funding options.",
+            },
+            {
+              question: "How much money do I need to live in Australia as an international student?",
+              answer:
+                "On average, international students spend between AUD 20,000 and AUD 27,000 per year on living expenses. This includes the cost of accommodation, food, transport, and personal costs.",
+            },
+            {
+              question: "Can I work while studying in Australia?",
+              answer:
+                "Yes, international students in Australia can work up to 40 hours per fortnight during the semester and full-time during semester breaks.",
+            },
+            {
+              question: "What is the cheapest university in Australia?",
+              answer:
+                "There are some options if the student wants to study at a low-cost university in Australia, especially in regional areas. Some of the most affordable universities in Australia include Charles Darwin University and the University of Southern Queensland, which offer affordable tuition rates compared to some of the larger institutions.",
+            },
+            {
+              question: "What is the student visa Australia cost for international students?",
+              answer:
+                "The Australia student visa fee will be approximately AUD 650, which comes under student visa (subclass 500) in Australia.",
+            },
+          ]}
+        />
         <section className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-3xl md:text-3xl mb-10 text-indigo-800">FAQs</h2>
-          <div className="space-y-10 text-lg">
-            <div>
-              <h3 className="font-semibold mb-10">
-                What is the Australia tuition fees for international students?
-              </h3>
-              <p>
-                Tuition fees for international students typically range from AUD
-                20,000 to AUD 50,000 per year, depending on the program and
-                university. Additionally, living expenses can range from AUD
-                20,000 to AUD 27,000 per year.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                What is the cost to study a Master’s degree in Australia?
-              </h3>
-              <p>
-                The Australia master's degree fees typically range from AUD
-                25,000–55,000 per year for international students, depending on
-                the program and university.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                Are there scholarships available for international students in
-                Australia?
-              </h3>
-              <p>
-                Yes, there are various scholarships available, including
-                government-funded programs like the Australia Awards and
-                Endeavour Postgraduate Scholarships, as well as
-                university-specific scholarships and research-based funding
-                options.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                How much money do I need to live in Australia as an
-                international student?
-              </h3>
-              <p>
-                On average, international students spend between AUD 20,000 and
-                AUD 27,000 per year on living expenses. This includes the cost
-                of accommodation, food, transport, and personal costs.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                Can I work while studying in Australia?
-              </h3>
-              <p>
-                Yes, international students in Australia can work up to 40 hours
-                per fortnight during the semester and full-time during semester
-                breaks.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                What is the cheapest university in Australia?
-              </h3>
-              <p>
-                There are some options if the student wants to study at a
-                low-cost university in Australia, especially in regional areas.
-                Some of the most affordable universities in Australia include
-                Charles Darwin University and the University of Southern
-                Queensland, which offer affordable tuition rates compared to
-                some of the larger institutions.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-10">
-                What is the student visa Australia cost for international
-                students?
-              </h3>
-              <p>
-                The Australia student visa fee will be approximately AUD 650,
-                which comes under student visa (subclass 500) in Australia.
-              </p>
-            </div>
-            <div>
-              <p>
-                For further assistance or queries, students can contact us,
-                Edwise International, and avail our wide range of services for
-                destinations like studying in the UK, USA, Canada, Australia,
-                New Zealand, Singapore, Ireland, France, Germany, and many other
-                countries.
-              </p>
-            </div>
-          </div>
            <div className="flex space-x-6 mt-10">
             <p className="text-lg font-bold">Share Blog via :</p>
             <a
@@ -392,7 +342,7 @@ const ServiceCard = ({ image, title, link }: ServiceCardProps) => {
         alt={title}
         width={500}
         height={300}
-        className="object-cover w-full h-80"
+        className="object-cover w-full h-55"
       />
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
