@@ -21,7 +21,7 @@ function EnglishBusinessCourse() {
 
         <div className=" flex py-1 md:px-10 lg:px-10 ">
           <img className="h-5 w-5" src="https://p.kindpng.com/picc/s/82-822718_transparent-mobile-home-clipart-mobile-home-icon-png.png" alt="" />
-          <p>&gt; Fees &gt; IELTS GENERAL PACKAGE &gt; IELTS TURBO</p>
+          
         </div>
       </section>
       <HeroSection />
