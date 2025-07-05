@@ -36,7 +36,7 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           <X />
         </button>
 
-        {/*  Country Selection */}
+     
         {step === 0 && (
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-4">Welcome To The Journey Of Studying Abroad!</h2>
@@ -58,7 +58,6 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/* Intake Selection */}
         {step === 1 && (
           <div className="text-center">
             <p className="mb-4 text-blue-700">Select your desired commencement date</p>
@@ -81,7 +80,7 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/*  Level Selection */}
+       
         {step === 2 && (
           <div className="text-center">
             <p className="mb-4 text-blue-700">What level of study are you planning to pursue?</p>
@@ -104,7 +103,6 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/*  Specialization */}
         {step === 3 && (
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-4">Enter your area of academic specialisation</h2>
@@ -123,7 +121,7 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/* Name */}
+       
         {step === 4 && (
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-4">What's your name?</h2>
@@ -140,7 +138,7 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/*  Contact Details */}
+       
         {step === 5 && (
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-4">How can we contact you?</h2>
@@ -167,7 +165,7 @@ export default function StudyAbroadModal({ onClose }: StudyAbroadModalProps) {
           </div>
         )}
 
-        {/* Summary */}
+       
         {step === 6 && (
           <div className="text-left max-w-xl mx-auto">
             <h2 className="text-xl font-semibold mb-4 text-center">Kindly confirm your details before proceeding</h2>

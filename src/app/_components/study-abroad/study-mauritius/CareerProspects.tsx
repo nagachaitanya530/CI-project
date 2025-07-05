@@ -4,27 +4,27 @@ import MauritiusCard from "./MauritiusCard";
 const careerOptions = [
   {
     title: "Tourism & Hospitality",
-   image: "/hospitality-img.webp",
+ image: "/popularcoursescard1.jpeg",
   },
   {
     title: "Financial Services",
-    image: "/Financial.webp",
+    image: "/popularcoursescard6.avif",
   },
   {
     title: "Information Technology",
-   image: "/InformationTechnology.webp",
+      image: "/popularcoursescard3.avif",
   },
   {
     title: "Manufacturing",
-    image: "/Manufacturing.webp",
+    image: "/carreerprospect2.avif",
   },
   {
     title: "Professional Services",
-    image: "/Professional.webp",
+    image: "/carreerprospect3.avif",
   },
   {
     title: "Renewable Energy",
-    image: "/Renewable.webp",
+    image: "/carreerprospect4.avif",
   },
 ];
 

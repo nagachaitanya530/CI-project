@@ -20,6 +20,7 @@ function FAQ({ faqs, title = "FAQs" }: FAQProps) {
   };
 
   return (
+    
     <div className="max-w-7xl mx-auto p-6">
       <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
         {title}
@@ -76,6 +77,7 @@ function FAQ({ faqs, title = "FAQs" }: FAQProps) {
       </div>
     </div>
     </div>
+    
   );
 }
 

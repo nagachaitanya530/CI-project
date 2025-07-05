@@ -16,7 +16,6 @@ export default function ScholarshipSection({
   return (
     <section className="px-4 md:px-20 py-12 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
-        {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             <span className="font-bold underline decoration-red-500">Scholarships</span> In {countryName}
@@ -28,8 +27,6 @@ export default function ScholarshipSection({
             ))}
           </ul>
         </div>
-
-        {/* Right Image */}
         <div className="flex justify-center">
           <Image
             src={image}

@@ -1,11 +1,9 @@
 "use client";
-import React from "react";
 
 const CostOfStudying = () => {
   return (
     <section className="bg-[#e8eff8] py-10 px-4 md:px-10 rounded-t-3xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
-        {/* LEFT - Text Content */}
         <div className="md:w-1/2">
           <h2 className="text-[20px] sm:text-3xl font-bold text-gray-900 leading-tight">
             <span className="relative inline-block">
@@ -15,7 +13,6 @@ const CostOfStudying = () => {
             <br />
             <span className="text-[20px] sm:text-3xl font-medium">In Mauritius</span>
           </h2>
-
           <p className="text-gray-700 mt-4 text-sm sm:text-base leading-relaxed">
             The cost of studying in Mauritius for international students depends on
             several factors, including the institution, program of study, location,
@@ -25,9 +22,7 @@ const CostOfStudying = () => {
           </p>
         </div>
 
-        {/* RIGHT - Fees + Living */}
         <div className="md:w-1/2 space-y-8">
-          {/* Tuition Fees */}
           <div>
             <h3 className="font-semibold text-gray-600 bg-[#d7e1f0] py-2 px-4 rounded-lg text-sm w-fit">
               Tuition Fees (Average per annum)
@@ -44,7 +39,6 @@ const CostOfStudying = () => {
             </div>
           </div>
 
-          {/* Living Expenses */}
           <div>
             <h3 className="font-semibold text-gray-600 bg-[#d7e1f0] py-2 px-4 rounded-lg text-sm w-fit">
               Living Expenses
