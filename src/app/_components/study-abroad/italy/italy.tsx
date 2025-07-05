@@ -131,9 +131,7 @@ const Secondsection = () => {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                        <BookConsultationForm />
-                    </div>
+                    
                 </div>
             </div>
         </section>
