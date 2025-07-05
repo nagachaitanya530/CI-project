@@ -32,7 +32,7 @@ const items: WhyStudyItem[] = [
       "Education in Germany for international students often involves working closely with the industry...",
   },
   {
-    heading: "In the Heart of Europe:",
+    heading: "In the Heart of Europe",
     description:
       "Germany is situated in the heart of Europe, making it an excellent base for exploring...",
   },
@@ -43,36 +43,36 @@ const items: WhyStudyItem[] = [
   },
 ];
 
-const inputClass =
-  "border border-gray-300 rounded-lg px-4 py-2 text-sm text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500";
-
-function WhyStudy() {
+export default function WhyStudy() {
   return (
-    <section className="py-12 px-4 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
-        {/* Left Side */}
-        <div className="lg:w-3/5">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8">
-            Why{" "}
-            <span className="font-semibold underline decoration-red-500">
-              Study in Germany?
-            </span>
-          </h1>
+    <section className="py-12 px-4 sm:px-6 lg:px-10 bg-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-10 text-center lg:text-left">
+          Why{" "}
+          <span className="font-semibold underline decoration-red-500">
+            Study in Germany?
+          </span>
+        </h1>
 
+        {/* Items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {items.map((item, index) => (
-            <div key={index} className="mb-8">
-              <div className="flex items-start gap-4">
-                <ShieldCheck className="text-red-500 w-8 h-8 flex-shrink-0 mt-1" />
+            <div
+              key={index}
+              className="flex flex-col gap-4 border border-gray-200 rounded-xl p-6 hover:shadow-md transition"
+            >
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="text-red-500 w-6 h-6 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1">
                     {item.heading}
                   </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                     {item.description}
                   </p>
                 </div>
               </div>
-              <hr className="my-6 border-gray-300" />
             </div>
           ))}
         </div>
@@ -82,5 +82,3 @@ function WhyStudy() {
     </section>
   );
 }
-
-export default WhyStudy;

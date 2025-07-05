@@ -1,74 +1,76 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
 const sectors = [
   {
     title: "Engineering",
-    image: "/engrng-img.webp",
+    image: "/engineering-images.jpg",
   },
   {
     title: "Mechanical Engineering",
-    image: "/mech-eng-img.webp",
+    image: "/Mechanical_Engineers.jpg",
   },
   {
     title: "Computer Science",
-    image: "/comp-scie-img.webp",
+    image: "/computer-science.png",
   },
   {
-    title: "Business &..",
-    image: "/mba-img.webp",
+    title: "Business & Management",
+    image: "/biz-admin-blog-2.png",
   },
   {
     title: "Data Science",
-    image: "/data-scie-img.webp",
+    image: "/DataScience (2).jpg",
   },
   {
     title: "Automotive Engineering",
-    image: "/automotive-img.webp",
+    image: "/automotive-engineering.jpg",
   },
 ];
 
-const CareerProspectsSection = () => {
+export default function CareerProspectsSection() {
   return (
-    <div className="bg-white py-14 px-6 md:px-20 lg:px-28 text-center">
-      {/* Title */}
-      <h2 className="text-3xl font-bold text-gray-900">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-10 text-center">
+      
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
         <span className="relative inline-block">
-          <span className="relative z-10 text-black">Career Prospects</span>
-          <span className="absolute left-0 right-0 bottom-0 h-1 bg-red-500 z-0 rounded-full"></span>
+          <span className="relative z-10">Career Prospects</span>
+          <span className="absolute left-0 right-0 bottom-0 h-1 bg-red-500 rounded-full"></span>
         </span>{" "}
-        In Germany
+        in Germany
       </h2>
 
-      {/* Subtext */}
-      <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
-        The employment landscape in Germany offers various opportunities across various sectors.
+     
+      <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+        The employment landscape in Germany offers various opportunities across sectors.
         <br />
-        Here are some key sectors and industries that presently offer employment opportunities:
+        Here are some key areas that presently offer strong employment prospects:
       </p>
 
-      {/* Cards */}
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map((sector, i) => (
           <div
             key={i}
-            className="rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition duration-300"
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition duration-300 bg-white"
           >
-            <Image
-              src={sector.image}
-              alt={sector.title}
-              width={500}
-              height={300}
-              className="w-full h-52 object-cover rounded-t-3xl"
-            />
-            <div className="py-4 text-lg font-semibold text-gray-900">
+            <div className="relative w-full h-52 sm:h-56 md:h-60">
+              <Image
+                src={sector.image}
+                alt={sector.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="py-4 text-base sm:text-lg font-semibold text-gray-900">
               {sector.title}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default CareerProspectsSection;
+}

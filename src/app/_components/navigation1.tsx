@@ -29,6 +29,7 @@ const navItems = [
             { label: 'USA', href: 'study-abroad/usa' },
               { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
                 { label: 'Australia', href: "/study-abroad/australia" },
+                  { label: 'Germany', href: 'study-abroad/Germany' },
            
             { label: 'Spain', href: '/study-abroad/spain' },
           
@@ -60,7 +61,18 @@ const navItems = [
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },       
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
             { label: 'Italy', href: '/study-abroad/italy' },
+
+
+
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+
+
+        
+             { label: 'Switzerland', href: '/study-abroad/Switzerland' },
+            
+
             { label: 'Germany', href: '/study-abroad/Germany' },
+
 
             { label: 'Switzerland', href: '/study-abroad/Switzerland' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
