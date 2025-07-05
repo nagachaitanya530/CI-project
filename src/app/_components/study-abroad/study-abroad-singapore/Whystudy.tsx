@@ -66,6 +66,15 @@ function Whystudy() {
             ))}
           </ul>
         </div>
+<<<<<<< Updated upstream
+        </div>
+       </section>
+    </>
+    
+  );
+}
+export default Whystudy;
+=======
 
         {/* Right - Form */}
         <div className="border border-blue-200 rounded-3xl p-6 shadow-sm md:col-span-1">
@@ -106,3 +115,4 @@ function Whystudy() {
   );
 }
 export default Whystudy;
+>>>>>>> Stashed changes

@@ -41,7 +41,7 @@ const HeroBannerUSA = () => {
         {/* Right Image */}
         <div className="md:w-1/2 flex justify-center relative z-10 -mb-16 md:-mb-20">
           <Image
-            src="/study-abroad/usa-girl.webp"
+            src="/study-abroad/usa-girl.jpg"
             alt="Study in USA Girl"
             width={500}
             height={500}

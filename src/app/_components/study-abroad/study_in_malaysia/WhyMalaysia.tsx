@@ -90,6 +90,9 @@ export default function WhyStudyInMalaysia() {
           </div>
         </div>
 
+<<<<<<< Updated upstream
+        
+=======
         {/* Right: Form */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -170,6 +173,7 @@ export default function WhyStudyInMalaysia() {
 
           </form>
         </motion.div>
+>>>>>>> Stashed changes
       </div>
     </section>
   );

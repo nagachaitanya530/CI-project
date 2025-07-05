@@ -30,6 +30,9 @@ export default function WhyStudySection() {
         </div>
 
         {/* Right - Form */}
+<<<<<<< Updated upstream
+       
+=======
         <div className="border border-blue-200 rounded-3xl p-6 shadow-sm md:col-span-1">
           <h3 className="text-lg font-semibold text-[#143B85] mb-4">
             Book your Free Consultation <br /> with Trustworthy Counsellors
@@ -60,6 +63,7 @@ export default function WhyStudySection() {
             </button>
           </form>
         </div>
+>>>>>>> Stashed changes
       </div>
     </section>
   );
