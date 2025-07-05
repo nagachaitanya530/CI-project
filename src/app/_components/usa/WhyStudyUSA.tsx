@@ -71,7 +71,11 @@ const WhyStudyUsa = () => {
 
                 {/* Right: Your Finalized Form */}
                 <div className="w-full">
+<<<<<<< Updated upstream
+                    {/* <StudyAbroadForm /> */}
+=======
                     <StudyAbroadForm />
+>>>>>>> Stashed changes
                 </div>
             </div>
         </section>

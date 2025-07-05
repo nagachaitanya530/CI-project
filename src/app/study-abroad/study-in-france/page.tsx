@@ -52,10 +52,10 @@ function Study_in_france() {
         <>
             <NavigationSection />
             <HeroSection />
-             <div className="flex flex-cols-2 gap-14 py-10 mx-20 mt-10">
+             {/* /<div className="flex flex-cols-2 gap-14 py-10 mx-20 mt-10"> */}
             <WhyStudy/>
-            <Form/>
-            </div>           
+            {/* <Form/> */}
+            {/* </div>            */}
             <UniversityList/>
             <PopularCourses/>
             <CostOfStudy/> 

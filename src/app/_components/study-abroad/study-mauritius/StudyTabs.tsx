@@ -35,10 +35,20 @@ export default function StudyTabs() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
+
       <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
         <span>More about </span>
         <span className="font-bold underline decoration-red-500">Mauritius</span>
       </h2>
+
+      {/* Heading */}
+<h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+  <span>More about </span>
+  <span className="font-bold underline decoration-red-500">
+     Mauritius
+  </span>
+</h2>
+
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
           <div className="flex md:flex-col gap-4">
