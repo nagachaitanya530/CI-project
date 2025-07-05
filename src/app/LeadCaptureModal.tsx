@@ -15,7 +15,7 @@ export default function LeadCaptureModal() {
   useEffect(() => {
     const alreadySubmitted = localStorage.getItem("popupClosed");
     if (!alreadySubmitted) {
-      const timeout = setTimeout(() => setShow(true), 1000); // Show after 1 sec
+      const timeout = setTimeout(() => setShow(true), 1000);
       return () => clearTimeout(timeout);
     }
   }, []);
@@ -31,9 +31,7 @@ export default function LeadCaptureModal() {
 
   return (
   <div className="fixed inset-0 bg-black/0 backdrop-blur-sm flex items-center justify-center z-50">
-
       <div className="bg-white rounded-lg w-full max-w-3xl shadow-xl p-6 relative flex flex-col md:flex-row gap-6">
-        {/* Left Side - Image */}
         <div className="hidden md:block w-1/2 relative">
           <img
             src="/student.png"
@@ -44,8 +42,6 @@ export default function LeadCaptureModal() {
             🎉 Celebrating The Spirit
           </div>
         </div>
-
-        {/* Right Side - Form */}
         <div className="w-full md:w-1/2">
           <h2 className="text-2xl font-bold text-blue-600 mb-4">We are here to help.</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -98,8 +94,6 @@ export default function LeadCaptureModal() {
             </button>
           </form>
         </div>
-
-        {/* Close Button */}
         <button onClick={() => setShow(false)} className="absolute top-4 right-4 text-gray-500 hover:text-red-500">
           <X size={24} />
         </button>

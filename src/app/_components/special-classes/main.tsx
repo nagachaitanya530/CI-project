@@ -1,24 +1,19 @@
-// pages/spoken-with-pdcc.tsx
+
 'use client'
 import React, { useEffect, useState } from 'react';
 import { Button } from '~/components/ui/button';
 import { Card, CardContent } from '~/components/ui/card';
-import {
-    Newspaper, Mic, Users, Star, CheckCircle, Award,
-    Clock, MessageCircle, HelpCircle, Quote, Video
+import {Newspaper, Mic, Users, Star, CheckCircle, Award,Clock, MessageCircle, HelpCircle, Quote, Video
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const TARGET_DATE = new Date('2025-07-01T00:00:00');
-
 export default function SpokenWithPDCCPage() {
     const [timeLeft, setTimeLeft] = useState('');
-
     useEffect(() => {
         const interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = TARGET_DATE.getTime() - now;
-
             if (distance <= 0) {
                 setTimeLeft('Batch has started!');
                 clearInterval(interval);
@@ -29,7 +24,6 @@ export default function SpokenWithPDCCPage() {
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
             setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
         }, 1000);
 
@@ -51,17 +45,15 @@ export default function SpokenWithPDCCPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
         >
-
-            {/* Hero Section */}
             <section className="text-center py-12">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Spoken English with PDCC</h1>
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
                     A premium spoken English and communication training course designed for students, professionals, and job-seekers who want to speak fluently, confidently, and with impact.
                 </p>
-                <Button className="text-lg px-6 py-3">Enroll Now</Button>
+                <a href='/enrollment'>
+                <Button className="text-lg px-6 py-3">Enroll Now</Button></a>
             </section>
 
-            {/* Features Section */}
             <section className="py-10">
                 <h2 className="text-3xl font-semibold text-center mb-8">What’s Included in the Program</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -86,7 +78,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Countdown */}
             <section className="py-12 text-center">
                 <div className="inline-flex items-center gap-3 justify-center mb-4">
                     <Clock className="w-6 h-6 text-blue-500" />
@@ -97,7 +88,6 @@ export default function SpokenWithPDCCPage() {
                 <p className="text-gray-600">Enroll early to secure your seat!</p>
             </section>
 
-            {/* Skills */}
             <section className="py-12 bg-white">
                 <h2 className="text-3xl font-semibold text-center mb-8">Skills You'll Master</h2>
                 <div className="flex flex-wrap justify-center gap-4 text-gray-700 max-w-4xl mx-auto">
@@ -107,7 +97,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Curriculum */}
             <section className="py-12 max-w-5xl mx-auto">
                 <h2 className="text-3xl font-semibold text-center mb-6">Weekly Curriculum Overview</h2>
                 <ul className="space-y-4 text-gray-700">
@@ -120,7 +109,6 @@ export default function SpokenWithPDCCPage() {
                 </ul>
             </section>
 
-            {/* Who Should Join */}
             <section className="py-12 bg-gray-50 text-center">
                 <h2 className="text-3xl font-semibold mb-8">Who Should Join This Course?</h2>
                 <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto text-gray-700">
@@ -130,7 +118,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Trainer */}
             <section className="py-12 bg-white text-center">
                 <h2 className="text-3xl font-semibold mb-6">Meet Your Trainer</h2>
                 <div className="max-w-3xl mx-auto">
@@ -140,7 +127,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Video Demo */}
             <section className="py-12 text-center bg-gray-100">
                 <h2 className="text-3xl font-semibold mb-6">Watch a Glimpse of Our Training</h2>
                 <div className="max-w-3xl mx-auto">
@@ -148,7 +134,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Course Fee */}
             <section className="text-center py-12 bg-gray-100 rounded-xl mt-12">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Course Fee & Inclusions</h2>
                 <p className="text-lg text-gray-700 mb-2">₹25,000 – one-time payment</p>
@@ -157,7 +142,6 @@ export default function SpokenWithPDCCPage() {
                 </a>
             </section>
 
-            {/* Confidence Guarantee */}
             <section className="py-12 bg-green-50 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Confidence Guarantee</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-4">
@@ -176,7 +160,6 @@ export default function SpokenWithPDCCPage() {
                 <p className="text-gray-600 mt-3">Hurry! Limited seats left.</p>
             </section>
 
-            {/* Testimonials */}
             <section className="py-12 text-center">
                 <h2 className="text-3xl font-semibold mb-6">What Our Students Say</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -199,7 +182,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* FAQs */}
             <section className="py-12 max-w-4xl mx-auto">
                 <h2 className="text-3xl font-semibold text-center mb-6">Frequently Asked Questions</h2>
                 <div className="space-y-4 text-left">
@@ -209,7 +191,6 @@ export default function SpokenWithPDCCPage() {
                 </div>
             </section>
 
-            {/* Final CTA */}
             <section className="text-center py-10">
                 <h2 className="text-2xl font-bold mb-2">Still Have Questions?</h2>
                 <p className="text-gray-600 mb-4">Talk to us on WhatsApp or book a free call.</p>
@@ -217,9 +198,11 @@ export default function SpokenWithPDCCPage() {
                     <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-6 py-3" onClick={handleWhatsApp}>
                         WhatsApp Us
                     </Button>
+                    <a href="/book-demo">
                     <Button className="text-lg px-6 py-3" onClick={handleCalendlyBooking}>
-                        Book Free Call
+                        Book Free Demo
                     </Button>
+                    </a>
                 </div>
             </section>
         </motion.div>
