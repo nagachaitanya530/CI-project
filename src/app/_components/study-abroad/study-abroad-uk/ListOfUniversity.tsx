@@ -1,8 +1,11 @@
-<<<<<<< Updated upstream
-import  ScrollContainer  from "react-indiana-drag-scroll";
-=======
+
+import ScrollContainer from 'react-indiana-drag-scroll';
+
+
+
 import { ScrollContainer } from "react-indiana-drag-scroll";
->>>>>>> Stashed changes
+
+
 function ListOfUniversity()
 {
     const universities = [

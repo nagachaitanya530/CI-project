@@ -32,6 +32,10 @@ const navItems = [
       { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
+
+      { label: "Special Classes", href: "special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+
       { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
@@ -59,6 +63,8 @@ const navItems = [
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
+
 
       { label: "Online Mock Tests", href: "/" },
 
@@ -93,17 +99,42 @@ const navItems = [
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
       { label: "Online Mock Tests", href: "/" },
+
+
+
 
 
 
 
     ],
   },
-  { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
+  {
+    label: "Book Demo",
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
+  },
   { label: "Fees", href: "/fees", icon: FileText },
+
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
+
+
+ 
+
+
+  {
+    label: "Study Abroad", href: "/study-abroad", isButton: true,
+    icon: Globe,
+
+
+
+  },
+
   { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
+
 
   {
     label: "About CI",
@@ -116,8 +147,6 @@ const navItems = [
       { label: "Contact us", href: "/contact_us" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
-
-
 
 
 

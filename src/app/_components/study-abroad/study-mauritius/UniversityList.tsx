@@ -6,26 +6,26 @@ import { Award } from 'lucide-react';
 const universities = [
 
   {
-    name: "Middlesex University",
-    image: "/universitylistimg2.webp",
+    name: "University of Bristol",
+    image: "/unniversityvisitcar1.jpeg",
     popularFor: "Mining & Medical Sciences",
     ranking: "19",
   },
   {
-    name: "California-institute-of-technology",
-    image: "/universitylistimg2.webp",
+    name: "The University Of Edinburgh",
+    image: "/unniversityvisitcar2.jpeg",
     popularFor: "Arts and Humanities",
     ranking: "42",
   },
   {
-    name: "michigan-state-university",
-    image: "/universitylistimg4.webp",
+    name: "Johns Hopkins University",
+    image: "/unniversityvisitcar3.jpeg",
     popularFor: "Engineering",
     ranking: "43",
   },
   {
-    name: "stanford-university",
-    image: "/universitylistimg5.webp",
+    name: "The Unniversity of Melbournen",
+    image: "/unniversityvisitcar4.jpeg",
     popularFor: "Business & Law",
     ranking: "195",
   },

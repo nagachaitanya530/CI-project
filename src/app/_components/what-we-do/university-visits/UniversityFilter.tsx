@@ -32,7 +32,6 @@ export default function UniversityFilter({
           <option value="United Kingdom">United Kingdom</option>
           <option value="United States Of America">United States Of America</option>
         </select>
-
         <select
           name="branch"
           value={filters.branch}
@@ -45,7 +44,6 @@ export default function UniversityFilter({
           <option value="Chandigarh">Chandigarh</option>
           <option value="Cochin">Cochin</option>
         </select>
-
         <input
           type="date"
           name="from"
@@ -53,7 +51,6 @@ export default function UniversityFilter({
           onChange={onChange}
           className="w-full md:w-auto border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none"
         />
-
         <input
           type="date"
           name="to"
@@ -61,7 +58,6 @@ export default function UniversityFilter({
           onChange={onChange}
           className="w-full md:w-auto border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none"
         />
-
         <button
           onClick={onSearch}
           className="w-full md:w-auto bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"

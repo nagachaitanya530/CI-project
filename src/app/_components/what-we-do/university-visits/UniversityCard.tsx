@@ -42,7 +42,6 @@ export default function UniversityCard({ data }: { data: University[] }) {
                 <p className="text-sm text-gray-600 font-medium text-center">
                   AT {univ.location.toUpperCase()}
                 </p>
-
                 <div className="text-sm text-gray-600 space-y-2 text-left w-full mt-2">
                   <p className="flex items-center gap-2">
                     <CalendarDays size={16} /> {univ.date}
@@ -55,7 +54,6 @@ export default function UniversityCard({ data }: { data: University[] }) {
                   </p>
                 </div>
               </div>
-
               <button
                 className="bg-[#143B85] text-white text-sm py-2 px-4 rounded-md text-lg font-semibold w-full mt-4"
                 onClick={() => setShowModal(true)}
