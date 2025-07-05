@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FileText, BadgeCheck } from "lucide-react";
 
-export default function MoreAboutSwitzerland() {
+export default function MoreAboutSwitzerland({ onFreeConsultClick }: { onFreeConsultClick: () => void }) {
   const [tab, setTab] = useState("documents");
 
   const tabs = [
@@ -61,9 +61,12 @@ export default function MoreAboutSwitzerland() {
                
               </ul>
               <div className="mt-6 text-left">
-                <button className="px-6 py-3 bg-white text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
-                  Free Expert Consultation
-                </button>
+               <button
+            onClick={onFreeConsultClick}
+            className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all"
+          >
+            Free Expert Consultation
+          </button>
               </div>
             </>
           ) : (
@@ -83,9 +86,12 @@ export default function MoreAboutSwitzerland() {
                 <li>Obtain the acknowledgment receipt and await approval. Short visas (under three months) typically take 10-15 days, while longer-term visas (over three months) for student visas may take up to 10 weeks.</li>
               </ul>
               <div className="mt-6 text-left">
-                <button className="px-6 py-3 bg-white text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
-                  Free Expert Consultation
-                </button>
+                <button
+            onClick={onFreeConsultClick}
+            className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all"
+          >
+            Free Expert Consultation
+          </button>
               </div>
             </>
           )}
