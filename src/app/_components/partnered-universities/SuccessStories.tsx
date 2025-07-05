@@ -65,8 +65,6 @@ const reviews: Review[] = [
         },
     },
 ]
-
-// Move MediaComponent outside SuccessStory
 const MediaComponent = ({
     media,
     className,
@@ -74,7 +72,7 @@ const MediaComponent = ({
     media: { type: "image" | "video"; src: string; alt: string };
     className?: string;
 }) => {
-    const videoRef = useRef<HTMLVideoElement>(null); 
+    const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handlePlay = () => {
@@ -83,7 +81,6 @@ const MediaComponent = ({
             setIsPlaying(true);
         }
     };
-
     return (
         <div className={`relative ${className}`}>
             {media.type === "video" ? (
@@ -132,14 +129,11 @@ function SuccessStoriesSection() {
         <>
             <div className=" bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 py-8 px-4 my-15 rounded-2xl">
                 <div className="max-w-7xl mx-auto">
-                    {/* Header */}
                     <div className="flex justify-between items-start mb-16">
                         <div>
                             <h1 className="text-5xl font-bold text-gray-900 mb-4">Success Stories</h1>
                             <div className="w-32 h-1 bg-orange-400 rounded-full"></div>
                         </div>
-
-                        {/* Navigation Arrows */}
                         <div className="flex gap-4">
                             <button
                                 onClick={goToPrevious}
@@ -157,8 +151,6 @@ function SuccessStoriesSection() {
                             </button>
                         </div>
                     </div>
-
-                    {/* Cards Container - Horizontal Scroll */}
                     <div className="relative overflow-hidden">
                         <div
                             className="flex transition-transform duration-700 ease-in-out"
@@ -170,12 +162,9 @@ function SuccessStoriesSection() {
                                 <div key={review.id} className="flex-shrink-0 w-full flex justify-start">
                                     <div className="rounded-3xl shadow- overflow-visible w-[1100px] mx-4">
                                         <div className="flex flex-col md:flex-row items-center   ">
-                                            {/* Left Media Section */}
                                             <div className="w-3/4 lg:w-2/5 h-28 lg:h-64  ">
                                                 <MediaComponent media={review.media} className="w-full h-64 " />
                                             </div>
-
-                                            {/* Right Content Section */}
                                             <div className="lg:w-3/5 lg:h-90 p-8 bg-white rounded-2xl flex justify-center lg:justify-end">
                                                 <div className="flex flex-col items-end w-3/4 justify-between">
                                                     <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-normal">
@@ -205,8 +194,6 @@ function SuccessStoriesSection() {
                             ))}
                         </div>
                     </div>
-
-                    {/* Pagination Dots */}
                     <div className="flex justify-center gap-3 mt-16">
                         {reviews.map((_, index) => (
                             <button

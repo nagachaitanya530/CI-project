@@ -71,18 +71,17 @@ export default function Testimonial() {
 
   const testimonial = testimonials[currentIndex];
 
-  if (!testimonial) return null; // safety fallback
+  if (!testimonial) return null;
 
   return (
     <section id="testimonial" className="py-10 bg-gray-100">
       <h1 className="text-4xl font-semibold pb-10">
-                        Testimonial
-                    </h1>
+        Testimonial
+      </h1>
       <div className="px-5">
         <div
           className={`bg-white rounded-lg shadow p-6 flex flex-col items-center text-center transition-opacity duration-500 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
         >
-          {/* Profile Image */}
           <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border border-gray-300">
             <Image
               src={testimonial.image}
@@ -92,35 +91,27 @@ export default function Testimonial() {
               className="object-cover w-full h-full"
             />
           </div>
-
-          {/* Quote */}
           <p className="text-gray-700 text-base mb-4 italic max-w-2xl">
             “{testimonial.quote}”
           </p>
-
-          {/* Author */}
           <div className="text-blue-900 font-semibold">{testimonial.author}</div>
           <div className="text-sm text-gray-500">{testimonial.x_id}</div>
-
-          {/* Navigation Buttons */}
           <div className="flex justify-between w-full mt-6 px-10">
             <button
               onClick={prevTestimonial}
               className="p-2 rounded-full hover:bg-gray-100 transition"
               aria-label="Previous"
             >
-              <ArrowBigLeft/>
+              <ArrowBigLeft />
             </button>
             <button
               onClick={nextTestimonial}
               className="p-2 rounded-full hover:bg-gray-100 transition"
               aria-label="Next"
             >
-              <ArrowBigRight/>
+              <ArrowBigRight />
             </button>
           </div>
-
-          {/* Dots */}
           <div className="flex gap-2 justify-center mt-4">
             {testimonials.map((_, index) => (
               <button

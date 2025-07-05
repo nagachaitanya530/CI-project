@@ -3,7 +3,7 @@ import React from "react";
 const courses = [
   {
     name: "Business Administration",
-    image: "/popular-courses/business-management.jpg" ,
+    image: "/popular-courses/business-management.jpg",
   },
   {
     name: "Engineering",
@@ -13,15 +13,15 @@ const courses = [
     name: "Computer Science",
     image: "/popular-courses/information-technology.jpg",
   },
-   {
+  {
     name: "Hospitality & Tourism",
     image: "/popular-courses/hospitality.jpg",
   },
-   {
+  {
     name: "Education",
     image: "/popular-courses/education-training.jpg",
   },
-   {
+  {
     name: "Health Science",
     image: "/popular-courses/health-science.jpg",
   },
@@ -38,17 +38,13 @@ const PopularCoursesSection = () => {
         </span>{" "}
         In Canada
       </h2>
-
-      {/* Subtext */}
       <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-       Canada is known for offering a wide range of popular courses across various fields of study.
+        Canada is known for offering a wide range of popular courses across various fields of study.
         <br />
-       Here are the top courses in Canada for international students:
+        Here are the top courses in Canada for international students:
       </p>
-
-      {/* Cards */}
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        {courses.map((course, index) => ( // map function for passing data
+        {courses.map((course, index) => (
           <div
             key={index}
             className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white">
@@ -61,4 +57,4 @@ const PopularCoursesSection = () => {
   );
 };
 
-export default PopularCoursesSection ;
+export default PopularCoursesSection;
