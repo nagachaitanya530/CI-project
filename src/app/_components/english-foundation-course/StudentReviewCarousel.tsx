@@ -36,7 +36,6 @@ export default function StudentReviewCarousel() {
           What Our Students Say
           <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-[2px] bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded" />
         </h2>
-
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-6 md:gap-8 px-2">
             {reviews.map((review, index) => (
