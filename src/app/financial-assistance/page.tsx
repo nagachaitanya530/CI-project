@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import NavigationSection from "../_components/navigation1";
-import SpainHero from "../_components/study-abroad/study-in-spain/SpainHero";
+import YourJourney from "../_components/study-abroad/your-journey";
 import FooterSection from "../_components/footer1";
 import ConsultationForm from "../_components/study-abroad/study-in-spain/ConsultationForm";
 
@@ -144,7 +144,7 @@ export default function FinancialAssistancePage() {
             Students or parents who borrow directly can claim tax deductions under Section 80E of the Income Tax Act.
           </p>
         </section>
-        <SpainHero />
+        <YourJourney />
         <FooterSection />
       </main>
     </>

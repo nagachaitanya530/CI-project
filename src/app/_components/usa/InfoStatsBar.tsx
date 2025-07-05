@@ -33,10 +33,21 @@ const item: Variants = {
 const InfoStatsBar = () => {
   return (
     <motion.div
+
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
+
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+
+      viewport={{ once: false, amount: 0.5 }}
+
+      viewport={{ once: false, amount: 0.5 }} // 👈 triggers every time 50% of it enters view
+
+      transition={{ duration: 0.6, ease: "easeOut" }}
+
       className="mt-10 md:mt-16 bg-[#e9eef6] rounded-3xl px-6 py-6 md:px-10 md:py-8 flex flex-col md:flex-row justify-between items-center text-center shadow-sm"
     >
       {stats.map((stat, index) => (

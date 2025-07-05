@@ -49,7 +49,6 @@ export default function ScholarshipsMalaysia() {
           </div>
         </div>
 
-        {/* Right Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -57,7 +56,7 @@ export default function ScholarshipsMalaysia() {
           className="flex justify-center"
         >
           <Image
-            src="/scholarship.webp"
+            src="/stit.jpg"
             alt="Graduation Illustration"
             width={500}
             height={500}

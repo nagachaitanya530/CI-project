@@ -67,6 +67,18 @@ const WhyStudyUsa = () => {
                         ))}
                     </div>
                 </div>
+
+
+
+                {/* Right: Your Finalized Form */}
+                <div className="w-full">
+
+                    {/* <StudyAbroadForm /> */}
+
+                    <StudyAbroadForm />
+
+                </div>
+
             </div>
         </section>
     );
