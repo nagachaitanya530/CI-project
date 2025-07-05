@@ -38,7 +38,7 @@ const Card = ({ image, title, link }: CardProps) => {
 export default function CardPage() {
   const cards = [
     {
-      image:"/swtizerlandstudyvisa/mba.jpg",
+      image:"/swtizerlandstudyvisa/MBA.jpg",
       title: "MBA Degree in Australia for Indian Students",
       link: "/SwitzerlandStudyVisaGuide/MBA",
     },

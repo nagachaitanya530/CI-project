@@ -1,8 +1,25 @@
 "use client";
+import FAQ from "~/app/_components/study-abroad/faq";
+const IndiaFAQs = [
+  {
+    question: "What’s the cost of pursuing a 1 year MBA program in Australia?",
+    answer: "With tuition fees costing between AUD 21,800-AUD 106,650 annually and living costs ranging between AUD 18,000 and AUD 46,080 per year, the cost of pursuing a 1 year MBA Australia differs from university to university.",
+
+  },
+  {
+    question: "Which universities in Australia offer affordable MBA programs?",
+    answer: "A number of universities including Charles Darwin University, Kaplan Business School, Victoria University, Edith Cowan University, Central Queensland University, and Holmes Institute, offer affordable MBA in Australia.",
+
+  },
+  {
+    question: "Which are the popular business schools in Australia?",
+    answer: "Melbourne Business School, ANU College of Business and Economics, Monash Business School, UNSW Business School, and UQ Business School, are among the popular business schools in Australia.",
+  },
+ 
+];
 function MBAinAustralia() {
     return (
-
-        <div className="px-10 md:px-70 py-10 text-gray-700 text-justify space-y-10 bg-white text-lg">
+        <div className="max-w-4xl mx-auto px-4 py-4 space-y-8 text-lg leading-relaxed text-gray-700 text-justify sm:px-6 md:px-10">
             <p>Australia, well-known for its top-tier universities, beautiful scenery, and varied cultures is a highly sought-after study abroad
                 destination. The country offers a distinctive blend of academic prowess and lifestyle appeal to overseas students, owing to its first-rate
                 educational standards, bustling cities viz., Melbourne and Sydney, and possibilities for outdoor pursuits.
@@ -12,7 +29,6 @@ function MBAinAustralia() {
                 education is offered in these programs, providing students with vital abilities in finance, strategy, management, and marketing,
                 while also offering possibilities for networking in the dynamic business community of Australia.
             </p>
-
             <h2 className="text-2xl font-normal text-blue-900">Why study an MBA degree Australia?</h2>
             <p className="text-lg">
                 Pursuing an <strong>MBA in Australia </strong> can be a wise decision for the reasons mentioned below:
@@ -50,7 +66,6 @@ function MBAinAustralia() {
                     <span className="font-semibold"> Route to Permanent Residency:</span>Varied pathways for qualified migrants are offered in Australia, and earning an MBA in the country might be a step towards permanent residency or even citizenship.
                 </li>
             </ol>
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">Best MBA courses in Australia</h2>
             <h3 className="text-lg font-normal text-gray-600 text-justify">Listed below are the best MBA in Australia courses:</h3>
             <ol className=" list-inside space-y-4 text-lg">
@@ -67,7 +82,6 @@ function MBAinAustralia() {
                 <li>MBA in Entrepreneurship</li>
                 <li>MBA in Digital Transformation</li>
             </ol>
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">Best university for MBA in Australia</h2>
             <h3 className="text-lg font-normal text-gray-600 text-justify">Listed below are the best MBA university in Australia:</h3>
             <ol className=" space-y-4 list-inside text-lg">
@@ -82,7 +96,6 @@ function MBAinAustralia() {
                 <li>Macquarie University (Macquarie Business School)</li>
                 <li>University of Technology Sydney (UTS Business School)</li>
             </ol>
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">What's the cost of pursuing an MBA in Australia?</h2>
             <p>Based on the university, location, length of the program, and whether its pursued full-time or part-time,
                 an <strong>MBA Australia cost </strong> can differ substantially. Typically, the <strong>tuition fees for MBA programs</strong> Australia
@@ -91,8 +104,6 @@ function MBAinAustralia() {
                 To help alleviate some of the expenses, bursaries, scholarships, and possibilities for monetary assistance
                 may be accessible. In order to acquire precise cost estimates for particular MBA programs they intend applying to,
                 students should conduct a comprehensive study on and get in touch directly with universities.</p>
-
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">Eligibility Criteria to pursue an MBA in Australia</h2>
             <p><strong>MBA in Australia for Indian students</strong> requires them to fulfill the entry prerequisites mentioned below:</p>
             <p>The student needs to hold a Bachelor’s degree or an equivalent from an accredited university.</p>
@@ -104,7 +115,6 @@ function MBAinAustralia() {
             <p>Submission of recommendation letters from professors or managers.</p>
             <p>As part of the selection procedure certain universities conduct interviews to evaluate the students compatibility for the program.</p>
             <p>Australian visa prerequisites entailing providing evidence of funds and medical insurance coverage need to be fulfilled by overseas students.</p>
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">Job Opportunities after completing an MBA in Australia</h2>
             <h3 className="text-lg font-normal text-gray-600 text-justify">Post completing an <strong>MBA in Australia</strong>, students can opt for the jobs mentioned below:</h3>
             <ol className=" space-y-4 list-inside text-lg">
@@ -118,26 +128,12 @@ function MBAinAustralia() {
                 <li>Human Resources Manager</li>
                 <li>Marketing Manager</li>
             </ol>
-
-            <h2 className="text-2xl font-normal text-blue-900">FAQs</h2>
-            <h3 className="text-xl font-normal text-black">What’s the cost of pursuing a 1 year MBA program in Australia?</h3>
-            <p>
-                With tuition fees costing between AUD 21,800-AUD 106,650 annually and living costs ranging between AUD 18,000 and AUD 46,080 per year, the cost of pursuing a 1 year MBA Australia differs from university to university.
-            </p>
-            <h3 className="text-xl font-normal text-black">Which universities in Australia offer affordable MBA programs?</h3>
-            <p>
-                A number of universities including Charles Darwin University, Kaplan Business School, Victoria University, Edith Cowan University, Central Queensland University, and Holmes Institute, offer affordable MBA in Australia.
-            </p>
-            <h3 className="text-xl font-normal text-black">Which are the popular business schools in Australia?</h3>
-            <p>
-                Melbourne Business School, ANU College of Business and Economics, Monash Business School, UNSW Business School, and UQ Business School, are among the popular business schools in Australia.
-            </p>
-
+            <FAQ faqs={IndiaFAQs} title="FAQs" />
             <div className="flex justify-center">
                 <img
-                    src="../swtizerlandstudyvisa/mba-degree-in-australia-for-indian-students-2.webp"
+                    src="/swtizerlandstudyvisa/MBA.jpg"
                     alt="Visa approval"
-                    className="rounded-3xl shadow-md w-full max-w-4xl object-cover"
+                    className="rounded-3xl shadow-md w-full max-w-4xl object-cover h-100"
                 />
             </div>
             <p>For any further information and to
@@ -176,18 +172,7 @@ function MBAinAustralia() {
                     </svg>
                 </a>
             </div>
-
-
-
-
-
-
         </div>
-
-
-
-
     )
-
 }
 export default MBAinAustralia
