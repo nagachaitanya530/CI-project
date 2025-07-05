@@ -1,5 +1,5 @@
 import { ShieldCheck } from "lucide-react";
-import BookConsultationForm from '~/app/_components/study-abroad/BookConsultationForm';// Make sure path is correct
+
 
 interface WhyStudyItem {
   heading: string;
@@ -64,9 +64,7 @@ function WhyStudy() {
         </div>
 
         {/* Right Form */}
-        <div className="lg:w-2/5">
-          <BookConsultationForm />
-        </div>
+        
       </div>
     </section>
   );

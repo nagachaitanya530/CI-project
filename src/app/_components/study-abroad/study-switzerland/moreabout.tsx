@@ -1,96 +1,139 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FileText, BadgeCheck } from "lucide-react";
+export default function StudyTabs({onFreeConsultClick,}: {onFreeConsultClick: () => void;}
+ ) {
+  const [activeTab, setActiveTab] = useState("documents");
 
-export default function MoreAboutSwitzerland() {
-  const [tab, setTab] = useState("documents");
+  const documentsRef = useRef<HTMLDivElement | null>(null);
+  const visaRef = useRef<HTMLDivElement | null>(null);
 
-  const tabs = [
-    { id: "documents", name: "Documents", icon: <FileText size={18} /> },
-    { id: "visa", name: "Visa", icon: <BadgeCheck size={18} /> },
-  ];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        if (visibleSections.length > 0) {
+          const topMost = visibleSections[0]?.target?.id;
+          if (topMost) {
+            setActiveTab(topMost);
+          }
+        }
+      },
+      {
+        root: null,
+        threshold: 0.5,
+        rootMargin: "0px 0px -40% 0px",
+      }
+    );
+
+    if (documentsRef.current) observer.observe(documentsRef.current);
+    if (visaRef.current) observer.observe(visaRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
-    <section className="py-28 px-6 lg:px-24 bg-white">
-      <h2 className="text-5xl font-bold text-center text-gray-900 mb-12">
-        More About <span className="underline decoration-red-500 underline-offset-[6px]">Switzerland</span>
-      </h2>
+    <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
+      {/* Heading */}
+<h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+  <span>More about </span>
+  <span className="font-bold underline decoration-red-500">
+     Switzerland
+  </span>
+</h2>
 
-      <div className="grid lg:grid-cols-4 gap-10">
-        <div className="flex lg:flex-col gap-4 lg:col-span-1 justify-start">
-          {tabs.map((t) => (
+
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Left Sidebar */}
+        <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
+          <div className="flex md:flex-col gap-4">
             <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                tab === t.id
-                  ? "bg-blue-900 text-white shadow-md"
-                  : "bg-blue-100 text-blue-900 hover:bg-blue-200 hover:text-blue-900"
+              onClick={() => scrollToSection(documentsRef)}
+              className={`py-2 px-4 rounded-full text-left border ${
+                activeTab === "documents"
+                  ? "bg-blue-700 text-white"
+                  : "bg-white text-gray-700"
               }`}
             >
-              {t.icon} {t.name}
+              📄 Documents
             </button>
-          ))}
+            <button
+              onClick={() => scrollToSection(visaRef)}
+              className={`py-2 px-4 rounded-full text-left border ${
+                activeTab === "visa"
+                  ? "bg-blue-700 text-white"
+                  : "bg-white text-gray-700"
+              }`}
+            >
+              🛂 Visa
+            </button>
+          </div>
         </div>
 
-        <motion.div
-          key={tab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="lg:col-span-3 bg-gray-50 p-10 rounded-3xl shadow-lg"
-        >
-          {tab === "documents" ? (
-            <>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Documents required to study in Switzerland
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Some common documents that international students typically need when applying for a course in Switzerland:
-              </p>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Copies of mark sheets of Std X, XII and all the semesters of the Bachelor's degree.</li>
-                <li>Academic Transcripts and Certificates</li>
-                <li>If you have work experience, then at least one work recommendation from the employer who knows you well and can comment on your professional abilities.</li>
-                <li>Statement of Purpose.</li>
-                <li>Curriculum Vitae/Resume.</li>
-                <li>Photocopy of the score cards of GMAT/IELTS/TOEFL/PTE if available/required.</li>
-                <li>Other certificates/achievements at the State and National Level and extra curricular activities.</li>
-               
-              </ul>
-              <div className="mt-6 text-left">
-                <button className="px-6 py-3 bg-white text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
-                  Free Expert Consultation
-                </button>
-              </div>
-            </>
-          ) : (
-            <>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Switzerland Study Visa Process
-              </h3>
-              <p className="text-gray-700 mb-4">
-              <strong>If you want to study in Switzerland, you need a student visa. This is the procedure to apply for a student visa in Switzerland, step by step.</strong>
-              </p>
-             
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Upon receiving acceptance from a Swiss university, contact your country's Swiss Consulate.</li>
-                <li>Complete the Visa Application Form and book an appointment at the Swiss Visa Application Center.</li>
-                <li>Attend the embassy or consulate at the appointed time with the completed application form and all necessary documents.</li>
-                <li>To obtain a Swiss student visa, Indian students need to submit required documents and pay a fee of 160 CHF.</li>
-                <li>Obtain the acknowledgment receipt and await approval. Short visas (under three months) typically take 10-15 days, while longer-term visas (over three months) for student visas may take up to 10 weeks.</li>
-              </ul>
-              <div className="mt-6 text-left">
-                <button className="px-6 py-3 bg-white text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
-                  Free Expert Consultation
-                </button>
-              </div>
-            </>
-          )}
-        </motion.div>
+        {/* Right Side Content */}
+        <div className="flex-1 space-y-12 pr-2">
+          <div
+            id="documents"
+            ref={documentsRef}
+            className="p-6 border rounded-3xl shadow-sm scroll-mt-24"
+          >
+            <h3 className="text-xl font-semibold mb-4">
+              Documents required to study in Switzerland
+            </h3>
+            <h3 className="text-xl font mb-4">Some common documents that international students typically need when applying for a course in Switzerland:</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Copies of mark sheets of Std X, XII and all the semesters of the Bachelor's degree.</li>
+              <li>Two Academic reference letters from professors. One reference in case of UG application.</li>
+              <li>If you have work experience, then at least one work recommendation from the employer who knows you well and can comment on your professional abilities.</li>
+              <li>Passport</li>
+              <li>Statement of Purpose.</li>
+              <li>Curriculum Vitae/Resume.</li>
+              <li>Photocopy of the score cards of GMAT/IELTS/TOEFL/PTE if available/required.</li>
+              <li>Other certificates/achievements at the State and National Level and extra curricular activities.</li>
+            </ul>
+             <button
+            onClick={onFreeConsultClick}
+            className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all"
+          >
+            Free Expert Consultation
+          </button>
+          </div>
+
+          <div
+            id="visa"
+            ref={visaRef}
+            className="p-6 border rounded-3xl shadow-sm scroll-mt-24"
+          >
+            <h3 className="text-xl font-semibold mb-4">
+              Switzerland study visa process
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Submit a filled-in application form</li>
+              <li>Accommodation details</li>
+              <li>Bank statement of parents (MUR 10,000 ≈ ₹2L)</li>
+              <li>4 passport-sized photos</li>
+              <li>Passport biodata photocopy</li>
+              <li>Offer letter with course details</li>
+              <li>
+                <strong>Processing time:</strong> ~4 weeks
+              </li>
+            </ul>
+            <button
+            onClick={onFreeConsultClick}
+            className="mt-10 px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition-all"
+          >
+            Free Expert Consultation
+          </button>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

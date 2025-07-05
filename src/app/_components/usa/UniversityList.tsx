@@ -46,14 +46,12 @@ const universities = [
 const UniversityList = () => {
   const itemsPerPage = 3;
   const totalPages = Math.ceil(universities.length / itemsPerPage);
-
   const [page, setPage] = useState(0);
 
-  // Auto-slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((prev) => (prev + 1) % totalPages);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [totalPages]);
 
@@ -72,29 +70,28 @@ const UniversityList = () => {
         <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base">
           The USA is a top choice for international students seeking a
           prestigious education. Here are some{" "}
-          <strong>top universities in usa</strong> where we have successfully
+          <strong>top universities in the USA</strong> where we have successfully
           placed students.
         </p>
       </div>
 
-      {/* Card Grid (3 at a time) */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700">
-        {visibleUnis.map((uni, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-3xl border border-[#c7d2e5] p-6 shadow-sm"
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+        {visibleUnis.map((uni) => (
+          <article
+            key={uni.name}
+            className="bg-white rounded-3xl border border-[#c7d2e5] p-6 shadow-sm hover:shadow-md transition"
           >
             <div className="mb-4">
               <Image
                 src={uni.logo}
-                alt={uni.name}
-                width={120}
+                alt={`${uni.name} Logo`}
+                width={160}
                 height={40}
                 className="object-contain h-[30px] mb-3"
               />
-              <h4 className="font-semibold text-lg text-gray-900 leading-tight">
+              <h3 className="font-semibold text-lg text-gray-900 leading-tight">
                 {uni.name}
-              </h4>
+              </h3>
             </div>
             <hr className="my-3 border-[#d6e0ee]" />
             <div className="flex items-start gap-2 text-sm text-gray-700 mb-2">
@@ -107,26 +104,24 @@ const UniversityList = () => {
             <div className="flex items-start gap-2 text-sm text-gray-700">
               <Medal className="w-4 h-4 text-blue-700 mt-[2px]" />
               <span>
-                <strong>QS World Ranking</strong>
-                <br />
+                <strong>QS World Ranking</strong> <br />
                 {uni.rank}
               </span>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      {/* Dot Navigation */}
       <div className="mt-6 flex justify-center gap-2">
         {Array.from({ length: totalPages }).map((_, i) => (
           <button
             key={i}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              i === page ? "bg-blue-700 w-5" : "bg-gray-400"
+            aria-label={`View universities ${i * itemsPerPage + 1} - ${
+              Math.min((i + 1) * itemsPerPage, universities.length)
             }`}
             onClick={() => setPage(i)}
-            aria-label={`View universities ${i * itemsPerPage + 1} - ${
-              i * itemsPerPage + itemsPerPage
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              i === page ? "bg-blue-700 w-5" : "bg-gray-400"
             }`}
           />
         ))}

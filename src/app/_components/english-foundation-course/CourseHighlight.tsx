@@ -7,7 +7,6 @@ const CourseHighlight = () => {
   return (
     <section className="bg-white py-14 px-4 md:px-20">
       <div className="flex flex-col md:flex-row gap-8 items-center border rounded-xl p-8 shadow-lg">
-        {/* Left Section - Text */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Join industry-leading course
@@ -23,7 +22,6 @@ const CourseHighlight = () => {
           </ul>
         </div>
 
-        {/* Right Section - Image + Stats */}
         <div className="md:w-1/2 w-full">
           <div className="rounded-lg overflow-hidden mb-4">
             <Image

@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 
 function TOC() {
-  const [activeSection, setActiveSection] = useState<string>('document');
+  const [activeSection, setActiveSection] = useState<string>("document");
 
   const handleScroll = () => {
-    const sections = ['document', 'visa'];
+    const sections = ["document", "visa"];
     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     for (const section of sections) {
@@ -15,7 +15,10 @@ function TOC() {
         const offsetTop = element.offsetTop;
         const offsetHeight = element.offsetHeight;
 
-        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        if (
+          scrollPosition >= offsetTop &&
+          scrollPosition < offsetTop + offsetHeight
+        ) {
           setActiveSection(section);
           break;
         }
@@ -23,29 +26,44 @@ function TOC() {
     }
   };
 
+  
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100; 
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="hidden lg:block sticky top-20">
       <div className="space-y-2">
         <button
-          onClick={() => document.getElementById('document')?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => scrollToSection("document")}
           className={`w-64 py-2 rounded-3xl font-medium transition ${
-            activeSection === 'document' ? 'bg-blue-400 text-white' : 'hover:bg-gray-200'
+            activeSection === "document"
+              ? "bg-blue-400 text-white"
+              : "hover:bg-gray-200"
           }`}
         >
           Document
         </button>
 
         <button
-          onClick={() => document.getElementById('visa')?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => scrollToSection("visa")}
           className={`w-64 py-2 rounded-3xl font-medium transition ${
-            activeSection === 'visa' ? 'bg-blue-400 text-white' : 'hover:bg-gray-200'
+            activeSection === "visa"
+              ? "bg-blue-400 text-white"
+              : "hover:bg-gray-200"
           }`}
         >
           Visa

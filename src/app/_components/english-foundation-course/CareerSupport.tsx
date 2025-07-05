@@ -12,9 +12,7 @@ const CareerSupport = () => {
         </h2>
       </div>
 
-      {/* Services Row */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-10 text-center md:text-left mb-12">
-        {/* Resume Review */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <FileText className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Resume Review</p>
@@ -23,7 +21,6 @@ const CareerSupport = () => {
           </p>
         </div>
 
-        {/* Application Support */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <BookOpen className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Application Support</p>
@@ -32,7 +29,6 @@ const CareerSupport = () => {
           </p>
         </div>
 
-        {/* Visa Support */}
         <div className="flex-1 flex flex-col items-center md:items-start">
           <PlaneTakeoff className="text-indigo-600 mb-2" size={32} />
           <p className="font-semibold text-gray-800">Visa Support</p>
@@ -42,18 +38,17 @@ const CareerSupport = () => {
         </div>
       </div>
 
-      {/* University Access Row */}
       <div className="border-t pt-8 text-center">
         <p className="font-semibold text-lg text-gray-800 mb-6">
           Get access to more than 4000 International universities and colleges
         </p>
         <div className="flex flex-wrap justify-center items-center gap-6">
-  <img src="/english-course/1.jpg" alt="Sheffield Hallam University" className="h-10 md:h-14" />
-  <img src="/english-course/2.png" alt="University of Salford" className="h-10 md:h-14" />
-  <img src="/english-course/3.jpg" alt="Leeds Beckett University" className="h-10 md:h-14" />
-  <img src="/english-course/4.jpg" alt="University of Huddersfield" className="h-10 md:h-14" />
-  <img src="/english-course/5.jpg" alt="Liverpool John Moores University" className="h-10 md:h-14" />
-</div>
+          <img src="/english-course/1.jpg" alt="Sheffield Hallam University" className="h-10 md:h-14" />
+          <img src="/english-course/2.png" alt="University of Salford" className="h-10 md:h-14" />
+          <img src="/english-course/3.jpg" alt="Leeds Beckett University" className="h-10 md:h-14" />
+          <img src="/english-course/4.jpg" alt="University of Huddersfield" className="h-10 md:h-14" />
+          <img src="/english-course/5.jpg" alt="Liverpool John Moores University" className="h-10 md:h-14" />
+        </div>
       </div>
     </section>
   );
