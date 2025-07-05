@@ -148,7 +148,7 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
         </div>
 
         {/* Girl Image */}
-<div className="absolute top-0 z-20 hidden lg:block" 
+<div className="absolute top-0 z-20 hidden lg:block " 
      style={{ 
        left: '70%', 
        transform: 'translate(-45%, -10%)',
@@ -157,7 +157,11 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
   <img 
     src={girlImageSrc}
     alt="Student with globe"
+
     className="w-[550px] h-[470px] object-contain animate-float -m-10" 
+
+    className="w-[550px] h-[470px] object-contain animate-float -mt-10 " 
+
   />
 </div>
 
