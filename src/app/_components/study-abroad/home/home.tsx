@@ -414,7 +414,6 @@ export default function Homepage() {
                         <span className='text-sm text-gray-950'>Of Excellence</span>
                     </h4>
                 </div>
-                {/* Divider Line */}
                 <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
                 <div>
                     <h4 className='text-blue-900 font-normal text-4xl'>
@@ -422,7 +421,6 @@ export default function Homepage() {
                         <span className='text-sm text-gray-950'>Success Stories</span>
                     </h4>
                 </div>
-                {/* Divider Line */}
                 <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
                 <div>
                     <h4 className='text-blue-900 font-normal text-4xl'>100 crore <br />
@@ -431,7 +429,6 @@ export default function Homepage() {
                         </span>
                     </h4>
                 </div>
-                {/* Divider Line */}
                 <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
                 <div>
                     <h4 className='text-blue-900 font-normal text-4xl '>
@@ -441,7 +438,6 @@ export default function Homepage() {
                 </div>
             </div>
             <SuccessStories />
-
             <ContactFormSection />
             <UniversityPartners />
             <StudyDestinationSection />

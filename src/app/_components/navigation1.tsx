@@ -23,74 +23,25 @@ const navItems = [
     {
         label: "Study Abroad",
         dropdown: [
-
-
-           { label: 'UK', href: "/study-abroad/study-abroad-uk" },
-            { label: 'USA', href: 'study-abroad/usa' },
-              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
-                { label: 'Australia', href: "/study-abroad/australia" },
-                  { label: 'Germany', href: 'study-abroad/Germany' },
-           
-            { label: 'Spain', href: '/study-abroad/spain' },
-          
-            { label: 'India', href: '/study-abroad/India' },
-            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
-            { label: 'Spain', href: '/spain' },
-            { label: 'Malaysia', href: '/malaysia' },
-            { label: 'Australia', href: '/study-abroad/Study-Australia' },
-            { label: 'New Zealand', href: '/newzealand' },
-            { label: 'Singapore', href: '/singapore' },
-            { label: 'France', href: '/france' },
-
-
-
-
-
-
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
-            { label: 'USA', href: 'study-abroad/usa' },
+            { label: 'USA', href: '/study-abroad/usa' },
             { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
             { label: 'Australia', href: "/study-abroad/australia" },
+            { label: 'Germany', href: '/study-abroad/Germany' },
             { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
-          
-            { label: 'Itely', href: '/study-abroad/itely' },
-
-            
-            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
-            { label: 'New Zealand', href: '/study-abroad/NewZealand' },       
-            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
-            { label: 'Italy', href: '/study-abroad/italy' },
-
-
-
             { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
-
-
-        
-             { label: 'Switzerland', href: '/study-abroad/Switzerland' },
-            
-
-            { label: 'Germany', href: '/study-abroad/Germany' },
-
-
-            { label: 'Switzerland', href: '/study-abroad/Switzerland' },
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+            { label: 'France', href: '/study-abroad/france' },
+            { label: 'Italy', href: '/study-abroad/italy' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
-
             { label: 'Ireland', href: '/study-abroad/ireland' },
-             { label: 'France', href: '/study-abroad/france' },
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
-
-
-            { label: 'Italy', href: '/italy' },
-
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
-
-             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
-
             { label: 'International', href: '/study-abroad/study-international' },
-            { label: 'Study Abroad', href: '/study-abroad/abroad'},
-
+            { label: 'Study Abroad', href: '/study-abroad/abroad' },
         ]
     },
     {
@@ -117,27 +68,18 @@ const navItems = [
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/scholarships' },
-
-            { label: 'Travel & Forex Assistance', href: '/travel-forex' },
-            { label: 'Visa Assistance', href: '/Visa-assistance' }
-        ]
-
             { label: 'Travel & Forex Assistance', href: '/travel_and_forex_assistance' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
-        ],
-
+        ]
     },
     {
         label: 'What We Do',
         dropdown: [
-
             { label: 'About Us', href: '/AboutUs' },
             { label: 'University Visits', href: '/university-visits' },
-
-             { label: 'What We Do', href: '/What-we-do' },
+            { label: 'What We Do', href: '/What-we-do' },
             { label: 'About Us', href: '/about' },
             { label: 'University Visits', href: '/what-we-do/university-visits' },
-
             { label: 'Work With Us', href: '/work-with-us' },
             { label: 'Partnered Universities', href: '/study-abroad/partnered-universities' },
         ]
