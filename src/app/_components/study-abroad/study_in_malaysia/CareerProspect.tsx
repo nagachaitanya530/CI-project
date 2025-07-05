@@ -7,27 +7,27 @@ import { motion } from "framer-motion";
 const careers = [
   {
     title: "Healthcare & Biotechnology",
-    image: "/healthcare.webp",
+    image: "/images/Healthcare.jpg",
   },
   {
     title: "Engineering",
-    image: "/engineering.webp",
+    image: "/images/Architecture.jpg",
   },
   {
     title: "Finance & Banking",
-    image: "/finance.webp",
+    image: "/images/MBA.jpg",
   },
   {
     title: "Information Technology",
-    image: "/it and cs.webp",
+    image: "/images/Information.jpg",
   },
   {
-    title: "Oil & Gas Industry",
-    image: "/oil gas.webp",
+    title: "Fashion Industry",
+    image: "/fashion.jpg",
   },
   {
     title: "Education & Training",
-    image: "/education.webp",
+    image: "/images/testprep.png",
   },
 ];
 
