@@ -25,6 +25,24 @@ const navItems = [
         dropdown: [
 
 
+           { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+            { label: 'USA', href: 'study-abroad/usa' },
+              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+                { label: 'Australia', href: "/study-abroad/australia" },
+           
+            { label: 'Spain', href: '/study-abroad/spain' },
+          
+            { label: 'India', href: '/study-abroad/India' },
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+            { label: 'Spain', href: '/spain' },
+            { label: 'Malaysia', href: '/malaysia' },
+            { label: 'Australia', href: '/study-abroad/Study-Australia' },
+            { label: 'New Zealand', href: '/newzealand' },
+            { label: 'Singapore', href: '/singapore' },
+            { label: 'France', href: '/france' },
+
+
+
 
 
 
@@ -87,6 +105,7 @@ const navItems = [
     {
         label: 'What We Do',
         dropdown: [
+             { label: 'What We Do', href: '/What-we-do' },
             { label: 'About Us', href: '/about' },
             { label: 'University Visits', href: '/what-we-do/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
