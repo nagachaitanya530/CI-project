@@ -124,7 +124,7 @@ export default function UniversityList() {
 
 
     return (
-        <div className="bg-cyan-100 min-h-screen py-10 px-4">
+        <div className="bg-gray-100  py-10 px-4">
             <div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-center">
                     <span className="underline decoration-red-500 underline-offset-4">

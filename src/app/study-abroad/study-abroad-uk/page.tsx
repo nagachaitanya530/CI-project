@@ -82,8 +82,8 @@ return(
     <div>
         <NavigationSection/>
       <HeroSection/>
-        <section className="bg-blue-200">
-             <div className="comm-section py-12" data-aos="fade-in" data-duration="0" >
+ <section className="bg-blue-200">
+    <div className="comm-section py-12" data-aos="fade-in" data-duration="0" >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {counters.map((counter, index) => (

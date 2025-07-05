@@ -7,7 +7,7 @@ export default function MauritiusBanner() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className=" bg-gradient-to-r from-white to-[#fef5f5] px-4 md:px-20 py-10">
+    <section className=" bg-gradient-to-br from-white via-red-50 to-green-500 px-4 md:px-20 py-10">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
         <div className="text-center md:text-left flex-1">
           <h1 className="text-3xl md:text-5xl font-medium leading-tight">

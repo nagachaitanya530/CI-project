@@ -33,42 +33,7 @@ export default function WhyStudyInSpain() {
         </div>
 
         {/* Right Form */}
-        <div className="flex flex-col border-1 border-gray-300 rounded-4xl p-8 gap-4 w-1/3 h-185">
-        <h1 className="text-blue-900 text-xl font-bold">Book Your Free Consultation with Trustworthy Counsellors</h1>
-
-          <input type="text" placeholder="Name" className={inputClass} />
-          <input type="email" placeholder="Email" className={inputClass} />
-          <input type="tel" placeholder="Mobile Number" className={inputClass} />
-          <input type="text" placeholder="Preferred Course" className={inputClass} />
-
-          <select className={inputClass} defaultValue="">
-            <option value="" disabled>Select Month</option>
-            {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-              .map((month) => (
-                <option key={month} value={month.toLowerCase()}>{month}</option>
-              ))}
-          </select>
-
-          <select className={inputClass} defaultValue="">
-            <option value="" disabled>Select Year</option>
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
-            <option value="2027">2027</option>
-          </select>
-
-          <label className="flex gap-2 items-start text-blue-900 text-sm">
-            <input type="checkbox" className="accent-blue-700 mt-1" />
-            <span>
-              I consent to receiving Calls, WhatsApp, Email and Google RCS from Edwise to assist with this enquiry.
-            </span>
-          </label>
-
-          <input
-            type="submit"
-            value="Submit"
-            className="mt-14 w-fit py-3 px-6 font-semibold text-blue-900 rounded-2xl border border-blue-900 hover:bg-blue-900 hover:text-white cursor-pointer"
-          />
-        </div>
+    
       </div>
     </section>
   );

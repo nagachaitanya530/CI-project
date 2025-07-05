@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SpainHeroSection({ onFreeConsultClick }: { onFreeConsultClick: () => void }) {
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-gradient-to-br from-white via-red-50 to-green-300">
       {/* -------- Hero -------- */}
       <div className="max-w-7xl mx-auto px-4 pt-16 pb-0 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Text */}

@@ -3,7 +3,7 @@ import Link from "next/link";
 function HeroSection(){
     return (
         <section>
-             <div className="inner-hero study-hero" data-aos="fade-in" data-duration="0">
+             <div className="inner-hero study-hero bg-gradient-to-br from-white via-red-50 to-green-100" data-aos="fade-in" data-duration="0">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 py-12">
           {/* Left Section */}
@@ -22,7 +22,7 @@ function HeroSection(){
                 href="../brochure/UK.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition text-center"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition text-center"
               >
                 View & Download Brochure
               </a>
@@ -34,7 +34,7 @@ function HeroSection(){
             <img
               src="https://www.edwiseinternational.com/img/study-abrd-uk.webp"
               alt="Study in UK"
-              className="w-full h-auto rounded-lg shadow-md"
+              className="rounded-lg shadow-md"
             />
           </div>
         </div>

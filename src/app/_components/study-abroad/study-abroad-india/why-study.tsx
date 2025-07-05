@@ -2,7 +2,7 @@ import React from "react";
 
 const StudyInIndiaPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex gap-12 items-start">
           {/* Left Side - Why Study In India */}
@@ -79,92 +79,7 @@ const StudyInIndiaPage = () => {
           </div>
 
           {/* Right Side - Consultation Form */}
-          <div className="w-80 bg-white shadow-xl rounded-xl p-6 border border-gray-100 sticky top-8">
-            <h3 className="text-gray-800 text-base font-semibold mb-6 leading-tight">
-              Book your Free Consultation<br />
-              <span className="text-blue-600">with Trustworthy Counsellors</span>
-            </h3>
-
-            <div className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-3 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Mobile Number"
-                  className="w-full px-4 py-3 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="text"
-                  placeholder="Preferred Course"
-                  className="w-full px-4 py-3 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-                />
-              </div>
-
-              <div>
-                <select className="w-full px-4 py-3 text-sm text-gray-500 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white">
-                  <option>Select Month</option>
-                  <option>January</option>
-                  <option>February</option>
-                  <option>March</option>
-                  <option>April</option>
-                  <option>May</option>
-                  <option>June</option>
-                  <option>July</option>
-                  <option>August</option>
-                  <option>September</option>
-                  <option>October</option>
-                  <option>November</option>
-                  <option>December</option>
-                </select>
-              </div>
-
-              <div>
-                <select className="w-full px-4 py-3 text-sm text-gray-500 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white">
-                  <option>Select Year</option>
-                  <option>2025</option>
-                  <option>2026</option>
-                  <option>2027</option>
-                  <option>2028</option>
-                </select>
-              </div>
-
-              <div className="flex items-start gap-3 pt-2">
-                <input 
-                  type="checkbox" 
-                  id="consent" 
-                  className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <label htmlFor="consent" className="text-xs text-gray-600 leading-relaxed">
-                  I consent to receiving Calls, WhatsApp, Email and Google RCS from Edwise to assist with this enquiry.
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 mt-6 shadow-lg hover:shadow-xl"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

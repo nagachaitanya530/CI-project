@@ -5,7 +5,7 @@ function CostOfStudy() {
     return (
         <>
 
-            <main className="bg-blue-50 rounded-4xl text-black font-sans min-h-screen md:px-5">
+            <main className="bg-blue-50 rounded-4xl text-black font-sans  md:px-5">
                 <section className=" bg-gray p-6 md:p-10 ">
                     <div className="flex flex-col md:flex-row gap-5 ">
 

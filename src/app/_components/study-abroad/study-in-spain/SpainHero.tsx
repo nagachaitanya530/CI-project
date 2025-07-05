@@ -12,7 +12,7 @@ import {
 
 const SpainHero = () => {
   return (
-    <section className="relative mt-10 mx-4 md:mx-12 overflow-visible">
+    <section className="bg-gradient-to-br from-white via-red-50 to-green-300 relative mt-10 mx-4 md:mx-12 overflow-visible">
       {/* Blue Card */}
       <div className="bg-[#0d47a1] text-white px-6 md:px-16 py-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         {/* Left Content */}
