@@ -1,4 +1,5 @@
-// components/InfoStats.tsx
+"use client";
+
 export default function InfoStats() {
   const stats = [
     {
@@ -7,7 +8,7 @@ export default function InfoStats() {
     },
     {
       title: "€10k–€20k",
-      subtitle: "Annual tuition fees",
+      subtitle: "Annual Tuition Fees",
     },
     {
       title: "400K+",
@@ -20,13 +21,22 @@ export default function InfoStats() {
   ];
 
   return (
-    <div className="bg-[#eef2f7] rounded-3xl p-6 md:p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center min-h-[250px]">
-      {stats.map((item, index) => (
-        <div key={index} className="flex flex-col items-center justify-center border-r last:border-none border-gray-300 px-4">
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-900">{item.title}</h2>
-          <p className="text-sm md:text-base font-medium text-gray-800 mt-2">{item.subtitle}</p>
-        </div>
-      ))}
-    </div>
+    <section className="bg-[#eef2f7] rounded-3xl w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-300">
+        {stats.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center py-6 px-4 text-center"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900">
+              {item.title}
+            </h2>
+            <p className="text-sm sm:text-base font-medium text-gray-800 mt-2">
+              {item.subtitle}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

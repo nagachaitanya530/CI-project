@@ -22,9 +22,12 @@ export default function Miscellaneous() {
   ];
 
   return (
-    <section id="misc" className="mt-12 px-4 md:px-10 py-16">
+    <section
+      id="misc"
+      className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-12"
+    >
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
         Miscellaneous <span className="underline decoration-red-500">Details</span>
       </h2>
 
@@ -32,9 +35,16 @@ export default function Miscellaneous() {
       <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
         <dl className="divide-y divide-gray-200">
           {details.map((item, index) => (
-            <div key={index} className="px-6 py-4 flex justify-between items-center">
-              <dt className="text-gray-700 font-medium">{item.label}</dt>
-              <dd className="text-gray-900 font-semibold text-right">{item.value}</dd>
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 px-4 sm:px-6 py-4"
+            >
+              <dt className="text-gray-700 font-medium text-base sm:text-lg">
+                {item.label}
+              </dt>
+              <dd className="text-gray-900 font-semibold text-base sm:text-lg text-left sm:text-right break-words">
+                {item.value}
+              </dd>
             </div>
           ))}
         </dl>

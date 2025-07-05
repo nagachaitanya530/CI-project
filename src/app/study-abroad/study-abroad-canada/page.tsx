@@ -14,49 +14,53 @@ import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "~/app/_components/study-abroad/faq";
 
 
-function StudyInCanada(){
+function StudyInCanada() {
   const FrontendFAQ = [
     {
-      question: "How much does it cost to study in Canada?",
-      answer: "You would need approximately INR 22-26 lakhs for one year of study in Canada, covering tuition fees, accommodation, food, transportation, books, and personal expenses."
+      question: "How many hours of IELTS training is provided by Edwise?",
+      answer: " The IELTS course duration will be 30 hours. "
     },
     {
-      question: "Can I study in Canada without IELTS?",
-      answer: "No, you cannot study in Canada without taking an English language proficiency test. You can choose between IELTS or PTE for this purpose. As the top Canada education consultants in India, we provide coaching for both IELTS and PTE."
+      question: "Will the courseware be given by Edwise or we need to buy?",
+      answer: "Study material will be given when the candidate enrolls at the IELTS coaching center."
     },
     {
-      question: "Is a medical test required for getting a student visa in Canada?",
-      answer: "Yes, a medical examination is required as part of the visa application process for studying in Canada."
+      question: "How many mock tests does Edwise provide?",
+      answer: "  20 full length mock tests are included in coaching at Edwise."
     },
     {
-      question: "What is GIC?",
-      answer: "A GIC, or Guaranteed Investment Certificate, is a mandatory investment required to study at the colleges in Canada for international students, serving as proof of funds for living expenses."
+      question: " What is the difference between Academic and General Exams for IELTS & PTE?",
+      answer: "Academic – Candidates who want to go abroad for study purpose to a particular country. General – Candidates who want to go for immigration to a particular country."
     },
     {
-      question: "How much can I earn while working part time in Canada?",
-      answer: "The hourly wage varies depending on the job and location, but is typically around C$12 to C$20 per hour."
+      question: "What modules do IELTS/PTE/TOEFL include?",
+      answer: "All the tests are English proficiency tests. They have four sections namely Reading, Writing, Listening and Speaking."
+    },
+    {
+      question: "What is the difference between IELTS/PTE/TOEFL?",
+      answer: "IELTS is paper based exam and PTE & TOEFL are online exams, TOEFL offers paper based test as well. All of them are English proficiency tests.."
     }
   ]
 
 
-    return(
-        <>
-        <NavigationSection/>
-        <HeroSection/>
-        <WhyStudy/>
-        <UniversityList/>
-        <PopularCoursesSection/>
-        <CostOfStudy/>
-        <Scholarships/>
-        <CareerProspect/>
-        <MoreAbout/>
-        <RelatedArticles/>
-        <SuccessStory/>
-        <FAQ faqs={FrontendFAQ}/>
-        <YourJourney/>
-        <FooterSection/>
-        </>
-    );
+  return (
+    <>
+      <NavigationSection />
+      <HeroSection />
+      <WhyStudy />
+      <UniversityList />
+      <PopularCoursesSection />
+      <CostOfStudy />
+      <Scholarships />
+      <CareerProspect />
+      <MoreAbout />
+      <RelatedArticles />
+      <SuccessStory />
+      <FAQ faqs={FrontendFAQ} />
+      <YourJourney />
+      <FooterSection />
+    </>
+  );
 }
 
 export default StudyInCanada;

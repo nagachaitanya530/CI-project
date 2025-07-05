@@ -10,7 +10,7 @@ export default function Curriculum() {
     {
       week: "Week 1",
       description: (
-           <div>
+        <div>
           <p>Day 1: Interaction & Overview of Business English</p>
           <ul className="list-disc pl-10 my-5">
             <li>Introduction Overview</li>
@@ -40,7 +40,7 @@ export default function Curriculum() {
         </div>
       ),
     },
-   {
+    {
       week: "Week 2",
       description: (
         <div>
@@ -320,144 +320,144 @@ export default function Curriculum() {
           </ul>
         </div>
       ),
-    },{
-  week: "Week 11",
-  description: (
-    <div>
-      <p>Day 51: Language Specification Session</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Set Clear Objectives (specific skill)</li>
-        <li>Pre-Watching Preparation</li>
-        <li>Active Watching</li>
-        <li>Post Watching</li>
-        <li>Feedback</li>
-      </ul>
-      <p>Day 52: Self-Assessment through Practice</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Reflect and Apply</li>
-      </ul>
-      <p>Day 53: Analytical Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>What Are Analytical Skills?</li>
-        <li>How to Develop Your Analytical Skills</li>
-      </ul>
-      <p>Day 54: Highlighting Your Analytical Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Key Analytical Skills (Critical Thinking, Analysis of Information)</li>
-        <li>Tips to Assess Analytical Skills in Interviews</li>
-      </ul>
-      <p>Day 55: Evaluation of Analytical Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Assessment of Skills</li>
-      </ul>
-    </div>
-  ),
-},{
-  week: "Week 12",
-  description: (
-    <div>
-      <p>Day 56: Confidence Boosting Sessions</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Activities and Exercises to Build Confidence</li>
-      </ul>
-      <p>Day 57: Professional Communication Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Outcome of Professional Communication Skills</li>
-        <li>How to Work on Professional Language</li>
-      </ul>
-      <p>Day 58: Key Components of Professional Communication Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Listening Skills</li>
-        <li>Verbal Communication</li>
-        <li>Nonverbal Communication</li>
-        <li>Cultural Awareness</li>
-      </ul>
-      <p>Day 59: Language Assessment</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Scenario-based Practice</li>
-        <li>Professional Conflict Resolution</li>
-        <li>Feedback</li>
-      </ul>
-      <p>Day 60: Extra Session</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Additional Practice</li>
-        <li>Feedback and Q&A</li>
-      </ul>
-    </div>
-  ),
-},{
-  week: "Week 13",
-  description: (
-    <div>
-      <p>Day 61: Telephonic Etiquette Module</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Manners of Using Telephone Communications</li>
-        <li>Enhance Listening Skills</li>
-        <li>Mock Calls</li>
-        <li>Assessment & Evaluation</li>
-        <li>Scenarios to Attend Call</li>
-      </ul>
-      <p>Day 62: Interview Preparation</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Types of Interviews</li>
-        <li>Tips to Prepare</li>
-        <li>Professional Interview Etiquettes</li>
-        <li>Resume Preparation</li>
-        <li>Commonly Asked Interview Questions</li>
-      </ul>
-      <p>Day 63: Assessment through Practices</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Mock Interviews</li>
-      </ul>
-      <p>Day 64: Presentation Skills</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>What is Presentation Skill?</li>
-        <li>Essentials of Presentation Skills</li>
-        <li>Effective Presentation Skills</li>
-        <li>Delivering Presentation Before Client</li>
-        <li>Develop Strategies for Overcoming Fear</li>
-        <li>Tips to Help You Ace Your Presentation</li>
-      </ul>
-      <p>Day 65: Presentation Skill Evaluation</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Scenario-based Practice</li>
-        <li>Feedback</li>
-      </ul>
-    </div>
-  ),
-}
-,{
-  week: "Week 14",
-  description: (
-    <div>
-      <p>Day 61: Extra Session</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Additional Practice and Feedback</li>
-      </ul>
-      <p>Day 62: Extra Session</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Additional Practice and Q&A</li>
-      </ul>
-      <p>Day 63: Assessment- 1</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Comprehensive Evaluation</li>
-      </ul>
-      <p>Day 64: Assessment- 2</p>
-      <ul className="list-disc pl-10 my-5">
-        <li>Comprehensive Evaluation Continued</li>
-      </ul>
-      <p>Day 65: Assessment- 3</p>
-    </div>
-  ),
-}
-,
+    }, {
+      week: "Week 11",
+      description: (
+        <div>
+          <p>Day 51: Language Specification Session</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Set Clear Objectives (specific skill)</li>
+            <li>Pre-Watching Preparation</li>
+            <li>Active Watching</li>
+            <li>Post Watching</li>
+            <li>Feedback</li>
+          </ul>
+          <p>Day 52: Self-Assessment through Practice</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Reflect and Apply</li>
+          </ul>
+          <p>Day 53: Analytical Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>What Are Analytical Skills?</li>
+            <li>How to Develop Your Analytical Skills</li>
+          </ul>
+          <p>Day 54: Highlighting Your Analytical Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Key Analytical Skills (Critical Thinking, Analysis of Information)</li>
+            <li>Tips to Assess Analytical Skills in Interviews</li>
+          </ul>
+          <p>Day 55: Evaluation of Analytical Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Assessment of Skills</li>
+          </ul>
+        </div>
+      ),
+    }, {
+      week: "Week 12",
+      description: (
+        <div>
+          <p>Day 56: Confidence Boosting Sessions</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Activities and Exercises to Build Confidence</li>
+          </ul>
+          <p>Day 57: Professional Communication Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Outcome of Professional Communication Skills</li>
+            <li>How to Work on Professional Language</li>
+          </ul>
+          <p>Day 58: Key Components of Professional Communication Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Listening Skills</li>
+            <li>Verbal Communication</li>
+            <li>Nonverbal Communication</li>
+            <li>Cultural Awareness</li>
+          </ul>
+          <p>Day 59: Language Assessment</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Scenario-based Practice</li>
+            <li>Professional Conflict Resolution</li>
+            <li>Feedback</li>
+          </ul>
+          <p>Day 60: Extra Session</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Additional Practice</li>
+            <li>Feedback and Q&A</li>
+          </ul>
+        </div>
+      ),
+    }, {
+      week: "Week 13",
+      description: (
+        <div>
+          <p>Day 61: Telephonic Etiquette Module</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Manners of Using Telephone Communications</li>
+            <li>Enhance Listening Skills</li>
+            <li>Mock Calls</li>
+            <li>Assessment & Evaluation</li>
+            <li>Scenarios to Attend Call</li>
+          </ul>
+          <p>Day 62: Interview Preparation</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Types of Interviews</li>
+            <li>Tips to Prepare</li>
+            <li>Professional Interview Etiquettes</li>
+            <li>Resume Preparation</li>
+            <li>Commonly Asked Interview Questions</li>
+          </ul>
+          <p>Day 63: Assessment through Practices</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Mock Interviews</li>
+          </ul>
+          <p>Day 64: Presentation Skills</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>What is Presentation Skill?</li>
+            <li>Essentials of Presentation Skills</li>
+            <li>Effective Presentation Skills</li>
+            <li>Delivering Presentation Before Client</li>
+            <li>Develop Strategies for Overcoming Fear</li>
+            <li>Tips to Help You Ace Your Presentation</li>
+          </ul>
+          <p>Day 65: Presentation Skill Evaluation</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Scenario-based Practice</li>
+            <li>Feedback</li>
+          </ul>
+        </div>
+      ),
+    }
+    , {
+      week: "Week 14",
+      description: (
+        <div>
+          <p>Day 61: Extra Session</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Additional Practice and Feedback</li>
+          </ul>
+          <p>Day 62: Extra Session</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Additional Practice and Q&A</li>
+          </ul>
+          <p>Day 63: Assessment- 1</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Comprehensive Evaluation</li>
+          </ul>
+          <p>Day 64: Assessment- 2</p>
+          <ul className="list-disc pl-10 my-5">
+            <li>Comprehensive Evaluation Continued</li>
+          </ul>
+          <p>Day 65: Assessment- 3</p>
+        </div>
+      ),
+    }
+    ,
     {
       week: "Final Day",
       description: (<p>
-        Day 66: Wind Up Sessions with Conversational Activities only along 
+        Day 66: Wind Up Sessions with Conversational Activities only along
         with written & verbal assessment to have the grade on the certificate
       </p>
-  ),
+      ),
     },
   ];
 
@@ -468,7 +468,6 @@ export default function Curriculum() {
   return (
     <section id="curriculum" className="py-10 px-4 md:py-8 lg:py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-        {/* Left Side: Curriculum List */}
         <div className="lg:col-span-2">
           <h2 className="text-2xl font-semibold mb-6">Curriculum to be covered</h2>
           <ul className="space-y-2 text-sm">
@@ -480,9 +479,8 @@ export default function Curriculum() {
                 >
                   <span className="font-medium">{item.week}</span>
                   <svg
-                    className={`w-5 h-5 text-gray-600 transform transition-transform duration-200 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-gray-600 transform transition-transform duration-200 ${openIndex === index ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -502,53 +500,47 @@ export default function Curriculum() {
             ))}
           </ul>
         </div>
-
-            <div>
-
-              <div className=" mb-5">
-                <div className="bg-cyan-700 text-white rounded-xl p-6 w-full shadow-md transition-all duration-300">
-                  {openIndex !== null && curriculumData[openIndex] ? 
-                  (<>
-                    <p className="text-xl mb-2">Current Week</p>
-                    <h2 className="text-2xl font-semibold">{curriculumData[openIndex].week}</h2>
-                    <p className="text-sm mt-2 text-blue-100">Click to view Curriculum</p>
-                  </>
-                  ) : (
-                    <>
+        <div>
+          <div className=" mb-5">
+            <div className="bg-cyan-700 text-white rounded-xl p-6 w-full shadow-md transition-all duration-300">
+              {openIndex !== null && curriculumData[openIndex] ?
+                (<>
+                  <p className="text-xl mb-2">Current Week</p>
+                  <h2 className="text-2xl font-semibold">{curriculumData[openIndex].week}</h2>
+                  <p className="text-sm mt-2 text-blue-100">Click to view Curriculum</p>
+                </>
+                ) : (
+                  <>
                     <p className="text-xl mb-2">Curriculum</p>
                     <p className="text-sm text-blue-100">Select week for view its Content</p>
-                    </>
-                  )
-                  }
-                </div>
-
-              </div>
-
-            
-        {/* Right Side: Static Info Card */}
-        <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
-          <div className="relative w-full h-85">
-            <Image
-              src="/home/professional-women.png"
-              alt="Sunday Webinar"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
+                  </>
+                )
+              }
+            </div>
           </div>
-          <div className="p-5">
-            <h2 className="text-2xl font-semibold mb-2">Sunday Webinar</h2>
-            <p className="text-base text-gray-600 mb-5">
-              Join our open webinar on Sundays to improve your English communication skills and to get in touch with our huge community of students.
-            </p>
-            <Link
-              href="/english-business-course/free-webinar"
-              className=" px-5 py-3 text-white border rounded-lg bg-cyan-500">
-              Register Free
-            </Link>
+          <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
+            <div className="relative w-full h-85">
+              <Image
+                src="/home/professional-women.png"
+                alt="Sunday Webinar"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+            <div className="p-5">
+              <h2 className="text-2xl font-semibold mb-2">Sunday Webinar</h2>
+              <p className="text-base text-gray-600 mb-5">
+                Join our open webinar on Sundays to improve your English communication skills and to get in touch with our huge community of students.
+              </p>
+              <Link
+                href="/english-business-course/free-webinar"
+                className=" px-5 py-3 text-white border rounded-lg bg-cyan-500">
+                Register Free
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );

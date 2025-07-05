@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Minus, Plus } from "lucide-react"; // Use Heroicons/other if needed
+import { Minus, Plus } from "lucide-react"; 
 
 const faqs = [
   {
@@ -33,7 +33,7 @@ const faqs = [
 ];
 
 export default function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState(-1); // Closed by default
+  const [openIndex, setOpenIndex] = useState(-1); 
 
   const toggleIndex = (index: number) => {
     setOpenIndex(openIndex === index ? -1 : index);

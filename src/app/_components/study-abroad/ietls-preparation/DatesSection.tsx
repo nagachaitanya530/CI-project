@@ -6,20 +6,17 @@ function Dates() {
         { left: "November 2024", right: "16, 30" },
         { left: "December 2024", right: "7, 14, 21, 28" },
         { left: "January 2025", right: "4, 16" },
-
     ]
 
     const testtime = [
         { left: "1st slot", right: "9:00 am to 12:00 pm" },
         { left: "2nd slot", right: "1:00 pm to 4:00 pm" },
         { left: "3rd slot", right: "5:00 pm to 8:00 pm" },
-
     ]
 
     return (
         <>
             <section id="dates">
-
                 <h1 className="text-4xl  my-5">IELTS  <strong className="underline decoration-red-500"> Dates </strong></h1>
                 <ul className="text-lg list-disc px-5 my-2">
                     <li>

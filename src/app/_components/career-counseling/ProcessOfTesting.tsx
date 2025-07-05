@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 const ProcessOfTesting = () => {
   return (
     <div className="bg-[#163887] text-white py-20 px-8 md:px-28 rounded-[40px] mx-4 md:mx-12 mb-24">
-      {/* Heading with animation */}
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-center mb-20"
         initial={{ opacity: 0, y: 40 }}
@@ -20,7 +19,6 @@ const ProcessOfTesting = () => {
         </span>
       </motion.h2>
 
-      {/* Animated Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-black">
         {[
           {

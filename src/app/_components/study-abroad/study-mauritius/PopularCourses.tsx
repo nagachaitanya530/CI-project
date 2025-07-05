@@ -4,28 +4,28 @@ import MauritiusCard from "./MauritiusCard";
 const courses = [
   {
     title: "Tourism Administration",
- image: "/hospitality-img.webp",
+ image: "/popularcoursescard1.jpeg",
 
   },
   {
     title: "Psychology",
-    image: "/Psychologyimg.webp",
+    image: "/popularcoursescard2.avif",
   },
   {
     title: "Information Technology",
-    image: "/InformationTechnology.webp",
+    image: "/popularcoursescard3.avif",
   },
     {
     title: "MBA",
-    image: "/mba.webp",
+    image: "/popularcoursescard4.avif",
   },
     {
     title: "Marketing",
-    image: "/Marketing.webp",
+    image: "/popularcoursescard5.avif",
   },
     {
     title: "Finance",
-    image: "/Finance.webp",
+    image: "/popularcoursescard6.avif",
   },
 ];
 
@@ -40,7 +40,6 @@ export default function PopularCourses() {
           Mauritius is emerging as a popular study abroad destination. <br />
           Here are some of the most popular programs in Mauritius:
         </p>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {courses.map((course, index) => (
             <MauritiusCard key={index} title={course.title} image={course.image} />

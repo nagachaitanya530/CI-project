@@ -3,27 +3,27 @@ import React from "react";
 const courses = [
   {
     name: "Bussiness Management",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/mba-img.webp" , // Replace with your actual image path
+    image: "/uk/management.jpg" , 
   },
   {
     name: "Engineering",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/engrng-img.webp",
+    image: "/uk/engineering.jpg",
   },
   {
     name: "Computer science",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/it-img.webp",
+    image: "/uk/computer.jpg",
   },
    {
     name: "Law",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/law-img.webp",
+    image: "/uk/law.jpg",
   },
    {
     name: "Finance",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/Finance-img.webp",
+    image: "/uk/finance.jpg",
   },
    {
     name: "Architecture",
-    image: "https://www.edwiseinternational.com/img/univ-courses-imgs/architecture-img.webp",
+    image: "/uk/Architecture.jpg",
   },
 ];
 
