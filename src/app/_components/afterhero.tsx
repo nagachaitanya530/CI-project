@@ -8,19 +8,19 @@ const steps = [
     title: "Career Counseling",
     description:
       "Career counseling, also known as career guidance or career coaching, is a process that assists individuals in making informed decisions about their career development and future employment opportunities.",
-    image: "/whatwedo-img-1.jpg",
+    image: "/careerimages.jpg",
   },
   {
     title: "Partnered Universities",
     description:
       "Edwise has partnered with 900+ universities worldwide, and our expert counselors offer personalized advice based on the student's academic background, personal interests, and financial situation.",
-    image: "/whatwedo-img-2.jpg",
+    image: "/partnerimage.jpg",
   },
   {
     title: "Scholarships",
     description:
       "Scholarships are a valuable form of financial aid for international students, awarded based on various criteria. They are aimed to assist students with limited means in obtaining a good education. Scholarship amounts can vary greatly, covering partial to full tuition, room, board, and travel expenses.",
-    image: "/whatwedo-img-3.jpg",
+    image: "/scholarshipimages.jpg",
   },
 ];
 
