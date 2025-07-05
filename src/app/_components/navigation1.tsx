@@ -98,9 +98,15 @@ const navItems = [
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/scholarships' },
+
+            { label: 'Travel & Forex Assistance', href: '/travel-forex' },
+            { label: 'Visa Assistance', href: '/Visa-assistance' }
+        ]
+
             { label: 'Travel & Forex Assistance', href: '/travel_and_forex_assistance' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
         ],
+
     },
     {
         label: 'What We Do',
