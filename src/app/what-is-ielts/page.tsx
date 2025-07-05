@@ -257,14 +257,14 @@ function IeltsPage() {
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="translate-y-0">
                 <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/typeelementorsiteurlhttpsnationalinstituteoflanguage.inwp-jsonelementsid3fd08ddelTypewidgetisInnerfalseisLockedfalsesettingscontent_widthfullspaceunitpxsize87sizesspace_tabletu.png"
+                  image="/Ielts/section2.jpg"
                   title="Customised TestPrep™ Platform"
                   description="Specially developed online conferencing system to make it feel like a physical classroom."
                 />
               </div>
               <div className="translate-y-10">
                 <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/typeelementorsiteurlhttpsnationalinstituteoflanguage.inwp-jsonelementsid3fd08ddelTypewidgetisInnerfalseisLockedfalsesettingscontent_widthfullspaceunitpxsize87sizesspace_tabletu-1.png"
+                  image="/Ielts/section2.1.jpg"
                   title="Dual Certified IELTS™ Coaches"
                   description="A truly interactive experience with experts who have immense experience & Competence"
                   badge="USP"
@@ -272,14 +272,14 @@ function IeltsPage() {
               </div>
               <div className="translate-y-0">
                 <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/nnnws.gif"
+                  image="/Ielts/section2.2.jpg"
                   title="Performance Analytics"
                   description="Track your progress and identify key focus areas to improve your band score."
                 />
               </div>
               <div className="translate-y-10">
                 <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS.gif"
+                  image="/Ielts/section2.3.jpg"
                   title="Live Practice Sessions"
                   description="Experience real exam simulations with expert feedback in real-time."
                 />
@@ -323,7 +323,7 @@ function IeltsPage() {
           <div className="w-full max-w-[1400px] flex flex-col lg:flex-row justify-center items-stretch gap-15">
             {/* Complete Course */}
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-2.png" alt="Complete" className="w-full h-40 object-cover" />
+              <img src="/Ielts/section3.jpg" alt="Complete" className="w-full h-40 object-cover rounded-2xl" />
               <div className="bg-blue-700 p-6 text-white rounded-b-xl">
                 <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">Complete</div>
                 <div className="mb-2">⭐⭐⭐⭐⭐</div>
@@ -342,7 +342,7 @@ function IeltsPage() {
 
             {/* SuperFast Course */}
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-3.png" alt="SuperFast" className="w-full h-40 object-cover" />
+              <img src="/Ielts/section3.1.jpg" alt="SuperFast" className="w-full h-40 object-cover rounded-2xl" />
               <div className="bg-blue-700 p-6 text-white rounded-b-xl">
                 <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">SuperFast</div>
                 <div className="mb-2">⭐⭐⭐⭐⭐</div>
@@ -361,7 +361,7 @@ function IeltsPage() {
 
             {/* Turbo Course */}
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-4.png" alt="Turbo" className="w-full h-40 object-cover" />
+              <img src="/Ielts/section3.2.jpg" alt="Turbo" className="w-full h-40 object-cover rounded-2xl" />
               <div className="bg-blue-700 p-6 text-white rounded-b-xl">
                 <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">Turbo</div>
                 <div className="mb-2">⭐⭐⭐⭐⭐</div>
@@ -434,14 +434,14 @@ function IeltsPage() {
             </blockquote>
 
             {/* Two Images */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               <img
-                src="https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-2-qjjs4gfg5sssvm817zqlh8ljx02u252mjbg7n3crwg.jpg"
+                src="/Ielts/section4.1.jpg"
                 alt="IELTS Visual 1"
-                className="rounded shadow-lg transform transition-transform hover:scale-105"
+                className="rounded shadow-lg transform  hover:scale-105 delay-200"
               />
               <img
-                src="https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Add-a-subheading-1-q576f4izys1q33i16xybj3s9sfs5eeogs7chv1dhkw.png"
+                src="/Ielts/section4.jpg"
                 alt="IELTS Visual 2"
                 className="rounded shadow-lg transform transition-transform hover:scale-105 delay-200"
               />
@@ -491,7 +491,7 @@ function IeltsPage() {
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-qqp6vkzdhybwhd2h9s29xngv04qb7eczdhloyqo9c0.png')" }}>
+            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "/Ielts/sectin5.jpg" }}>
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
               <div className="relative z-10 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
@@ -504,7 +504,7 @@ function IeltsPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-1-qqp74dqzh4dj5yacw2zjrxj76zd09eaix1gbozml34.png')" }}>
+            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "" }}>
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
               <div className="relative z-10 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
@@ -518,7 +518,7 @@ function IeltsPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/IMG_5464-pp8tsyc8k1tqn19y410hpaozeugrmoc11bglegnm0w.png')" }}>
+            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "" }}>
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
               <div className="relative z-10 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
@@ -728,7 +728,7 @@ function IeltsPage() {
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/05/bb-content-04.png"
+              src="/Ielts/section6.jpg"
               alt="What is IELTS"
               width={570}
               height={516}
@@ -894,7 +894,7 @@ function IeltsPage() {
           {/* Left Image Column */}
           <div className="w-full md:w-1/2">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/05/Untitled-design-41.png"
+              src="/Ielts/section8.jpg"
               alt="IELTS Coaching"
               className="rounded-lg shadow-md w-full h-auto"
 

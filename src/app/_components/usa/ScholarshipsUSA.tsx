@@ -29,7 +29,7 @@ const ScholarshipsUSA = () => {
         {/* Right Image */}
         <div className="flex justify-center">
           <Image
-            src="/study-abroad/usa-girl2.webp"
+            src="/study-abroad/usa-scholar.jpg"
             alt="Scholarships for Indian Students in the USA"
             width={450}
             height={450}

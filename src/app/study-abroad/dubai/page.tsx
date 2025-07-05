@@ -61,7 +61,7 @@ export default function studyabroad() {
        <FAQ faqs={IndiaFAQs} title="FAQs" />
        
        <YourJourney />
-       <FooterSection/>
+       
       
       
 

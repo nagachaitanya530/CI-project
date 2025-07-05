@@ -91,7 +91,90 @@ export default function WhyStudyInMalaysia() {
           </div>
         </div>
 
+<<<<<<< Updated upstream
         
+=======
+        {/* Right: Form */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="w-full lg:w-1/3 bg-white border border-gray-300 rounded-xl p-6 shadow-sm self-start"
+        >
+          <h3 className="text-black text-lg font-semibold mb-4">
+            Book your Free Consultation with Trustworthy Counsellors
+          </h3>
+          <form className="flex flex-col gap-4">
+            <input
+              type="text"
+              placeholder="Name"
+              className="border border-gray-300 p-3 rounded-md text-sm"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="border border-gray-300 p-3 rounded-md text-sm"
+            />
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              className="border border-gray-300 p-3 rounded-md text-sm"
+            />
+            <input
+              type="text"
+              placeholder="Preferred Course"
+              className="border border-gray-300 p-3 rounded-md text-sm"
+            />
+            <select className="border border-gray-300 p-3 rounded-md text-sm">
+              <option value="" disabled selected>
+                Select Month
+              </option>
+              {[
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ].map((month) => (
+                <option key={month} value={month.toLowerCase()}>
+                  {month}
+                </option>
+              ))}
+            </select>
+            <select className="border border-gray-300 p-3 rounded-md text-sm">
+              <option value="" disabled selected>
+                Select Year
+              </option>
+              {[2025, 2026, 2027].map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+            <label className="flex gap-2 items-start text-sm text-black">
+              <input type="checkbox" className="accent-blue-600 mt-1" />
+              <span>
+                I consent to receiving Calls, WhatsApp, Email and Google RCS
+                from Edwise to assist with this enquiry.
+              </span>
+            </label>
+            <input
+  type="submit"
+  value="Submit"
+  className="w-fit py-2 px-5 font-bold text-blue-900 border border-blue-900 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer transition duration-300"
+/>
+
+          </form>
+        </motion.div>
+>>>>>>> Stashed changes
       </div>
     </section>
   );
