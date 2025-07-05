@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
+=======
 import { ShieldCheck } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";
+>>>>>>> Stashed changes
 
 interface WhyStudy {
     image: string
@@ -66,7 +69,11 @@ function WhyStudy() {
 
                     {/* Right Form  */}
                     <div className="lg:w-2/6 lg:mt-10 p-3 lg:p-10">
+<<<<<<< Updated upstream
+                            
+=======
                             <BookConsultationForm/>
+>>>>>>> Stashed changes
                     </div>
 
                 </div>
