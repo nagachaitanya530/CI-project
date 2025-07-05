@@ -2,7 +2,11 @@ import React from 'react'
 import More from '../../_components/study-abroad/Study-Australia/More'
 import Related from '../../_components/study-abroad/Study-Australia/Related-Articles'
 
+<<<<<<< Updated upstream
 
+=======
+import Testimonials from '../../_components/study-abroad/Study-Australia/Testimonials'
+>>>>>>> Stashed changes
 import CostStudying from '../../_components/study-abroad/Study-Australia/Cost-Of-Studying'
 
 import WhyStudy from '../../_components/study-abroad/Study-Australia/why'
