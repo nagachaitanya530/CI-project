@@ -69,12 +69,12 @@ const navItems = [
     isButton: true,
     icon: CalendarCheck,
   },
-  { label: "Fees", href: "/", icon: FileText },
+  { label: "Fees", href: "/fees", icon: FileText },
 
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
   {
-    label: "Study Abroad", href: "/", isButton: true,
+    label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
 
   

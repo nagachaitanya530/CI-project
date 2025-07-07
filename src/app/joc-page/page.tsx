@@ -1,6 +1,6 @@
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import Joc from "./main";
-import Footer from "../_components/footer1";
+import Footer from "../_components/Footer";
 
 export default function JocPage() {
     return (

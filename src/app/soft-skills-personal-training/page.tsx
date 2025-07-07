@@ -1,12 +1,12 @@
 'use client'
 import { useState } from "react";
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import { title } from "process";
 import About from "../soft-skills-personal-training/About"
 import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
-import Footer from "../_components/footer1";
+import Footer from "../_components/Footer";
 
 
 
