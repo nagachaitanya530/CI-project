@@ -7,6 +7,15 @@ import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+>>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
 
 function SoftskillPesronTraining() {
 const [activeTab, setActiveTab] = useState('About');

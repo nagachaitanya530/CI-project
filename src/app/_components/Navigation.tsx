@@ -29,7 +29,11 @@ const navItems = [
 
 
 
+      { label: "Special Classes", href: "/" },
+
+
       { label: "Special Classes", href: "special-classes" },
+
       { label: "IELTS Classes", href: "/what-is-ielts" },
       {
        label: "Spoken English",
@@ -38,28 +42,45 @@ const navItems = [
          
 
 
+
       { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
+
 
           {
             label: "English Courses",
             dropdown: [
 
               { label: "English Foundation Personal", href: "/english-foundation-course" },
+
+              
+
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
               { label: "Corporate Training English", href: "/" },
             ],
           },
+
+
+        ],
+      },
+
+
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+    
+
+    
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
+
+
 
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/" },
+
 
 
 
@@ -77,12 +98,18 @@ const navItems = [
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
 
+
  
+
 
 
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
+
+
+  
+
 
 
 

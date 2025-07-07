@@ -47,6 +47,15 @@ const NAV_ITEMS = [
         label: "Test Preparations",
         dropdown: [
 
+<<<<<<< HEAD
+               { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+                { label: 'USA', href: 'study-abroad/usa' },
+              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+                
+           
+            { label: 'Spain', href: '/study-abroad/spain' },
+            
+=======
 
 
           { label: "All Tests", href: "/tests" },
@@ -77,16 +86,82 @@ const NAV_ITEMS = [
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
             { label: 'Ireland', href: '/study-abroad/ireland' },
 
+>>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
 
             { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
+
+          
+            
+            
+
+
+           
+            { label: 'Malaysia', href: 'study-abroad/study_in_malaysia' },
             { label: 'Australia', href: '/study-abroad/Study-Australia' },
-            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            
+
+           
+            
+          
+
+            
+
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+<<<<<<< HEAD
+          
+
+            
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+
+
+
+           
+
+     
+
+           
+    
+=======
+>>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
 
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
             { label: 'Italy', href: '/study-abroad/italy' },
+
+
             { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+<<<<<<< HEAD
+
+
+            { label: 'Germany', href: '/study-abroad/Germany' },
+             
+
+            
+
+            
+            
+            
+         
+            { label: 'Dubai', href: '/study-abroad/dubai' },
+
+            { label: 'Ireland', href: '/study-abroad/ireland' },
+             { label: 'France', href: '/study-abroad/france' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+
+            
+
+
+           
+
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+
+            
+
+            
+           
+=======
             { label: 'Germany', href: '/study-abroad/Germany' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
 
@@ -98,18 +173,27 @@ const NAV_ITEMS = [
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad/abroad' },
+>>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
         ]
 
     },
     {
         label: 'Student Services',
         dropdown: [
-            { label: 'Student Services', href: '/student-services' },
             {
                 label: 'Test Preparations',
                 dropdown: [
-                    { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
+                    { label: 'All Tests', href: '/tests' },
                     { label: 'TOEFL', href: '/toefl' },
+<<<<<<< HEAD
+                    { label: 'IELTS', href: '/ielts' },
+                    { label: 'GMAT', href: '/gmat' },
+                    { label: 'GRE', href: '/gre' },
+                    { label: 'SAT', href: '/sat' },
+                    { label: 'CAEL', href: '/cael' },
+                    { label: 'ACT', href: '/act' },
+                    { label: 'PTE', href: '/pte' },
+=======
                     { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
 
                     { label: 'GMAT', href: '/gmat' },
@@ -127,11 +211,12 @@ const NAV_ITEMS = [
                     { label: 'PTE', href: '/PTE' },
 
                     { label: 'ACT', href: '/ACT-Preparation' },
+>>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
             { label: 'Career Counseling', href: '/career-counseling' },
-            { label: 'Admission Guidance', href: '/admission-guidence' },
+            { label: 'Admission Guidance', href: '/admission-guidance' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/study-abroad/scholarship' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
