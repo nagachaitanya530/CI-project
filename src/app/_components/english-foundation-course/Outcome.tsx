@@ -7,7 +7,11 @@ const skills = [
     title: "Writing Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 85,
+<<<<<<< HEAD
     color: "#f97316",
+=======
+    color: "#f97316", 
+>>>>>>> changes_ci
   },
   {
     title: "Grammar Skills",
@@ -19,19 +23,30 @@ const skills = [
     title: "Speaking Skills",
     level: "CEFR B2 Level Proficiency",
     percent: 82,
+<<<<<<< HEAD
     color: "#e11d48",
+=======
+    color: "#e11d48", 
+>>>>>>> changes_ci
   },
   {
     title: "Listening Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 87,
+<<<<<<< HEAD
     color: "#a21caf",
+=======
+    color: "#a21caf", 
+>>>>>>> changes_ci
   },
 ];
 
 export default function Outcome() {
   const [progress, setProgress] = useState(0);
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
@@ -78,7 +93,10 @@ export default function Outcome() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
         <div className="w-52 md:w-72 mx-auto">
           <CircularProgressbar
             value={progress}

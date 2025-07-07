@@ -32,8 +32,7 @@ const Classes = () => {
         }
     ];
 
-    const handleCardClick = (url: string) => {
-        // Ensure URL has proper protocol
+    const handleCardClick = (url: string) => {      
         const finalUrl = url.startsWith('http') ? url : `https://${url}`;
         window.open(finalUrl, '_blank', 'noopener,noreferrer');
     };
@@ -46,8 +45,7 @@ const Classes = () => {
                         key={index}
                         onClick={() => handleCardClick(work.url)}
                         className={`relative rounded-xl overflow-hidden shadow-lg bg-gray-50 text-white h-[600px] cursor-pointer group`}
-                    >
-                        {/* Image positioned at top */}
+                    >                      
                         <div className="relative h-1/2 w-full cursor-pointer transition-transform hover:scale-105">
 
                             <img
@@ -61,8 +59,7 @@ const Classes = () => {
                                     {work.price}
                                 </span>
                             </div>
-                        </div>
-                        {/* Content positioned below image */}
+                        </div>                     
                         <div className="p-8 flex flex-col h-1/2 relative z-10 ">
                             <div className="mb-4">
                                 <h3 className="text-xl font-semibold text-black mb-3 ">{work.title}</h3>

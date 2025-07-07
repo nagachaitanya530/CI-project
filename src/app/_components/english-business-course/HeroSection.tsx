@@ -4,9 +4,15 @@ import Link from "next/link";
 function HeroSection() {
     return (
         <>
+<<<<<<< HEAD
             <section className="bg-cyan-100 shadow-2xl flex flex-col md:flex-row px-4 md:px-10 lg:px-50 py-10">
                 <div className="left mb-10 w-full lg:w-1/2">
                     <Image className="h-8 ml-0 m-5" src="" alt="Website-Logo" />
+=======
+           <section className="bg-cyan-100 shadow-2xl flex flex-col md:flex-row px-4 md:px-10 lg:px-50 py-10">
+                <div className="left mb-10 w-full lg:w-1/2">
+                    <img className="h-8 ml-0 m-5" src="" alt="Website-Logo" />
+>>>>>>> changes_ci
                     <h2 className="text-4xl font-bold mb-6">
                         ENGLISH BUSINESS COURSE: Personal Training.</h2>
                     <p className="mb-6  text-gray-500 ">

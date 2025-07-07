@@ -1,8 +1,8 @@
+import Link from 'next/link';
 export default function OnlineCourses() {
     return (
         <div className="min-h-screen bg-white py-12 px-4 -mt-64">
-            <div className="max-w-6xl mx-auto">
-                {/* Header Section */}
+            <div className="max-w-6xl mx-auto">               
                 <div className="text-center mb-16">
                     <p className="text-gray-600 text-lg mb-4">Do you struggle with</p>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -19,9 +19,7 @@ export default function OnlineCourses() {
                             </svg>
                         </span>
                     </h1>
-                </div>
-
-                {/* Problem Statements */}
+                </div>             
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <div className="flex items-start space-x-3">
                         <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -29,57 +27,48 @@ export default function OnlineCourses() {
                         </div>
                         <p className="text-gray-700 font-medium">You can't make proper sentences</p>
                     </div>
-
                     <div className="flex items-start space-x-3">
                         <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-bold text-lg">?</span>
                         </div>
                         <p className="text-gray-700 font-medium">You want to perform well in interviews</p>
                     </div>
-
                     <div className="flex items-start space-x-3">
                         <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-bold text-lg">?</span>
                         </div>
                         <p className="text-gray-700 font-medium">Your vocabulary is very limited</p>
                     </div>
-                </div>
-
-                {/* Courses Section */}
+                </div>               
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Side - Course Cards */}
-                    <div className="space-y-6">
-                        {/* IELTS Course */}
+                    <div className="space-y-6">                       
                         <div className="bg-blue-50 rounded-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Online IELTS™ Courses</h3>
                             <p className="text-gray-600 mb-6">IELTS General & Academic Online Classes</p>
+                            <Link href="/what-is-ielts">
                             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-md transition-colors">
                                 KNOW MORE
                             </button>
-                        </div>
-
-                        {/* English AdvantEdge Course */}
+                            </Link>
+                        </div>                       
                         <div className="bg-blue-50 rounded-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Online English AdvantEdge™</h3>
                             <p className="text-gray-600 mb-6">Foundation, Business and Advanced English Courses</p>
                             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-md transition-colors">
                                 KNOW MORE
                             </button>
-                        </div>
-
-                        {/* Polyglot Course */}
+                        </div>                      
                         <div className="bg-blue-50 rounded-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Online Polyglot™ Courses</h3>
                             <p className="text-gray-600 mb-6">French, Spanish and German Online Courses</p>
+                            <Link href="/foreign-languages">
                             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-md transition-colors">
                                 KNOW MORE
                             </button>
+                            </Link>
                         </div>
                     </div>
-
-                    {/* Right Side - Profile Images */}
                     <div className="space-y-8 -ml-96 ">
-                        {/* IELTS Profile */}
                         <div className="flex items-center justify-center -mt-18  transition-opacity duration-300">
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">
@@ -99,8 +88,6 @@ export default function OnlineCourses() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Spoken English Profile */}
                         <div className="flex items-center justify-center mt-24">
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">
@@ -121,8 +108,6 @@ export default function OnlineCourses() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Foreign Languages Profile */}
                         <div className="flex items-center justify-center mt-24">
                             <div className="relative">
                                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg hover:opacity-35 transition-opacity duration-300">

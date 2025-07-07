@@ -11,9 +11,7 @@ import CourseCards from '~/components/ui/progressbar';
 import AITestingPortalComplete from './ai-testing-portal';
 import TrustedCompanies from './trusted-companies';
 import OnlineCourses from './online-courses';
-
 import BlogPage from './blog';
-
 import TestimonialsSection from './reviewsection';
 import BookingSystem from '../book-demo';
 import StudentReviewCarousel from '../english-foundation-course/StudentReviewCarousel';
@@ -54,22 +52,16 @@ function BottomSection() {``
   lg:px-8
   lg:py-10
 `}>
-
-            {/* Bottom Section with Grid Background */}
             <div className="relative w-full max-w-7xl mx-auto mt-8 lg:mt-16 p-4">
-                {/* Optional: Grid background behind the teal container */}
                 <div
                     className="absolute inset-0 bg-repeat bg-center opacity-10 rounded-2xl"
                     style={{
                         backgroundImage: "url('/placeholder.svg?height=40&width=5')",
                         backgroundSize: "5px 40px",
                         filter: "grayscale(100%) brightness(110%)",
-                    }}
-                />
-
-                <div className="relative bg-teal-600 rounded-2xl overflow-hidden shadow-xl">
+                    }}/>
+      <div className="relative bg-teal-600 rounded-2xl overflow-hidden shadow-xl">
                     <div className="flex flex-col lg:flex-row items-center lg:items-start">
-                        {/* Image Section */}
                         <div className="w-full lg:w-auto flex justify-center lg:justify-start p-6 lg:p-8 lg:pr-0">
                             <div className="relative">
                                 <img
@@ -79,10 +71,7 @@ function BottomSection() {``
                                 />
                             </div>
                         </div>
-
-                        {/* Content Section */}
                         <div className="flex-1 text-white p-6 lg:p-8 lg:pl-6">
-                            {/* Heading */}
                             <div className="mb-8 lg:mb-10">
                                 <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                                     Communication, Language, and Study
@@ -90,7 +79,6 @@ function BottomSection() {``
                                     Abroad Programmes.
                                 </h2>
                             </div>
-                            {/* Courses List */}
                             <div className="bg-white/10 rounded-2xl overflow-hidden shadow-md backdrop-blur-md">
                                 {courses.map((course, i) => (
                                     <div
@@ -98,7 +86,6 @@ function BottomSection() {``
                                         className={`flex items-center justify-between p-4 sm:p-5 lg:p-6 group hover:bg-white/5 transition-colors duration-200 ${i !== courses.length - 1 ? "border-b border-white/20" : ""
                                             }`}
                                     >
-                                        {/* Left Section */}
                                         <div className="flex items-start sm:items-center gap-3 sm:gap-4 flex-1">
                                             <div className="w-6 h-6 bg-teal-400 rounded-full flex items-center justify-center mt-1 sm:mt-0 flex-shrink-0">
                                                 <Check className="w-4 h-4 text-teal-900" />
@@ -110,8 +97,6 @@ function BottomSection() {``
                                                 <p className="text-sm sm:text-base text-white/80 leading-relaxed">{course.desc}</p>
                                             </div>
                                         </div>
-
-                                        {/* Right Arrow */}
                                         <div className="ml-4 flex-shrink-0">
                                             <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-all duration-200 group-hover:translate-x-1">
                                                 <svg
@@ -146,9 +131,7 @@ const Liveclasses = () => {
     return (
         <div className="max-w-6xl rounded-lg mx-auto px-4 py-12 mt-12 mb-12 bg-white">
             <div className="flex flex-col md:flex-row gap-12 items-center">
-                {/* Left side - Values list */}
                 <div className="md:w-1/2">
-
                     <ul className="space-y-6">
                         <Computer className='w-12 h-12' />
                         <h2 className="flex items-start text-3xl font-semibold text-blue-950 mb-8">Live Online Classes With Specialised Portal to Facilitate Excellent Environment of Learning</h2>
@@ -159,8 +142,6 @@ const Liveclasses = () => {
                         ))}
                     </ul>
                 </div>
-
-                {/* Right side - Image */}
                 <div className="md:w-1/2 mt-8 md:mt-0">
                     <img
                         src='../../home/video-conference.jpg'
@@ -187,10 +168,8 @@ const OnlineIeltsClasses = () => {
     return (
         <div className="max-w-6xl mx-auto px-4 mt-12 mb-12 py-10  rounded-lg">
             <div className="flex flex-col md:flex-row gap-12 items-center">
-                {/* Left side - Values list */}
                 <div className="md:w-1/2">
                     <h2 className="text-2xl font-sans  text-gray-950  mb-8">How do Online IELTS Classes work?</h2>
-
                     <ul className="space-y-6">
                         {Ieltsclasses.map((value, index) => (
                             <li key={index} className="flex items-start">
@@ -202,8 +181,6 @@ const OnlineIeltsClasses = () => {
                         ))}
                     </ul>
                 </div>
-
-                {/* Right side - Image */}
                 <div className="md:w-1/2 w-full h-full  rounded-lg  p-4">
                     <StudentReviewCarousel />
                 </div>
@@ -236,9 +213,7 @@ const LanguageLandingPage: React.FC = () => {
             <BookingSystem />
 
             <div className="flex flex-col md:flex-row justify-center items-center max-w-6xl -mt-24 mx-auto px-6">
-                {/* Left Box */}
                 <div className="bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 opacity-90 rounded-xl shadow-lg p-6 h-screen mx-auto ">
-
                     <img
                         src="/home/world-map.png"
                         className='w-full h-[50%]' />
@@ -255,14 +230,10 @@ const LanguageLandingPage: React.FC = () => {
                         Know More and Join
                     </button>
                 </div>
-
-                {/* Right Box */}
                 <div className="bg-white p-6 max-w-md w-full -mt-20">
                     <div className="flex justify-center lg:justify-end">
                         <div className="relative">
-                            {/* Purple circular background */}
                             <div className="w-80 h-80 lg:w-40 lg:h-40 rounded-full bg-cyan-600 flex items-center justify-center overflow-hidden">
-                                {/* Student image */}
                                 <div className="w-20 h-20 lg:w-40 lg:h-40 rounded-full overflow-hidden">
                                     <img
                                         src="/home/free-consultancy.png?height=400&width=400"
@@ -380,10 +351,10 @@ const LanguageLandingPage: React.FC = () => {
 
                         <p className="text-gray-600 leading-relaxed">
                             Aalions Institute of Language (CI) has been training students for international English Exams like
-                            <Link href="/dummy" className="text-blue-600 hover:underline"> IELTS</Link>, TOEFL and PTE, while delivering exceptional results across the board since the beginning. If you are planning to appear in any such exam, CI is the best institute for study abroad exams. Online IELTS Class with expert trainers and continuous assessment through regular mock tests. Our target is 8+ Bands for every student that we teach. Join NIL's Online IELTS Course today.
+                            <Link href="/what-is-ielts" className="text-blue-600 hover:underline"> IELTS</Link>, TOEFL and PTE, while delivering exceptional results across the board since the beginning. If you are planning to appear in any such exam, CI is the best institute for study abroad exams. Online IELTS Class with expert trainers and continuous assessment through regular mock tests. Our target is 8+ Bands for every student that we teach. Join NIL's Online IELTS Course today.
                         </p>
                         <Link
-                            href="/dummy"
+                            href="/book-demo"
                             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
                         >
                             Book a session
@@ -404,7 +375,6 @@ const LanguageLandingPage: React.FC = () => {
             <OnlineIeltsClasses />
             <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    {/* Header Section */}
                     <div className="text-center mb-16">
                         <h1 className="text-3xl md:text-3xl lg:text-2xl font-semibold text-gray-900 mb-8 leading-tight">
                             National Institute of Language India's Best English
@@ -417,10 +387,7 @@ const LanguageLandingPage: React.FC = () => {
                             level.
                         </p>
                     </div>
-
-                    {/* Features Section */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                        {/* Verbal Ability and Grammar */}
                         <div className="bg-white  overflow-hidden">
                             <div className="aspect-video relative">
                                 <img
@@ -437,8 +404,6 @@ const LanguageLandingPage: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-
-                        {/* Vocabulary Enhancement */}
                         <div className="bg-white overflow-hidden">
                             <div className="aspect-video relative">
                                 <img
@@ -456,8 +421,6 @@ const LanguageLandingPage: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-
-                        {/* Personality Development */}
                         <div className="bg-white  overflow-hidden">
                             <div className="relative">
                                 <img
@@ -479,29 +442,23 @@ const LanguageLandingPage: React.FC = () => {
                 </div>
             </div>
             <div className="w-full">
-                {/* Main Banner Section */}
                 <div className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-500 overflow-hidden h-96 -mt-8">
                     <div className="max-w-6xl mx-auto px-4 py-12 lg:py-10s">
                         <div className="grid lg:grid-cols-2 gap-8 items-center">
-                            {/* Left Content */}
                             <div className="text-white space-y-6">
                                 <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                                     Unlimited access to educational materials for subscribers
                                 </h1>
-
+                                   <Link href='/fees/ieltsgeneralpackage'> 
                                 <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-md transition-colors duration-200" >
-                                    <a href='#'>
+                                    
                                         Try 30 days for free
-                                    </a>
-                                </button>
+                                    
+                                </button></Link>
                             </div>
-
-                            {/* Right Content - Circular Image */}
                             <div className="flex justify-center lg:justify-end">
-                                <div className="relative">
-                                    {/* Purple circular background */}
+                                <div className="relative">  
                                     <div className="w-80 h-80 lg:w-80 lg:h-66 rounded-full bg-blue-300 flex items-center justify-center overflow-hidden">
-                                        {/* Student image */}
                                         <div className="w-50 h-52 lg:w-88 lg:h-88 rounded-full overflow-hidden">
                                             <img
                                                 src="/home/man-writing-notes.png?height=400&width=400"
@@ -515,8 +472,6 @@ const LanguageLandingPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Community Section */}
                 <div className="bg-blue-600 text-white">
                     <div className="max-w-7xl mx-auto px-4 py-6">
                         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -544,7 +499,6 @@ const LanguageLandingPage: React.FC = () => {
             <div className="bg-gray-50 py-0 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Phone Image */}
                         <div className="relative flex justify-center items-center">
                             <img
                                 src="/home/mobile.png?height=400&width=600"
@@ -555,8 +509,6 @@ const LanguageLandingPage: React.FC = () => {
 
                             />
                         </div>
-
-                        {/* Content */}
                         <div className="space-y-4">
                             <div>
                                 <h1 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
@@ -567,8 +519,6 @@ const LanguageLandingPage: React.FC = () => {
                                     evaluations. Make connections that will come handy in future. Join Online IELTS Classes with Our Application
                                 </p>
                             </div>
-
-                            {/* Download Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="#" className="inline-block">
                                     <div className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors">
