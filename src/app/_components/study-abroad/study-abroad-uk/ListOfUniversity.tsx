@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import ScrollContainer from 'react-indiana-drag-scroll';
@@ -10,6 +11,9 @@ import ScrollContainer from "react-indiana-drag-scroll";
 >>>>>>> optimizing/ansu
 
 
+=======
+import  ScrollContainer  from "react-indiana-drag-scroll";
+>>>>>>> changes_ci
 function ListOfUniversity()
 {
     const universities = [

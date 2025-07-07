@@ -1,6 +1,6 @@
 
 import LanguageLandingPage from "./_components/home/Home";
-import Hero from "./_components/Hero";
+import Hero from "./_components/home/Hero";
 import LeadCaptureModal from "./LeadCaptureModal";
 import Footer from "./_components/Footer";
 import Navigation from "./_components/Navigation";

@@ -609,14 +609,12 @@ const weeks={
   <h1 className="ml-4 sm:ml-20 md:ml-48 m-2 sm:m-5 lg:text-4xl  lg:ml-32 sm:text-xl">Curriculum to be covered</h1>
 
   <div className="flex flex-col lg:flex-row gap-4 justify-center ">
-    {/* Left Section */}
     <div className="flex flex-col gap-1.5 w-full lg:w-[50rem] ">
       <div>
         <div className="w-full px-2 sm:px-4">
           {
             Object.entries(weeks).map(([weekName, weekData], index) => (
               <div key={index} className="pb-2">
-                {/* Week Header */}
                 <div
                   onClick={() => toggleWeek(weekName)}
                   className="cursor-pointer flex items-center justify-between px-4 py-2 rounded text-sm font-semibold "
@@ -626,8 +624,6 @@ const weeks={
                     className={`w-5 h-5 transition-transform duration-300 ${activeWeek === weekName ? 'rotate-180' : ''}`}
                   />
                 </div>
-
-                {/* Week Content */}
                 {activeWeek === weekName && (
                   <div className="mt-2 pl-4 border-blue-300 border-5  p-3">
                     {
@@ -650,8 +646,6 @@ const weeks={
         </div>
       </div>
     </div>
-
-    {/* Right Section (Card) */}
     <div className="flex justify-center px-2">
       <div className="bg-white shadow-xl w-full sm:w-[25rem] h-auto sm:h-[40rem] lg:-mt-30">
         {
@@ -675,15 +669,6 @@ const weeks={
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
   );
 }
 

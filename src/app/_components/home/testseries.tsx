@@ -12,7 +12,7 @@ const Testseries = () => {
                 'Auto-generated Remedial Tests',
                 'Speaking Tests',
             ],
-            image: '../../home/IELTS.jpg', // use public folder path
+            image: '../../home/IELTS.jpg', 
             url: 'https://www.google.com',
             More: 'Computer Delivered | A.I',
             price: 'Start @ ₹1499',
@@ -99,8 +99,7 @@ const Testseries = () => {
                         onClick={() => handleCardClick(work.url)}
                         className="bg-white rounded-xl overflow-hidden shadow-lg w-full  flex flex-col"
                         style={{ height: "600px" }}
-                    >
-                        {/* Image section with price tag */}
+                    >                     
                         <div className="relative h-1/2 w-full cursor-pointer transition-transform hover:scale-105">
                             <img
                                 src={work.image}
@@ -114,8 +113,6 @@ const Testseries = () => {
                                 </span>
                             </div>
                         </div>
-
-                        {/* Text content */}
                         <div className="p-5 flex flex-col justify-between h-1/2">
                             <div>
                                 <h3 className="text-lg font-semibold mb-2 text-gray-800">{work.title}</h3>
@@ -138,8 +135,7 @@ const Testseries = () => {
                         className="bg-white rounded-xl overflow-hidden shadow-lg w-full  flex flex-col"
                         style={{ height: "600px" }}
                     >
-                        {/* Image section with price tag */}
-                        <div className="relative h-1/2 w-full cursor-pointer transition-transform hover:scale-105">
+                       <div className="relative h-1/2 w-full cursor-pointer transition-transform hover:scale-105">
                             <img
                                 src={work.image}
                                 alt={work.title}
@@ -152,8 +148,6 @@ const Testseries = () => {
                                 </span>
                             </div>
                         </div>
-
-                        {/* Text content */}
                         <div className="p-5 flex flex-col justify-between h-1/2">
                             <div>
                                 <h3 className="text-lg font-semibold mb-2 text-gray-800">{work.title}</h3>

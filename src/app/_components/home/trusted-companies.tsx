@@ -39,8 +39,6 @@ export default function TrustedCompanies() {
                 <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-700 mb-12">
                     Trusted by learners at top companies worldwide
                 </h2>
-
-                {/* Mobile View - Combined Carousel */}
                 <div className="md:hidden">
                     <div className="relative overflow-hidden">
                         <div
@@ -62,8 +60,6 @@ export default function TrustedCompanies() {
                             ))}
                         </div>
                     </div>
-
-                    {/* Dots Indicator */}
                     <div className="flex justify-center mt-6 space-x-2">
                         {[...techCompanies, ...financeCompanies].map((_, index) => (
                             <button
@@ -74,10 +70,7 @@ export default function TrustedCompanies() {
                         ))}
                     </div>
                 </div>
-
-                {/* Desktop View - Dual Infinite Scrolling Sections */}
                 <div className="hidden md:block space-y-4">
-                    {/* Tech Companies Section */}
                     <div>
                         <h3 className="text-xl font-medium text-center text-gray-600 mb-6">Technology Leaders</h3>
                         <div className="overflow-hidden relative py-4">
@@ -101,8 +94,6 @@ export default function TrustedCompanies() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Finance/Consulting Companies Section */}
                     <div>
                         <div className="overflow-hidden relative -mt-8">
                             <div className="flex items-center">

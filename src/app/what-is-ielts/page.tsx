@@ -1,6 +1,10 @@
 "use client";
 import { CheckCircle, PhoneCall } from "lucide-react";
+
 import Footer from "../_components/footer1";
+
+import Footer from "../_components/Footer";
+
 import Navigation from "../_components/Navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -185,7 +189,11 @@ function IeltsPage() {
         <div className="relative bg-[#12191D] text-white overflow-hidden">
 
 
+
      
+
+
+         
 
           <div className="absolute bottom-0 w-full pointer-events-none z-0">
             <svg
@@ -201,8 +209,6 @@ function IeltsPage() {
           </div>
 
 
- 
-
           <div className="relative z-10 max-w-screen-xl mx-auto px-6 pt-32 pb-52 grid md:grid-cols-2 gap-16">
             <div className="border-l-4 border-green-500 pl-8">
               <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-[#FDEBD0]">
@@ -210,9 +216,6 @@ function IeltsPage() {
               </h1>
             </div>
 
-
-
-            
 
             <div className="grid grid-cols-1 gap-5 text-lg md:text-xl">
               {[
@@ -236,9 +239,6 @@ function IeltsPage() {
         <div className="min-h-screen bg-gradient-to-r from-green-50 to-blue-50 p-6">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
-
-       
-
             <div className="md:col-span-1">
               <div className="sticky top-10 left-40">
                 <img
@@ -261,10 +261,6 @@ function IeltsPage() {
                 </div>
               </div>
             </div>
-
-
-
-           
 
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="translate-y-0">
@@ -303,9 +299,6 @@ function IeltsPage() {
       <section>
         <div className="p-6 max-w-4xl mx-auto">
 
-
-        
-
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle className="text-green-600 w-6 h-6" />
             <h2 className="text-4xl font-bold text-gray-800 flex flex-wrap">
@@ -321,9 +314,6 @@ function IeltsPage() {
             </h2>
           </div>
 
-
-
-         
 
           <p className="text-gray-600 mb-4 font-bold">
             Most comprehensive and effective group classes with no more than 10
@@ -428,6 +418,7 @@ function IeltsPage() {
       </section>
       <section className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 py-10 px-6 text-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
           <div className="space-y-6 animate-fadeInUp">
             <h2 className="text-4xl font-bold leading-tight">
               Make your
@@ -447,6 +438,7 @@ function IeltsPage() {
               Read More
             </a>
           </div>
+
           <div className="   animate-fadeInUp">
             <iframe
               className="w-full  h-80 rounded  shadow-lg"

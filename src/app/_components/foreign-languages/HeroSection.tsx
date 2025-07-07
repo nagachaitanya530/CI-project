@@ -39,6 +39,7 @@ const HeroSection = () => {
           </div>
 <<<<<<< HEAD
         </div>
+<<<<<<< HEAD
         <div className="flex-1 flex justify-center items-center relative">
           <img
             src="https://nationalinstituteoflanguage.in/wp-content/uploads/2022/02/hero-87P2JB5.png"
@@ -125,6 +126,16 @@ const HeroSection = () => {
         </div>
       </section>
     </>
+=======
+      </section>
+
+     
+    </>
+
+
+   
+
+>>>>>>> changes_ci
   );
 };
 <<<<<<< HEAD

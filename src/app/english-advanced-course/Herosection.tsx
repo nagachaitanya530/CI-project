@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, House } from 'lucide-react';
+import {  ChevronRight, House } from 'lucide-react';
 import React from 'react'
 
 function Herosection() {
@@ -29,8 +29,6 @@ function Herosection() {
     <div className="w-full px-4 py-8 bg-blue-100">
       
   <div className="bg-blue-100 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-2">
-
-    {/* Left Section */}
     <div className="w-full md:w-1/2">
       <div className="pb-4 flex justify-center md:justify-start">
         <img
@@ -52,8 +50,6 @@ function Herosection() {
           This course is intended to provide training for Advanced Level English from initial level. <br />
           Comprises of general to advanced level English language training with personality development.
         </p>
-
-        {/* Instructor Info */}
         <div className="mt-4 flex flex-col sm:flex-row items-center sm:items-start gap-4">
           <img
             className="w-16"
@@ -67,16 +63,12 @@ function Herosection() {
             <p className="mt-1">NIL Trained & British Council Certified</p>
           </div>
         </div>
-
-        {/* Enroll Button */}
         <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-5  ">
           <button className="bg-blue-500 w-52 h-12 rounded-md text-white ml-6 -md:ml-9 ">
             ENROLL NOW
           </button>
           <div className="text-sm mr-8 sm:-w-5">(Credit/Debit EMI Available)</div>
         </div>
-
-        {/* Pricing & Stats */}
         <div className="mt-4 flex flex-wrap items-center gap-4 text-lg">
           <div className="text-[#8B4513] font-bold">₹17490</div>
           <div className="flex gap-2">
@@ -86,8 +78,6 @@ function Herosection() {
         </div>
       </div>
     </div>
-
-    {/* Right Section - Video Card */}
     <div className="w-full md:w-[28rem] h-auto md:h-[35rem] bg-white rounded-b-2xl shadow-xl/30 overflow-hidden">
       {Rating.map((item, index) => (
         <div key={index}>
