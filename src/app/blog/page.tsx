@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+<<<<<<< HEAD
 import Navigation from '../_components/Navigation';
+=======
+import Navigation from '../_components/Navigation1';
+>>>>>>> cost-of-studying-usa
 
 export default function BlogPage() {
   const blogPosts = [

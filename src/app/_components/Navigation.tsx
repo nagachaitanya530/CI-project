@@ -29,6 +29,7 @@ const navItems = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       { label: "Special Classes", href: "/" },
@@ -60,6 +61,10 @@ const navItems = [
       { label: "Special Classes", href: "special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
 >>>>>>> feature/UpdatePage
+=======
+      { label: "Special Classes", href: "special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+>>>>>>> cost-of-studying-usa
           {
             label: "English Courses",
             dropdown: [
@@ -75,6 +80,7 @@ const navItems = [
               { label: "Corporate Training English", href: "/" },
             ],
           },
+<<<<<<< HEAD
 
 
         ],
@@ -124,6 +130,8 @@ const navItems = [
           },
         ],
       },
+=======
+>>>>>>> cost-of-studying-usa
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
@@ -140,17 +148,31 @@ const navItems = [
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
       { label: "Online Mock Tests", href: "/" },
 
+<<<<<<< HEAD
 >>>>>>> feature/UpdatePage
+=======
+>>>>>>> cost-of-studying-usa
 
 
     ],
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
+=======
+  {
+    label: "Book Demo",
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
+  },
+>>>>>>> cost-of-studying-usa
   { label: "Fees", href: "/fees", icon: FileText },
+
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
 
+<<<<<<< HEAD
 
 
  
@@ -173,11 +195,17 @@ const navItems = [
 
 
 >>>>>>> feature/UpdatePage
+=======
+ 
+
+
+>>>>>>> cost-of-studying-usa
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 
@@ -194,6 +222,10 @@ const navItems = [
 
   },
 >>>>>>> feature/UpdatePage
+=======
+
+  },
+>>>>>>> cost-of-studying-usa
   {
     label: "About CI",
     icon: Info,
@@ -206,10 +238,15 @@ const navItems = [
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> feature/UpdatePage
+=======
+
+
+>>>>>>> cost-of-studying-usa
     ],
   },
 ];
