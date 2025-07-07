@@ -20,7 +20,6 @@ export default function ScrollSpySidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [hideForFooter, setHideForFooter] = useState(false);
 
-  // Show sidebar only after hero is out of view
   useEffect(() => {
     const hero = document.getElementById("hero");
     if (!hero) return;
@@ -36,7 +35,6 @@ export default function ScrollSpySidebar() {
     return () => observer.disconnect();
   }, []);
 
-  // Hide sidebar when footer is in view
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (!footer) return;

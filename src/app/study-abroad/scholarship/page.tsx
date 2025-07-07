@@ -3,7 +3,10 @@ import NavigationSection from "~/app/_components/navigation1";
 import FAQ from "~/app/_components/study-abroad/faq";
 import ScholarHeroSection from "~/app/_components/study-abroad/scholarship/HeroSection";
 import ScholarshipApplyForm from "~/app/_components/study-abroad/scholarship/scholarshipApply";
+import ScrollCardAnimation2 from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
 import ScholarshipSteps from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
+import ScholarshipScrollCards from "~/app/_components/study-abroad/scholarship/TypesOfScholarship";
+import ScholarshipTypes from "~/app/_components/study-abroad/scholarship/TypesOfScholarship";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 
 function scholarship()
@@ -54,7 +57,8 @@ function scholarship()
         <div>
             <NavigationSection/>
             <ScholarHeroSection/>
-            <ScholarshipSteps/>
+            <ScrollCardAnimation2/>
+            <ScholarshipScrollCards/>
             <ScholarshipApplyForm/>
             <FAQ faqs={FrontendFAQ}/>
             <YourJourney/>

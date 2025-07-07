@@ -27,8 +27,6 @@ export default function TargetLearners() {
   Who is this course for?
   <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-0 bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded"></span>
 </h2>
-
-
         <div className="grid gap-8 md:grid-cols-3">
           {learners.map((item, idx) => (
             <div key={idx} className="bg-white rounded-xl shadow-md p-6 border border-zinc-200 hover:shadow-lg transition">

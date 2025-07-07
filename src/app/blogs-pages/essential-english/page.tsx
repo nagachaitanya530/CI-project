@@ -1,6 +1,5 @@
 "use client"
 import Head from 'next/head';
-import Link from 'next/link';
 import Navigation from '~/app/_components/navigation1';
 import Leftgrid from '~/app/_components/blogs-components/left-grid';
 import AuthorInfo from '~/app/_components/blogs-components/author-info';
@@ -140,14 +139,8 @@ export default function LanguagePage() {
                     </div>
                   ))}
                 </div>
-
-
                 <div>
-
                 </div>
-
-
-
               </div>
             </div>
 
@@ -169,7 +162,7 @@ export default function LanguagePage() {
           font-weight: 600;
         }
       `}</style>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

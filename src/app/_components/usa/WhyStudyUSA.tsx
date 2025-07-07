@@ -8,7 +8,7 @@ import {
     GraduationCap,
 } from "lucide-react";
 import React from "react";
-import StudyAbroadForm from "./StudyAbroadForm";
+
 
 
 const reasons = [
@@ -43,7 +43,6 @@ const WhyStudyUsa = () => {
     return (
         <section className="bg-white py-16 px-4 lg:px-24">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-                {/* Left: Reason Cards */}
                 <div className="space-y-6">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4 underline decoration-red-500 decoration-2 underline-offset-5">
                         Why Study in the USA?
@@ -69,10 +68,17 @@ const WhyStudyUsa = () => {
                     </div>
                 </div>
 
+
+
                 {/* Right: Your Finalized Form */}
                 <div className="w-full">
+
                     {/* <StudyAbroadForm /> */}
+
+                    <StudyAbroadForm />
+
                 </div>
+
             </div>
         </section>
     );

@@ -58,6 +58,7 @@
 
 // export default CareerProspect;
 
+import Image from "next/image";
 import React from "react";
 
 const courses = [
@@ -84,14 +85,12 @@ const CareerProspect = () => {
                     Here are some key sectors and industries that offer employment opportunities:
                 </p>
             </div>
-
-            {/* Cards */}
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                {courses.map((course, index) => ( // map function for passing data
+                {courses.map((course, index) => (
                     <div
                         key={index}
                         className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white">
-                        <img src={course.image} alt={course.name} className="w-full  md:h-48 lg:h-56 object-cover rounded-2xl" />
+                        <Image src={course.image} alt={course.name} className="w-full  md:h-48 lg:h-56 object-cover rounded-2xl" width={500} height={300}   />
                         <div className="p-4 text-lg font-semibold text-gray-900">{course.name}</div>
                     </div>
                 ))}

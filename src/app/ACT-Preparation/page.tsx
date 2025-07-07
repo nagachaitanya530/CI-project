@@ -28,25 +28,19 @@ export default function ACT_Preparation() {
             <>
       <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
     </>
-            
             <Scrollingnavbar/>
             <Overview/>
             <Pattern/>
             <Syllabus />
             <Score />
             <Dates />
-             <Training />
-             <Miscellaneous />
-             <FAQ/>
-             <SuccessStories/>
-           
-
+            <Training />
+            <Miscellaneous />
+            <FAQ/>
+            <SuccessStories/>
             <YourJourney />
             <FooterSection />
-
-
-        </>
-
+    </>
 
     )
 }

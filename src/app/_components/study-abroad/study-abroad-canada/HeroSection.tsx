@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 interface StatItem {
     number: string;
@@ -42,7 +43,7 @@ function HeroSection() {
                         </div>
                     </div>
                     <div>
-                        <img src="/girl-flag.png" alt="girl with flag in hand" className="text-red-300 relative top-10.5" />
+                        <Image src="/girl-flag.png" alt="girl with flag in hand" className="text-red-300 relative top-10.5" width={500} height={300} />
 
                     </div>
                 </div>

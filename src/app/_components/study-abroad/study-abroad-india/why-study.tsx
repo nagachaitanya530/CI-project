@@ -78,8 +78,11 @@ const StudyInIndiaPage = () => {
             </div>
           </div>
 
+
           {/* Right Side - Consultation Form */}
           
+
+
         </div>
       </div>
     </div>

@@ -4,13 +4,11 @@ import CareerProspectsUK from "~/app/_components/study-abroad/study-abroad-uk/Ca
 import CostOfStudying from "~/app/_components/study-abroad/study-abroad-uk/CostOfStudying";
 import HeroSection from "~/app/_components/study-abroad/study-abroad-uk/HeroSection";
 import ListOfUniversity from "~/app/_components/study-abroad/study-abroad-uk/ListOfUniversity";
-import MoreAboutUK from "~/app/_components/study-abroad/study-abroad-uk/MoreAboutUK";
 import PopularCoursesSection from "~/app/_components/study-abroad/study-abroad-uk/PopularCourse";
 import RelatedArticles from "~/app/_components/study-abroad/study-abroad-uk/RelatedArticles";
 import Scholarships from "~/app/_components/study-abroad/study-abroad-uk/Scholarship";
-import SuccessStories from "~/app/_components/study-abroad/study-abroad-uk/Stories";
-import WhyStudy from "~/app/_components/study-abroad/study-abroad-uk/WhyStudy";
 import WhyStudySection from "../../_components/study-abroad/study-abroad-uk/WhyStudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import StudyTabs from "~/app/_components/study-abroad/study-abroad-uk/MoreAboutUK";
 import NavigationSection from "~/app/_components/navigation1";
 import FAQ from "~/app/_components/study-abroad/faq";
@@ -101,14 +99,14 @@ return(
     </div>
         </section>
         <WhyStudySection/>
-          <ListOfUniversity/>
-             <PopularCoursesSection/>
+        <ContactFormSection />
+        <ListOfUniversity/>
+        <PopularCoursesSection/>
         <CostOfStudying/>
-      
         <Scholarships/>
         <CareerProspectsUK/>
-         <StudyTabs/>
-         <RelatedArticles/>
+        <StudyTabs/>
+        <RelatedArticles/>
         <SuccessStory/>
         <FAQ faqs={FrontendFAQ}/>
         <YourJourney/>

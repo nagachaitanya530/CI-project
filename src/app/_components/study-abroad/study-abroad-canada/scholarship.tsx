@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState, type JSX } from 'react';
 
 interface ScholarshipItem {
@@ -56,7 +57,6 @@ function Scholarships() {
         <>
             <section ref={sectionRef} className="my-20 px-4 lg:px-20">
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-between p-5 ">
-                    {/* Text Block transiton from left to right */}
                     <div className={`transition-all duration-1000 ease-out ${isVisible ? 
                                     'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
                         {items.map((item, index) => (
@@ -66,36 +66,29 @@ function Scholarships() {
                             </div>
                         ))}
                     </div>
-
-                    {/* Image transiction right to left */}
                     <div className={`transition-all duration-1000 ease-out ${isVisible ? 
                                 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} mb-10 lg:mb-0 lg:w-2/5`}>
-                        <img
+                        <Image
                             src="/scholar-man.jpg"
                             alt="Scholarships"
-                            className="h-80 w-full max-w-lg object-cover rounded-lg shadow-lg"/>
+                            className="h-80 w-full max-w-lg object-cover rounded-lg shadow-lg"
+                            width={500} height={300}  />
                     </div>
                 </div>
             </section>
-
-                        {/* After ScholarShip  */}
             <section ref={sectionRef} className="my-20 px-4 lg:px-20 ">
 
                 <div className="flex flex-col lg:flex-row items-center justify-between p-5 ">
-
-                    {/* Image transiction right to left */}
                     <div className={`transition-all duration-1000 ease-out ${isVisible ?
                              'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'} mb-10 lg:mb-0 lg:w-2/5`}>
-                        <img
+                        <Image
                             src="/home/women_talking.jpg"
                             alt="Scholarships"
-                            className="h-80 w-full max-w-lg object-cover rounded-lg shadow-lg"/>
+                            className="h-80 w-full max-w-lg object-cover rounded-lg shadow-lg"
+                            width={500} height={300}  />
                     </div>
-
-                    {/* Text Block transiton from left to right */}
                     <div className={`transition-all duration-1000 ease-out ${isVisible ? 
                                 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
-
                             <div >
                                 <h1 className="text-2xl md:text-3xl lg:text-5xl mb-6 text-gray-800"><b>Co-operative Work term</b></h1>
                                 <div className="text-lg text-gray-700 max-w-3xl">Co-op is a work term that is a part of the course.

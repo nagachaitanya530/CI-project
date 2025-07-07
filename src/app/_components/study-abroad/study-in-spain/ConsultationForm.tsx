@@ -1,16 +1,25 @@
-// components/MultiStepConsultationForm.tsx
+"use client";
 
-'use client';
+import { useState } from "react";
 
-import { useState } from 'react';
-
-const countries = ['UK', 'USA', 'CAN', 'AUS', 'NZ', 'IRE', 'SNG', 'Other'];
-const intakes = ['Jan 25', 'Apr 25', 'Sept 25'];
-const studyLevels = ["Bachelor's", "Master's", 'Diploma'];
+const countries = ["UK", "USA", "CAN", "AUS", "NZ", "IRE", "SNG", "Other"];
+const intakes = ["Jan 25", "Apr 25", "Sept 25"];
+const studyLevels = ["Bachelor's", "Master's", "Diploma"];
 const branches = [
-  'AHMEDABAD', 'BANGALORE', 'CHANDIGARH', 'CHENNAI', 'COCHIN', 'COIMBATORE',
-  'DELHI', 'HYDERABAD', 'INDORE', 'JAIPUR', 'KOLKATA', 'MALAD',
-  'MARINELINES', 'MUMBAI',
+  "AHMEDABAD",
+  "BANGALORE",
+  "CHANDIGARH",
+  "CHENNAI",
+  "COCHIN",
+  "COIMBATORE",
+  "DELHI",
+  "HYDERABAD",
+  "INDORE",
+  "JAIPUR",
+  "KOLKATA",
+  "MALAD",
+  "MARINELINES",
+  "MUMBAI",
 ];
 
 type Props = {
@@ -22,13 +31,15 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
   const [step, setStep] = useState(1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [selectedIntake, setSelectedIntake] = useState<string | null>(null);
-  const [selectedStudyLevel, setSelectedStudyLevel] = useState<string | null>(null);
-  const [specialisation, setSpecialisation] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [branch, setBranch] = useState('');
+  const [selectedStudyLevel, setSelectedStudyLevel] = useState<string | null>(
+    null
+  );
+  const [specialisation, setSpecialisation] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [branch, setBranch] = useState("");
   const [consent, setConsent] = useState(true);
 
   const handleSubmit = () => {
@@ -44,7 +55,7 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
       branch,
       consent,
     };
-    alert('Form submitted successfully!\n' + JSON.stringify(data, null, 2));
+    alert("Form submitted successfully!\n" + JSON.stringify(data, null, 2));
     onClose();
   };
 
@@ -62,8 +73,12 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
 
         {step === 1 && (
           <>
-            <h2 className="text-xl font-bold mb-2">Welcome To The Journey Of Studying Abroad!</h2>
-            <p className="text-blue-800 font-medium mb-4">Choose Your Desired Country</p>
+            <h2 className="text-xl font-bold mb-2">
+              Welcome To The Journey Of Studying Abroad!
+            </h2>
+            <p className="text-blue-800 font-medium mb-4">
+              Choose Your Desired Country
+            </p>
             <div className="grid grid-cols-2 gap-3">
               {countries.map((country) => (
                 <button
@@ -72,7 +87,7 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
                     setSelectedCountry(country);
                     setStep(2);
                   }}
-                  className="bg-gray-100 hover:bg-blue-100 text-sm font-medium py-2 rounded-full"
+                  className="bg-gray-100 hover:bg-blue-200 text-sm font-medium py-2 rounded-full"
                 >
                   {country}
                 </button>
@@ -83,7 +98,9 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
 
         {step === 2 && (
           <>
-            <h2 className="text-xl font-semibold mt-4 mb-2">Select your desired commencement date.</h2>
+            <h2 className="text-xl font-semibold mt-4 mb-2">
+              Select your desired commencement date.
+            </h2>
             <p className="text-blue-800 mb-5 font-medium">Choose Your Intake</p>
             <div className="flex justify-center gap-3 mb-6 flex-wrap">
               {intakes.map((intake) => (
@@ -95,8 +112,8 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
                   }}
                   className={`px-5 py-2 rounded-full font-medium ${
                     selectedIntake === intake
-                      ? 'bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-blue-100'
+                      ? "bg-blue-700 text-white"
+                      : "bg-gray-100 hover:bg-blue-100"
                   }`}
                 >
                   {intake}
@@ -114,7 +131,9 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
 
         {step === 3 && (
           <>
-            <h2 className="text-xl font-bold mb-2">What level of study are you planning to pursue?</h2>
+            <h2 className="text-xl font-bold mb-2">
+              What level of study are you planning to pursue?
+            </h2>
             <p className="text-blue-800 font-medium mb-4">Choose Your Level</p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               {studyLevels.map((level) => (
@@ -126,21 +145,28 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
                   }}
                   className={`px-5 py-2 rounded-full font-medium ${
                     selectedStudyLevel === level
-                      ? 'bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-blue-100'
+                      ? "bg-blue-700 text-white"
+                      : "bg-gray-100 hover:bg-blue-100"
                   }`}
                 >
                   {level}
                 </button>
               ))}
             </div>
-            <button onClick={() => setStep(2)} className="mt-2 px-6 py-2 bg-blue-700 text-white rounded-full">Back</button>
+            <button
+              onClick={() => setStep(2)}
+              className="mt-2 px-6 py-2 bg-blue-700 text-white rounded-full"
+            >
+              Back
+            </button>
           </>
         )}
 
         {step === 4 && (
           <>
-            <h2 className="text-xl font-bold mb-4">Enter your area of academic specialisation</h2>
+            <h2 className="text-xl font-bold mb-4">
+              Enter your area of academic specialisation
+            </h2>
             <input
               type="text"
               value={specialisation}
@@ -149,15 +175,27 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
               className="w-full border p-2 rounded-lg mb-4"
             />
             <div className="flex justify-between">
-              <button onClick={() => setStep(3)} className="bg-gray-200 px-6 py-2 rounded-lg">Back</button>
-              <button onClick={() => setStep(5)} className="bg-blue-700 text-white px-6 py-2 rounded-lg">Continue</button>
+              <button
+                onClick={() => setStep(3)}
+                className="bg-gray-200 px-6 py-2 rounded-lg"
+              >
+                Back
+              </button>
+              <button
+                onClick={() => setStep(5)}
+                className="bg-blue-700 text-white px-6 py-2 rounded-lg"
+              >
+                Continue
+              </button>
             </div>
           </>
         )}
 
         {step === 5 && (
           <>
-            <h2 className="text-xl font-bold mb-2">All grand adventures begin with your name.</h2>
+            <h2 className="text-xl font-bold mb-2">
+              All grand adventures begin with your name.
+            </h2>
             <div className="grid grid-cols-2 gap-3">
               <input
                 type="text"
@@ -175,8 +213,18 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
               />
             </div>
             <div className="flex justify-between mt-4">
-              <button onClick={() => setStep(4)} className="bg-gray-200 px-6 py-2 rounded-lg">Back</button>
-              <button onClick={() => setStep(6)} className="bg-blue-700 text-white px-6 py-2 rounded-lg">Continue</button>
+              <button
+                onClick={() => setStep(4)}
+                className="bg-gray-200 px-6 py-2 rounded-lg"
+              >
+                Back
+              </button>
+              <button
+                onClick={() => setStep(6)}
+                className="bg-blue-700 text-white px-6 py-2 rounded-lg"
+              >
+                Continue
+              </button>
             </div>
           </>
         )}
@@ -217,11 +265,22 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
                 onChange={() => setConsent(!consent)}
               />
               <span className="whitespace-nowrap text-sm">
-              I consent to be contacted via Calls, WhatsApp, Email.</span>
+                I consent to be contacted via Calls, WhatsApp, Email.
+              </span>
             </label>
             <div className="flex justify-between">
-              <button onClick={() => setStep(5)} className="bg-gray-200 px-6 py-2 rounded-lg">Back</button>
-              <button onClick={() => setStep(7)} className="bg-blue-700 text-white px-6 py-2 rounded-lg">Continue</button>
+              <button
+                onClick={() => setStep(5)}
+                className="bg-gray-200 px-6 py-2 rounded-lg"
+              >
+                Back
+              </button>
+              <button
+                onClick={() => setStep(7)}
+                className="bg-blue-700 text-white px-6 py-2 rounded-lg"
+              >
+                Continue
+              </button>
             </div>
           </>
         )}
@@ -229,28 +288,56 @@ export default function MultiStepConsultationForm({ show, onClose }: Props) {
         {step === 7 && (
           <>
             <h2 className="text-2xl font-bold mb-2">Summary</h2>
-            <p className="text-gray-600 mb-6">Kindly confirm your details before proceeding.</p>
+            <p className="text-gray-600 mb-6">
+              Kindly confirm your details before proceeding.
+            </p>
 
             <div className="text-left space-y-3">
               <div>
                 <h3 className="font-bold text-lg">Course Details :</h3>
-                <p><strong>Country</strong> : {selectedCountry}</p>
-                <p><strong>Intake</strong> : {selectedIntake}</p>
-                <p><strong>Level</strong> : {selectedStudyLevel}</p>
-                <p><strong>Specialisation</strong> : {specialisation}</p>
+                <p>
+                  <strong>Country</strong> : {selectedCountry}
+                </p>
+                <p>
+                  <strong>Intake</strong> : {selectedIntake}
+                </p>
+                <p>
+                  <strong>Level</strong> : {selectedStudyLevel}
+                </p>
+                <p>
+                  <strong>Specialisation</strong> : {specialisation}
+                </p>
               </div>
               <div>
                 <h3 className="font-bold text-lg">Personal Details :</h3>
-                <p><strong>Full Name</strong> : {firstName} {lastName}</p>
-                <p><strong>Mobile number</strong> : {mobile}</p>
-                <p><strong>Email ID</strong> : {email}</p>
-                <p><strong>Branch</strong> : {branch}</p>
+                <p>
+                  <strong>Full Name</strong> : {firstName} {lastName}
+                </p>
+                <p>
+                  <strong>Mobile number</strong> : {mobile}
+                </p>
+                <p>
+                  <strong>Email ID</strong> : {email}
+                </p>
+                <p>
+                  <strong>Branch</strong> : {branch}
+                </p>
               </div>
             </div>
 
             <div className="flex justify-between mt-6">
-              <button onClick={() => setStep(6)} className="px-6 py-2 bg-gray-200 rounded-lg">Edit Details</button>
-              <button onClick={handleSubmit} className="px-6 py-2 bg-blue-700 text-white rounded-lg">Submit</button>
+              <button
+                onClick={() => setStep(6)}
+                className="px-6 py-2 bg-gray-200 rounded-lg"
+              >
+                Edit Details
+              </button>
+              <button
+                onClick={handleSubmit}
+                className="px-6 py-2 bg-blue-700 text-white rounded-lg"
+              >
+                Submit
+              </button>
             </div>
           </>
         )}

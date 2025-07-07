@@ -4,6 +4,7 @@ import PopularCoursesSection from "~/app/_components/study-abroad/study-abroad-c
 import Scholarships from "~/app/_components/study-abroad/study-abroad-canada/scholarship";
 import UniversityList from "~/app/_components/study-abroad/study-abroad-canada/UniversityList";
 import WhyStudy from "~/app/_components/study-abroad/study-abroad-canada/WhyStudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import HeroSection from "~/app/_components/study-abroad/study-abroad-canada/HeroSection";
 import CareerProspect from "~/app/_components/study-abroad/study-abroad-canada/CareerProspect";
 import RelatedArticles from "~/app/_components/study-abroad/study-abroad-canada/RelatedArticles";
@@ -14,7 +15,7 @@ import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "~/app/_components/study-abroad/faq";
 
 
-function StudyInCanada(){
+function StudyInCanada() {
   const FrontendFAQ = [
     {
       question: "How many hours of IELTS training is provided by Edwise?",
@@ -43,11 +44,13 @@ function StudyInCanada(){
   ]
 
 
+
     return(
         <>
         <NavigationSection/>
         <HeroSection/>
         <WhyStudy/>
+        <ContactFormSection />
         <UniversityList/>
         <PopularCoursesSection/>
         <CostOfStudy/>
@@ -61,6 +64,26 @@ function StudyInCanada(){
         <FooterSection/>
         </>
     );
+
+  return (
+    <>
+      <NavigationSection />
+      <HeroSection />
+      <WhyStudy />
+      <UniversityList />
+      <PopularCoursesSection />
+      <CostOfStudy />
+      <Scholarships />
+      <CareerProspect />
+      <MoreAbout />
+      <RelatedArticles />
+      <SuccessStory />
+      <FAQ faqs={FrontendFAQ} />
+      <YourJourney />
+      <FooterSection />
+    </>
+  );
+
 }
 
 export default StudyInCanada;

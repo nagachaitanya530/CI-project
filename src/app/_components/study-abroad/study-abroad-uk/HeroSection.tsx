@@ -32,7 +32,7 @@ function HeroSection(){
           {/* Right Section */}
           <div className="md:w-1/2">
             <img
-              src="https://www.edwiseinternational.com/img/study-abrd-uk.webp"
+              src="/uk/section1.jpg"
               alt="Study in UK"
               className="rounded-lg shadow-md"
             />

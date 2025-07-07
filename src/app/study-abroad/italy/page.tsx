@@ -8,7 +8,7 @@ const page = () => {
         <Navigation/>
         <Italy/>
         <Footer/>
-        </div>
+    </div>
   )
 }
 
