@@ -1,7 +1,8 @@
 "use client"
 
 import type React from "react"
-import Footer from "../_components/footer1"
+import Navigation from "../_components/Navigation"
+import Footer from "../_components/Footer"
 import HeroSection from "./Hero"
 import { useState, type FC, type ReactNode } from "react"
 import { Mail, Phone, MapPin, Users, ArrowRight, Linkedin, Twitter, Facebook, Instagram, Factory } from "lucide-react"
@@ -139,7 +140,7 @@ const Contact = () => {
   return (
     <div>
 
-
+      <Navigation />
       <HeroSection />
 
       <section id="contact" className="py-10 container px-4  mb-8 mx-auto bg-gradient-to-br from-blue-950 to-slate-700  rounded-lg relative overflow-hidden">

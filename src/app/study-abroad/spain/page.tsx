@@ -5,6 +5,7 @@ import ConsultationFormModal from "~/app/_components/study-abroad/study-in-spain
 import NavigationSection from "~/app/_components/navigation1";
 import SpainHeroSection from "~/app/_components/study-abroad/study-in-spain/SpainHeroSection";
 import WhyStudy from "~/app/_components/study-abroad/study-in-spain/WhyStudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import ListOfUniversity from "~/app/_components/study-abroad/study-in-spain/ListOfUniversity";
 import PapularCourse from "~/app/_components/study-abroad/study-in-spain/PapularCourse";
 import CostOfStudy from "~/app/_components/study-abroad/study-in-spain/CostOfStudy";
@@ -28,6 +29,7 @@ export default function SpainPage() {
       <NavigationSection />
       <SpainHeroSection onFreeConsultClick={() => setShowModal(true)} />
       <WhyStudy />
+      <ContactFormSection />
       <ListOfUniversity />
       <PapularCourse />
       <CostOfStudy />

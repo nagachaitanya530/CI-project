@@ -11,10 +11,16 @@ export default function AdmissionGuidencePage() {
   const [showForm, setShowForm] = useState(false);
 
   return (
+
+    <> 
+   
+      <HeroSection />
+
     <>
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
+
 
       <Second />
       <YourJourney />

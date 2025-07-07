@@ -1,17 +1,15 @@
 "use client";
 
 import { useState } from "react";
-
 import Navigation from "~/app/_components/navigation1";
 
 import UniversityList from "~/app/_components/study-abroad/Germany/listofuniversities";
 import PopularCoursesSection from "~/app/_components/study-abroad/Germany/popularcourses";
-import { Plus, Minus } from "lucide-react";
 import WhyStudy from "~/app/_components/study-abroad/Germany/whystudy";
 import CostOfStudying from "~/app/_components/study-abroad/Germany/costofstudying";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Scholarships from "~/app/_components/study-abroad/Germany/scholarship";
 import MoreAbout from "~/app/_components/study-abroad/Germany/moreabout";
-import TOC from "~/app/_components/study-abroad/Germany/TOC";
 import Hero from "~/app/_components/study-abroad/Germany/hero";
 import InfoStats from "~/app/_components/study-abroad/Germany/infostats";
 import CareerProspectsSection from "~/app/_components/study-abroad/Germany/CareerProspects";
@@ -20,6 +18,9 @@ import SuccessStories from "~/app/_components/study-abroad/Germany/SuccessStorie
 import RelatedArticles from "~/app/_components/study-abroad/Germany/RelatedArticles";
 import ConsultationForm from "~/app/_components/study-abroad/Germany/ConsultationForm"
 import FooterSection from "~/app/_components/footer1";
+
+
+
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import {
   FaInstagram,
@@ -29,6 +30,7 @@ import {
   FaXTwitter,
   FaBlogger,
 } from "react-icons/fa6";
+
 
 
 export default function GermanyPage() {
@@ -45,6 +47,33 @@ export default function GermanyPage() {
       <main className="max-w-7xl mx-auto p-4">
         <InfoStats />
       </main>
+
+
+      {/* Why Study in Germany */}
+      <WhyStudy />
+
+      <ContactFormSection />
+
+      {/* University List Section */}
+      <UniversityList />
+
+      {/* Popular Courses Section */}
+      <PopularCoursesSection />
+
+      {/* Cost of Studying */}
+      <CostOfStudying />
+
+      {/* Scholarships */}
+      <Scholarships />
+
+      {/* CareerProspectsection */}
+      <CareerProspectsSection />
+
+      {/* More About Germany */}
+      <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
+
+
+
     <WhyStudy />
     <UniversityList />
     <PopularCoursesSection />
@@ -52,6 +81,7 @@ export default function GermanyPage() {
     <Scholarships />
     <CareerProspectsSection />
     <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
+
       <RelatedArticles />
     <SuccessStories />
     <FAQ faqs={[

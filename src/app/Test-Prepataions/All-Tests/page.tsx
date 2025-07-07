@@ -179,8 +179,13 @@ const stories: Testimonial[] = [
       courses={testCourses}
     /></FadeInOnScroll>
     <FadeInOnScroll><Faq title="Frequently Asked Questions" faqs={faqs} /></FadeInOnScroll>
+
+     <FadeInOnScroll> <SuccessStories /></FadeInOnScroll>
+    <GetStartedBanner/>
+
      <FadeInOnScroll> <SuccessStories testimonials={stories} /></FadeInOnScroll>
     <YourJourney/>
+
         <Footer />
     </>
   );

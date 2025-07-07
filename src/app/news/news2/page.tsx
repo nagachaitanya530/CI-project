@@ -118,7 +118,7 @@ export default function VocabularyPage() {
           font-weight: 600;
         }
       `}</style>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

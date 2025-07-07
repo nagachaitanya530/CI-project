@@ -1,11 +1,10 @@
 'use client'
-import { FileBadge2, FileText, IdCardLanyard } from 'lucide-react'
-import { useEffect, useRef, useState, type JSX } from 'react';
 
 import Navigation from '../../_components/navigation1';
 import HeroSection from '~/app/_components/study-abroad/study-abroad-netherlands/hero';
 import StatsBlock from "~/app/_components/study-abroad/study-abroad-netherlands/statsblock";
 import WhyStudy from '~/app/_components/study-abroad/study-abroad-netherlands/WhyStudy';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import UniversityList from '~/app/_components/study-abroad/study-abroad-netherlands/UniversityLists';
 import PopularCoursesSection from '~/app/_components/study-abroad/study-abroad-netherlands/PopularCourse';
 import CostOfStudying from '~/app/_components/study-abroad/study-abroad-netherlands/cost-of-studying';
@@ -49,6 +48,7 @@ export default function India() {
         <HeroSection />
         <StatsBlock />
         <WhyStudy />
+        <ContactFormSection />
         <UniversityList />
         <PopularCoursesSection />
         <CostOfStudying />

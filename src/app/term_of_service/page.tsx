@@ -1,5 +1,5 @@
-import Navigation from "../_components/navigation1";
-import Footer from "../_components/footer1";
+import Navigation from "../_components/Navigation";
+import Footer from "../_components/Footer";
 export default function TermsOfServicePage() {
   return (
     <>
@@ -75,7 +75,6 @@ export default function TermsOfServicePage() {
         <p className="text-sm text-gray-600 mt-8">Last updated: June 2025</p>
       </main>
       <Footer />
-
     </>
 
   );
