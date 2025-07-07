@@ -47,8 +47,15 @@ function Study_in_france() {
         <>
             <NavigationSection />
             <HeroSection />
+<<<<<<< HEAD
             <WhyStudy/>
             <ContactFormSection />
+=======
+             {/* /<div className="flex flex-cols-2 gap-14 py-10 mx-20 mt-10"> */}
+            <WhyStudy/>
+            {/* <Form/> */}
+            {/* </div>            */}
+>>>>>>> cost-of-studying-usa
             <UniversityList/>
             <PopularCourses/>
             <CostOfStudy/> 

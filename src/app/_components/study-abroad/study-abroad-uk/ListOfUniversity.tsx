@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import ScrollContainer from 'react-indiana-drag-scroll';
@@ -14,6 +15,9 @@ import ScrollContainer from "react-indiana-drag-scroll";
 =======
 import  ScrollContainer  from "react-indiana-drag-scroll";
 >>>>>>> changes_ci
+=======
+import  ScrollContainer  from "react-indiana-drag-scroll";
+>>>>>>> cost-of-studying-usa
 function ListOfUniversity()
 {
     const universities = [

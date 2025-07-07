@@ -1,6 +1,10 @@
 "use client";
 
+<<<<<<< HEAD
 import { useRef, useMemo } from "react";
+=======
+import { useRef } from "react";
+>>>>>>> cost-of-studying-usa
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -11,6 +15,7 @@ export interface Testimonial {
   profile: string;
 }
 
+<<<<<<< HEAD
 // All testimonials data - stored internally
 const allTestimonials: Testimonial[] = [
   {
@@ -115,11 +120,27 @@ export default function SuccessStories() {
     if (scrollRef.current) {
       const scrollAmount = scrollRef.current.clientWidth * 0.8; // Scroll by 80% of container width
       const offset = direction === 'left' ? -scrollAmount : scrollAmount;
+=======
+interface SuccessStoriesProps {
+  title?: string;
+  testimonials: Testimonial[];
+}
+
+export default function SuccessStories({
+  title = "Success Stories",
+  testimonials,
+}: SuccessStoriesProps) {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (offset: number) => {
+    if (scrollRef.current) {
+>>>>>>> cost-of-studying-usa
       scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
     }
   };
 
   return (
+<<<<<<< HEAD
 
     <section className="bg-[#d5deeb] py-8 px-3 sm:py-12 sm:px-4 md:px-8 lg:px-16 xl:px-20 rounded-[20px] sm:rounded-[30px] md:rounded-[40px]">
       {/* Header Section */}
@@ -186,6 +207,10 @@ export default function SuccessStories() {
                 </span>
 
     <section className="bg-[#d5deeb] py-12 px-4 md:px-20 rounded-[40px]">
+=======
+    <section className="bg-[#d5deeb] py-12 px-4 md:px-20 rounded-[40px]">
+      {/* Heading */}
+>>>>>>> cost-of-studying-usa
       <div className="mb-4">
         <h2 className="text-3xl font-extrabold text-black relative text-center md:text-left">
           <span className="inline-block relative z-10">
@@ -194,6 +219,11 @@ export default function SuccessStories() {
           </span>
         </h2>
       </div>
+<<<<<<< HEAD
+=======
+
+      {/* Scroll Buttons */}
+>>>>>>> cost-of-studying-usa
       <div className="flex justify-center py-3 md:justify-end gap-3 mb-8 ">
         <button
           onClick={() => scroll(-400)}
@@ -208,6 +238,11 @@ export default function SuccessStories() {
           <ChevronRight />
         </button>
       </div>
+<<<<<<< HEAD
+=======
+
+      {/* Testimonials Scroll Area */}
+>>>>>>> cost-of-studying-usa
       <div
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
@@ -228,6 +263,7 @@ export default function SuccessStories() {
                   fill
                   className="object-cover"
                 />
+<<<<<<< HEAD
 
               </div>
               
@@ -273,8 +309,21 @@ export default function SuccessStories() {
             className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#1e3a8a]/30"
             aria-hidden="true"
           />
+=======
+              </div>
+              <div>
+                <p className="text-[15px] font-semibold">{story.name}</p>
+                <p className="text-sm text-gray-500">{story.exam}</p>
+              </div>
+            </div>
+          </div>
+>>>>>>> cost-of-studying-usa
         ))}
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cost-of-studying-usa

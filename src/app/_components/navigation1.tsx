@@ -49,6 +49,7 @@ const NAV_ITEMS = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                { label: 'UK', href: "/study-abroad/study-abroad-uk" },
                 { label: 'USA', href: 'study-abroad/usa' },
               { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
@@ -120,6 +121,19 @@ const NAV_ITEMS = [
 
             
 =======
+=======
+
+
+
+
+            { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+            { label: 'USA', href: 'study-abroad/usa' },
+            { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+            { label: 'Australia', href: "/study-abroad/australia" },
+            { label: 'Spain', href: '/study-abroad/spain' },
+            { label: 'India', href: '/study-abroad/India' },
+
+>>>>>>> cost-of-studying-usa
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
             { label: 'France', href: '/study-abroad/study-in-france' },
@@ -166,6 +180,21 @@ const NAV_ITEMS = [
 
 
            
+<<<<<<< HEAD
+=======
+
+            
+
+            { label: 'India', href: '/study-abroad/India' },
+
+            
+           
+            
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+
+
+           
+>>>>>>> cost-of-studying-usa
           
           
             
@@ -183,6 +212,7 @@ const NAV_ITEMS = [
 
             
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+<<<<<<< HEAD
             { label: 'Italy', href: '/study-abroad/italy' },
             { label: 'Germany', href: '/study-abroad/Germany' },
 >>>>>>> optimizing/ansu
@@ -221,6 +251,29 @@ const NAV_ITEMS = [
 
             { label: 'Germany', href: '/study-abroad/Germany' },
 <<<<<<< HEAD
+=======
+
+
+
+           
+
+
+            
+
+            
+
+
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Italy', href: '/study-abroad/italy' },
+            { label: 'Germany', href: '/study-abroad/Germany' },
+
+            { label: 'Switzerland', href: '/study-abroad/Switzerland' },
+            { label: 'Dubai', href: '/study-abroad/dubai' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+
+>>>>>>> cost-of-studying-usa
              
 
             
@@ -229,15 +282,19 @@ const NAV_ITEMS = [
             
             
          
+<<<<<<< HEAD
 =======
       
 >>>>>>> changes_ci
+=======
+>>>>>>> cost-of-studying-usa
             { label: 'Dubai', href: '/study-abroad/dubai' },
 
             { label: 'Ireland', href: '/study-abroad/ireland' },
              { label: 'France', href: '/study-abroad/france' },
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             
 
@@ -273,25 +330,59 @@ const NAV_ITEMS = [
             { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad/abroad' },
 >>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
+=======
+            
+
+
+      
+
+             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+
+            
+
+           
+          
+
+
+
+
+>>>>>>> cost-of-studying-usa
         ]
 
     },
     {
         label: 'Student Services',
         dropdown: [
+            { label: 'Student Services', href: '/student-services' },
             {
                 label: 'Test Preparations',
                 dropdown: [
-                    { label: 'All Tests', href: '/tests' },
+                    { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
 <<<<<<< HEAD
                     { label: 'IELTS', href: '/ielts' },
                     { label: 'GMAT', href: '/gmat' },
                     { label: 'GRE', href: '/gre' },
+
                     { label: 'SAT', href: '/sat' },
+                    { label: 'CAEL', href: '/test-preparation-cael' },
+
+                    { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CAEL', href: '/cael' },
+
+                    { label: 'CELPIP', href: '/Celpip' },
+
+
+
+
                     { label: 'ACT', href: '/act' },
+                    { label: 'PTE', href: '/PTE' },
+
+                    { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'PTE', href: '/pte' },
+<<<<<<< HEAD
 =======
                     { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
 
@@ -311,15 +402,19 @@ const NAV_ITEMS = [
 
                     { label: 'ACT', href: '/ACT-Preparation' },
 >>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
+=======
+
+>>>>>>> cost-of-studying-usa
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
             },
             { label: 'Career Counseling', href: '/career-counseling' },
-            { label: 'Admission Guidance', href: '/admission-guidance' },
+            { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/study-abroad/scholarship' },
             { label: 'Travel & Forex Assistance', href: '/travel-forex' },
             { label: 'Visa Assistance', href: '/visa-assistance' }
+<<<<<<< HEAD
 
         ],
       },
@@ -342,6 +437,21 @@ const NAV_ITEMS = [
   },
   { label: "Events", href: "/events" },
   { label: "Resources", href: "/resources" },
+=======
+        ],
+    },
+    {
+        label: 'What We Do',
+        dropdown: [
+            { label: 'About Us', href: '/about' },
+            { label: 'University Visits', href: '/what-we-do/university-visits' },
+            { label: 'Work With Us', href: '/work-with-us' },
+            { label: 'Partnered Universities', href: '/study-abroad/partnered-universities' },
+        ]
+    },
+    { label: 'Events', href: '/events' },
+    { label: 'Resources', href: '/resource' }
+>>>>>>> cost-of-studying-usa
 ];
 
 interface DropdownMenuProps {

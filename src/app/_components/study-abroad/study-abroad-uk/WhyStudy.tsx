@@ -30,6 +30,7 @@ export default function WhyStudySection() {
         </div>
 
         {/* Right - Form */}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
        
 =======
@@ -64,6 +65,9 @@ export default function WhyStudySection() {
           </form>
         </div>
 >>>>>>> Stashed changes
+=======
+       
+>>>>>>> cost-of-studying-usa
       </div>
     </section>
   );

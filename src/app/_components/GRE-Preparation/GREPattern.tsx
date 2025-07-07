@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const GrePatternTable = () => {
   return (
     <div id="pattern" className="px-6 py-12 md:px-20 bg-white scroll-mt-30">
@@ -8,6 +9,24 @@ const GrePatternTable = () => {
       <h3 className="text-xl font-semibold text-blue-800 mb-6">
         The GRE Test Format is divided into different sections
       </h3>
+=======
+
+const GrePatternTable = () => {
+  return (
+    <div id="pattern" className="px-6 py-12 md:px-20 bg-white scroll-mt-30">
+      {/* Title */}
+      <h2 className="text-3xl font-bold text-black mb-2">
+        GRE <span className="text-black underline decoration-red-500 decoration-4 underline-offset-[10px]">Pattern</span>
+      </h2>
+
+      {/* Subtitle */}
+      <h3 className="text-xl font-semibold text-blue-800 mb-6">
+        The GRE Test Format is divided into different sections
+      </h3>
+
+      {/* Table */}
+      {/* Table */}
+>>>>>>> cost-of-studying-usa
       <div className="overflow-x-auto">
         <table className="w-full table-fixed text-center border-collapse rounded-xl overflow-hidden">
           <thead>
@@ -49,4 +68,8 @@ const GrePatternTable = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cost-of-studying-usa
 export default GrePatternTable;

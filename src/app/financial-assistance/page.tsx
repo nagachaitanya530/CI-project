@@ -3,7 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import NavigationSection from "../_components/navigation1";
+<<<<<<< HEAD
 import YourJourney from "../_components/study-abroad/your-journey";
+=======
+import SpainHero from "../_components/study-abroad/study-in-spain/SpainHero";
+>>>>>>> cost-of-studying-usa
 import FooterSection from "../_components/footer1";
 import ConsultationForm from "../_components/study-abroad/study-in-spain/ConsultationForm";
 
@@ -38,17 +42,29 @@ export default function FinancialAssistancePage() {
             </div>
             <div className="relative w-full h-80 md:h-[400px]">
               <Image
+<<<<<<< HEAD
               src="/financial-asst-bnr-img.png"
               alt="Consultant"
               fill
               className="object-contain"
             />
 
+=======
+                src="/images/lady.png"
+                alt="Consultant"
+                fill
+                className="object-contain"
+              />
+>>>>>>> cost-of-studying-usa
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* MAIN CONTENT SECTION finan-asst-bnr-img.png*/}
+=======
+        {/* MAIN CONTENT SECTION */}
+>>>>>>> cost-of-studying-usa
         <section className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-3xl">
             <span className="underline font-bold decoration-red-500 underline-offset-[6px]">
@@ -145,7 +161,11 @@ export default function FinancialAssistancePage() {
             Students or parents who borrow directly can claim tax deductions under Section 80E of the Income Tax Act.
           </p>
         </section>
+<<<<<<< HEAD
         <YourJourney />
+=======
+        <SpainHero />
+>>>>>>> cost-of-studying-usa
         <FooterSection />
       </main>
     </>

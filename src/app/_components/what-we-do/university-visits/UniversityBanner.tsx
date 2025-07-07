@@ -27,7 +27,11 @@ export default function UniversityBanner() {
 
         <div className="flex-1 relative w-full max-w-md md:max-w-lg mx-auto">
           <Image
+<<<<<<< HEAD
             src="/universityvisithero1.jpeg"
+=======
+            src="/uni-visit-bnr-img.png"
+>>>>>>> cost-of-studying-usa
             alt="University Visit"
             width={480}
             height={480}

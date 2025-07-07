@@ -71,6 +71,10 @@ const ImportanceSlider = () => {
 
   return (
     <div className="w-full px-6 md:px-24 pt-32 pb-12 bg-white text-black">
+<<<<<<< HEAD
+=======
+      {/* Heading and Description with animation */}
+>>>>>>> cost-of-studying-usa
       <motion.div
         className="mb-16 max-w-4xl"
         initial={{ opacity: 0, y: 40 }}
@@ -95,6 +99,10 @@ const ImportanceSlider = () => {
         </p>
       </motion.div>
 
+<<<<<<< HEAD
+=======
+      {/* Card Section */}
+>>>>>>> cost-of-studying-usa
       {card && (
         <div className="w-full max-w-5xl mx-auto relative mb-14">
           <div className="relative h-[320px] md:h-[420px] overflow-hidden rounded-3xl shadow-xl">
@@ -123,6 +131,10 @@ const ImportanceSlider = () => {
             </AnimatePresence>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Arrows */}
+>>>>>>> cost-of-studying-usa
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={handlePrev}

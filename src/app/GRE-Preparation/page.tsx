@@ -3,6 +3,10 @@ import GreOverview from "../_components/GRE-Preparation/GREOverview"
 import FooterSection from '~/app/_components/footer1';
 import Navigation from '~/app/_components/navigation1';
 import YourJourney from "../_components/study-abroad/your-journey";
+<<<<<<< HEAD
+=======
+import FAQS from "../_components/GRE-Preparation/FAQS";
+>>>>>>> cost-of-studying-usa
 import GrePattern from "../_components/GRE-Preparation/GREPattern";
 import GreSyllabus from "../_components/GRE-Preparation/GRESyllabus";
 import GreDating from "../_components/GRE-Preparation/GREDating";
@@ -10,6 +14,7 @@ import Herosection from "../_components/GRE-Preparation/Herosection";
 import SuccessStory from "../_components/GRE-Preparation/SuccessStory";
 import TestimonialsCarousel from "../_components/GRE-Preparation/SuccessStory";
 import { useEffect, useRef, useState } from "react";
+<<<<<<< HEAD
 import FAQ from "../_components/study-abroad/faq";
 
 const IndiaFAQs = [
@@ -52,6 +57,15 @@ const IndiaFAQs = [
 ];
 function GRE() {
     const sections = [
+=======
+
+
+
+
+
+function GRE(){
+const sections = [
+>>>>>>> cost-of-studying-usa
         { label: 'Overview', id: 'overview' },
         { label: 'Pattern', id: 'pattern' },
         { label: 'Syllabus', id: 'syllabus' },
@@ -90,11 +104,21 @@ function GRE() {
             });
         };
     }, []);
+<<<<<<< HEAD
     return (
         <>
             <Navigation />
             <Herosection />
             {/* NavBar  */}
+=======
+    return(
+
+        <>
+
+        <Navigation/>
+        <Herosection/>
+        {/* NavBar  */}
+>>>>>>> cost-of-studying-usa
 
             <section className="sticky top-16    border border-gray-400 bg-gray-300  rounded-3xl mx-4 my-6 md:mx-25 lg:mx-40 px-2 py-3 shadow-md overflow-hidden">
                 <div className="flex justify-center overflow-x-auto whitespace-nowrap gap-2 sm:gap-3 px-2 scroll-smooth scrollbar-hide">
@@ -105,8 +129,13 @@ function GRE() {
                                 document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
                             }
                             className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm flex-shrink-0 transition duration-300 border ${activeSection === id
+<<<<<<< HEAD
                                 ? 'bg-gray-700 text-white border-gray-700'
                                 : 'bg-white text-black-700 border-blue-50  hover:bg-blue-100'
+=======
+                                    ? 'bg-gray-700 text-white border-gray-700'
+                                    : 'bg-white text-black-700 border-blue-50  hover:bg-blue-100'
+>>>>>>> cost-of-studying-usa
                                 }`}
                         >
                             {label}
@@ -114,6 +143,7 @@ function GRE() {
                     ))}
                 </div>
             </section>
+<<<<<<< HEAD
             {/* <ScrollableTabs/> */}
             <GreOverview />
             <GrePattern />
@@ -124,6 +154,25 @@ function GRE() {
             <YourJourney />
             <FooterSection />
         </>
+=======
+        {/* <ScrollableTabs/> */}
+        <GreOverview/>
+         <GrePattern/>
+        <GreSyllabus/>
+        <GreDating/> 
+        
+        <FAQS/>
+        <TestimonialsCarousel/>
+        <YourJourney/>
+        <FooterSection/>
+        
+
+
+
+
+
+</>
+>>>>>>> cost-of-studying-usa
 
     )
 

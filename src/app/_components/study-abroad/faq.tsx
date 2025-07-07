@@ -89,12 +89,21 @@ function FAQ({
   }), [filteredFAQs]);
 
   return (
+<<<<<<< HEAD
     <>
       {/* JSON-LD for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+=======
+    
+    <div className="max-w-7xl mx-auto p-6">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
+        {title}
+      </h1>
+
+>>>>>>> cost-of-studying-usa
       
       <div className={`max-w-4xl mx-auto p-6 ${className}`}>
         <header className="mb-8 text-center">
@@ -261,7 +270,13 @@ function FAQ({
           </div>
         )}
       </div>
+<<<<<<< HEAD
     </>
+=======
+    </div>
+    </div>
+    
+>>>>>>> cost-of-studying-usa
   );
 }
 
