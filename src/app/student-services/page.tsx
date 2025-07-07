@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useState } from "react";
@@ -8,6 +9,16 @@ import NavigationSection from "../_components/navigation1";
 import FooterSection from "../_components/footer1";
 import YourJourney from "../_components/study-abroad/your-journey";
 import ConsultationFormModal from "~/app/_components/study-abroad/study-in-spain/ConsultationForm";
+=======
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import NavigationSection from '../_components/navigation1';
+import FooterSection from '../_components/footer1';
+import SpainHero from '../_components/study-abroad/study-in-spain/SpainHero';
+import ConsultationFormModal from '~/app/_components/study-abroad/study-in-spain/ConsultationForm';
+>>>>>>> optimizing/ansu
 
 export default function StudentServicesPage() {
   const [showModal, setShowModal] = useState(false);
@@ -93,7 +104,13 @@ export default function StudentServicesPage() {
           />
         </div>
       </section>
+<<<<<<< HEAD
       <YourJourney />
+=======
+
+      <SpainHero />
+
+>>>>>>> optimizing/ansu
       <FooterSection />
     </main>
   );

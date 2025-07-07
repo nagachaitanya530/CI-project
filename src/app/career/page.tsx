@@ -1,7 +1,13 @@
 "use client";
 import React, { useState } from "react";
+<<<<<<< HEAD
 import Navigation from '../_components/Navigation'
 import Footer from '../_components/Footer'
+=======
+import Navigation from "../_components/Navigation";
+import Footer from '../_components/footer1'
+
+>>>>>>> optimizing/ansu
 import JobCard from './JobCard'
 import FilterPage from './FilterPage'
 

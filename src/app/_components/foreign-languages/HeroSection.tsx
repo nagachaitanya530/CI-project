@@ -1,6 +1,10 @@
 const HeroSection = () => {
   return (
     <>
+<<<<<<< HEAD
+=======
+      {/* Hero Background Section */}
+>>>>>>> optimizing/ansu
       <section
         className="relative h-[85vh] flex items-center justify-center px-6 md:px-20 overflow-hidden bg-sky-300"
         style={{
@@ -11,6 +15,10 @@ const HeroSection = () => {
         }}
       >
         <div className="relative w-full max-w-7xl flex items-center justify-between">
+<<<<<<< HEAD
+=======
+          {/* Left Text Section */}
+>>>>>>> optimizing/ansu
           <div className="text-white max-w-2xl z-10">
             <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6 tracking-tight font-sans">
               Learn Foreign
@@ -29,6 +37,7 @@ const HeroSection = () => {
               </button>
             </a>
           </div>
+<<<<<<< HEAD
         </div>
         <div className="flex-1 flex justify-center items-center relative">
           <img
@@ -50,6 +59,53 @@ const HeroSection = () => {
         <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
           Image Placeholder
         </div>
+=======
+
+          {/* Center Image Section */}
+          <div className="flex-1 flex justify-center items-center relative">
+            <img
+              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2022/02/hero-87P2JB5.png"
+              alt="Hero"
+              className="max-w-lg w-full h-auto object-contain z-10"
+            />
+          </div>
+
+          {/* Right Enroll Card */}
+          <div className="bg-gray-800 text-white p-8 w-80 rounded-2xl shadow-2xl z-20">
+            <h3 className="text-3xl font-black mb-6 leading-tight tracking-tight font-sans">
+              French
+              <br />
+              Spanish
+              <br />
+              German
+            </h3>
+            <p className="text-base mb-6 text-gray-300 font-medium font-sans">
+              Live online classes with expert trainers and CEFR standards.
+            </p>
+            <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-orange-500 hover:to-red-500 shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105 text-white font-bold w-full py-4 rounded-xl text-lg border-0 backdrop-blur-sm font-sans hover:cursor-pointer">
+              ENROL NOW
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Remove duplicate/incorrectly nested sections and ensure all tags are closed */}
+      <section className="bg-blue-300 px-6 py-16 flex">
+        {/* First part of Page */}
+        <div className="text-white max-w-xl">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Learn Foreign <br />
+            Languages with <br />
+            <span className="font-extrabold">National Institute of Language</span>
+          </h1>
+          <button className="bg-green-500 hover:bg-zinc-800 transition duration-300 ease-in-out transform hover:-translate-y-2 text-white font-semibold px-6 py-3 rounded-md">BOOK FREE DEMO</button>
+        </div>
+        {/* Image part */}
+        <div className="h-[400px] w-[250px] bg-white rounded-lg shadow-2xl flex items-center justify-center text-black">
+          Image Placeholder
+        </div>
+        {/* Right Enroll Card */}
+>>>>>>> optimizing/ansu
         <div className="bg-gray-800 text-white p-8 w-80 rounded-2xl shadow-2xl z-20">
           <h3 className="text-3xl font-black mb-6 leading-tight tracking-tight font-sans">
             French
@@ -71,4 +127,9 @@ const HeroSection = () => {
     </>
   );
 };
+<<<<<<< HEAD
 export default HeroSection;
+=======
+
+export default HeroSection;
+>>>>>>> optimizing/ansu

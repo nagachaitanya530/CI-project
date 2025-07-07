@@ -1,7 +1,7 @@
 "use client";
 import { CheckCircle, PhoneCall } from "lucide-react";
 import Footer from "../_components/footer1";
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 const rotatingWords = ["solution", "result", "service"];

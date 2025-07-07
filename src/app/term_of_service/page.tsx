@@ -1,5 +1,9 @@
 import Navigation from "../_components/Navigation";
+<<<<<<< HEAD
 import Footer from "../_components/Footer";
+=======
+import Footer from "../_components/footer1";
+>>>>>>> optimizing/ansu
 export default function TermsOfServicePage() {
   return (
     <>

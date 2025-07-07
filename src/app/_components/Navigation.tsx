@@ -26,6 +26,7 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
+<<<<<<< HEAD
 
 
 
@@ -67,6 +68,20 @@ const navItems = [
       },
 
 
+=======
+      { label: "Special Classes", href: "special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/english-foundation-course" },
+          { label: "English Business Personal", href: "/english-business-course" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/soft-skills-training" },
+          { label: "Corporate Training English", href: "/corporate-training" },
+        ],
+      },
+>>>>>>> optimizing/ansu
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
 
@@ -79,23 +94,22 @@ const navItems = [
 
 
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+<<<<<<< HEAD
       { label: "Online Mock Tests", href: "/" },
 
 
 
 
 
+=======
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+>>>>>>> optimizing/ansu
     ],
   },
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
+  { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
-
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
+<<<<<<< HEAD
 
 
 
@@ -114,22 +128,23 @@ const navItems = [
 
 
   },
+=======
+  { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
+>>>>>>> optimizing/ansu
   {
     label: "About CI",
     icon: Info,
     dropdown: [
-
       { label: "About us", href: "/about_us" },
       { label: "Careers", href: "/career" },
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
-
-
     ],
   },
 ];
+
 
 interface DropdownMenuProps {
   items: any[];

@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "~/app/_components/footer1";
-import Navigation from "~/app/_components/Navigation";
+import Navigation from "~/app/_components/navigation1";
 
 import HeroSection from "../_components/english-foundation-course/HeroSection";
 import AboutSection from "../_components/english-foundation-course/AboutSection";
