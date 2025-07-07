@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link'
-import Navigation from '~/app/_components/study-abroad/navigation';
+import Navigation from '~/app/_components/Navigation';
 const MBACanadaBlog = () => {
   return (
     <div>
