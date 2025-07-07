@@ -9,9 +9,15 @@ import ProcessOfTesting from "../_components/career-counseling/ProcessOfTesting"
 import TypesOfAptitude from "../_components/career-counseling/TypesOfAptitude";
 import HeroSection from "../_components/career-counseling/Hero";
 import ImportanceSection from "../_components/career-counseling/ImportanceOfAptitude";
+<<<<<<< HEAD
 import ConsultationForm from "../_components/celpip/ConsultationForm"; // 🔁 Use the correct path
 
 const CareerCounselingFAQs = [
+=======
+import Navigation from "../_components/navigation1";
+
+const  CareerCounselingFAQs = [
+>>>>>>> optimizing/ansu
   {
     question: "When should we take the Academic Pathway Program?",
     answer:
@@ -52,6 +58,7 @@ export default function CareerCounselingPage() {
   const [showForm, setShowForm] = useState(false);
 
   return (
+<<<<<<< HEAD
     <>
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
@@ -62,6 +69,16 @@ export default function CareerCounselingPage() {
       <ProcessOfTesting />
       <DetailedTestReport />
       <FAQ faqs={CareerCounselingFAQs} title="FAQs" />
+=======
+    <> 
+      <Navigation />
+        <HeroSection />
+         <ImportanceSection />
+        <TypesOfAptitude />
+        <ProcessOfTesting />
+        <DetailedTestReport/>
+        <FAQ faqs={CareerCounselingFAQs} title="FAQs" />
+>>>>>>> optimizing/ansu
       <YourJourney />
       <FooterSection />
     </>

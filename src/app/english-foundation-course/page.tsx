@@ -2,7 +2,7 @@
 
 <<<<<<< HEAD
 import Footer from "~/app/_components/footer1";
-import Navigation from "~/app/_components/Navigation";
+import Navigation from "~/app/_components/navigation1";
 
 =======
 import Footer from "~/app/_components/Footer";

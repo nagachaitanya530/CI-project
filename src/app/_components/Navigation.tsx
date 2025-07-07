@@ -26,7 +26,7 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
-<<<<<<< HEAD
+
 
 
 
@@ -35,14 +35,14 @@ const navItems = [
 
       { label: "Special Classes", href: "special-classes" },
 
-=======
+
       { label: "Special Classes", href: "/special-classes" },
->>>>>>> changes_ci
+
       { label: "IELTS Classes", href: "/what-is-ielts" },
       {
         label: "Spoken English",
         dropdown: [
-<<<<<<< HEAD
+
 
          
 
@@ -52,9 +52,9 @@ const navItems = [
       { label: "IELTS Classes", href: "/what-is-ielts" },
 
 
-=======
+
         
->>>>>>> changes_ci
+
           {
             label: "English Courses",
             dropdown: [
@@ -65,7 +65,7 @@ const navItems = [
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
-<<<<<<< HEAD
+
               { label: "Corporate Training English", href: "/" },
             ],
           },
@@ -74,6 +74,20 @@ const navItems = [
         ],
       },
 
+
+
+      { label: "Special Classes", href: "special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+      {
+        label: "Spoken English",
+        dropdown: [
+          { label: "English Foundation Personal", href: "/english-foundation-course" },
+          { label: "English Business Personal", href: "/english-business-course" },
+          { label: "English Advanced Personal", href: "/english-advanced-course" },
+          { label: "Soft Skills Personal Training", href: "/soft-skills-training" },
+          { label: "Corporate Training English", href: "/corporate-training" },
+        ],
+      },
 
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
@@ -87,13 +101,18 @@ const navItems = [
 
 
       { label: "Kids Courses (Languages)", href: "/kids_courses" },
+
       { label: "Online Mock Tests", href: "/" },
 
 
 
 
 
-=======
+
+
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+
+
               { label: "Corporate Training English", href: "/corporate-training-english" },
             ],
           },
@@ -103,13 +122,14 @@ const navItems = [
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
->>>>>>> changes_ci
+
+
     ],
   },
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
-<<<<<<< HEAD
+
 
 
 
@@ -128,9 +148,11 @@ const navItems = [
 
 
   },
-=======
-  { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
->>>>>>> changes_ci
+ { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
+
+
+
+
   {
     label: "About CI",
     icon: Info,
@@ -144,6 +166,7 @@ const navItems = [
     ],
   },
 ];
+
 
 interface DropdownMenuProps {
   items: any[];

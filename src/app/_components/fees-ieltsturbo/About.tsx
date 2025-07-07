@@ -33,7 +33,7 @@ function AboutPage() {
                             </div>
                         </div>
                         <div className="flex items-center px-10 ">
-                           <CheckCircle className="w-60 h-60"/>
+                           <CheckCircle className="w-40 h-40"/>
                             <div className="pl-5">
                                 <h3 className="font-semibold">Advanced Grammar</h3>
                                 <p className="text-gray-500 text-sm " >You will also learn advanced 
