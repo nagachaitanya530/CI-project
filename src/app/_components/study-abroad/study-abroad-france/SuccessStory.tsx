@@ -28,7 +28,6 @@ const successStories = [
       "Wonderful consultant. I had a very flourishing process with them. They were very knowledgeable and knew what they were doing.",
     image: "https://cdn-icons-png.flaticon.com/512/847/847969.png",
   },
-
 ];
 
 export default function SuccessStories() {
@@ -43,24 +42,24 @@ export default function SuccessStories() {
   };
 
   return (
-    <section className="bg-[#dce3ef] py-24 px-6 lg:px-28 rounded-t-[60px]">
-      <div className="flex justify-between items-center mb-14">
-        <h2 className="text-5xl font-extrabold text-gray-900">
-           <span className="text-orange-600 justify-center align-center">Success Stories</span>
+    <section className="bg-[#dce3ef] py-12 px-3 sm:py-16 sm:px-6 lg:py-24 lg:px-28 rounded-t-3xl md:rounded-t-[60px]">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-14 gap-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center md:text-left">
+          <span className="text-orange-600">Success Stories</span>
         </h2>
-        <div className="flex gap-4 hover:cursor-pointer">
+        <div className="flex gap-4">
           <button
             onClick={prevSlide}
-            className="w-12 h-12 hover:cursor-pointer rounded-full border border-blue-900 text-blue-900 flex items-center justify-center hover:bg-blue-100 transition"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-blue-900 text-blue-900 flex items-center justify-center hover:bg-blue-100 transition"
           >
             <ArrowLeft size={20} />
           </button>
-            <button
+          <button
             onClick={nextSlide}
-            className="w-12 h-12 rounded-full hover:cursor-pointer bg-blue-900 text-white flex items-center justify-center hover:bg-blue-800 transition"
-            >
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-900 text-white flex items-center justify-center hover:bg-blue-800 transition"
+          >
             <ArrowRight size={20} />
-            </button>
+          </button>
         </div>
       </div>
 
@@ -75,14 +74,13 @@ export default function SuccessStories() {
           {successStories.map((story, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-[40px]  shadow-lg flex flex-col md:flex-row items-center gap-10 min-w-full hover:shadow-xl transition duration-500"
+              className="bg-white p-4 sm:p-6 rounded-2xl md:rounded-[40px] shadow-lg flex flex-col md:flex-row items-center gap-6 md:gap-10 min-w-full hover:shadow-xl transition duration-500"
             >
               <div className="relative w-full md:w-[480px]">
-                <div className="relative overflow-hidden rounded-2xl shadow-md">
+                <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-md">
                   <iframe
                     src={story.video}
-                    className="w-full h-[300px] rounded-2xl hover:scale-[1.02] transition duration-500"
-                    frameBorder="0"
+                    className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-xl md:rounded-2xl hover:scale-[1.02] transition duration-500"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     title={`Video ${idx + 1}`}
@@ -90,16 +88,16 @@ export default function SuccessStories() {
                 </div>
               </div>
               <div className="w-full md:w-[500px] text-left">
-                <p className="text-gray-800 text-lg mb-6 leading-relaxed italic">“{story.quote}”</p>
-                <div className="flex items-center gap-4">
+                <p className="text-gray-800 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed italic">“{story.quote}”</p>
+                <div className="flex items-center gap-3 sm:gap-4">
                   <img
                     src={story.image}
                     alt={story.name}
-                    className="w-14 h-14 rounded-full hover:cursor-pointer object-cover border-2 border-blue-300 shadow-md"
+                    className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-blue-300 shadow-md"
                   />
                   <div>
-                    <p className="font-bold text-gray-900 text-lg">{story.name}</p>
-                    <p className="text-gray-600 text-sm italic">{story.university}</p>
+                    <p className="font-bold text-gray-900 text-base sm:text-lg">{story.name}</p>
+                    <p className="text-gray-600 text-xs sm:text-sm italic">{story.university}</p>
                   </div>
                 </div>
               </div>

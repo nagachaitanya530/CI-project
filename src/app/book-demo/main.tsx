@@ -69,6 +69,11 @@ const MainSection = () => {
 
 );
 
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> feature/UpdatePage
 
 };
 export default MainSection;

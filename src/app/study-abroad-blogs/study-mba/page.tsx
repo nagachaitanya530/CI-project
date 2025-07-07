@@ -1,7 +1,11 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link'
+<<<<<<< HEAD
 import NavigationSection from '~/app/_components/navigation1';
+=======
+import Navigation from '~/app/_components/Navigation';
+>>>>>>> feature/UpdatePage
 const MBACanadaBlog = () => {
   return (
     <div>

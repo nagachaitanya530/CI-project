@@ -4,11 +4,8 @@ import NavigationSection from "../_components/navigation1";
 import SuccessStories from "../_components/celpip/SuccessStories";
 import YourJourney from "../_components/study-abroad/your-journey";
 import FooterSection from "../_components/footer1";
-// import Hero from "../_components/celpip/Hero";
-import { Scroll } from "lucide-react";
-import ScrollableTabs from "../_components/celpip/ScollableTabs";
 import ConsultationForm from "../_components/celpip/ConsultationForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Miscellaneous from "../_components/celpip/Miscellaneous";
 import Training from "../_components/celpip/Training";
 import Date from "../_components/celpip/Date";
@@ -16,6 +13,8 @@ import Scoring from "../_components/celpip/Scoring";
 import Syllabus from "../_components/celpip/Syllabus";
 import Pattern from "../_components/celpip/Pattern";
 import Overview from "../_components/celpip/Overview";
+import HERO from "../_components/celpip/Hero";
+import ScrollableTabs from "../_components/celpip/ScollableTabs";
 
 function Celpip(){
 
@@ -74,41 +73,53 @@ function Celpip(){
         }
     ]
       const [isOpen, setIsOpen] = useState(false);
+
+        // const sections = [
+        //         { label: 'Overview', id: 'overview' },
+        //         { label: 'Pattern', id: 'pattern' },
+        //         { label: 'Syllabus', id: 'syllabus' },
+        //         { label: 'Scores', id: 'score' },
+        //         { label: 'Dates', id: 'dates' },
+        //         { label: 'Training', id: 'training' },
+        //         { label: 'Miscellaneous', id: 'fee' },
+        //         { label: 'FAQ', id: 'faq' },
+        //     ];
+        //     const [activeSection, setActiveSection] = useState<string | null>(null);
+        
+        //     useEffect(() => {
+        //         const observer = new IntersectionObserver(
+        //             (entries) => {
+        //                 const visible = entries.find(entry => entry.isIntersecting);
+        //                 if (visible) {
+        //                     setActiveSection(visible.target.id);
+        //                 }
+        //             },
+        //             {
+        //                 root: null,
+        //                 rootMargin: '0px',
+        //                 threshold: 0.3,
+        //             }
+        //         );
+        
+        //         sections.forEach(({ id }) => {
+        //             const element = document.getElementById(id);
+        //             if (element) observer.observe(element);
+        //         });
+        
+        //         return () => {
+        //             sections.forEach(({ id }) => {
+        //                 const element = document.getElementById(id);
+        //                 if (element) observer.unobserve(element);
+        //             });
+        //         };
+        //     }, []);
+          
     return(
         
         <>
-
         <NavigationSection/>
-        {/* HERO */}
-         {isOpen && <ConsultationForm show={isOpen} onClose={() => setIsOpen(false)} />}
-        <div className="flex flex-col md:flex-row items-center justify-between border-2 bg-blue-100 p-6 md:p-20 gap-8 md:gap-0">
-            <div className="grid flex-1 min-w-0">
-                <h1 className="font-bold text-3xl md:text-4xl text-blue-900 mb-3 md:mb-5">CELPIP-2025</h1>
-                <h1 className="font-semibold text-xl md:text-2xl">Test Formate:</h1>
-                <p className="text-blue-900">Listening, Reading, Writing, Speaking</p>
-                <br className="hidden md:block" />
-                <h1 className="font-semibold text-xl md:text-2xl">Mode:</h1>
-                <p className="mb-3 md:mb-5 text-blue-900">Computer Delivered</p>
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="bg-blue-900 text-white py-2 md:py-3 px-4 md:px-6 rounded-3xl font-semibold hover:bg-white hover:text-blue-900 transition hover:cursor-pointer duration-300 w-full md:w-auto"
-                >
-                    Free Expert Consultation
-                </button>
-            </div>
-            <div className="flex-1 min-w-0 text-xl md:text-2xl text-blue-900 md:mr-60 mb-4 md:mb-0">
-                <h1 className="font-bold text-black">Duration:</h1>
-                <p className="text-sm">3 hours (Approximately)</p>
-            </div>
-            <div className="flex-1 min-w-0 text-center">
-                <img
-                    src="/study.jpg"
-                    alt="study"
-                    className="w-full max-w-xs md:max-w-[30rem] h-48 md:h-80 object-cover shadow-lg rounded-lg mx-auto"
-                />
-                <p className="italic text-md mt-2">Last updated - June 2025</p>
-            </div>
-        </div>
+         {isOpen && <ConsultationForm show={isOpen} onClose={() => setIsOpen(false)} />}        
+        <HERO/>
         <ScrollableTabs/>
         <Overview/>
         <Pattern/>
@@ -116,8 +127,7 @@ function Celpip(){
         <Scoring/>
         <Date/>
         <Training/>
-       <Miscellaneous/>
-        
+       <Miscellaneous/>        
         {/* FAQ */}
         <section id="faq">
                 <FAQ faqs={FrontendFAQ} />

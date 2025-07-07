@@ -1,53 +1,88 @@
-import React, { useState } from "react";
-import { FileText, CheckCircle } from "react-feather";
-import { motion } from "framer-motion";
+"use client";
+import { useEffect, useRef, useState } from "react";
 import ConsultationForm from "./ConsultationForm";
 
 function MoreAbout() {
-    const [tab, setTab] = useState("documents");
-    
-      const tabs = [
-        { id: "documents", name: "Documents", icon: <FileText size={18} /> },
-        { id: "visa", name: "Visa", icon: <CheckCircle size={18} /> },
-      ];
-    const [isopen, setIsOpen] = useState(false);  
+  const [activeTab, setActiveTab] = useState("documents");
+  const [isopen, setIsOpen] = useState(false);
 
-    return (
-        <>
+  const documentsRef = useRef<HTMLDivElement | null>(null);
+  const visaRef = useRef<HTMLDivElement | null>(null);
 
-       {isopen && <ConsultationForm show={isopen} onClose={() => setIsOpen(false)} />}
-        <section className="py-28 px-6 lg:px-24 bg-white">
-      <h2 className="text-5xl font-bold text-center text-orange-600 mb-12">
-        More About <span className="text-black">France</span>
-      </h2>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
 
-      <div className="grid lg:grid-cols-4 gap-10">
-        <div className="flex lg:flex-col gap-4 lg:col-span-1 justify-start">
-          {tabs.map((t) => (
+        if (visibleSections.length > 0) {
+          const topMost = visibleSections[0]?.target?.id;
+          if (topMost) {
+            setActiveTab(topMost);
+          }
+        }
+      },
+      {
+        root: null,
+        threshold: 0.5,
+        rootMargin: "0px 0px -40% 0px",
+      }
+    );
+
+    if (documentsRef.current) observer.observe(documentsRef.current);
+    if (visaRef.current) observer.observe(visaRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  return (
+    <>
+      {isopen && <ConsultationForm show={isopen} onClose={() => setIsOpen(false)} />}
+      <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
+
+        <h2 className=" md:text-4xl font-semibold mb-10 text-center">
+          <span className="font-bold text-5xl text-orange-600 ">More about </span>
+          <span className="font-bold text-5xl  ">
+            France
+          </span>
+        </h2>
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
+          <div className="flex md:flex-col gap-4">
             <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full hover:cursor-pointer hover:shadow-lg font-medium transition-all duration-300 ${
-                tab === t.id
-                  ? "bg-blue-900 text-white shadow-md"
-                  : "bg-blue-100 text-blue-900 hover:bg-blue-200 hover:text-blue-900"
+              onClick={() => scrollToSection(documentsRef)}
+              className={`py-2 px-4 rounded-full text-left border ${
+                activeTab === "documents"
+                  ? "bg-blue-700 text-white"
+                  : "bg-white text-gray-700"
               }`}
             >
-              {t.icon} {t.name}
+              📄 Documents
             </button>
-          ))}
+            <button
+              onClick={() => scrollToSection(visaRef)}
+              className={`py-2 px-4 rounded-full text-left border ${
+                activeTab === "visa"
+                  ? "bg-blue-700 text-white"
+                  : "bg-white text-gray-700"
+              }`}
+            >
+              🛂 Visa
+            </button>
+          </div>
         </div>
-
-        <motion.div
-          key={tab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="lg:col-span-3 bg-gray-50 p-10 border-3 border-gray-200 rounded-3xl shadow-lg"
-        >
-          {tab === "documents" ? (
-            <>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="flex-1 space-y-12 pr-2">
+          <div
+            id="documents"
+            ref={documentsRef}
+            className="p-6 border rounded-3xl shadow-sm scroll-mt-24"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Documents required to study in France
               </h3>
               <p className="text-gray-700 mb-4">
@@ -70,27 +105,29 @@ function MoreAbout() {
                   Free Expert Consultation
                 </button>
               </div>
-            </>
-          ) : (
-            <>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                France study visa process
-              </h3>
-              <p className="text-gray-700 mb-4">
-                France has a very simple procedure for student visas. Students must complete the Campus France visa application process prior to applying for the French visa. An interview will be conducted by Campus France and after getting an NOC, they need to book a visa appointment with the VFS.
-              </p>
-              
-              <div className="mt-6 text-left">
-                <button onClick={()=> setIsOpen(true)} className="px-6 py-3 bg-white hover:cursor-pointer text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
-                  Free Expert Consultation
-                </button>
-              </div>
-            </>
-          )}
-        </motion.div>
+          </div>
+          <div
+            id="visa"
+            ref={visaRef}
+            className="p-6 border rounded-3xl shadow-sm scroll-mt-24"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                 France study visa process
+               </h3>
+               <p className="text-gray-700 mb-4">
+                 France has a very simple procedure for student visas. Students must complete the Campus France visa application process prior to applying for the French visa. An interview will be conducted by Campus France and after getting an NOC, they need to book a visa appointment with the VFS.
+               </p>            
+               <div className="mt-6 text-left">
+                 <button onClick={()=> setIsOpen(true)} className="px-6 py-3 bg-white hover:cursor-pointer text-blue-900 font-semibold border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition">
+                   Free Expert Consultation
+                 </button>
+               </div>
+          </div>
+        </div>
       </div>
-    </section>
-        </>
-    );
+    </div>
+    </>
+  );
 }
 export default MoreAbout;
+

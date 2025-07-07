@@ -28,6 +28,7 @@ const navItems = [
     dropdown: [
 
 
+<<<<<<< HEAD
 
 
       { label: "Special Classes", href: "/" },
@@ -55,10 +56,15 @@ const navItems = [
 
         
 
+=======
+      { label: "Special Classes", href: "special-classes" },
+      { label: "IELTS Classes", href: "/what-is-ielts" },
+>>>>>>> feature/UpdatePage
           {
             label: "English Courses",
             dropdown: [
               { label: "English Foundation Personal", href: "/english-foundation-course" },
+<<<<<<< HEAD
 
               
 
@@ -122,10 +128,24 @@ const navItems = [
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
       { label: "Online Mock Tests", href: "/OnlineMockTest" },
+=======
+              { label: "English Business Personal", href: "/english-business-course" },
+              { label: "English Advanced Personal", href: "/english-advanced-course" },
+              { label: "Soft Skills Personal Training", href: "/" },
+              { label: "Corporate Training English", href: "/" },
+            ],
+          },
+      { label: "OET Classes", href: "/oet-classes" },
+      { label: "Foreign Languages", href: "/foreign-languages" },
+      { label: "Kids Courses (Languages)", href: "/kids_courses" },
+      { label: "Online Mock Tests", href: "/" },
+
+>>>>>>> feature/UpdatePage
 
 
     ],
   },
+<<<<<<< HEAD
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
@@ -137,11 +157,28 @@ const navItems = [
 
 
 
+=======
+  {
+    label: "Book Demo",
+    href: "/book-demo",
+    isButton: true,
+    icon: CalendarCheck,
+  },
+  { label: "Fees", href: "/fees", icon: FileText },
+
+  { label: "JOC", href: "/joc-page", icon: GraduationCap },
+
+
+ 
+
+
+>>>>>>> feature/UpdatePage
   {
     label: "Study Abroad", href: "/study-abroad", isButton: true,
     icon: Globe,
 
 
+<<<<<<< HEAD
   
 
 
@@ -153,21 +190,34 @@ const navItems = [
 
 
 
+=======
+
+  },
+>>>>>>> feature/UpdatePage
   {
     label: "About CI",
     icon: Info,
     dropdown: [
+
       { label: "About us", href: "/about_us" },
       { label: "Careers", href: "/career" },
       { label: "Community", href: "/community" },
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> feature/UpdatePage
     ],
   },
 ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/UpdatePage
 interface DropdownMenuProps {
   items: any[];
   isMobile?: boolean;
@@ -243,7 +293,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
               ) : (
                 <Link
                   href={item.href || "#"}
-                  onClick={() => closeMenu?.()}
+                  onClick={closeMenu}
                   className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
                 >
                   {item.label}
@@ -300,7 +350,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
               ) : (
                 <Link
                   href={item.href || "#"}
-                  onClick={() => closeMenu?.()}
+                  onClick={closeMenu}
                   className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
                 >
                   {item.label}
