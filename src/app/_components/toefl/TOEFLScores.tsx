@@ -1,7 +1,11 @@
 "use client";
 
 import React from "react";
+<<<<<<< HEAD
 import { motion, useAnimation, type Variants, easeInOut } from "framer-motion";
+=======
+import { motion, useAnimation } from "framer-motion";
+>>>>>>> cost-of-studying-usa
 import { useInView } from "react-intersection-observer";
 
 const scoreData = [
@@ -32,7 +36,11 @@ const scoreData = [
   },
 ];
 
+<<<<<<< HEAD
 const cardVariants: Variants = {
+=======
+const cardVariants = {
+>>>>>>> cost-of-studying-usa
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -40,7 +48,11 @@ const cardVariants: Variants = {
     transition: {
       delay: i * 0.3,
       duration: 0.6,
+<<<<<<< HEAD
       ease: easeInOut,
+=======
+      ease: "easeOut",
+>>>>>>> cost-of-studying-usa
     },
   }),
 };
@@ -50,9 +62,13 @@ const TOEFLScores = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   React.useEffect(() => {
+<<<<<<< HEAD
     if (inView) {
       controls.start("visible");
     }
+=======
+    if (inView) controls.start("visible");
+>>>>>>> cost-of-studying-usa
   }, [inView, controls]);
 
   return (
@@ -77,9 +93,13 @@ const TOEFLScores = () => {
               variants={cardVariants}
               className="bg-blue-50/30 border border-blue-100 rounded-2xl shadow-md p-6 md:p-8"
             >
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-[#1f3f98] mb-2">
                 {item.title}
               </h3>
+=======
+              <h3 className="text-xl font-semibold text-[#1f3f98] mb-2">{item.title}</h3>
+>>>>>>> cost-of-studying-usa
               <p className="text-gray-700 font-medium mb-1">
                 <strong>Score Range:</strong> {item.scoreRange}
               </p>

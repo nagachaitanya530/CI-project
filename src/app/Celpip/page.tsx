@@ -4,11 +4,16 @@ import NavigationSection from "../_components/navigation1";
 import SuccessStories from "../_components/celpip/SuccessStories";
 import YourJourney from "../_components/study-abroad/your-journey";
 import FooterSection from "../_components/footer1";
+<<<<<<< HEAD
+import ConsultationForm from "../_components/celpip/ConsultationForm";
+import { useState, useEffect } from "react";
+=======
 // import Hero from "../_components/celpip/Hero";
 import { Scroll } from "lucide-react";
 import ScrollableTabs from "../_components/celpip/ScollableTabs";
 import ConsultationForm from "../_components/celpip/ConsultationForm";
 import { useState } from "react";
+>>>>>>> cost-of-studying-usa
 import Miscellaneous from "../_components/celpip/Miscellaneous";
 import Training from "../_components/celpip/Training";
 import Date from "../_components/celpip/Date";
@@ -16,6 +21,11 @@ import Scoring from "../_components/celpip/Scoring";
 import Syllabus from "../_components/celpip/Syllabus";
 import Pattern from "../_components/celpip/Pattern";
 import Overview from "../_components/celpip/Overview";
+<<<<<<< HEAD
+import HERO from "../_components/celpip/Hero";
+import ScrollableTabs from "../_components/celpip/ScollableTabs";
+=======
+>>>>>>> cost-of-studying-usa
 
 function Celpip(){
 
@@ -74,6 +84,55 @@ function Celpip(){
         }
     ]
       const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
+
+        // const sections = [
+        //         { label: 'Overview', id: 'overview' },
+        //         { label: 'Pattern', id: 'pattern' },
+        //         { label: 'Syllabus', id: 'syllabus' },
+        //         { label: 'Scores', id: 'score' },
+        //         { label: 'Dates', id: 'dates' },
+        //         { label: 'Training', id: 'training' },
+        //         { label: 'Miscellaneous', id: 'fee' },
+        //         { label: 'FAQ', id: 'faq' },
+        //     ];
+        //     const [activeSection, setActiveSection] = useState<string | null>(null);
+        
+        //     useEffect(() => {
+        //         const observer = new IntersectionObserver(
+        //             (entries) => {
+        //                 const visible = entries.find(entry => entry.isIntersecting);
+        //                 if (visible) {
+        //                     setActiveSection(visible.target.id);
+        //                 }
+        //             },
+        //             {
+        //                 root: null,
+        //                 rootMargin: '0px',
+        //                 threshold: 0.3,
+        //             }
+        //         );
+        
+        //         sections.forEach(({ id }) => {
+        //             const element = document.getElementById(id);
+        //             if (element) observer.observe(element);
+        //         });
+        
+        //         return () => {
+        //             sections.forEach(({ id }) => {
+        //                 const element = document.getElementById(id);
+        //                 if (element) observer.unobserve(element);
+        //             });
+        //         };
+        //     }, []);
+          
+    return(
+        
+        <>
+        <NavigationSection/>
+         {isOpen && <ConsultationForm show={isOpen} onClose={() => setIsOpen(false)} />}        
+        <HERO/>
+=======
     return(
         
         <>
@@ -109,6 +168,7 @@ function Celpip(){
                 <p className="italic text-md mt-2">Last updated - June 2025</p>
             </div>
         </div>
+>>>>>>> cost-of-studying-usa
         <ScrollableTabs/>
         <Overview/>
         <Pattern/>
@@ -116,8 +176,12 @@ function Celpip(){
         <Scoring/>
         <Date/>
         <Training/>
+<<<<<<< HEAD
+       <Miscellaneous/>        
+=======
        <Miscellaneous/>
         
+>>>>>>> cost-of-studying-usa
         {/* FAQ */}
         <section id="faq">
                 <FAQ faqs={FrontendFAQ} />

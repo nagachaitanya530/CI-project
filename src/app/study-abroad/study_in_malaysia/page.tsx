@@ -3,6 +3,7 @@
 import { useState } from "react";
 import HeroSection from "~/app/_components/study-abroad/study_in_malaysia/HeroSection";
 import WhyMalaysia from "~/app/_components/study-abroad/study_in_malaysia/WhyMalaysia";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Universities from "~/app/_components/study-abroad/study_in_malaysia/Universities";
 import Courses from "~/app/_components/study-abroad/study_in_malaysia/Courses";
 import CostOfStudy from "~/app/_components/study-abroad/study_in_malaysia/CostOfStudy";
@@ -11,10 +12,13 @@ import CareerProspect from "~/app/_components/study-abroad/study_in_malaysia/Car
 import MoreAboutMalaysia from "~/app/_components/study-abroad/study_in_malaysia/MoreAboutMalaysia";
 import SuccessStories from "~/app/_components/study-abroad/study_in_malaysia/SuccessStories";
 import NavigationSection from "~/app/_components/navigation1";
-import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
+
+import FAQ from "~/app/_components/study-abroad/faq";
+
 import ConsultationForm from "~/app/_components/celpip/ConsultationForm";
+
 
 const MalaysiaFAQs = [
   {
@@ -81,14 +85,19 @@ export default function StudyInMalaysiaPage() {
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 
       <WhyMalaysia />
+      <ContactFormSection />
       <Universities />
       <Courses />
       <CostOfStudy />
       <Scholarship />
       <CareerProspect />
+
+    
+
       <MoreAboutMalaysia onConsultClick={() => setShowForm(true)} /> {/* ✅ added */}
       <SuccessStories />
       <FAQ faqs={MalaysiaFAQs} title="FAQs" />
+
       <YourJourney />
       <FooterSection />
     </>

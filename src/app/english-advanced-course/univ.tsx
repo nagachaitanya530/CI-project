@@ -8,8 +8,6 @@ function Univ() {
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 md:mb-12 w-full md:w-1/2">
             Get exclusive access to career resources
           </h2>
-
-          {/* Services Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-1/2 mb-3">
             <div className="flex flex-col w-full">
               <div className="text-2xl md:text-3xl pb-3">📄</div>
@@ -36,11 +34,7 @@ function Univ() {
             </div>
           </div>
         </div>
-
-        {/* Divider */}
         <hr className="border-gray-500 my-6" />
-
-        {/* Universities Section */}
         <div className="flex flex-col md:flex-row md:items-center gap-4 mt-3">
           <p className="font-semibold text-base md:text-lg">
             Get access to more than 4000 International universities and colleges

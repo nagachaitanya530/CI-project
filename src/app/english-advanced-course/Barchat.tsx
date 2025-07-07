@@ -19,9 +19,7 @@ function Chat() {
 
   return (
     <>
-      {/* bar-chat */}
       <div id="Outcomes" className="min-h-96 mb-20 p-4 flex flex-col scroll-mt-35 lg:flex-row items-center justify-center">
-        {/* Left Column */}
         <div className="bg-white shadow-[-4px_9px_10px_rgba(0,0,0,0.2)] scroll-m-35 rounded-bl-3xl p-5 w-full max-w-3xl mb-6 lg:mb-0 lg:mr-4">
           <div className="flex-1">
             <h2 className="text-lg sm:text-xl font-bold mb-1 mt-3">*Expected outcome by the end of the course.</h2>
@@ -47,11 +45,7 @@ function Chat() {
             ))}
           </div>
         </div>
-
-        {/* Divider */}
         <div className="hidden lg:block w-px h-[30rem] bg-gray-600 mx-4"></div>
-
-        {/* Right Column */}
         <div className=" w-60 h-60 flex items-center justify-center">
           <svg className="w-full h-full" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" stroke="#e5e7eb" strokeWidth="10" fill="none" />

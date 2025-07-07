@@ -28,13 +28,25 @@ export default function ACT_Preparation() {
             <>
       <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
     </>
+<<<<<<< HEAD
+=======
             
+>>>>>>> cost-of-studying-usa
             <Scrollingnavbar/>
             <Overview/>
             <Pattern/>
             <Syllabus />
             <Score />
             <Dates />
+<<<<<<< HEAD
+            <Training />
+            <Miscellaneous />
+            <FAQ/>
+            <SuccessStories/>
+            <YourJourney />
+            <FooterSection />
+    </>
+=======
              <Training />
              <Miscellaneous />
              <FAQ/>
@@ -47,6 +59,7 @@ export default function ACT_Preparation() {
 
         </>
 
+>>>>>>> cost-of-studying-usa
 
     )
 }

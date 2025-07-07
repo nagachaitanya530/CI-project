@@ -1,9 +1,11 @@
 'use client'
-import { BookCheckIcon, FileBadge2, FileText, IdCardLanyard } from 'lucide-react'
-import { useEffect, useRef, useState, type JSX } from 'react';
+
 import FooterSection from '~/app/_components/footer1';
 import Navigation from '~/app/_components/navigation1';
+
+
 import FAQ from '~/app/_components/study-abroad/faq';
+
 import CareerProspect from '~/app/_components/study-abroad/study-abrod-NewZealand/CareerProspect';
 import CostOfStudy from '~/app/_components/study-abroad/study-abrod-NewZealand/CostOfStudy';
 import HeroSection from '~/app/_components/study-abroad/study-abrod-NewZealand/HeroSection';
@@ -14,7 +16,38 @@ import Scholarships from '~/app/_components/study-abroad/study-abrod-NewZealand/
 import Testimonials from '~/app/_components/study-abroad/study-abrod-NewZealand/Testimonials';
 import UniversityList from '~/app/_components/study-abroad/study-abrod-NewZealand/UniversityList';
 import WhyStudy from '~/app/_components/study-abroad/study-abrod-NewZealand/WhyStudy';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import YourJourney from "~/app/_components/study-abroad/your-journey";
+
+
+function NewZealandPage()
+{
+return(
+<>
+      <Navigation/>
+      <HeroSection/>
+      <WhyStudy/>
+      <ContactFormSection />
+      <UniversityList/>
+      <PopularCoursesSection/>
+      <CostOfStudy/>
+      <Scholarships/>
+      <CareerProspect/>
+      <MoreAbout/>
+      <RelatedArticle/>
+      <Testimonials/>
+      <FAQAccordion/>
+      <YourJourney/>
+      <FooterSection/>
+      
+      
+      
+      
+
+
+</>
+
+    )
 
 const IndiaFAQs = [
   {
@@ -37,6 +70,7 @@ const IndiaFAQs = [
     question: "What are the part time work opportunities for students and how much can they earn?",
     answer: "Students are allowed to work part-time for 20 hours per week. The wages range from NZ$18-NZ$22 per hour. Students can choose to work in restaurants, farms, malls and as marketing executives.",
   },
+
 
 ];
 function NewZealandPage() {

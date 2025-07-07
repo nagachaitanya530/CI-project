@@ -9,7 +9,11 @@ function Scoring() {
                 CELPIP <span className="text-blue-900">Scoring</span>
             </h1>
             <div className="overflow-x-auto border-2 rounded-lg">
+<<<<<<< HEAD
+                <table className="min-w-[380px] w-full border border-gray-600 rounded-lg text-center text-sm sm:text-base">
+=======
                 <table className="min-w-[400px] w-full border border-gray-600 rounded-lg text-center text-sm sm:text-base">
+>>>>>>> cost-of-studying-usa
                     <thead className="bg-blue-900 text-white">
                         <tr className="text-base sm:text-lg">
                             <th className="py-2 px-3 sm:py-3 sm:px-6">CELPIP LEVEL</th>

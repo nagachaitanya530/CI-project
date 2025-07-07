@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import { useState } from "react";
@@ -8,23 +10,55 @@ import NavigationSection from "../_components/navigation1";
 import FooterSection from "../_components/footer1";
 import YourJourney from "../_components/study-abroad/your-journey";
 import ConsultationFormModal from "~/app/_components/study-abroad/study-in-spain/ConsultationForm";
+=======
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+=======
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+>>>>>>> cost-of-studying-usa
+import NavigationSection from '../_components/navigation1';
+import FooterSection from '../_components/footer1';
+import SpainHero from '../_components/study-abroad/study-in-spain/SpainHero';
+import ConsultationFormModal from '~/app/_components/study-abroad/study-in-spain/ConsultationForm';
+<<<<<<< HEAD
+>>>>>>> optimizing/ansu
+=======
+>>>>>>> cost-of-studying-usa
 
 export default function StudentServicesPage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <main className="bg-gradient-to-r from-white via-pink-50 to-green-50 min-h-screen">
+<<<<<<< HEAD
       <ConsultationFormModal
         show={showModal}
         onClose={() => setShowModal(false)}
       />
       <NavigationSection />
+=======
+      <ConsultationFormModal show={showModal} onClose={() => setShowModal(false)} />
+
+      <NavigationSection />
+
+>>>>>>> cost-of-studying-usa
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-16">
         {/* Left Content */}
         <div className="w-full lg:w-1/2">
           <h1 className="text-5xl leading-tight mb-6">
+<<<<<<< HEAD
             Student{" "}
+=======
+            Student{' '}
+>>>>>>> cost-of-studying-usa
             <span className="relative inline-block">
               <span className="text-black font-bold">Services</span>
               <span className="absolute left-0 bottom-1 w-full h-1 bg-red-500 rounded-md"></span>
@@ -47,13 +81,21 @@ export default function StudentServicesPage() {
             alt="Student"
             width={400}
             height={400}
+<<<<<<< HEAD
             className="object-contain mt-10 rounded-lg"
+=======
+            className="object-contain"
+>>>>>>> cost-of-studying-usa
           />
         </div>
       </section>
 
       {/* Services Cards */}
+<<<<<<< HEAD
       <section className="max-w-6xl mx-auto px-6 mt-40 pb-10">
+=======
+      <section className="max-w-6xl mx-auto px-6 pb-10">
+>>>>>>> cost-of-studying-usa
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ServiceCard
             image="/images/admission.png"
@@ -93,11 +135,28 @@ export default function StudentServicesPage() {
           />
         </div>
       </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
       <YourJourney />
+=======
+
+      <SpainHero />
+
+>>>>>>> optimizing/ansu
+=======
+
+      {/* Additional Section */}
+      <SpainHero />
+
+>>>>>>> cost-of-studying-usa
       <FooterSection />
     </main>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cost-of-studying-usa
 // ServiceCard Component
 type ServiceCardProps = {
   image: string;

@@ -25,6 +25,7 @@ const fadeInUp = {
 const DetailedTestReport = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 px-4 md:px-28 py-20 font-sans">
+      {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

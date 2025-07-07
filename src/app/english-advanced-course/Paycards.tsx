@@ -37,14 +37,11 @@ function Card() {
             key={index}
             className=" sm:w-[18rem] w-[18rem] h-60 border-2 rounded overflow-hidden flex  flex-col hover:shadow-xl shadow-gray-400 hover:border-blue-300 transition-transform duration-300 hover:scale-90"
           >
-            {/* Image as background */}
             <img
               src={item.image}
               alt={item.title}
               className="w-full h-full object-cover opacity-60 "
             />
-
-            {/* Text in front */}
             <div className="text-black text-center z-10 -mt-5 ">
               <h2 className="text-xl font-bold ">{item.title}</h2>
               <p className="text-sm">{item.description}</p>

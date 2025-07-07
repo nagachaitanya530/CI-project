@@ -66,6 +66,7 @@ function Whystudy() {
             ))}
           </ul>
         </div>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         </div>
        </section>
@@ -106,13 +107,16 @@ export default Whystudy;
               Submit
             </button>
           </form>
+=======
+>>>>>>> cost-of-studying-usa
         </div>
-      </div>
-    </section>
-
+       </section>
     </>
-
+    
   );
 }
 export default Whystudy;
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> cost-of-studying-usa

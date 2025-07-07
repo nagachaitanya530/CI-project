@@ -57,27 +57,31 @@ const HeroSection = ({ onConsultClick }: Props) => {
         </motion.div>
       </div>
 
-      <div className="px-6 md:px-24 py-16 bg-gradient-to-b from-white via-[#fef9f9] to-[#f3faf7]">
-        <div className="space-y-12">
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl p-6 md:p-10 shadow-md hover:shadow-lg transition duration-300">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Career Counseling
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              Career counseling, also known as career guidance or career coaching, is a process that assists individuals in making informed decisions about their career development and future employment opportunities.
-            </p>
-          </div>
+     {/* ========== Informational Cards Section ========== */}
+<div className="px-6 md:px-24 py-16 bg-gradient-to-b from-white via-[#fef9f9] to-[#f3faf7]">
+  <div className="space-y-12">
+    {/* Card 1: Career Counseling */}
+    <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl p-6 md:p-10 shadow-md hover:shadow-lg transition duration-300">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Career Counseling
+      </h2>
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        Career counseling, also known as career guidance or career coaching, is a process that assists individuals in making informed decisions about their career development and future employment opportunities.
+      </p>
+    </div>
 
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl p-6 md:p-10 shadow-md hover:shadow-lg transition duration-300">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Academic Pathway Planning
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              Academic Pathway Planning is a structured process that helps students map out their educational journey to achieve career goals. Our expert counselors for study abroad will then assist you in setting objectives, selecting courses and create a roadmap for success.
-            </p>
-          </div>
-        </div>
-      </div>
+    {/* Card 2: Academic Pathway Planning */}
+    <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl p-6 md:p-10 shadow-md hover:shadow-lg transition duration-300">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Academic Pathway Planning
+      </h2>
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        Academic Pathway Planning is a structured process that helps students map out their educational journey to achieve career goals. Our expert counselors for study abroad will then assist you in setting objectives, selecting courses and create a roadmap for success.
+      </p>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

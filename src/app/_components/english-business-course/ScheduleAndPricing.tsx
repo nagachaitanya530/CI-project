@@ -3,6 +3,7 @@ import Image from "next/image";
 function ScheduleAndPricing() {
     return (
         <>
+<<<<<<< HEAD
             <section id="schedule" className="my-10">
                 <h1 className="text-4xl font-semibold pb-10">
                     Choose Your Learning Track
@@ -14,6 +15,23 @@ function ScheduleAndPricing() {
                         <p className="text-xl mx-5 text-gray-600"><strong className="text-black">Schedule: </strong>Mon-Fri,2-hours</p>
                         <h2 className="text-4xl font-semibold m-5">₹3000 /<sub>3 Month</sub></h2>
                         <button className="bg-cyan-600 hover:bg-cyan-700 w-50 text-white text-xl rounded-md p-3 m-5">Enroll Now</button>
+=======
+                <section id="schedule" className="my-10">
+                    <h1 className="text-4xl font-semibold pb-10">
+                        Choose Your Learning Track
+                    </h1>
+                    <div className="container flex flex-col md:flex-row rounded-xl border shadow-xl">
+                        <div className="left w-1/2 ">
+                            <h2 className="text-3xl font-semibold m-5 ">Group Classes</h2>
+                            <p className="text-xl mx-5 text-gray-600"><strong className="text-black">Duration: </strong>1 Month</p>
+                            <p className="text-xl mx-5 text-gray-600"><strong className="text-black">Schedule: </strong>Mon-Fri,2-hours</p>
+                            <h2 className="text-4xl font-semibold m-5">₹3000 /<sub>3 Month</sub></h2>
+                            <button className="bg-cyan-600 hover:bg-cyan-700 w-50 text-white text-xl rounded-md p-3 m-5">Enroll Now</button>
+                        </div>
+                        <div className="right p-7  ">
+                            <img src="../../home/group-study.png" alt="group-study" className="w-80 rounded-2xl" />
+                        </div>
+>>>>>>> changes_ci
                     </div>
                     <div className="right p-7  ">
                         <Image src="/home/group-study.png" alt="group-study" className="w-80 rounded-2xl" width={500} height={300}  />

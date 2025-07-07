@@ -108,7 +108,7 @@ const StudyInPage = () => {
 
           {/* Right Side - Book Consultation Form */}
           <div className="w-full lg:w-[400px]">
-            <BookConsultationForm />
+            {/* <BookConsultationForm /> */}
           </div>
 
         </div>

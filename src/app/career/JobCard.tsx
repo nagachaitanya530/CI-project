@@ -1,6 +1,4 @@
-
 import { Building2 } from 'lucide-react';
-
 import { CalendarCheck2 } from 'lucide-react';
 import { useRouter } from "next/navigation";
 interface Job {

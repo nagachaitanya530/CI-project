@@ -14,7 +14,7 @@ function HeroSection(){
                     <span className="bg-blue-600 text-white font-bold px-1 py-1  text-lg">TURBO</span>
                 </div>
                     <h2 className="text-4xl font-bold mb-6">
-                        IELTS Turbo :International English Language Testing System</h2>
+                        IELTS Turbo: International English Language Testing System</h2>
                     <p className="mb-6  text-gray-500 ">
                        This course is intended for people who have quite a good understanding of English language in grammar. It is a fast paced Preparation program not intended for beginners.
                     </p>

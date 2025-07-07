@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Medal, Question, ShieldCheck } from "phosphor-react";
 import HeroSection from "~/app/_components/study-abroad/study-abroad-singapore/HeroSection";
 import UniversityList from "~/app/_components/study-abroad/study-abroad-singapore/UniversityList";
 import CostOfStudying from "~/app/_components/study-abroad/study-abroad-singapore/CostOfStudying";
 import Whystudy from "~/app/_components/study-abroad/study-abroad-singapore/Whystudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import ScholarshipsSection from "~/app/_components/study-abroad/study-abroad-singapore/ScholarshipsSection";
 import PopularCoursesSection from "~/app/_components/study-abroad/study-abroad-singapore/PopularCoursesSection";
 import CareerProspectSection from "~/app/_components/study-abroad/study-abroad-singapore/CareerProspectSection";
@@ -13,9 +13,9 @@ import NavigationSection from "~/app/_components/navigation1";
 import FooterSection from "~/app/_components/footer1";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
-import BookConsultationForm from "~/app/_components/study-abroad/BookConsultationForm";
 
-// TODO: Replace this with actual FAQ data relevant to Singapore study abroad
+
+
 const FrontendFAQ = [
   {
     question: "Are international students allowed to work part-time?",
@@ -71,9 +71,10 @@ function SingaporePage() {
 
   return (
     <>
-   <NavigationSection/>
+    <NavigationSection/>
     <HeroSection/>
     <Whystudy/>
+    <ContactFormSection />
     <UniversityList/>
     <PopularCoursesSection/>
     <CostOfStudying/>

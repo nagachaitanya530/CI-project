@@ -16,12 +16,18 @@ import Paycards from './Paycards';
 
 function EnglishAdvance() {
   return (
+<<<<<<< HEAD
     <>
       <div>
         <Navigation />
 
         {/* Hero Section */}
         <Herosection />
+=======
+    <div>
+      <Navigation />
+      <Herosection />
+>>>>>>> changes_ci
 
         {/* Sticky Navigation Bar (Visible only on sm and above) */}
         <div className="hidden sm:sticky sm:top-16 sm:bg-white sm:shadow-[-4px_5px_15px_rgba(0,0,0,0.5)] sm:z-10 sm:block">

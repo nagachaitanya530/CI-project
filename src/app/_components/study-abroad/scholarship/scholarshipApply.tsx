@@ -17,7 +17,11 @@ const ScholarshipApplyForm = () => {
           {/* Right Form */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-3xl font-bold mb-6">
+<<<<<<< HEAD
               Apply for <span className="text-yellow-400">Scholarships</span>
+=======
+              Apply for <span className="text-yellow-400">Scholarship</span>
+>>>>>>> cost-of-studying-usa
             </h2>
 
             <form className="space-y-6">
