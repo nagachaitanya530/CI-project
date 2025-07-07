@@ -92,7 +92,7 @@ export default function StudyInMalaysiaPage() {
       <Scholarship />
       <CareerProspect />
 
-    
+  
 
       <MoreAboutMalaysia onConsultClick={() => setShowForm(true)} /> {/* ✅ added */}
       <SuccessStories />

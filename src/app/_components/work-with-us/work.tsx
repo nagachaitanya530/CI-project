@@ -11,22 +11,6 @@ type Job = {
 };
 
 const jobData: Job[] = [
-<<<<<<< HEAD
-  { title: "Marketing Executive", location: "BANGALORE", experience: "0–5 years", positions: 2 },
-  { title: "Academic Counselor", location: "VIZAG", experience: "0–5 years", positions: 1 },
-  { title: "Front Office Executive", location: "VADODARA", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Telecalling Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Front Office Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
-
- { title: "UI/UX Designer", location: "DELHI", experience: "2–4 years", positions: 1 },
-  { title: "HR Executive", location: "KOLKATA", experience: "1–3 years", positions: 1 },
-  { title: "Content Writer", location: "KOLKATA", experience: "0–5 years", positions: 2 },
-  { title: "Social Media Manager", location: "INDORE", experience: "3–5 years", positions: 1 },
-    { title: "Graphic Designer", location: "MUMBAI", experience: "1–3 years", positions: 1 },
- { title: "Digital Marketing Executive", location: "DUBAI", experience: "2–4 years", positions: 2 },
-  { title: "Full Stack Developer", location: "PUNE", experience: "3–6 years", positions: 1 },
-   { title: "QA Tester", location: "INDORE", experience: "0–3 years", positions: 2 },
-=======
   { title: "Marketing Executive", location: "CHENNAI", experience: "0–5 years", positions: 1 },
   { title: "Marketing Executive", location: "BANGALORE", experience: "0–5 years", positions: 2 },
   { title: "Marketing Executive", location: "VIZAG", experience: "0–5 years", positions: 1 },
@@ -66,7 +50,6 @@ const jobData: Job[] = [
   { title: "Video Editor", location: "MUMBAI", experience: "2+ years", positions: 1 },
   { title: "Business Analyst", location: "KOLKATA", experience: "3–5 years", positions: 1 },
   { title: "QA Tester", location: "INDORE", experience: "0–3 years", positions: 2 },
->>>>>>> cost-of-studying-usa
   { title: "IT Support Executive", location: "HYDERABAD", experience: "1–3 years", positions: 1 }
 ];
 export default function WorkWithUs() {
@@ -85,18 +68,12 @@ export default function WorkWithUs() {
   
   return (
     <div className="min-h-screen bg-white text-gray-1000 px-8 sm:px-16 py-10 mt-10">
-<<<<<<< HEAD
-=======
       {/* 💡 HEADER ROW */}
->>>>>>> cost-of-studying-usa
       <div className="flex flex-wrap justify-between items-center mb-12">
         <h1 className="text-5xl font-bold mb-4 sm:mb-0">Work With Us</h1>
 
         <div className="flex flex-wrap gap-4 justify-end">
-<<<<<<< HEAD
-=======
           {/* Location Dropdown */}
->>>>>>> cost-of-studying-usa
           <div className="relative w-[280px]">
             <select
               value={location}
@@ -111,10 +88,7 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Position Dropdown */}
->>>>>>> cost-of-studying-usa
           <div className="relative w-[280px]">
             <select
               value={position}
@@ -129,10 +103,7 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Clear Button */}
->>>>>>> cost-of-studying-usa
           <button
             onClick={() => {
               setLocation("");
@@ -145,10 +116,7 @@ export default function WorkWithUs() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* JOB CARDS GRID */}
->>>>>>> cost-of-studying-usa
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job, idx) => (
