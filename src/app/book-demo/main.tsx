@@ -95,6 +95,11 @@ const MainSection = () => {
 
 );
 
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> changes_ci
 
 };
 

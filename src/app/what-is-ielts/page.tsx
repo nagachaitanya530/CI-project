@@ -1,7 +1,7 @@
 "use client";
 import { CheckCircle, PhoneCall } from "lucide-react";
-import Footer from "../_components/footer1";
-import Navigation from "../_components/navigation1";
+import Footer from "../_components/Footer";
+import Navigation from "../_components/Navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 const rotatingWords = ["solution", "result", "service"];
@@ -183,10 +183,14 @@ function IeltsPage() {
 
       <section>
         <div className="relative bg-[#12191D] text-white overflow-hidden">
+<<<<<<< HEAD
 
 
      
 
+=======
+         
+>>>>>>> changes_ci
           <div className="absolute bottom-0 w-full pointer-events-none z-0">
             <svg
               className="w-full"
@@ -200,9 +204,13 @@ function IeltsPage() {
             </svg>
           </div>
 
+<<<<<<< HEAD
 
  
 
+=======
+         
+>>>>>>> changes_ci
           <div className="relative z-10 max-w-screen-xl mx-auto px-6 pt-32 pb-52 grid md:grid-cols-2 gap-16">
             <div className="border-l-4 border-green-500 pl-8">
               <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-[#FDEBD0]">
@@ -210,10 +218,13 @@ function IeltsPage() {
               </h1>
             </div>
 
+<<<<<<< HEAD
 
 
             
 
+=======
+>>>>>>> changes_ci
             <div className="grid grid-cols-1 gap-5 text-lg md:text-xl">
               {[
                 "10000+ Institutions",
@@ -235,10 +246,13 @@ function IeltsPage() {
       <section>
         <div className="min-h-screen bg-gradient-to-r from-green-50 to-blue-50 p-6">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<<<<<<< HEAD
 
 
        
 
+=======
+>>>>>>> changes_ci
             <div className="md:col-span-1">
               <div className="sticky top-10 left-40">
                 <img
@@ -261,11 +275,14 @@ function IeltsPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
 
 
            
 
+=======
+>>>>>>> changes_ci
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="translate-y-0">
                 <Card
@@ -302,10 +319,13 @@ function IeltsPage() {
       </section>
       <section>
         <div className="p-6 max-w-4xl mx-auto">
+<<<<<<< HEAD
 
 
         
 
+=======
+>>>>>>> changes_ci
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle className="text-green-600 w-6 h-6" />
             <h2 className="text-4xl font-bold text-gray-800 flex flex-wrap">
@@ -321,10 +341,13 @@ function IeltsPage() {
             </h2>
           </div>
 
+<<<<<<< HEAD
 
 
          
 
+=======
+>>>>>>> changes_ci
           <p className="text-gray-600 mb-4 font-bold">
             Most comprehensive and effective group classes with no more than 10
             students per batch.
@@ -336,7 +359,10 @@ function IeltsPage() {
 
         <div className="w-full  bg-gray-100 flex justify-center items-start pt-10 px-4">
           <div className="w-full max-w-[1400px] flex flex-col lg:flex-row justify-center items-stretch gap-15">
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
               <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-2.png" alt="Complete" className="w-full h-40 object-cover" />
               <div className="bg-blue-700 p-6 text-white rounded-b-xl">
@@ -428,6 +454,10 @@ function IeltsPage() {
       </section>
       <section className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 py-10 px-6 text-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+<<<<<<< HEAD
+=======
+          
+>>>>>>> changes_ci
           <div className="space-y-6 animate-fadeInUp">
             <h2 className="text-4xl font-bold leading-tight">
               Make your
@@ -447,6 +477,11 @@ function IeltsPage() {
               Read More
             </a>
           </div>
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> changes_ci
           <div className="   animate-fadeInUp">
             <iframe
               className="w-full  h-80 rounded  shadow-lg"
@@ -470,7 +505,10 @@ function IeltsPage() {
                 — Director training-CI
               </footer>
             </blockquote>
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
             <div className="grid grid-cols-2 gap-4">
 
 
@@ -523,7 +561,10 @@ function IeltsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Online IELTS Classes With Best In Industry Facilities</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
             <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-qqp6vkzdhybwhd2h9s29xngv04qb7eczdhloyqo9c0.png')" }}>
 
             {/* Feature 1 */}
@@ -539,7 +580,10 @@ function IeltsPage() {
                 <a href="/book-demo" className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200">Meet Faculty</a>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
             <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-1-qqp74dqzh4dj5yacw2zjrxj76zd09eaix1gbozml34.png')" }}>
 
 
@@ -557,7 +601,10 @@ function IeltsPage() {
                 <span className="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-bl">Popular</span>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
             <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/IMG_5464-pp8tsyc8k1tqn19y410hpaozeugrmoc11bglegnm0w.png')" }}>
 
 

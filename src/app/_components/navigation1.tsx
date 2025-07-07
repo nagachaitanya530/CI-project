@@ -48,10 +48,17 @@ const NAV_ITEMS = [
         dropdown: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                { label: 'UK', href: "/study-abroad/study-abroad-uk" },
                 { label: 'USA', href: 'study-abroad/usa' },
               { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
                 
+=======
+           { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+            { label: 'USA', href: '/study-abroad/usa' },
+              { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+               
+>>>>>>> changes_ci
            
             { label: 'Spain', href: '/study-abroad/spain' },
             
@@ -92,6 +99,7 @@ const NAV_ITEMS = [
             { label: 'India', href: '/study-abroad/India' },
 
           
+<<<<<<< HEAD
             
             
 
@@ -100,6 +108,10 @@ const NAV_ITEMS = [
             { label: 'Malaysia', href: 'study-abroad/study_in_malaysia' },
             { label: 'Australia', href: '/study-abroad/Study-Australia' },
             
+=======
+            { label: 'Australia', href: '/study-abroad/Study-Australia' },
+         
+>>>>>>> changes_ci
 
            
             
@@ -116,6 +128,7 @@ const NAV_ITEMS = [
 
 
 
+<<<<<<< HEAD
            
 
      
@@ -126,6 +139,11 @@ const NAV_ITEMS = [
 >>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
 
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
+=======
+         
+
+            
+>>>>>>> changes_ci
             { label: 'Italy', href: '/study-abroad/italy' },
 
 
@@ -134,6 +152,7 @@ const NAV_ITEMS = [
 
 
             { label: 'Germany', href: '/study-abroad/Germany' },
+<<<<<<< HEAD
              
 
             
@@ -142,12 +161,16 @@ const NAV_ITEMS = [
             
             
          
+=======
+      
+>>>>>>> changes_ci
             { label: 'Dubai', href: '/study-abroad/dubai' },
 
             { label: 'Ireland', href: '/study-abroad/ireland' },
              { label: 'France', href: '/study-abroad/france' },
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
 
+<<<<<<< HEAD
             
 
 
@@ -157,6 +180,14 @@ const NAV_ITEMS = [
             { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad/abroad'},
 
+=======
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad'},
+
+          
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+            { label: 'International', href: '/international' },
+>>>>>>> changes_ci
             
 
             

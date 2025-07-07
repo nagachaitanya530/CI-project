@@ -1,7 +1,7 @@
 import React from "react";
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 const AboutSection = () => {
-  const router = useRouter();
   return (
     <section className="bg-white py-10 px-6">
 
@@ -39,13 +39,18 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> changes_ci
         <div className="flex-1 bg-white shadow-xl rounded-xl overflow-hidden">
-          <div className="relative">
-            <img
+          <div className="relative w-full h-64 sm:h-72 md:h-80">
+            <Image
               src="/english-course/first.webp"
               alt="Course"
-              className="w-full h-64 object-cover"
+              fill
+              className=" object-cover rounded"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute top-4 left-4 bg-white px-4 py-1 rounded-full shadow text-gray-800 font-semibold">
               Group Courses
@@ -54,12 +59,13 @@ const AboutSection = () => {
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-2">Want something more advanced?</h3>
             <p className="text-gray-700 mb-4">Check our Business English Course.</p>
+            <Link href="/fees/ieltsturbo">
             <button
-              onClick={() => router.push('/business-english')}
               className="bg-[#284c87] hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
             >
               Business English
             </button>
+            </Link>
           </div>
         </div>
       </div>

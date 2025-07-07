@@ -70,19 +70,13 @@ const Testimonials = () => {
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
         We have a reputation among students
       </h2>
-
-      {/* Main slider container */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 flex-wrap">
-
-        {/* Left Arrow */}
         <button
           onClick={goPrev}
           className="text-3xl text-gray-500 hover:text-blue-500 sm:order-none order-1"
         >
           &#60;
         </button>
-
-        {/* Review Cards */}
         <div className="flex flex-col sm:flex-row gap-6 flex-wrap justify-center items-center">
           {getVisibleReviews().map((item, index) => (
             <div
@@ -110,8 +104,6 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-
-        {/* Right Arrow */}
         <button
           onClick={goNext}
           className="text-3xl text-gray-500 hover:text-blue-500 sm:order-none order-1"
@@ -119,8 +111,6 @@ const Testimonials = () => {
           &#62;
         </button>
       </div>
-
-      {/* Slide Dots */}
       <div className="flex justify-center mt-4 space-x-2 flex-wrap">
         {[...Array(totalSlides)].map((_, idx) => (
           <button
