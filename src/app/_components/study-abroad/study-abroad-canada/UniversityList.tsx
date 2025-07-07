@@ -120,11 +120,8 @@ export default function UniversityList() {
             container.scrollBy({ left: cardWidth, behavior: "smooth" })
         }
     }
-
-
-
     return (
-        <div className="bg-cyan-100 min-h-screen py-10 px-4">
+        <div className="bg-gray-100  py-10 px-4">
             <div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-center">
                     <span className="underline decoration-red-500 underline-offset-4">
@@ -141,10 +138,7 @@ export default function UniversityList() {
             <div className="flex justify-end md:mr-10">
                 <button className="border rounded-2xl border-blue-200 py-3 px-5 text-lg text-blue-400">View All the University</button>
             </div>
-
-
             <div className="relative mt-5 px-4">
-
                 <div
                     ref={scrollRef}
                     className="flex overflow-x-hidden gap-6 py-10 scroll-smooth"
@@ -187,7 +181,6 @@ export default function UniversityList() {
                         </div>
                     ))}
                 </div>
-
                 {universities.length >= 4 && (
                     <div className="w-full mt-4 px-5 relative">
                         <div className="h-[1px] bg-gray-300 relative overflow-hidden">

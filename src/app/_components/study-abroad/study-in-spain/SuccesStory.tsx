@@ -45,14 +45,18 @@ export default function SuccessStories() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + successStories.length) % successStories.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + successStories.length) % successStories.length
+    );
   };
 
   return (
     <section className="bg-[#dce3ef] py-24 px-6 lg:px-28 rounded-t-[60px]">
       <div className="flex justify-between items-center mb-14">
         <h2 className="text-5xl font-extrabold text-gray-900">
-          <span className="underline decoration-red-500 underline-offset-[10px]">Success Stories</span>
+          <span className="underline decoration-red-500 underline-offset-[10px]">
+            Success Stories
+          </span>
         </h2>
         <div className="flex gap-4">
           <button
@@ -96,7 +100,9 @@ export default function SuccessStories() {
                 </div>
               </div>
               <div className="w-full md:w-[500px] text-left">
-                <p className="text-gray-800 text-lg mb-6 leading-relaxed italic">“{story.quote}”</p>
+                <p className="text-gray-800 text-lg mb-6 leading-relaxed italic">
+                  “{story.quote}”
+                </p>
                 <div className="flex items-center gap-4">
                   <img
                     src={story.image}
@@ -104,8 +110,12 @@ export default function SuccessStories() {
                     className="w-14 h-14 rounded-full object-cover border-2 border-blue-300 shadow-md"
                   />
                   <div>
-                    <p className="font-bold text-gray-900 text-lg">{story.name}</p>
-                    <p className="text-gray-600 text-sm italic">{story.university}</p>
+                    <p className="font-bold text-gray-900 text-lg">
+                      {story.name}
+                    </p>
+                    <p className="text-gray-600 text-sm italic">
+                      {story.university}
+                    </p>
                   </div>
                 </div>
               </div>

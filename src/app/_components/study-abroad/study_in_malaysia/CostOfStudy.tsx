@@ -7,7 +7,6 @@ export default function CostOfStudyingMalaysia() {
   return (
     <section className="py-28 px-6 lg:px-24 bg-blue-50 min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-        {/* Left Content */}
         <div>
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900">
              <span className="underline decoration-red-500 underline-offset-[6px]">Cost Of Studying</span>
@@ -20,9 +19,7 @@ export default function CostOfStudyingMalaysia() {
           </p>
         </div>
 
-        {/* Right Form Section */}
         <div className="space-y-8">
-          {/* Tuition Fees */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-3xl shadow-md transition duration-300"
@@ -36,7 +33,6 @@ export default function CostOfStudyingMalaysia() {
             </div>
           </motion.div>
 
-          {/* Masters Fees */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-3xl shadow-md transition duration-300"
@@ -47,7 +43,6 @@ export default function CostOfStudyingMalaysia() {
             </div>
           </motion.div>
 
-          {/* Living Expenses */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-3xl shadow-md transition duration-300"
@@ -60,7 +55,6 @@ export default function CostOfStudyingMalaysia() {
             </div>
           </motion.div>
 
-          {/* Accommodation */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-3xl shadow-md transition duration-300"

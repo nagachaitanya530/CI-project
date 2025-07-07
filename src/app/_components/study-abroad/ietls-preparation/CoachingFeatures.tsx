@@ -2,7 +2,6 @@ function CoachingFeatures() {
     return (<>
         <section id="syllabus">
             <h1 className="text-4xl">IELTS<strong className="underline decoration-red-500"> Syllabus</strong></h1>
-            {/* Listening  */}
             <h3 className="text-xl font-bold mt-5 text-cyan-900">Listening : </h3>
             <ul className="text-lg list-disc px-5 pt-2">
                 <li>
@@ -15,7 +14,6 @@ function CoachingFeatures() {
                     In Computer Based format, they have two minutes to review their answers after finishing the listening test.
                 </li>
             </ul>
-            {/* Reading  */}
             <h3 className="text-xl font-bold mt-5 text-cyan-900">Reading : </h3>
             <ul className="text-lg list-disc px-5 pt-2">
                 <li>
@@ -24,7 +22,6 @@ function CoachingFeatures() {
                     sentence/table/note/summary/Flow chart / Diagrams, and short-answer type of questions.
                 </li>
             </ul>
-            {/* Writing  */}
             <h3 className="text-xl font-bold mt-5 text-cyan-900">Writing : </h3>
             <p>Academic Module :</p>
             <ul className="text-lg list-disc px-5 pt-2">
@@ -49,7 +46,6 @@ function CoachingFeatures() {
                     Task 2 is same as that of Academic Module.
                 </li>
             </ul>
-            {/* Speaking  */}
             <h3 className="text-xl font-bold mt-5 text-cyan-900">Speaking : </h3>
             <p>It is conducted by a trained examiner. This is usually done on another day.</p>
             <ul className="text-lg list-disc px-5 pt-2">

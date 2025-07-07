@@ -75,7 +75,6 @@ export default function TermsOfServicePage() {
         <p className="text-sm text-gray-600 mt-8">Last updated: June 2025</p>
       </main>
       <Footer />
-
     </>
 
   );

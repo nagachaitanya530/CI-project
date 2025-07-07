@@ -6,7 +6,6 @@ const AboutSection = () => {
     <section className="bg-white py-10 px-6">
 
       <div className="flex flex-col lg:flex-row gap-10">
-        {/* Left Side */}
         <div className="flex-1">
           <h2 className="text-center text-2xl font-semibold mb-6 text-gray-800">What you'll learn</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -41,7 +40,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Right Side */}
         <div className="flex-1 bg-white shadow-xl rounded-xl overflow-hidden">
           <div className="relative">
             <img

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 
 const MainSection = () => {
   return (
@@ -94,8 +94,6 @@ const MainSection = () => {
 
 
 );
-
-  )
 
 
 };
