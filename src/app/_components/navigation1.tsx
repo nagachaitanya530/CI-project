@@ -46,6 +46,7 @@ const NAV_ITEMS = [
       {
         label: "Test Preparations",
         dropdown: [
+
           { label: "All Tests", href: "/tests" },
           { label: "TOEFL", href: "/toefl" },
           { label: "IELTS", href: "/ielts" },
@@ -56,6 +57,59 @@ const NAV_ITEMS = [
           { label: "ACT", href: "/act" },
           { label: "PTE", href: "/pte" },
           { label: "DUOLINGO", href: "/duolingo" },
+
+            { label: 'UK', href: "/study-abroad/study-abroad-uk" },
+            { label: 'USA', href: '/study-abroad/usa' },
+            { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
+            { label: 'Spain', href: '/study-abroad/spain' },
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+            { label: 'France', href: '/study-abroad/study-in-france' },
+            { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
+            { label: 'Ireland', href: '/study-abroad/ireland' },
+            { label: 'Spain', href: '/study-abroad/spain' },
+            { label: 'India', href: '/study-abroad/India' },
+            { label: 'Australia', href: '/study-abroad/Study-Australia' },
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Italy', href: '/study-abroad/italy' },
+            { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
+            { label: 'Germany', href: '/study-abroad/Germany' },
+            { label: 'Dubai', href: '/study-abroad/dubai' },
+            { label: 'Netherlands', href: '/study-abroad/netherlands' },
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad' },
+        ]
+    },
+    {
+        label: 'Student Services',
+        dropdown: [
+            { label: 'Student Services', href: '/student-services' },
+            {
+                label: 'Test Preparations',
+                dropdown: [
+                    { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
+                    { label: 'TOEFL', href: '/toefl' },
+                    { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
+                    { label: 'GMAT', href: '/Gmat' },
+                    { label: 'GRE', href: '/GRE-Preparation' },
+                    { label: 'CAEL', href: '/test-preparation-cael' },
+                    { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
+                    { label: 'CELPIP', href: '/Celpip' },
+                    { label: 'PTE', href: '/PTE' },
+                    { label: 'ACT', href: '/ACT-Preparation' },
+                    { label: 'DUOLINGO', href: '/duolingo' },
+                ],
+            },
+            { label: 'Career Counseling', href: '/career-counseling' },
+            { label: 'Admission Guidance', href: '/admission-guidence' },
+            { label: 'Financial Assistance', href: '/financial-assistance' },
+            { label: 'Scholarships', href: '/study-abroad/scholarship' },
+            { label: 'Travel & Forex Assistance', href: '/travel-forex' },
+            { label: 'Visa Assistance', href: '/visa-assistance' }
+
         ],
       },
       { label: "Career Counseling", href: "/career-counseling" },

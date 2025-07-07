@@ -3,6 +3,9 @@
 import React from 'react'
 import More from '../../_components/study-abroad/Study-Australia/More'
 import Related from '../../_components/study-abroad/Study-Australia/Related-Articles'
+
+import Testimonials from '../../_components/study-abroad/Study-Australia/Testimonials'
+
 import CostStudying from '../../_components/study-abroad/Study-Australia/Cost-Of-Studying'
 import WhyStudy from '../../_components/study-abroad/Study-Australia/why'
 import UniversityList from '../../_components/study-abroad/Study-Australia/university'

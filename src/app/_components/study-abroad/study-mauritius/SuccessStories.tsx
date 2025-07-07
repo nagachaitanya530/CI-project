@@ -5,32 +5,32 @@ import Image from "next/image";
 
 const successStories = [
   {
-    image: "/card2.jpg",
+    image: "/successstory5.avif",
     name: "Miral Shah",
     university: "Bournemouth University, UK",
     text: `Edwise does not stop at admissions. Their ongoing support post-study helped me transition smoothly into my career. The best decision for my academic journey!`,
-    profile: "/card2.jpg",
+    profile: "/successstory5.avif",
   },
   {
-    image: "/card3.jpg",
+    image: "/successstory6.avif",
     name: "Abhinay Pandit",
     university: "New York Film Academy, US",
     text: `It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.`,
-    profile: "/card3.jpg",
+    profile: "/successstory6.avif",
   },
     {
-    image: "/card4.jpg",
+    image: "/successstory7.avif",
     name: "Abhinay Pandit",
     university: "New York Film Academy, US",
     text: `It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.`,
-    profile: "/card4.jpg",
+    profile: "/successstory7.avif",
   },
     {
-    image: "/cardimage.webp",
+    image: "/successstory8.avif",
     name: "Abhinay Pandit",
     university: "New York Film Academy, US",
     text: `It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.`,
-    profile: "/cardimage.webp",
+    profile: "/successstory8.avif",
   },
 
 ];
@@ -95,7 +95,7 @@ export default function SuccessStories() {
     <Image
       src={story.profile}
       alt={story.name}
-      fill // 🔥 Makes the image fill the div
+      fill 
       className="rounded-full object-cover"
     />
   </div>

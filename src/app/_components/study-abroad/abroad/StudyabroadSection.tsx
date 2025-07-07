@@ -83,7 +83,7 @@ export default function StudyabroadSection() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
             Study{" "}
             <span className="text-blue-600 relative inline-block">
-              Abroad
+              Abroad 
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></span>
             </span>
           </h1>

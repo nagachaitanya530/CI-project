@@ -1,4 +1,3 @@
-// components/SpainHero.tsx
 "use client";
 
 import React from "react";
@@ -12,7 +11,15 @@ import {
 
 const SpainHero = () => {
   return (
+
+
     <section className="relative mt-10 mx-4 md:mx-12 overflow-visible">
+
+    <section className="relative mt-6 mx-4 md:mx-12 overflow-visible">
+
+
+    <section className="relative mt-30 mx-4 md:mx-12 overflow-visible">
+
       {/* Blue Card */}
       <div className="bg-[#0d47a1] text-white px-6 md:px-16 py-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         {/* Left Content */}
@@ -24,7 +31,8 @@ const SpainHero = () => {
             </span>
           </h1>
           <p className="text-gray-200 mt-4">
-            Explore more, stay informed, and start your journey to academic excellence.
+            Explore more, stay informed, and start your journey to academic
+            excellence.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <button className="bg-white text-[#0d47a1] font-semibold px-5 py-2 rounded-full shadow">

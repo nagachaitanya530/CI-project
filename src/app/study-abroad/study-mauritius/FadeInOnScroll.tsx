@@ -5,13 +5,13 @@ import { useEffect } from 'react';
 
 export default function FadeInOnScroll({ children }: { children: React.ReactNode }) {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.15 }); // 👈 change here
+  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.15 }); 
 
   useEffect(() => {
     if (inView) {
       controls.start('visible');
     } else {
-      controls.start('hidden'); // 👈 add this to re-trigger
+      controls.start('hidden'); 
     }
   }, [inView, controls]);
 

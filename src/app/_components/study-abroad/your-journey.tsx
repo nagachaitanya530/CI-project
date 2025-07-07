@@ -183,6 +183,7 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
           </div>
         </div>
 
+
         {/* Girl Image - Desktop */}
         <div className="absolute top-0 z-20 hidden lg:block" 
              style={{ 
@@ -191,6 +192,29 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
                filter: 'drop-shadow(0 15px 10px rgba(0, 0, 0, 0.25))'
              }}>
           <Image 
+
+        {/* Girl Image */}
+<div className="absolute top-0 z-20 hidden lg:block " 
+     style={{ 
+       left: '70%', 
+       transform: 'translate(-45%, -10%)',
+       filter: 'drop-shadow(0 15px 10px rgba(0, 0, 0, 0.25))'
+     }}>
+  <img 
+    src={girlImageSrc}
+    alt="Student with globe"
+
+    className="w-[550px] h-[470px] object-contain animate-float -m-10" 
+
+    className="w-[550px] h-[470px] object-contain animate-float -mt-10 " 
+
+  />
+</div>
+
+        {/* Mobile Image - Centered below content */}
+        <div className="flex justify-center lg:hidden mt-6 z-20">
+          <img 
+
             src={girlImageSrc}
             alt="Student with globe"
             width={550}

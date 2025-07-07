@@ -33,7 +33,7 @@ export default function whystudy() {
         </div>
 
         {/* Right Form */}
-        <div className="flex flex-col border-2 border-gray-300 rounded-2xl p-8 gap-4 w-1/3 h-195">
+        {/* <div className="flex flex-col border-2 border-gray-300 rounded-2xl p-8 gap-4 w-1/3 h-195">
         <h1 className="text-blue-900 text-xl font-bold">Book Your Free Consultation with Trustworthy Counsellors</h1>
 
           <input type="text" placeholder="Name" className={inputClass} />
@@ -67,9 +67,8 @@ export default function whystudy() {
             type="submit"
             value="Submit"
             className="mt-4 w-fit py-3 px-6 font-semibold text-blue-900 rounded-2xl border border-blue-900 hover:bg-blue-900 hover:text-white cursor-pointer"
-          />
+          /> */}
         </div>
-      </div>
     </section>
   );
 }

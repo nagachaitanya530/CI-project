@@ -57,11 +57,25 @@ export default function studyabroad() {
       <CareerProspectsSection/>
       <MoreAboutDubai/>
       <SuccessStories/>
+
       <FAQ faqs={IndiaFAQs} title="FAQs" />
       <YourJourney />
       <FooterSection/>
       <FooterSection/>
       </>
+
+       <FAQ faqs={IndiaFAQs} title="FAQs" />
+       
+       <YourJourney />
+       
+      
+      
+
+<FooterSection/>
+
+
+        </>
+
 
     )
 

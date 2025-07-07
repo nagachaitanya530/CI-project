@@ -120,6 +120,7 @@ export default function SuccessStories() {
   };
 
   return (
+
     <section className="bg-[#d5deeb] py-8 px-3 sm:py-12 sm:px-4 md:px-8 lg:px-16 xl:px-20 rounded-[20px] sm:rounded-[30px] md:rounded-[40px]">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8">
@@ -183,6 +184,51 @@ export default function SuccessStories() {
                 <span className="px-2 py-1 sm:px-3 sm:py-1 bg-[#1e3a8a] text-white text-xs sm:text-sm font-semibold rounded-full">
                   {story.exam}
                 </span>
+
+    <section className="bg-[#d5deeb] py-12 px-4 md:px-20 rounded-[40px]">
+      <div className="mb-4">
+        <h2 className="text-3xl font-extrabold text-black relative text-center md:text-left">
+          <span className="inline-block relative z-10">
+            {title}
+            <span className="absolute left-0 bottom-0 w-full h-1 bg-red-400 z-[-1] rounded-full transform translate-y-2"></span>
+          </span>
+        </h2>
+      </div>
+      <div className="flex justify-center py-3 md:justify-end gap-3 mb-8 ">
+        <button
+          onClick={() => scroll(-400)}
+          className="p-2 bg-[#1e3a8a] text-white rounded-md shadow-md hover:bg-[#1a347a]"
+        >
+          <ChevronLeft />
+        </button>
+        <button
+          onClick={() => scroll(400)}
+          className="p-2 bg-[#1e3a8a] text-white rounded-md shadow-md hover:bg-[#1a347a]"
+        >
+          <ChevronRight />
+        </button>
+      </div>
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
+      >
+        {testimonials.map((story, index) => (
+          <div
+            key={index}
+            className="w-[90%] sm:w-[47%] lg:w-[30%] flex-shrink-0 bg-white/90 backdrop-blur-md rounded-3xl p-5 shadow-[0_4px_60px_0_rgba(0,0,0,0.05)]"
+          >
+            <p className="text-gray-800 text-[16px] leading-relaxed mb-5 whitespace-normal break-words">
+              {story.text}
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 relative rounded-full overflow-hidden">
+                <Image
+                  src={story.profile}
+                  alt={story.name}
+                  fill
+                  className="object-cover"
+                />
+
               </div>
               
               {/* Testimonial Text */}
