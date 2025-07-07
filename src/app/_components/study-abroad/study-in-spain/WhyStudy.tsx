@@ -35,6 +35,12 @@ export default function WhyStudyInSpain() {
             </div>
           ))}
         </div>
+
+
+        {/* Right Form */}
+    
+
+
       </div>
     </section>
   );

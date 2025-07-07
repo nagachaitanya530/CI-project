@@ -35,10 +35,10 @@ function TOC(){
             <div >
 
                 <button onClick={()=> document.getElementById('document')?.scrollIntoView({behavior:"smooth"})} 
-                 className={` py-2  rounded-md ${activeSection === 'document' ? ' bg-blue-400' : 'hover:bg-gray-600'} w-70 mt-2 rounded-3xl`}>
+                 className={` py-2  rounded-md ${activeSection === 'document' ? ' bg-blue-600' : 'hover:bg-gray-600'}   bg-blue-600  text-white w-70 mt-2 rounded-3xl`}>
                     Document</button>
                 <button onClick={()=> document.getElementById('visa')?.scrollIntoView({behavior:"smooth"})} 
-                 className={` py-2  rounded-md ${activeSection === 'visa' ? ' bg-blue-400' : 'hover:bg-gray-600'} w-70 mt-2 rounded-3xl`}>
+                 className={` py-2  rounded-md ${activeSection === 'visa' ? ' bg-blue-400' : 'hover:bg-gray-600'}  bg-blue-600  text-white  w-70 mt-2 rounded-3xl`}>
                     Visa</button>
 
             </div>

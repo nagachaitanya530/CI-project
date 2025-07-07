@@ -64,8 +64,13 @@ const StatsComponent: React.FC = () => {
 
 const courses = [
   {
+
+    title: "Tourism Administration",
+     image: "/hospitality-img.webp",
+
     title: "Hotel Management",
  image: "/study-abroad/hotel-img.webp",
+
 
   },
   {
@@ -104,7 +109,7 @@ function PopularCourses() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {courses.map((course, index) => (
-            <MauritiusCard key={index} title={course.title} image={course.image} />
+            <MauritiusCard key={index} />
           ))}
         </div>
       </div>
@@ -141,10 +146,15 @@ export default function India() {
         <>
         <Navigation />
         <HeroSection />
-        <StatsComponent />
+        <div className="bg-gradient-to-br from-white to-green-500">
+        <StatsComponent  /></div>
         <StudyInIndiaPage />
+
+        <CareerProspect />
+
         <ContactFormSection />
         <PopularCourses />
+
         <CostOfStudying />
         <Scholarships />
         <CareerProspect />

@@ -47,6 +47,8 @@ const NAV_ITEMS = [
         label: "Test Preparations",
         dropdown: [
 
+
+
           { label: "All Tests", href: "/tests" },
           { label: "TOEFL", href: "/toefl" },
           { label: "IELTS", href: "/ielts" },
@@ -58,30 +60,46 @@ const NAV_ITEMS = [
           { label: "PTE", href: "/pte" },
           { label: "DUOLINGO", href: "/duolingo" },
 
+
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: '/study-abroad/usa' },
             { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
             { label: 'Spain', href: '/study-abroad/spain' },
+
+            { label: 'India', href: '/study-abroad/India' },
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+            { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
+
+            { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
+
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
             { label: 'France', href: '/study-abroad/study-in-france' },
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
             { label: 'Ireland', href: '/study-abroad/ireland' },
+
+
             { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
             { label: 'Australia', href: '/study-abroad/Study-Australia' },
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
+
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
             { label: 'Italy', href: '/study-abroad/italy' },
             { label: 'Switzerland', href: '/study-abroad/study-in-switzerland' },
             { label: 'Germany', href: '/study-abroad/Germany' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
+
+            { label: 'International', href: '/study-abroad/study-international' },
+            { label: 'Study Abroad', href: '/study-abroad/abroad' },
+          ]
+
             { label: 'Netherlands', href: '/study-abroad/netherlands' },
             { label: 'Mauritius', href: '/study-abroad/study-mauritius' },
             { label: 'International', href: '/study-abroad/study-international' },
             { label: 'Study Abroad', href: '/study-abroad/abroad' },
         ]
+
     },
     {
         label: 'Student Services',
@@ -93,12 +111,21 @@ const NAV_ITEMS = [
                     { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
                     { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
+
+                    { label: 'GMAT', href: '/gmat' },
+                    { label: 'GRE', href: '/gre' },
+                    { label: 'CAEL', href: '/test-preparation-cael' },
+                    { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
+                    { label: 'CAEL', href: '/cael' },
+                    { label: 'CELPIP', href: '/Celpip' },
+
                     { label: 'GMAT', href: '/Gmat' },
                     { label: 'GRE', href: '/GRE-Preparation' },
                     { label: 'CAEL', href: '/test-preparation-cael' },
                     { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CELPIP', href: '/Celpip' },
                     { label: 'PTE', href: '/PTE' },
+
                     { label: 'ACT', href: '/ACT-Preparation' },
                     { label: 'DUOLINGO', href: '/duolingo' },
                 ],
@@ -545,6 +572,50 @@ export default function NavigationSection() {
           ref={mobileMenuRef}
           className="lg:hidden bg-white/95 border-t border-white/20 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto"
         >
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="flex justify-between items-center h-16">
+                    {/* Logo */}
+                    <div className="flex items-center flex-shrink-0">
+                        <Link href="/study-abroad" className="hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                            <img src={logoUrl || "/placeholder.svg"} alt="Logo" className="h-8 w-auto" />
+                        </Link>
+                    </div>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center justify-center flex-1 px-4">
+                        <ul className="flex items-center space-x-2">
+                            {navItems.map((item, idx) => (
+                                <li key={idx} className="h-full flex items-center">
+                                    <NavigationItem item={item} closeMenu={closeMobileMenu} />
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Right side items (contact us) */}
+                    <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
+                        <Link
+                            href="/contact"
+                            className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 backdrop-blur-sm whitespace-nowrap shadow-lg hover:shadow-xl"
+                        >
+                            <UserCircle className="mr-2" size={16} />
+                            Contact Us
+                        </Link>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <div className="lg:hidden flex items-center">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="inline-flex items-center justify-center p-2 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 focus:outline-none transition-all duration-300 backdrop-blur-sm"
+                            aria-label="Toggle menu"
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
+                </div>
+
           <div className="px-4 py-3 space-y-2">
             <div className="space-y-1">
               {NAV_ITEMS.map((item, idx) => (
@@ -554,6 +625,7 @@ export default function NavigationSection() {
                   closeMenu={closeMobileMenu}
                 />
               ))}
+
             </div>
 
             <div className="pt-2 border-t border-gray-200/50">

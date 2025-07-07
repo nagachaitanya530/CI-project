@@ -2,7 +2,7 @@ import React from "react";
 
 const StudyInIndiaPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex gap-12 items-start">
           {/* Left Side - Why Study In India */}
@@ -77,6 +77,12 @@ const StudyInIndiaPage = () => {
               </div>
             </div>
           </div>
+
+
+          {/* Right Side - Consultation Form */}
+          
+
+
         </div>
       </div>
     </div>
