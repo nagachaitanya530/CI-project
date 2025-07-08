@@ -17,6 +17,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import SoftskillPesronTraining from "../soft-skills-personal-training/page";
 
 const logoUrl = "/placeholder.svg?height=32&width=120";
 
@@ -36,14 +37,14 @@ const navItems = [
               { label: "English Foundation Personal", href: "/english-foundation-course" },
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
-              { label: "Soft Skills Personal Training", href: "/" },
-              { label: "Corporate Training English", href: "/" },
+              { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
+              { label: "Corporate Training English", href: "/corporate-training-english" },
             ],
           },
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
-      { label: "Kids Courses (Languages)", href: "/kids_courses" },
-      { label: "Online Mock Tests", href: "/" },
+      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
 
 
 
@@ -77,8 +78,8 @@ const navItems = [
 
       { label: "About us", href: "/about_us" },
       { label: "Careers", href: "/career" },
-      { label: "Community", href: "/community" },
-      { label: "Contact us", href: "/contact_us" },
+      { label: "Community", href: "/Community" },
+      { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
 

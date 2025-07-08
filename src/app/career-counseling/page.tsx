@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FooterSection from "~/app/_components/footer1";
+import NavigationSection from "../_components/navigation1";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "../_components/study-abroad/faq";
 import DetailedTestReport from "../_components/career-counseling/TestReport";
@@ -53,6 +54,7 @@ export default function CareerCounselingPage() {
 
   return (
     <>
+    <NavigationSection />
       <HeroSection onConsultClick={() => setShowForm(true)} />
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 

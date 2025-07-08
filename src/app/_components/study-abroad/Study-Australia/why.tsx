@@ -1,10 +1,6 @@
 import { FileBadge2, ShieldCheck } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 interface WhyStudy{
    
     heading:string
@@ -68,11 +64,7 @@ function WhyStudy(){
                       
 
             <div className="h-full">
-<<<<<<< Updated upstream
 {/* <BookConsultationForm/> */}
-=======
-<BookConsultationForm/>
->>>>>>> Stashed changes
             </div>
 
         </div>

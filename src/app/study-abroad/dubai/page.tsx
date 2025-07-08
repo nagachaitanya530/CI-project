@@ -5,7 +5,7 @@ import StatsCard from "~/app/_components/dubai/next";
 import WhyStudyInDubai from "~/app/_components/dubai/left";
 import Navigation from "~/app/_components/navigation1";
 import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
-import UniversitiesListSection from"~/app/_components/dubai/cadrs";
+import UniversitiesListSection from "~/app/_components/dubai/cadrs";
 import PopularCoursesSection from "~/app/_components/dubai/cardsdubai";
 import CostOfStudying from "~/app/_components/dubai/costofstudying";
 import ScholarshipsSection from "~/app/_components/dubai/ScholarshipsSection";
@@ -15,8 +15,6 @@ import SuccessStories from "~/app/_components/dubai/SuccessStories";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
-
-
 
 const IndiaFAQs = [
   {
@@ -39,44 +37,26 @@ const IndiaFAQs = [
     question: "What are the best Master’s degree programs in Dubai for Indian students?",
     answer: "Universities in Dubai provide excellent options for Master’s programs, such as: MBA, engineering, accounting and finance, tourism and hospitality, architecture, aviation, and design studies."
   },
-  
 ];
 
-export default function studyabroad() {
-    return (
-        <>
-      <Navigation/>
-      <HeroSectiondubaipage/>
-      <StatsCard/>
-      <WhyStudyInDubai/>
+export default function StudyAbroad() {
+  return (
+    <>
+      <Navigation />
+      <HeroSectiondubaipage />
+      <StatsCard />
+      <WhyStudyInDubai />
       <ContactFormSection />
-      <UniversitiesListSection/>
-      <PopularCoursesSection/>
-      <CostOfStudying/>
-      <ScholarshipsSection/>
-      <CareerProspectsSection/>
-      <MoreAboutDubai/>
-      <SuccessStories/>
-
+      <UniversitiesListSection />
+      <PopularCoursesSection />
+      <CostOfStudying />
+      <ScholarshipsSection />
+      <CareerProspectsSection />
+      <MoreAboutDubai />
+      <SuccessStories />
       <FAQ faqs={IndiaFAQs} title="FAQs" />
       <YourJourney />
-      <FooterSection/>
-      <FooterSection/>
-      </>
-
-       <FAQ faqs={IndiaFAQs} title="FAQs" />
-       
-       <YourJourney />
-       
-      
-      
-
-<FooterSection/>
-
-
-        </>
-
-
-    )
-
+      <FooterSection />
+    </>
+  );
 }

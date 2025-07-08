@@ -34,7 +34,6 @@ export default function StudyTabs() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="max-w-7xl mx-auto px-4 md:px-20 py-10">
 
       <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
@@ -42,9 +41,6 @@ export default function StudyTabs() {
         <span className="font-bold underline decoration-red-500">Mauritius</span>
       </h2>
 
-=======
-    <div className="max-w-7xl  mx-auto px-4 md:px-20 py-10">
->>>>>>> feature/UpdatePage
       {/* Heading */}
 <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
   <span>More about </span>

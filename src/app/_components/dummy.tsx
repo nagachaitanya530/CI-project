@@ -90,8 +90,6 @@ export default function ScrollableTabs() {
             {tab.label}
           </button>
         ))}
-<<<<<<< HEAD
-=======
 
         {/* Sliding Underline */}
         {/* <div
@@ -99,7 +97,6 @@ export default function ScrollableTabs() {
           className="absolute bottom-0 h-[2px] bg-blue-800 transition-all duration-300 ease-in-out"
           style={{ width: 0, transform: "translateX(0px)" }}
         /> */}
->>>>>>> cost-of-studying-usa
       </div>
     </div>
   );

@@ -361,10 +361,6 @@ const CurriculumSection = () => {
             )}
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> changes_ci
         <div className="col-span-3 space-y-4">
           {curriculum.map((weekData, index) => (
             <div

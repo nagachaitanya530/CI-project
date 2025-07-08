@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import NavigationSection from "../_components/navigation1";
 import FooterSection from "~/app/_components/footer1";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import HeroSection from "../_components/admission-guidence/Hero";
@@ -12,6 +13,7 @@ export default function AdmissionGuidencePage() {
 
   return (
     <>
+    <NavigationSection />
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />

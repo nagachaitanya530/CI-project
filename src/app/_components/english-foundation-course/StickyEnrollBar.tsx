@@ -9,11 +9,7 @@ export default function StickyEnrollBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-<<<<<<< HEAD
-      setShowBar(scrollY > 400);
-=======
       setShowBar(scrollY > 400); 
->>>>>>> changes_ci
     };
 
     window.addEventListener("scroll", handleScroll);

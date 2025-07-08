@@ -29,7 +29,6 @@ export default function WhyStudySection() {
 
 
         {/* Right - Form */}
-<<<<<<< HEAD
 
    
 
@@ -65,9 +64,6 @@ export default function WhyStudySection() {
         </div>
 
 
-=======
-   
->>>>>>> cost-of-studying-usa
       </div>
     </section>
   );

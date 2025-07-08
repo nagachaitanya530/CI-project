@@ -1,13 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-import Footer from "~/app/_components/footer1";
-import Navigation from "~/app/_components/navigation1";
-
-=======
 import Footer from "~/app/_components/Footer";
 import Navigation from "~/app/_components/Navigation";
->>>>>>> changes_ci
 import HeroSection from "../_components/english-foundation-course/HeroSection";
 import AboutSection from "../_components/english-foundation-course/AboutSection";
 import TargetLearners from "../_components/english-foundation-course/TargetLearners";
@@ -29,15 +23,20 @@ export default function EnglishFoundationCourse() {
   return (
     <>
       <Navigation />
+
+      {/* Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>
 
-      <div className="flex relative ">
-        
-        <div className="hidden lg:block w-48 sticky top-20 h-screen">
+      {/* Main Body with Sidebar */}
+      <div className="flex relative">
+        {/* ScrollSpy Sidebar */}
+        <aside className="hidden lg:block w-48 sticky top-20 h-screen">
           <ScrollSpySidebar />
-        </div>
+        </aside>
+
+        {/* Main Content */}
         <main className="flex-1 px-4 md:px-8 lg:pl-10 space-y-24 scroll-smooth">
           <section id="about" className="scroll-mt-36">
             <AboutSection />
@@ -82,6 +81,7 @@ export default function EnglishFoundationCourse() {
             <FAQsSection />
           </section>
 
+          {/* Sticky CTA Bar */}
           <StickyEnrollBar />
         </main>
       </div>

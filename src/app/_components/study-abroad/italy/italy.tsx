@@ -3,10 +3,7 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 import { BookOpen, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import React from "react";
-<<<<<<< HEAD
 import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
-=======
->>>>>>> changes_ci
 import Image from "next/image";
 import { FileText, FileSearch } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";

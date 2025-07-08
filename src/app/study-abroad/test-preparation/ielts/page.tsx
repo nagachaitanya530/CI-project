@@ -82,17 +82,11 @@ function IELTSPreparation() {
         };
     }, []);
 
-<<<<<<< HEAD
-    return (
-        <>
-            <NavigationSection />
-=======
 
     return (
         <>
             <NavigationSection />
 
->>>>>>> cost-of-studying-usa
             <div className="mx-7 md:mx-10 lg:mx-25">
                 <section className="text-cyan-700 my-10 text-lg">
                     <p>
@@ -104,13 +98,9 @@ function IELTSPreparation() {
                 </section>
             </div>
             <HeroSection />
-<<<<<<< HEAD
-            <section className="sticky top-16 z-10 bg-cyan-50 border border-cyan-200 rounded-3xl mx-4 my-6 md:mx-10 lg:mx-40 px-2 py-3 shadow-md overflow-hidden">
-=======
             {/* NavBar  */}
 
             <section className="sticky top-16  z-50 bg-cyan-50 border border-cyan-200 rounded-3xl mx-4 my-6 md:mx-25 lg:mx-40 px-2 py-3 shadow-md overflow-hidden">
->>>>>>> cost-of-studying-usa
                 <div className="flex justify-center overflow-x-auto whitespace-nowrap gap-2 sm:gap-3 px-2 scroll-smooth scrollbar-hide">
                     {sections.map(({ label, id }, idx) => (
                         <button
@@ -119,13 +109,8 @@ function IELTSPreparation() {
                                 document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
                             }
                             className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm flex-shrink-0 transition duration-300 border ${activeSection === id
-<<<<<<< HEAD
-                                ? 'bg-cyan-700 text-white border-cyan-700'
-                                : 'bg-white text-cyan-700 border-cyan-300 hover:bg-cyan-100'
-=======
                                     ? 'bg-cyan-700 text-white border-cyan-700'
                                     : 'bg-white text-cyan-700 border-cyan-300 hover:bg-cyan-100'
->>>>>>> cost-of-studying-usa
                                 }`}
                         >
                             {label}
@@ -133,14 +118,6 @@ function IELTSPreparation() {
                     ))}
                 </div>
             </section>
-<<<<<<< HEAD
-            <div className="mx-7 md:mx-10 lg:mx-25">
-                <OvervviewSection />
-                <FormatDetails />
-                <CoachingFeatures /> <br />
-                <ScoringSection /> <br />
-                <Dates />  <br />
-=======
 
 
             <div className="mx-7 md:mx-10 lg:mx-25">
@@ -154,7 +131,6 @@ function IELTSPreparation() {
                 {/* Dates  */}
                 <Dates />  <br />
                 {/* Training    */}
->>>>>>> cost-of-studying-usa
                 <TrainingSection /> <br />
                 <FeeSection /> <br />
             </div>

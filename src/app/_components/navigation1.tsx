@@ -72,14 +72,14 @@ const navItems = [
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
             { label: 'Scholarships', href: '/study-abroad/scholarship' },
-            { label: 'Travel & Forex Assistance', href: '/travel-forex' },
-            { label: 'Visa Assistance', href: '/visa-assistance' }
+            { label: 'Travel & Forex Assistance', href: '/travel_and_forex_assistance' },
+            { label: 'Visa Assistance', href: '/Visa-assistance' }
         ],
     },
     {
         label: 'What We Do',
         dropdown: [
-            { label: 'About Us', href: '/about' },
+            { label: 'About Us', href: '/AboutUs' },
             { label: 'University Visits', href: '/what-we-do/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
             { label: 'Partnered Universities', href: '/study-abroad/partnered-universities' },

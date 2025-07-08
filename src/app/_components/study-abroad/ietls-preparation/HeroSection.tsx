@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import Image from "next/image";
-
-function HeroSection() {
-    return (
-        <>
-            <section className="bg-cyan-50 py-10 px-6 lg:px-24 flex flex-col-reverse lg:flex-row justify-between items-center">
-=======
 function HeroSection(){
     return(
         <>
           {/* Hero Section  */}
             <section className="bg-cyan-50 py-10 px-6 lg:px-24 flex flex-col-reverse lg:flex-row justify-between items-center">
                 {/* Left Side Content */}
->>>>>>> cost-of-studying-usa
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-semibold text-cyan-900 mb-2">IELTS Preparation – 2025</h1>
                     <p className="mb-6  text-cyan-900"> English Proficiency Coaching for IELTS</p>
@@ -23,20 +14,12 @@ function HeroSection(){
                                 Listening, Reading, Writing, Speaking
                             </p>
                         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cost-of-studying-usa
                         <div className="mb-4">
                             <p className="font-semibold text-lg">Duration :</p>
                             <p className="text-cyan-900 text-base">
                                 3 Hours (Approximately)
                             </p>
                         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cost-of-studying-usa
                         <div className="mb-6">
                             <p className="font-semibold text-lg">Mode :</p>
                             <p className="text-cyan-900 text-base">
@@ -48,17 +31,11 @@ function HeroSection(){
                         Free Expert Consultation
                     </button>
                 </div>
-<<<<<<< HEAD
-                <div className="mt-10 lg:mt-0 lg:ml-12 text-right">
-                    <div className="rounded-2xl overflow-hidden shadow-lg max-w-md">
-                        <Image
-=======
 
                 {/* Right Side Image */}
                 <div className="mt-10 lg:mt-0 lg:ml-12 text-right">
                     <div className="rounded-2xl overflow-hidden shadow-lg max-w-md">
                         <img
->>>>>>> cost-of-studying-usa
                             src="/home/learning-girl.jpg"
                             alt="IELTS Preparation"
                             width={500}
