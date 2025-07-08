@@ -10,7 +10,7 @@ import CostOfStudy from "~/app/_components/study-abroad/study_in_malaysia/CostOf
 import Scholarship from "~/app/_components/study-abroad/study_in_malaysia/Scholarship";
 import CareerProspect from "~/app/_components/study-abroad/study_in_malaysia/CareerProspect";
 import MoreAboutMalaysia from "~/app/_components/study-abroad/study_in_malaysia/MoreAboutMalaysia";
-import SuccessStories from "~/app/_components/study-abroad/study_in_malaysia/SuccessStories";
+import SuccessStories from "~/app/_components/study-abroad/home/successstories";
 import NavigationSection from "~/app/_components/navigation1";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
