@@ -1,5 +1,9 @@
 "use client";
+<<<<<<< HEAD
 import * as React from "react";
+=======
+import React from "react";
+>>>>>>> cost-of-studying-usa
 import Navigation from "../../_components/navigation1";
 import DynamicBanner from "~/app/_components/Test-Preparations/All-Tests/DynamicBanner";
 import StickyScrollSection from "~/app/_components/Test-Preparations/All-Tests/StickyScrollSection";
@@ -10,7 +14,10 @@ import GetStartedBanner from "~/app/_components/study-abroad/study-mauritius/Get
 import type { Testimonial } from "~/app/_components/Test-Preparations/All-Tests/SuccessStories";
 import SuccessStories from "~/app/_components/Test-Preparations/All-Tests/SuccessStories";
 import FadeInOnScroll from '~/app/study-abroad/study-mauritius/FadeInOnScroll';  
+<<<<<<< HEAD
 import YourJourney from "~/app/_components/study-abroad/your-journey";
+=======
+>>>>>>> cost-of-studying-usa
 export default function Page() {
 
 
@@ -48,28 +55,44 @@ const testPrepTabs = [
 
 const testCourses = [
   {
+<<<<<<< HEAD
     image: "/alltestcard1.avif",
+=======
+    image: "/TOEFLcard1.webp",
+>>>>>>> cost-of-studying-usa
     title: "(TOEFL) Test of English as a Foreign Language",
     description:
       "TOEFL is a standardized English proficiency test that assesses English Language skills in the areas of listening, reading, writing and speaking.",
     link: "#",
   },
   {
+<<<<<<< HEAD
     image: "/alltestcard2.webp",
+=======
+    image: "/IELTScard2.webp",
+>>>>>>> cost-of-studying-usa
     title: "(IELTS) International English Language Testing System",
     description:
       "IELTS is a reputable and trustworthy English test to study abroad that assists candidates in proving their English language competency and advancing their academic and career objectives.",
     link: "#",
   },
   {
+<<<<<<< HEAD
     image: "/alltestcard3.png",
+=======
+    image: "/PTEcard3.webp",
+>>>>>>> cost-of-studying-usa
     title: "(PTE) Pearson Test for English",
     description:
       "PTE Academic: Computer-based test for non-native English speakers to prove academic proficiency for admission in to international universities.",
     link: "#",
   },
   {
+<<<<<<< HEAD
     image: "/alltestcard4.png",
+=======
+    image: "/Duolingocard4.webp",
+>>>>>>> cost-of-studying-usa
     title: "Duolingo",
     description:
       "Duolingo English Test is a computer based English proficiency test which is administered using computer adaptive technology.",
@@ -129,25 +152,41 @@ const stories: Testimonial[] = [
     text: "TOEFL sessions were fun with the faculty engaging all the students with simultaneous exercises. The assessments were all digital and with time constraints.",
     name: "THANESHVAR",
     exam: "TOEFL",
+<<<<<<< HEAD
     profile: "/alltesttestimonial5.avif",
+=======
+    profile: "/alltestTestimonialimg1.webp",
+>>>>>>> cost-of-studying-usa
   },
   {
     text: "I have taken IELTS test &  Glad to say that the teachers here are very supportive, attentive and helpful.All thanks to my teacher that I scored a total of 7 bands.",
     name: "Jaspreet Kaur Chauhan",
     exam: "IELTS",
+<<<<<<< HEAD
     profile: "/alltesttestimonial6.avif",
+=======
+    profile: "/alltestTestimonialimg2.webp",
+>>>>>>> cost-of-studying-usa
   },
     {
     text: "I am very much satisfied with the  methods you teach and well planned classes. Each and every part of the sessions were always interesting, worksheets given for practices too.",
     name: "Varuneswar K V",
     exam: "PTE",
+<<<<<<< HEAD
     profile: "/alltesttestimonial7.avif", 
+=======
+    profile: "/alltestTestimonialimg3.webp", 
+>>>>>>> cost-of-studying-usa
   },
     {
     text: "Thank you for the exceptional IELTS coaching at Edwise International. I felt well-prepared and was ultimately admitted to my desired university.",
     name: "Pragatheesh",
     exam: "IELTS",
+<<<<<<< HEAD
     profile: "/alltesttestimonial8.avif",
+=======
+    profile: "/alltestTestimonialimg4.webp",
+>>>>>>> cost-of-studying-usa
   },
 ];
   return (
@@ -159,7 +198,11 @@ const stories: Testimonial[] = [
         titleBottom="For All Standardized"
         highlightWord="Tests"
         buttonText="Free Expert Consultation"
+<<<<<<< HEAD
         imageUrl="/alltesthero1.jpeg"
+=======
+        imageUrl="/AlltestHero.webp"
+>>>>>>> cost-of-studying-usa
         imageAlt="Test Preparation"
       />
 
@@ -167,11 +210,19 @@ const stories: Testimonial[] = [
           <StickyScrollSection
       heading="Unlock the unparalleled benefits of"
       subheading="Our test preparation coaching is comprehensive and provides complete coaching for study abroad tests like TOEFL, PTE, IELTS, GMAT, GRE, ACT, SAT etc."
+<<<<<<< HEAD
       imageUrl="/allyestaside.jpg"
+=======
+      imageUrl="/alltestscrollsecimg.webp"
+>>>>>>> cost-of-studying-usa
       imageAlt="Test Preparation Student"
       tabs={testPrepTabs}
     />
     </FadeInOnScroll>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cost-of-studying-usa
      <FadeInOnScroll>
         <TestCoursesGrid
       heading="Explore Test Preparation Courses with Edwise"
@@ -179,9 +230,22 @@ const stories: Testimonial[] = [
       courses={testCourses}
     /></FadeInOnScroll>
     <FadeInOnScroll><Faq title="Frequently Asked Questions" faqs={faqs} /></FadeInOnScroll>
+<<<<<<< HEAD
+
+     <FadeInOnScroll> <SuccessStories /></FadeInOnScroll>
+    <GetStartedBanner/>
+
      <FadeInOnScroll> <SuccessStories testimonials={stories} /></FadeInOnScroll>
     <YourJourney/>
+
         <Footer />
     </>
+=======
+     <FadeInOnScroll> <SuccessStories testimonials={stories} /></FadeInOnScroll>
+    <GetStartedBanner/>
+        <Footer />
+    </>
+
+>>>>>>> cost-of-studying-usa
   );
 }

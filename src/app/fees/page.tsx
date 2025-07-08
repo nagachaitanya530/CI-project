@@ -1,17 +1,13 @@
 "use client";
 
 import React from 'react';
-import Navigation from "../_components/navigation1";
+import Navigation from "../_components/Navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
 
 import { useRouter } from 'next/navigation'; 
 import { Phone,MessageCircle, Book } from 'lucide-react';
-import Footer from '../_components/Footer'
-
-
-
-
+import Footer from '../_components/Footer';
 
 const FeesPage = () => {
   const router = useRouter();
@@ -26,6 +22,9 @@ const FeesPage = () => {
     FOREIGN_LANGUAGE: 'foreignlanguagepackage',
     KIDS_LANGUAGE: '../Kids_Courses',
     TEST_SERIES: 'testseriespackage',
+  };
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/919999999999', '_blank'); // Replace with your WhatsApp number
   };
   return (
     <>
@@ -45,7 +44,10 @@ const FeesPage = () => {
           <div className="flex items-center justify-center">
             <div className="bg-white rounded-full p-1 shadow-xl">
               <div className="flex items-center">
-                <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 lg:px-8 xl:px-10 py-2 lg:py-3 xl:py-4 rounded-full transition-colors duration-300 flex items-center gap-2 min-w-[140px] lg:min-w-[180px] xl:min-w-[200px] text-sm lg:text-base xl:text-lg">
+                <button
+                  className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 lg:px-8 xl:px-10 py-2 lg:py-3 xl:py-4 rounded-full transition-colors duration-300 flex items-center gap-2 min-w-[140px] lg:min-w-[180px] xl:min-w-[200px] text-sm lg:text-base xl:text-lg"
+                  onClick={handleWhatsApp}
+                >
                   <MessageCircle className="w-4 h-4" /> WhatsApp
                 </button>
 

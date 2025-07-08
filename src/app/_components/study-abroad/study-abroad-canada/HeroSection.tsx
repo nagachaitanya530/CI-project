@@ -29,16 +29,16 @@ function HeroSection() {
 
     return (
         <>
-            <section className=" bg-linear-60 from-cyan-50 to-cyan-100 to-80% from-50%">
+            <section className=" bg-gradient-to-br from-white via-red-50 to-green-300">
                 <div className="flex flex-col-reverse lg:flex-row lg:justify-evenly lg:items-center">
                     <div className="lg:w-1/2 p-5 lg:p-10 ">
                         <h1 className="text-2xl md:text-3xl lg:text-5xl/17 pt-10 lg:px-10  ">
-                            <span className="font-semibold underline decoration-red-500"> Canada:</span>
-                            Study at renowned institutions in a safe, multicultural environment
+                            <span className="font-semibold underline text-blue-500 decoration-red-500"> Canada: </span>
+                             Study at renowned institutions in a safe, multicultural environment
                         </h1>
                         <div className="space-y-2 my-5 md:my-0 lg:space-x-3 lg:pl-10">
-                            <button className="md:mt-10 border py-2 px-5 lg:p-3 rounded-2xl text-sm md:text-lg text-blue-300 border-blue-300 hover:bg-blue-600 hover:text-white">Free Expert Consultation</button>
-                            <button className="md:mt-10 border py-2 px-3 lg:p-3 rounded-2xl text-sm md:text-lg text-blue-300 border-blue-300  hover:bg-blue-600 hover:text-white">View & Download Brochure</button>
+                            <button className="md:mt-10 border py-2 px-5 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-300 bg-blue-600 hover:text-white">Free Expert Consultation</button>
+                            <button className="md:mt-10 border py-2 px-3 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-300 bg-blue-600 hover:text-white">View & Download Brochure</button>
 
                         </div>
                     </div>

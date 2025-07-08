@@ -1,10 +1,8 @@
 "use client"
 
 import type React from "react"
-import Navigation from "../_components/navigation1"
-
 import { useState, useEffect } from "react"
-import { ArrowRight, Play, Star, Users, Award, Zap, ChevronDown } from "lucide-react"
+import { ArrowRight, Users, Award, Zap, } from "lucide-react"
 
 const AnimatedCounter = ({
   end,
@@ -96,7 +94,6 @@ const HeroSection = () => {
 
   return (
     <section className="  bg-gradient-to-br from-blue-900 to-slate-600 overflow-hidden mb-12">
-      <Navigation />
       {/* Background Elements */}
       <ParticleBackground />
 
@@ -119,7 +116,6 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            {/* Badge */}
 
             {/* Main Heading */}
             <div className="space-y-4">
@@ -156,12 +152,7 @@ const HeroSection = () => {
                 Lets Discuss Together
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
-
-
             </div>
-
-            {/* Stats */}
-
           </div>
 
           {/* Right Column - Visual */}
@@ -170,7 +161,6 @@ const HeroSection = () => {
             <div className="relative">
               {/* Glassmorphism Card */}
               <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-                {/* Mock Dashboard/Interface */}
 
                 {/* Header */}
                 <div className="flex items-center justify-between">
@@ -179,13 +169,6 @@ const HeroSection = () => {
                     className="rounded-xl w-full object-cover" />
 
                 </div>
-
-                {/* Chart Area */}
-
-
-                {/* Status Cards */}
-
-
 
                 {/* Floating Elements */}
                 <FloatingElement
@@ -201,12 +184,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-        {/* Client Logos */}
-
-
-        {/* Scroll Indicator */}
-
       </div>
 
       {/* Video Modal */}

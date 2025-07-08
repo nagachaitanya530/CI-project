@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import Footer from "../_components/Footer";
+=======
 import Footer from "../_components/footer1";
-import Navigation from "../_components/navigation1";
+>>>>>>> optimizing/ansu
+import Navigation from "../_components/Navigation";
 
 const OETSection = () => {
   return (

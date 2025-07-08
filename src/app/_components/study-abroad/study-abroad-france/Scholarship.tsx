@@ -51,7 +51,6 @@ function Scholarship(){
         <>
          <section ref={sectionRef} className="my-20 px-4 lg:px-20">
                 <div className="flex flex-col lg:flex-row items-center justify-between p-5 ">
-                    {/* Text Block transition from left to right */}
                     <div
                         className={`transition-all duration-1000 ease-out ${
                             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
@@ -66,7 +65,6 @@ function Scholarship(){
                             </div>
                         ))}
                     </div>
-                    {/* Image transition right to left */}
                     <div
                         className={`transition-all duration-1000 ease-out ${
                             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"

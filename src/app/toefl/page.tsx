@@ -1,10 +1,17 @@
 import FooterSection from "../_components/footer1";
 import NavigationSection from "../_components/navigation1";
+<<<<<<< HEAD
 import FAQ from "../_components/study-abroad/faq";
+=======
+>>>>>>> cost-of-studying-usa
 import YourJourney from "../_components/study-abroad/your-journey";
 import HeroBanner from "../_components/toefl/HeroBanner";
 import StickySectionNav from "../_components/toefl/StickySectionNav";
 import TOEFLDates from "../_components/toefl/TOEFLDates";
+<<<<<<< HEAD
+=======
+import TOEFLFAQs from "../_components/toefl/TOEFLFAQs";
+>>>>>>> cost-of-studying-usa
 import TOEFLMisc from "../_components/toefl/TOEFLMisc";
 import TOEFLOutline from "../_components/toefl/TOEFLOutline";
 import TOEFLPattern from "../_components/toefl/TOEFLPattern";
@@ -13,6 +20,7 @@ import TOEFLSyllabus from "../_components/toefl/TOEFLSyllabus";
 import TOEFLTraining from "../_components/toefl/TOEFLTraining";
 import SuccessStories from "../_components/usa/SuccessStories";
 
+<<<<<<< HEAD
 const faqs = [
   {
     question: "What is the difference between IELTS / PTE / TOEFL / DUOLINGO?",
@@ -50,6 +58,8 @@ const faqs = [
       "Yes, essential grammar is covered as part of the course to support strong foundational skills in all four modules.",
   },
 ];
+=======
+>>>>>>> cost-of-studying-usa
 export default function TOEFLPage() {
   return (
     <>
@@ -63,7 +73,11 @@ export default function TOEFLPage() {
       <TOEFLDates />
       <TOEFLTraining />
       <TOEFLMisc />
+<<<<<<< HEAD
       <FAQ faqs={faqs} title="Frequently Asked Questions" />
+=======
+      <TOEFLFAQs />
+>>>>>>> cost-of-studying-usa
       <SuccessStories />
       <YourJourney />
       <FooterSection />

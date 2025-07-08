@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 
-interface MauritiusCardProps {
+interface PopularCourseCardProps {
   title: string;
   image: string;
 }
 
-export default function MauritiusCard({ title, image }: MauritiusCardProps) {
+export default function PopularCourseCard({ title, image }: PopularCourseCardProps) {
   return (
-    <div className="border border-blue-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+    <div className="border border-blue-100  bg-gradient-to-br from-white via-red-50 to-green-300rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
       <Image
         src={image}
         alt={title}

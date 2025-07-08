@@ -4,13 +4,11 @@ import CareerProspectsUK from "~/app/_components/study-abroad/study-abroad-uk/Ca
 import CostOfStudying from "~/app/_components/study-abroad/study-abroad-uk/CostOfStudying";
 import HeroSection from "~/app/_components/study-abroad/study-abroad-uk/HeroSection";
 import ListOfUniversity from "~/app/_components/study-abroad/study-abroad-uk/ListOfUniversity";
-import MoreAboutUK from "~/app/_components/study-abroad/study-abroad-uk/MoreAboutUK";
 import PopularCoursesSection from "~/app/_components/study-abroad/study-abroad-uk/PopularCourse";
 import RelatedArticles from "~/app/_components/study-abroad/study-abroad-uk/RelatedArticles";
 import Scholarships from "~/app/_components/study-abroad/study-abroad-uk/Scholarship";
-import SuccessStories from "~/app/_components/study-abroad/study-abroad-uk/Stories";
-import WhyStudy from "~/app/_components/study-abroad/study-abroad-uk/WhyStudy";
 import WhyStudySection from "../../_components/study-abroad/study-abroad-uk/WhyStudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import StudyTabs from "~/app/_components/study-abroad/study-abroad-uk/MoreAboutUK";
 import NavigationSection from "~/app/_components/navigation1";
 import FAQ from "~/app/_components/study-abroad/faq";
@@ -82,8 +80,8 @@ return(
     <div>
         <NavigationSection/>
       <HeroSection/>
-        <section className="bg-blue-200">
-             <div className="comm-section py-12" data-aos="fade-in" data-duration="0" >
+ <section className="bg-blue-200">
+    <div className="comm-section py-12" data-aos="fade-in" data-duration="0" >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {counters.map((counter, index) => (
@@ -101,14 +99,14 @@ return(
     </div>
         </section>
         <WhyStudySection/>
-          <ListOfUniversity/>
-             <PopularCoursesSection/>
+        <ContactFormSection />
+        <ListOfUniversity/>
+        <PopularCoursesSection/>
         <CostOfStudying/>
-      
         <Scholarships/>
         <CareerProspectsUK/>
-         <StudyTabs/>
-         <RelatedArticles/>
+        <StudyTabs/>
+        <RelatedArticles/>
         <SuccessStory/>
         <FAQ faqs={FrontendFAQ}/>
         <YourJourney/>

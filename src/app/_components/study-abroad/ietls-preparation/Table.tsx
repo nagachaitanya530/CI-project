@@ -13,14 +13,24 @@ function Table({ heading, bodyrows, thead1, thead2 }: Tablepops) {
         <>
             <div>
                 {heading && <h1 className="text-3xl font-semibold my-10 ">{heading}</h1>}
+<<<<<<< HEAD
                 <div className="overflow-hidden rounded-2xl border border-gray-300">
                     <table className="border p-2 w-full">
                         <thead>
+=======
+
+                {/* Table wrapper to enable border-radius */}
+                <div className="overflow-hidden rounded-2xl border border-gray-300">
+                    <table className="border p-2 w-full">
+>>>>>>> cost-of-studying-usa
                         <tr className="bg-cyan-800">
                             <th className="text-center text-white text-lg px-4 py-4 w-1/2 border-b border-cyan-950">{thead1}</th>
                             <th className="text-center text-white text-lg px-4 py-4  border-b border-cyan-950">{thead2}</th>
                         </tr>
+<<<<<<< HEAD
                         </thead>
+=======
+>>>>>>> cost-of-studying-usa
                         <tbody>
                             {bodyrows.map((bodyrow, i) => (
                                 <tr key={i}>

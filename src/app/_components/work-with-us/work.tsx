@@ -11,20 +11,45 @@ type Job = {
 };
 
 const jobData: Job[] = [
+  { title: "Marketing Executive", location: "CHENNAI", experience: "0–5 years", positions: 1 },
   { title: "Marketing Executive", location: "BANGALORE", experience: "0–5 years", positions: 2 },
+  { title: "Marketing Executive", location: "VIZAG", experience: "0–5 years", positions: 1 },
   { title: "Academic Counselor", location: "VIZAG", experience: "0–5 years", positions: 1 },
   { title: "Front Office Executive", location: "VADODARA", experience: "Freshers with good communication in English", positions: 1 },
+  { title: "Marketing Executive", location: "VADODARA", experience: "0–5 years", positions: 2 },
+  { title: "Academic Counselor", location: "VADODARA", experience: "0–5 years", positions: 3 },
+  { title: "Marketing Executive", location: "TRIVANDRUM", experience: "0–5 years", positions: 2 },
+  { title: "Academic Counselor", location: "TRIVANDRUM", experience: "0–5 years", positions: 1 },
   { title: "Telecalling Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
   { title: "Front Office Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
-
- { title: "UI/UX Designer", location: "DELHI", experience: "2–4 years", positions: 1 },
+  { title: "Academic Counselor", location: "SURAT", experience: "0–5 years", positions: 1 },
+  { title: "Telecalling Executive", location: "PUNE", experience: "Freshers with good communication in English", positions: 1 },
+  { title: "Marketing Executive", location: "PUNE", experience: "0–5 years", positions: 2 },
+  { title: "Academic Counselor", location: "PUNE", experience: "0–5 years", positions: 2 },
+  { title: "UI/UX Designer", location: "DELHI", experience: "2–4 years", positions: 1 },
   { title: "HR Executive", location: "KOLKATA", experience: "1–3 years", positions: 1 },
+  { title: "Academic Counselor", location: "COIMBATORE", experience: "0–2 years", positions: 2 },
+  { title: "Telecalling Executive", location: "HYDERABAD", experience: "Freshers with excellent communication", positions: 1 },
+  { title: "Senior Counselor", location: "CHANDIGARH", experience: "5–10 years", positions: 1 },
+  { title: "Web Developer", location: "COCHIN", experience: "2–5 years", positions: 1 },
   { title: "Content Writer", location: "KOLKATA", experience: "0–5 years", positions: 2 },
   { title: "Social Media Manager", location: "INDORE", experience: "3–5 years", positions: 1 },
-    { title: "Graphic Designer", location: "MUMBAI", experience: "1–3 years", positions: 1 },
- { title: "Digital Marketing Executive", location: "DUBAI", experience: "2–4 years", positions: 2 },
+  { title: "Front Office Executive", location: "VISHI", experience: "Freshers with good communication", positions: 1 },
+  { title: "Senior Counselor", location: "DELHI", experience: "6+ years", positions: 1 },
+  { title: "Telecalling Executive", location: "MALAD", experience: "Freshers with basic English", positions: 1 },
+  { title: "Graphic Designer", location: "MUMBAI", experience: "1–3 years", positions: 1 },
+  { title: "IT Support Executive", location: "CHENNAI", experience: "0–2 years", positions: 1 },
+  { title: "HR Executive", location: "JAIPUR", experience: "2–3 years", positions: 1 },
+  { title: "Marketing Executive", location: "INDORE", experience: "0–5 years", positions: 2 },
+  { title: "Marketing Intern", location: "DELHI", experience: "Freshers", positions: 2 },
+  { title: "UI/UX Designer", location: "GURUGRAM", experience: "1–3 years", positions: 1 },
+  { title: "Digital Marketing Executive", location: "DUBAI", experience: "2–4 years", positions: 2 },
   { title: "Full Stack Developer", location: "PUNE", experience: "3–6 years", positions: 1 },
-   { title: "QA Tester", location: "INDORE", experience: "0–3 years", positions: 2 },
+  { title: "Customer Support Executive", location: "BANGALORE", experience: "0–2 years", positions: 2 },
+  { title: "Graphic Designer", location: "NASHIK", experience: "1–4 years", positions: 1 },
+  { title: "Video Editor", location: "MUMBAI", experience: "2+ years", positions: 1 },
+  { title: "Business Analyst", location: "KOLKATA", experience: "3–5 years", positions: 1 },
+  { title: "QA Tester", location: "INDORE", experience: "0–3 years", positions: 2 },
   { title: "IT Support Executive", location: "HYDERABAD", experience: "1–3 years", positions: 1 }
 ];
 export default function WorkWithUs() {
@@ -43,10 +68,12 @@ export default function WorkWithUs() {
   
   return (
     <div className="min-h-screen bg-white text-gray-1000 px-8 sm:px-16 py-10 mt-10">
+      {/* 💡 HEADER ROW */}
       <div className="flex flex-wrap justify-between items-center mb-12">
         <h1 className="text-5xl font-bold mb-4 sm:mb-0">Work With Us</h1>
 
         <div className="flex flex-wrap gap-4 justify-end">
+          {/* Location Dropdown */}
           <div className="relative w-[280px]">
             <select
               value={location}
@@ -61,6 +88,7 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
+          {/* Position Dropdown */}
           <div className="relative w-[280px]">
             <select
               value={position}
@@ -75,6 +103,7 @@ export default function WorkWithUs() {
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" size={16} />
           </div>
 
+          {/* Clear Button */}
           <button
             onClick={() => {
               setLocation("");
@@ -87,6 +116,7 @@ export default function WorkWithUs() {
         </div>
       </div>
 
+      {/* JOB CARDS GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job, idx) => (

@@ -52,6 +52,8 @@ const HeroSection = ({ onConsultClick }: Props) => {
             height={460}
             className="object-contain drop-shadow-xl"
           />
+
+          {/* Elegant Glow Line */}
           <div className="w-[70%] h-[6px] mt-4 bg-gradient-to-r from-[#c7f9cc] via-[#fff] to-[#ffccd5] rounded-full shadow-inner"></div>
         </motion.div>
       </div>

@@ -7,8 +7,15 @@ export default function SpainHeroSection({
   onFreeConsultClick: () => void;
 }) {
   return (
+
+    <section className="relative bg-gradient-to-br from-white via-red-50 to-green-300">
+      {/* -------- Hero -------- */}
+      <div className="max-w-7xl mx-auto px-4 pt-16 pb-0 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Text */}
+
     <section className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
         <div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-snug text-black">
             <span className="relative font-bold">

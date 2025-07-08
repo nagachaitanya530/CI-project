@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavigationSection from "~/app/_components/navigation1";
 import FooterSection from "~/app/_components/footer1";
 import WhyStudy from "~/app/_components/study-abroad/study-switzerland/whystudy";
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import Costofstudy from "~/app/_components/study-abroad/study-switzerland/costofstudy";
 import Scholarships from "~/app/_components/study-abroad/study-switzerland/scholarship";
 import ListOfUniversity from "~/app/_components/study-abroad/study-switzerland/listofuniversity";
@@ -25,6 +26,7 @@ const StudyInSwitzerland = () => {
       <NavigationSection />
       <Herosection onFreeConsultClick={() => setShowModal(true)} /> 
       <WhyStudy />
+      <ContactFormSection />
       <ListOfUniversity />
       <PopularCourses />
       <Costofstudy />

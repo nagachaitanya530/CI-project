@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useRouter } from 'next/navigation';
-import Navigation from "../../_components/navigation1";
+import Navigation from "../../_components/Navigation";
 import { Button } from "~/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "~/components/ui/card";
-import Footer from '../../_components/footer1'
+import Footer from '../../_components/Footer'
 
 const IeltsGeneralPage = () => {
   const router = useRouter();

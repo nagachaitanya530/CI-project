@@ -85,17 +85,21 @@ const StepCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
+      {/* Vertical Line */}
       <div className="hidden md:block absolute left-1/2 top-0 h-full border-l border-dotted border-gray-300 z-0" />
 
+      {/* Step Number Circle */}
       <div className="z-10 w-10 h-10 rounded-full bg-gray-200 text-gray-700 font-semibold flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
         {id}
       </div>
 
+      {/* Content */}
       <div
         className={`flex flex-col md:flex-row items-center justify-between w-full gap-6 z-10 ${
           isReversed ? "md:flex-row-reverse" : ""
         }`}
       >
+        {/* Text Section */}
         <motion.div
           className="md:w-[48%] text-left"
           initial={{ opacity: 0, x: isReversed ? 100 : -100 }}
@@ -109,6 +113,7 @@ const StepCard = ({
           <p className="text-gray-700 text-[16px] leading-relaxed">{content}</p>
         </motion.div>
 
+        {/* Image Section */}
         <motion.div
           className="md:w-[48%]"
           initial={{ opacity: 0, scale: 0.95 }}

@@ -172,7 +172,7 @@ export default function Article370Page() {
           font-weight: 600;
         }
       `}</style>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
