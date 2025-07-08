@@ -7,7 +7,7 @@ const TOEFLOutline = () => {
   return (
     <section id="overview" className="scroll-mt-32 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-10">
-        {/* Heading */}
+
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f3f98]">
             TOEFL Overview
@@ -17,16 +17,14 @@ const TOEFLOutline = () => {
           </p>
         </div>
 
-        {/* Main Description Box */}
         <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-6 md:p-10 shadow-sm mb-14">
           <p className="text-gray-700 text-lg leading-relaxed">
             TOEFL assesses core English skills in <strong>Listening, Reading, Writing</strong> and <strong>Speaking</strong>. Offered 30–40 times annually, it is accepted by over 11,500 institutions across 160+ countries including the USA, UK, and Canada for both undergraduate and postgraduate studies.
           </p>
         </div>
 
-        {/* Exam Types */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* TOEFL iBT */}
+
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300">
             <div className="flex items-center mb-4">
               <Globe2 className="text-[#1f3f98] mr-3" size={28} />
@@ -42,7 +40,6 @@ const TOEFLOutline = () => {
             </ul>
           </div>
 
-          {/* TOEFL Essentials */}
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300">
             <div className="flex items-center mb-4">
               <BookOpen className="text-[#1f3f98] mr-3" size={28} />

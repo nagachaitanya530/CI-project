@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, type Variants, easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const scoreData = [
@@ -32,7 +32,7 @@ const scoreData = [
   },
 ];
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -40,7 +40,7 @@ const cardVariants = {
     transition: {
       delay: i * 0.3,
       duration: 0.6,
-      ease: "easeOut",
+      ease: easeInOut,
     },
   }),
 };
@@ -50,7 +50,9 @@ const TOEFLScores = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   React.useEffect(() => {
-    if (inView) controls.start("visible");
+    if (inView) {
+      controls.start("visible");
+    }
   }, [inView, controls]);
 
   return (
@@ -75,7 +77,9 @@ const TOEFLScores = () => {
               variants={cardVariants}
               className="bg-blue-50/30 border border-blue-100 rounded-2xl shadow-md p-6 md:p-8"
             >
-              <h3 className="text-xl font-semibold text-[#1f3f98] mb-2">{item.title}</h3>
+              <h3 className="text-xl font-semibold text-[#1f3f98] mb-2">
+                {item.title}
+              </h3>
               <p className="text-gray-700 font-medium mb-1">
                 <strong>Score Range:</strong> {item.scoreRange}
               </p>

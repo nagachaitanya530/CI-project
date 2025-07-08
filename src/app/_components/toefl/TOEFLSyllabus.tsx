@@ -7,7 +7,6 @@ const TOEFLSyllabus = () => {
   return (
     <section id="syllabus" className="scroll-mt-32 py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-10">
-        {/* Heading */}
         <div className="text-center mb-12">
           <div className="flex justify-center items-center gap-3 text-[#1f3f98]">
             <NotebookPen size={28} />
@@ -18,7 +17,6 @@ const TOEFLSyllabus = () => {
           </p>
         </div>
 
-        {/* Table */}
         <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-md">
           <table className="min-w-full divide-y divide-gray-200 text-base text-left bg-white">
             <thead className="bg-gradient-to-r from-[#1f3f98] to-blue-700 text-white">

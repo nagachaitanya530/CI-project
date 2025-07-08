@@ -10,7 +10,7 @@ export default function StickyEnrollBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setShowBar(scrollY > 400); // Show when user scrolls past 400px
+      setShowBar(scrollY > 400);
     };
 
     window.addEventListener("scroll", handleScroll);

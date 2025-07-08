@@ -1,13 +1,34 @@
+import FAQ from "~/app/_components/study-abroad/faq";
+const IndiaFAQs = [
+  {
+    question: "What steps must Indian students take to apply for a visa?",
+    answer: "The Swiss embassy or consulate in India is where Indian students must apply for a long-stay (National D) visa. There is an additional INR 1,850 service charge on top of the INR 8,000 application fee. A valid passport, an acceptance on accommodations are all necessary.",
+
+  },
+  {
+    question: "For how long is a student work permit Switzerland valid?",
+    answer: "In Switzerland, a student work permit is usually valid for a period of one year and can be renewed each year until the student completes his/her studies, with a total duration of up to eight years for non-EU/EFTA nationals.",
+
+  },
+  {
+    question: "Can international students work while studying in Switzerland?",
+    answer: "Yes, in Switzerland, overseas students are permitted to work part-time for a maximum of 15 hours per week during the academic term and full-time during study breaks—with non-EU/EFTA students allowed to begin working only after six months of study and subject to acquiring a work visa.",
+  },
+  {
+    question: "Post graduation, can students stay back in Switzerland?",
+    answer: "For further assistance or queries students can contact us, Edwise International, and avail our wide range of services for students on destinations like Universities in Australia, study in Australia, study in UK, study in USA, study in Canada, study in Ireland, study in New-Zealand, study in Singapore, study in France, study in Germany and many other countries.",
+  },
+  
+];
 function SwitzerlandVisaContent() {
     return (
-        <div className="px-10 md:px-70 py-10 text-gray-700 text-justify space-y-10 bg-white text-lg">
+        <div className="max-w-4xl mx-auto px-4 py-4 space-y-8 text-lg leading-relaxed text-gray-700 text-justify sm:px-6 md:px-10">
             <p>Switzerland is known for its multilingual, cultural, high quality of education and it has become a
                 top most study abroad destination for international students. It provides academic opportunities for a degree in business,
                 hospitality, science, engineering and many other courses. It not only provides good academics but also offers a high standard of living,
                 accommodation and international exposure. In this <strong>Switzerland Study</strong> Visa Guide 2025, we will guide you through all the important details, including
                 the requirements, procedures and advice, to ensure that you deeply know more about the same
             </p>
-
             <h2 className="text-2xl font-normal text-blue-900">Why study in Switzerland?</h2>
             <p className="text-lg">
                 Students should think about{" "}
@@ -32,7 +53,6 @@ function SwitzerlandVisaContent() {
                     <span className="Employment Opportunities:"></span>Switzerland offers great internships and part-time job opportunities for the students.
                 </li>
             </ol>
-
             <h2 className="text-2xl font-normal text-blue-900 text-justify">Switzerland Study Visa Requirements</h2>
             <p className="text-lg">
                 If you’re from a country outside the EU or EFTA (like India, Nigeria, or the USA), you must apply for a
@@ -70,36 +90,14 @@ function SwitzerlandVisaContent() {
             <p>
                 <span className="font-semibold text-blue-900">Applications for student visas</span> are typically decided by Swiss embassies within 15 calendar days of filing; the entire processing time, including the cantonal migration review, takes 8–12 weeks. Depending on your country of residence, the application fee for a Switzerland student visa might range from CHF 60 to CHF 100. There are also possible accelerated service surcharges of up to 50%. While some student categories may be excluded, short-term study visas (Schengen C) have standard fees (around CHF 80 for adults). Non-EU/EFTA students are required to register with the cantonal migration office upon arrival and pay a residence permit charge, which is normally approximately CHF 162 annually.
             </p>
-
             <div className="flex justify-center">
                 <img
-                    src="../switzerland-study-visa-2.webp"
+                    src="/swtizerlandstudyvisa/SwitzerlandstudyVisa1.jpg"
                     alt="Visa approval"
                     className="rounded-3xl shadow-md w-full max-w-4xl object-cover"
                 />
             </div>
-
-
-            <h2 className="text-2xl font-normal text-blue-900">FAQs</h2>
-            <h3 className="text-xl font-normal text-black">What steps must Indian students take to apply for a visa?</h3>
-            <p>
-                The Swiss embassy or consulate in India is where Indian students must apply for a long-stay (National D) visa. There is an additional INR 1,850 service charge on top of the INR 8,000 application fee. A valid passport, an acceptance on accommodations are all necessary.
-            </p>
-            <h3 className="text-xl font-normal text-black">For how long is a student work permit Switzerland valid?</h3>
-            <p>In Switzerland, a student work permit is usually valid for a period of one year and can be renewed each year until the student completes his/her studies, with a total duration of up to eight years for non-EU/EFTA nationals.
-            </p>
-            <h3 className="text-xl font-normal text-black">Can international students work while studying in Switzerland?</h3>
-            <p>
-                Yes, in Switzerland, overseas students are permitted to work part-time for a maximum of 15 hours per week during the academic term and full-time during study breaks—with non-EU/EFTA students allowed to begin working only after six months of study and subject to acquiring a work visa.
-            </p>
-            <h3 className="text-xl font-normal text-black">Post graduation, can students stay back in Switzerland?</h3>
-            <p>Yes, post graduation, overseas students can stay back in Switzerland for a maximum of six months to look for a job, and may qualify for a work permit if they obtain a job in their area of expertise.</p>
-
-            <p>For further assistance or queries students can contact us, Edwise International, and avail our wide range of services for students on destinations like
-                <span className="font-semibold text-blue-900"> Universities in Australia, study in Australia, study in UK, study in USA, study in Canada, study in Ireland, study in New-Zealand, study in Singapore, study in France, study in Germany </span>
-                and many other countries.
-            </p>
-
+            <FAQ faqs={IndiaFAQs} title="FAQs" />
             <div className="flex space-x-6 mt-4">
                 <p className="text-lg font-bold">
                     Share Blog via :
@@ -132,11 +130,7 @@ function SwitzerlandVisaContent() {
                     </svg>
                 </a>
             </div>
-
-
         </div>
-
-
     )
 }
 export default SwitzerlandVisaContent

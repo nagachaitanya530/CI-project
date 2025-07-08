@@ -30,7 +30,7 @@ import {
   FaBlogger,
 } from "react-icons/fa6";
 
-// ✅ This is the missing function declaration
+
 export default function GermanyPage() {
   const [showModal, setShowModal] = useState(false)
   return (
@@ -40,50 +40,21 @@ export default function GermanyPage() {
       <>
         <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
       </>
-
-
-      {/* Navigation */}
-      <Navigation />
-
-      {/* Hero Section */}
-      <Hero onFreeConsultClick={() => setShowModal(true)} />
-
-      {/* Info Stats Section */}
+    <Navigation />
+    <Hero onFreeConsultClick={() => setShowModal(true)} />
       <main className="max-w-7xl mx-auto p-4">
         <InfoStats />
       </main>
-
-      {/* Why Study in Germany */}
-      <WhyStudy />
-
-      {/* University List Section */}
-      <UniversityList />
-
-      {/* Popular Courses Section */}
-      <PopularCoursesSection />
-
-      {/* Cost of Studying */}
-      <CostOfStudying />
-
-      {/* Scholarships */}
-      <Scholarships />
-
-      {/* CareerProspectsection */}
-      <CareerProspectsSection />
-
-      {/* More About Germany */}
-      <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
-
-      {/* Table of Contents */}
-      {/* <TOC /> */}
-
+    <WhyStudy />
+    <UniversityList />
+    <PopularCoursesSection />
+    <CostOfStudying />
+    <Scholarships />
+    <CareerProspectsSection />
+    <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
       <RelatedArticles />
-
-      {/* Success Stories*/}
-      <SuccessStories />
-
-      {/* FAQ Section */}
-      <FAQ faqs={[
+    <SuccessStories />
+    <FAQ faqs={[
         {
           question: "What is the cost of studying in Germany?",
           answer:
@@ -109,14 +80,11 @@ export default function GermanyPage() {
           answer:
             "No, it's not compulsory. Many universities in Germany offer programs in English, and proficiency in German is not required for admission.",
         },
-
       ]} />
 
 
-      {/* Call to Action */}
-      <YourJourney/>
+      <YourJourney />
 
-      {/* this is the footer */}
       <FooterSection />
     </main>
   );

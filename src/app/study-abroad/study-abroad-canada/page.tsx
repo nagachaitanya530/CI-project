@@ -14,7 +14,7 @@ import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "~/app/_components/study-abroad/faq";
 
 
-function StudyInCanada(){
+function StudyInCanada() {
   const FrontendFAQ = [
     {
       question: "How many hours of IELTS training is provided by Edwise?",
@@ -43,24 +43,24 @@ function StudyInCanada(){
   ]
 
 
-    return(
-        <>
-        <NavigationSection/>
-        <HeroSection/>
-        <WhyStudy/>
-        <UniversityList/>
-        <PopularCoursesSection/>
-        <CostOfStudy/>
-        <Scholarships/>
-        <CareerProspect/>
-        <MoreAbout/>
-        <RelatedArticles/>
-        <SuccessStory/>
-        <FAQ faqs={FrontendFAQ}/>
-        <YourJourney/>
-        <FooterSection/>
-        </>
-    );
+  return (
+    <>
+      <NavigationSection />
+      <HeroSection />
+      <WhyStudy />
+      <UniversityList />
+      <PopularCoursesSection />
+      <CostOfStudy />
+      <Scholarships />
+      <CareerProspect />
+      <MoreAbout />
+      <RelatedArticles />
+      <SuccessStory />
+      <FAQ faqs={FrontendFAQ} />
+      <YourJourney />
+      <FooterSection />
+    </>
+  );
 }
 
 export default StudyInCanada;

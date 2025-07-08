@@ -13,10 +13,8 @@ function SideBarSection({ countries, onSelectCountry, selectedCountry }: SideBar
         <li
           key={index}
           onClick={() => onSelectCountry(country)}
-          className={`py-2 my-1 px-5 list-none rounded-lg cursor-pointer ${
-            selectedCountry === country ? 'bg-cyan-700 text-white' : 'hover:bg-cyan-700'
-          }`}
-        >
+          className={`py-2 my-1 px-5 list-none rounded-lg cursor-pointer ${selectedCountry === country ? 'bg-cyan-700 text-white' : 'hover:bg-cyan-700'
+            }`}>
           {country}
         </li>
       ))}
