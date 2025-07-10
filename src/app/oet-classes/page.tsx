@@ -1,4 +1,4 @@
-import Footer from "../_components/footer1";
+import Footer from "../_components/Footer";
 import Navigation from "../_components/Navigation";
 
 const OETSection = () => {

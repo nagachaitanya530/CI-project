@@ -513,28 +513,10 @@ export default function Curriculum() {
                   <>
                     <p className="text-xl mb-2">Curriculum</p>
                     <p className="text-sm text-blue-100">Select week for view its Content</p>
-<<<<<<< HEAD
                   </>
                 )
               }
             </div>
-=======
-                    </>
-                  )
-                  }
-                </div>
-
-              </div>
-        <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
-          <div className="relative w-full h-85">
-            <Image
-              src="/home/professional-women.png"
-              alt="Sunday Webinar"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
->>>>>>> changes_ci
           </div>
           <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
             <div className="relative w-full h-85">

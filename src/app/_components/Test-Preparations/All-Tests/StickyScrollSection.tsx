@@ -66,11 +66,8 @@ export default function StickyScrollSection({
   </h2>
   <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
 </div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cost-of-studying-usa
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 md:sticky md:top-24 h-fit">
           <Image
@@ -81,10 +78,6 @@ export default function StickyScrollSection({
             className="rounded-3xl w-full h-auto object-cover"
           />
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cost-of-studying-usa
         <div className="flex-1 space-y-10">
           {tabs.map((tab) => (
             <div

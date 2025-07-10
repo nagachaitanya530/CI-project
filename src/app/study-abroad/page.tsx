@@ -1,12 +1,12 @@
 import FooterSection from "../_components/footer1";
 import NavigationSection from "../_components/navigation1";
-import Homepage from "../_components/study-abroad/home/homee";
+import Homee from "../_components/study-abroad/home/homee";
 
 export default function studyabroad() {
     return (
         <>
             <NavigationSection />
-            <Homepage />
+            <Homee />
             <FooterSection />
         </>
     )

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { Check, CheckCircle } from "lucide-react";
-import Image from "next/image";
-=======
 import {  CheckCircle } from "lucide-react";
->>>>>>> changes_ci
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,13 +7,8 @@ function AboutPage() {
         <>
             <section id="about" className=" border-gray-300 rounded-xl shadow-lg ">
                 <div>
-<<<<<<< HEAD
-                    <h1 className="text-3xl font-semibold py-5 w-1/2">
-                        What you''ll learn
-=======
                 <h1 className="text-3xl font-semibold py-5 w-1/2">
                     What you''ll learn   
->>>>>>> changes_ci
                     </h1>
                     <div className="flex flex-col md:flex-row">
                         <div className="left md:w-3/4 p-2 grid grid-cols-1 sm:grid-cols-2">
@@ -74,18 +64,6 @@ function AboutPage() {
                                     height={300}
                                 ></Image>
                             </div>
-<<<<<<< HEAD
-                            <div>
-                                <h2 className="text-[38px]  p-5">Want something general?</h2>
-                                <p className="text-gray-500 text-lg pl-5 mb-2">Check our Foundation English Course.</p>
-                                <div className="button p-5 flex items-center ">
-                                    <Link href="/" className="inline-block px-6 py-3 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                        <span>
-                                            Foundation English
-                                        </span>
-                                    </Link>
-                                </div>
-=======
 
                         </div>
                        
@@ -119,7 +97,6 @@ function AboutPage() {
                                         Foundation English
                                     </span>
                                 </Link>
->>>>>>> changes_ci
                             </div>
                         </div>
                     </div>

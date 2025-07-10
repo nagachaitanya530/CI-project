@@ -1,7 +1,7 @@
 'use client';
 import CostOfStudying from '../../_components/study-abroad/study-mauritius/CostOfStudying';
 import Navigation from '../../_components/navigation1';
-import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
+//import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
 import MauritiusBanner from '~/app/_components/study-abroad/study-mauritius/MauritiusBanner';
 import WhyStudySection from '~/app/_components/study-abroad/study-mauritius/WhyStudySection';
 import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
