@@ -361,7 +361,6 @@ const CurriculumSection = () => {
             )}
           </div>
         </div>
-
         <div className="col-span-3 space-y-4">
           {curriculum.map((weekData, index) => (
             <div

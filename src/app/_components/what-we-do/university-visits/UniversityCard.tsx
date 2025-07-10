@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -8,7 +9,7 @@ export type University = {
   id: number;
   name: string;
   location: string;
-  date: string; 
+  date: string;
   time: string;
   country: string;
   logo: string;
@@ -55,7 +56,7 @@ export default function UniversityCard({ data }: { data: University[] }) {
                 </div>
               </div>
               <button
-                className="bg-[#143B85] text-white text-sm py-2 px-4 rounded-md text-lg font-semibold w-full mt-4"
+                className="bg-[#143B85] text-white text-sm py-2 px-4 rounded-md font-semibold w-full mt-4"
                 onClick={() => setShowModal(true)}
               >
                 Free Expert Consultation

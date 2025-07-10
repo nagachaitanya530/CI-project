@@ -82,6 +82,7 @@ export default function Testimonial() {
         <div
           className={`bg-white rounded-lg shadow p-6 flex flex-col items-center text-center transition-opacity duration-500 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
         >
+
           <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border border-gray-300">
             <Image
               src={testimonial.image}
@@ -91,6 +92,8 @@ export default function Testimonial() {
               className="object-cover w-full h-full"
             />
           </div>
+
+
           <p className="text-gray-700 text-base mb-4 italic max-w-2xl">
             “{testimonial.quote}”
           </p>

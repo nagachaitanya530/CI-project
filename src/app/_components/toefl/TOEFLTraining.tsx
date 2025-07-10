@@ -35,6 +35,7 @@ const TOEFLTraining = () => {
   return (
     <section id="training" className="scroll-mt-32 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-10">
+        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f3f98]">
             TOEFL Training at Edwise
@@ -44,6 +45,7 @@ const TOEFLTraining = () => {
           </p>
         </div>
 
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
           {features.map((point, idx) => (
             <div
@@ -56,6 +58,7 @@ const TOEFLTraining = () => {
           ))}
         </div>
 
+        {/* Training Schedule */}
         <div className="bg-blue-50 border-l-4 border-[#1f3f98] p-6 rounded-xl shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <Clock3 className="text-[#1f3f98]" size={24} />

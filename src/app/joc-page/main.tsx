@@ -351,7 +351,7 @@ const Joc: React.FC = () => (
           </div>
           <div className="mt-8 text-gray-100 text-sm flex flex-col gap-2 opacity-90">
             <span>EMI options | 24/7 mentor support | Global job assistance</span>
-            <span>Contact: support@academy.com | WhatsApp: +91-9876543210</span>
+            <span>Contact: support@aalionsinfotech.com | WhatsApp: +91-7607676998</span>
           </div>
         </div>
       </div>

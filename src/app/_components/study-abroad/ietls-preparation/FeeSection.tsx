@@ -27,9 +27,15 @@ function FeeSection() {
                     </li>
                     <li><strong>Computer Based only 2 Slots:</strong> 9am to 12 pm and 1pm to 4pm</li>
                 </ul>
+
                 <br />
                 <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
                 <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
+
+                <br />
+                <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
+                <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
+
             </section>
         </>
     );

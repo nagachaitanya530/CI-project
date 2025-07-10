@@ -4,55 +4,51 @@ import { useState, useEffect } from "react"
 
 import { ChevronLeft, ChevronRight, GraduationCap, Users, Globe, Award, BookOpen } from "lucide-react"
 import { Button } from "~/components/ui/button"
+import ConsultationForm from "../../celpip/ConsultationForm"
 
 const cardData = [
     {
-        title: "Free Services",
+        title: "Excellence",
         description: "Get expert guidance without any cost",
         icon: GraduationCap,
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/study-abroad-home/excellence.png",
         color: "from-white to-white",
     },
     {
-        title: "200+ Expert Counselors",
+        title: "Universities",
         description: "Professional guidance from experienced counselors",
         icon: Users,
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/study-abroad-home/university.png",
         color: "from-white to-white",
     },
     {
-        title: "Global Reach",
+        title: "Free Service",
         description: "Study opportunities in 50+ countries worldwide",
         icon: Globe,
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/study-abroad-home/free-services.png",
         color: "from-white to-white",
     },
     {
-        title: "Premium Universities",
+        title: "200+ Experts",
         description: "Access to top-ranked institutions globally",
         icon: Award,
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/study-abroad-home/Expert-consultance.png",
         color: "from-white to-white",
     },
     {
-        title: "Scholarship Assistance",
+        title: "Happy Students",
         description: "Help securing financial aid and scholarships",
         icon: BookOpen,
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/study-abroad-home/students-reviews.png",
         color: "from-white to-white",
     },
-    {
-        title: "Visa Support",
-        description: "Complete visa application and documentation support",
-        icon: Award,
-        image: "/placeholder.svg?height=200&width=300",
-        color: "from-white to-white",
-    },
+
 ]
 
 export default function EducationServices() {
     const [currentCard, setCurrentCard] = useState(0)
     const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         if (!isAutoPlaying) return
@@ -89,7 +85,7 @@ export default function EducationServices() {
         <section className="w-full py-16 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Content */}
+
                     <div className="space-y-6">
                         <div className="space-y-4">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -109,12 +105,25 @@ export default function EducationServices() {
                         <Button
                             size="lg"
                             className="bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl"
+                            onClick={() => setIsOpen(true)}
                         >
                             Free Expert Consultation
                         </Button>
+                        {isOpen && (
+                            <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40 transition-opacity duration-300">
+                                <div className="bg-white p-6 md:p-8 rounded-xl shadow-2xl relative w-full max-w-lg mx-auto">
+                                    <button
+                                        className="absolute top-3 right-4 text-2xl"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        &times;
+                                    </button>
+                                    <ConsultationForm show={isOpen} onClose={() => setIsOpen(false)} />
+                                </div>
+                            </div>
+                        )}
                     </div>
 
-                    {/* Right Cards */}
                     <div className="relative">
                         <div className="relative h-96 overflow-hidden">
                             {getVisibleCards().map((card, displayIndex) => {
@@ -128,25 +137,16 @@ export default function EducationServices() {
                                             transform: displayIndex === 0 ? "translateX(0) scale(1)" : "translateX(2rem) scale(0.95)",
                                         }}
                                     >
-                                        <div
-                                            className={`bg-gradient-to-br ${card.color} rounded-2xl p-6 h-full shadow-xl border border-white/20 backdrop-blur-sm`}
-                                        >
-                                            <div className="flex flex-col h-full">
-
-
-                                                <div className="flex-1">
-                                                    <div className="relative h-48 bg-gray-100 rounded-xl overflow-hidden">
-                                                        <img
-                                                            src={card.image || "/placeholder.svg"}
-                                                            alt={card.title}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                                                            <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-                                                            <p className="text-sm leading-relaxed opacity-90">{card.description}</p>
-                                                        </div>
-                                                    </div>
+                                        <div className={`bg-gradient-to-br ${card.color} rounded-2xl p-0 h-full shadow-xl border border-white/20 backdrop-blur-sm overflow-hidden`}>
+                                            <div className="relative w-full h-full mt-9">
+                                                <img
+                                                    src={card.image}
+                                                    alt={card.title}
+                                                    className="absolute inset-0 w-full h-full object-cover"
+                                                />
+                                                <div className="relative p-6">
+                                                    <h3 className="text-xl font-bold text-gray-950 mb-2">{card.title}</h3>
+                                                    <p className="text-sm leading-relaxed text-gray-950 opacity-90">{card.description}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,7 +155,6 @@ export default function EducationServices() {
                             })}
                         </div>
 
-                        {/* Navigation Controls */}
                         <div className="flex justify-end gap-2 mt-6">
                             <Button
                                 variant="outline"
@@ -175,7 +174,21 @@ export default function EducationServices() {
                             </Button>
                         </div>
                     </div>
+
                 </div>
+                {isOpen && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40 transition-opacity duration-300">
+                        <div className="bg-white p-6 md:p-8 rounded-xl shadow-2xl relative w-full max-w-lg mx-auto">
+                            <button
+                                className="absolute top-3 right-4 text-2xl"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                &times;
+                            </button>
+                            <ConsultationForm show={isOpen} onClose={() => setIsOpen(false)} />
+                        </div>
+                    </div>
+                )}
             </div>
         </section>
     )

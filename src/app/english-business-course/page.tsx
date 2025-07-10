@@ -1,6 +1,10 @@
 import Link from "next/link";
+
 import Footer from "../_components/footer1";
-import Navigation from "../_components/navigation1";
+
+import Footer from "../_components/Footer";
+
+import Navigation from "../_components/Navigation";
 import HeroSection from "../_components/english-business-course/HeroSection";
 import AboutPage from "../_components/english-business-course/AboutPage";
 import Curriculum from "../_components/english-business-course/Curriculum";

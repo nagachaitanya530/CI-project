@@ -8,11 +8,11 @@ import { BookOpenText, Clock, Laptop } from "lucide-react";
 const HeroBanner = () => {
   return (
     <section className="relative bg-gradient-to-br from-[#eef3ff] to-[#fff] py-20 px-6 md:px-20 overflow-hidden">
-
+      {/* Accent Animated Background Blob */}
       <div className="absolute top-[-60px] right-[-60px] w-[250px] h-[250px] rounded-full bg-blue-200 opacity-30 blur-3xl animate-pulse z-0" />
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
-
+        {/* Left Text Content */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -49,6 +49,7 @@ const HeroBanner = () => {
             and top-quality materials for your study abroad goals.
           </motion.p>
 
+          {/* Animated CTA Button */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -62,6 +63,7 @@ const HeroBanner = () => {
             </button>
           </motion.div>
 
+          {/* Info Cards */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -102,6 +104,7 @@ const HeroBanner = () => {
           </motion.div>
         </motion.div>
 
+        {/* Right Floating Image */}
         <motion.div
           initial={{ y: 0 }}
           animate={{ y: [0, -10, 0] }}

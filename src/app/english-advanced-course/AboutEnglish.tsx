@@ -16,15 +16,12 @@ function AboutEnglish() {
     },
 
     {
-      image: "/home/learning-Girl.jpg",
+      image: "../English-advance.webp",
       title7: 'Want something general?',
       discription4: 'Check our Foundation English Course.',
       buttonText: 'English Foundation'
     }
   ]
-
-
-  // left side
   const data = [
     {
       image: '../../../home/learning-Girl.jpg',
@@ -45,7 +42,6 @@ function AboutEnglish() {
 
   return (
     <>
-      {/* After the sticky bar, we can add the content for the course details. */}
       <h2 id='about' className='mx-3 md:mx-7 lg:mx-30 mt-20 mb-1 text-2xl sm:text-3xl scroll-mt-35'>
         What you'll learn
       </h2>
@@ -95,7 +91,7 @@ function AboutEnglish() {
                 {items.buttonText && (
                   <a
                     className='inline-block mt-4 bg-blue-500 text-white px-4 py-2 text-lg rounded-md'
-                    href=""
+                    href="/english-foundation-course"
                   >
                     {items.buttonText}
                   </a>

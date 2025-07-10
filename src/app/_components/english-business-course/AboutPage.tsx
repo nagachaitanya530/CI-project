@@ -1,7 +1,6 @@
-import { Check, CheckCircle } from "lucide-react";
-import Image from "next/image";
+import { CheckCircle } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
 
 function AboutPage() {
     return (
@@ -65,16 +64,39 @@ function AboutPage() {
                                     height={300}
                                 ></Image>
                             </div>
-                            <div>
-                                <h2 className="text-[38px]  p-5">Want something general?</h2>
-                                <p className="text-gray-500 text-lg pl-5 mb-2">Check our Foundation English Course.</p>
-                                <div className="button p-5 flex items-center ">
-                                    <Link href="/" className="inline-block px-6 py-3 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                        <span>
-                                            Foundation English
-                                        </span>
-                                    </Link>
-                                </div>
+
+                        </div>
+
+                        <div className="flex items-center px-10 ">
+                            <CheckCircle className="w-35 h-35" />
+                            <div className="pl-5">
+                                <h3 className="font-semibold">Vocabulry</h3>
+                                <p className="text-gray-500 text-sm " >Possessing extensive and
+                                    impressive vocabulary is
+                                    essential for advanced communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="right h-[100%] border-md shadow-2xl mb-2 mt-5 rounded-2xl ">
+
+                        <div className="relative w-full h-[280px] rounded-t-md overflow-hidden">
+                            <Image
+                                src="/home/learning-Girl.jpg"
+                                alt="Online French Language classes Best French classes online french tutor"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                        <div>
+                            <h2 className="text-[38px]  p-5">Want something general?</h2>
+                            <p className="text-gray-500 text-lg pl-5 mb-2">Check our Foundation English Course.</p>
+                            <div className="button p-5 flex items-center ">
+                                <Link href="/english-foundation-course" className="inline-block px-6 py-3 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <span>
+                                        Foundation English
+                                    </span>
+                                </Link>
                             </div>
                         </div>
                     </div>

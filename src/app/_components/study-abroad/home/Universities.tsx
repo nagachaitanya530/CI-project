@@ -4,22 +4,22 @@ import { Button } from "~/components/ui/button"
 
 
 const universities = [
-    { name: "University of Edinburgh", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Johns Hopkins", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Melbourne", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "NUS", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Manchester", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "UCLA", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "UNSW Sydney", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Queensland", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "King's College London", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "NYU", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Sydney", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Auckland", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Bristol", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Monash University", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Western Australia", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "University of Amsterdam", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "University of Edinburgh", logo: "/study-abroad-home/university-of-edinburgh.png?height=60&width=120" },
+    { name: "Johns Hopkins", logo: "/study-abroad-home/university-of-johnhopkins.png?height=60&width=120" },
+    { name: "University of Melbourne", logo: "/study-abroad-home/university-of-melbourne.png?height=60&width=120" },
+    { name: "NUS", logo: "/study-abroad-home/university-of-singapore.png?height=60&width=120" },
+    { name: "University of Manchester", logo: "/study-abroad-home/manchester-university.png?height=60&width=120" },
+    { name: "UCLA", logo: "/study-abroad-home/ucla.png?height=60&width=120" },
+    { name: "UNSW Sydney", logo: "/study-abroad-home/unsw-sydney.png?height=60&width=120" },
+    { name: "University of Queensland", logo: "/study-abroad-home/university-of-queenland.png?height=60&width=120" },
+    { name: "King's College London", logo: "/study-abroad-home/kcl.jpeg?height=60&width=120" },
+    { name: "NYU", logo: "/study-abroad-home/university-of-nyc.png?height=60&width=120" },
+    { name: "University of Sydney", logo: "/study-abroad-home/university-of-sydney.png?height=60&width=120" },
+    { name: "University of Auckland", logo: "/study-abroad-home/university-of-newzealand.png?height=60&width=120" },
+    { name: "University of Bristol", logo: "/study-abroad-home/university-of-bristol.png?height=60&width=120" },
+    { name: "Monash University", logo: "/study-abroad-home/university-of-monash.png?height=60&width=120" },
+    { name: "University of Western Australia", logo: "/study-abroad-home/university-of-melbourne.png?height=60&width=120" },
+    { name: "University of Amsterdam", logo: "/study-abroad-home/university-of-amsterdam.png?height=60&width=120" },
 ]
 
 export default function UniversityPartners() {
@@ -41,7 +41,6 @@ export default function UniversityPartners() {
                     </p>
                 </div>
 
-                {/* University Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-12">
                     {universities.map((university, index) => (
                         <div
@@ -49,11 +48,11 @@ export default function UniversityPartners() {
                             className="bg-white border border-gray-200 rounded-md px-2 py-1 hover:shadow-md transition-shadow duration-300 flex items-center justify-center min-h-[45px]"
                         >
                             <img
-                                src={university.logo || "/placeholder.svg"}
+                                src={university.logo}
                                 alt={`${university.name} logo`}
-                                width={70}
-                                height={35}
-                                className="max-w-full h-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                                width={200}
+                                height={70}
+                                className="max-w-full h-auto object-contain  transition-all duration-300"
                             />
                         </div>
                     ))}
@@ -61,7 +60,7 @@ export default function UniversityPartners() {
 
                 {/* View More Button */}
                 <div className="text-center">
-                    <Link href="/partners">
+                    <Link href="study-abroad/partnered-universities">
                         <Button
                             variant="outline"
                             size="lg"

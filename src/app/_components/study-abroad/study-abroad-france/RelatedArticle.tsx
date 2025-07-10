@@ -1,7 +1,7 @@
 function RelatedArticle(){
     return(
         <>
-        <div className="comm-section mb-25 -mt-12 aos-init aos-animate" data-aos="fade-in" data-duration="50">
+        <div className="comm-section mb-25  aos-init aos-animate" data-aos="fade-in" data-duration="50">
                 <div className="container">
                     <h3 className="sec-title text-center mb-7 text-5xl">
                         {" "}

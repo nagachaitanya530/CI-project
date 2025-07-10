@@ -23,7 +23,7 @@ function AdditionFacilities() {
                 src="/home/professional-women.png"
                 alt="Sunday Webinars"
                 className="w-full h-55 "
-                width={500} height={300}  
+                width={500} height={300}
               />
             </div>
           </div>
@@ -42,7 +42,7 @@ function AdditionFacilities() {
                 src="/home/writing-girl.png"
                 alt="Sunday Webinars"
                 className="w-full h-55 "
-                width={500} height={300}  
+                width={500} height={300}
               />
             </div>
           </div>
@@ -57,15 +57,23 @@ function AdditionFacilities() {
                 everything that you can think of.</p>
             </div>
             <div className="">
-              <Image
+              <img
                 src="/home/airplane-travel.png"
                 alt="Sunday Webinars"
                 className="w-full h-55 object-contain px-5"
-                width={500} height={300}  
               />
             </div>
           </div>
         </div>
+        <div className="">
+          <Image
+            src="/home/airplane-travel.png"
+            alt="Sunday Webinars"
+            className="w-full h-55 object-contain px-5"
+            width={500} height={300}
+          />
+        </div>
+    
       </section>
     </>
   );

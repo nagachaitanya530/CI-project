@@ -10,7 +10,6 @@ function EnrollForm(){
       </h1>
 
       <form className="space-y-6">
-        {/* Personal Info */}
         <section>
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Information</h3>
 
@@ -54,15 +53,12 @@ function EnrollForm(){
             </div>
           </div>
         </section><hr />
-         {/* Education */}
         <section>
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
           <label className="block text-sm font-medium text-gray-700">Education Level</label>
           <input type="text" placeholder="Ex: 8th Grade" className="input w-1/2 border rounded-xs border-black p-1" />
         </section>
         <hr />
-
-        {/* Parent Info */}
         <section>
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Parent/Guardian Information</h3>
 
@@ -98,8 +94,6 @@ function EnrollForm(){
               hover:file:bg-cyan-100"
           />
         </section>
-
-        {/* Submit */}
         <div className="text-center">
           <button
             type="submit"

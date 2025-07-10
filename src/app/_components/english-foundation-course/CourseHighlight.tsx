@@ -21,8 +21,7 @@ const CourseHighlight = () => {
             <li>Engage in community activities to make connections for your future study, professional and Migration programmes.</li>
           </ul>
         </div>
-
-        <div className="md:w-1/2 w-full">
+         <div className="md:w-1/2 w-full">
           <div className="rounded-lg overflow-hidden mb-4">
             <Image
               src="/english-course/second.jpg"

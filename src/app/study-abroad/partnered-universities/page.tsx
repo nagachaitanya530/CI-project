@@ -7,16 +7,16 @@ import SuccessStoriesSection from "~/app/_components/partnered-universities/Succ
 
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 
-function PartneredUniversities(){
-    return(<>
-        <NavigationSection/>
-        <HeroSection/>
-        <CountryUniversity/>
-        <SuccessStoriesSection/>
-        <YourJourney/>
-        <CTA/>
-        <FooterSection/>
-    </>);
+function PartneredUniversities() {
+        return (<>
+                <NavigationSection />
+                <HeroSection />
+                <CountryUniversity />
+                <SuccessStoriesSection />
+                <YourJourney />
+                <CTA />
+                <FooterSection />
+        </>);
 }
 
 export default PartneredUniversities;

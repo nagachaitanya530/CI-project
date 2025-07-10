@@ -1,20 +1,22 @@
 'use client';
 import CostOfStudying from '../../_components/study-abroad/study-mauritius/CostOfStudying';
 import Navigation from '../../_components/navigation1';
-import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
+// import GetStartedBanner from '~/app/_components/study-abroad/study-mauritius/GetStartedBanner';
 import MauritiusBanner from '~/app/_components/study-abroad/study-mauritius/MauritiusBanner';
 import WhyStudySection from '~/app/_components/study-abroad/study-mauritius/WhyStudySection';
+import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import UniversityList from '~/app/_components/study-abroad/study-mauritius/UniversityList';
 import PopularCourses from '~/app/_components/study-abroad/study-mauritius/PopularCourses';
-import StudyTabs from '~/app/_components/study-abroad/study-mauritius/StudyTabs';   
+import StudyTabs from '~/app/_components/study-abroad/study-mauritius/StudyTabs';
 import ScholarshipSection from '~/app/_components/study-abroad/study-mauritius/ScholarshipSection';
-import SuccessStories from '~/app/_components/study-abroad/study-mauritius/SuccessStories';
+// import SuccessStories from '~/app/_components/study-abroad/study-mauritius/SuccessStories';
 import Footer from '../../_components/footer1';
 import FaqAccordion from '~/app/_components/study-abroad/study-mauritius/FaqAccordion';
 import CareerProspects from '~/app/_components/study-abroad/study-mauritius/CareerProspects';
 import FadeInOnScroll from './FadeInOnScroll';
-import FAQ  from '~/app/_components/study-abroad/faq';
+import FAQ from '~/app/_components/study-abroad/faq';
 import YourJourney from "~/app/_components/study-abroad/your-journey";
+import SuccessStories from "~/app/_components/Test-Preparations/All-Tests/SuccessStories";
 const faqs = [
   {
     question: "What are the documents required to study in Mauritius?",
@@ -45,12 +47,40 @@ const faqs = [
   },
 ];
 
+const stories = [
+  {
+    text: "Edwise does not stop at admissions. Their ongoing support post-study helped me transition smoothly into my career. The best decision for my academic journey!",
+    name: "Miral Shah",
+    exam: "Bournemouth University, UK",
+    profile: "/successstory5.avif",
+  },
+  {
+    text: "It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.",
+    name: "Abhinay Pandit",
+    exam: "New York Film Academy, US",
+    profile: "/successstory6.avif",
+  },
+  {
+    text: "It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.",
+    name: "Abhinay Pandit",
+    exam: "New York Film Academy, US",
+    profile: "/successstory7.avif",
+  },
+  {
+    text: "It is one of the best consultancies. They are genuinely committed to assisting the students. Counselors are very approachable.",
+    name: "Abhinay Pandit",
+    exam: "New York Film Academy, US",
+    profile: "/successstory8.avif",
+  },
+];
+
 export default function Page() {
-return (
+  return (
     <>
       <Navigation />
       <MauritiusBanner />
       <FadeInOnScroll><WhyStudySection /></FadeInOnScroll>
+
       <FadeInOnScroll><UniversityList /></FadeInOnScroll>
       <FadeInOnScroll><PopularCourses /></FadeInOnScroll>
       <FadeInOnScroll><CostOfStudying /></FadeInOnScroll>
@@ -58,7 +88,7 @@ return (
         <ScholarshipSection
           countryName="Mauritius"
           description="Mauritius offers a wide range of scholarships for international students. These programs aim to promote global education and cultural exchange."
-          image="/scholar1.avif" 
+          image="/scholar1.avif"
           scholarshipTypes={[
             "Government of Mauritius Scholarship",
             "Merit-Based Scholarships",
@@ -69,8 +99,10 @@ return (
       </FadeInOnScroll>
       <FadeInOnScroll><CareerProspects /></FadeInOnScroll>
       <FadeInOnScroll><StudyTabs /></FadeInOnScroll>
-      <FadeInOnScroll><SuccessStories /></FadeInOnScroll>
-      <FadeInOnScroll><FAQ  faqs={faqs}/></FadeInOnScroll>
+      {/* <FadeInOnScroll><SuccessStories /></FadeInOnScroll>  //  */}
+
+      <FadeInOnScroll> <SuccessStories testimonials={stories} /></FadeInOnScroll>
+      <FadeInOnScroll><FAQ faqs={faqs} /></FadeInOnScroll>
       <YourJourney />
       <Footer />
     </>

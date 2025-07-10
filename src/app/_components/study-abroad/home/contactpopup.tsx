@@ -1,9 +1,9 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { X, Mail, Upload, Check, Calendar } from 'lucide-react';
+import BookingConsultation from './BookingConsultant';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import { Label } from '~/components/ui/label';
 import { Controller, useForm } from 'react-hook-form';
-import BookingConsultation from './BookingConsultant';
 
 type ContactPopupProps = {
     isOpen: boolean;

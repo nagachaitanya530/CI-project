@@ -2,13 +2,6 @@
 
 import Link from "next/link";
 import {
-    Home,
-    BookOpen,
-    Globe,
-    Info,
-    CalendarCheck,
-    FileText,
-    GraduationCap,
     UserCircle,
     Menu,
     X,
@@ -17,16 +10,18 @@ import {
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
-const logoUrl = "/placeholder.svg?height=32&width=120";
 
-const navItems = [
+const HOVER_DELAY = 100;
+const LOGO_URL = "/placeholder.svg?height=32&width=120";
+
+const NAV_ITEMS = [
     {
         label: "Study Abroad",
         dropdown: [
             { label: 'UK', href: "/study-abroad/study-abroad-uk" },
             { label: 'USA', href: '/study-abroad/usa' },
             { label: 'Canada', href: "/study-abroad/study-abroad-canada" },
-            { label: 'Australia', href: "/study-abroad/australia" },
+            { label: 'Australia', href: "/study-abroad/Study-Australia" },
             { label: 'Germany', href: '/study-abroad/Germany' },
             { label: 'Spain', href: '/study-abroad/spain' },
             { label: 'India', href: '/study-abroad/India' },
@@ -34,7 +29,7 @@ const navItems = [
             { label: 'Malaysia', href: '/study-abroad/study_in_malaysia' },
             { label: 'New Zealand', href: '/study-abroad/NewZealand' },
             { label: 'Singapore', href: '/study-abroad/study-abroad-singapore' },
-            { label: 'France', href: '/study-abroad/france' },
+            { label: 'France', href: '/study-abroad/study-in-france' },
             { label: 'Italy', href: '/study-abroad/italy' },
             { label: 'Dubai', href: '/study-abroad/dubai' },
             { label: 'Ireland', href: '/study-abroad/ireland' },
@@ -54,8 +49,8 @@ const navItems = [
                     { label: 'All Tests', href: '/Test-Prepataions/All-Tests' },
                     { label: 'TOEFL', href: '/toefl' },
                     { label: 'IELTS', href: '/study-abroad/test-preparation/ielts' },
-                    { label: 'GMAT', href: '/gmat' },
-                    { label: 'GRE', href: '/gre' },
+                    { label: 'GMAT', href: '/Gmat' },
+                    { label: 'GRE', href: '/GRE-Preparation' },
                     { label: 'CAEL', href: '/test-preparation-cael' },
                     { label: 'SAT', href: '/study-abroad/study-abroad-sat' },
                     { label: 'CELPIP', href: '/Celpip' },
@@ -67,18 +62,16 @@ const navItems = [
             { label: 'Career Counseling', href: '/career-counseling' },
             { label: 'Admission Guidance', href: '/admission-guidence' },
             { label: 'Financial Assistance', href: '/financial-assistance' },
-            { label: 'Scholarships', href: '/scholarships' },
+            { label: 'Scholarships', href: '/study-abroad/scholarship' },
             { label: 'Travel & Forex Assistance', href: '/travel_and_forex_assistance' },
-            { label: 'Visa Assistance', href: '/visa-assistance' }
+            { label: 'Visa Assistance', href: '/Visa-assistance' }
         ]
     },
     {
         label: 'What We Do',
         dropdown: [
+            { label: 'What We Do', href: "/what-we-do" },
             { label: 'About Us', href: '/AboutUs' },
-            { label: 'University Visits', href: '/university-visits' },
-            { label: 'What We Do', href: '/What-we-do' },
-            { label: 'About Us', href: '/about' },
             { label: 'University Visits', href: '/what-we-do/university-visits' },
             { label: 'Work With Us', href: '/work-with-us' },
             { label: 'Partnered Universities', href: '/study-abroad/partnered-universities' },
@@ -94,9 +87,17 @@ interface DropdownMenuProps {
     closeMenu?: () => void;
     level?: number;
     isVisible?: boolean;
+    isStudyAbroad?: boolean;
 }
 
-const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true }: DropdownMenuProps) => {
+const DropdownMenu = ({
+    items,
+    isMobile,
+    closeMenu,
+    level = 0,
+    isVisible = true,
+    isStudyAbroad = false,
+}: DropdownMenuProps) => {
     const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({});
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -114,7 +115,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
         if (!isMobile) {
             hoverTimeoutRef.current = setTimeout(() => {
                 setHoveredItem(null);
-            }, 100);
+            }, HOVER_DELAY);
         }
     };
 
@@ -137,7 +138,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
 
     if (isMobile) {
         return (
-            <div className={`${level === 0 ? 'space-y-1' : 'ml-4 mt-1 space-y-1'}`}>
+            <div className={`space-y-1 ${level > 0 ? "ml-4 mt-1" : ""}`}>
                 {items.map((item, idx) => {
                     const hasDropdown = Array.isArray(item.dropdown);
                     const isOpen = openItems[idx];
@@ -148,26 +149,33 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                 <>
                                     <button
                                         onClick={() => toggleItem(idx)}
-                                        className="flex justify-between items-center w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                                        className="flex justify-between items-center w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
                                     >
                                         <span className="text-sm font-medium">{item.label}</span>
                                         <ChevronDown
-                                            className={`text-gray-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                                            className={`text-gray-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                                                }`}
                                             size={14}
                                         />
                                     </button>
                                     <div
-                                        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? (isStudyAbroad ? "max-h-[50vh] opacity-100 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-100" : "max-h-[80vh] opacity-100") : "max-h-0 opacity-0"
                                             }`}
                                     >
-                                        <DropdownMenu items={item.dropdown} isMobile={isMobile} closeMenu={closeMenu} level={level + 1} />
+                                        <DropdownMenu
+                                            items={item.dropdown}
+                                            isMobile={isMobile}
+                                            closeMenu={closeMenu}
+                                            level={level + 1}
+                                            isStudyAbroad={item.label === "Study Abroad"}
+                                        />
                                     </div>
                                 </>
                             ) : (
                                 <Link
                                     href={item.href || "#"}
                                     onClick={closeMenu}
-                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
                                 >
                                     {item.label}
                                 </Link>
@@ -179,17 +187,17 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
         );
     }
 
-    // Desktop dropdown
     if (!isVisible) return null;
 
     return (
         <div
             className={`
-                absolute ${level === 0 ? "left-0 top-full mt-2" : "left-full top-0 ml-2"}
-                min-w-[240px] bg-white/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl
-                opacity-100 visible transition-all duration-300 ease-out
-                before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded-xl before:pointer-events-none
-            `}
+        absolute ${level === 0 ? "left-0 top-full mt-2" : "left-full top-0 ml-2"}
+        ${isStudyAbroad ? "w-[280px] h-[550px] overflow-y-auto" : "min-w-[240px]"}
+        bg-white/95 border border-white/20 rounded-xl shadow-2xl
+        opacity-100 visible transition-all duration-300 ease-out
+        ${isStudyAbroad ? "scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-100" : ""}
+      `}
             style={{ zIndex: 1000 + level * 10 }}
             onMouseEnter={() => {
                 if (hoverTimeoutRef.current) {
@@ -198,18 +206,22 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
             }}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="relative ">
+            <div className={isStudyAbroad ? "flex flex-col space-y-1 p-2" : "relative p-1"}>
                 {items.map((item, idx) => {
                     const hasDropdown = Array.isArray(item.dropdown);
                     const isHovered = hoveredItem === idx;
 
                     return (
-                        <div key={idx} className="relative" onMouseEnter={() => handleMouseEnter(idx)}>
+                        <div
+                            key={idx}
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter(idx)}
+                        >
                             {hasDropdown ? (
                                 <>
-                                    <div className="flex justify-between items-center px-4 py-1.5 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 cursor-pointer transition-all duration-300 rounded-lg mx-1">
-                                        <span className="text-base font-medium">{item.label}</span>
-                                        <ChevronRight className="text-gray-400" size={14} />
+                                    <div className="flex justify-between items-center px-3 py-1.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 cursor-pointer transition-all duration-300 rounded-lg mx-1 whitespace-nowrap">
+                                        <span className="text-sm font-medium">{item.label}</span>
+                                        <ChevronRight className="text-gray-400 ml-2 flex-shrink-0" size={14} />
                                     </div>
                                     {isHovered && (
                                         <DropdownMenu
@@ -218,6 +230,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                             closeMenu={closeMenu}
                                             level={level + 1}
                                             isVisible={true}
+                                            isStudyAbroad={item.label === "Study Abroad"}
                                         />
                                     )}
                                 </>
@@ -225,7 +238,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
                                 <Link
                                     href={item.href || "#"}
                                     onClick={closeMenu}
-                                    className="block px-4 py-1 text-base text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 rounded-lg mx-1"
+                                    className="block px-3 py-1.5 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg mx-1 whitespace-nowrap"
                                 >
                                     {item.label}
                                 </Link>
@@ -238,7 +251,13 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
     );
 };
 
-const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void }) => {
+const NavigationItem = ({
+    item,
+    closeMenu,
+}: {
+    item: any;
+    closeMenu?: () => void;
+}) => {
     const [isHovered, setIsHovered] = useState(false);
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -252,7 +271,7 @@ const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void
     const handleMouseLeave = () => {
         hoverTimeoutRef.current = setTimeout(() => {
             setIsHovered(false);
-        }, 100);
+        }, HOVER_DELAY);
     };
 
     useEffect(() => {
@@ -265,16 +284,28 @@ const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void
 
     if (item.dropdown) {
         return (
-            <div className="relative h-full flex items-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <button className="flex items-center px-6 py-2 text-base font-normal text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 rounded-xl transition-all duration-300 backdrop-blur-sm">
+            <div
+                className="relative h-full flex items-center"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <button className="flex items-center px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 transform hover:scale-105">
                     {item.icon && <item.icon className="mr-2" size={16} />}
                     {item.label}
                     <ChevronDown
-                        className={`ml-2 transition-transform duration-300 ${isHovered ? "rotate-180" : ""}`}
+                        className={`ml-2 transition-transform duration-300 ${isHovered ? "rotate-180" : ""
+                            }`}
                         size={14}
                     />
                 </button>
-                {isHovered && <DropdownMenu items={item.dropdown} closeMenu={closeMenu} isVisible={true} />}
+                {isHovered && (
+                    <DropdownMenu
+                        items={item.dropdown}
+                        closeMenu={closeMenu}
+                        isVisible={true}
+                        isStudyAbroad={item.label === "Study Abroad"}
+                    />
+                )}
             </div>
         );
     }
@@ -283,7 +314,7 @@ const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void
         return (
             <Link
                 href={item.href || "#"}
-                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm whitespace-nowrap"
+                className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
                 {item.icon && <item.icon className="mr-2" size={16} />}
                 {item.label}
@@ -294,7 +325,7 @@ const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void
     return (
         <Link
             href={item.href || "#"}
-            className="flex items-center px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 rounded-xl transition-all duration-300 backdrop-blur-sm"
+            className="flex items-center px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 transform hover:scale-105"
         >
             {item.icon && <item.icon className="mr-2" size={16} />}
             {item.label}
@@ -302,8 +333,13 @@ const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void
     );
 };
 
-// Mobile Navigation Item Component
-const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void }) => {
+const MobileNavigationItem = ({
+    item,
+    closeMenu,
+}: {
+    item: any;
+    closeMenu?: () => void;
+}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -315,19 +351,25 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
             <div className="border-b border-gray-100/50 last:border-0 pb-1 last:pb-0">
                 <button
                     onClick={toggleDropdown}
-                    className="flex justify-between items-center w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 rounded-xl transition-all duration-300 backdrop-blur-sm"
+                    className="flex justify-between items-center w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300"
                 >
                     <span className="text-sm font-medium">{item.label}</span>
                     <ChevronDown
-                        className={`text-gray-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                        className={`text-gray-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                            }`}
                         size={14}
                     />
                 </button>
                 <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
                         }`}
                 >
-                    <DropdownMenu items={item.dropdown} isMobile closeMenu={closeMenu} />
+                    <DropdownMenu
+                        items={item.dropdown}
+                        isMobile
+                        closeMenu={closeMenu}
+                        isStudyAbroad={item.label === "Study Abroad"}
+                    />
                 </div>
             </div>
         );
@@ -338,7 +380,7 @@ const MobileNavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () =
             <Link
                 href={item.href || "#"}
                 onClick={closeMenu}
-                className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 rounded-xl transition-all duration-300 text-sm backdrop-blur-sm"
+                className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 text-sm"
             >
                 <span className="font-medium">{item.label}</span>
             </Link>
@@ -357,7 +399,10 @@ export default function NavigationSection() {
         };
 
         const handleClickOutside = (event: MouseEvent) => {
-            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+            if (
+                mobileMenuRef.current &&
+                !mobileMenuRef.current.contains(event.target as Node)
+            ) {
                 setIsMobileMenuOpen(false);
             }
         };
@@ -375,30 +420,39 @@ export default function NavigationSection() {
         setIsMobileMenuOpen(false);
     };
 
+    function closeMenu(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void {
+        setIsMobileMenuOpen(false);
+    }
+
     return (
         <nav
             className={`
-                sticky top-0 z-50 w-full transition-all duration-500
-                ${isScrolled
-                    ? "bg-white/90 backdrop-blur-xl shadow-2xl border-b border-white/20"
-                    : "bg-white/80 backdrop-blur-lg border-b border-white/10"
+        sticky top-0 z-50 w-full transition-all duration-500
+        ${isScrolled
+                    ? "bg-white/90 shadow-xl border-b border-white/20"
+                    : "bg-white/80 border-b border-white/10"
                 }
-                before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:pointer-events-none
-            `}
+        before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:pointer-events-none
+      `}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    {/* Logo */}
                     <div className="flex items-center flex-shrink-0">
-                        <Link href="/" className="hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                            <img src={logoUrl || "/placeholder.svg"} alt="Logo" className="h-8 w-auto" />
+                        <Link
+                            href="/"
+                            className="hover:opacity-90 transition-all duration-300 transform hover:scale-105"
+                        >
+                            <img
+                                src={LOGO_URL || "/placeholder.svg"}
+                                alt="Logo"
+                                className="h-8 w-auto"
+                            />
                         </Link>
                     </div>
 
-                    {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center justify-center flex-1 px-4">
                         <ul className="flex items-center space-x-2">
-                            {navItems.map((item, idx) => (
+                            {NAV_ITEMS.map((item, idx) => (
                                 <li key={idx} className="h-full flex items-center">
                                     <NavigationItem item={item} closeMenu={closeMobileMenu} />
                                 </li>
@@ -406,22 +460,20 @@ export default function NavigationSection() {
                         </ul>
                     </div>
 
-                    {/* Right side items (contact us) */}
                     <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
                         <Link
                             href="/contact"
-                            className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 backdrop-blur-sm whitespace-nowrap shadow-lg hover:shadow-xl"
+                            className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                             <UserCircle className="mr-2" size={16} />
                             Contact Us
                         </Link>
                     </div>
 
-                    {/* Mobile menu button */}
                     <div className="lg:hidden flex items-center">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 focus:outline-none transition-all duration-300 backdrop-blur-sm"
+                            className="inline-flex items-center justify-center p-2 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:outline-none transition-all duration-300"
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -430,26 +482,27 @@ export default function NavigationSection() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <div
                     ref={mobileMenuRef}
-                    className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-white/20 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto"
+                    className="lg:hidden bg-white/95 border-t border-white/20 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto"
                 >
                     <div className="px-4 py-3 space-y-2">
-                        {/* Mobile Navigation Items */}
                         <div className="space-y-1">
-                            {navItems.map((item, idx) => (
-                                <MobileNavigationItem key={idx} item={item} closeMenu={closeMobileMenu} />
+                            {NAV_ITEMS.map((item, idx) => (
+                                <MobileNavigationItem
+                                    key={idx}
+                                    item={item}
+                                    closeMenu={closeMobileMenu}
+                                />
                             ))}
                         </div>
 
-                        {/* Mobile Contact us */}
                         <div className="pt-2 border-t border-gray-200/50">
                             <Link
                                 href="/contact"
-                                onClick={closeMobileMenu}
-                                className="flex items-center justify-center px-3 py-2 border border-blue-600/50 text-blue-600 font-medium rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-blue-100/80 transition-all duration-300 text-sm backdrop-blur-sm shadow-lg"
+                                onClick={closeMenu}
+                                className="flex items-center justify-center px-3 py-2 border border-blue-600/50 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 text-sm shadow-lg"
                             >
                                 <UserCircle className="mr-3" size={16} />
                                 Contact Us

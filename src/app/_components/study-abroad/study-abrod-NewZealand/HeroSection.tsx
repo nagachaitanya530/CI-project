@@ -11,7 +11,7 @@ function HeroSection() {
     <>
       <div className="bg-gradient-to-r from-white via-red-50 to-green-100 px-4 sm:px-6 py-12 flex flex-col-reverse sm:flex-row justify-center align-middle items-center gap-5">
         <div className="md:w-1/2 mb-10 md:mb-0">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 leading-tight">
             <span className="font-bold text-black underline decoration-red-500 decoration-4 underline-offset-[14px]">
               New Zealand:
             </span>{" "}
@@ -28,13 +28,12 @@ function HeroSection() {
         </div>
         <div className="">
           <img
-            src="/newZealand/hero.avif"
+            src="/media/newZealand/hero.avif"
             alt="Student with New Zealand flag"
             className="w-[25rem] object-cover"
           />
         </div>
       </div>
-
       <div className="bg-[#E9EEF6] rounded-[50px] p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 mx-auto w-[90%] shadow-sm mt-17">
         {stats.map((item, index) => (
           <div

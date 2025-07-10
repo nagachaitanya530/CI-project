@@ -30,6 +30,7 @@ const data = [
 const AssessmentScrollCards = () => {
   return (
     <div className="relative bg-white">
+      {/* Section Heading */}
       <div className="px-6 md:px-24 pt-12 pb-6">
         <h2 className="text-4xl md:text-5xl font-bold">
           Types of{" "}

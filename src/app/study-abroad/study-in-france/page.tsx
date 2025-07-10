@@ -1,11 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { FileText, BadgeCheck, University } from "lucide-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import HeroSection  from "~/app/_components/study-abroad/study-abroad-france/HeroSection";
+import React from "react";
+import HeroSection from "~/app/_components/study-abroad/study-abroad-france/HeroSection";
 import WhyStudy from "~/app/_components/study-abroad/study-abroad-france/WhyStudy";
 import UniversityList from "~/app/_components/study-abroad/study-abroad-france/UniversityList";
 import PopularCourses from "~/app/_components/study-abroad/study-abroad-france/PopularCourses";
@@ -15,11 +11,8 @@ import CarrerProspect from "~/app/_components/study-abroad/study-abroad-france/C
 import MoreAbout from "~/app/_components/study-abroad/study-abroad-france/MoreAbout";
 import SuccessStory from "~/app/_components/study-abroad/study-abroad-france/SuccessStory";
 import RelatedArticle from "~/app/_components/study-abroad/study-abroad-france/RelatedArticle";
-import FAQsSection from "~/app/_components/english-foundation-course/FAQsSection";
 import NavigationSection from "~/app/_components/navigation1";
-import Footer from "~/app/_components/Footer";
 import FooterSection from "~/app/_components/footer1";
-import Form from "~/app/_components/study-abroad/study-abroad-france/Form";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "~/app/_components/study-abroad/faq";
 
@@ -52,22 +45,19 @@ function Study_in_france() {
         <>
             <NavigationSection />
             <HeroSection />
-             {/* /<div className="flex flex-cols-2 gap-14 py-10 mx-20 mt-10"> */}
-            <WhyStudy/>
-            {/* <Form/> */}
-            {/* </div>            */}
-            <UniversityList/>
-            <PopularCourses/>
-            <CostOfStudy/> 
-            <Scholarship/> 
-            <CarrerProspect/>
-            <MoreAbout/>
-            <RelatedArticle/>
-            <SuccessStory/>
+            <WhyStudy />
+            <UniversityList />
+            <PopularCourses />
+            <CostOfStudy />
+            <Scholarship />
+            <CarrerProspect />
+            <MoreAbout />
+            <RelatedArticle />
+            <SuccessStory />
             <FAQ faqs={faqs} />
-            <YourJourney/>
-            <FooterSection/> 
-   </>
+            <YourJourney />
+            <FooterSection />
+        </>
     );
 }
 

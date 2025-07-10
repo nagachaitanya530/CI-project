@@ -63,7 +63,6 @@ export default function FoundationPlans() {
           ))}
         </div>
       </div>
-
       {showModal && selectedPlan && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full relative">

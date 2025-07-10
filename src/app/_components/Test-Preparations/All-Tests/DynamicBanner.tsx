@@ -33,6 +33,7 @@ export default function DynamicBanner({
       className={`bg-gradient-to-r from-[${gradientFrom}] to-[${gradientTo}] px-4 md:px-20 py-16`}
     >
       <div className="min-h-[80vh] max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        {/* Text Section */}
         <div className="text-center md:text-left flex-1">
           <h1 className="text-4xl md:text-6xl font-medium leading-tight space-y-3">
             <div>{titleTop}</div>
@@ -52,6 +53,8 @@ export default function DynamicBanner({
             {buttonText}
           </button>
         </div>
+
+        {/* Image Section */}
         <div className="flex-1 relative w-full max-w-md md:max-w-lg mx-auto">
           <Image
             src={imageUrl}

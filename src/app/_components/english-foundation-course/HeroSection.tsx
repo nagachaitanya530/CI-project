@@ -6,6 +6,7 @@ const HeroSection = () => {
           FOUNDATION
         </div>
 
+      
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
           ENGLISH FOUNDATION COURSE:
         </h1>
@@ -34,7 +35,6 @@ const HeroSection = () => {
           <p className="text-gray-700 font-semibold text-lg">35,567 already enrolled</p>
         </div>
       </div>
-
       <div className="flex-1 bg-white shadow-lg p-8 rounded-lg w-full max-w-md">
         <p className="text-blue-600 font-medium text-lg mb-2">4.7 ★ (28,497 Ratings)</p>
         <div className="mb-4">

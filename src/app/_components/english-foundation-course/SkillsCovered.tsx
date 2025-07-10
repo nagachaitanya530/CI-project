@@ -44,7 +44,6 @@ export default function SkillsCovered() {
           Skills Covered in This Course
           <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-[2px] bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded"></span>
         </h2>
-
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-6">
           {skills.map((skill, idx) => (
             <div
@@ -57,7 +56,6 @@ export default function SkillsCovered() {
             </div>
           ))}
         </div>
-
         <div className="grid gap-6 sm:grid-cols-2">
           {lastRowSkills.map((skill, idx) => (
             <div

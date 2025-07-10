@@ -1,6 +1,7 @@
 const About = () => {
   return (
     <div>
+
       <img
         src="../../soft.webp"
         alt="Soft Skills Banner"

@@ -7,6 +7,7 @@ import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
+import Link from "next/link";
 
 function SoftskillPesronTraining() {
 const [activeTab, setActiveTab] = useState('About');
@@ -17,7 +18,7 @@ const handleWhatsApp = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
+   <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
         <div className="flex justify-center">
           <div className="text- mt-5 ml-30">
             <div className=" flex justify-start h-10">
@@ -75,7 +76,6 @@ const handleWhatsApp = () => {
                 {tab}
               </button>
             ))}
-
           </div>
           <div className="mt-5">
             {activeTab === "About" && <About />}
@@ -97,9 +97,11 @@ const handleWhatsApp = () => {
                 <p className="text-sm mt-2 mb-4">
                   Join our Foundation English course for just Rs.4990 per month with expert certified trainers.
                 </p>
+                <a href="/english-foundation-course">
                 <button className="border border-b-white  px-6 py-2 rounded hover:bg-white hover:text-[#7B61FF] transition">
                   CLICK HERE
                 </button>
+                </a>
               </div>
             </div>
             <div className="bg-[#7B61FF] w-full text-white p-6 shadow-lg rounded-lg flex flex-col items-center text-center">
@@ -141,17 +143,22 @@ const handleWhatsApp = () => {
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="mb-6 text-lg">Book a free demo session or contact us to know more.</p>
           <div className="flex justify-center gap-4">
+            <Link href="/book-demo">
             <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
               Book Demo
             </button>
+            </Link>
+            <Link href="/ContactUs">
             <button className="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
               Contact Us
             </button>
+            </Link>       
           </div>
         </div>
       </section>
       <Footer/>
     </div>
+    
   );
 }
 export default SoftskillPesronTraining;

@@ -113,9 +113,9 @@ export default function UniversityList() {
 
       <div className="relative mt-10">
         <div
-  ref={scrollRef}
-  className="flex overflow-x-auto lg:overflow-hidden gap-6 scroll-smooth pb-4 scrollbar-hide"
->
+          ref={scrollRef}
+          className="flex overflow-x-auto lg:overflow-hidden gap-6 scroll-smooth pb-4 scrollbar-hide"
+        >
 
           {universities.map((uni, i) => (
             <div

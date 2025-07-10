@@ -144,7 +144,7 @@ function UniversityList() {
                                 </div>
                             )}
                             <div className="flex justify-center gap-2 my-12">
-                                <button className="hover:bg-blue-900 px-5 py-3 rounded-xl font-semibold text-blue-900 hover:text-white border-1 border-blue-900 hover:cursor-pointer hover:bg-blue-800">
+                                <button className="hover:bg-blue-900 px-5 py-3 rounded-xl font-semibold text-blue-900 hover:text-white border-1 border-blue-900 hover:cursor-pointer ">
                                     View Our Partnered Universities
                                 </button>
                             </div>

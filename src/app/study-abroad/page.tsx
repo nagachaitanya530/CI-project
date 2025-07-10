@@ -7,9 +7,7 @@ export default function studyabroad() {
         <>
             <NavigationSection />
             <Homepage />
-
             <FooterSection />
         </>
     )
-
 }

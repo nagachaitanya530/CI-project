@@ -9,7 +9,8 @@ import ProcessOfTesting from "../_components/career-counseling/ProcessOfTesting"
 import TypesOfAptitude from "../_components/career-counseling/TypesOfAptitude";
 import HeroSection from "../_components/career-counseling/Hero";
 import ImportanceSection from "../_components/career-counseling/ImportanceOfAptitude";
-import ConsultationForm from "../_components/celpip/ConsultationForm"; // 🔁 Use the correct path
+import ConsultationForm from "../_components/celpip/ConsultationForm";
+import NavigationSection from "../_components/navigation1";
 
 const CareerCounselingFAQs = [
   {
@@ -53,8 +54,8 @@ export default function CareerCounselingPage() {
 
   return (
     <>
+      <NavigationSection />
       <HeroSection onConsultClick={() => setShowForm(true)} />
-
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 
       <ImportanceSection />

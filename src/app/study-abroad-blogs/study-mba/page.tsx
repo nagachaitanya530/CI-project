@@ -1,13 +1,20 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link'
-import Navigation from '~/app/_components/study-abroad/navigation';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import NavigationSection from '~/app/_components/navigation1';
+=======
+import Navigation from '~/app/_components/Navigation';
+>>>>>>> feature/UpdatePage
+=======
+import Navigation from '~/app/_components/Navigation';
+>>>>>>> cost-of-studying-usa
 const MBACanadaBlog = () => {
   return (
     <div>
-      <Navigation/>
-    
-    <div className="min-h-screen bg-white">
+      <NavigationSection/>
+       <div className="min-h-screen bg-white">
       {/* Navigation Breadcrumb */}
       <nav className="bg-gray-50 px-6 py-4">
         <div className="max-w-7xl mx-auto">

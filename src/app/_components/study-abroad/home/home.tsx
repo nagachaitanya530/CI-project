@@ -2,9 +2,7 @@
 import { useState, useEffect } from "react";
 import HeroCarousel from "./hero";
 import Image from "next/image";
-
 import { Button } from "~/components/ui/button"
-import { MessageCircle } from "lucide-react"
 import SuccessStories from "./successstories";
 import ContactFormSection from "./contact-form";
 import UniversityPartners from "./Universities";
@@ -15,106 +13,135 @@ import StepsToDestination from "./DreamDestination";
 import FAQ from "../faq";
 import YourJourney from "../your-journey";
 import { useScroll } from "~/hooks/use-scroll";
+import Link from "next/link";
 
+const StatsSection = () => {
+    const stats = [
+        {
+            value: "33 Years",
+            label: "Of Excellence",
+        },
+        {
+            value: "2 Lacs",
+            label: "Success Stories",
+        },
+        {
+            value: "₹100 crore",
+            label: "In Scholarships",
+        },
+        {
+            value: "99%",
+            label: "Visa Success Rate",
+        },
+    ]
 
-const recognitions = [
-    {
-        id: 1,
-        name: "AIRC",
-        logo: "/placeholder.svg?height=120&width=120",
-        alt: "American International Recruitment Council",
-    },
-    {
-        id: 2,
-        name: "AAERI",
-        logo: "/placeholder.svg?height=120&width=120",
-        alt: "Education in Australia",
-    },
-    {
-        id: 3,
-        name: "USA Study Destination",
-        logo: "/placeholder.svg?height=120&width=120",
-        alt: "USA Study Destination",
-    },
-    {
-        id: 4,
-        name: "ICEF Accredited",
-        logo: "/placeholder.svg?height=120&width=120",
-        alt: "ICEF Accredited Agent",
-    },
-]
-const RecognitionsSection = () => {
     return (
-        <div className="w-full bg-gradient-to-r from-blue-200 via-blue-150 to-purple-100 py-8 px-4 mb-6">
-            <div className="max-w-7xl mx-auto">
-                {/* Header */}
-                <div className="text-center mb-6">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-2">Recognitions</h2>
-                    <div className="w-24 h-1 bg-orange-400 rounded-full mx-auto"></div>
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-6">
+            <div className="max-w-6xl mx-auto">
+                {/* Desktop and Tablet Layout */}
+                <div className="hidden sm:flex bg-slate-200/90 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-gray-300/50 shadow-sm">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="flex items-center flex-1">
+                            <div className="text-center w-full">
+                                <div className="text-2xl lg:text-4xl xl:text-5xl font-normal text-blue-900 leading-tight mb-1">
+                                    {stat.value}
+                                </div>
+                                <div className="text-sm lg:text-base text-gray-800 font-medium">{stat.label}</div>
+                            </div>
+                            {index < stats.length - 1 && (
+                                <div className="w-px h-16 lg:h-20 bg-gray-400/40 ml-6 lg:ml-8 flex-shrink-0" />
+                            )}
+                        </div>
+                    ))}
                 </div>
 
-                {/* Recognition Cards */}
-                <div className="flex justify-center items-center gap-16 ">
-                    {/* AIRC Logo */}
-                    <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 w-64 h-64 flex items-center justify-center">
-                        <div className="relative w-32 h-32">
-                            <div className="w-full h-full bg-blue-800 rounded-full flex items-center justify-center border-4 border-blue-900">
-                                <div className="text-center">
-                                    <div className="text-white font-bold text-lg mb-1">AIRC</div>
-                                    <div className="text-white text-xs">CERTIFIED</div>
-                                    <div className="text-white text-xs">2024</div>
-                                </div>
+                {/* Mobile Layout */}
+                <div className="sm:hidden bg-slate-200/90 backdrop-blur-sm rounded-3xl p-6 border border-gray-300/50 shadow-sm">
+                    <div className="grid grid-cols-2 gap-6">
+                        {stats.map((stat, index) => (
+                            <div key={index} className="text-center">
+                                <div className="text-2xl font-normal text-blue-900 leading-tight mb-1">{stat.value}</div>
+                                <div className="text-sm text-gray-800 font-medium">{stat.label}</div>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* AAERI Logo */}
-                    <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 w-64 h-64 flex items-center justify-center">
-                        <div className="relative w-32 h-32 flex flex-col items-center justify-center">
-                            <div className="relative mb-2">
-                                <div className="w-16 h-12 bg-gradient-to-r from-green-600 to-orange-500 transform rotate-45 rounded-sm"></div>
-                                <div className="absolute -top-2 -left-2 w-8 h-8 bg-orange-500 transform rotate-45 rounded-sm"></div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-gray-800 font-bold text-lg">AAERI</div>
-                                <div className="text-gray-600 text-xs">EDUCATION IN AUSTRALIA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* USA Study Destination Logo */}
-                    <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 w-64 h-64 flex items-center justify-center">
-                        <div className="text-center">
-                            <div className="flex items-center justify-center mb-2">
-                                <div className="w-8 h-6 bg-blue-600 rounded-sm mr-2"></div>
-                                <div className="text-2xl font-bold text-gray-800">USA</div>
-                            </div>
-                            <div className="text-gray-600 text-sm font-medium">Study Destination</div>
-                        </div>
-                    </div>
-
-                    {/* ICEF Accredited Logo */}
-                    <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 w-64 h-64 flex items-center justify-center">
-                        <div className="relative w-32 h-32">
-                            <div className="w-full h-full bg-blue-900 rounded-full flex flex-col items-center justify-center border-4 border-blue-800 relative">
-                                <div className="text-white font-bold text-xs mb-1">ICEF ACCREDITED</div>
-                                <div className="text-white text-xs mb-2">AGENT</div>
-                                <div className="w-12 h-12 bg-white rounded border-2 border-gray-300 flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-gray-800 rounded grid grid-cols-3 gap-px p-1">
-                                        {Array.from({ length: 9 }).map((_, i) => (
-                                            <div key={i} className={`w-1 h-1 ${Math.random() > 0.5 ? "bg-white" : "bg-gray-800"}`}></div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+const recognitions = [
+    {
+        id: 1,
+        name: "AIRC",
+        logo: "/study-abroad-home/AIRC.png",
+        alt: "American International Recruitment Council",
+        description: "CERTIFIED"
+    },
+    {
+        id: 2,
+        name: "AAERI",
+        logo: "/study-abroad-home/AAERI.png",
+        alt: "Education in Australia",
+        description: "EDUCATION IN AUSTRALIA"
+    },
+    {
+        id: 3,
+        name: "USA Study Destination",
+        logo: "/study-abroad-home/USA-study-destination.png",
+        alt: "USA Study Destination",
+        description: "STUDY DESTINATION"
+    },
+    {
+        id: 4,
+        name: "ICEF Accredited",
+        logo: "/study-abroad-home/ICEF.png",
+        alt: "ICEF Accredited Agent",
+        description: "ACCREDITED AGENT"
+    }
+];
 
+const RecognitionsSection = () => {
+    return (
+        <div className="w-full bg-gradient-to-r from-blue-50 to-blue-100 py-8 px-4 sm:px-6 mb-6">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-8 sm:mb-10">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Recognitions</h2>
+                    <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full mx-auto"></div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
+                    {recognitions.map((recognition) => (
+                        <div
+                            key={recognition.id}
+                            className="bg-white rounded-2xl sm:rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 w-full max-w-xs h-56 sm:h-64 flex items-center justify-center"
+                        >
+                            <div className="relative w-40 h-40 flex flex-col items-center justify-center">
+                                <div className="relative w-30 h-30 sm:w-28 sm:h-28 mb-4">
+                                    <Image
+                                        src={recognition.logo}
+                                        alt={recognition.alt}
+                                        fill
+                                        className="object-contain"
+                                        sizes="(max-width: 640px) 120px, 120px"
+                                        priority={recognition.id <= 2}
+                                    />
+                                </div>
+                                <div className="text-center">
+                                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-1">
+                                        {recognition.name}
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-gray-600 font-medium">
+                                        {recognition.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
 interface DestinationCard {
     id: number
     name: string
@@ -122,35 +149,35 @@ interface DestinationCard {
 }
 
 const leftDestinations: DestinationCard[] = [
-    { id: 1, name: "USA", image: "/usa.jpg" },
-    { id: 2, name: "Canada", image: "/canada.jpg" },
-    { id: 3, name: "UK", image: "/placeholder.svg?height=300&width=400" },
-    { id: 4, name: "Australia", image: "/placeholder.svg?height=300&width=400" },
-    { id: 5, name: "Germany", image: "/placeholder.svg?height=300&width=400" },
-    { id: 6, name: "France", image: "/placeholder.svg?height=300&width=400" },
+    { id: 1, name: "USA", image: "/study-abroad-home/usa.jpeg" },
+    { id: 2, name: "Canada", image: "/Canada_pic.jpg" },
+    { id: 3, name: "UK", image: "/Tower_Bridge_Uk_Feb_2006.jpg?height=300&width=400" },
+    { id: 4, name: "Australia", image: "/Sydney_Bridge.jpg?height=300&width=400" },
+    { id: 5, name: "Germany", image: "/Germany-abroad.webp?height=300&width=400" },
 ]
 
 const rightDestinations: DestinationCard[] = [
-    { id: 7, name: "New Zealand", image: "/newzealand.jpg" },
-    { id: 8, name: "Switzerland", image: "/switzerland.jpg" },
-    { id: 9, name: "Netherlands", image: "/placeholder.svg?height=300&width=400" },
-    { id: 10, name: "Sweden", image: "/placeholder.svg?height=300&width=400" },
-    { id: 11, name: "Japan", image: "/placeholder.svg?height=300&width=400" },
-    { id: 12, name: "Singapore", image: "/placeholder.svg?height=300&width=400" },
+    { id: 6, name: "France", image: "/study-abroad-home/France.jpeg" },
+    { id: 7, name: "New Zealand", image: "/New-zeland-view.jpg" },
+    { id: 8, name: "Switzerland", image: "/Switzerland-study.jpg" },
+    { id: 9, name: "Netherlands", image: "/Netherland-view.jpg?height=300&width=400" },
+    { id: 10, name: "Singapore", image: "/Singapore_view.jpg?height=300&width=400" },
 ]
 
 const Card = ({ destination }: { destination: DestinationCard }) => (
-    <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 mb-6">
+    <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] mb-4 md:mb-6">
         <div className="aspect-[4/3] relative">
             <Image
-                src={destination.image || "/placeholder.svg"}
-                alt={destination.name}
+                src={destination.image}
+                alt={`Study in ${destination.name}`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="absolute bottom-6 left-6">
-                <h3 className="text-3xl font-bold text-white">{destination.name}</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">{destination.name}</h3>
             </div>
         </div>
     </div>
@@ -158,76 +185,72 @@ const Card = ({ destination }: { destination: DestinationCard }) => (
 
 const StudyDestinationSection = () => {
     const scrollY = useScroll()
-
-    // These values control scroll speed
-    const leftTransform = -scrollY * 0.3 // moves down
-    const rightTransform = -scrollY * 0.3 // moves up
+    const leftTransform = -scrollY * 0.2
+    const rightTransform = -scrollY * 0.2
 
     return (
-        <div>
-            <section className="bg-blue-400 mb-6 rounded-2xl relative overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-
-                        {/* Left Cards */}
-                        <div className="overflow-hidden h-[600px] relative">
-                            <div
-                                className="flex flex-col gap-6 transition-transform duration-75 ease-out will-change-transform"
-                                style={{
-                                    transform: `translateY(${leftTransform}px)`,
-                                    minHeight: `${leftDestinations.length * 260}px`,
-                                }}
-                            >
-                                {leftDestinations.map((destination) => (
-                                    <Card key={`left-${destination.id}`} destination={destination} />
-                                ))}
-                            </div>
+        <div className="bg-gradient-to-br from-blue-500 to-blue-600 mb-6 rounded-xl md:rounded-2xl relative overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center">
+                    <div className="hidden lg:block overflow-hidden h-[500px] md:h-[600px] relative">
+                        <div
+                            className="flex flex-col gap-4 md:gap-6 transition-transform duration-100 ease-out will-change-transform"
+                            style={{
+                                transform: `translateY(${leftTransform}px)`,
+                                minHeight: `${leftDestinations.length * 140}px`,
+                            }}
+                        >
+                            {leftDestinations.map((destination) => (
+                                <Card key={`left-${destination.id}`} destination={destination} />
+                            ))}
                         </div>
+                    </div>
 
-                        {/* Middle Content */}
-                        <div className="text-center text-white space-y-8 px-4">
-                            <div className="space-y-4">
-                                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-                                    Your <span className="text-white">Dream Study</span>
-                                </h1>
-                                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-                                    <span className="underline decoration-white/30">Destination</span> Awaits
-                                </h1>
-                            </div>
-                            <p className="text-lg lg:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-                                Learn all about the country's top universities, scholarships, cost of living, post study work rights and
-                                more from the finest foreign education consultants in the industry!
-                            </p>
+                    <div className="text-center text-white space-y-6 md:space-y-8 px-4 order-first lg:order-none">
+                        <div className="space-y-3 md:space-y-4">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                                Your <span className="text-white">Dream Study</span>
+                            </h1>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                                <span className="underline decoration-white/30">Destination</span> Awaits
+                            </h1>
+                        </div>
+                        <p className="text-base md:text-lg lg:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                            Learn all about the country's top universities, scholarships, cost of living, post study work rights and
+                            more from the finest foreign education consultants in the industry!
+                        </p>
+                        <Link href="study-abroad/abroad">
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
+                                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-semibold rounded-full transition-all duration-300 mx-auto"
                             >
                                 View more
                             </Button>
+                        </Link>
+                    </div>
+
+                    <div className="hidden lg:block overflow-hidden h-[500px] md:h-[600px] relative">
+                        <div
+                            className="flex flex-col gap-4 md:gap-6 transition-transform duration-100 ease-out will-change-transform"
+                            style={{
+                                transform: `translateY(${rightTransform}px)`,
+                                minHeight: `${rightDestinations.length * 140}px`,
+                            }}
+                        >
+                            {rightDestinations.map((destination) => (
+                                <Card key={`right-${destination.id}`} destination={destination} />
+                            ))}
                         </div>
+                    </div>
 
-                        {/* Right Cards */}
-                        <div className="overflow-hidden h-[600px] relative">
-                            <div
-                                className="flex flex-col gap-6 transition-transform duration-75 ease-out will-change-transform"
-                                style={{
-                                    transform: `translateY(${rightTransform}px)`,
-                                    minHeight: `${rightDestinations.length * 260}px`,
-                                }}
-                            >
-                                {rightDestinations.map((destination) => (
-                                    <Card key={`right-${destination.id}`} destination={destination} />
-                                ))}
-                            </div>
-                        </div>
-
-
+                    <div className="lg:hidden grid grid-cols-2 gap-4 mt-8">
+                        {[...leftDestinations.slice(0, 2), ...rightDestinations.slice(0, 2)].map((destination) => (
+                            <Card key={`mobile-${destination.id}`} destination={destination} />
+                        ))}
                     </div>
                 </div>
-
-            </section>
-
+            </div>
         </div>
     )
 }
@@ -297,7 +320,6 @@ const StudyAbroadSection = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-12 gap-8 items-center min-h-screen">
 
-                    {/* Left Side Countries */}
                     <div className="col-span-3 space-y-4">
                         {leftCountries.map((country, index) => (
                             <CountryCard
@@ -308,8 +330,6 @@ const StudyAbroadSection = () => {
                             />
                         ))}
                     </div>
-
-                    {/* Center Content */}
                     <div className="col-span-6 text-center text-white z-10 relative">
                         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 mx-4 shadow-2xl">
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-gray-800">
@@ -331,7 +351,6 @@ const StudyAbroadSection = () => {
                         </div>
                     </div>
 
-                    {/* Right Side Countries */}
                     <div className="col-span-3 space-y-4">
                         {rightCountries.map((country, index) => (
                             <CountryCard
@@ -345,14 +364,12 @@ const StudyAbroadSection = () => {
                 </div>
             </div>
 
-            {/* Decorative Background */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-20 left-10 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-blue-500/5 to-transparent rounded-full"></div>
             </div>
 
-            {/* Scroll Indicator */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-center">
                 <div className="animate-bounce">
                     <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
@@ -408,35 +425,7 @@ export default function Homepage() {
     return (
         <>
             <HeroCarousel />
-            <div className='max-w-6xl bg-blue-50 opacity-95 rounded-2xl mx-auto p-8 grid lg:grid-cols-8 md:grid-cols-4 sm:grid-cols-4 pl-38 mt-6 mb-8 justify-center items-center border-2 border-gray-400'>
-                <div>
-                    <h4 className='text-blue-900 font-normal text-4xl'>33 Years<br />
-                        <span className='text-sm text-gray-950'>Of Excellence</span>
-                    </h4>
-                </div>
-                <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
-                <div>
-                    <h4 className='text-blue-900 font-normal text-4xl'>
-                        2 Lacs <br />
-                        <span className='text-sm text-gray-950'>Success Stories</span>
-                    </h4>
-                </div>
-                <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
-                <div>
-                    <h4 className='text-blue-900 font-normal text-4xl'>100 crore <br />
-                        <span className='text-sm text-gray-950'>
-                            In Scholarships
-                        </span>
-                    </h4>
-                </div>
-                <div className="w-px h-full bg-gray-400 opacity-30 mx-6"></div>
-                <div>
-                    <h4 className='text-blue-900 font-normal text-4xl '>
-                        99% <br />
-                        <span className='text-sm text-gray-950'>Visa Success Rate</span>
-                    </h4>
-                </div>
-            </div>
+            <StatsSection />
             <SuccessStories />
             <ContactFormSection />
             <UniversityPartners />

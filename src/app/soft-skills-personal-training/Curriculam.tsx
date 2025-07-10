@@ -1,6 +1,7 @@
 const Curriculum = () => {
   return (
     <div>
+
       <img
         src="../../curriculamPage.jpg"
         alt="Soft Skills Banner"
@@ -36,6 +37,7 @@ const Curriculum = () => {
           <li>Presentation skills</li>
           <li>Conducting effective interviews</li>
         </ul>
+
         <div className="mt-10">
           <img
             src="../../curriculam1.webp"

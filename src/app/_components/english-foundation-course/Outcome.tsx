@@ -7,7 +7,7 @@ const skills = [
     title: "Writing Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 85,
-    color: "#f97316",
+    color: "#f97316", 
   },
   {
     title: "Grammar Skills",
@@ -19,19 +19,18 @@ const skills = [
     title: "Speaking Skills",
     level: "CEFR B2 Level Proficiency",
     percent: 82,
-    color: "#e11d48",
+    color: "#e11d48", 
   },
   {
     title: "Listening Skills",
     level: "CEFR C1 Level Proficiency",
     percent: 87,
-    color: "#a21caf",
+    color: "#a21caf", 
   },
 ];
 
 export default function Outcome() {
   const [progress, setProgress] = useState(0);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
@@ -78,7 +77,6 @@ export default function Outcome() {
             ))}
           </div>
         </div>
-
         <div className="w-52 md:w-72 mx-auto">
           <CircularProgressbar
             value={progress}

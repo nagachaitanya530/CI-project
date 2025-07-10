@@ -71,6 +71,7 @@ const ImportanceSlider = () => {
 
   return (
     <div className="w-full px-6 md:px-24 pt-32 pb-12 bg-white text-black">
+      {/* Heading and Description with animation */}
       <motion.div
         className="mb-16 max-w-4xl"
         initial={{ opacity: 0, y: 40 }}

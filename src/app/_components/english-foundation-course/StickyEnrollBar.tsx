@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function StickyEnrollBar() {
@@ -10,7 +9,7 @@ export default function StickyEnrollBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setShowBar(scrollY > 400);
+      setShowBar(scrollY > 400); 
     };
 
     window.addEventListener("scroll", handleScroll);

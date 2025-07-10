@@ -27,31 +27,25 @@ const reviewcards = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="py-0 bg-gray-100 mb-8">
+        <section className="py-0 bg-white mb-8">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left side - Hero image */}
                     <div className="relative">
-                        <div className="relative w-full -ml-96">
+                        <div className="relative w-full right-28">
                             <img
-                                src="/home/thumbsup_guy.png"
+                                src="/home/thumbsup_guy.jpg"
                                 alt="Happy student giving thumbs up with success stories"
-                                className="w-auto max-w-max h-screen mx-auto" // Adjust max-w value as needed
+                                className="w-auto max-w-max h-screen"
                             />
                         </div>
                     </div>
 
-                    {/* Right side - Testimonials */}
                     <div className="space-y-8">
                         {reviewcards.map((testimonial, index) => (
                             <div key={testimonial.id} className="relative">
-                                {/* Testimonial card */}
                                 <div className="bg-white rounded-2xl p-6 shadow-sm border py-10 px-4  border-gray-100 relative">
-                                    {/* Speech bubble pointer */}
                                     <div className="absolute -left-3 top-8 w-6 h-6 bg-white border-lg border-b border-gray-100 transform rotate-45"></div>
-
                                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{testimonial.review}</p>
-
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
                                             <img

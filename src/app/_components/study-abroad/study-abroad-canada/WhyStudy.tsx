@@ -1,12 +1,6 @@
 
 import Image from "next/image";
-
-
-
-import { ShieldCheck } from "lucide-react";
-import BookConsultationForm from "../BookConsultationForm";
-
-
+import React from "react";
 
 interface WhyStudy {
     image: string
@@ -57,7 +51,7 @@ function WhyStudy() {
                         {items.map((item, index) => (
                             <div key={index} className="">
                                 <div className="flex justify-between gap-5 md:p-5">
-                                    <Image src={item.image} alt="" className="md:w-7 md:h-7 w-5 h-5 mt-0.5 mt:mt-0 " width={500} height={300}  />
+                                    <Image src={item.image} alt="" className="md:w-7 md:h-7 w-5 h-5 mt-0.5 mt:mt-0 " width={500} height={300} />
                                     <div>
                                         <h3 className="font-semibold text-base md:text-xl mb-5">{item.heading}</h3>
                                         <p className="text-sm md:text-lg">{item.description} </p>
@@ -67,16 +61,9 @@ function WhyStudy() {
                             </div>
                         ))}
                     </div>
-                    <div className="lg:w-2/6 lg:mt-10 p-3 lg:p-10">
 
 
 
-                            
-
-                            <BookConsultationForm/>
-
-
-                    </div>
                 </div>
             </section>
         </>

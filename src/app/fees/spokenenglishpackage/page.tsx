@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import Navigation from "../../_components/navigation1";
+import Navigation from "../../_components/Navigation";
 import { Button } from "~/components/ui/button";
 import { Card, CardHeader, CardContent } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Shield } from "lucide-react";
-import Footer from '../../_components/footer1'
+import Footer from '../../_components/Footer';
 
 const IeltsGeneral = () => {
   const whitePackages = [
