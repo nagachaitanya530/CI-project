@@ -1,17 +1,11 @@
 "use client";
-
-import Link from "next/link";
-
-function HeroSection2()
-{
-    return(
-      <>
-                  {/* Hero Section  */}
+import Image from "next/image";
+function HeroSection2() {
+    return (
+        <>
             <section className="bg-blue-50 py-10 px-6 lg:px-24 flex flex-col lg:flex-row justify-between items-center">
-                {/* Left Side Content */}
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-semibold text-blue-900 mb-2">SAT – 2025</h1>
-                    
                     <div className="grid grid-cols-2 space-x-15">
                         <div className="mb-4">
                             <p className="font-semibold text-lg">Test Format :</p>
@@ -19,14 +13,12 @@ function HeroSection2()
                                 Reading and Writing, Math
                             </p>
                         </div>
-
                         <div className="mb-4">
                             <p className="font-semibold text-lg">Duration :</p>
                             <p className="text-blue-900 text-base">
                                 2 Hours 14 minutes
                             </p>
                         </div>
-
                         <div className="mb-6">
                             <p className="font-semibold text-lg">Mode :</p>
                             <p className="text-blue-900 text-base">
@@ -39,15 +31,16 @@ function HeroSection2()
                     </button>
                 </div>
 
-                {/* Right Side Image */}
                 <div className="mt-10 lg:mt-0 lg:ml-12 text-right">
-                    <div className="rounded-2xl overflow-hidden shadow-lg max-w-md">
-                        <img
-                            src="/SatExam/creative-guy.jpg"
-                            alt="IELTS Preparation"
-                            width={500}
+                    <div className="rounded-3xl overflow-hidden shadow-md">
+                        <Image
+                            src="/writing-the-notes.jpg"
+                            alt="ACT Preparation"
+                            width={300}
                             height={300}
-                            className="w-full h-auto"
+                            className="object-cover w-96 h-auto opacity-85"
+                            priority
+                            sizes="(max-width: 500px) 100vw, 50vw"
                         />
                     </div>
                     <p className="text-sm italic text-gray-700 mt-2">
@@ -55,7 +48,7 @@ function HeroSection2()
                     </p>
                 </div>
             </section>
-            </>
+        </>
     );
 }
 export default HeroSection2;

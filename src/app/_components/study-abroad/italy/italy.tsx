@@ -3,10 +3,6 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 import { BookOpen, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import React from "react";
-<<<<<<< HEAD
-import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
-=======
->>>>>>> changes_ci
 import Image from "next/image";
 import { FileText, FileSearch } from "lucide-react";
 import BookConsultationForm from "../BookConsultationForm";
@@ -135,7 +131,9 @@ const Secondsection = () => {
                         </div>
                     </div>
 
-                    
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                        <BookConsultationForm />
+                    </div>
                 </div>
             </div>
         </section>
@@ -458,11 +456,10 @@ function Scholarships() {
         <>
             <section ref={sectionRef} className="my-20 px-4 md:px-20">
                 <div className="flex flex-col md:flex-row items-center justify-between p-5 ">
-                   
+
                     <div
-                        className={`transition-all duration-1000 ease-out ${
-                            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
-                        }`}
+                        className={`transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
+                            }`}
                     >
                         {items.map((item, index) => (
                             <div key={index}>
@@ -474,11 +471,10 @@ function Scholarships() {
                         ))}
                     </div>
 
-                    
+
                     <div
-                        className={`transition-all duration-1000 ease-out ${
-                            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
-                        } mt-10 md:mt-0 md:w-2/5`}
+                        className={`transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+                            } mt-10 md:mt-0 md:w-2/5`}
                     >
                         <img
                             src="/scinitaly.jpg"
@@ -522,20 +518,20 @@ const CareerProspects = () => {
 
     return (
         <div className="py-12 px-4 text-center">
-           
+
             <h2 className="text-4xl  text-gray-900">
                 <span className="relative inline-block">
                     <span className="relative z-10 text-black"> <span className="underline decoration-red-500 font-semibold">Career Prospects</span> In Italy</span>
                 </span>
             </h2>
 
-            
+
             <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
                 The employment landscape in Italy is diverse, offering opportunities across various sectors. Here are some
                 key sectors and industries that presently offer employment opportunities:{" "}
             </p>
 
-            
+
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {Career.map((career, index) => (
                     <div key={index} className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white">
@@ -603,22 +599,20 @@ const Moredetailsection = () => {
                             <div className="sticky top-20 space-y-4">
                                 <button
                                     onClick={() => scrollToSection("documents")}
-                                    className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                                        activeTab === "documents"
+                                    className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${activeTab === "documents"
                                             ? "bg-[#143B85] text-white"
                                             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                                    }`}
+                                        }`}
                                 >
                                     <FileText size={16} />
                                     Documents
                                 </button>
                                 <button
                                     onClick={() => scrollToSection("visa")}
-                                    className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                                        activeTab === "visa"
+                                    className={`flex items-center gap-2 w-full justify-center md:justify-start px-5 py-2 rounded-full text-sm font-medium transition-colors ${activeTab === "visa"
                                             ? "bg-[#143B85] text-white"
                                             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                                    }`}
+                                        }`}
                                 >
                                     <FileSearch size={16} />
                                     Visa
@@ -757,7 +751,7 @@ const reviews: Review[] = [
 ];
 
 const SucscessStories = () => {
-     const [currentIndex, setCurrentIndex] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1))
@@ -773,10 +767,10 @@ const SucscessStories = () => {
         media: { type: "image" | "video"; src: string; alt: string };
         className?: string;
     }) => {
-        const videoRef = useRef<HTMLVideoElement>(null); 
-        const [isPlaying, setIsPlaying] = useState(false); 
+        const videoRef = useRef<HTMLVideoElement>(null);
+        const [isPlaying, setIsPlaying] = useState(false);
 
-       
+
         const handlePlay = () => {
             if (videoRef.current) {
                 videoRef.current.play();
@@ -788,7 +782,7 @@ const SucscessStories = () => {
             <div className={`relative ${className}`}>
                 {media.type === "video" ? (
                     <div className="relative left-40 rounded-2xl">
-                        
+
                         <video
                             ref={videoRef}
                             src={media.src}
@@ -945,12 +939,14 @@ const Italy = () => {
             <Herosection />
             <Secondsection />
             <UniversityList />
-            <ContactFormSection />
             <PopularCoursesSection />
             <Costofstudying />
+
             <Scholarships />
             <CareerProspects />
+
             <Moredetailsection />
+
             <SucscessStories />
             <FAQ faqs={FaqItaly} title="FAQs" />
             <YourJourney />

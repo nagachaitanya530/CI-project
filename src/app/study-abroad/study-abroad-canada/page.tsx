@@ -45,31 +45,12 @@ function StudyInCanada() {
 
 
 
-    return(
-        <>
-        <NavigationSection/>
-        <HeroSection/>
-        <WhyStudy/>
-        <ContactFormSection />
-        <UniversityList/>
-        <PopularCoursesSection/>
-        <CostOfStudy/>
-        <Scholarships/>
-        <CareerProspect/>
-        <MoreAbout/>
-        <RelatedArticles/>
-        <SuccessStory/>
-        <FAQ faqs={FrontendFAQ}/>
-        <YourJourney/>
-        <FooterSection/>
-        </>
-    );
-
   return (
     <>
       <NavigationSection />
       <HeroSection />
       <WhyStudy />
+      <ContactFormSection />
       <UniversityList />
       <PopularCoursesSection />
       <CostOfStudy />
@@ -82,7 +63,7 @@ function StudyInCanada() {
       <YourJourney />
       <FooterSection />
     </>
-  );
+  )
 
 }
 

@@ -7,52 +7,57 @@ function Card() {
     {
       title: 'Advanced 1 Month',
       description: 'This plan includes 1 month of advanced training.',
-      image:"../../Untitled-design.webp",
-      button:"Enroll Now ",
-      link:""
+      image: "3months.jpg",
+      button: "Enroll Now ",
+      link: "/enrollment"
     },
     {
       title: 'Advanced 3 Month',
       description: 'This plan includes 3 months of advanced training.',
-      image:"../../Untitled-design.webp",
-      button:"Enroll Now ",
-      link:""
-  
+      image: "6months.jpg",
+      button: "Enroll Now ",
+      link: "/enrollment"
+
     },
     {
       title: 'Advanced 6 Month',
       description: 'This plan includes 6 months of advanced training.',
-      image:"../../Untitled-design.webp",
-      button:"Enroll Now ",
-      link:""
-  
+      image: "9months.jpg",
+      button: "Enroll Now ",
+      link: "/enrollment"
+
     }
   ];
 
   return (
     <>
-      <div className="flex gap-6 justify-center flex-wrap px-2 sm:px-4 md:px-8 lg:gap-9 mb-10 ">
+
+      <div className="flex gap-6 justify-center flex-wrap px-2 sm:px-4 md:px-8 lg:gap-9 mb-10">
         {cards.map((item, index) => (
           <div
             key={index}
-            className=" sm:w-[18rem] w-[18rem] h-60 border-2 rounded overflow-hidden flex  flex-col hover:shadow-xl shadow-gray-400 hover:border-blue-300 transition-transform duration-300 hover:scale-90"
+            className="relative sm:w-[18rem] w-[18rem] h-60 border-2 rounded overflow-hidden flex flex-col hover:shadow-lg shadow-gray-400  transition-transform duration-300 hover:scale-99"
           >
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover opacity-60 "
+              className="w-full h-full object-cover opacity-30"
             />
-            <div className="text-black text-center z-10 -mt-5 ">
-              <h2 className="text-xl font-bold ">{item.title}</h2>
-              <p className="text-sm">{item.description}</p>
-       
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-gray-950 px-4 text-center z-10 mt-30">
+              <h2 className="text-xl font-bold mb-1">{item.title}</h2>
+              <p className="text-sm mb-3">{item.description}</p>
+              <a
+                href={item.link}
+                className="border-2 px-4 py-1 text-sm rounded bg-blue-400 text-white transition-transform duration-300 hover:scale-105 hover:bg-white hover:text-blue-800"
+              >
+                {item.button}
+              </a>
             </div>
-                <a href={item.link} className='border-2 w-30 text-center ml-21 mb-6 bg-blue-400  text-white transition-transform duration-300 hover:scale-120  hover:bg-black'>{item.button}</a>
+
           </div>
-          
         ))}
       </div>
-    </> 
+    </>
   );
 }
 

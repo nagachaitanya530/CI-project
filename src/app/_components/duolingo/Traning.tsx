@@ -3,7 +3,7 @@
 export default function Training() {
   return (
     <div className="px-6 md:px-20 lg:px-28 py-10 bg-white text-gray-900">
-      
+
       {/* Title */}
       <h2 className="text-4xl font-bold mb-6">
         Duolingo{" "}

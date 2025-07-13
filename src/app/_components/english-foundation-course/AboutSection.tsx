@@ -39,10 +39,6 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> changes_ci
         <div className="flex-1 bg-white shadow-xl rounded-xl overflow-hidden">
           <div className="relative w-full h-64 sm:h-72 md:h-80">
             <Image

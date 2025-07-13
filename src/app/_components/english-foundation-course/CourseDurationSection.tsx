@@ -6,10 +6,6 @@ const CourseDuration = () => {
   return (
     <section className="bg-white px-6 md:px-20 py-20 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-
-=======
->>>>>>> changes_ci
         <h2 className="relative text-center text-3xl md:text-4xl font-bold text-[#284c87] mb-14 group">
           Course Duration & Methodology
           <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-0 bg-[#284c87] group-hover:w-1/2 transition-all duration-500 rounded"></span>
@@ -25,10 +21,6 @@ const CourseDuration = () => {
               Live sessions are conducted <strong>4–5 times a week</strong> with weekend support and revision classes.
             </p>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> changes_ci
           <div className="p-6 bg-[#f1f5f9] rounded-xl shadow-sm hover:shadow-md transition duration-300">
             <h3 className="text-2xl font-semibold text-[#1e3a8a] mb-4 flex items-center gap-2">
               <GraduationCap className="w-6 h-6 text-[#1e3a8a]" />

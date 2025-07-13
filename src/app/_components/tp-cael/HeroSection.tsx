@@ -3,14 +3,11 @@ import Image from "next/image";
 function HeroSection() {
 
   return (
-     <section className="bg-gray-100 py-12" data-aos="fade-in" data-duration="0">
-      <div className="container mx-auto px-6 lg:px-20"> 
+    <section className="bg-gray-100 py-12" data-aos="fade-in" data-duration="0">
+      <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-10">
-          
-          {/* Left Content */}
           <div className="max-w-xl w-full">
             <h1 className="text-3xl font-bold text-gray-800 mb-6">CAEL - 2025</h1>
-
             <div className="space-y-6 mb-6">
               <div className="flex flex-col sm:flex-row gap-22">
                 <div>
@@ -22,8 +19,6 @@ function HeroSection() {
                   <p className="text-gray-600">3.5 Hours (Approximately)</p>
                 </div>
               </div>
-
-              {/* Mode */}
               <div>
                 <h4 className="text-lg font-semibold text-gray-700">Mode :</h4>
                 <p className="text-gray-600">Online from home/At the test center</p>
@@ -37,23 +32,20 @@ function HeroSection() {
               Free Expert Consultation
             </button>
           </div>
-
-          {/* Right Image */}
-          <div className="w-full lg:w-1/3">
+          <div className="rounded-3xl overflow-hidden shadow-md">
             <Image
-              src="/tp-cael/hs-test-bnr.png"
-              alt="CAEL Test"
-              width={500}
-              height={200}
-              className="rounded-md shadow"
+              src="/writing-the-notes.jpg"
+              alt="ACT Preparation"
+              width={300}
+              height={300}
+              className="object-cover w-96 h-auto opacity-85"
+              priority
+              sizes="(max-width: 500px) 100vw, 50vw"
             />
-            <p className="text-sm text-gray-500 mt-8 text-center lg:text-right">Last updated - 5 April '24</p>
           </div>
         </div>
       </div>
     </section>
-
-    
   );
 }
 export default HeroSection;

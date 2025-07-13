@@ -1,13 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-import Footer from "~/app/_components/footer1";
-import Navigation from "~/app/_components/navigation1";
-
-=======
 import Footer from "~/app/_components/Footer";
 import Navigation from "~/app/_components/Navigation";
->>>>>>> changes_ci
 import HeroSection from "../_components/english-foundation-course/HeroSection";
 import AboutSection from "../_components/english-foundation-course/AboutSection";
 import TargetLearners from "../_components/english-foundation-course/TargetLearners";

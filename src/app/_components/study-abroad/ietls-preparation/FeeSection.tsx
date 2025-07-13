@@ -2,30 +2,17 @@ import Table from "./Table";
 
 function FeeSection() {
 
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> cost-of-studying-usa
     const testtime = [
         { left: "Test Fee", right: "₹17,000/- (IELTS UKVI: ₹17250/-)" },
         { left: "Rescheduling Fee", right: "₹4250/- (IELTS UKVI: ₹4300/-)" },
         { left: "Extra Score Reporting Fee", right: "₹1500/- for courier, ₹400/- for registered post." },
 
     ]
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cost-of-studying-usa
     return (
         <>
             <section id="fee">
                 <h1 className="text-4xl  my-5">Miscellaneous  <strong className="underline decoration-red-500">Details </strong></h1>
-<<<<<<< HEAD
-=======
-
->>>>>>> cost-of-studying-usa
                 <ul className="list-disc px-5 my-2 text-lg  ">
                     <li><strong>Score Validity:</strong> 2 years</li>
                     <li><strong>Registration Mode:</strong> Edwise Centre / Online</li>
@@ -40,16 +27,15 @@ function FeeSection() {
                     </li>
                     <li><strong>Computer Based only 2 Slots:</strong> 9am to 12 pm and 1pm to 4pm</li>
                 </ul>
-<<<<<<< HEAD
+
                 <br />
                 <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
                 <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
-=======
-<br />
+
+                <br />
                 <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
                 <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
 
->>>>>>> cost-of-studying-usa
             </section>
         </>
     );

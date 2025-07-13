@@ -72,15 +72,7 @@ const WhyStudyUsa = () => {
 
                 {/* Right: Your Finalized Form */}
                 <div className="w-full">
-<<<<<<< HEAD
-
                     {/* <StudyAbroadForm /> */}
-
-                    <StudyAbroadForm />
-
-=======
-                    {/* <StudyAbroadForm /> */}
->>>>>>> cost-of-studying-usa
                 </div>
 
             </div>

@@ -5,37 +5,37 @@ import Image from "next/image";
 const universities = [
   {
     name: "Abu Dhabi University",
-    image: "/imagesd/abu-dhabi-university-dubai.webp",
+    image: "/imagesd/A.png",
     popularFor: "Business Economics",
     ranking: "580",
   },
   {
     name: "De Montfort University",
-    image: "/imagesd/de-montfort-university-dubai.webp",
+    image: "/imagesd/B.jpg",
     popularFor: "Business Management",
     ranking: "801-1000",
   },
   {
     name: "EM Normandie",
-    image: "/imagesd/em-normandie-dubai.webp",
+    image: "/imagesd/C.jpg",
     popularFor: "Master's Management",
     ranking: "111-120",
   },
   {
     name: "Herorit Watt Univeristy",
-    image: "/imagesd/heroit-watt-university-dubai.webp",
+    image: "/imagesd/D.jpg",
     popularFor: "Business and Science",
     ranking: "235",
   },
   {
     name: "Istituto-Marangoni",
-    image: "/imagesd/istituto-marangoni-dubai.webp",
+    image: "/imagesd/E.png",
     popularFor: "Fashion Designing",
     ranking: "51-100",
   },
   {
     name: "Curtin University",
-    image: "/imagesd/curtin-university-dubai.webp",
+    image: "/imagesd/F.jpg",
     popularFor: "Engineering",
     ranking: "183",
   },
@@ -76,7 +76,7 @@ export default function UniversityList() {
       : universities;
 
   return (
-    <div className="bg-[#e8eff8] py-10 px-4">
+    <div className="bg-[#e8eff8] py-10 px-4 w-full overflow-x-hidden">
       <h2 className="text-3xl font-semibold text-[#000000] font-poppins text-center">
         <span className="underline decoration-red-500 underline-offset-4 font-bold">
           List of Universities
@@ -147,8 +147,6 @@ export default function UniversityList() {
           </div>
         )}
       </div>
-
-      {/* ✅ Button at the bottom */}
       <div className="flex justify-center mt-10">
         <button className="px-6 py-3 bg-white text-blue-700 border border-blue-600 rounded-xl text-lg font-medium shadow hover:bg-blue-50 transition-all duration-300">
           View Our Partnered Universities

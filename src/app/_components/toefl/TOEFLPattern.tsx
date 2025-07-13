@@ -7,11 +7,7 @@ const TOEFLPattern = () => {
   return (
     <section id="pattern" className="scroll-mt-32 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-10">
-<<<<<<< HEAD
-
-=======
         {/* Heading */}
->>>>>>> cost-of-studying-usa
         <div className="text-center mb-12">
           <div className="flex justify-center items-center gap-3 text-[#1f3f98]">
             <LayoutList size={30} />
@@ -22,10 +18,7 @@ const TOEFLPattern = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Table */}
->>>>>>> cost-of-studying-usa
         <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-md">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gradient-to-r from-[#1f3f98] to-blue-700 text-white text-left text-sm uppercase tracking-wider">
@@ -74,10 +67,7 @@ const TOEFLPattern = () => {
           </table>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Note */}
->>>>>>> cost-of-studying-usa
         <div className="mt-8 bg-blue-50 border border-blue-100 rounded-xl px-6 py-4 text-gray-700 text-base">
           <p>
             <strong>Total Duration:</strong> Approx. 2 hours
