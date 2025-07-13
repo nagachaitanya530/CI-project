@@ -4,34 +4,33 @@ import React from "react";
 const sectors = [
   {
     title: "Technology & IT",
-    image: "/career/it-img.webp",
+    image: "/career/T.webp",
   },
   {
     title: "Media & Communication",
-    image: "/career/media-comm.webp",
+    image: "/career/M.jpg",
   },
   {
     title: "Financial Services",
-    image: "/career/acc-financ-img.webp",
+    image: "/career/F.webp",
   },
   {
     title: "Financial Services",
-    image: "/career/healthcare-img.webp",
+    image: "/career/D.jpg",
   },
   {
     title: "Financial Services",
-    image: "/career/engrng-img.webp",
+    image: "/career/C.jpg",
   },
   {
     title: "Financial Services",
-    image: "/career/hospitality-img.webp",
+    image: "/career/Y.jpeg",
   },
 ];
 
 const CareerProspectsSection = () => {
   return (
-    <div className="bg-white py-14 px-6 md:px-20 lg:px-28 text-center">
-      {/* Title */}
+    <div className="bg-white py-14 px-6 md:px-20 lg:px-28 text-center w-full overflow-x-hidden">
       <h2 className="text-3xl font-bold text-gray-900">
         <span className="relative inline-block">
           <span className="relative z-10 text-black">Career Prospects</span>
@@ -39,15 +38,11 @@ const CareerProspectsSection = () => {
         </span>{" "}
         In Dubai
       </h2>
-
-      {/* Subtext */}
       <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
         The job market in Dubai is diverse, offering opportunities across various sectors.
         <br />
         Here are some key sectors and industries that presently offer employment opportunities:
       </p>
-
-      {/* Cards */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map((sector, i) => (
           <div

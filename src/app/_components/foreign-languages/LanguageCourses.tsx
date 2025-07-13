@@ -58,6 +58,7 @@ const LanguageCourses = () => {
       rating: 4.6
     }
   ];
+
   const kidsCourses = [
     {
       id: 8,
@@ -99,6 +100,8 @@ const LanguageCourses = () => {
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Choose The Best Course For You
         </h1>
+
+        {/* Main Courses */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {courses.map((course) => (
             <div
@@ -115,6 +118,7 @@ const LanguageCourses = () => {
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-sky-700 mb-1">{course.language}</h3>
                 <p className="text-sky-500 text-sm font-medium mb-3">{course.level}</p>
+
                 <div className="flex items-center justify-between text-xs text-gray-600 mb-3">
                   <div className="flex items-center gap-1">
                     <Clock size={14} className="text-green-500" />
@@ -125,18 +129,19 @@ const LanguageCourses = () => {
                     {course.certification}
                   </div>
                 </div>
+
                 <div className="flex items-center justify-between">
                   <StarRating rating={course.rating} />
-                   <a href="/enrollment">
                   <button className="bg-green-500 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-3 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:cursor-pointer">
                     ENROL NOW
                   </button>
-                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Kids Courses */}
         <div className="grid md:grid-cols-2 gap-6">
           {kidsCourses.map((course) => (
             <div
@@ -165,11 +170,9 @@ const LanguageCourses = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <StarRating rating={course.rating} />
-                     <a href="/enrollment">
                     <button className="bg-green-500 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-3 rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:cursor-pointer">
                       ENROL NOW
                     </button>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -180,4 +183,5 @@ const LanguageCourses = () => {
     </div>
   );
 };
+
 export default LanguageCourses;

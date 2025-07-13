@@ -91,7 +91,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
                     setSelectedIntake(intake);
                     setStep(3);
                   }}
-                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full px-5 py-2 rounded-full font-medium ${
+                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full   ${
                     selectedIntake === intake
                       ? 'bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-blue-100'
@@ -103,7 +103,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
             </div>
             <button
               onClick={() => setStep(1)}
-              className="mt-2  text-white px-6 py-2 bg-blue-900 hover:cursor-pointer text-white rounded-full"
+              className="mt-2  text-white px-6 py-2 bg-blue-900 hover:cursor-pointer  rounded-full"
             >
               Back
             </button>
@@ -122,7 +122,7 @@ export default function ConsultationForm({ show, onClose }: Props) {
                     setSelectedStudyLevel(level);
                     setStep(4);
                   }}
-                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full px-5 py-2 rounded-full font-medium ${
+                  className={`bg-gray-200  hover:cursor-pointer hover:bg-blue-900 text-sm font-medium px-4 py-3 rounded-full ${
                     selectedStudyLevel === level
                       ? 'bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-blue-100'

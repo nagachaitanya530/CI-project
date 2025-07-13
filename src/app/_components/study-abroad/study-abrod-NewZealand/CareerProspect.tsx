@@ -2,27 +2,27 @@ import React from "react";
 const courses = [
   {
     name: "Information Technology",
-    image: "/newZealand/IT.jpg",
+    image: "/media/newZealand/IT.jpg",
   },
   {
     name: "Healthcare",
-    image: "/newZealand/Health.webp",
+    image: "/media/newZealand/Health.webp",
   },
   {
     name: "Education",
-    image: "/newZealand/education.jpg",
+    image: "/media/newZealand/education.jpg",
   },
   {
     name: "Hospitality & Tourism",
-    image: "/newZealand/hospitalityTourism.webp",
+    image: "/hospitality and tourism.webp",
   },
   {
     name: "Agriculture",
-    image: "/newZealand/agri.jpg",
+    image: "/popular-courses/agriculture-img.webp",
   },
   {
     name: "Engineering",
-    image: "/newZealand/engg.jpg",
+    image: "/media/newZealand/engg.jpg",
   },
 ];
 const CareerProspect = () => {

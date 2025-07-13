@@ -1,21 +1,21 @@
 import FooterSection from "~/app/_components/footer1";
 import NavigationSection from "~/app/_components/navigation1";
-import  DuolingoInfo from  "~/app/_components/duolingo/HeroBanner";
-import ScrollableTabs from  "~/app/_components/duolingo/ScrollingSection";
+import DuolingoInfo from "~/app/_components/duolingo/HeroBanner";
+import ScrollableTabs from "~/app/_components/duolingo/ScrollingSection";
 import DuolingoTest from "~/app/_components/duolingo/OverviewSection";
 
 import FAQ from "~/app/_components/study-abroad/faq";
 import SuccessStories from "~/app/_components/dubai/SuccessStories";
 
- import YourJourney from "~/app/_components/study-abroad/your-journey";
+import YourJourney from "~/app/_components/study-abroad/your-journey";
 
 
 
- const IndiaFAQs = [
+const IndiaFAQs = [
   {
     question: "How do I prepare for the Duolingo English Test?",
     answer: "Edwise provides comprehensive coaching for Duolingo English Test preparation which covers all the aspects of the test which are Literacy, Comprehension, Conversation and Production Skills."
-    
+
   },
   {
     question: "Does Edwise provide mock tests to prepare for the Duolingo English Test?",
@@ -31,13 +31,13 @@ import SuccessStories from "~/app/_components/dubai/SuccessStories";
   },
   {
     question: "What documents do I need to appear for the Duolingo English Test?",
-    answer:"For the Duolingo English Test, you typically only need a government-issued photo ID to verify your identity, like a valid passport, driver's license, etc."
+    answer: "For the Duolingo English Test, you typically only need a government-issued photo ID to verify your identity, like a valid passport, driver's license, etc."
   },
   {
     question: "Is Duolingo English Test accepted for visa?",
-    answer:"Yes, the Duolingo English Test is accepted for visa applications in certain countries and by some institutions. However, it's essential to check the specific requirements of the country or institution where you plan to use the test results."
+    answer: "Yes, the Duolingo English Test is accepted for visa applications in certain countries and by some institutions. However, it's essential to check the specific requirements of the country or institution where you plan to use the test results."
   },
-  
+
 ];
 
 
@@ -47,43 +47,25 @@ import SuccessStories from "~/app/_components/dubai/SuccessStories";
 
 
 export default function duolingo() {
-    return(
-        <>
-        
-        <NavigationSection />
-        < DuolingoInfo/>
-        <ScrollableTabs/>
-        <DuolingoTest/>
+  return (
+    <>
 
+      <NavigationSection />
+      < DuolingoInfo />
+      <ScrollableTabs />
+      <DuolingoTest />
 
+      <div id="faq">
         <FAQ faqs={IndiaFAQs} title="FAQs" />
-        <SuccessStories/>
-        <YourJourney />
-        
-        
-        
-        
-        
-        
-        
+      </div>
 
-<FooterSection/>
+      <SuccessStories />
+      <YourJourney />
 
-        
-        
-        </>
+      <FooterSection />
 
 
 
-
-
-
-
-
-
-
-
-
-
-    )
+    </>
+  )
 }

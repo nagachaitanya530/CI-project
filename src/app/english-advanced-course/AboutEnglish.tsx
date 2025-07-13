@@ -16,7 +16,7 @@ function AboutEnglish() {
     },
 
     {
-      image: "/home/learning-Girl.jpg",
+      image: "../English-advance.webp",
       title7: 'Want something general?',
       discription4: 'Check our Foundation English Course.',
       buttonText: 'English Foundation'

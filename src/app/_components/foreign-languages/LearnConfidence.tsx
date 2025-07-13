@@ -4,8 +4,10 @@ const LearnWithConfidence = () => {
   return (
     <>
       <section className="bg-[#E5E5E5] py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between mt-8">
+        {/* Left Content */}
         <div className="max-w-xl">
           <h2 className="text-4xl font-bold mb-8">LEARN WITH CONFIDENCE</h2>
+
           <div className="mb-10">
             <h3 className="text-xl font-semibold mb-2">Certified trainers</h3>
             <p className="text-gray-600">
@@ -13,6 +15,7 @@ const LearnWithConfidence = () => {
               Quality is our top priority.
             </p>
           </div>
+
           <div className="mb-10">
             <h3 className="text-xl font-semibold mb-2">International CEFR standard</h3>
             <p className="text-gray-600">
@@ -26,14 +29,17 @@ const LearnWithConfidence = () => {
             <span>→</span>
           </button>
         </div>
+
+        {/* Right Image */}
         <div className="mt-12 md:mt-0 md:ml-12">
           <img
-            src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F69348866-b963-43cf-a786-f14d27f1e9bd?csig=AAAAAAAAAAAAAAAAAAAAACuFljjqLkG9s1cC05ICUiVW7s9Y7UAQq4mxe4rwf-Hg&exp=1750072334&signer=media-rpc&token=AAIAAU0AJDY5MzQ4ODY2LWI5NjMtNDNjZi1hNzg2LWYxNGQyN2YxZTliZAAAAAABl3hwlrBSvLo3x1CkgcSRKokbwLen3MfcpwRam9KcIFpCur9HrA"
+            src="/person-holding-earth-globe.jpg"
             alt="Globe in Hands"
-            className="w-[400px] h-auto object-contain"
+            className="w-[400px] h-auto object-contain rounded-lg"
           />
         </div>
       </section>
+
       <section className="bg-[#06213F] text-white py-20 px-4 text-center mt-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Getting started is easy</h2>
@@ -55,4 +61,5 @@ const LearnWithConfidence = () => {
     </>
   );
 };
+
 export default LearnWithConfidence;

@@ -17,7 +17,6 @@ function More() {
     }
   };
 
-  // Automatically update button highlight when scrolling
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,7 +30,7 @@ function More() {
           }
         });
       },
-      { threshold: 1 } // Fires when 50% of the section is visible
+      { threshold: 1 }
     );
 
     if (docRef.current) observer.observe(docRef.current);
@@ -50,15 +49,13 @@ function More() {
       </h1>
 
       <div className="relative sm:px-5 flex flex-col lg:flex-row gap-10 justify-center sm:m-10 p-4">
-        {/* Sidebar Buttons */}
         <div className="hidden lg:flex flex-col gap-4 md:sticky top-20 h-fit">
           <button
             onClick={() => handleClick("doc")}
-            className={`text-2xl border-2 p-2 rounded-full w-[22rem] flex justify-center items-center gap-2 ${
-              select === "doc"
+            className={`text-2xl border-2 p-2 rounded-full w-[22rem] flex justify-center items-center gap-2 ${select === "doc"
                 ? "bg-blue-800 text-white"
                 : "bg-white text-black hover:bg-blue-100"
-            }`}
+              }`}
           >
             <FileText className="w-6 h-7" />
             Documents
@@ -66,20 +63,17 @@ function More() {
 
           <button
             onClick={() => handleClick("vis")}
-            className={`text-2xl border-2 p-2 rounded-full w-[22rem] flex justify-center items-center gap-2 ${
-              select === "vis"
+            className={`text-2xl border-2 p-2 rounded-full w-[22rem] flex justify-center items-center gap-2 ${select === "vis"
                 ? "bg-blue-800 text-white"
                 : "bg-white text-black hover:bg-blue-800 hover:text-white"
-            }`}
+              }`}
           >
             <IdCardLanyard className="w-6 h-7" />
             Visa
           </button>
         </div>
 
-        {/* Main Content */}
         <div className="flex flex-col gap-10 items-center w-full scroll-smooth max-w-3xl">
-          {/* Documents Section */}
           <div
             ref={docRef}
             id="doc-section"
@@ -114,7 +108,6 @@ function More() {
             </a>
           </div>
 
-          {/* Visa Section */}
           <div
             ref={visaRef}
             id="visa-section"

@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-
 import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -58,38 +57,39 @@ export default function ContactFormSection() {
     const onSubmit = async (data: FormData) => {
         try {
             console.log("Form submitted:", data)
-            // Add your API call here
-            await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate API call
-            reset() // Reset form after successful submission
+            await new Promise((resolve) => setTimeout(resolve, 1000))
+            reset()
         } catch (error) {
             console.error("Submission error:", error)
         }
     }
 
     return (
-        <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-3xl overflow-hidden relative mb-6">
-            <div className="flex items-center min-h-[600px]">
-                {/* Left Image Section */}
-                <div className="flex-1 p-12">
-                    <div className="relative">
+        <div className="max-h-full w-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-3xl overflow-hidden relative mb-6">
+            <div className="flex flex-col lg:flex-row items-center min-h-[600px]">
+                {/* Left Image Section - Hidden on mobile */}
+                <div className="hidden lg:flex flex-1 p-8 xl:p-12 justify-center">
+                    <div className="relative w-full max-w-md">
                         <Image
-                            src="/graduates-image.png"
+                            src="/study-abroad-home/graduation-girls.jpg"
                             alt="Happy graduates in graduation caps"
                             width={500}
-                            height={400}
-                            className="w-full h-auto object-cover rounded-2xl"
+                            height={600}
+                            className="rounded-2xl object-cover"
+                            priority
+                            sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                     </div>
                 </div>
 
-                {/* Right Form Section */}
-                <div className="flex-1 p-12">
-                    <div className="max-w-lg">
-                        <h2 className="text-4xl font-bold text-white mb-8 leading-tight">Let Our Team Reach Out To You</h2>
+                <div className="flex-1 w-full p-6 sm:p-8 lg:p-12">
+                    <div className="max-w-lg mx-auto">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 leading-tight">
+                            Let Our Team Reach Out To You
+                        </h2>
 
-                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                            {/* First Row - First Name & Last Name */}
-                            <div className="grid grid-cols-2 gap-4">
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <Label htmlFor="firstName" className="text-white text-sm mb-2 block">
                                         First Name
@@ -132,8 +132,7 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            {/* Second Row - Email & Mobile */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <Label htmlFor="email" className="text-white text-sm mb-2 block">
                                         Email ID
@@ -176,8 +175,7 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            {/* Third Row - Destination & Course */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <Label className="text-white text-sm mb-2 block">Your preferred study destination</Label>
                                     <Controller
@@ -234,8 +232,7 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            {/* Fourth Row - Study Month & Year */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <Label className="text-white text-sm mb-2 block">When do you plan to study?</Label>
                                     <Controller
@@ -294,7 +291,6 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            {/* Consent Checkbox */}
                             <div className="flex items-start space-x-3 pt-2">
                                 <Controller
                                     name="consent"
@@ -318,12 +314,11 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            {/* Submit Button */}
                             <div className="pt-4">
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
+                                    className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
                                 >
                                     {isSubmitting ? "Submitting..." : "Submit"}
                                 </Button>

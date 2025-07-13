@@ -75,16 +75,6 @@ const faqs = [
       "The admission ticket policy is not changing. We recommend bringing your ticket, because it will contain critical information that will help you log in to the test platform on test day. While you won’t be turned away for not bringing your ticket, you will still need to bring an acceptable form of identification.",
   },
   
-<<<<<<< HEAD
-=======
-  
-  
-  
-  
-
-
-
->>>>>>> cost-of-studying-usa
 ];
 
 export default function FAQ() {

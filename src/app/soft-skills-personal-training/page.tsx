@@ -1,25 +1,13 @@
 'use client'
 import { useState } from "react";
 import Navigation from "../_components/Navigation";
-<<<<<<< HEAD
 import { title } from "process";
-=======
->>>>>>> changes_ci
 import About from "../soft-skills-personal-training/About"
 import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> ba634861147d2a351b40c5ab7e12f6bf5e189731
+import Link from "next/link";
 
 function SoftskillPesronTraining() {
 const [activeTab, setActiveTab] = useState('About');
@@ -30,20 +18,7 @@ const handleWhatsApp = () => {
   return (
     <div>
       <Navigation></Navigation>
-=======
-import Link from "next/link";
-
-function SoftskillPesronTraining() {
-  const [activeTab, setActiveTab] = useState('About');
-  const tabs = ["About", "Curriculum", "Instructors", "Enrolment Options"];
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/917607676998?text=I%20want%20to%20enquire%20about%20PDCC%20Spoken%20English%20course', '_blank');
-  };
-  return (
-  <div>
-      <Navigation/>
->>>>>>> changes_ci
-      <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
+   <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
         <div className="flex justify-center">
           <div className="text- mt-5 ml-30">
             <div className=" flex justify-start h-10">
@@ -59,11 +34,7 @@ function SoftskillPesronTraining() {
               (For CEFR Level B1 and above)
             </p>
           </div>
-<<<<<<< HEAD
         </div>
-=======
-        </div>       
->>>>>>> changes_ci
         <div className="lg:w-1/2 relative">
           <div className="aspect-video w-full max-w-xl mx-auto">
             <iframe
@@ -75,11 +46,7 @@ function SoftskillPesronTraining() {
             ></iframe>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
-=======
-      </section>    
->>>>>>> changes_ci
       <section className="bg-gray-100 py-6 px-4 flex flex-col md:flex-row justify-around text-center gap-4">
         <div>
           <div className="text-xl font-bold">12 Week </div>
@@ -117,7 +84,6 @@ function SoftskillPesronTraining() {
             {activeTab === "Enrolment Options" && <EnrollmentOption />}
           </div>
         </div>
-<<<<<<< HEAD
         <div className="px-4 w-full overflow-x-hidden">
           <div className="max-w-md mx-auto space-y-6">
             <div className="bg-[#7B61FF] w-full text-white shadow-lg flex flex-col items-center text-center  overflow-hidden">
@@ -131,38 +97,17 @@ function SoftskillPesronTraining() {
                 <p className="text-sm mt-2 mb-4">
                   Join our Foundation English course for just Rs.4990 per month with expert certified trainers.
                 </p>
+                <a href="/english-foundation-course">
                 <button className="border border-b-white  px-6 py-2 rounded hover:bg-white hover:text-[#7B61FF] transition">
                   CLICK HERE
                 </button>
+                </a>
               </div>
             </div>
             <div className="bg-[#7B61FF] w-full text-white p-6 shadow-lg rounded-lg flex flex-col items-center text-center">
               <h1 className="text-xl font-bold mb-2">Not sure what to do?</h1>
               <p className="text-sm mb-4">
                 Talk to our student counsellor for more details on our courses and choose the one that suits you best.
-=======
-        <div>
-          <div className="bg-[#7B61FF] w-80 h-120 text-white shadow-lg flex flex-col items-center text-center">
-            <img
-              src="../../cardimage.webp"
-              alt="Foundation Course"
-              className="w-full  object-cover mb-4"
-            />
-            <h2 className="text-3xl font-bold">Looking for <br />something basic?</h2>
-            <p className="text-sm mt-2 mb-4">
-              Join our Foundation English course for just Rs.4990 per month with expert certified trainers.
-            </p>
-            <button className="border border-white px-6 py-2 rounded hover:bg-white hover:text-[#7B61FF] transition"
-            >
-              CLICK HERE
-            </button>
-          </div>
-          <div className="bg-[#7B61FF] w-80 h-70 text-white p-6 shadow-lg rounded-lg flex flex-col items-center justify-center text-justify mt-5">
-            <div className="flex flex-col items-start space-y-4">
-              <h1 className="text-xl font-bold">Not sure what to do?</h1>
-              <p className="text-sm mt-2 mb-4 text-justify">
-                Talk to our student counsellor for<br /> more details on our courses and<br /> choose the one that suits you <br />best.
->>>>>>> changes_ci
               </p>
               <button
                 className="bg-white text-black text-lg px-6 py-3 rounded hover:bg-gray-100 transition"
@@ -211,17 +156,9 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer/>
     </div>
+    
   );
 }
-=======
-      <Footer />
-    </div>
-  );
-}
-     
-
->>>>>>> changes_ci
 export default SoftskillPesronTraining;

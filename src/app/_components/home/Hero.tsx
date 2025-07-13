@@ -19,17 +19,14 @@ export default function Hero() {
         {/* Right illustration */}
         <div className="flex justify-center lg:justify-end relative order-1 lg:order-2">
           <div className="rounded-lg w-full max-w-[500px] lg:max-w-[900px] h-[350px] md:h-[450px] lg:h-[600px] md:-ml-12">
-            <div className="relative rounded-lg w-full h-full overflow-hidden">
-              <Image
-                src="/home/professional-women.png"
+            <div className="relative rounded-lg w-full h-full">
+              <img
+                src="../../home/professional-women.png"
                 alt="Professional woman in business attire"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 900px"
-                priority
-              />
+                className="w-full h-full object-cover" />
             </div>
           </div>
+
         </div>
       </section>
     </>

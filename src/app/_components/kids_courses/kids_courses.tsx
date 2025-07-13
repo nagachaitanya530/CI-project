@@ -4,20 +4,19 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaArrowRight, FaBook, FaBookmark, FaMicrophone,  FaUnderline,  } from "react-icons/fa";
+import { FaArrowRight, FaBook, FaBookmark, FaMicrophone, FaUnderline, } from "react-icons/fa";
 import { TiMessages } from "react-icons/ti";
 import CountUp from "react-countup";
-import { useIsMobile } from "~/hooks/use-mobile";
 import Link from "next/link";
 
 const Mainsection = () => {
     return (
         <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
             <Image src="/kids/kids1.jpg"
-             alt="Kids"
-            fill
-            className="absolute inset-0" 
-            style={{ objectFit: "cover" }}/>
+                alt="Kids"
+                fill
+                className="absolute inset-0"
+                style={{ objectFit: "cover" }} />
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute bottom-6 right-6 max-w-md text-white bg-sky-400 rounded-2xl  p-10 mb-0 mr-5 space-y-4">
                 <h1 className="text-4xl md:text-3xl font-bold">Empowering your kids for the new world</h1>
@@ -262,12 +261,12 @@ const LearningSection = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 py-8 mb-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
-                <div  className="relative w-full h-64 md:h-80">
+                <div className="relative w-full h-64 md:h-80">
                     <Image
                         src="/kids/teacher1.jpg"
                         alt="teacher helping student"
                         fill
-                       className="object-cover rounded-2xl shadow-lg"
+                        className="object-cover rounded-2xl shadow-lg"
                     />
                 </div>
 
@@ -286,11 +285,11 @@ const LearningSection = () => {
                             Speaking, from Creative writing to poetry, we help the students achieve and perfect the skills
                             they need and are interested in.
                         </p>
-                         <a href="/" className="inline-block ">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                            GET STARTED NOW
-                        </button>
-                        </a>
+                        <Link href="/fees" className="inline-block ">
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                                GET STARTED NOW
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
@@ -491,9 +490,8 @@ const Parentfeedback = () => {
                             <button
                                 key={index}
                                 onClick={() => goToSlide(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                                    index === currentIndex ? "bg-blue-500" : "bg-gray-300 hover:bg-gray-400"
-                                }`}
+                                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-blue-500" : "bg-gray-300 hover:bg-gray-400"
+                                    }`}
                                 aria-label={`Go to feedback ${index + 1}`}
                             />
                         ))}
@@ -696,13 +694,11 @@ const NewsSection = () => {
 };
 
 const Kids_courses = () => {
-    
+
     return (
         <div className="font-sans">
-           
-          
             <Mainsection />
-            
+
             <SecondSection />
             <LeadershipFlow />
 
@@ -716,9 +712,9 @@ const Kids_courses = () => {
 
             <Subscribersection />
             <NewsSection />
-          
-           
-            
+
+
+
         </div>
     );
 };

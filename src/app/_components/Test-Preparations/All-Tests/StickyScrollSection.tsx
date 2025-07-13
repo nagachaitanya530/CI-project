@@ -54,23 +54,20 @@ export default function StickyScrollSection({
 
   return (
     <section className=" mx-auto px-4 md:px-20 py-12">
-<div className="text-left mb-12 max-w-3xl">
-  <h2 className="text-3xl md:text-5xl font-bold leading-snug text-black">
-    Unlock The Unparalleled Benefits Of
-    <br />
-    <span className="relative inline-block font-extrabold text-black">
-      <span className="relative z-10">Test Prep</span>
-      <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 z-[-1] rounded-full translate-y-1"></span>
-    </span>{" "}
-    With Edwise
-  </h2>
-  <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
-</div>
-<<<<<<< HEAD
-=======
+      <div className="text-left mb-12 max-w-3xl">
+        <h2 className="text-3xl md:text-5xl font-bold leading-snug text-black">
+          Unlock The Unparalleled Benefits Of
+          <br />
+          <span className="relative inline-block font-extrabold text-black">
+            <span className="relative z-10">Test Prep</span>
+            <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 z-[-1] rounded-full translate-y-1"></span>
+          </span>{" "}
+          With Edwise
+        </h2>
+        <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
+      </div>
 
 
->>>>>>> cost-of-studying-usa
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 md:sticky md:top-24 h-fit">
           <Image
@@ -81,10 +78,6 @@ export default function StickyScrollSection({
             className="rounded-3xl w-full h-auto object-cover"
           />
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cost-of-studying-usa
         <div className="flex-1 space-y-10">
           {tabs.map((tab) => (
             <div
