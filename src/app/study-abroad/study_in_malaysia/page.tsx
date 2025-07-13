@@ -10,14 +10,13 @@ import CostOfStudy from "~/app/_components/study-abroad/study_in_malaysia/CostOf
 import Scholarship from "~/app/_components/study-abroad/study_in_malaysia/Scholarship";
 import CareerProspect from "~/app/_components/study-abroad/study_in_malaysia/CareerProspect";
 import MoreAboutMalaysia from "~/app/_components/study-abroad/study_in_malaysia/MoreAboutMalaysia";
-import SuccessStories from "~/app/_components/study-abroad/study_in_malaysia/SuccessStories";
+import SuccessStories from '~/app/_components/study-abroad/study-mauritius/SuccessStories';
 import NavigationSection from "~/app/_components/navigation1";
-<<<<<<< HEAD
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
 
 import FAQ from "~/app/_components/study-abroad/faq";
-
+import FadeInOnScroll from "../study-mauritius/FadeInOnScroll";
 import ConsultationForm from "~/app/_components/celpip/ConsultationForm";
 
 
@@ -76,71 +75,30 @@ const MalaysiaFAQs = [
 
 export default function StudyInMalaysiaPage() {
   const [showForm, setShowForm] = useState(false);
-=======
-import FAQ from "~/app/_components/study-abroad/faq";
-import YourJourney from "~/app/_components/study-abroad/your-journey";
-import FooterSection from "~/app/_components/footer1";
-const MalaysiaFAQs = [
-  {
-    question: "Is it expensive to study in Malaysia?",
-    answer: "Studying in Malaysia is generally affordable compared to many Western countries. Tuition fees and living costs are relatively low, making it a popular destination for international students."
-  },
-  {
-    question: "Is it easy to get a visa to study in Malaysia?",
-    answer: "Yes, the Malaysian government has a streamlined process for student visa applications, especially through the Education Malaysia Global Services (EMGS) system."
-  },
-  {
-    question: "What is the accommodation like for students in Malaysia?",
-    answer: "Universities in Malaysia offer on-campus hostels and dormitories. Off-campus housing is also available and often affordable near university campuses."
-  },
-  {
-    question: "Can I work while studying in Malaysia?",
-    answer: "International students in Malaysia are allowed to work part-time for up to 20 hours per week during semester breaks or holidays, subject to certain restrictions."
-  },
-  {
-    question: "Do I need to learn Malay to study in Malaysia?",
-    answer: "No, most higher education programs in Malaysia are conducted in English, so learning Malay is not required for academic success."
-  },
-];
->>>>>>> cost-of-studying-usa
 
   return (
     <>
       <NavigationSection />
 
-      
+
       <HeroSection onConsultClick={() => setShowForm(true)} />
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 
-      <WhyMalaysia />
+      <FadeInOnScroll>
+        <WhyMalaysia />
+      </FadeInOnScroll>
       <ContactFormSection />
       <Universities />
       <Courses />
-<<<<<<< HEAD
       <CostOfStudy />
       <Scholarship />
       <CareerProspect />
-
-      <MoreAboutMalaysia />
-      <SuccessStories />
-      <FAQ faqs={MalaysiaFAQs} title="FAQs"/>
-
       <MoreAboutMalaysia onConsultClick={() => setShowForm(true)} /> {/* ✅ added */}
       <SuccessStories />
       <FAQ faqs={MalaysiaFAQs} title="FAQs" />
 
       <YourJourney />
       <FooterSection />
-=======
-       <CostOfStudy />
-       <Scholarship />
-        <CareerProspect />
-         <MoreAboutMalaysia />
-         <SuccessStories />
-        <FAQ faqs={MalaysiaFAQs} title="FAQs" />
-            <YourJourney />
-           <FooterSection />
->>>>>>> cost-of-studying-usa
     </>
   );
 }

@@ -67,21 +67,12 @@ const MainSection = () => {
 
 
 
-);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cost-of-studying-usa
-  
-
->>>>>>> feature/UpdatePage
+  );
 
 };
 export default MainSection;
 
- 
+
 
 
 

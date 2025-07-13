@@ -24,34 +24,22 @@ export default function ACT_Preparation() {
     return (
         <><NavigationSection />
 
-           <Hero onFreeConsultClick={() => setShowModal(true)} />
+            <Hero onFreeConsultClick={() => setShowModal(true)} />
             <>
-      <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
-    </>
-<<<<<<< HEAD
-=======
-            
->>>>>>> cost-of-studying-usa
-            <Scrollingnavbar/>
-            <Overview/>
-            <Pattern/>
+                <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
+            </>
+
+            <Scrollingnavbar />
+            <Overview />
+            <Pattern />
             <Syllabus />
             <Score />
             <Dates />
-<<<<<<< HEAD
             <Training />
             <Miscellaneous />
-            <FAQ/>
-            <SuccessStories/>
-            <YourJourney />
-            <FooterSection />
-    </>
-=======
-             <Training />
-             <Miscellaneous />
-             <FAQ/>
-             <SuccessStories/>
-           
+            <FAQ />
+            <SuccessStories />
+
 
             <YourJourney />
             <FooterSection />
@@ -59,7 +47,6 @@ export default function ACT_Preparation() {
 
         </>
 
->>>>>>> cost-of-studying-usa
 
     )
 }

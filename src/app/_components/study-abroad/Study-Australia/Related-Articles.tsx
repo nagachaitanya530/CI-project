@@ -5,7 +5,6 @@ function Related() {
   <>
    <div className='flex flex-col items-center  '  > <h3 className='text-xl sm:text-3xl text-center lg:text-4xl xl:text-5xl	 m-10 '><span className=' decoration-red-500 underline '>Related Articles</span> on Studying in the Australia</h3>
 
-
 <div className='rounded-[3rem] border-2 w-[88%] p-7 text-blue-900 text-lg'>
   <a href="#">Scholarships to Study in Australia for Indian Students</a> | 
   <a href="#">Part-Time Jobs For Indian Students In Australia</a> | 
@@ -40,16 +39,8 @@ function Related() {
 </div>
 
 </div>
-
 </>
-
-    
-  )
+)
 }
 
 export default Related
-
-
-
-
-// className='rounded-[3rem] border-2 w-[88%] p-7  text-blue-900  text-lg'

@@ -55,10 +55,7 @@ const TOEFLMisc = () => {
   return (
     <section id="misc" className="scroll-mt-32 py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-10">
-<<<<<<< HEAD
-=======
         {/* Heading */}
->>>>>>> cost-of-studying-usa
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f3f98]">
             Miscellaneous Details
@@ -68,10 +65,7 @@ const TOEFLMisc = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Info Cards */}
->>>>>>> cost-of-studying-usa
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
           {miscDetails.map((item, index) => (
             <div
@@ -89,10 +83,7 @@ const TOEFLMisc = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Fees Section */}
->>>>>>> cost-of-studying-usa
         <div className="bg-white border-l-4 border-[#1f3f98] p-6 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold text-[#1f3f98] mb-4">
             TOEFL Exam Fees

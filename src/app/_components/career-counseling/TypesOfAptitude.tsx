@@ -30,10 +30,7 @@ const data = [
 const AssessmentScrollCards = () => {
   return (
     <div className="relative bg-white">
-<<<<<<< HEAD
-=======
       {/* Section Heading */}
->>>>>>> cost-of-studying-usa
       <div className="px-6 md:px-24 pt-12 pb-6">
         <h2 className="text-4xl md:text-5xl font-bold">
           Types of{" "}
@@ -43,15 +40,8 @@ const AssessmentScrollCards = () => {
         </h2>
       </div>
 
-<<<<<<< HEAD
       <div className="px-6 md:px-24 pt-6 pb-40">
         <div className="flex flex-col md:flex-row gap-10 items-start">
-=======
-      {/* Scrollable Section */}
-      <div className="px-6 md:px-24 pt-6 pb-40">
-        <div className="flex flex-col md:flex-row gap-10 items-start">
-          {/* Sticky Image */}
->>>>>>> cost-of-studying-usa
           <div className="md:sticky md:top-36 md:w-1/2 w-full flex justify-center">
             <div className="relative rounded-[40px] overflow-hidden shadow-xl max-w-[520px]">
               <div className="absolute inset-0 bg-gradient-to-br from-[#fef3f2] to-[#f5faff] z-0 rounded-[40px]" />
@@ -96,10 +86,6 @@ const AssessmentScrollCards = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Right Animated Scroll Cards */}
->>>>>>> cost-of-studying-usa
           <div className="flex flex-col gap-10 md:w-1/2">
             {data.map((item, index) => (
               <motion.div

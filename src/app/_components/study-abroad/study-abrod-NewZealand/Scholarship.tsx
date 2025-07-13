@@ -66,7 +66,7 @@ function Scholarships() {
                     <div className={`transition-all duration-1000 ease-out ${isVisible ?
                         'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} mt-10 lg:mt-0 lg:w-2/5`}>
                         <img
-                            src="/newZealand/scholarship.jpg"
+                            src="/media/newZealand/scholarship.jpg"
                             alt="Scholarships"
                             className="h-80 w-full max-w-lg object-cover rounded-lg shadow-lg" />
                     </div>

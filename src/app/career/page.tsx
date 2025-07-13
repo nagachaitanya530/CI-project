@@ -1,14 +1,7 @@
 "use client";
 import React, { useState } from "react";
-
 import Navigation from '../_components/Navigation'
 import Footer from '../_components/Footer'
-
-
-import Navigation from "../_components/Navigation";
-import Footer from '../_components/footer1'
-
-
 import JobCard from './JobCard'
 import FilterPage from './FilterPage'
 

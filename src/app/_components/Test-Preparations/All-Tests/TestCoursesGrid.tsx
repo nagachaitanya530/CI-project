@@ -28,7 +28,7 @@ export default function TestCoursesGrid({
     <span className="relative z-10">Preparation Courses</span>
     <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 rounded-full z-0 translate-y-1"></span>
   </span>{" "}
-  with Edwise
+  with CI
 </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">{subheading}</p>
       </div>

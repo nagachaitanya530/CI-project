@@ -33,36 +33,20 @@ const item: Variants = {
 const InfoStatsBar = () => {
   return (
     <motion.div
-
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
-
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-      viewport={{ once: false, amount: 0.5 }}
-
-      viewport={{ once: false, amount: 0.5 }} // 👈 triggers every time 50% of it enters view
-
-=======
-      viewport={{ once: false, amount: 0.5 }}
->>>>>>> cost-of-studying-usa
-      transition={{ duration: 0.6, ease: "easeOut" }}
-
       className="mt-10 md:mt-16 bg-[#e9eef6] rounded-3xl px-6 py-6 md:px-10 md:py-8 flex flex-col md:flex-row justify-between items-center text-center shadow-sm"
     >
       {stats.map((stat, index) => (
         <motion.div
           key={index}
           variants={item}
-          className={`flex-1 px-4 py-4 ${
-            index < stats.length - 1
+          className={`flex-1 px-4 py-4 ${index < stats.length - 1
               ? "border-b md:border-b-0 md:border-r border-gray-300"
               : ""
-          }`}
+            }`}
         >
           <h3 className="text-2xl font-bold text-[#1f3f98]">{stat.number}</h3>
           <p className="text-gray-800 font-medium mt-1">{stat.label}</p>

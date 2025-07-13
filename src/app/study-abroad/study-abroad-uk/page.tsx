@@ -8,13 +8,14 @@ import PopularCoursesSection from "~/app/_components/study-abroad/study-abroad-u
 import RelatedArticles from "~/app/_components/study-abroad/study-abroad-uk/RelatedArticles";
 import Scholarships from "~/app/_components/study-abroad/study-abroad-uk/Scholarship";
 import WhyStudySection from "../../_components/study-abroad/study-abroad-uk/WhyStudy";
-import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
+// import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import StudyTabs from "~/app/_components/study-abroad/study-abroad-uk/MoreAboutUK";
 import NavigationSection from "~/app/_components/navigation1";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FooterSection from "~/app/_components/footer1";
 import SuccessStory from "~/app/_components/study-abroad/study-abroad-uk/Stories";
+import ContactFormSection from "~/app/_components/study-abroad/home/contact-form";
 
 
 function StudyInUk()

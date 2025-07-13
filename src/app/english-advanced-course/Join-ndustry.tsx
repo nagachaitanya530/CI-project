@@ -17,7 +17,7 @@ function Joinndustry() {
   ];
   const data = [
     {
-      image: '/home/learning-Girl.jpg',
+      image: '../English-advance2.webp',
     },
     {
       number: '60000+',
@@ -34,8 +34,8 @@ function Joinndustry() {
   ]
   return (
     <>
-      <div className='flex mx-5 lg:mx-30 flex-col sm:flex-row border-1 border-gray-500 px-2 rounded-2xl mt-10  gap-20 '>
-        <div className='flex flex-col sm:flex-row p-5 '>
+      <div className='flex mx-5 lg:mx-30 flex-col sm:flex-row border-1 border-gray-500 px-2 rounded-2xl mt-10  gap-20  '>
+        <div className='flex flex-col sm:flex-row p-5 xl:py-20 xl:text-justify'>
           {lists.map((item, index) => (
             <div
               key={index}
@@ -45,7 +45,7 @@ function Joinndustry() {
               <p className='text-gray-500 my-5'>{item.description}</p>
               <ul className='list-disc ml-12 text-gray-500'>
                 {item.points.map((point, i) => (
-                  <li key={i}>{point}</li> 
+                  <li key={i}>{point}</li>
                 ))}
               </ul>
             </div>
@@ -59,7 +59,7 @@ function Joinndustry() {
               {
                 data.map((item, index) => (
                   <div key={index}>
-                    {item.image && <img src={item.image} alt="Course Image" className=' rounded-2xl w-full h-50  ' />}
+                    {item.image && <img src={item.image} alt="Course Image" className=' rounded-2xl w-full h-50 xl:h-65 object-cover  ' />}
                   </div>
                 ))
               }
