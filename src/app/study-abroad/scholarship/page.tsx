@@ -4,7 +4,14 @@ import FAQ from "~/app/_components/study-abroad/faq";
 import EducationServices from "~/app/_components/study-abroad/home/TrustedPartners";
 import ScholarHeroSection from "~/app/_components/study-abroad/scholarship/HeroSection";
 import ScholarshipApplyForm from "~/app/_components/study-abroad/scholarship/scholarshipApply";
+
+import ScrollCardAnimation2 from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
+import ScholarshipSteps from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
+import ScholarshipScrollCards from "~/app/_components/study-abroad/scholarship/TypesOfScholarship";
+import ScholarshipTypes from "~/app/_components/study-abroad/scholarship/TypesOfScholarship";
+
 // import ScholarshipSteps from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
+
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import ScrollCardAnimation2 from "~/app/_components/study-abroad/scholarship/scholarshipToStudy";
 
@@ -50,6 +57,21 @@ function scholarship() {
       question: "How can I apply for government-funded scholarships to study abroad?",
       answer: "Visit official ministry websites like Ministry of External Affairs to explore government programs such as the National Overseas Scholarship Scheme."
     }
+
+    ]
+    return(
+        <div>
+            <NavigationSection/>
+            <ScholarHeroSection/>
+            <ScrollCardAnimation2/>
+            <ScholarshipScrollCards/>
+            <ScholarshipApplyForm/>
+            <FAQ faqs={FrontendFAQ}/>
+            <YourJourney/>
+            <FooterSection/>
+        </div>
+    )
+
   ]
   return (
     <div>
@@ -62,5 +84,6 @@ function scholarship() {
       <FooterSection />
     </div>
   )
+
 }
 export default scholarship;
