@@ -29,6 +29,12 @@ export default function WhyStudySection() {
           </ul>
         </div>
 
+
+        {/* Right - Form */}
+
+       
+
+
       </div>
     </section>
   );
