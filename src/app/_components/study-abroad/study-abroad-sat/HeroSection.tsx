@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import StudyAbroadModal from "../study-mauritius/StudyAbroadModal";
 
 function HeroSection2()
 {
+    const [showModal, setShowModal] = useState(false);
     return(
       <>
                   {/* Hero Section  */}
@@ -34,7 +37,7 @@ function HeroSection2()
                             </p>
                         </div>
                     </div>
-                    <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition" onClick={() => setShowModal(true)}>
                         Free Expert Consultation
                     </button>
                 </div>
@@ -54,6 +57,7 @@ function HeroSection2()
                         Last updated – 19 October '24
                     </p>
                 </div>
+                 {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
             </section>
             </>
     );
