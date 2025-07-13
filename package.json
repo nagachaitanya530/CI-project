@@ -82,10 +82,10 @@
     "server-only": "^0.0.1",
     "sonner": "^2.0.5",
     "superjson": "^2.2.1",
-<<<<<<< HEAD
+
     "swiper": "^11.2.10",
-=======
->>>>>>> cost-of-studying-usa
+
+
     "tailwind-merge": "^3.3.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tsx": "^4.20.3",

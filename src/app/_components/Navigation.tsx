@@ -26,206 +26,47 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-      { label: "Special Classes", href: "/" },
-
-
-      { label: "Special Classes", href: "special-classes" },
-
-
       { label: "Special Classes", href: "/special-classes" },
-
       { label: "IELTS Classes", href: "/what-is-ielts" },
       {
         label: "Spoken English",
         dropdown: [
-
-
-         
-
-
-
-      { label: "Special Classes", href: "special-classes" },
-      { label: "IELTS Classes", href: "/what-is-ielts" },
-
-
-
         
-
-=======
-      { label: "Special Classes", href: "special-classes" },
-      { label: "IELTS Classes", href: "/what-is-ielts" },
->>>>>>> feature/UpdatePage
-=======
-      { label: "Special Classes", href: "special-classes" },
-      { label: "IELTS Classes", href: "/what-is-ielts" },
->>>>>>> cost-of-studying-usa
           {
             label: "English Courses",
             dropdown: [
               { label: "English Foundation Personal", href: "/english-foundation-course" },
-<<<<<<< HEAD
-
-              
-
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
-
-              { label: "Corporate Training English", href: "/" },
-            ],
-          },
-<<<<<<< HEAD
-
-
-        ],
-      },
-
-
-
-      { label: "Special Classes", href: "special-classes" },
-      { label: "IELTS Classes", href: "/what-is-ielts" },
-      {
-        label: "Spoken English",
-        dropdown: [
-          { label: "English Foundation Personal", href: "/english-foundation-course" },
-          { label: "English Business Personal", href: "/english-business-course" },
-          { label: "English Advanced Personal", href: "/english-advanced-course" },
-          { label: "Soft Skills Personal Training", href: "/soft-skills-training" },
-          { label: "Corporate Training English", href: "/corporate-training" },
-        ],
-      },
-
-      { label: "OET Classes", href: "/oet-classes" },
-      { label: "Foreign Languages", href: "/foreign-languages" },
-
-      { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-    
-
-    
-      { label: "Online Mock Tests", href: "/OnlineMockTest" },
-
-
-
-      { label: "Kids Courses (Languages)", href: "/kids_courses" },
-
-      { label: "Online Mock Tests", href: "/" },
-
-
-
-
-
-
-
-      { label: "Online Mock Tests", href: "/online-mock-test" },
-
-
               { label: "Corporate Training English", href: "/corporate-training-english" },
             ],
           },
         ],
       },
-=======
->>>>>>> cost-of-studying-usa
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
-      { label: "Online Mock Tests", href: "/OnlineMockTest" },
-=======
-              { label: "English Business Personal", href: "/english-business-course" },
-              { label: "English Advanced Personal", href: "/english-advanced-course" },
-              { label: "Soft Skills Personal Training", href: "/" },
-              { label: "Corporate Training English", href: "/" },
+      { label: "Online Mock Tests", href: "/online-mock-test" },
+              
             ],
           },
-      { label: "OET Classes", href: "/oet-classes" },
-      { label: "Foreign Languages", href: "/foreign-languages" },
-      { label: "Kids Courses (Languages)", href: "/kids_courses" },
-      { label: "Online Mock Tests", href: "/" },
-
-<<<<<<< HEAD
->>>>>>> feature/UpdatePage
-=======
->>>>>>> cost-of-studying-usa
-
-
-    ],
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
+     
   { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
-=======
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
->>>>>>> cost-of-studying-usa
+
+
   { label: "Fees", href: "/fees", icon: FileText },
 
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
 
 
-<<<<<<< HEAD
 
-
- 
-
-
-
-=======
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
-  { label: "Fees", href: "/fees", icon: FileText },
-
-  { label: "JOC", href: "/joc-page", icon: GraduationCap },
-
-
- 
-
-
->>>>>>> feature/UpdatePage
-=======
- 
-
-
->>>>>>> cost-of-studying-usa
-  {
-    label: "Study Abroad", href: "/study-abroad", isButton: true,
-    icon: Globe,
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-
-
-
-
-  },
  { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
 
 
 
 
-=======
 
-  },
->>>>>>> feature/UpdatePage
-=======
-
-  },
->>>>>>> cost-of-studying-usa
   {
     label: "About CI",
     icon: Info,
@@ -237,24 +78,12 @@ const navItems = [
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> feature/UpdatePage
-=======
-
-
->>>>>>> cost-of-studying-usa
     ],
   },
 ];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> feature/UpdatePage
 interface DropdownMenuProps {
   items: any[];
   isMobile?: boolean;
@@ -400,7 +229,7 @@ const DropdownMenu = ({ items, isMobile, closeMenu, level = 0, isVisible = true 
     </div>
   );
 };
-//file changes 
+
 const NavigationItem = ({ item, closeMenu }: { item: any; closeMenu?: () => void }) => {
   const [isHovered, setIsHovered] = useState(false);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
