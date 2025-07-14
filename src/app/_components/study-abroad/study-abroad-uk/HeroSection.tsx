@@ -1,6 +1,41 @@
 import Link from "next/link";
+
 import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
 import { useState } from "react";
+
+import { useState } from "react";
+import StudyAbroadModal from "../study-mauritius/StudyAbroadModal";
+
+
+function HeroSection(){
+  const [showModal, setShowModal] = useState(false);
+    return (
+        <section>
+             <div className="inner-hero study-hero bg-gradient-to-br from-white via-red-50 to-green-100" data-aos="fade-in" data-duration="0">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 py-12">
+          {/* Left Section */}
+          <div className="md:w-1/2 space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              <span className="text-blue-600">UK:</span> Join a legacy of excellence that inspires and transforms your future
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                id="openPopup"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-900 transition"
+              onClick={() => setShowModal(true)}>
+                Free Expert Consultation
+              </button>
+              <a
+                href="../brochure/UK.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition text-center"
+              >
+                View & Download Brochure
+              </a>
+
+
 function HeroSection() {
   const [showModal, setShowModal] = useState(false);
   return (
@@ -30,6 +65,7 @@ function HeroSection() {
                   View & Download Brochure
                 </a>
               </div>
+
             </div>
 
             {/* Right Section */}
@@ -43,10 +79,21 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
        {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
+
+
+    </div>
+    {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
+        </section>
+          
+    );
+
+
     </section>
 
   );
+
 }
 
 export default HeroSection;

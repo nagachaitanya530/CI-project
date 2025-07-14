@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const CareerProspectsUK = () => {
@@ -45,6 +46,15 @@ const CareerProspectsUK = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-12">
         {courses.map((course, index) => (
+          <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.03 }}
+                  className="bg-white border rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                >
           <a
             key={index}
             
@@ -61,6 +71,7 @@ const CareerProspectsUK = () => {
               </h3>
             </div>
           </a>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -71,7 +71,7 @@ export default function ScrollableTabs() {
   }, [activeTab]);
 
   return (
-    <div className="relative w-full flex justify-center sticky top-[65px] z-50 bg-white shadow">
+    <div className="relative w-full flex justify-center top-[65px] z-50 bg-white shadow">
       <div
         ref={containerRef}
         className="relative flex overflow-x-auto no-scrollbar space-x-2 px-4 py-3 bg-white border border-gray-200 rounded-full"
@@ -90,6 +90,7 @@ export default function ScrollableTabs() {
             {tab.label}
           </button>
         ))}
+
       </div>
     </div>
   );
