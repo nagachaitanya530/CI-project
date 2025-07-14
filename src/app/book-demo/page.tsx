@@ -2,7 +2,7 @@
 import React from 'react'
 import MainSection from './main'
 import BookingSystem from '../_components/book-demo'
-import Footer from '../_components/footer1'
+import Footer from '../_components/Footer'
 const page = () => {
   return (
     <div>

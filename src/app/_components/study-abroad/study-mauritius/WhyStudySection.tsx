@@ -1,14 +1,28 @@
 "use client";
-import Image from "next/image";
-import { Award } from 'lucide-react';
+import { Award } from "lucide-react";
 
-export default function WhyStudySection() {
+type Reason = {
+  title: string;
+  description: string;
+  icon: React.ElementType;
+};
+
+export default function WhyStudySection({
+  country,
+  reasons,
+}: {
+  country: string;
+  reasons: Reason[];
+}) {
   return (
-    <section className="max-w-7xl mx-auto px-4 gap-10 py-12 md:px-20 bg-white ">
+    <section className="max-w-7xl mx-auto px-4 gap-10 py-12 md:px-20 bg-white">
       <div className="grid md:grid-cols-3 gap-10 items-start px-4">
         <div className="md:col-span-2">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-            Why <span className="font-bold text-black underline decoration-red-500">Study In Mauritius?</span>
+            Why{" "}
+            <span className="font-bold text-black underline decoration-red-500">
+              Study In {country}?
+            </span>
           </h2>
 
           <ul className="space-y-6">
@@ -25,50 +39,7 @@ export default function WhyStudySection() {
             ))}
           </ul>
         </div>
-
       </div>
     </section>
   );
 }
-
-
-const reasons = [
-  {
-    title: "Affordable Education",
-    description:
-      "Compared to other western nations, the universities in Mauritius offer lower tuition fees. Additionally, scholarships and financial aid programs significantly reduce the financial burden.",
-    icon: Award,
-  },
-  {
-    title: "Better Job Opportunities",
-    description:
-      "International students are permitted to work while studying in Mauritius and are eligible to work post-study if they meet the set criteria. This allows all the students to gain work experience.",
-    icon: Award,
-  },
-  {
-    title: "Easy Visa Process",
-    description:
-      "The application process and the visa process for studying in Mauritius are quite seamless for all international students.",
-    icon: Award,
-  },
-  {
-    title: "Internationally Recognised Qualification",
-    description:
-      "The programs offered by the universities in Mauritius are accredited and globally recognised. This means that the degree holds weightage worldwide.",
-    icon: Award,
-  },
-  {
-    title: "Culturally Diverse",
-    description:
-      "Mauritius is a melting pot of all cultures that provides students with a diverse environment and friendly people.",
-    icon: Award,
-  },
-  {
-    title: "Beautiful Surroundings",
-    description:
-      "With its tropical climate, beautiful beaches, and lush green vegetation, Mauritius is a beautiful nation to study in.",
-    icon: Award,
-  },
-];
-
-

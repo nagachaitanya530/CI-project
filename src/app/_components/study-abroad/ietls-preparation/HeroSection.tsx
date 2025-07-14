@@ -24,7 +24,6 @@ function HeroSection() {
                                 3 Hours (Approximately)
                             </p>
                         </div>
-
                         <div className="mb-6">
                             <p className="font-semibold text-lg">Mode :</p>
                             <p className="text-cyan-900 text-base">
@@ -41,7 +40,6 @@ function HeroSection() {
                 <div className="mt-10 lg:mt-0 lg:ml-12 text-right">
                     <div className="rounded-2xl overflow-hidden shadow-lg max-w-md">
                         <img
-
                             src="/home/learning-girl.jpg"
                             alt="IELTS Preparation"
                             width={500}

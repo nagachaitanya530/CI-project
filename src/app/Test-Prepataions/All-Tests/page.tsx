@@ -51,28 +51,28 @@ export default function Page() {
       title: "(TOEFL) Test of English as a Foreign Language",
       description:
         "TOEFL is a standardized English proficiency test that assesses English Language skills in the areas of listening, reading, writing and speaking.",
-      link: "#",
+      link: "/toefl",
     },
     {
       image: "/alltestcard2.webp",
       title: "(IELTS) International English Language Testing System",
       description:
         "IELTS is a reputable and trustworthy English test to study abroad that assists candidates in proving their English language competency and advancing their academic and career objectives.",
-      link: "#",
+      link: "/study-abroad/test-preparation/ielts",
     },
     {
       image: "/alltestcard3.png",
       title: "(PTE) Pearson Test for English",
       description:
         "PTE Academic: Computer-based test for non-native English speakers to prove academic proficiency for admission in to international universities.",
-      link: "#",
+      link: "/PTE",
     },
     {
       image: "/alltestcard4.png",
       title: "Duolingo",
       description:
         "Duolingo English Test is a computer based English proficiency test which is administered using computer adaptive technology.",
-      link: "#",
+      link: "/duolingo",
     },
 
 

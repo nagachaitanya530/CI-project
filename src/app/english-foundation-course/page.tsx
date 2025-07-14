@@ -23,15 +23,20 @@ export default function EnglishFoundationCourse() {
   return (
     <>
       <Navigation />
+
+      {/* Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>
 
-      <div className="flex relative ">
-        
-        <div className="hidden lg:block w-48 sticky top-20 h-screen">
+      {/* Main Body with Sidebar */}
+      <div className="flex relative">
+        {/* ScrollSpy Sidebar */}
+        <aside className="hidden lg:block w-48 sticky top-20 h-screen">
           <ScrollSpySidebar />
-        </div>
+        </aside>
+
+        {/* Main Content */}
         <main className="flex-1 px-4 md:px-8 lg:pl-10 space-y-24 scroll-smooth">
           <section id="about" className="scroll-mt-36">
             <AboutSection />
@@ -76,6 +81,7 @@ export default function EnglishFoundationCourse() {
             <FAQsSection />
           </section>
 
+          {/* Sticky CTA Bar */}
           <StickyEnrollBar />
         </main>
       </div>

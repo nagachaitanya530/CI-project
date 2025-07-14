@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion, useAnimation, type Variants, easeInOut } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
 
 const scoreData = [

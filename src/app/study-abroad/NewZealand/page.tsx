@@ -41,6 +41,5 @@ return(
     )
 
 }
+
 export default NewZealandPage;
-
-

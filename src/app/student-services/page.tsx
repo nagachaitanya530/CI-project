@@ -1,4 +1,3 @@
-
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -61,7 +60,7 @@ export default function StudentServicesPage() {
             image="/images/admission.png"
             title="Admission Guidance"
             description="Admission guidance from our expert counselors, tailored for your academic aspirations and career goals."
-            link="/student-service/admission-guidance"
+            link="/admission-guidence"
           />
           <ServiceCard
             image="/images/career.png"
@@ -73,13 +72,13 @@ export default function StudentServicesPage() {
             image="/images/testprep.png"
             title="Test Preparation"
             description="Comprehensive training programs for tests like IELTS, TOEFL, SAT, GRE, GMAT etc."
-            link="/student-service/test-preparation"
+            link="/Test-Prepataions/All-Tests"
           />
           <ServiceCard
             image="/images/visaa.png"
             title="Visa Application Assistance"
             description="Meticulous preparation of visa documents and expert guidance on country-specific requirements."
-            link="/student-service/visa-assistance"
+            link="/Visa-assistance"
           />
           <ServiceCard
             image="/images/financial.png"
@@ -91,7 +90,7 @@ export default function StudentServicesPage() {
             image="/images/travel.png"
             title="Travel & Forex Assistance"
             description="Complete travel planning services and convenient Forex solutions to facilitate your smooth transition."
-            link="/student-service/travel-forex-assistance"
+            link="/travel_and_forex_assistance"
           />
         </div>
       </section>

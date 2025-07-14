@@ -43,7 +43,7 @@ const GallerySection = () => {
             <div className="text-center mt-8">
                 <Link
                     href="/events/gallery"
-                    className="inline-block px-6 py-3 border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white transition"
+                    className="inline-block px-6 py-3 border border-blue-600 text-blue-900 rounded hover:bg-blue-600 hover:text-white transition"
                 >
                     View more
                 </Link>

@@ -43,7 +43,6 @@ export default function StudyTabs() {
       </h2>
 
 
-
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
           <div className="flex md:flex-col gap-4">

@@ -58,21 +58,13 @@ const MainSection = () => {
           </div>
         </div>
 
-        {/* Additional decorative elements */}
+        {/* Decorative elements */}
         <div className="absolute top-20 right-20 w-20 h-20 bg-blue-500 rounded-full opacity-20 hidden md:block"></div>
         <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-green-400 rounded-full opacity-30 hidden md:block"></div>
         <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-yellow-400 rounded-full opacity-25 hidden md:block"></div>
       </main>
     </div>
-
-
-
   );
-
 };
+
 export default MainSection;
-
-
-
-
-

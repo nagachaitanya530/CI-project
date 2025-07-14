@@ -2,7 +2,6 @@ import Table from "./Table";
 
 function FeeSection() {
 
-
     const testtime = [
         { left: "Test Fee", right: "₹17,000/- (IELTS UKVI: ₹17250/-)" },
         { left: "Rescheduling Fee", right: "₹4250/- (IELTS UKVI: ₹4300/-)" },

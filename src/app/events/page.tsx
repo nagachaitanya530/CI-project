@@ -1,16 +1,18 @@
 import GallerySection from "../_components/events/gallerySection";
+import HeroSection from "../_components/events/heroSection";
+import SectionNav from "../_components/events/sectionNav";
 import FooterSection from "../_components/footer1";
 import NavigationSection from "../_components/navigation1";
 import YourJourney from "../_components/study-abroad/your-journey";
-import SectionNav from "../_components/tp-cael/SectionNav";
-import HeroSection from "../ContactUs/Hero";
+
+
 
 export default function Events() {
     return (
         <>
             <NavigationSection />
             <HeroSection />
-            <SectionNav />
+            <SectionNav/>
 
             <section id="section1" className="mt-16 test-dtl-sections active animate-fade-in duration-200">
                 <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -65,7 +67,7 @@ export default function Events() {
                             </p>
                         </div>
                         <a
-                            href=""
+                            href="/What-we-do/university-visits"
                             className="inline-block px-6 py-3 border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white transition"
                         >
                             Explore More

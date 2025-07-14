@@ -4,7 +4,7 @@ import React from "react";
 const sectors = [
   {
     title: "Technology & IT",
-    image: "/career/T.webp",
+    image: "",
   },
   {
     title: "Media & Communication",

@@ -1,4 +1,6 @@
+
 "use client"
+import StudyAbroadModal from '~/app/_components/study-abroad/study-mauritius/StudyAbroadModal';
 import NavigationSection from "~/app/_components/navigation1"
 import { useState } from "react"
 import University from "./university"
@@ -50,7 +52,9 @@ const IndiaFAQs = [
   
 ];
 export default function GlobalUniversitiesPage() {
+  const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState("documents")
+
 
   return (
     <div>
@@ -70,12 +74,13 @@ export default function GlobalUniversitiesPage() {
                 Across the World
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
-                <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full text-lg">
+                <Button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 rounded-full text-lg"
+                 onClick={() => setShowModal(true)}>
                   Free Expert Consultation
                 </Button>
                 <Button
         
-                  className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full text-lg"
+                  className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 rounded-full text-lg"
                 >
                   View & Download Brochure
                 </Button>
@@ -92,6 +97,7 @@ export default function GlobalUniversitiesPage() {
             </div>
           </div>
         </div>
+        {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
       </section>
 
       {/* Book Free Consultation */}

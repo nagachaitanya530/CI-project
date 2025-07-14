@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import StudyAbroadModal from "../study-abroad/study-mauritius/StudyAbroadModal";
 const words = ["Travel", "Forex"];
 
 export default function HeroBanner() {
+  const [showModal, setShowModal] = useState(false);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -41,10 +42,12 @@ export default function HeroBanner() {
           Simplifying your travel and currency exchange for overseas studies.
         </p>
 
-        <button className="mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#1f3f98] text-white text-sm sm:text-base font-semibold hover:bg-[#143079] transition shadow-md hover:shadow-lg">
+        <button className="mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#1f3f98] text-white text-sm sm:text-base font-semibold hover:bg-[#143079] transition shadow-md hover:shadow-lg"
+        onClick={() => setShowModal(true)}>
           Free Expert Consultation
         </button>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </section>
   );
 }

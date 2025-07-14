@@ -24,11 +24,18 @@ export default function Hero({
           >
             Free Expert Consultation
           </button>
+           <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
           <button
             className="w-full sm:w-auto px-6 py-3 bg-[#183D8C] hover:bg-[#102b6a] text-white font-semibold rounded-xl shadow-md transition"
           >
             View & Download Brochure
+            
           </button>
+          </a>
         </div>
       </div>
 

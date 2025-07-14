@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FooterSection from "~/app/_components/footer1";
+import NavigationSection from "../_components/navigation1";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "../_components/study-abroad/faq";
 import DetailedTestReport from "../_components/career-counseling/TestReport";
@@ -10,7 +11,6 @@ import TypesOfAptitude from "../_components/career-counseling/TypesOfAptitude";
 import HeroSection from "../_components/career-counseling/Hero";
 import ImportanceSection from "../_components/career-counseling/ImportanceOfAptitude";
 import ConsultationForm from "../_components/celpip/ConsultationForm";
-import NavigationSection from "../_components/navigation1";
 
 const CareerCounselingFAQs = [
   {
