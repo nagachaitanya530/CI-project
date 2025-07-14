@@ -3,8 +3,8 @@
 import React, { useMemo } from 'react'
 
 import { useSearchParams } from 'next/navigation';
-import Navigation from '../_components/navigation1'
-import Footer from '../_components/footer1'
+import Navigation from '../_components/Navigation'
+import Footer from '../_components/Footer'
 
 import JobApplicationForm from './JobApplicationForm';
 import "./style.css";
