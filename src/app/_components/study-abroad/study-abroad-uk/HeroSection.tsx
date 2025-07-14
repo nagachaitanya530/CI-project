@@ -1,4 +1,8 @@
 import Link from "next/link";
+
+import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
+import { useState } from "react";
+
 import { useState } from "react";
 import StudyAbroadModal from "../study-mauritius/StudyAbroadModal";
 
@@ -31,7 +35,9 @@ function HeroSection(){
                 View & Download Brochure
               </a>
 
+
 function HeroSection() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <section>
       <div className="inner-hero study-hero bg-gradient-to-br from-white via-red-50 to-green-100" data-aos="fade-in" data-duration="0">
@@ -45,7 +51,8 @@ function HeroSection() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   id="openPopup"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                  className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-900 transition"
+                  onClick={() => setShowModal(true)}
                 >
                   Free Expert Consultation
                 </button>
@@ -53,7 +60,7 @@ function HeroSection() {
                   href="../brochure/UK.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition text-center"
+                  className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition text-center"
                 >
                   View & Download Brochure
                 </a>
@@ -73,11 +80,15 @@ function HeroSection() {
         </div>
       </div>
 
+       {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
+
+
     </div>
     {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
         </section>
           
     );
+
 
     </section>
 

@@ -1,5 +1,7 @@
 'use client'
+
 import { useState } from "react";
+import Link from "next/link";
 import Navigation from "../_components/Navigation";
 import { title } from "process";
 import About from "../soft-skills-personal-training/About"
@@ -7,7 +9,6 @@ import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
-import Link from "next/link";
 
 function SoftskillPesronTraining() {
 const [activeTab, setActiveTab] = useState('About');
@@ -27,8 +28,8 @@ const handleWhatsApp = () => {
                 alt="British Council"
               />
             </div>
-            <h1 className="text-4xl font-bold mb-4 text-justify ">Soft Skills and Personal Training</h1>
-            <p className="text-lg-max-w-xl">
+            <h1 className="text-4xl font-bold mb-4">Soft Skills and Personal Training</h1>
+            <p className="text-lg">
               Soft Skills Training is a supplemental course to Foundation English <br />
               Course that focuses on efficient communication. <br />
               (For CEFR Level B1 and above)
@@ -49,8 +50,8 @@ const handleWhatsApp = () => {
       </section>
       <section className="bg-gray-100 py-6 px-4 flex flex-col md:flex-row justify-around text-center gap-4">
         <div>
-          <div className="text-xl font-bold">12 Week </div>
-          <p className="text-sm">5-7 Hours/week </p>
+          <div className="text-xl font-bold">12 Week</div>
+          <p className="text-sm">5-7 Hours/week</p>
         </div>
         <div>
           <div className="text-xl font-bold">1:1 Training</div>
@@ -61,17 +62,18 @@ const handleWhatsApp = () => {
           <p className="text-sm">After Course</p>
         </div>
       </section>
+
+      {/* Tabs and Dynamic Content */}
       <div className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 bg-white rounded-xl  p-4 shadow-xl/50">
-          <div className="flex-wrap space-x-10 border-b border-gray-300 pb-2 gap-4">
+        <div className="md:col-span-2 bg-white rounded-xl p-4 shadow-xl">
+          <div className="flex flex-wrap gap-6 border-b border-gray-300 pb-2">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`text-lg font-semibold ${activeTab === tab
-                  ? "text-blue-700"
-                  : "text-pink-600"
-                  }`}
+                className={`text-lg font-semibold ${
+                  activeTab === tab ? "text-blue-700" : "text-pink-600"
+                }`}
               >
                 {tab}
               </button>
@@ -86,7 +88,8 @@ const handleWhatsApp = () => {
         </div>
         <div className="px-4 w-full overflow-x-hidden">
           <div className="max-w-md mx-auto space-y-6">
-            <div className="bg-[#7B61FF] w-full text-white shadow-lg flex flex-col items-center text-center  overflow-hidden">
+            {/* Promo Card 1 */}
+            <div className="bg-[#7B61FF] w-full text-white shadow-lg flex flex-col items-center text-center">
               <img
                 src="../../softskillcard.jpg"
                 alt="Foundation Course"
@@ -104,6 +107,8 @@ const handleWhatsApp = () => {
                 </a>
               </div>
             </div>
+
+            {/* Promo Card 2 */}
             <div className="bg-[#7B61FF] w-full text-white p-6 shadow-lg rounded-lg flex flex-col items-center text-center">
               <h1 className="text-xl font-bold mb-2">Not sure what to do?</h1>
               <p className="text-sm mb-4">
@@ -119,40 +124,42 @@ const handleWhatsApp = () => {
           </div>
         </div>
       </div>
+
+      {/* Testimonials */}
       <section className="py-10 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-6">What Our Learners Say</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-100 p-4 rounded-lg shadow">
-              <p className="italic">"This course changed my confidence level completely!"</p>
-              <p className="mt-2 font-semibold">– Aarti,Student</p>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg shadow">
-              <p className="italic">"The mock interviews and sessions helped me land a job."</p>
-              <p className="mt-2 font-semibold">– Raj,Job Seeker</p>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg shadow">
-              <p className="italic">"I learned how to lead meetings and communicate better."</p>
-              <p className="mt-2 font-semibold">– Sneha,Working Professional</p>
-            </div>
+            {[
+              { text: '"This course changed my confidence level completely!"', name: '– Aarti, Student' },
+              { text: '"The mock interviews and sessions helped me land a job."', name: '– Raj, Job Seeker' },
+              { text: '"I learned how to lead meetings and communicate better."', name: '– Sneha, Working Professional' },
+            ].map((item, index) => (
+              <div key={index} className="bg-gray-100 p-4 rounded-lg shadow">
+                <p className="italic">{item.text}</p>
+                <p className="mt-2 font-semibold">{item.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       <section className="bg-blue-800 text-white py-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="mb-6 text-lg">Book a free demo session or contact us to know more.</p>
           <div className="flex justify-center gap-4">
             <Link href="/book-demo">
-            <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-              Book Demo
-            </button>
+              <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+                Book Demo
+              </button>
             </Link>
             <Link href="/ContactUs">
-            <button className="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
-              Contact Us
-            </button>
-            </Link>       
+              <button className="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>

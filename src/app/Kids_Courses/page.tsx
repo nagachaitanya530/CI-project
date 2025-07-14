@@ -1,6 +1,5 @@
 
 import Footer from "../_components/Footer";
-
 import Navigation from "../_components/Navigation";
 import Kids_courses from "../_components/kids_courses/kids_courses";
 

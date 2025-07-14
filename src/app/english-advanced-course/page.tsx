@@ -1,11 +1,11 @@
 "use client";
 
+import React from 'react';
 import Navigation from '../_components/Navigation';
 import Chat from './Barchat';
 import Footer from '../_components/Footer';
 import Herosection from './Herosection';
 import Curriculum from './Dropbox';
-import React from 'react';
 import Univ from './univ';
 import Testimonials from './Testimonials';
 import Link from 'next/link';
@@ -69,6 +69,8 @@ function EnglishAdvance() {
           <Footer />
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

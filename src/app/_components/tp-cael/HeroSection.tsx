@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image";
+import StudyAbroadModal from "../study-abroad/study-mauritius/StudyAbroadModal";
+import { useState } from "react";
 
 function HeroSection() {
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="bg-gray-100 py-12" data-aos="fade-in" data-duration="0">
@@ -27,16 +31,16 @@ function HeroSection() {
 
             <button
               id="openPopup"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-5 rounded transition cursor-pointer"
-            >
+              className="bg-blue-900 hover:bg-blue-700 text-white font-medium py-2 px-5 rounded transition cursor-pointer"
+                onClick={() => setShowModal(true)} >
               Free Expert Consultation
             </button>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-md">
             <Image
-              src="/writing-the-notes.jpg"
+              src="/cael.jpg"
               alt="ACT Preparation"
-              width={300}
+              width={500}
               height={300}
               className="object-cover w-96 h-auto opacity-85"
               priority
@@ -45,6 +49,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </section>
   );
 }

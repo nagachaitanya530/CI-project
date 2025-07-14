@@ -29,9 +29,9 @@ export default function Hero({
       </div>
       <div className="w-full lg:w-1/2 flex justify-center">
         <img
-          src="/222.jpg" 
+          src="../middle.jpg" 
           alt="Study in Dubai"
-          className="w-full max-w-[400px] md:max-w-[480px] object-contain"
+          className="w-full max-w-[400px] md:max-w-[350px] object-contain"
         />
       </div>
     </section>

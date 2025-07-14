@@ -18,7 +18,7 @@ interface JourneyHeroProps {
   socialLinks?: SocialLinks;
 }
 
-const YourJourney: React.FC<JourneyHeroProps> = ({
+const YourJourney: React.FC<JourneyHeroProps> = ({ 
   girlImageSrc = "/study-abroad/btm-bnr-img.png",
   onContactClick = () => console.log("Contact Us clicked"),
   socialLinks = {
@@ -148,7 +148,7 @@ const YourJourney: React.FC<JourneyHeroProps> = ({
           />
         </div>
         <div className="flex justify-center lg:hidden mt-6 z-20">
-          <img
+          <img 
             src={girlImageSrc}
             alt="Student with globe"
             className="w-56 h-56 object-contain animate-float"

@@ -1,4 +1,10 @@
+
+"use client"
+import { useState } from "react";
+import StudyAbroadModal from "../study-abroad/study-mauritius/StudyAbroadModal";
+
 function HeroSection(){
+  const [showModal, setShowModal] = useState(false);
     return(
         <>
         <div className="container mx-auto px-4 py-12">
@@ -16,8 +22,9 @@ function HeroSection(){
           <div className="hero-btns">
             <a
               id="openPopup"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition open-popup"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-900 transition open-popup"
               style={{ cursor: "pointer" }}
+              onClick={() => setShowModal(true)}
             >
               Free Expert Consultation
             </a>
@@ -34,6 +41,7 @@ function HeroSection(){
           />
         </div>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </div>
     </>
     );

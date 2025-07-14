@@ -1,5 +1,5 @@
 "use client";
-
+import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
 import { useEffect, useRef, useState, type JSX } from "react";
 import { BookOpen, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import React from "react";
@@ -11,6 +11,7 @@ import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 
 const Herosection = () => {
+    const [showModal, setShowModal] = useState(false);
     return (
         <>
             <section className="bg-gradient-to-r from-white to-[#fef5f5] px-4 md:px-20 py-10">
@@ -21,11 +22,13 @@ const Herosection = () => {
                             knowledge,
                             <br /> innovation and culture
                         </h1>
-                        <Link href="/study-abroad">
-                            <button className="mt-6 bg-[#143B85] text-white hover:bg-white hover:text-[#143B85] border border-[#143B85] px-6 py-3 rounded-md font-semibold transition-colors duration-300">
+                        
+                            <button className="mt-6 bg-[#143B85] text-white hover:bg-white hover:text-[#143B85] border border-[#143B85] px-6 py-3 rounded-md font-semibold transition-colors duration-300"
+                             onClick={() => setShowModal(true)}
+                             >
                                 Free Expert Consultation
                             </button>
-                        </Link>
+                        
                     </div>
 
                     <div className="flex-1 relative w-full max-w-sm mx-auto">
@@ -62,6 +65,7 @@ const Herosection = () => {
                         </div>
                     </div>
                 </div>
+                {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
             </section>
         </>
     );
@@ -131,9 +135,7 @@ const Secondsection = () => {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                        <BookConsultationForm />
-                    </div>
+                    
                 </div>
             </div>
         </section>

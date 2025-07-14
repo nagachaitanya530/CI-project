@@ -17,6 +17,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import SoftskillPesronTraining from "../soft-skills-personal-training/page";
 
 const logoUrl = "/placeholder.svg?height=32&width=120";
 
@@ -74,7 +75,11 @@ const navItems = [
 
       { label: "About us", href: "/about_us" },
       { label: "Careers", href: "/career" },
-      { label: "Community", href: "/community" },
+
+     ,
+
+      { label: "Community", href: "/Community" },
+
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },

@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
-
+import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
+import { useState } from "react";
 function HeroSection() {
+   const [showModal, setShowModal] = useState(false);
   return (
     <div className="bg-gradient-to-r from-white via-red-50 to-green-100 py-12">
       <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between">
@@ -16,7 +18,8 @@ function HeroSection() {
           </h1>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <button className="bg-blue-900 text-white hover:bg-white hover:text-blue-900 font-semibold px-6 py-3 rounded-md">
+            <button className="bg-blue-900 text-white hover:bg-white hover:text-blue-900 font-semibold px-6 py-3 rounded-md"
+            onClick={() => setShowModal(true)}>
               Free Expert Consultation
             </button>
           </div>
@@ -31,6 +34,7 @@ function HeroSection() {
           />
         </div>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

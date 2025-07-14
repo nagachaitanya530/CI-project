@@ -1,4 +1,5 @@
 
+
 import ScrollContainer from 'react-indiana-drag-scroll';
 function ListOfUniversity()
 {
@@ -64,6 +65,7 @@ function ListOfUniversity()
     ranking: 80,
   },
 ];
+
 
 
 import ScrollContainer from "react-indiana-drag-scroll";
@@ -196,4 +198,5 @@ function ListOfUniversity() {
     </section>
   )
 }
+
 export default ListOfUniversity;

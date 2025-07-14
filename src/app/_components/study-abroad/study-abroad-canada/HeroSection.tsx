@@ -1,12 +1,14 @@
+"use client"
 import Image from "next/image";
-
+import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
+import { useState } from 'react';
 interface StatItem {
     number: string;
     label: string;
 }
 
 function HeroSection() {
-
+    const [showModal, setShowModal] = useState(false);
     const stats: StatItem[] = [
         {
             number: "200+",
@@ -34,12 +36,18 @@ function HeroSection() {
                     <div className="lg:w-1/2 p-5 lg:p-10 ">
                         <h1 className="text-2xl md:text-3xl lg:text-5xl/17 pt-10 lg:px-10  ">
                             <span className="font-semibold underline text-blue-500 decoration-red-500"> Canada: </span>
-                             Study at renowned institutions in a safe, multicultural environment
+                            Study at renowned institutions in a safe, multicultural environment
                         </h1>
                         <div className="space-y-2 my-5 md:my-0 lg:space-x-3 lg:pl-10">
-                            <button className="md:mt-10 border py-2 px-5 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-300 bg-blue-600 hover:text-white">Free Expert Consultation</button>
-                            <button className="md:mt-10 border py-2 px-3 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-300 bg-blue-600 hover:text-white">View & Download Brochure</button>
-
+                            <button className="md:mt-10 border py-2 px-5 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-900 bg-blue-900 hover:text-white"
+                                onClick={() => setShowModal(true)}
+                            >Free Expert Consultation</button>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <button className="md:mt-10 border py-2 px-3 lg:p-3 rounded-2xl text-sm md:text-lg text-white border-blue-900 bg-blue-900 hover:text-white">View & Download Brochure</button>
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -63,7 +71,7 @@ function HeroSection() {
                         </div>
                     </div>
                 </div>
-
+                {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
             </section>
         </>);
 }

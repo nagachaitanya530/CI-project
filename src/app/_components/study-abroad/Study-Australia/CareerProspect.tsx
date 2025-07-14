@@ -46,18 +46,28 @@ const CareerProspect = () => {
           opportunities:
         </p>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white"
-            >
-              <img src={course.image} alt={course.name} className="w-full h-48 object-cover" />
-              <div className="py-4 text-lg font-semibold text-gray-900">{course.name}</div>
-            </div>
-          ))}
-        </div>
+      {/* Subtext */}
+      <p className="text-gray-700 mt-4 text-xl mx-auto">
+        
+       The employment landscape in Australia offers opportunities across various sectors.<br/>
+      
+       Here are some key sectors and industries that presently offer employment <br/>
+       opportunities:
+      </p>
+
+      {/* Cards */}
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {courses.map((course, index) => (
+          <div
+            key={index}
+            className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img src={course.image} alt={course.name} className="w-full h-48 object-cover" />
+            <div className="py-4 text-lg font-semibold text-gray-900">{course.name}</div>
+          </div>
+        ))}
       </div>
+       </div>
     </>
   );
 };

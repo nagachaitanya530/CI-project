@@ -40,7 +40,6 @@ function FormatDetails() {
                         </tbody>
                     </table>
                 </div><br />
-=======
          <div className="overflow-hidden rounded-2xl border border-gray-300 mb-10">
                 <table className="border p-2 w-full">
                     <thead>

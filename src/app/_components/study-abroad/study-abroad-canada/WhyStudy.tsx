@@ -1,3 +1,6 @@
+import { ShieldCheck } from "lucide-react";
+import BookConsultationForm from "../BookConsultationForm";
+
 
 import Image from "next/image";
 import React from "react";
@@ -61,10 +64,7 @@ function WhyStudy() {
                             </div>
                         ))}
                     </div>
-
-
-
-                </div>
+                   </div>
             </section>
         </>
     );

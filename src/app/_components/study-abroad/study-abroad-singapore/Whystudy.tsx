@@ -48,7 +48,7 @@ function Whystudy() {
           {/* Left - Reasons */}
           <div className="md:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-              Why <span className="font-bold text-black underline decoration-red-500">Study In Mauritius?</span>
+              Why <span className="font-bold text-black underline decoration-red-500">Study In Singapore?</span>
             </h2>
 
             <ul className="space-y-6">

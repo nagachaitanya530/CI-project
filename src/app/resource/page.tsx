@@ -1,4 +1,5 @@
 "use client";
+
 import FooterSection from "../_components/footer1";
 import NavigationSection from "../_components/navigation1";
 import BlogCard from "../_components/resource/BlogCard";
@@ -164,4 +165,5 @@ function Resource() {
         </>
     )
 }
+
 export default Resource;

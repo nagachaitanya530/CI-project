@@ -4,7 +4,7 @@ import scholarImg from "../img/scholar-img.webp"; // adjust path if needed
 const ScholarshipsSection = () => {
   return (
     <div className="comm-section py-2" data-aos="fade-in" data-duration="0">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 pl-6">
         <div className="flex flex-col lg:flex-row items-center gap-10">
           
           {/* Left Content */}
@@ -28,7 +28,7 @@ const ScholarshipsSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-2/3">
             <img
               src="/study-singapore/scholar-img.png"
               alt="Scholarships to Study Abroad"

@@ -462,7 +462,7 @@ export default function NavigationSection() {
 
                     <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
                         <Link
-                            href="/contact"
+                            href="/Contact"
                             className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border border-blue-600/50 hover:border-blue-700 rounded-xl transition-all duration-300 hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                             <UserCircle className="mr-2" size={16} />
@@ -500,7 +500,7 @@ export default function NavigationSection() {
 
                         <div className="pt-2 border-t border-gray-200/50">
                             <Link
-                                href="/contact"
+                                href="/Contact"
                                 onClick={closeMenu}
                                 className="flex items-center justify-center px-3 py-2 border border-blue-600/50 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 text-sm shadow-lg"
                             >

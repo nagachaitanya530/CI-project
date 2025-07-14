@@ -1,26 +1,29 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+import StudyAbroadModal from '../study-mauritius/StudyAbroadModal';
 
 function Herosection() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <div className="flex w-full flex-col-reverse lg:flex-row items-center justify-center gap-10  xl:justify-between px-6 md:px-12 lg:px-10 xl:px-26 py-10 xl:py-0 bg-gradient-to-r from-white via-pink-100 to-green-100 font-[poppins,sans-serif]">
         <div className=" lg:text-left">
-          <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-5xl leading-snug xl:w-[40rem] w-full  mb-6  xl:-mt-15">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-5xl leading-snug xl:w-[40rem] w-full  mb-6  xl:-mt-10">
             <span className="font-bold text-3xl md:text-3xl lg:text-6xl  underline decoration-red-500">Australia:</span> A top choice for students seeking high-quality education and vibrant lifestyle
           </h1>
 
-          <div className="flex flex-col  xl:flex-row gap-5   ">
-            <a href=""><button className="bg-blue-900   rounded-2xl border-2 text-white  py-3 px-6 font-semibold hover:bg-white hover:text-blue-800 transition duration-300 w-full">
+          <div className="flex flex-col  xl:flex-row gap-5  border-b-4 border-white ">
+            <button 
+              onClick={() => setShowModal(true)}
+            className="bg-blue-900   rounded-2xl border-2 text-white  py-3 px-6 font-semibold hover:bg-white hover:text-blue-800 transition duration-300 w-full">
               Free Expert Consultation
-            </button></a>
-
-
-            <a href="">
+            </button>
+               
               <button className="bg-blue-900 rounded-2xl border-2 text-white py-3 px-6 font-semibold hover:bg-white hover:text-blue-800 transition duration-300 w-full">
                 View & Download Brochure
               </button>
-            </a>
-
+              
+ {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
           </div>
         </div>
 
