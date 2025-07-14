@@ -26,7 +26,7 @@ const reviews: Review[] = [
         author: {
             name: "Vaibhavee Modi",
             institution: "Confederation College, Canada",
-            avatar: "/miral-shah-uk.webp",
+            avatar: "/FFF.webp",
         },
         media: {
             type: "video",
@@ -41,7 +41,7 @@ const reviews: Review[] = [
         author: {
             name: "Rahul Sharma",
             institution: "University of Manchester, UK",
-            avatar: "/priyanshu-kamble-uk.webp",
+            avatar: "/FPR.jpg",
         },
         media: {
             type: "video",
@@ -56,7 +56,7 @@ const reviews: Review[] = [
         author: {
             name: "Priya Patel",
             institution: "Stanford University, USA",
-            avatar:"/afreen-jamadar-uk.webp",
+            avatar:"/FFV.jpeg",
         },
         media: {
             type: "video",
@@ -83,10 +83,8 @@ export default function SuccessStories() {
         media: { type: "image" | "video"; src: string; alt: string };
         className?: string;
     }) => {
-        const videoRef = useRef<HTMLVideoElement>(null); // ⬅️ Add video reference
-        const [isPlaying, setIsPlaying] = useState(false); // ⬅️ Track play state
-
-        // ⬇️ Play handler when Play icon is clicked
+        const videoRef = useRef<HTMLVideoElement>(null); 
+        const [isPlaying, setIsPlaying] = useState(false); 
         const handlePlay = () => {
             if (videoRef.current) {
                 videoRef.current.play();
@@ -98,7 +96,6 @@ export default function SuccessStories() {
             <div className={`relative ${className}`}>
                 {media.type === "video" ? (
                     <div className="relative left-40 rounded-2xl">
-                        {/* ⬇️ Video element with ref, loop, muted, playsInline */}
                         <video
                             ref={videoRef}
                             src={media.src}
@@ -106,8 +103,6 @@ export default function SuccessStories() {
                             muted
                             className="w-full h-full object-cover rounded-2xl"
                         />
-
-                        {/* ⬇️ Play button overlay (only shown if not playing) */}
                         {!isPlaying && (
                             <div
                                 className="absolute inset-0 flex items-center justify-center  cursor-pointer"
@@ -120,7 +115,6 @@ export default function SuccessStories() {
                         )}
                     </div>
                 ) : (
-                    // ⬇️ Image rendering for type: image
                     <img
                         src={media.src || "/api/placeholder/400/250"}
                         alt={media.alt}
@@ -133,14 +127,11 @@ export default function SuccessStories() {
     return (
         <div className="min-h- bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 py-8 px-4 mb-6">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
                 <div className="flex justify-between items-start mb-16">
                     <div>
                         <h1 className="text-5xl font-bold text-gray-900 mb-4">Success Stories</h1>
                         <div className="w-32 h-1 bg-orange-400 rounded-full"></div>
                     </div>
-
-                    {/* Navigation Arrows */}
                     <div className="flex gap-4">
                         <button
                             onClick={goToPrevious}
@@ -158,8 +149,6 @@ export default function SuccessStories() {
                         </button>
                     </div>
                 </div>
-
-                {/* Cards Container - Horizontal Scroll */}
                 <div className="relative overflow-hidden">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"
@@ -171,12 +160,9 @@ export default function SuccessStories() {
                             <div key={review.id} className="flex-shrink-0 w-full flex justify-center">
                                 <div className=" rounded-3xl shadow- overflow-visible w-[1100px] mx-4">
                                     <div className="flex justify-end">
-                                        {/* Left Media Section */}
                                         <div className="w-2/5 p-6 mt-6">
                                             <MediaComponent media={review.media} className="w-full h-64" />
                                         </div>
-
-                                        {/* Right Content Section */}
                                         <div className="w-3/5 h-80 p-8 bg-white rounded-2xl flex justify-end">
                                             <div className=" flex flex-col items-end w-3/4 justify-between">
                                                 <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-normal">

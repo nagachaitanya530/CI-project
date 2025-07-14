@@ -19,9 +19,9 @@ const OETSection = () => {
                 OET (Occupational English Test) is designed to meet the specific English language needs of the healthcare sector. It assesses the language proficiency of healthcare professionals who wish to practise in an English-speaking environment. National Institute of Language prepares you for OET with expert professional trainers.
               </p>
               <a href="/book-demo">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded">
-                BOOK A DEMO
-              </button>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded">
+                  BOOK A DEMO
+                </button>
               </a>
             </div>
             <div className="right">

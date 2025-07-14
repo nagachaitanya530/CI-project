@@ -1,8 +1,7 @@
-import Image from "next/image";
-
 function ScheduleAndPricing() {
     return (
         <>
+            {/* chooosing the learning track */}
             <section id="schedule" className="my-10">
                 <h1 className="text-4xl font-semibold pb-10">
                     Choose Your Learning Track
@@ -16,13 +15,13 @@ function ScheduleAndPricing() {
                         <button className="bg-cyan-600 hover:bg-cyan-700 w-50 text-white text-xl rounded-md p-3 m-5">Enroll Now</button>
                     </div>
                     <div className="right p-7  ">
-                        <Image src="/home/group-study.png" alt="group-study" className="w-80 rounded-2xl" width={500} height={300}  />
+                        <img src="../../home/group-study.png" alt="group-study" className="w-80 rounded-2xl" />
                     </div>
                 </div>
 
                 <div className="container flex flex-col md:flex-row justify-between rounded-xl border shadow-xl my-5">
                     <div className="right p-7  ">
-                        <Image src="/home/ai-evaluation.png" alt="group-study" className="w-80 rounded-2xl" width={500} height={300}  />
+                        <img src="../../home/ai-evaluation.png" alt="group-study" className="w-80 rounded-2xl" />
                     </div>
                     <div className="left w-1/2 ">
                         <h2 className="text-3xl font-semibold m-5 ">AI Evaluation</h2>
@@ -32,6 +31,7 @@ function ScheduleAndPricing() {
                         <button className="bg-cyan-600 hover:bg-cyan-700 w-50 text-white text-xl rounded-md p-3 m-5">Enroll Now</button>
                     </div>
                 </div>
+
                 <div className="container flex flex-col md:flex-row rounded-xl border shadow-xl ">
                     <div className="left w-1/2 ">
                         <h2 className="text-3xl font-semibold m-5 ">Personal Training</h2>
@@ -41,7 +41,7 @@ function ScheduleAndPricing() {
                         <button className="bg-cyan-600 hover:bg-cyan-700 w-50 text-white text-xl rounded-md p-3 m-5">Enroll Now</button>
                     </div>
                     <div className="right p-7  ">
-                        <Image src="/home/personalized-mentorship.png" alt="group-study" className="w-80 rounded-2xl" width={500} height={300}  />
+                        <img src="../../home/personalized-mentorship.png" alt="group-study" className="w-80 rounded-2xl" />
                     </div>
                 </div>
             </section>

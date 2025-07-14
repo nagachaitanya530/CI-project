@@ -528,16 +528,27 @@ export default function Curriculum() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
-            <div className="p-5">
-              <h2 className="text-2xl font-semibold mb-2">Sunday Webinar</h2>
-              <p className="text-base text-gray-600 mb-5">
-                Join our open webinar on Sundays to improve your English communication skills and to get in touch with our huge community of students.
-              </p>
-              <Link
-                href="/english-business-course/free-webinar"
-                className=" px-5 py-3 text-white border rounded-lg bg-cyan-500">
-                Register Free
-              </Link>
+            <div className="m-0 p-0 bg-gray-300 rounded-lg shadow overflow-hidden self-start">
+              <div className="relative w-full h-85">
+                <Image
+                  src="/home/professional-women.png"
+                  alt="Sunday Webinar"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="p-5">
+                <h2 className="text-2xl font-semibold mb-2">Sunday Webinar</h2>
+                <p className="text-base text-gray-600 mb-5">
+                  Join our open webinar on Sundays to improve your English communication skills and to get in touch with our huge community of students.
+                </p>
+                <Link
+                  href="/english-business-course/free-webinar"
+                  className=" px-5 py-3 text-white border rounded-lg bg-cyan-500">
+                  Register Free
+                </Link>
+              </div>
             </div>
           </div>
         </div>

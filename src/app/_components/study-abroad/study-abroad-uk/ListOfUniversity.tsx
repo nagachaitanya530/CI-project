@@ -69,10 +69,7 @@ function ListOfUniversity() {
       <div className="bg-[#e9eff6] py-16 px-4 overflow-x-hidden">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-6">
-            <span className="text-blue-600 underline decoration-red-500">
-              List of Universities
-            </span>{" "}
-            in the UK
+            <span className="text-blue-600 underline decoration-red-500">List of Universities</span> in the UK
           </h3>
 
           <p className="text-center text-gray-700 max-w-3xl mx-auto mb-10">
@@ -128,7 +125,7 @@ function ListOfUniversity() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default ListOfUniversity;

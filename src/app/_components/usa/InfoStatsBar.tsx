@@ -47,11 +47,10 @@ const InfoStatsBar = () => {
         <motion.div
           key={index}
           variants={item}
-          className={`flex-1 px-4 py-4 ${
-            index < stats.length - 1
+          className={`flex-1 px-4 py-4 ${index < stats.length - 1
               ? "border-b md:border-b-0 md:border-r border-gray-300"
               : ""
-          }`}
+            }`}
         >
           <h3 className="text-2xl font-bold text-[#1f3f98]">{stat.number}</h3>
           <p className="text-gray-800 font-medium mt-1">{stat.label}</p>

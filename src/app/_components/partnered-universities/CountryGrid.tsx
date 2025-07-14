@@ -38,22 +38,22 @@ const universitiesByCountry: Record<CountryKey, { image: string; name: string }[
   "USA": [
     { image: "/university/Massachusetts_Institute_of_Technology-Logo.png", name: "Massachusetts Institute of Technology (MIT)" },
     { image: "/study-abroad/su.jpg", name: "Stanford University" },
-    
+
   ],
   "UK": [
     { image: "/university/Birkbeck-University-of-London.png", name: "Birkbeck University of London" },
     { image: "/university/bcu-birmingham-city-university.jpg", name: "Birmingham City University International College" },
-   
+
   ],
   "Canada": [
     { image: "/university/University_of_Toronto-Logo.wine.png", name: "University of Toronto" },
     { image: "/university/university-of-british-columbia.png", name: "University of British Columbia" },
-  
+
   ],
   "Australia": [
     { image: "/university/University of Melbourne.png", name: "University of Melbourne" },
     { image: "/university/Australian National University (ANU).png", name: "Australian National University (ANU)" },
- 
+
   ],
   "Germany": [
     { image: "/university/Technical University of Munich.png", name: "Technical University of Munich" },

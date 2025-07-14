@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import InfoStatsBar from "./InfoStatsBar";
+import StudyAbroadModal from "../study-abroad/study-mauritius/StudyAbroadModal";
 
 const HeroBannerUSA = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <section className="relative bg-gradient-to-r from-white to-[#fef7f5] py-14 px-4 md:px-20 overflow-hidden font-poppins">
 
@@ -29,12 +31,20 @@ const HeroBannerUSA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-            <button className="bg-[#1f3f98] text-white font-medium px-6 py-3 rounded-md hover:bg-[#18337e] transition">
+            <button className="bg-[#1f3f98] text-white font-medium px-6 py-3 rounded-md hover:bg-[#18337e] transition"
+            onClick={() => setShowModal(true)}>
               Free Expert Consultation
             </button>
-            <button className="bg-white border border-[#1f3f98] text-[#1f3f98] font-medium px-6 py-3 rounded-md hover:bg-[#f1f4ff] transition">
+             <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                 >
+            <button className="bg-[#1f3f98] text-white font-medium px-6 py-3 rounded-md hover:bg-[#18337e] transition"
+             >
               View & Download Brochure
             </button>
+            </a>
           </div>
         </div>
 
@@ -53,6 +63,7 @@ const HeroBannerUSA = () => {
       <div className="mt-8 md:mt-12">
         <InfoStatsBar />
       </div>
+       {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </section>
   );
 };

@@ -3,30 +3,30 @@
 import { useState } from "react";
 import Link from "next/link";
 import Navigation from "../_components/Navigation";
-import About from "../soft-skills-personal-training/About";
+import { title } from "process";
+import About from "../soft-skills-personal-training/About"
 import Curriculum from "./Curriculam";
 import EnrollmentOption from "./Enrollment";
 import Instructor from "./instructors";
 import Footer from "../_components/Footer";
 
 function SoftskillPesronTraining() {
-  const [activeTab, setActiveTab] = useState('About');
-  const tabs = ["About", "Curriculum", "Instructors", "Enrolment Options"];
-
-  const handleWhatsApp = () => {
+const [activeTab, setActiveTab] = useState('About');
+const tabs = ["About", "Curriculum", "Instructors", "Enrolment Options"];
+const handleWhatsApp = () => {
     window.open('https://wa.me/917607676998?text=I%20want%20to%20enquire%20about%20PDCC%20Spoken%20English%20course', '_blank');
   };
-
   return (
     <div>
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
-        <div className="flex justify-center lg:w-1/2">
-          <div className="text-left mt-5">
-            <div className="flex justify-start h-10">
-              <img src="../../british.webp" alt="British Council" />
+      <Navigation></Navigation>
+   <section className="bg-gradient-to-r from-blue-700 via-purple-600 to-red-800 text-white px-4 py-10 lg:flex items-center">
+        <div className="flex justify-center">
+          <div className="text- mt-5 ml-30">
+            <div className=" flex justify-start h-10">
+              <img
+                src="../../british.webp"
+                alt="British Council"
+              />
             </div>
             <h1 className="text-4xl font-bold mb-4">Soft Skills and Personal Training</h1>
             <p className="text-lg">
@@ -48,8 +48,6 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-
-      {/* Info Boxes */}
       <section className="bg-gray-100 py-6 px-4 flex flex-col md:flex-row justify-around text-center gap-4">
         <div>
           <div className="text-xl font-bold">12 Week</div>
@@ -88,8 +86,6 @@ function SoftskillPesronTraining() {
             {activeTab === "Enrolment Options" && <EnrollmentOption />}
           </div>
         </div>
-
-        {/* Right Side Promo Cards */}
         <div className="px-4 w-full overflow-x-hidden">
           <div className="max-w-md mx-auto space-y-6">
             {/* Promo Card 1 */}
@@ -104,9 +100,11 @@ function SoftskillPesronTraining() {
                 <p className="text-sm mt-2 mb-4">
                   Join our Foundation English course for just Rs.4990 per month with expert certified trainers.
                 </p>
-                <button className="border border-white px-6 py-2 rounded hover:bg-white hover:text-[#7B61FF] transition">
+                <a href="/english-foundation-course">
+                <button className="border border-b-white  px-6 py-2 rounded hover:bg-white hover:text-[#7B61FF] transition">
                   CLICK HERE
                 </button>
+                </a>
               </div>
             </div>
 
@@ -165,10 +163,9 @@ function SoftskillPesronTraining() {
           </div>
         </div>
       </section>
-
-      <Footer />
+      <Footer/>
     </div>
+    
   );
 }
-
 export default SoftskillPesronTraining;

@@ -25,11 +25,11 @@ const compareDates = (d1: string, d2: string): number => {
       (val) => val === undefined || isNaN(Number(val))
     )
   ) {
-   
+
     return 0;
   }
 
- 
+
   return new Date(
     year1 as number,
     (month1 as number) - 1,
@@ -124,19 +124,19 @@ export default function Page() {
     <>
       <Navigation />
       <UniversityBanner />
-      <FadeInOnScroll>      
-      <UniversityFilter
-        filters={filters}
-        onChange={handleChange}
-        onSearch={handleSearch}
-        onClear={handleClear}
-      />
+      <FadeInOnScroll>
+        <UniversityFilter
+          filters={filters}
+          onChange={handleChange}
+          onSearch={handleSearch}
+          onClear={handleClear}
+        />
       </FadeInOnScroll>
       <FadeInOnScroll>
-      <UniversityCard data={results} />
+        <UniversityCard data={results} />
       </FadeInOnScroll>
       <FadeInOnScroll>
-      <YourJourney />
+        <YourJourney />
       </FadeInOnScroll>
       <Footer />
     </>

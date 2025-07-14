@@ -13,7 +13,7 @@ export default function AdmissionGuidencePage() {
 
   return (
     <>
-    <NavigationSection />
+      <NavigationSection />
       <HeroSection onConsultClick={() => setShowForm(true)} />
 
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />

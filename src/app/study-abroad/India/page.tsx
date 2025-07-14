@@ -64,13 +64,8 @@ const StatsComponent: React.FC = () => {
 
 const courses = [
   {
-
-    title: "Tourism Administration",
-     image: "/hospitality-img.webp",
-
     title: "Hotel Management",
- image: "/study-abroad/hotel-img.webp",
-
+    image: "/study-abroad/hotel-img.webp",
 
   },
   {
@@ -81,15 +76,15 @@ const courses = [
     title: "Journalism",
     image: "/study-abroad/journalism-img.webp",
   },
-    {
+  {
     title: "Fashion Design",
     image: "/study-abroad/art-img.webp",
   },
-    {
+  {
     title: "Law",
     image: "/study-abroad/law-img.webp",
   },
-    {
+  {
     title: "Biotechnology",
     image: "/study-abroad/envr-scie-1-img.webp",
   },
@@ -109,7 +104,7 @@ function PopularCourses() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {courses.map((course, index) => (
-            <MauritiusCard key={index} />
+            <MauritiusCard key={index} title={course.title} image={course.image} />
           ))}
         </div>
       </div>
@@ -138,32 +133,27 @@ const IndiaFAQs = [
     question: "Should I learn Hindi to study in India?",
     answer: "Almost all courses of higher education are taught in English making India an attractive study destination for international students."
   },
-  
+
 ];
 
 export default function India() {
-    return (
-        <>
-        <Navigation />
-        <HeroSection />
-        <div className="bg-gradient-to-br from-white to-green-500">
-        <StatsComponent  /></div>
-        <StudyInIndiaPage />
-
-        <CareerProspect />
-
-        <ContactFormSection />
-        <PopularCourses />
-
-        <CostOfStudying />
-        <Scholarships />
-        <CareerProspect />
-        <ProcedureAboutIndia />
-        <SuccessStories />
-        <FAQ faqs={IndiaFAQs} title="FAQs" />
-        <YourJourney />
-        <FooterSection />
-        </>
-    );
+  return (
+    <>
+      <Navigation />
+      <HeroSection />
+      <StatsComponent />
+      <StudyInIndiaPage />
+      <ContactFormSection />
+      <PopularCourses />
+      <CostOfStudying />
+      <Scholarships />
+      <CareerProspect />
+      <ProcedureAboutIndia />
+      <SuccessStories />
+      <FAQ faqs={IndiaFAQs} title="FAQs" />
+      <YourJourney />
+      <FooterSection />
+    </>
+  );
 
 };

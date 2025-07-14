@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const tabs = [
   { id: "overview", label: "Overview" },
@@ -26,18 +26,48 @@ export default function ScrollableTabs() {
       const yOffset = -OFFSET;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
-      setActiveTab(id);
     }
   };
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length > 0) {
+          const topMost = visibleSections[0];
+          if (topMost && topMost.target && (topMost.target as HTMLElement).id) {
+            setActiveTab((topMost.target as HTMLElement).id);
+          }
+        }
+      },
+      {
+        rootMargin: `-${OFFSET}px 0px -60% 0px`,
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    tabs.forEach((tab) => {
+      const el = document.getElementById(tab.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     const updateUnderline = () => {
-      const activeBtn = document.querySelector(`[data-tab="${activeTab}"]`) as HTMLElement;
+      const activeBtn = document.querySelector(
+        `[data-tab="${activeTab}"]`
+      ) as HTMLElement;
       if (activeBtn && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const btnRect = activeBtn.getBoundingClientRect();
         setUnderlineStyle({
-          left: btnRect.left - containerRect.left + containerRef.current.scrollLeft,
+          left:
+            btnRect.left - containerRect.left + containerRef.current.scrollLeft,
           width: btnRect.width,
         });
       }
@@ -49,17 +79,17 @@ export default function ScrollableTabs() {
   }, [activeTab]);
 
   return (
-    <div className="relative w-full flex justify-center mt-6 sticky top-[65px] z-50 bg-white">
+    <div className="relative w-full flex justify-center mt-4 sticky top-[65px] z-50 bg-white shadow-sm border-b border-gray-200">
       <div
         ref={containerRef}
-        className="relative flex overflow-x-auto no-scrollbar space-x-2 px-4 py-2 bg-white rounded-full border border-gray-200"
+        className="relative flex overflow-x-auto no-scrollbar space-x-2 sm:space-x-3 px-2 sm:px-4 py-2 bg-white"
       >
         {tabs.map((tab) => (
           <button
             key={tab.id}
             data-tab={tab.id}
             onClick={() => handleScrollTo(tab.id)}
-            className={`relative px-6 py-2 rounded-full whitespace-nowrap text-lg font-semibold transition-all duration-200 
+            className={`relative flex-shrink-0 px-4 sm:px-5 py-2 rounded-full whitespace-nowrap text-sm sm:text-base font-semibold transition-all duration-200 
               ${
                 activeTab === tab.id
                   ? "bg-[#1E3A8A] text-white shadow"
@@ -71,10 +101,13 @@ export default function ScrollableTabs() {
           </button>
         ))}
 
-        {/* Blue sliding bar */}
+        {/* Blue sliding underline */}
         <div
           className="absolute bottom-0 h-[2px] bg-[#1E3A8A] transition-all duration-300 ease-in-out"
-          style={{ left: `${underlineStyle.left}px`, width: `${underlineStyle.width}px` }}
+          style={{
+            left: `${underlineStyle.left}px`,
+            width: `${underlineStyle.width}px`,
+          }}
         />
       </div>
     </div>

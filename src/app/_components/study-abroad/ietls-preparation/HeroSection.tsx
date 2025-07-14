@@ -1,7 +1,8 @@
-function HeroSection(){
-    return(
+
+function HeroSection() {
+    return (
         <>
-          {/* Hero Section  */}
+            {/* Hero Section  */}
             <section className="bg-cyan-50 py-10 px-6 lg:px-24 flex flex-col-reverse lg:flex-row justify-between items-center">
                 {/* Left Side Content */}
                 <div className="max-w-2xl">
@@ -14,6 +15,9 @@ function HeroSection(){
                                 Listening, Reading, Writing, Speaking
                             </p>
                         </div>
+
+
+
                         <div className="mb-4">
                             <p className="font-semibold text-lg">Duration :</p>
                             <p className="text-cyan-900 text-base">

@@ -42,49 +42,24 @@ export default function GermanyPage() {
       <>
         <ConsultationForm show={showModal} onClose={() => setShowModal(false)} />
       </>
-    <Navigation />
-    <Hero onFreeConsultClick={() => setShowModal(true)} />
+      <Navigation />
+      <Hero onFreeConsultClick={() => setShowModal(true)} />
       <main className="max-w-7xl mx-auto p-4">
         <InfoStats />
       </main>
 
-
-      {/* Why Study in Germany */}
       <WhyStudy />
-
       <ContactFormSection />
-
-      {/* University List Section */}
       <UniversityList />
-
-      {/* Popular Courses Section */}
       <PopularCoursesSection />
-
-      {/* Cost of Studying */}
       <CostOfStudying />
-
-      {/* Scholarships */}
       <Scholarships />
-
-      {/* CareerProspectsection */}
       <CareerProspectsSection />
-
-      {/* More About Germany */}
       <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
 
-
-
-    <WhyStudy />
-    <UniversityList />
-    <PopularCoursesSection />
-    <CostOfStudying />
-    <Scholarships />
-    <CareerProspectsSection />
-    <MoreAbout onFreeConsultClick={() => setShowModal(true)} />
-
       <RelatedArticles />
-    <SuccessStories />
-    <FAQ faqs={[
+      <SuccessStories />
+      <FAQ faqs={[
         {
           question: "What is the cost of studying in Germany?",
           answer:

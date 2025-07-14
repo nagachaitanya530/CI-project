@@ -47,7 +47,7 @@ export default function AccreditationsPage() {
             >
               <Link
                 href={`/accreditations/${card.slug}`}
-                className="bg-white rounded-2xl shadow-md hover:scale-105 transition-all block p-5 min-h-[300px] flex flex-col items-center justify-between"
+                className="bg-white rounded-2xl shadow-md hover:scale-105 transition-all p-5 min-h-[300px] flex flex-col items-center justify-between"
               >
                 <Image
                   src={card.logo}

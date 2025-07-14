@@ -3,7 +3,7 @@
 import React from "react";
 
 const courses = [
-  { name: "Engineering", image: "/engineering.jpg" },
+  { name: "Engineering", image: "/eng.jpg" },
   { name: "Business Administration", image: "/BusinessAni.png" },
   { name: "Renewable Energy", image: "/RenewableEnergy.jpg" },
   { name: "Automotive Engineering", image: "/Auto-heading.jpg" },

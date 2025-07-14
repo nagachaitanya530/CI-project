@@ -13,7 +13,7 @@ import NavigationSection from "~/app/_components/navigation1";
 import FooterSection from "~/app/_components/footer1";
 import FAQ from "~/app/_components/study-abroad/faq";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
-
+import MoreAbout from "~/app/_components/study-abroad/study-abroad-singapore/MoreAbout";
 
 
 const FrontendFAQ = [
@@ -80,6 +80,7 @@ function SingaporePage() {
     <CostOfStudying/>
     <ScholarshipsSection/>
     <CareerProspectSection/>
+    <MoreAbout />
 
 
     <section>

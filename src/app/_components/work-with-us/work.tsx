@@ -2,56 +2,9 @@
 
 import { useState } from "react";
 import { Building2, ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { jobData } from "~/app/_components/job-details/jobData";
 
-type Job = {
-  title: string;
-  location: string;
-  experience: string;
-  positions: number;
-};
-
-const jobData: Job[] = [
-  { title: "Marketing Executive", location: "CHENNAI", experience: "0–5 years", positions: 1 },
-  { title: "Marketing Executive", location: "BANGALORE", experience: "0–5 years", positions: 2 },
-  { title: "Marketing Executive", location: "VIZAG", experience: "0–5 years", positions: 1 },
-  { title: "Academic Counselor", location: "VIZAG", experience: "0–5 years", positions: 1 },
-  { title: "Front Office Executive", location: "VADODARA", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Marketing Executive", location: "VADODARA", experience: "0–5 years", positions: 2 },
-  { title: "Academic Counselor", location: "VADODARA", experience: "0–5 years", positions: 3 },
-  { title: "Marketing Executive", location: "TRIVANDRUM", experience: "0–5 years", positions: 2 },
-  { title: "Academic Counselor", location: "TRIVANDRUM", experience: "0–5 years", positions: 1 },
-  { title: "Telecalling Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Front Office Executive", location: "SURAT", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Academic Counselor", location: "SURAT", experience: "0–5 years", positions: 1 },
-  { title: "Telecalling Executive", location: "PUNE", experience: "Freshers with good communication in English", positions: 1 },
-  { title: "Marketing Executive", location: "PUNE", experience: "0–5 years", positions: 2 },
-  { title: "Academic Counselor", location: "PUNE", experience: "0–5 years", positions: 2 },
-  { title: "UI/UX Designer", location: "DELHI", experience: "2–4 years", positions: 1 },
-  { title: "HR Executive", location: "KOLKATA", experience: "1–3 years", positions: 1 },
-  { title: "Academic Counselor", location: "COIMBATORE", experience: "0–2 years", positions: 2 },
-  { title: "Telecalling Executive", location: "HYDERABAD", experience: "Freshers with excellent communication", positions: 1 },
-  { title: "Senior Counselor", location: "CHANDIGARH", experience: "5–10 years", positions: 1 },
-  { title: "Web Developer", location: "COCHIN", experience: "2–5 years", positions: 1 },
-  { title: "Content Writer", location: "KOLKATA", experience: "0–5 years", positions: 2 },
-  { title: "Social Media Manager", location: "INDORE", experience: "3–5 years", positions: 1 },
-  { title: "Front Office Executive", location: "VISHI", experience: "Freshers with good communication", positions: 1 },
-  { title: "Senior Counselor", location: "DELHI", experience: "6+ years", positions: 1 },
-  { title: "Telecalling Executive", location: "MALAD", experience: "Freshers with basic English", positions: 1 },
-  { title: "Graphic Designer", location: "MUMBAI", experience: "1–3 years", positions: 1 },
-  { title: "IT Support Executive", location: "CHENNAI", experience: "0–2 years", positions: 1 },
-  { title: "HR Executive", location: "JAIPUR", experience: "2–3 years", positions: 1 },
-  { title: "Marketing Executive", location: "INDORE", experience: "0–5 years", positions: 2 },
-  { title: "Marketing Intern", location: "DELHI", experience: "Freshers", positions: 2 },
-  { title: "UI/UX Designer", location: "GURUGRAM", experience: "1–3 years", positions: 1 },
-  { title: "Digital Marketing Executive", location: "DUBAI", experience: "2–4 years", positions: 2 },
-  { title: "Full Stack Developer", location: "PUNE", experience: "3–6 years", positions: 1 },
-  { title: "Customer Support Executive", location: "BANGALORE", experience: "0–2 years", positions: 2 },
-  { title: "Graphic Designer", location: "NASHIK", experience: "1–4 years", positions: 1 },
-  { title: "Video Editor", location: "MUMBAI", experience: "2+ years", positions: 1 },
-  { title: "Business Analyst", location: "KOLKATA", experience: "3–5 years", positions: 1 },
-  { title: "QA Tester", location: "INDORE", experience: "0–3 years", positions: 2 },
-  { title: "IT Support Executive", location: "HYDERABAD", experience: "1–3 years", positions: 1 }
-];
 export default function WorkWithUs() {
   const [location, setLocation] = useState("");
   const [position, setPosition] = useState("");
@@ -65,10 +18,8 @@ export default function WorkWithUs() {
       (!position || job.title === position)
   );
 
-  
   return (
     <div className="min-h-screen bg-white text-gray-1000 px-8 sm:px-16 py-10 mt-10">
-      {/* 💡 HEADER ROW */}
       <div className="flex flex-wrap justify-between items-center mb-12">
         <h1 className="text-5xl font-bold mb-4 sm:mb-0">Work With Us</h1>
 
@@ -116,7 +67,7 @@ export default function WorkWithUs() {
         </div>
       </div>
 
-      {/* JOB CARDS GRID */}
+      {/* JOB CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job, idx) => (
@@ -136,15 +87,17 @@ export default function WorkWithUs() {
                 Candidates with {job.experience} of work experience — {job.positions} Position{job.positions > 1 ? "s" : ""}
               </p>
               <div className="mt-6 flex gap-4">
-                {["Apply Now", "More Info..."].map((label, i) => (
-                  <button
-                    key={i}
-                    className="flex-1 border border-blue-800 text-blue-800 py-2 rounded-lg text-sm hover:bg-blue-800 hover:text-white transition"
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
+  {["Apply Now", "More Info..."].map((label, i) => (
+    <Link
+      key={i}
+      href={`/job-details/${encodeURIComponent(job.title)}`}
+      className="flex-1 border border-blue-800 text-blue-800 py-2 rounded-lg text-sm text-center hover:bg-blue-800 hover:text-white transition"
+    >
+      {label}
+    </Link>
+  ))}
+</div>
+
             </div>
           ))
         ) : (

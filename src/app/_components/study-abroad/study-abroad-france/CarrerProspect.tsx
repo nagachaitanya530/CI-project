@@ -30,7 +30,7 @@ function CarrerProspect() {
         <div className="py-12 px-4 text-center">
             <h2 className="text-5xl font-bold -mt-1 text-gray-900 p-5">
                 <span className="text-5xl">
-                    <span className="relative z-10 text-orange-600 text-black">
+                    <span className="relative z-10  text-black">
                         Career Prospect &nbsp;
                     </span>
                 </span>

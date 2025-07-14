@@ -27,10 +27,11 @@ const navItems = [
     label: "Courses",
     icon: BookOpen,
     dropdown: [
-
-
-      { label: "Special Classes", href: "special-classes" },
+      { label: "Special Classes", href: "/special-classes" },
       { label: "IELTS Classes", href: "/what-is-ielts" },
+      {
+        label: "Spoken English",
+        dropdown: [
           {
             label: "English Courses",
             dropdown: [
@@ -38,52 +39,31 @@ const navItems = [
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
-              { label: "Corporate Training English", href: "/corporate-training-english" },
+              { label: "Corporate Training English", href: "/" },
             ],
           },
+        ],
+      },
       { label: "OET Classes", href: "/oet-classes" },
       { label: "Foreign Languages", href: "/foreign-languages" },
       { label: "Kids Courses (Languages)", href: "/Kids_Courses" },
       { label: "Online Mock Tests", href: "/online-mock-test" },
-
-
-
     ],
   },
-  {
-    label: "Book Demo",
-    href: "/book-demo",
-    isButton: true,
-    icon: CalendarCheck,
-  },
+  { label: "Book Demo", href: "/book-demo", isButton: true, icon: CalendarCheck },
   { label: "Fees", href: "/fees", icon: FileText },
-
   { label: "JOC", href: "/joc-page", icon: GraduationCap },
-
-
- 
-
-
-  {
-    label: "Study Abroad", href: "/study-abroad", isButton: true,
-    icon: Globe,
-
-
-
-  },
+  { label: "Study Abroad", href: "/study-abroad", isButton: true, icon: Globe },
   {
     label: "About CI",
     icon: Info,
     dropdown: [
-
       { label: "About us", href: "/about_us" },
       { label: "Careers", href: "/career" },
       { label: "Community", href: "/Community" },
       { label: "Contact us", href: "/ContactUs" },
       { label: "Terms of Service", href: "/term_of_service" },
       { label: "Privacy Policy", href: "/privecy_policy" },
-
-
     ],
   },
 ];

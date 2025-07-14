@@ -80,7 +80,7 @@ export default function StudyInMalaysiaPage() {
     <>
       <NavigationSection />
 
-      
+
       <HeroSection onConsultClick={() => setShowForm(true)} />
       <ConsultationForm show={showForm} onClose={() => setShowForm(false)} />
 

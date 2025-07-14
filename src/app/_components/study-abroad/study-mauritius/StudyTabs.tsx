@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { File, BookOpenText } from "lucide-react";
-
+import StudyAbroadModal from "./StudyAbroadModal";
 export default function StudyTabs() {
+  const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState("documents");
   const documentsRef = useRef<HTMLDivElement | null>(null);
   const visaRef = useRef<HTMLDivElement | null>(null);
@@ -41,35 +42,26 @@ export default function StudyTabs() {
         <span className="font-bold underline decoration-red-500">Mauritius</span>
       </h2>
 
-      {/* Heading */}
-<h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
-  <span>More about </span>
-  <span className="font-bold underline decoration-red-500">
-     Mauritius
-  </span>
-</h2>
 
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-[300px] shrink-0 h-fit md:sticky md:top-20 self-start z-10 bg-white">
           <div className="flex md:flex-col gap-4">
             <button
               onClick={() => scrollToSection(documentsRef)}
-              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${
-                activeTab === "documents"
-                  ? "bg-blue-700 text-white"
+              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${activeTab === "documents"
+                  ? "bg-blue-900 text-white"
                   : "bg-white text-gray-700"
-              }`}
+                }`}
             >
               <File className="w-4 h-4" />
               <span>Documents</span>
             </button>
             <button
               onClick={() => scrollToSection(visaRef)}
-              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${
-                activeTab === "visa"
-                  ? "bg-blue-700 text-white"
+              className={`py-2 px-4 rounded-full text-left border flex items-center gap-2 ${activeTab === "visa"
+                  ? "bg-blue-900 text-white"
                   : "bg-white text-gray-700"
-              }`}
+                }`}
             >
               <BookOpenText className="w-4 h-4" />
               <span>Visa</span>
@@ -96,7 +88,9 @@ export default function StudyTabs() {
               <li>Letter of Recommendation</li>
               <li>Visa documents</li>
             </ul>
-            <button className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50">
+            <button className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50"
+              onClick={() => setShowModal(true)}
+            >
               Free Expert Consultation
             </button>
           </div>
@@ -117,12 +111,18 @@ export default function StudyTabs() {
               <li>Offer letter with course details</li>
               <li><strong>Processing time:</strong> ~4 weeks</li>
             </ul>
-            <button className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50">
+
+
+            <button className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50"
+              onClick={() => setShowModal(true)}
+            >
               Free Expert Consultation
             </button>
+
           </div>
         </div>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

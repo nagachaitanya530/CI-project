@@ -2,15 +2,12 @@ import Table from "./Table";
 
 function FeeSection() {
 
-    
     const testtime = [
         { left: "Test Fee", right: "₹17,000/- (IELTS UKVI: ₹17250/-)" },
         { left: "Rescheduling Fee", right: "₹4250/- (IELTS UKVI: ₹4300/-)" },
         { left: "Extra Score Reporting Fee", right: "₹1500/- for courier, ₹400/- for registered post." },
 
     ]
-
-
     return (
         <>
             <section id="fee">
@@ -29,7 +26,12 @@ function FeeSection() {
                     </li>
                     <li><strong>Computer Based only 2 Slots:</strong> 9am to 12 pm and 1pm to 4pm</li>
                 </ul>
-<br />
+
+                <br />
+                <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
+                <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
+
+                <br />
                 <h3 className="text-xl font-bold mb-5 text-cyan-900">Fees :</h3>
                 <Table bodyrows={testtime} heading="" thead1="Time Slot	" thead2="Duration" /><br />
 

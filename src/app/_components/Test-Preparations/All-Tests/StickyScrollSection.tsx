@@ -54,18 +54,18 @@ export default function StickyScrollSection({
 
   return (
     <section className=" mx-auto px-4 md:px-20 py-12">
-<div className="text-left mb-12 max-w-3xl">
-  <h2 className="text-3xl md:text-5xl font-bold leading-snug text-black">
-    Unlock The Unparalleled Benefits Of
-    <br />
-    <span className="relative inline-block font-extrabold text-black">
-      <span className="relative z-10">Test Prep</span>
-      <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 z-[-1] rounded-full translate-y-1"></span>
-    </span>{" "}
-    With Edwise
-  </h2>
-  <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
-</div>
+      <div className="text-left mb-12 max-w-3xl">
+        <h2 className="text-3xl md:text-5xl font-bold leading-snug text-black">
+          Unlock The Unparalleled Benefits Of
+          <br />
+          <span className="relative inline-block font-extrabold text-black">
+            <span className="relative z-10">Test Prep</span>
+            <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 z-[-1] rounded-full translate-y-1"></span>
+          </span>{" "}
+          With Edwise
+        </h2>
+        <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
+      </div>
 
 
       <div className="flex flex-col md:flex-row gap-10">

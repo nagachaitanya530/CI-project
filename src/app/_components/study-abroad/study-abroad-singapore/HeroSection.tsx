@@ -1,4 +1,10 @@
+import StudyAbroadModal from "../study-mauritius/StudyAbroadModal";
+import { useState } from "react";
+
 function HeroSection() {
+
+  const [showModal, setShowModal] = useState(false);
+
 
     const stats = [
     {
@@ -37,7 +43,7 @@ function HeroSection() {
                 <button
                   id="openPopup"
                   className="bg-blue-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition cursor-pointer"
-                >
+                              onClick={() => setShowModal(true)} >
                   Free Expert Consultation
                 </button>
                 {/* <a
@@ -76,6 +82,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
     </section>
   );
 }

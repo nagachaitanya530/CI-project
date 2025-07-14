@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import HeroSection  from "~/app/_components/study-abroad/study-abroad-france/HeroSection";
+import React from "react";
+import HeroSection from "~/app/_components/study-abroad/study-abroad-france/HeroSection";
 import WhyStudy from "~/app/_components/study-abroad/study-abroad-france/WhyStudy";
-import ContactFormSection from '~/app/_components/study-abroad/home/contact-form';
 import UniversityList from "~/app/_components/study-abroad/study-abroad-france/UniversityList";
 import PopularCourses from "~/app/_components/study-abroad/study-abroad-france/PopularCourses";
 import CostOfStudy from "~/app/_components/study-abroad/study-abroad-france/CostOfStudy";
@@ -14,7 +13,6 @@ import SuccessStory from "~/app/_components/study-abroad/study-abroad-france/Suc
 import RelatedArticle from "~/app/_components/study-abroad/study-abroad-france/RelatedArticle";
 import NavigationSection from "~/app/_components/navigation1";
 import FooterSection from "~/app/_components/footer1";
-//import Form from "~/app/_components/study-abroad/study-abroad-france/Form";
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import FAQ from "~/app/_components/study-abroad/faq";
 
@@ -47,20 +45,19 @@ function Study_in_france() {
         <>
             <NavigationSection />
             <HeroSection />
-            <WhyStudy/>
-            <ContactFormSection />
-            <UniversityList/>
-            <PopularCourses/>
-            <CostOfStudy/> 
-            <Scholarship/> 
-            <CarrerProspect/>
-            <MoreAbout/>
-            <RelatedArticle/>
-            <SuccessStory/>
+            <WhyStudy />
+            <UniversityList />
+            <PopularCourses />
+            <CostOfStudy />
+            <Scholarship />
+            <CarrerProspect />
+            <MoreAbout />
+            <RelatedArticle />
+            <SuccessStory />
             <FAQ faqs={faqs} />
-            <YourJourney/>
-            <FooterSection/> 
-   </>
+            <YourJourney />
+            <FooterSection />
+        </>
     );
 }
 

@@ -1,18 +1,17 @@
 'use client'
-import { FileBadge2 } from 'lucide-react'
-import BookConsultationForm from '../BookConsultationForm'
-
+import { FileBadge2, FileText, IdCardLanyard } from 'lucide-react'
+import { useEffect, useRef, useState, type JSX } from 'react';
+import BookConsultationForm from '../BookConsultationForm';
 function WhyStudy() {
   return (
     <>
-      {/* main section */}
+
       <div className="ml-20 p-6 md:flex md:justify-between md:items-start gap-10 max-w-6xl mx-auto">
-        {/* left content */}
         <div className="md:w-2/3 mt-10">
           <h1 className="text-4xl md:text-5xl font-lightl mb-6">
-            Why <span className="text-black font-semibold">Study In New Zealand?</span>
+            Why <span className="text-black font-semibold">Study In New Zealand?
+            </span>
           </h1>
-
           <section className="mb-6 mt-10">
             <h2 className="font-bold text-2xl flex items-center gap-2 top-5">
               <span><FileBadge2 /></span> GLOBAL RECOGNITION
@@ -70,18 +69,14 @@ function WhyStudy() {
               <span><FileBadge2 /></span> LOW TUITION FEES
             </h2>
             <p className="text-xl text-gray-700 mt-5 text justify-center ml-10">
-              The cost for students who wish to study abroad in New Zealand, including accommodation, food, and transportation, is relatively lower compared to many other study destinations. This makes studying in New Zealand more financially feasible for many students.
-            </p>
+              The cost for students who wish to study abroad in New Zealand, including accommodation, food, and transportation, is relatively lower compared to many other study destinations. This makes studying in New Zealand more financially feasible for many students.                 </p>
           </section>
 
           <hr className="border-t border-gray-300" />
-        </div>
 
-        {/* right section - optional form or visuals can go here */}
-        {/* <BookConsultationForm /> */}
+        </div>
       </div>
     </>
   )
 }
-
 export default WhyStudy;

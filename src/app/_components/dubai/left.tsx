@@ -36,9 +36,8 @@ const items: WhyStudyItem[] = [
 
 function WhyStudy() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white w-full overflow-x-hidden">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-10">
-        {/* Left Content */}
         <div className="lg:w-3/5">
           <h2 className="text-3xl md:text-4xl font-medium mb-10">
             Why{" "}
@@ -63,8 +62,7 @@ function WhyStudy() {
           ))}
         </div>
 
-        {/* Right Form */}
-        
+       
       </div>
     </section>
   );
