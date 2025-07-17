@@ -1,15 +1,15 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link'
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import NavigationSection from '~/app/_components/navigation1';
-=======
+
+//import Navigation from '~/app/_components/Navigation';
+
+
 import Navigation from '~/app/_components/Navigation';
->>>>>>> feature/UpdatePage
-=======
-import Navigation from '~/app/_components/Navigation';
->>>>>>> cost-of-studying-usa
+
 const MBACanadaBlog = () => {
   return (
     <div>

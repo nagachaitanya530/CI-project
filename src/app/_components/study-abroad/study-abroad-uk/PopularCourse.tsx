@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const courses = [
@@ -48,6 +49,15 @@ const PopularCoursesSection = () => {
   {/* Cards */}
   <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full px-10">
     {courses.map((course, index) => (
+       <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.03 }}
+                  className="bg-white border rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                >
       <div
         key={index}
         className="rounded-3xl overflow-hidden border border-blue-100 shadow bg-white"
@@ -55,7 +65,9 @@ const PopularCoursesSection = () => {
         <img src={course.image} alt={course.name} className="w-full h-48 object-cover" />
         <div className="py-4 text-lg font-semibold text-gray-900">{course.name}</div>
       </div>
+      </motion.div>
     ))}
+    
   </div>
 </div>
 

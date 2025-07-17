@@ -1,3 +1,73 @@
+
+
+import ScrollContainer from 'react-indiana-drag-scroll';
+function ListOfUniversity()
+{
+    const universities = [
+  {
+    name: "University of Cambridge",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-cambridge-uk.webp",
+    popular: "Sciences & Engineering",
+    ranking: 2,
+  },
+  {
+    name: "University of Oxford",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-oxford-uk.webp",
+    popular: "Humanities & Sciences",
+    ranking: 3,
+  },
+  {
+    name: "Imperial College London",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/imperial-college-london-uk.webp",
+    popular: "Engineering & Medicine",
+    ranking: 6,
+  },
+  {
+    name: "University of Edinburgh",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-edinburgh-uk.webp",
+    popular: "Arts & Humanities",
+    ranking: 22,
+  },
+  {
+    name: "University of Manchester",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-manchester-uk.webp",
+    popular: "Business & Law",
+    ranking: 32,
+  },
+  {
+    name: "King’s College London",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/kings-college-london-uk.webp",
+    popular: "Health & Life Sciences",
+    ranking: 40,
+  },
+  {
+    name: "London School of Economics",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/london-school-of-economics-uk.webp",
+    popular: "Social Sciences",
+    ranking: 45,
+  },
+  {
+    name: "University of Warwick",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-warwick-uk.webp",
+    popular: "Business & Economics",
+    ranking: 67,
+  },
+  {
+    name: "University of Glasgow",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-glasgow-uk.webp",
+    popular: "Veterinary, Life Sciences",
+    ranking: 76,
+  },
+  {
+    name: "University of Birmingham",
+    img: "https://www.edwiseinternational.com/img/uni-logo-uk/university-of-birmingham-uk.webp",
+    popular: "Engineering",
+    ranking: 80,
+  },
+];
+
+
+
 import ScrollContainer from "react-indiana-drag-scroll";
 
 function ListOfUniversity() {
@@ -63,6 +133,7 @@ function ListOfUniversity() {
       ranking: 80,
     },
   ];
+
 
   return (
     <section className="bg-blue-300">

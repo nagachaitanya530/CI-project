@@ -66,7 +66,7 @@ function EnglishAdvance() {
             </div>
           </div>
 
-          <Footer />
+         
         </div>
       </div>
 

@@ -1,8 +1,22 @@
 "use client";
+
+
+import Link from "next/link";
+import { useState } from "react";
+import StudyAbroadModal from "../study-mauritius/StudyAbroadModal";
+
+function HeroSection2()
+{
+    const [showModal, setShowModal] = useState(false);
+    return(
+      <>
+                  {/* Hero Section  */}
+
 import Image from "next/image";
 function HeroSection2() {
     return (
         <>
+
             <section className="bg-blue-50 py-10 px-6 lg:px-24 flex flex-col lg:flex-row justify-between items-center">
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-semibold text-blue-900 mb-2">SAT – 2025</h1>
@@ -26,7 +40,7 @@ function HeroSection2() {
                             </p>
                         </div>
                     </div>
-                    <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition" onClick={() => setShowModal(true)}>
                         Free Expert Consultation
                     </button>
                 </div>
@@ -47,6 +61,7 @@ function HeroSection2() {
                         Last updated – 19 October '24
                     </p>
                 </div>
+                 {showModal && <StudyAbroadModal onClose={() => setShowModal(false)} />}
             </section>
         </>
     );

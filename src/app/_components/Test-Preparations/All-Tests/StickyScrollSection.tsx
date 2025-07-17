@@ -62,7 +62,7 @@ export default function StickyScrollSection({
             <span className="relative z-10">Test Prep</span>
             <span className="absolute left-0 bottom-0 w-full h-[6px] bg-red-400 z-[-1] rounded-full translate-y-1"></span>
           </span>{" "}
-          With Edwise
+          With CI
         </h2>
         <p className="text-gray-600 mt-4 text-base md:text-lg">{subheading}</p>
       </div>

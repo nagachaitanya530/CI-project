@@ -1,7 +1,11 @@
 "use client";
 import { CheckCircle, PhoneCall } from "lucide-react";
 
+
 import Footer from "../_components/Footer";
+=======
+
+
 import Navigation from "../_components/Navigation";
 
 
@@ -1012,6 +1016,10 @@ function IeltsPage() {
             </h2>
           </div>
 
+
+
+        {/* Right Column - Info Text */}
+
         <div className="w-full md:w-1/2 text-gray-700  text-base space-y-4 leading-relaxed">
           <p className="font-bold text-2xl">
             A certified IELTS examiner evaluates your performance throughout the
@@ -1030,6 +1038,7 @@ function IeltsPage() {
       </div>
     </section>
     
+
    <section
   className="w-full h-screen bg-cover bg-center flex items-center justify-center"
   style={{ backgroundImage: "url('/Ielts/customer.jpg')" }}
@@ -1043,6 +1052,23 @@ function IeltsPage() {
   </div>
 </section>
   <Footer />
+
+
+    <section
+      className="min-h-screen flex items-center justify-center px-4 py-10 bg-no-repeat bg-contain bg-center"
+      style={{
+        backgroundImage:
+          "url('https://d2o42wz6gj7hm6.cloudfront.net/wp-content/uploads/2021/07/01130041/040030021-contact-us-banner.jpg')",
+      }}
+    >
+      <div className="bg-white/90 rounded-xl p-6 w-[600px] flex flex-col md:flex-row gap-8 items-start">
+        {/* Left Column */}
+        <div className="w-full md:w-1/2 space-y-6">
+          <img
+            src=""
+            alt="National Institute of Language"
+            className="w-full h-auto object-contain"
+          />
 
 
          

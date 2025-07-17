@@ -159,8 +159,13 @@ const ScrollCardAnimation2: React.FC = () => {
                     animation: float 3s ease-in-out infinite;
                 }
             `}</style>
+
+        </div>
+    );
+
     </div>
   );
+
 };
 
 export default ScrollCardAnimation2;
