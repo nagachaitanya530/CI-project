@@ -20,7 +20,7 @@ function LoginForm() {
     setUserCaptcha(""); // reset user input
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (userCaptcha.trim() === captchaAnswer) {
       setError("");
