@@ -25,10 +25,12 @@ export default function LanguageCard() {
                 <p className="text-white/80 text-base mb-8 leading-relaxed">
                   Get expert guidance for your immigration journey with our specialized programs designed for permanent residency success.
                 </p>
+                <Link href="/ContactUs">
                 <button className=" onClick={handleWhatsApp} bg-blue-600 hover:bg-purple-600 text-white px-8 py-3 rounded font-medium shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-in-out active:scale-95 relative overflow-hidden group hover:cursor-pointer">
                   <span className="relative z-10">CONNECT WITH US</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-pulse transition-opacity duration-300"></div>
                 </button>
+                </Link>
               </div>
 
               {/* Right Content - Language Chart */}

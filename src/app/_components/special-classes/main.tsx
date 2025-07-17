@@ -6,7 +6,7 @@ import { Card, CardContent } from '~/components/ui/card';
 import {Newspaper, Mic, Users, Star, CheckCircle, Award,Clock, MessageCircle, HelpCircle, Quote, Video
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import Link from 'next/link';
 const TARGET_DATE = new Date('2025-07-01T00:00:00');
 export default function SpokenWithPDCCPage() {
     const [timeLeft, setTimeLeft] = useState('');
@@ -137,9 +137,10 @@ export default function SpokenWithPDCCPage() {
             <section className="text-center py-12 bg-gray-100 rounded-xl mt-12">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Course Fee & Inclusions</h2>
                 <p className="text-lg text-gray-700 mb-2">₹25,000 – one-time payment</p>
-                <a href="https://buy.stripe.com/test_faKEStripeLinkforEnrollment" target="_blank" rel="noopener noreferrer">
+                <Link href="/enrollment">
                     <Button className="text-lg px-6 py-3 mt-4">Pay & Enroll</Button>
-                </a>
+                    </Link>
+                
             </section>
 
             <section className="py-12 bg-green-50 text-center">

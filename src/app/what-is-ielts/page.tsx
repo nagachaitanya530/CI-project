@@ -1,8 +1,23 @@
 "use client";
 import { CheckCircle, PhoneCall } from "lucide-react";
-import Footer from "../_components/footer1";
+
+
+import Footer from "../_components/Footer";
+=======
+
+
 import Navigation from "../_components/Navigation";
+
+
 import { useEffect, useState } from "react";
+import HeroSectionIelts from "../_components/what-is-ielts/HeroSection";
+import CourcesDesc from "../_components/what-is-ielts/courcesDesc";
+import MostCources from "../_components/what-is-ielts/mostcources";
+import BestCources from "../_components/what-is-ielts/cources";
+import IeltsStories from "../_components/what-is-ielts/IeltsStories";
+import ProgressBar from "../_components/ProgressBar";
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
 const rotatingWords = ["solution", "result", "service"];
 function IeltsPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,32 +73,10 @@ function IeltsPage() {
       text: `More than 100 mock tests are conducted to look after every module for extensive practice.`,
     },
   ];
-  const titleWords = "Most Popular Group Courses".split(" ");
-  interface CardProps {
-    image: string;
-    title: string;
-    description: string;
-    badge?: string;
-  }
 
-  function Card({ image, title, description, badge }: CardProps) {
-    return (
-      <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-        <div className="relative">
-          <img src={image} alt={title} className="w-full h-48 object-cover" />
-          {badge && (
-            <span className="absolute top-2 right-2 bg-red-400 text-white text-xs px-2 py-1 rounded-full">
-              {badge}
-            </span>
-          )}
-        </div>
-        <div className="p-4">
-          <div className="font-bold text-lg mb-1">{title}</div>
-          <p className="text-gray-600 text-sm">{description}</p>
-        </div>
-      </div>
-    );
-  }
+ 
+
+
 
 
   const tabs = [
@@ -156,267 +149,80 @@ function IeltsPage() {
     },
   ];
 
-
-  interface ProgressBarProps {
-    label: string;
-    value: number;
-    text: string;
-  }
-
-  const ProgressBar: React.FC<ProgressBarProps> = ({ label, value, text }) => (
-    <div className="space-y-1">
-      <span className="text-sm font-medium text-gray-800">{label}</span>
-      <div className="w-full bg-gray-200 rounded-full h-4">
-        <div
-          className="bg-blue-600 h-4 rounded-full flex items-center justify-between px-2 text-white text-xs"
-          style={{ width: `${value}%` }}
-        >
-          <span>{text}</span>
-          <span>{value}%</span>
+    interface ProgressBarProps {
+        label: string;
+        value: number;
+        text: string;
+      }
+    
+      const ProgressBar: React.FC<ProgressBarProps> = ({ label, value, text }) => (
+        <div className="space-y-1">
+          <span className="text-sm font-medium text-gray-800">{label}</span>
+          <div className="w-full bg-gray-200 rounded-full h-4">
+            <div
+              className="bg-blue-600 h-4 rounded-full flex items-center justify-between px-2 text-white text-xs"
+              style={{ width: `${value}%` }}
+            >
+              <span>{text}</span>
+              <span>{value}%</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      );
+
+  const partners = [
+  {
+    src: "https://nationalinstituteoflanguage.in/wp-content/uploads/2022/05/BritishCouncil_Logo-300x147.png",
+    alt: "British Council",
+  },
+  {
+    src: "https://nationalinstituteoflanguage.in/wp-content/uploads/2022/05/logo-300x79.jpeg",
+    alt: "Logo",
+  },
+  {
+    src: "https://nationalinstituteoflanguage.in/wp-content/uploads/2022/05/blue_logo-300x46.png",
+    alt: "Blue Logo",
+  },
+  {
+    src: "https://nationalinstituteoflanguage.in/wp-content/uploads/2022/05/upgrad_owler_20190704_175419_original-300x89.png",
+    alt: "UpGrad",
+  },
+];
 
   return (
     <div>
       <Navigation />
 
-      <section>
-        <div className="relative bg-[#12191D] text-white overflow-hidden">
-          {/* Bottom White Curve */}
-          <div className="absolute bottom-0 w-full pointer-events-none z-0">
-            <svg
-              className="w-full"
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="#ffffff"
-                d="M0,256L48,245.3C96,235,192,213,288,202.7C384,192,480,192,576,186.7C672,181,768,171,864,186.7C960,203,1056,245,1152,261.3C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              />
-            </svg>
-          </div>
-
-          {/* Main Content */}
-          <div className="relative z-10 max-w-screen-xl mx-auto px-6 pt-32 pb-52 grid md:grid-cols-2 gap-16">
-            {/* Left Side Heading */}
-            <div className="border-l-4 border-green-500 pl-8">
-              <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-[#FDEBD0]">
-                IELTS Makes <br /> The World Go <br /> Round
-              </h1>
-            </div>
-
-            {/* Right Side Features */}
-            <div className="grid grid-cols-1 gap-5 text-lg md:text-xl">
-              {[
-                "10000+ Institutions",
-                "140+ Countries",
-                "1100+ Test Centres",
-                "1.4 Million Test Takers",
-                "14000+ Evaluators",
-                "No. 1 Language Test in The World",
-              ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <span className="text-orange-500 mr-4 text-2xl mt-1">✔</span>
-                  <span className="text-gray-300">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+      <HeroSectionIelts/>
+      <BestCources/>
+      <MostCources/>
+     <CourcesDesc/>
+     <IeltsStories/>
+        <section className="w-full  py-12 px-4 bg-gray-200">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        {/* Left Content */}
+        <div className="space-y-2">
+          <span className="text-xl text-indigo-600 font-semibold">Our Partners</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Official Partners</h2>
         </div>
-      </section>
-      <section>
-        <div className="min-h-screen bg-gradient-to-r from-green-50 to-blue-50 p-6">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Left Sticky Section */}
-            <div className="md:col-span-1">
-              <div className="sticky top-10 left-40">
+
+        {/* Carousel */}
+        <div className="overflow-hidden">
+          <div className="flex gap-6 animate-scroll">
+            {partners.concat(partners).map((partner, idx) => (
+              <div key={idx} className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white shadow-md rounded-lg p-2">
                 <img
-                  src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/verfied-badge.png"
-                  alt="Verified Badge"
-                />
-                <h4 className="text-2xl font-semibold py-2">Best Online IELTS Courses</h4>
-                <h1 className="text-7xl font-bold">Live Class</h1>
-                <h2 className="text-3xl font-semibold py-2">Certified Expert Coaches</h2>
-                <p className="w-1/2">
-                  Get your desired IELTS Score in live online classes with British Council & Cambridge Certified Trainers.
-                  Join India’s best online IELTS courses at National Institute of Langauge.
-                </p>
-                <br />
-                <div className="flex items-center">
-                  <hr className="w-6 pr-7" /> &nbsp;
-                  <a href="/book demo" className="pl-5 font-semibold text-lg">
-                    Book a Free DEMO 📓
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Scrollable Cards Section */}
-            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="translate-y-0">
-                <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/typeelementorsiteurlhttpsnationalinstituteoflanguage.inwp-jsonelementsid3fd08ddelTypewidgetisInnerfalseisLockedfalsesettingscontent_widthfullspaceunitpxsize87sizesspace_tabletu.png"
-                  title="Customised TestPrep™ Platform"
-                  description="Specially developed online conferencing system to make it feel like a physical classroom."
+                  src={partner.src}
+                  alt={partner.alt}
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <div className="translate-y-10">
-                <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/typeelementorsiteurlhttpsnationalinstituteoflanguage.inwp-jsonelementsid3fd08ddelTypewidgetisInnerfalseisLockedfalsesettingscontent_widthfullspaceunitpxsize87sizesspace_tabletu-1.png"
-                  title="Dual Certified IELTS™ Coaches"
-                  description="A truly interactive experience with experts who have immense experience & Competence"
-                  badge="USP"
-                />
-              </div>
-              <div className="translate-y-0">
-                <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/nnnws.gif"
-                  title="Performance Analytics"
-                  description="Track your progress and identify key focus areas to improve your band score."
-                />
-              </div>
-              <div className="translate-y-10">
-                <Card
-                  image="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS.gif"
-                  title="Live Practice Sessions"
-                  description="Experience real exam simulations with expert feedback in real-time."
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-
-      </section>
-      <section>
-        <div className="p-6 max-w-4xl mx-auto">
-          {/* Title with Icon */}
-          <div className="flex items-center gap-3 mb-4">
-            <CheckCircle className="text-green-600 w-6 h-6" />
-
-            <h2 className="text-4xl font-bold text-gray-800 flex flex-wrap">
-              {titleWords.map((word, index) => (
-                <span
-                  key={index}
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                  className="inline-block mr-2 animate-loopFade"
-                >
-                  {word}
-                </span>
-              ))}
-            </h2>
-          </div>
-
-          {/* Description */}
-          <p className="text-gray-600 mb-4 font-bold">
-            Most comprehensive and effective group classes with no more than 10
-            students per batch.
-          </p>
-
-          <div className="border-t border-gray-300"></div>
-        </div>
-      </section>
-      <section className="pb-5">
-
-        <div className="w-full  bg-gray-100 flex justify-center items-start pt-10 px-4">
-          <div className="w-full max-w-[1400px] flex flex-col lg:flex-row justify-center items-stretch gap-15">
-            {/* Complete Course */}
-            <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-2.png" alt="Complete" className="w-full h-40 object-cover" />
-              <div className="bg-blue-700 p-6 text-white rounded-b-xl">
-                <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">Complete</div>
-                <div className="mb-2">⭐⭐⭐⭐⭐</div>
-                <p className="font-semibold mb-2">Comprehensive IELTS Course.</p>
-                <ul className="text-sm list-disc list-inside space-y-1">
-                  <li>2 Months Group Classes</li>
-                  <li>Live Sessions</li>
-                  <li>Mon-Fri</li>
-                  <li>Sat Mock tests</li>
-                  <li>Sunday Webinars</li>
-                  <li>A.I Mock Test Access</li>
-                </ul>
-                <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">KNOW MORE</button>
-              </div>
-            </div>
-
-            {/* SuperFast Course */}
-            <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-3.png" alt="SuperFast" className="w-full h-40 object-cover" />
-              <div className="bg-blue-700 p-6 text-white rounded-b-xl">
-                <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">SuperFast</div>
-                <div className="mb-2">⭐⭐⭐⭐⭐</div>
-                <p className="font-semibold mb-2">Fast Paced IELTS Course.</p>
-                <ul className="text-sm list-disc list-inside space-y-1">
-                  <li>45 Days Group Classes</li>
-                  <li>Live Sessions</li>
-                  <li>Mon-Fri</li>
-                  <li>Sat Mock tests</li>
-                  <li>Sunday Webinars</li>
-                  <li>A.I Mock Test Access</li>
-                </ul>
-                <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">KNOW MORE</button>
-              </div>
-            </div>
-
-            {/* Turbo Course */}
-            <div className="bg-white rounded-xl shadow-lg w-full lg:w-1/3">
-              <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/07/NEWSS-4.png" alt="Turbo" className="w-full h-40 object-cover" />
-              <div className="bg-blue-700 p-6 text-white rounded-b-xl">
-                <div className="bg-white text-black p-4 mb-4 rounded-xl text-center font-bold text-xl">Turbo</div>
-                <div className="mb-2">⭐⭐⭐⭐⭐</div>
-                <p className="font-semibold mb-2">Crash IELTS Course.</p>
-                <ul className="text-sm list-disc list-inside space-y-1">
-                  <li>1 Month Group Classes</li>
-                  <li>Live Sessions</li>
-                  <li>Mon-Fri</li>
-                  <li>Sat Mock tests</li>
-                  <li>Sunday Webinars</li>
-                  <li>A.I Mock Test Access</li>
-                </ul>
-                <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">KNOW MORE</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 py-10 px-6 text-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          {/* Left Column */}
-          <div className="space-y-6 animate-fadeInUp">
-            <h2 className="text-4xl font-bold leading-tight">
-              Make your
-              <br />
-              IELTS story
-            </h2>
-            <p className="text-lg">
-              Prepare for your IELTS examination online with the help of National Institute of Language and its expert faculty.
-            </p>
-            <p className="text-lg">
-              National Institute of Language provides you British Council and Cambridge certified educators in its online IELTS classes.
-            </p>
-            <a
-              href="#"
-              className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:scale-105 transition-transform"
-            >
-              Read More
-            </a>
-          </div>
-
-          {/* Right Column */}
-          <div className="   animate-fadeInUp">
-            <iframe
-              className="w-full  h-80 rounded  shadow-lg"
-              src="https://www.youtube.com/embed/fJqTKYwPspY?controls=1&rel=0"
-              title="IELTS with the National Institute of Language"
-
-
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
+      </div>
+    </section>
+    
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
           {/* Left Section */}
@@ -434,14 +240,14 @@ function IeltsPage() {
             </blockquote>
 
             {/* Two Images */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               <img
-                src="https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-2-qjjs4gfg5sssvm817zqlh8ljx02u252mjbg7n3crwg.jpg"
+                src="/Ielts/section4.1.jpg"
                 alt="IELTS Visual 1"
-                className="rounded shadow-lg transform transition-transform hover:scale-105"
+                className="rounded shadow-lg transform  hover:scale-105 delay-200"
               />
               <img
-                src="https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Add-a-subheading-1-q576f4izys1q33i16xybj3s9sfs5eeogs7chv1dhkw.png"
+                src="/Ielts/section4.jpg"
                 alt="IELTS Visual 2"
                 className="rounded shadow-lg transform transition-transform hover:scale-105 delay-200"
               />
@@ -480,255 +286,312 @@ function IeltsPage() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <span className="text-xl text-gray-600 font-semibold block mb-2">Salient Features</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Online IELTS Classes With Best In Industry Facilities</h2>
-          </div>
+     <section className="py-16 px-4 md:px-12 bg-white">
+  <div className="max-w-7xl mx-auto">
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <span className="text-xl text-gray-600 font-semibold block mb-2">Salient Features</span>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        Online IELTS Classes With Best In Industry Facilities
+      </h2>
+    </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-qqp6vkzdhybwhd2h9s29xngv04qb7eczdhloyqo9c0.png')" }}>
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
-              <div className="relative z-10 p-6 text-white">
-                <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                  <i className="fas fa-users text-white"></i>
-                </div>
-                <h4 className="text-xl font-bold mb-2">Certified Trainers</h4>
-                <p className="mb-4">CI online IELTS classes provide you the best and certified faculty</p>
-                <a href="https://nationalinstituteoflanguage.in/book-demo-ielts/" className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200">Meet Faculty</a>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/Untitled-design-1-qqp74dqzh4dj5yacw2zjrxj76zd09eaix1gbozml34.png')" }}>
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
-              <div className="relative z-10 p-6 text-white">
-                <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                  <i className="fas fa-stream text-white"></i>
-                </div>
-                <h4 className="text-xl font-bold mb-2">A.I Powered Mocks</h4>
-                <p className="mb-4">You cannot crack IELTS without intense practice and mock tests.</p>
-                <a href="https://nationalinstituteoflanguage.in/a-i-powered-ielts-online-mock-tests/" className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200">Learn More</a>
-                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-bl">Popular</span>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group" style={{ backgroundImage: "url('https://nationalinstituteoflanguage.in/wp-content/uploads/elementor/thumbs/IMG_5464-pp8tsyc8k1tqn19y410hpaozeugrmoc11bglegnm0w.png')" }}>
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
-              <div className="relative z-10 p-6 text-white">
-                <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                  <i className="fas fa-share-alt text-white"></i>
-                </div>
-                <h4 className="text-xl font-bold mb-2">Huge Active Community</h4>
-                <p className="mb-4">Practice and connect with other students in the CI community</p>
-                <a href="https://nationalinstituteoflanguage.in/forums/forum/ielts-writing-tasks/" className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200">Check Community</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div
-          className="bg-cover bg-center min-h-screen flex items-center"
-          style={{
-            backgroundImage:
-              "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOvQgqJNynAYA5yDf0oEM0XEkghgXOXWsA&s')",
-          }}
-        >
-          <div className="bg-white/80 w-full px-6 pt-0 pb-12 md:px-16 lg:px-24 flex flex-col lg:flex-row justify-between items-center gap-10">
-            {/* Left Text Area */}
-            <div className="w-full lg:w-1/2">
-              <p className="text-sm font-semibold text-gray-800 mb-2">
-                How can CI's Online IELTS Classes Help You?
-              </p>
-              <h2 className="text-4xl font-extrabold text-black mb-4 leading-tight">
-                Our Online IELTS Courses Deliver Results With Less Time And More
-                Comfort.
-              </h2>
-              <p className="text-gray-600 mb-6">
-                We provide multiple course options depending upon your individual
-                needs. From group classes to personal training sessions, our online
-                IELTS classes have redefined online preparation in Asia.
-              </p>
-              <a
-                href="/ielts-courses"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-md transition inline-block"
-              >
-                REGISTER YOURSELF →
-              </a>
-            </div>
-
-            {/* Stats Boxes */}
-            <div className="grid grid-cols-2 gap-6 w-full lg:w-1/2 pt-12">
-              <div className="bg-black text-white rounded-xl p-6 shadow-md">
-                <h3 className="text-4xl font-bold mb-1">50+<sup>+</sup></h3>
-                <p className="font-semibold">Batches</p>
-                <p className="text-sm text-gray-300 mt-1">
-                  Group classes provide discipline and collective learning
-                </p>
-              </div>
-              <div className="bg-black text-white rounded-xl p-6 shadow-md">
-                <h3 className="text-4xl font-bold mb-1">10+<sup>+</sup></h3>
-                <p className="font-semibold">Customised courses</p>
-                <p className="text-sm text-gray-300 mt-1">
-                  Choose from Personal Training or Group classes.
-                </p>
-              </div>
-              <div className="bg-black text-white rounded-xl p-6 shadow-md">
-                <h3 className="text-4xl font-bold mb-1">800+<sup>+</sup></h3>
-                <p className="font-semibold">Expert Trainers</p>
-                <p className="text-sm text-gray-300 mt-1">
-                  Highly competent and specialised faculty members
-                </p>
-              </div>
-              <div className="bg-black text-white rounded-xl p-6 shadow-md">
-                <h3 className="text-4xl font-bold mb-1">79K<sup>+</sup></h3>
-                <p className="font-semibold">8+ Band</p>
-                <p className="text-sm text-gray-300 mt-1">
-                  Our results speak for themselves
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-white text-gray-800">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <p className="text-lg text-gray-500">It's easy to enrol yourself.</p>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            Easy Steps To Register For Online IELTS Classes
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition"
-            >
-              <h4 className="text-indigo-600 font-bold text-2xl mb-4">
-                {step.number}
-              </h4>
-              <h5 className="text-xl font-semibold mb-2">{step.title}</h5>
-              <p className="text-gray-600 text-sm">{step.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section
-        className="relative py-12 px-4 bg-cover bg-center bg-black"
-
+    {/* Features Grid */}
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Feature 1 */}
+      <div
+        className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group"
+        style={{
+          backgroundImage: "url('/Ielts/pexels-olly-3769021.jpg')",
+        }}
       >
-        <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
-
-        <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
-          {/* Left Content */}
-          <div className="lg:w-10/12 space-y-6">
-            <span className="text-200 font-bold text-gray-100 ">Connect with our dedicated advisor</span>
-            <h2 className=" lg:text-6xl font-bold text-white">
-              We value your time and that's why we assign a dedicated advisor for you
-            </h2>
-            <p className="text-gray-200">
-              Dedicated advisor will help you from booking a demo class to choosing the correct course as well as guide you
-              through your entire journey with CI Online IELTS Classes.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="tel:+919569285185"
-                className="inline-flex items-center bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="w-4 h-4 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
-                </svg>
-                Get an advisor
-              </a>
-
-              <a
-                href="tel:+919569285185"
-                className="inline-flex items-center bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="w-4 h-4 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
-                </svg>
-                +91 9569 285 185
-              </a>
-            </div>
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
+        <div className="relative z-10 p-6 text-white">
+          <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <i className="fas fa-users text-white"></i>
           </div>
-        </div>
-        {/* Right Column (Empty) */}
-
-      </section>
-      <section className="w-full px-6 py-12 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Box 1 */}
-          <div className="p-6 rounded-xl text-white bg-gradient-to-br from-blue-600 to-indigo-500 shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Certified Trainers</h2>
-            <p>
-              CI Online IELTS Test Prep Course Gives You Access To Live Classes
-              With Certified Trainers
-            </p>
-          </div>
-
-          {/* Box 2 */}
-          <div className="p-6 rounded-xl text-white bg-gradient-to-br from-purple-600 to-pink-500 shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Live Online Classes</h2>
-            <p>
-              Recorded Lessons Can’t Solve Your Doubts, That’s Why We Focus On
-              Live Interactive Sessions.
-            </p>
-          </div>
-
-          {/* Box 3 */}
-          <div className="p-6 rounded-xl text-white bg-gradient-to-br from-teal-500 to-green-500 shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Regular Mock Tests</h2>
-            <p>
-              IELTS Can Not Be Cracked Without Proper Evaluation. We Conduct
-              Regular Mock Tests For IELTS
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="w-full px-4 py-12 bg-blue-950">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Getting Started Is Easy
-          </h2>
-          <p className="text-lg text-white">
-            Call an advisor – <strong>+91 9569 285 185</strong>. Take a Free Demo.
-          </p>
+          <h4 className="text-xl font-bold mb-2">Certified Trainers</h4>
+          <p className="mb-4">CI online IELTS classes provide you the best and certified faculty</p>
           <a
-            href="https://nationalinstituteoflanguage.in/book-demo-ielts/"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
+            href="/book-demo"
+            className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200"
           >
-            Book a Session
+            Meet Faculty
           </a>
         </div>
-      </section>
+      </div>
+
+      {/* Feature 2 */}
+      <div
+        className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group"
+        style={{
+          backgroundImage: "url('/Ielts/pexels-onewayupfusion-2085831.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
+        <div className="relative z-10 p-6 text-white">
+          <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <i className="fas fa-stream text-white"></i>
+          </div>
+          <h4 className="text-xl font-bold mb-2">A.I Powered Mocks</h4>
+          <p className="mb-4">You cannot crack IELTS without intense practice and mock tests.</p>
+          <a
+            href="/online-mock-test"
+            className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200"
+          >
+            Learn More
+          </a>
+          <span className="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-bl">
+            Popular
+          </span>
+        </div>
+      </div>
+
+      {/* Feature 3 */}
+      <div
+        className="relative bg-cover bg-center rounded-2xl shadow-lg overflow-hidden group"
+        style={{
+          backgroundImage: "url('/Ielts/pexels-fauxels-3184420.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all"></div>
+        <div className="relative z-10 p-6 text-white">
+          <div className="w-12 h-12 mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <i className="fas fa-share-alt text-white"></i>
+          </div>
+          <h4 className="text-xl font-bold mb-2">Huge Active Community</h4>
+          <p className="mb-4">Practice and connect with other students in the CI community</p>
+          <a
+            href="/community"
+            className="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200"
+          >
+            Check Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+      
+       <section>
+      <div
+        className="bg-cover bg-center min-h-screen flex items-center"
+        style={{
+          backgroundImage:
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOvQgqJNynAYA5yDf0oEM0XEkghgXOXWsA&s')",
+        }}
+      >
+        <div className="bg-white/80 w-full px-6 pt-0 pb-12 md:px-16 lg:px-24 flex flex-col lg:flex-row justify-between items-center gap-10">
+          {/* Left Text Area */}
+          <motion.div
+            className="w-full lg:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              How can CI's Online IELTS Classes Help You?
+            </p>
+            <h2 className="text-4xl font-extrabold text-black mb-4 leading-tight">
+              Our Online IELTS Courses Deliver Results With Less Time And More Comfort.
+            </h2>
+            <p className="text-gray-600 mb-6">
+              We provide multiple course options depending upon your individual
+              needs. From group classes to personal training sessions, our online
+              IELTS classes have redefined online preparation in Asia.
+            </p>
+            <a
+              href="/login"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-md transition inline-block"
+            >
+              REGISTER YOURSELF →
+            </a>
+          </motion.div>
+
+          {/* Stats Boxes */}
+          <div className="grid grid-cols-2 gap-6 w-full lg:w-1/2 pt-12">
+            {[
+              { count: 50, label: "Batches", desc: "Group classes provide discipline and collective learning" },
+              { count: 10, label: "Customised courses", desc: "Choose from Personal Training or Group classes." },
+              { count: 800, label: "Expert Trainers", desc: "Highly competent and specialised faculty members" },
+              { count: 79000, label: "8+ Band", desc: "Our results speak for themselves" },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-black text-white rounded-xl p-6 shadow-md"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+              >
+                <h3 className="text-4xl font-bold mb-1">
+                  <CountUp end={item.count} duration={2} />+
+                </h3>
+                <p className="font-semibold">{item.label}</p>
+                <p className="text-sm text-gray-300 mt-1">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <section className="py-16 px-6 bg-white text-gray-800">
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <p className="text-lg text-gray-500">It's easy to enrol yourself.</p>
+        <h2 className="text-3xl md:text-4xl font-bold mt-2">
+          Easy Steps To Register For Online IELTS Classes
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {steps.map((step, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <h4 className="text-indigo-600 font-bold text-2xl mb-4">
+              {step.number}
+            </h4>
+            <h5 className="text-xl font-semibold mb-2">{step.title}</h5>
+            <p className="text-gray-600 text-sm">{step.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+     <section className="relative py-12 px-4 bg-cover bg-center "style={{
+          backgroundImage:
+            "url('/Ielts/pexels-mikhail-nilov-7682340.jpg')",
+        }}>
+  <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
+
+  <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
+    {/* Left Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="lg:w-10/12 space-y-6"
+    >
+      <span className="text-200 font-bold text-blue-800">
+        Connect with our dedicated advisor
+      </span>
+      <h2 className="lg:text-6xl font-bold text-blue-900">
+        We value your time and that's why we assign a dedicated advisor for you
+      </h2>
+      <p className="text-blue-700">
+        Dedicated advisor will help you from booking a demo class to choosing the correct course as well as guide you
+        through your entire journey with CI Online IELTS Classes.
+      </p>
+
+      {/* Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="flex flex-wrap gap-4"
+      >
+        <a
+          href="tel:+919569285185"
+          className="inline-flex items-center bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          <svg aria-hidden="true" className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 448 512">
+            <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
+          </svg>
+          Get an advisor
+        </a>
+
+        <a
+          href="tel:+919569285185"
+          className="inline-flex items-center bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition"
+        >
+          <svg aria-hidden="true" className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 512 512">
+            <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
+          </svg>
+          +91 9569 285 185
+        </a>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+     <section className="w-full px-6 py-12 bg-white">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    {[
+      {
+        title: "Certified Trainers",
+        desc: "CI Online IELTS Test Prep Course Gives You Access To Live Classes With Certified Trainers",
+        bg: "from-blue-600 to-indigo-500",
+      },
+      {
+        title: "Live Online Classes",
+        desc: "Recorded Lessons Can’t Solve Your Doubts, That’s Why We Focus On Live Interactive Sessions.",
+        bg: "from-purple-600 to-pink-500",
+      },
+      {
+        title: "Regular Mock Tests",
+        desc: "IELTS Can Not Be Cracked Without Proper Evaluation. We Conduct Regular Mock Tests For IELTS",
+        bg: "from-teal-500 to-green-500",
+      },
+    ].map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        whileHover={{ scale: 1.03 }}
+        className={`p-6 rounded-xl text-white bg-gradient-to-br ${item.bg} shadow-md`}
+      >
+        <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+        <p>{item.desc}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+<section className="w-full px-4 py-12 bg-blue-950">
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+    className="max-w-3xl mx-auto text-center space-y-6"
+  >
+    <h2 className="text-3xl md:text-4xl font-bold text-white">
+      Getting Started Is Easy
+    </h2>
+    <p className="text-lg text-white">
+      Call an advisor – <strong>+91 9569 285 185</strong>. Take a Free Demo.
+    </p>
+    <motion.a
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.97 }}
+      href="/book-demo"
+      className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
+    >
+      Book a Session
+    </motion.a>
+  </motion.div>
+</section>
       <section className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12">
         <div className="flex flex-col lg:flex-row items-center gap-10">
 
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/05/bb-content-04.png"
+              src="/Ielts/pexels-djordje-petrovic-590080-2102415.jpg"
               alt="What is IELTS"
               width={570}
               height={516}
@@ -784,7 +647,7 @@ function IeltsPage() {
           {/* Left Column - Image + overlay box */}
           <div className="w-full lg:w-1/2 relative">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/10/pexels-wendy-wei-1699159.jpg"
+              src="/Ielts/section11.jpg"
               alt="Best online IELTS Coaching"
               width={640}
               height={960}
@@ -894,7 +757,7 @@ function IeltsPage() {
           {/* Left Image Column */}
           <div className="w-full md:w-1/2">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/05/Untitled-design-41.png"
+              src="/Ielts/section8.jpg"
               alt="IELTS Coaching"
               className="rounded-lg shadow-md w-full h-auto"
 
@@ -1083,7 +946,7 @@ function IeltsPage() {
           {/* Right Column (Image) */}
           <div className="lg:w-1/2 flex justify-center items-start">
             <img
-              src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/10/Untitled-design-9.png"
+              src="/Ielts/section9.jpg"
               alt="UK Visa & Immigration IELTS Preparation"
               className="rounded-lg shadow-md max-w-full h-auto"
             />
@@ -1124,7 +987,7 @@ function IeltsPage() {
           </div>
 
           <a
-            href="https://nationalinstituteoflanguage.in/book-demo-ielts/"
+            href="/book-demo"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition"
           >
             Get Appointment
@@ -1134,7 +997,7 @@ function IeltsPage() {
         {/* Right Image */}
         <div className="w-full md:w-1/2 relative z-0">
           <img
-            src="https://nationalinstituteoflanguage.in/wp-content/uploads/2021/05/3299789-2.jpg"
+            src="/Ielts/section10.jpg"
             alt="IELTS Illustration"
             className="w-full max-w-xl mx-auto object-contain rounded-lg"
           />
@@ -1153,7 +1016,10 @@ function IeltsPage() {
             </h2>
           </div>
 
+
+
         {/* Right Column - Info Text */}
+
         <div className="w-full md:w-1/2 text-gray-700  text-base space-y-4 leading-relaxed">
           <p className="font-bold text-2xl">
             A certified IELTS examiner evaluates your performance throughout the
@@ -1172,6 +1038,22 @@ function IeltsPage() {
       </div>
     </section>
     
+
+   <section
+  className="w-full h-screen bg-cover bg-center flex items-center justify-center"
+  style={{ backgroundImage: "url('/Ielts/customer.jpg')" }}
+>
+  <div className="bg-white/80 p-8 rounded-lg text-center max-w-md space-y-4">
+    <h2 className="text-3xl font-bold text-gray-800">We are here to help</h2>
+    <p className="text-gray-700">
+      If you need any help regarding any of these IELTS tests kinds, give us a call or drop a message on:
+    </p>
+    <h2 className="text-2xl font-bold text-blue-600">+91 9569 285 185</h2>
+  </div>
+</section>
+  <Footer />
+
+
     <section
       className="min-h-screen flex items-center justify-center px-4 py-10 bg-no-repeat bg-contain bg-center"
       style={{
@@ -1188,21 +1070,13 @@ function IeltsPage() {
             className="w-full h-auto object-contain"
           />
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-gray-800">We are here to help</h2>
-              <p className="text-gray-700">
-                If you need any help regarding any of these IELTS tests kinds, give us a call or drop a message on:
-              </p>
-              <h2 className="text-2xl font-bold text-blue-600">+91 9569 285 185</h2>
-            </div>
-          </div>
 
-          {/* Right Column (Empty) */}
-          <div className="w-full md:w-1/2">{/* Empty space */}</div>
-        </div>
-      </section>
+         
 
-      <Footer />
+      
+
+      
+
     </div>
   )
 

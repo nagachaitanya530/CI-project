@@ -1,4 +1,5 @@
 import React from 'react';
+import BookingSystem from '../book-demo';
 
 const ForeignLanguageBenefits = () => {
   return (
@@ -102,6 +103,7 @@ const ForeignLanguageBenefits = () => {
           </div>
         </div>
       </div>
+      <BookingSystem/>
     </section>
   );
 };

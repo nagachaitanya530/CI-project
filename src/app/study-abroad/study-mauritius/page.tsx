@@ -17,6 +17,7 @@ import FadeInOnScroll from './FadeInOnScroll';
 import FAQ from '~/app/_components/study-abroad/faq';
 import YourJourney from "~/app/_components/study-abroad/your-journey";
 import SuccessStories from "~/app/_components/Test-Preparations/All-Tests/SuccessStories";
+import { Award } from "lucide-react";
 const faqs = [
   {
     question: "What are the documents required to study in Mauritius?",
@@ -47,6 +48,32 @@ const faqs = [
   },
 ];
 
+const mauritiusUniversities = [
+  {
+    name: "University of Bristol",
+    image: "/unniversityvisitcar1.jpeg",
+    popularFor: "Mining & Medical Sciences",
+    ranking: "19",
+  },
+  {
+    name: "The University Of Edinburgh",
+    image: "/unniversityvisitcar2.jpeg",
+    popularFor: "Arts and Humanities",
+    ranking: "42",
+  },
+  {
+    name: "Johns Hopkins University",
+    image: "/unniversityvisitcar3.jpeg",
+    popularFor: "Engineering",
+    ranking: "43",
+  },
+  {
+    name: "The University of Melbourne",
+    image: "/unniversityvisitcar4.jpeg",
+    popularFor: "Business & Law",
+    ranking: "195",
+  },
+];
 const stories = [
   {
     text: "Edwise does not stop at admissions. Their ongoing support post-study helped me transition smoothly into my career. The best decision for my academic journey!",
@@ -74,28 +101,68 @@ const stories = [
   },
 ];
 
+const mauritiusReasons = [
+  {
+    title: "Affordable Education",
+    description:
+      "Compared to other western nations, the universities in Mauritius offer lower tuition fees. Additionally, scholarships and financial aid programs significantly reduce the financial burden.",
+    icon: Award,
+  },
+  {
+    title: "Better Job Opportunities",
+    description:
+      "International students are permitted to work while studying in Mauritius and are eligible to work post-study if they meet the set criteria. This allows all the students to gain work experience.",
+    icon: Award,
+  },
+  {
+    title: "Easy Visa Process",
+    description:
+      "The application process and the visa process for studying in Mauritius are quite seamless for all international students.",
+    icon: Award,
+  },
+  {
+    title: "Internationally Recognised Qualification",
+    description:
+      "The programs offered by the universities in Mauritius are accredited and globally recognised. This means that the degree holds weightage worldwide.",
+    icon: Award,
+  },
+  {
+    title: "Culturally Diverse",
+    description:
+      "Mauritius is a melting pot of all cultures that provides students with a diverse environment and friendly people.",
+    icon: Award,
+  },
+  {
+    title: "Beautiful Surroundings",
+    description:
+      "With its tropical climate, beautiful beaches, and lush green vegetation, Mauritius is a beautiful nation to study in.",
+    icon: Award,
+  },
+];
+
 export default function Page() {
   return (
     <>
       <Navigation />
       <MauritiusBanner />
-      <FadeInOnScroll><WhyStudySection /></FadeInOnScroll>
-
-      <FadeInOnScroll><UniversityList /></FadeInOnScroll>
+      <FadeInOnScroll><WhyStudySection country="Mauritius" reasons={mauritiusReasons} />;</FadeInOnScroll>
+      <FadeInOnScroll><ContactFormSection /></FadeInOnScroll>
+      <FadeInOnScroll><UniversityList universities={mauritiusUniversities} country="Mauritius" /></FadeInOnScroll>
       <FadeInOnScroll><PopularCourses /></FadeInOnScroll>
       <FadeInOnScroll><CostOfStudying /></FadeInOnScroll>
       <FadeInOnScroll>
-        <ScholarshipSection
-          countryName="Mauritius"
-          description="Mauritius offers a wide range of scholarships for international students. These programs aim to promote global education and cultural exchange."
-          image="/scholar1.avif"
-          scholarshipTypes={[
-            "Government of Mauritius Scholarship",
-            "Merit-Based Scholarships",
-            "Need-Based Scholarships",
-            "University-Specific Grants"
-          ]}
-        />
+<ScholarshipSection
+  countryName="Mauritius"
+  description="For Indian students studying in Mauritius, there are a lot of scholarship opportunities."
+  image="/scholar1.avif"
+  scholarshipContent={[
+    "Government of Mauritius Scholarship",
+    "Merit-Based Scholarships",
+    "Need-Based Scholarships",
+    "University-Specific Grants"
+  ]}
+/>
+
       </FadeInOnScroll>
       <FadeInOnScroll><CareerProspects /></FadeInOnScroll>
       <FadeInOnScroll><StudyTabs /></FadeInOnScroll>

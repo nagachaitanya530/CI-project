@@ -1,5 +1,6 @@
-'use client'
+'use client';
 import { useState, useEffect } from "react";
+import { useSearchParams } from 'next/navigation';
 import SideBarSection from "./SideBar";
 import UniversityList from "./UniversityCarousel";
 
@@ -8,57 +9,32 @@ export type CountryKey =
   | "Singapore" | "Ireland" | "France" | "Dubai" | "Spain" | "Malaysia" | "Mauritius"
   | "India" | "Netherlands" | "Italy" | "Malta" | "Hungary" | "Poland" | "Finland" | "International";
 
-
 const countries: CountryKey[] = [
-  "UK",
-  "USA",
-  "Canada",
-  "Australia",
-  "New Zealand",
-  "Singapore",
-  "Ireland",
-  "France",
-  "Germany",
-  "Switzerland",
-  "Dubai",
-  "Spain",
-  "Malaysia",
-  "Mauritius",
-  "India",
-  "Netherlands",
-  "Italy",
-  "Malta",
-  "Hungary",
-  "Poland",
-  "Finland",
-  "International"
+  "UK", "USA", "Canada", "Australia", "New Zealand", "Singapore", "Ireland", "France",
+  "Germany", "Switzerland", "Dubai", "Spain", "Malaysia", "Mauritius", "India",
+  "Netherlands", "Italy", "Malta", "Hungary", "Poland", "Finland", "International"
 ];
 
 const universitiesByCountry: Record<CountryKey, { image: string; name: string }[]> = {
   "USA": [
     { image: "/university/Massachusetts_Institute_of_Technology-Logo.png", name: "Massachusetts Institute of Technology (MIT)" },
-    { image: "/study-abroad/su.jpg", name: "Stanford University" },
-
+    { image: "/study-abroad/su.jpg", name: "Stanford University" }
   ],
   "UK": [
     { image: "/university/Birkbeck-University-of-London.png", name: "Birkbeck University of London" },
-    { image: "/university/bcu-birmingham-city-university.jpg", name: "Birmingham City University International College" },
-
+    { image: "/university/bcu-birmingham-city-university.jpg", name: "Birmingham City University International College" }
   ],
   "Canada": [
     { image: "/university/University_of_Toronto-Logo.wine.png", name: "University of Toronto" },
-    { image: "/university/university-of-british-columbia.png", name: "University of British Columbia" },
-
+    { image: "/university/university-of-british-columbia.png", name: "University of British Columbia" }
   ],
   "Australia": [
     { image: "/university/University of Melbourne.png", name: "University of Melbourne" },
-    { image: "/university/Australian National University (ANU).png", name: "Australian National University (ANU)" },
-
+    { image: "/university/Australian National University (ANU).png", name: "Australian National University (ANU)" }
   ],
   "Germany": [
     { image: "/university/Technical University of Munich.png", name: "Technical University of Munich" },
-    { image: "/university/Ludwig Maximilian University of Munich.png", name: "Ludwig Maximilian University of Munich" },
-
+    { image: "/university/Ludwig Maximilian University of Munich.png", name: "Ludwig Maximilian University of Munich" }
   ],
   "Switzerland": [
     { image: "/university", name: "ETH Zurich - Swiss Federal Institute of Technology" },
@@ -69,8 +45,7 @@ const universitiesByCountry: Record<CountryKey, { image: string; name: string }[
     { image: "/university/Nanyang Technological University (NTU).png", name: "Nanyang Technological University (NTU)" }
   ],
   "Netherlands": [
-    { image: "/university/Delft University of Technology.png", name: "Delft University of Technology" },
-
+    { image: "/university/Delft University of Technology.png", name: "Delft University of Technology" }
   ],
   "France": [
     { image: "/university/Université PSL (Paris Sciences & Lettres).png", name: "Université PSL (Paris Sciences & Lettres)" },
@@ -79,7 +54,7 @@ const universitiesByCountry: Record<CountryKey, { image: string; name: string }[
   ],
   "India": [
     { image: "/university/Indian Institute of Technology Bombay (IITB).png", name: "Indian Institute of Technology Bombay (IITB)" },
-    { image: "/university/Indian Institute of Science (IISc) Bangalore.png", name: "Indian Institute of Science (IISc) Bangalore" },
+    { image: "/university/Indian Institute of Science (IISc) Bangalore.png", name: "Indian Institute of Science (IISc) Bangalore" }
   ],
   "Ireland": [
     { image: "/university/Trinity College Dublin.jpeg", name: "Trinity College Dublin" },
@@ -131,8 +106,16 @@ const universitiesByCountry: Record<CountryKey, { image: string; name: string }[
 };
 
 function CountryUniversity() {
-  const [selectCountry, setSelectCountry] = useState<CountryKey>('UK');
-  const [universities, setUniversities] = useState(universitiesByCountry['UK']);
+  const searchParams = useSearchParams();
+  const countryParam = searchParams.get("country")?.toLowerCase();
+  const matchedCountry = countries.find(
+    (c) => c.toLowerCase() === countryParam
+  ) as CountryKey | undefined;
+
+  const defaultCountry = matchedCountry ?? 'UK';
+
+  const [selectCountry, setSelectCountry] = useState<CountryKey>(defaultCountry);
+  const [universities, setUniversities] = useState(universitiesByCountry[defaultCountry]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -167,8 +150,7 @@ function CountryUniversity() {
             <li
               key={country}
               onClick={() => handleSelect(country)}
-              className={`cursor-pointer px-4 py-2 rounded-md whitespace-nowrap ${selectCountry === country ? 'bg-cyan-700 text-white' : 'bg-gray-100 hover:bg-cyan-100'
-                }`}
+              className={`cursor-pointer px-4 py-2 rounded-md whitespace-nowrap ${selectCountry === country ? 'bg-cyan-700 text-white' : 'bg-gray-100 hover:bg-cyan-100'}`}
             >
               {country}
             </li>
@@ -185,7 +167,7 @@ function CountryUniversity() {
           />
         </div>
         <div className="w-full">
-          <div className="flex justify-end  gap-3 my-5">
+          <div className="flex justify-end gap-3 my-5">
             <input
               type="text"
               placeholder="Search University"
@@ -202,6 +184,7 @@ function CountryUniversity() {
           </div>
         </div>
       </div>
+
       <div className="flex justify-center mt-4 gap-3">
         <button
           onClick={handlePrev}

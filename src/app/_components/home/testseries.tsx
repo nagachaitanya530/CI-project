@@ -1,4 +1,6 @@
 "use client";
+import { useRouter } from 'next/navigation'; 
+
 import React from "react";
 
 const Testseries = () => {
@@ -13,7 +15,7 @@ const Testseries = () => {
                 'Speaking Tests',
             ],
             image: '../../home/IELTS.jpg', 
-            url: 'https://www.google.com',
+            url: '/test-series-packages',
             More: 'Computer Delivered | A.I',
             price: 'Start @ ₹1499',
         },
@@ -27,7 +29,7 @@ const Testseries = () => {
                 'Speaking Tests'
             ],
             image: '/home/TOEFL.jpg',
-            url: 'https://www.youtube.com',
+            url: '/test-series-packages',
             More: 'Computer Delivered | iBT',
             price: 'Start @ ₹2599'
         },
@@ -41,7 +43,7 @@ const Testseries = () => {
                 'A.I Speaking Tests'
             ],
             image: '/home/PTE.jpg',
-            url: 'https://www.google.com',
+            url: '/test-series-packages',
             More: 'CBT | A.I',
             price: 'Start @ ₹1999'
         },
@@ -55,7 +57,7 @@ const Testseries = () => {
                 'Speaking Tests'
             ],
             image: '/home/CELPIP.jpg',
-            url: 'https://www.google.com',
+            url: '/test-series-packages',
             More: 'Computer Delivered | A.I',
             price: 'Start @ ₹1999'
         },
@@ -69,16 +71,20 @@ const Testseries = () => {
                 'Speaking Tests'
             ],
             image: '../../home/OET.jpg',
-            url: 'https://www.google.com',
+            url: '/test-series-packages',
             More: 'Computer Delivered | A.I',
             price: 'Start @ ₹1999'
         },
     ];
 
-    const handleCardClick = (url: string) => {
-        const finalUrl = url.startsWith('http') ? url : `https://${url}`;
-        window.open(finalUrl, '_blank', 'noopener,noreferrer');
-    };
+
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push('/test-series-packages');
+  };
+
+    
 
     return (
         <section className="bg-blue-500 py-16 px-4 sm:px-6 lg:px-8">
@@ -95,8 +101,9 @@ const Testseries = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto place-items-center">
                 {series.slice(0, 3).map((work, index) => (
                     <div
+                        
                         key={index}
-                        onClick={() => handleCardClick(work.url)}
+                        onClick={handleCardClick}
                         className="bg-white rounded-xl overflow-hidden shadow-lg w-full  flex flex-col"
                         style={{ height: "600px" }}
                     >                     
@@ -131,7 +138,8 @@ const Testseries = () => {
                 {series.slice(3, 5).map((work, index) => (
                     <div
                         key={index}
-                        onClick={() => handleCardClick(work.url)}
+
+                        onClick={handleCardClick}
                         className="bg-white rounded-xl overflow-hidden shadow-lg w-full  flex flex-col"
                         style={{ height: "600px" }}
                     >

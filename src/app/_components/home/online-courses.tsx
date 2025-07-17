@@ -54,9 +54,11 @@ export default function OnlineCourses() {
                         <div className="bg-blue-50 rounded-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Online English AdvantEdge™</h3>
                             <p className="text-gray-600 mb-6">Foundation, Business and Advanced English Courses</p>
+                            <Link href="/advantEdges">
                             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-md transition-colors">
                                 KNOW MORE
                             </button>
+                            </Link>
                         </div>                      
                         <div className="bg-blue-50 rounded-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Online Polyglot™ Courses</h3>

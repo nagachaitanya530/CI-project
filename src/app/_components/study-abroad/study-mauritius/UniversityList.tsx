@@ -1,38 +1,24 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap, Award } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const universities = [
-  {
-    name: "University of Bristol",
-    image: "/unniversityvisitcar1.jpeg",
-    popularFor: "Mining & Medical Sciences",
-    ranking: "19",
-  },
-  {
-    name: "The University Of Edinburgh",
-    image: "/unniversityvisitcar2.jpeg",
-    popularFor: "Arts and Humanities",
-    ranking: "42",
-  },
-  {
-    name: "Johns Hopkins University",
-    image: "/unniversityvisitcar3.jpeg",
-    popularFor: "Engineering",
-    ranking: "43",
-  },
-  {
-    name: "The Unniversity of Melbournen",
-    image: "/unniversityvisitcar4.jpeg",
-    popularFor: "Business & Law",
-    ranking: "195",
-  },
-];
+type University = {
+  name: string;
+  image: string;
+  popularFor: string;
+  ranking: string;
+};
 
-export default function UniversityList() {
-   const router = useRouter();
+export default function UniversityList({
+  universities,
+  country,
+}: {
+  universities: University[];
+  country: string;
+}) {
+  const router = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
 
@@ -58,7 +44,7 @@ export default function UniversityList() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [universities]);
 
   const duplicatedList =
     universities.length >= 4 ? [...universities, ...universities.slice(0, 4)] : universities;
@@ -69,10 +55,10 @@ export default function UniversityList() {
         <span className="underline decoration-red-500 underline-offset-4">
           List of Universities
         </span>{" "}
-        In Mauritius
+        In {country}
       </h2>
       <p className="text-center text-gray-600 mt-2">
-        Mauritius is a top choice for international students seeking a prestigious education.
+        {country} is a top choice for international students seeking a prestigious education.
         <br />
         Here are some top universities where we have successfully placed students.
       </p>
@@ -133,15 +119,15 @@ export default function UniversityList() {
         )}
       </div>
 
-      
       <div className="mt-8 flex justify-center">
-<button
-  onClick={() => router.push("/study-abroad/partnered-universities")}
-  className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-900 hover:text-white transition-colors duration-200"
->
-  View Our Partnered Universities
-</button>
-
+        <button
+    onClick={() =>
+  router.push(`/study-abroad/partnered-universities?country=${country.toLowerCase()}`)
+}
+          className="mt-6 border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-900 hover:text-white transition-colors duration-200"
+        >
+          View Partnered Universities in {country}
+        </button>
       </div>
     </div>
   );
