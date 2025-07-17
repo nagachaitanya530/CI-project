@@ -4,15 +4,17 @@ interface ScholarshipSectionProps {
   countryName: string;
   description: string;
   image: string;
-  scholarshipTypes: string[];
+  scholarshipContent: string | string[];
 }
 
 export default function ScholarshipSection({
   countryName,
   description,
   image,
-  scholarshipTypes,
+  scholarshipContent,
 }: ScholarshipSectionProps) {
+  const isArray = Array.isArray(scholarshipContent);
+
   return (
     <section className="px-4 md:px-20 py-12 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
@@ -21,12 +23,18 @@ export default function ScholarshipSection({
             <span className="font-bold underline decoration-red-500">Scholarships</span> In {countryName}
           </h2>
           <p className="text-gray-700 mb-4">{description}</p>
-          <ul className="list-disc list-inside space-y-2 text-[#4B5563] font-medium">
-            {scholarshipTypes.map((item, idx) => (
-              <li key={idx} className="text-blue-600">{item}</li>
-            ))}
-          </ul>
+
+          <div className="space-y-4 text-[#4B5563] font-medium">
+            {isArray ? (
+              (scholarshipContent as string[]).map((item, idx) => (
+                <p key={idx} className="text-blue-600">{item}</p>
+              ))
+            ) : (
+              <p className="text-blue-600">{scholarshipContent}</p>
+            )}
+          </div>
         </div>
+
         <div className="flex justify-center">
           <Image
             src={image}

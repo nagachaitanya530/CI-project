@@ -17,8 +17,7 @@ import FooterSection from "~/app/_components/footer1";
 
 import FAQ from "~/app/_components/study-abroad/faq";
 import FadeInOnScroll from "../study-mauritius/FadeInOnScroll";
-import ConsultationForm from "~/app/_components/celpip/ConsultationForm";
-
+import ConsultationForm from "~/app/_components/FreeExpertConsultation";
 
 const MalaysiaFAQs = [
   {

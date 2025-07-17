@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Award, Star } from 'lucide-react';
+import Link from 'next/link';
 
 const LanguageCourses = () => {
   const courses = [
@@ -132,9 +133,9 @@ const LanguageCourses = () => {
 
                 <div className="flex items-center justify-between">
                   <StarRating rating={course.rating} />
-                  <button className="bg-green-500 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-3 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:cursor-pointer">
+                  <Link href="/fees" className="bg-green-500 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-3 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:cursor-pointer">
                     ENROL NOW
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

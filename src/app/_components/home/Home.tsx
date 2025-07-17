@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import { useState } from 'react';
 import { Computer, Check } from 'lucide-react';
 import Link from "next/link";
 import '~/styles/globals.css';
@@ -15,21 +16,25 @@ import BlogPage from './blog';
 import TestimonialsSection from './reviewsection';
 import BookingSystem from '../book-demo';
 import StudentReviewCarousel from '../english-foundation-course/StudentReviewCarousel';
-
+import ContactPopup from '../study-abroad/home/contactpopup';
 
 function BottomSection() {``
     const courses = [
         {
             title: "IELTS TestPrep™",
             desc: "Live Sessions, AI Powered Mock Tests",
+                link: "/what-is-ielts",
+
         },
         {
             title: "AdvantEdge™ English Course",
             desc: "Comprehensive Personal Training and Group",
+            link: "/advantEdges",
         },
         {
             title: "PolyGlot™ Foreign Languages",
             desc: "French, Spanish, German CEFR Standard Courses",
+            link:"foreign-languages",
         },
     ]
 
@@ -80,37 +85,49 @@ function BottomSection() {``
                                 </h2>
                             </div>
                             <div className="bg-white/10 rounded-2xl overflow-hidden shadow-md backdrop-blur-md">
-                                {courses.map((course, i) => (
-                                    <div
-                                        key={i}
-                                        className={`flex items-center justify-between p-4 sm:p-5 lg:p-6 group hover:bg-white/5 transition-colors duration-200 ${i !== courses.length - 1 ? "border-b border-white/20" : ""
-                                            }`}
-                                    >
-                                        <div className="flex items-start sm:items-center gap-3 sm:gap-4 flex-1">
-                                            <div className="w-6 h-6 bg-teal-400 rounded-full flex items-center justify-center mt-1 sm:mt-0 flex-shrink-0">
-                                                <Check className="w-4 h-4 text-teal-900" />
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <h3 className="font-semibold text-base sm:text-lg lg:text-xl text-white mb-1">
-                                                    {course.title}
-                                                </h3>
-                                                <p className="text-sm sm:text-base text-white/80 leading-relaxed">{course.desc}</p>
-                                            </div>
-                                        </div>
-                                        <div className="ml-4 flex-shrink-0">
-                                            <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-all duration-200 group-hover:translate-x-1">
-                                                <svg
-                                                    className="w-4 h-4 sm:w-5 sm:h-5 text-white"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                                {courses.map((course, i) => {
+    const CardContent = (
+        <div
+            key={i}
+            className={`flex items-center justify-between p-4 sm:p-5 lg:p-6 group hover:bg-white/5 transition-colors duration-200 ${
+                i !== courses.length - 1 ? "border-b border-white/20" : ""
+            }`}
+        >
+            <div className="flex items-start sm:items-center gap-3 sm:gap-4 flex-1">
+                <div className="w-6 h-6 bg-teal-400 rounded-full flex items-center justify-center mt-1 sm:mt-0 flex-shrink-0">
+                    <Check className="w-4 h-4 text-teal-900" />
+                </div>
+                <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-base sm:text-lg lg:text-xl text-white mb-1">
+                        {course.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-white/80 leading-relaxed">{course.desc}</p>
+                </div>
+            </div>
+            <div className="ml-4 flex-shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-all duration-200 group-hover:translate-x-1">
+                    <svg
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    );
+
+    return course.link ? (
+        <Link href={course.link} key={i} className="block">
+            {CardContent}
+        </Link>
+    ) : (
+        <div key={i}>{CardContent}</div>
+    );
+})}
+
 
                             </div>
                         </div>
@@ -190,6 +207,8 @@ const OnlineIeltsClasses = () => {
 };
 
 const LanguageLandingPage: React.FC = () => {
+      const [showPopup, setShowPopup] = useState(false);
+
     return (
         <>
             <BottomSection />
@@ -226,9 +245,13 @@ const LanguageLandingPage: React.FC = () => {
                     <div className="text-xs text-white mb-4 ml-10 mt-24">
                         Public platform for public speaking and leadership skills. Based on International Toastmasters guidelines and supervised by British Council & Cambridge Certified Trainers.
                     </div>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 ml-10 px-4 rounded">
-                        Know More and Join
-                    </button>
+
+<Link href="/join">
+  <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 ml-10 px-4 rounded">
+    Know More and Join
+  </button>
+</Link>
+
                 </div>
                 <div className="bg-white p-6 max-w-md w-full -mt-20">
                     <div className="flex justify-center lg:justify-end">
@@ -261,11 +284,15 @@ const LanguageLandingPage: React.FC = () => {
                         Students placed in top international organizations after completing studies abroad.
                     </p>
                     <div className="flex justify-center">
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                            Talk to our consultants
-                        </button>
+                        <button
+        className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
+        onClick={() => setShowPopup(true)}
+      >
+        Talk to our consultants
+      </button>
                     </div>
                 </div>
+                
             </div>
 
 
@@ -542,6 +569,15 @@ const LanguageLandingPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
+         
+{showPopup && (
+  <ContactPopup
+    isOpen={showPopup}
+    onClose={() => setShowPopup(false)}
+    title="Free Consultation"
+    description="Get a free study abroad consultation with our experts."
+  />
+)}
             </div>
 
         </>

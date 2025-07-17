@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HeroSection = () => {
   return (
     <>
@@ -53,9 +55,10 @@ const HeroSection = () => {
             <p className="text-base mb-6 text-gray-300 font-medium font-sans">
               Live online classes with expert trainers and CEFR standards.
             </p>
-            <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-orange-500 hover:to-red-500 shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 text-white font-bold w-full py-4 rounded-xl text-lg border-0 backdrop-blur-sm font-sans hover:cursor-pointer">
+           
+             <Link  href="/enrollment"  className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-orange-500 hover:to-red-500 shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 text-white font-bold w-full py-4 px-8 rounded-xl text-lg border-0 backdrop-blur-sm font-sans hover:cursor-pointer">
               ENROL NOW
-            </button>
+            </Link>
           </div>
         </div>
       </section>

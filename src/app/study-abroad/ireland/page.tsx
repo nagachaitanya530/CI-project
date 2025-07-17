@@ -155,24 +155,18 @@ export default function Page() {
 <>
     <Navigation1 />
     <IrelandBanner />
-<FadeInOnScroll><WhyStudySection country="Ireland" reasons={irelandReasons} /></FadeInOnScroll>     <FadeInOnScroll><ContactFormSection /></FadeInOnScroll>
-     <UniversityList />
+    <FadeInOnScroll><WhyStudySection country="Ireland" reasons={irelandReasons} /></FadeInOnScroll>
+     <FadeInOnScroll><ContactFormSection /></FadeInOnScroll>
+      <FadeInOnScroll><UniversityList universities={irelandUniversities} country="Ireland" /></FadeInOnScroll>
     <FadeInOnScroll><PopularCourses /></FadeInOnScroll>
     <FadeInOnScroll><CostOfStudying /></FadeInOnScroll>
           <FadeInOnScroll>
     <ScholarshipSection
-  countryName="Ireland"
-  description="The cost of studying in Ireland for international students depends on several factors, including the institution, program of study, location, and available funding opportunities. Additionally, living expenses such as rent, utilities, and recreational activities play a significant role in the overall cost."
-  image="/scholar1.avif"
-  scholarshipTypes={[
-    "Government of Ireland International Education Scholarship",
-    "Irish Research Council Scholarships",
-    "University-specific Scholarships (e.g. Trinity College Dublin, UCD)",
-    "Merit-Based Scholarships",
-    "Need-Based Grants"
-  ]}
-/>
-
+      countryName="Ireland"
+      description=""
+      image="/scholar1.avif"
+      scholarshipContent="The cost of studying in Ireland for international students depends on several factors, including the institution, program of study, location, and available funding opportunities. Additionally, living expenses such as rent, utilities, and recreational activities play a significant role in the overall cost."
+    />
     
           </FadeInOnScroll>
     <FadeInOnScroll><CareerProspects /></FadeInOnScroll>

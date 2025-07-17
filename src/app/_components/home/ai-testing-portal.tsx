@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AITestingPortalComplete() {
     return (
         <div className="min-h-screen bg-white">
@@ -90,11 +92,12 @@ export default function AITestingPortalComplete() {
                                     </div>
                                 </div>
                             </div> 
-                            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white mb-4 font-bold py-4 px-4 rounded-lg text-medium transition-colors duration-200">
+
+                            <Link href = "online-mock-test" className="w-full bg-orange-500 hover:bg-orange-600 text-white mb-4 font-bold py-4 px-4 rounded-lg text-medium transition-colors duration-200">
                                 TAKE A FREE TEST
-                            </button>                          
+                            </Link>                       
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">Features</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 mt-5">Features</h3>
                                 <ul className="space-y-2 text-gray-600">
                                     <li className="text-sm">Real Test User Interface</li>
                                     <li className="text-sm">Access on demand</li>

@@ -1,6 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { BarChart3, TrendingUp, Brain, Mic, Target, Shield, Server, Award, Play, CheckCircle, Star, Users, Globe, Clock, Zap, BookOpen, Headphones, PenTool, MessageSquare } from 'lucide-react';
+import path from 'path';
+import Link from 'next/link';
+
 
 const HeroSection = () => {
   return (
@@ -47,6 +50,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link href="/login">
               <button className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30">
                 <span className="relative z-10 flex items-center">
                   Start Free Mock Test
@@ -56,6 +60,7 @@ const HeroSection = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
+              </Link>
             </div>
             <div className="flex items-center space-x-6 pt-4">
               <div className="flex items-center space-x-2">
@@ -229,12 +234,14 @@ const CITestingSystemPage = () => {
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
             Experience it yourself
           </h2>
+          <Link href="/login">
           <button
             onClick={handleMockTestClick}
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            type="button">
+            >
             TAKE A FREE MOCK TEST
           </button>
+          </Link>
           <p className="text-xs sm:text-sm text-gray-500 italic">
             *You need to create a new account on the next page to take a mock test.
           </p>
@@ -396,9 +403,11 @@ const UniqueFeatures = () => {
               of successful candidates who chose our platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/fees">
               <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
                 EXPLORE PACKAGES →
               </button>
+              </Link>
             </div>
           </div>
         </div>

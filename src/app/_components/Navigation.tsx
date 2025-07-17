@@ -39,7 +39,7 @@ const navItems = [
               { label: "English Business Personal", href: "/english-business-course" },
               { label: "English Advanced Personal", href: "/english-advanced-course" },
               { label: "Soft Skills Personal Training", href: "/soft-skills-personal-training" },
-              { label: "Corporate Training English", href: "/" },
+              { label: "Corporate Training English", href: "/corporate-training-english" },
             ],
           },
         ],

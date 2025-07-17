@@ -3,7 +3,7 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import OurLocationSection from './OurLocationSection'
 import Navigation from '../_components/navigation1'
-import GetStartedBanner from '../_components/study-abroad/study-mauritius/GetStartedBanner'
+import YourJourney from '../_components/study-abroad/your-journey'
 import Footer from '../_components/footer1'
 
 
@@ -13,7 +13,7 @@ const page = () => {
     <Navigation />
     <ContactForm />
     <OurLocationSection />  
-    <GetStartedBanner />
+    <YourJourney />
     <Footer />
    </>
   )
